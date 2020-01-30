@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 6007",
-    "build": "build-storybook",
+    "build": "build-storybook -o docs",
     "transpile": "babel --plugins inline-import-data-uri,@babel/plugin-proposal-class-properties packages --out-dir dist"
   },
   "eslintConfig": {
