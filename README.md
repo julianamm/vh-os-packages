@@ -26,7 +26,7 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 # Architecture:
 
  ```
-.storybook                      #STORYBOOK CONFIG
+ROOT                      #STORYBOOK CONFIG
 │
 └───assets
 │   └───icons                  # Put all icons inside
