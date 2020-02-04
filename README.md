@@ -24,4 +24,4 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 
 ##### If you have nay question please ask on the slack and we'll help you.
 
-# Big Thanks and we Hack Togheter!!!
+# Big Thanks and [WeHackTogheter](#)!!!
