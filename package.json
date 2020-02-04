@@ -43,5 +43,7 @@
     "babel-plugin-inline-import-data-uri": "^1.0.1",
     "react-scripts": "^3.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-select": "^3.0.8"
+  }
 }
