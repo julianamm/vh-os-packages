@@ -2,7 +2,7 @@
 
 All Components are made using [ReactJS](https://reactjs.org/) and [Styled Components](https://styled-components.com/) and we use [Storybook](https://storybook.js.org/) as a renderring
 
-# Current Release
+# Release Current
 `release/1`
 
 # How to contribute:
