@@ -22,6 +22,33 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 * run `yarn start`
 * The project will run at the port [http://localhost:6007](http://localhost:6007)
 
+
+# Architecture:
+
+ ```
+.storybook                      #STORYBOOK CONFIG
+│
+└───assets
+│   └───icons                  # Put all icons inside
+└───packages
+│   └───Colors                 # Colors configuration
+│   └───Grid                   # Grid configuration we must use this component to create all componets grid
+|   └───Components    
+|       └───input              # All inputs should be created inside input folder
+|           └───Simple         # A simple component
+|               └───.spec.js   # All tests should be write in this file
+|               └───index.jsx  # The component implementaion
+|               └───stories.js # The component stories for the Storybok
+|               └───styles.js  # If needed all component styles should be here
+|
+└─── .babelrc                   # BABEL CONFIGURATION
+└─── package.json               # PACKAGE JSON ***(Don't commit the package.json ever)**
+└─── README.md                  # README.md Changes are welcome
+```
+
+## Mandatory
+> all components must be created inside `packages/Components`
+
 ##### If you have any question please ask on the slack and we'll help you.
 
 # Big Thanks and [WeHackTogheter](#)!!!
