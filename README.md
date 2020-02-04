@@ -47,7 +47,7 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 ```
 
 ## Mandatory
-> all components must be created inside `packages/Components`
+> All components must be created inside `packages/Components`
 
 ##### If you have any question please ask on the slack and we'll help you.
 
