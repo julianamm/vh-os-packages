@@ -1,4 +1,4 @@
-# This project was Created by VanHack Tech Team!
+# This project was Created by the VanHack development community!
 
 All Components are made using [ReactJS](https://reactjs.org/) and [Styled Components](https://styled-components.com/) and we use [Storybook](https://storybook.js.org/) as a renderring
 
