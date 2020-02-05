@@ -34,6 +34,7 @@ ROOT                      #STORYBOOK CONFIG
 │   └───Colors                 # Colors configuration
 │   └───Grid                   # Grid configuration we must use this component to create all componets grid
 |   └───Components    
+|       └───[YOUR COMPONENT FOLDER]# Create your component here with the name
 |       └───input              # All inputs should be created inside input folder
 |           └───Simple         # A simple component
 |               └───.spec.js   # All tests should be write in this file
