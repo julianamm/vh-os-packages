@@ -12,7 +12,7 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 * Keep your fork up to date
 * Create a new branch from *MASTER*
 * Commit on your own fork
-* Create a pull request to **Open RC** (*Release Current*) not for MASTER
+* Create a pull request to **Open RC** (*Release Current*) *not against MASTER*
 
 # How to run:
 
