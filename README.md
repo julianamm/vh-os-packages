@@ -18,7 +18,7 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 
 * Clone the [project](#)
 * run `yarn install`
-* run `yarn add styled-componets` *install styled componets but discard the changes on package.json because the styled components must be installed as peerDependence*
+* run `yarn add styled-components` *install styled componets but discard the changes on package.json because the styled components must be installed as peerDependence*
 * run `yarn start`
 * The project will run at the port [http://localhost:6007](http://localhost:6007)
 
