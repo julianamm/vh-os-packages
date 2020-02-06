@@ -7,19 +7,19 @@ export const Body = styled.a`
   line-height: 18px;
   text-decoration: none;
   cursor: ${props => props.cursor ? props.cursor : 'pointer'};
-  color: ${props => props.color === "primary-light" ? `${Color.primary.light} !important` : `${Color.primary.main}`};
+  color: ${props => props.color === "primary-light" ? `${Color["primary-light"]} !important` : `${Color["gradient-primary"]}`};
 
   :visited {
-    color: ${Color.primary.main};
+    color: ${Color["gradient-primary"]};
   }
 
   :hover {
-    color: ${Color.primary.light};
+    color: ${Color["primary-light"]};
     text-decoration: underline;
   }
 
   :active {
-    color: ${Color.primary.dark};
+    color: ${Color["primary-dark"]};
     text-decoration: underline;
   }
 

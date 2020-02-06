@@ -2,14 +2,13 @@ import styled from "styled-components";
 import Color from "../../Colors";
 
 const Button = styled.button`
-  background: rgb(${Color.primary.rgb.light.r},
-  ${Color.primary.rgb.light.g}, ${Color.primary.rgb.light.b}, 0.2);
-  border: 1px solid ${Color.primary.main};
+  background: ${Color["primary-rgb-light"]};
+  border: 1px solid ${Color["gradient-light"]};
   border-radius: 4px;
   font-family: Roboto;
   text-align: center;
   cursor: pointer;
-  color: ${Color.black.A50};
+  color: ${Color["black-50"]};
   font-family: Roboto;
   font-size: 12px;
   line-height: 16px;
@@ -18,76 +17,73 @@ const Button = styled.button`
   outline: 0;
 
   :hover {
-    background-color: ${Color.primary.light};
+    background-color: ${Color["primary-light"]};
   }
 
   :active {
-    background-color: ${Color.primary.dark};
+    background-color: ${Color["primary-dark"]};
   }
 
   ${({ primary }) =>
     primary &&
     `
-    background: rgb(${Color.primary.rgb.light.r},
-    ${Color.primary.rgb.light.g}, ${Color.primary.rgb.light.b}, 0.2);
-    border: 1px solid ${Color.primary.main};
+    background: ${Color["primary-rgb-light"]};
+    border: 1px solid ${Color["gradient-light"]};
     :hover {
-      background-color: ${Color.primary.light};
-      border: 1px solid ${Color.primary.light};
-      color: ${Color.white.light};
+      background-color: ${Color["primary-light"]};
+      border: 1px solid ${Color["primary-light"]};
+      color: ${Color["white-light"]};
     }
     :active {
-      background-color: ${Color.primary.dark};
-      border: 1px solid ${Color.primary.dark};
-      color: ${Color.white.light};
+      background-color: ${Color["primary-dark"]};
+      border: 1px solid ${Color["primary-dark"]};
+      color: ${Color["white-light"]};
     }
   `}
 
   ${({ secondary }) =>
     secondary &&
     `
-    background: rgb(${Color.secondary.rgb.light.r},
-      ${Color.secondary.rgb.light.g}, ${Color.secondary.rgb.light.b}, 0.2);
-    border: 1px solid ${Color.secondary.main};
+    background: ${Color["secondary-rgb-light"]};
+    border: 1px solid ${Color.secondary};
     :hover {
-      color: ${Color.white.light};
-      border: 1px solid ${Color.secondary.light};
-      background-color: ${Color.secondary.light};
+      color: ${Color["white-light"]};
+      border: 1px solid  ${Color["secondary-light"]};
+      background-color:  ${Color["secondary-light"]};
     }
 
     :active {
-      background-color: ${Color.secondary.dark};
-      border: 1px solid ${Color.secondary.dark};
+      background-color:  ${Color["secondary-dark"]};
+      border: 1px solid  ${Color["secondary-dark"]};
     }
   `}
 
   ${({ danger }) =>
     danger &&
     `
-    background: rgb(${Color.danger.rgb.light.r},
-    ${Color.danger.rgb.light.g}, ${Color.danger.rgb.light.b}, 0.2);
-    border: 1px solid ${Color.danger.main};
+    background:  ${Color["red-rgb-light"]};
+    border: 1px solid ${Color.red};
     :hover {
-      background-color: ${Color.danger.rgb.light.hover};
-      border: 1px solid ${Color.danger.light};
+      background-color: ${Color["red-rgb-light-hover"]};
+      border: 1px solid ${Color["danger-light"]};
     }
 
     // :active {
-    //   background-color: ${Color.danger.dark};
-    //   border: 1px solid ${Color.danger.dark};
+    //   background-color: ${Color["red-dark"]};
+    //   border: 1px solid ${Color["red-dark"]};
     // }
   `}
 
   ${({ disabled }) =>
     disabled &&
     `
-    color: ${Color.black.A30};
-    background-color: ${Color.black.A5};
-    border: solid 1px ${Color.black.A5};
+    color: ${Color["black-40"]};
+    background-color: ${Color["black-10"]};
+    border: solid 1px ${Color["black-10"]};
     :hover {
-      background-color: ${Color.black.A5};
-      border: 1px solid ${Color.black.A5};
-      color: ${Color.black.A30};
+      background-color: ${Color["black-10"]};
+      border: 1px solid ${Color["black-10"]};
+      color: ${Color["black-40"]};
       cursor: not-allowed;
     }
   `}
