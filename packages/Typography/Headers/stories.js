@@ -16,7 +16,7 @@ storiesOf('Typography|Headers', module)
     </React.Fragment>
   ))
   .add('Reverse', () => (
-    <div style={{ background: Color.gradient.h, padding: '8px' }}>
+    <div style={{ background: Color["primary-dark"], padding: '8px' }}>
       <VHTitle reverse h1 label="H1 - med 36/48" />
       <VHTitle reverse h2 label="H2 - med 32/40" />
       <VHTitle reverse h3 label="H3 - med 28/36" />
