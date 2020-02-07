@@ -12,7 +12,7 @@ const VHInput = props => {
       className={`vh-input ${props.className ? props.className : ''}`}
       disabled={props.disabled}
       autoFocus={props.autoFocus}
-
+      noBorder={props.noBorder}
       onKeyUp={e => {
         if (e.key === "Enter") {
           props.onEvent({
@@ -66,6 +66,7 @@ VHInput.defaultProps = {
   disabled: false,
   autoFocus: false,
   className: '',
+  noBorder: false
 }
 
 VHInput.propTypes = {
@@ -73,6 +74,7 @@ VHInput.propTypes = {
   disabled: PropTypes.bool,
   autoFocus: PropTypes.string,
   placeholder: PropTypes.string,
+  noBorder: PropTypes.bool,
 }
 
 export default VHInput
