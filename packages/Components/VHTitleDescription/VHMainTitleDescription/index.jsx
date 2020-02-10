@@ -36,7 +36,12 @@ const VHMainTitleDescription = props => {
 }
 
 VHMainTitleDescription.propTypes = {
-    title: PropTypes.string.isRequired
+    onEvent: PropTypes.func,
+    title: PropTypes.string.isRequired,
+    rightTitle: PropTypes.string,
+    description: PropTypes.string,
+    data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    className: PropTypes.string
 }
 
 export default VHMainTitleDescription;
