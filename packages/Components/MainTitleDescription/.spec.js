@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import VHMainTitleDescription from '.';
 
-it('renders VHMainTitleDescription component without crashing', () => {
+it('renders MainTitleDescription component without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<VHMainTitleDescription title="Drift Way"
     rightTitle="(5 yr 9 mos)"
