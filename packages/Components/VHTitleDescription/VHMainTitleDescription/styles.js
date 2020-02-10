@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Color from '../../../Colors';
 
 export const Subtitle1 = styled.p`
-    color: ${Color.primary.light};
+    color: ${Color["primary-light"]};
     font-family: Roboto;
     font-size: 18px;
     font-weight: regular !important;
@@ -13,10 +13,9 @@ export const Subtitle1 = styled.p`
 `
 
 export const Platform1 = styled.p`
-    color: ${Color.gray.A60};
+    color: ${Color["gray-60"]};
 `
 
 export const Caption = styled.p`
-    color: ${Color.gray.A90};
+    color: ${Color["gray-90"]};
 `
-
