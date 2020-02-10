@@ -1,10 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { ReactComponent as BulletIcon} from '../../../assets/icons/dot.svg'
+import Color from "../../Colors";
+
 let size = {
   w: 18,
   h: 18
 }
-let styles = {}
+
+let defaultColor = "silver"
 
 const VHIcon = props => {
 
@@ -36,18 +40,31 @@ const VHIcon = props => {
       break
   }
 
-    return (
-      <img
-        src={props.source}
-        alt={props.title}
-        title={props.title}
-        width={size.w}
-        height={size.h}
-        style={styles}
-        className={`vh-img ${props.className ? props.className : ''}`}
-      />
-    )
+  switch (true) {
+    case props.primary:
+      defaultColor = "blue"
+      break
+    case props.danger:
+      defaultColor = "red"
+      break
+    case props.warning:
+      defaultColor = "yellow"
+      break
+    case props.info:
+      defaultColor = "silver"
+      break
+  }
 
+  if(props.color) {
+    defaultColor = Color[props.color];
+  }
+
+  switch (props.icon) {
+    case "bullet":      
+      return <BulletIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    default:
+      return <BulletIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+  }
 }
 
 VHIcon.defaultProps = {
@@ -57,6 +74,8 @@ export const IconPropTypes = {
   source: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
+  color: PropTypes.string,
+  icon: PropTypes.string,
 }
 
 VHIcon.propTypes = IconPropTypes

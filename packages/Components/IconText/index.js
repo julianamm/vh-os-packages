@@ -5,12 +5,24 @@ import VHText from "../Text";
 import VHIcon from "../Icon";
 
 const VHIconText = props => {
+
   return (
     <S.Wrapper
       inline={props.inline}
-      className={`vh-icon-text ${props.className ? props.className : ""}`}
-    >
-      <VHIcon sm title={props.text} source={props.icon} />
+      className={`${props.className ? props.className : ""}`}
+      onClick={() => props.onEvent({
+        type: "Click",
+        origin: "VHIconText",
+        props: {
+          data: props.data
+        }
+      })}
+   >
+      <VHIcon 
+        color={props.iconColor}
+        sm 
+        title={props.text}
+        icon="bullet" />
       <VHText
         color={props.textColor}
         variant={props.variant}
@@ -22,7 +34,7 @@ const VHIconText = props => {
 };
 
 VHIconText.defaultProps = {
-  iconColor: "black-100",
+  iconColor: "black-50",
   textColor: "black-100",
   onEvent: null,
   data: null,
@@ -35,7 +47,7 @@ VHIconText.defaultProps = {
 VHIconText.propTypes = {
   iconColor: PropTypes.string,
   textColor: PropTypes.string,
-  onEvent: null,
+  onEvent: PropTypes.func,
   data: PropTypes.string,
   text: PropTypes.string.isRequired,
   icon: PropTypes.string,

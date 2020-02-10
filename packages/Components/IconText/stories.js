@@ -5,12 +5,18 @@ import VHIconText from ".";
 storiesOf("Components|Icon Text", module)
 
 .add("default", () => (
-  <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
-    <VHIconText  text="Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum" />
-  </div>
+    <VHIconText
+      text="Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"
+      onEvent={(event) => console.log(event)}  
+    />
 ))  
 .add("color", () => (
-  <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
-    <VHIconText icon="bullet" textColor="primary-light" iconColor="primary-light" variant="caption" text="Vue.js" />
-  </div>
+    <VHIconText
+      icon="bullet-primary"
+      textColor="primary-light"
+      iconColor="primary-light"
+      variant="caption"
+      text="Vue.js"
+      onEvent={(event) => console.log(event)}  
+    />
 ))  

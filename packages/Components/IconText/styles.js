@@ -3,6 +3,6 @@ import Color from "../../Colors";
 
 export const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: 30px 100%;
+    grid-template-columns: auto 100%;
     align-items: center;
 `
