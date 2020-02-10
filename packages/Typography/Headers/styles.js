@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Color from '../../Colors'
 
 export const H1 = styled.h1`
-  color: ${Color.black.A90};
+  color: ${Color["black-90"]};
   font-family: Roboto;
   font-size: 36px;
   font-weight: 500;
@@ -12,12 +12,12 @@ export const H1 = styled.h1`
   padding: 0;
 
   ${({ reverse }) => reverse && `
-    color: ${Color.white.main};
+    color: ${Color.white};
   `}
 `
 
 export const H2 = styled.h2`
-  color: ${Color.black.A90};
+  color: ${Color["black-90"]};
   font-family: Roboto;
   font-size: 32px;
   font-weight: 500;
@@ -27,12 +27,12 @@ export const H2 = styled.h2`
   padding: 0;
 
   ${({ reverse }) => reverse && `
-    color: ${Color.white.main};
+    color: ${Color.white};
   `}
 `
 
 export const H3 = styled.h3`
-  color: ${Color.black.A90};
+  color: ${Color["black-90"]};
   font-family: Roboto;
   font-size: 28px;
   font-weight: 500;
@@ -42,12 +42,12 @@ export const H3 = styled.h3`
   padding: 0;
 
   ${({ reverse }) => reverse && `
-    color: ${Color.white.main};
+    color: ${Color.white};
   `}
 `
 
 export const H4 = styled.h4`
-  color: ${Color.black.A90};
+  color: ${Color["black-90"]};
   font-family: Roboto;
   font-size: 24px;
   font-weight: 500;
@@ -57,12 +57,12 @@ export const H4 = styled.h4`
   padding: 0;
 
   ${({ reverse }) => reverse && `
-    color: ${Color.white.main};
+    color: ${Color.white};
   `}
 `
 
 export const H5 = styled.h5`
-  color: ${Color.black.A90};
+  color: ${Color["black-90"]};
   font-family: Roboto;
   font-size: 20px;
   font-weight: 500;
@@ -73,12 +73,12 @@ export const H5 = styled.h5`
   padding: ${props => props.padding ? props.padding : '0'};
 
   ${({ reverse }) => reverse && `
-    color: ${Color.white.main};
+    color: ${Color.white};
   `}
 `
 
 export const H6 = styled.h6`
-  color: ${Color.black.A90};
+  color: ${Color["black-90"]};
   font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
@@ -88,7 +88,7 @@ export const H6 = styled.h6`
   padding: 0;
 
   ${({ reverse }) => reverse && `
-    color: ${Color.white.main};
+    color: ${Color.white};
   `}
 `
 

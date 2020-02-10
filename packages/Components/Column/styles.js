@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Color from "../../NewColors";
+import Color from "../../Colors";
 
 export const Column = styled.div`
     max-width: 302px;

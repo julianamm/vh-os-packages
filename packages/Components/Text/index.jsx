@@ -60,6 +60,14 @@ const VHText = props => {
             return <Text.BodyPlatform2 color={props.color}
                 className={`${initialState.className} ${props.className ? props.className : ''}`}
                 onClick={action}>{props.text}</Text.BodyPlatform2>
+        case 'caption':
+            return <Text.Caption color={props.color}
+                className={`${initialState.className} ${props.className ? props.className : ''}`}
+                onClick={action}>{props.text}</Text.Caption>
+        default : 
+            return  <Text.Caption color={props.color}
+            className={`${initialState.className} ${props.className ? props.className : ''}`}
+            onClick={action}>{props.text}</Text.Caption>
     }
 }
 VHText.defaultProps = {
