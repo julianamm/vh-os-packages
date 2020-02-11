@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import * as S from "./styles"
 import VHInput from '../Simple'
-import VHIcon from '../../Icon'
+import VHImg from '../../Img'
 import GitHubIcon from '../../../../assets/icons/icon-github.svg'
 import LinkedInIcon from '../../../../assets/icons/icon-likedin-login.svg'
 import WebSiteIcon from '../../../../assets/icons/icon-globe.svg'
@@ -25,7 +25,7 @@ const VHInputIcon = props => {
   
   return (
     <S.Wrapper className={`vh-icon-input ${props.className ? props.className : ''}`}>
-      <VHIcon
+      <VHImg
         className="vh-icon-with-input-icon"
         source={Icon}
         title={props.icon}
