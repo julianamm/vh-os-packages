@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Color from "../../../Colors";
 
 export const Input = styled.input`
-  border: 1px solid ${Color["gray-30"]};
+  border: ${ props => props.noBorder ? 'none' : `1px solid ${Color["gray-30"]}`};
   border-radius: 6px;
   color: ${Color["gray-100"]};
   font-size: 14px;
@@ -15,7 +15,7 @@ export const Input = styled.input`
   width: 100%;
   background: transparent;
   outline: 0;
-  
+  box-sizing: border-box;
   ::placeholder {
     font-size: 14px;
     font-weight: normal;
