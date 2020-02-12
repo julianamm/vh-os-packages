@@ -1,6 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as BulletIcon} from '../../../assets/icons/dot.svg'
+import { ReactComponent as BulletIcon } from '../../../assets/icons/dot.svg'
+import { ReactComponent as FilterIcon } from '../../../assets/icons/icon_filter.svg'
+import { ReactComponent as ArrowLeftIcon } from '../../../assets/icons/ico-arrow-left.svg'
+import { ReactComponent as SortIcon } from '../../../assets/icons/icon_swap-vert.svg'
+import { ReactComponent as SearchIcon } from '../../../assets/icons/mdi_search.svg'
+
 import Color from "../../Colors";
 
 let size = {
@@ -62,6 +67,14 @@ const VHIcon = props => {
   switch (props.icon) {
     case "bullet":      
       return <BulletIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case "sort":      
+      return <SortIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case "filter":      
+      return <FilterIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case "search":      
+      return <SearchIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case "arrow-left":      
+      return <ArrowLeftIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
     default:
       return <BulletIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
   }

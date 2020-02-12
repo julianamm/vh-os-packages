@@ -6,6 +6,7 @@ import VHImg from '../../Img'
 import GitHubIcon from '../../../../assets/icons/icon-github.svg'
 import LinkedInIcon from '../../../../assets/icons/icon-likedin-login.svg'
 import WebSiteIcon from '../../../../assets/icons/icon-globe.svg'
+import SearchIcon from '../../../../assets/icons/mdi_search.svg'
 
 const VHInputIcon = props => {
   const checkIcon = () => {
@@ -16,6 +17,8 @@ const VHInputIcon = props => {
         return  WebSiteIcon  
       case 'linkedin':
         return  LinkedInIcon  
+      case 'search':
+        return  SearchIcon  
       default:
         return WebSiteIcon;
     }
