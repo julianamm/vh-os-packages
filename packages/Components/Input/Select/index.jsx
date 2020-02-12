@@ -18,12 +18,14 @@ const VHSelect = props =>  {
           />
       }
       <Select
-        closeMenuOnSelect={false}
+        closeMenuOnSelect={!props.isMulti}
         className={props.className}
         isLoading={props.isLoading}
+        isDisabled={props.isLoading}
         components={animatedComponents}
         defaultValue={props.currentItem}
         isMulti={props.isMulti}
+        isClearable={true}
         options={props.items}
         onChange={(newValue, actionMeta) => {
           switch(true) {
@@ -38,13 +40,24 @@ const VHSelect = props =>  {
                 }
               })
               break
+            case actionMeta.action === "clear":
+              props.onEvent({
+                type: "OnChange",
+                origin: "VHSelect",
+                props: {
+                  data: props.data,
+                  item: null,
+                  action: "clear"
+                }
+              })
+              break
             case actionMeta.action === "select-option":
               props.onEvent({
                 type: "OnChange",
                 origin: "VHSelect",
                 props: {
                   data: props.data,
-                  item: actionMeta.option,
+                  item: props.isMulti ? actionMeta.option : newValue,
                   action: 'add'
                 }
               })
@@ -57,6 +70,7 @@ const VHSelect = props =>  {
           <VHText
             text={props.description}
             variant="caption"
+            color={props.descriptionColor}
           />
       }
     </React.Fragment>

@@ -52,11 +52,12 @@ const VHText = props => {
             return <Text.BodyWeb color={props.color}
                 className={`${initialState.className} ${props.className ? props.className : ''}`}
                 onClick={action}>{props.text}</Text.BodyWeb>
-        case 'bodyplatform':
+        case 'platform1':
+        case 'platform':
             return <Text.BodyPlatform color={props.color}
                 className={`${initialState.className} ${props.className ? props.className : ''}`}
                 onClick={action}>{props.text}</Text.BodyPlatform>
-        case 'bodyplatform2':
+        case 'platform2':
             return <Text.BodyPlatform2 color={props.color}
                 className={`${initialState.className} ${props.className ? props.className : ''}`}
                 onClick={action}>{props.text}</Text.BodyPlatform2>
@@ -64,7 +65,7 @@ const VHText = props => {
             return <Text.Caption color={props.color}
                 className={`${initialState.className} ${props.className ? props.className : ''}`}
                 onClick={action}>{props.text}</Text.Caption>
-        default : 
+        default :
             return  <Text.Caption color={props.color}
             className={`${initialState.className} ${props.className ? props.className : ''}`}
             onClick={action}>{props.text}</Text.Caption>
