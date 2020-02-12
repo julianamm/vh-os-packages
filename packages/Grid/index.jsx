@@ -42,6 +42,10 @@ export const Row = styled.div`
         justify-content: space-between;
     `}
 
+    ${({ justifyBottom }) => justifyBottom && `
+        justify-content: flex-end;
+    `}
+
     ${({ alignItemsRight }) => alignItemsRight && `
         align-items: flex-end;
     `}
@@ -58,6 +62,10 @@ export const Row = styled.div`
 
     ${({ autoWidth }) => autoWidth && `
        width: auto;
+    `}
+
+    ${({ paddingRight8 }) => paddingRight8 && `
+       padding-right: 24px;
     `}
 
 `
