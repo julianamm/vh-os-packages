@@ -22,7 +22,7 @@ const VHIconText = props => {
         color={props.iconColor}
         sm 
         title={props.text}
-        icon="bullet" />
+        icon={props.icon} />
       <VHText
         color={props.textColor}
         variant={props.variant}
