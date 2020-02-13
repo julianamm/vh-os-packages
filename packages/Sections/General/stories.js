@@ -54,7 +54,7 @@ const gender = [
     {
       color: '#0052CC',
       isDisabled: false,
-      label: 'Famale',
+      label: 'Female',
       value: 'f'
     },
     {
@@ -72,19 +72,25 @@ storiesOf("Sections|General", module)
                 controls={{
                     gender: {
                         loading: false,
-                        error: false,
+                        error: true,
                         success: false,
-                        message: ''
+                        message: 'Database error'
                     },
                     citizenship: {
                         loading: true,
                         error: false,
                         success: false,
-                        message: ''
+                        message: 'Database error'
                     },
                     currentLocation: {
-                        loading: false,
-                        error: true,
+                        loading: true,
+                        error: false,
+                        success: false,
+                        message: 'Database error'
+                    },
+                    phone: {
+                        loading: true,
+                        error: false,
                         success: false,
                         message: 'Database error'
                     }

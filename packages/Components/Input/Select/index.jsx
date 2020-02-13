@@ -9,12 +9,13 @@ const animatedComponents = makeAnimated();
 
 const VHSelect = props =>  {
   return (
-    <React.Fragment>
+    <div style={{position: 'relative', marginBottom: '21px'}}>
       {
         props.caption &&
           <VHText
             text={props.caption}
             variant="platform1"
+            color={props.captionColor}
           />
       }
       <Select
@@ -67,13 +68,15 @@ const VHSelect = props =>  {
       />
       {
         props.description &&
-          <VHText
-            text={props.description}
-            variant="caption"
-            color={props.descriptionColor}
-          />
+          <div style={{position: 'absolute', top: '60px'}}>
+            <VHText
+              text={props.description}
+              variant="caption"
+              color={props.descriptionColor}
+            />
+          </div>
       }
-    </React.Fragment>
+    </div>
   );
 }
 
