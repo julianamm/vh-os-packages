@@ -68,5 +68,21 @@ export const Row = styled.div`
        padding-right: 24px;
     `}
 
+    ${({ margin }) => margin && `
+       margin: 3px 0;
+    `}
+
+    ${({ marginBottom3 }) => marginBottom3 && `
+       margin-bottom: 9px;
+    `}
+
+    ${({ marginBottom4 }) => marginBottom4 && `
+       margin-bottom: 12px;
+    `}
+
+    ${({ marginBottom5 }) => marginBottom5 && `
+       margin-bottom: 15px;
+    `}
+
 `
 

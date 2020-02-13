@@ -19,6 +19,7 @@ const VHInputCheckbox = props => {
           name={props.name}
           id={props.id}
           checked={checked}
+          disabled={props.disabled}
           type="checkbox"
           onClick={() => {
             setChecked(!checked),
@@ -32,7 +33,7 @@ const VHInputCheckbox = props => {
             })
         }}/>
       </S.Wrapper>
-      <VHText htmlFor="squaredOne" variant={props.variant} text={props.title}/>
+      <VHText htmlFor="squaredOne" variant={props.variant} color={props.color} text={props.title}/>
     </Row>
   )
 }

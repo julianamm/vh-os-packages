@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { Container, Row } from "../../Grid";
 import VHCardBase from "../../Components/Cards/Base";
 import VHText from "../../Components/Text";
-import VHTitleDescription from "../../Components/TitleDescription";
 import VHSelect from "../../Components/Input/Select";
-import VHInput from "../../Components/Input/Simple";
+import VHInputCheckbox from "../../Components/Input/checkbox";
 
 
 const VHSkillsSection = props => {
@@ -42,6 +41,30 @@ const VHSkillsSection = props => {
                   description={props.controls.position.error && props.controls.position.message}
                   descriptionColor="red-light"
                 />
+            </Row>
+            <Row marginBottom3>
+              <VHInputCheckbox
+                checked={props.controls.openedPosition.checked}
+                className=""
+                color={
+                  props.controls.openedPosition.loading
+                  ? "gray-40"
+                  : props.controls.openedPosition.error
+                  ? "red"
+                  : 'gray-100'
+                }
+                data={{
+                  checked: props.controls.openedPosition.checked,
+                  id: '1',
+                  label: 'yes',
+                  value: '123'
+                }}
+                disabled={props.controls.openedPosition.loading}
+                onEvent={props.onEvent}
+                title="I am open to working in a different role"
+                value="123"
+                variant="platform1"
+              />
             </Row>
             <Row>
                 <VHSelect

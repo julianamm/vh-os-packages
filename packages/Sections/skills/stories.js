@@ -30,7 +30,7 @@ storiesOf("Sections|Skills", module)
                 controls={{
                     position: {
                         loading: false,
-                        error: true,
+                        error: false,
                         success: false,
                         message: 'Database error'
                     },
@@ -38,6 +38,13 @@ storiesOf("Sections|Skills", module)
                         loading: false,
                         error: false,
                         success: false,
+                        message: 'Database error'
+                    },
+                    openedPosition: {
+                        loading: false,
+                        error: false,
+                        success: false,
+                        checked: true,
                         message: 'Database error'
                     },
                 }}
@@ -49,7 +56,7 @@ storiesOf("Sections|Skills", module)
                     skills: {
                         items: items,
                         currentItem: [items[1]]
-                    },
+                    }
                 }}
                 onEvent={e => {
                     console.log(e)
