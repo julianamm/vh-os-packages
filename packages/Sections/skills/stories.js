@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import VHGeneralSection from ".";
+import VHSkillsSection from ".";
 
 const items = [
     {
@@ -23,48 +23,32 @@ const items = [
     },
   ]
 
-storiesOf("Sections|General", module)
+storiesOf("Sections|Skills", module)
     .add("Default", () => (
         <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
-            <VHGeneralSection
+            <VHSkillsSection
                 controls={{
-                    gender: {
+                    position: {
                         loading: false,
                         error: true,
                         success: false,
                         message: 'Database error'
                     },
-                    citizenship: {
-                        loading: true,
+                    skills: {
+                        loading: false,
                         error: false,
                         success: false,
                         message: 'Database error'
                     },
-                    currentLocation: {
-                        loading: true,
-                        error: false,
-                        success: false,
-                        message: 'Database error'
-                    },
-                    phone: {
-                        loading: true,
-                        error: false,
-                        success: false,
-                        message: 'Database error'
-                    }
                 }}
                 options={{
-                    gender: {
+                    position: {
                         items: items,
                         currentItem: [items[1]]
                     },
-                    currentLocation: {
+                    skills: {
                         items: items,
-                        currentItem: [items[0]]
-                    },
-                    citizenship: {
-                        items: items,
-                        currentItem: [items[2]]
+                        currentItem: [items[1]]
                     },
                 }}
                 onEvent={e => {
