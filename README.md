@@ -47,6 +47,10 @@ ROOT                      #STORYBOOK CONFIG
 └─── README.md                  # README.md Changes are welcome
 ```
 
+# Prototype
+
+You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7deacb0cd7)
+
 ## Mandatory
 > All components must be created inside `packages/Components`
 
