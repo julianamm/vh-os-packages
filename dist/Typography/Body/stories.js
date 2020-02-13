@@ -4,7 +4,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _react2 = require("@storybook/react");
 
-var _Colors = _interopRequireDefault(require("@Colors"));
+var _Colors = _interopRequireDefault(require("../../Colors"));
 
 var _ = _interopRequireDefault(require("."));
 
@@ -41,7 +41,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _react2.storiesOf)('typography|Body/Reverse', module).add('xs', function () {
   return _react.default.createElement("div", {
     style: {
-      background: _Colors.default.gradient.d,
+      background: _Colors.default["primary-dark"],
       padding: "24px"
     }
   }, _react.default.createElement(_.default, {
@@ -52,7 +52,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 }).add('sm', function () {
   return _react.default.createElement("div", {
     style: {
-      background: _Colors.default.gradient.h,
+      background: _Colors.default["primary-dark"],
       padding: "24px"
     }
   }, _react.default.createElement(_.default, {
@@ -63,7 +63,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 }).add('lg', function () {
   return _react.default.createElement("div", {
     style: {
-      background: _Colors.default.gradient.v,
+      background: _Colors.default["primary-dark"],
       padding: "24px"
     }
   }, _react.default.createElement(_.default, {
