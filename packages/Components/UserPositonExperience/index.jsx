@@ -4,33 +4,43 @@ import { Row } from '../../Grid';
 import VHChip from "../Chips/index";
 import VHBlackTitleDescription from "../BlackTitleDescription/index";
 import VHIconTitleList from "../IconTitleList/index";
+import * as S from './styles';
 
 const VHUserPositonExperience = props => {
     return (        
-        <Row hideTimeline>
-            <VHBlackTitleDescription 
-                title={props.headline}
-                description={props.period}
-                onEvent={props.onEvent}
-                hideTimeline
-                rightTitle={props.rightTitle}
-                className={`vh-user-position-experience ${props.className ? props.className : ''}`}
-            />
-            <VHIconTitleList 
-                onEvent={props.onEvent}
-                items={props.description}
-            />
-            <Row style={{ borderRadius: "20px", display: "inline"}}>
-                {props.skills.map(skill =>( 
-                    <VHChip
-                        label={skill.label}
-                        transparent={props.transparent}
-                        onEvent={props.onEvent}
-                        // style={{ borderRadius: "20px" }}
-                    />  
-                ))}
-            </Row>
+        <Row>
+            <S.Wrapper hideTimeline={props.hideTimeline}>
+                <VHBlackTitleDescription 
+                    title={props.headline}
+                    description={props.period}
+                    onEvent={props.onEvent}
+                    rightTitle={props.rightTitle}
+                    className={`vh-user-position-experience ${props.className ? props.className : ''}`}
+                />
+                <VHIconTitleList 
+                    onEvent={props.onEvent}
+                    items={props.description}
+                    color="gray-30"
+                    className={`vh-user-position-experience-title-list ${props.className ? props.className : ''}`}
+
+                />
+                <Row row>
+                    {props.skills.map(skill =>( 
+                        <VHChip
+                            label={skill.label}
+                            transparent
+                            round 
+                            noHover
+                            marginRight
+                            onEvent={props.onEvent}
+                            className={`vh-user-position-experience-chip ${props.className ? props.className : ''}`}
+
+                        />  
+                    ))}
+                </Row>
+            </S.Wrapper>
         </Row>  
+
     )
 }
 
@@ -38,7 +48,9 @@ VHUserPositonExperience.defaultProps = {
     onEvent: null,
     hideTimeline: false,
     className: "",
-    transparent: true
+    transparent: true,
+    round: true,
+    marginRight: true
 };
 
 VHUserPositonExperience.propTypes = {

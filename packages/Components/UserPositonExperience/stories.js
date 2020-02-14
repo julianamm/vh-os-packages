@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Row } from "../../Grid";
+import { Row, Container } from "../../Grid";
 import VHUserPositonExperience from "./index";
 
 const ArrayOfSkills = [
@@ -21,15 +21,62 @@ const ArrayOfDescriptions = [
     }
 ]
 
+const UserPositionExperience = {
+    headline: "Full Stack Developer",
+    period: "Oct 2019 - Present . 3 mos",
+    skills: ArrayOfSkills,
+    description: ArrayOfDescriptions
+}
+
+const UserPositionExperience2 = {
+    headline: "CTO",
+    period: "Oct 2019 - Present . 3 mos",
+    skills: ArrayOfSkills,
+    description: ArrayOfDescriptions
+}
+
+const ArrayOfUserExperience = [];
+    ArrayOfUserExperience.push(UserPositionExperience)
+    ArrayOfUserExperience.push(UserPositionExperience2)
+    ArrayOfUserExperience.push(UserPositionExperience2)
+    ArrayOfUserExperience.push(UserPositionExperience2)
+    ArrayOfUserExperience.push(UserPositionExperience2)
+    ArrayOfUserExperience.push(UserPositionExperience2)
+    ArrayOfUserExperience.push(UserPositionExperience2)
+    ArrayOfUserExperience.push(UserPositionExperience2)
+    ArrayOfUserExperience.push(UserPositionExperience2)
+    ArrayOfUserExperience.push(UserPositionExperience2)
+
 storiesOf("Components|User Positon Experience", module)
-    .add("Types", () => {
-        return (<Row>
+
+.add("with Timeline", () => (
+    <Container>
+        <Row style={{ padding: "24px"}}>
             <VHUserPositonExperience
-                headline="Full Stack Developer"
-                period="Oct 2019 - Present . 3 mos"
-                skills={ArrayOfSkills}
-                description={ArrayOfDescriptions}
+                headline={UserPositionExperience.headline}
+                period={UserPositionExperience.period}
+                skills={UserPositionExperience.skills}
+                description={UserPositionExperience.description}
             />
+        </Row>
+    </Container>
+    ))  
+
+.add("many Timeline", () => (
+    <Container>
+        <Row style={{ padding: "24px"}}>
+            {ArrayOfUserExperience.map( userPosition => (
+                <VHUserPositonExperience
+                    {...userPosition}
+                />
+            ))}
+        </Row>
+    </Container>
+    ))  
+
+.add("without Timeline", () => (
+    <Container>
+        <Row style={{ padding: "24px"}}>
             <VHUserPositonExperience
                 headline="CTO"
                 hideTimeline
@@ -37,5 +84,6 @@ storiesOf("Components|User Positon Experience", module)
                 skills={ArrayOfSkills}
                 description={ArrayOfDescriptions}
             />
-        </Row>);
-    });
+        </Row>
+    </Container>
+    ))  
