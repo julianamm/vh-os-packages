@@ -6,7 +6,7 @@ import VHIconText from "../IconText/index";
 const VHIconTitleList = (props) => {
     return props.items.map(item => (
         <VHIconText
-        iconColor="black-50"
+        iconColor="gray-30"
         textColor="gray-90"
         text={item.label}
         icon="bullet"

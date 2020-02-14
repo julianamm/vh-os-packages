@@ -49,6 +49,68 @@ storiesOf('Components|Chips', module)
         label="VH chip"
     />
     <VHChip
+        marginRight
+        secondary
+        transparent
+        onEvent={event => {
+            console.log(event)
+        }}
+        label="VH chip transparent"
+    />
+    </React.Fragment>
+))
+.add('round', () => (
+    <React.Fragment>
+    <VHChip
+        round
+        primary
+        marginRight
+        onEvent={event => {
+            console.log(event)
+        }}
+        label="VH chip"
+    />
+    <VHChip
+        round
+        primary
+        marginRight
+        transparent
+        onEvent={event => {
+            console.log(event)
+        }}
+        label="VH chip transparent"
+    />
+    <VHChip
+        round
+        marginRight
+        danger
+        onEvent={event => {
+            console.log(event)
+        }}
+        label="VH chip"
+    />
+    <VHChip
+        round
+        marginRight
+        danger
+        transparent
+        onEvent={event => {
+            console.log(event)
+        }}
+        label="VH chip transparent"
+    />
+    <VHChip
+        round
+        marginRight
+        secondary
+        onEvent={event => {
+            console.log(event)
+        }}
+        label="VH chip"
+    />
+    <VHChip
+        round
+        marginRight
         secondary
         transparent
         onEvent={event => {

@@ -58,21 +58,27 @@ const Button = styled.button`
     }
   `}
 
-  ${({ danger }) =>
-    danger &&
-    `
-    background:  ${Color["red-rgb-light"]};
-    border: 1px solid ${Color.red};
-    :hover {
-      background-color: ${Color["red-rgb-light-hover"]};
-      border: 1px solid ${Color["danger-light"]};
-    }
-
-    // :active {
-    //   background-color: ${Color["red-dark"]};
-    //   border: 1px solid ${Color["red-dark"]};
-    // }
+  ${({ round }) =>
+    round &&
+  `
+    border-radius: 20px;
   `}
+
+  ${({ danger }) =>
+  danger &&
+  `
+  background:  ${Color["red-rgb-light"]};
+  border: 1px solid ${Color.red};
+  :hover {
+    background-color: ${Color["red-rgb-light-hover"]};
+    border: 1px solid ${Color["danger-light"]};
+  }
+
+  // :active {
+  //   background-color: ${Color["red-dark"]};
+  //   border: 1px solid ${Color["red-dark"]};
+  // }
+`}
 
   ${({ disabled }) =>
     disabled &&
