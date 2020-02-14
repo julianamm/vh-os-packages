@@ -8,358 +8,592 @@ var _ = _interopRequireDefault(require("."));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _react2.storiesOf)('Colors|All', module).add('All VHcolors', function () {
-  return _react.default.createElement("div", null, _react.default.createElement("div", {
+(0, _react2.storiesOf)("Colors|New Colors", module).add("All VHcolors", function () {
+  return _react.default.createElement("div", {
     style: {
-      display: 'flex'
+      display: "grid",
+      gridTemplateColumns: "140px 140px 140px 140px 140px 140px 140px 140px 140px 140px"
+    }
+  }, _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      display: "flex"
     }
   }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.gradient.h,
-      color: "#fff",
+      background: _.default["black-10"],
+      color: "#222",
       padding: "8px",
       margin: "8px"
     }
-  }, "gradient/ H:"), _react.default.createElement("div", {
+  }, "black-10")), _react.default.createElement("div", {
     style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.gradient.v,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "gradient/ V:"), _react.default.createElement("div", {
-    style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.gradient.d,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "gradient/ D:")), _react.default.createElement("div", {
-    style: {
-      display: 'flex'
+      display: "flex"
     }
   }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.primary.light,
-      color: "#fff",
+      background: _.default["black-20"],
+      color: "#222",
       padding: "8px",
       margin: "8px"
     }
-  }, "Primay/ light"), _react.default.createElement("div", {
+  }, "black-20")), _react.default.createElement("div", {
     style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.primary.main,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "Primay/ main"), _react.default.createElement("div", {
-    style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.primary.dark,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "Primay/ Dark")), _react.default.createElement("div", {
-    style: {
-      display: 'flex'
+      display: "flex"
     }
   }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.tertiary.light,
-      color: "#fff",
+      background: _.default["black-30"],
+      color: "#222",
       padding: "8px",
       margin: "8px"
     }
-  }, "tertiary/ light"), _react.default.createElement("div", {
+  }, "black-30")), _react.default.createElement("div", {
     style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.tertiary.main,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "tertiary/ main"), _react.default.createElement("div", {
-    style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.tertiary.dark,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "tertiary/ Dark")), _react.default.createElement("div", {
-    style: {
-      display: 'flex'
+      display: "flex"
     }
   }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.warning.light,
-      color: "#fff",
+      background: _.default["black-40"],
+      color: "#222",
       padding: "8px",
       margin: "8px"
     }
-  }, "warning/ light"), _react.default.createElement("div", {
+  }, "black-40")), _react.default.createElement("div", {
     style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.warning.main,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "warning/ main"), _react.default.createElement("div", {
-    style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.warning.dark,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "warning/ Dark")), _react.default.createElement("div", {
-    style: {
-      display: 'flex'
+      display: "flex"
     }
   }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.secondary.light,
-      color: "#fff",
+      background: _.default["black-50"],
+      color: "#222",
       padding: "8px",
       margin: "8px"
     }
-  }, "secondary/ light"), _react.default.createElement("div", {
+  }, "black-50")), _react.default.createElement("div", {
     style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.secondary.main,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "secondary/ main"), _react.default.createElement("div", {
-    style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.secondary.dark,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "secondary/ Dark")), _react.default.createElement("div", {
-    style: {
-      display: 'flex'
+      display: "flex"
     }
   }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.danger.light,
-      color: "#fff",
+      background: _.default["black-60"],
+      color: "#222",
       padding: "8px",
       margin: "8px"
     }
-  }, "Danger/ light"), _react.default.createElement("div", {
+  }, "black-60")), _react.default.createElement("div", {
     style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.danger.main,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "Danger/ main"), _react.default.createElement("div", {
-    style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.danger.dark,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "Danger/ Dark")), _react.default.createElement("div", {
-    style: {
-      display: 'flex'
+      display: "flex"
     }
   }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.success.light,
+      background: _.default["black-70"],
       color: "#fff",
       padding: "8px",
       margin: "8px"
     }
-  }, "success/ light"), _react.default.createElement("div", {
+  }, "black-70")), _react.default.createElement("div", {
     style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.success.main,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "success/ main"), _react.default.createElement("div", {
-    style: {
-      height: "120px",
-      width: "120px",
-      borderRadius: "6px",
-      background: _.default.success.dark,
-      color: "#fff",
-      padding: "8px",
-      margin: "8px"
-    }
-  }, "success/ Dark")), _react.default.createElement("div", {
-    style: {
-      display: 'flex'
+      display: "flex"
     }
   }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A100,
+      background: _.default["black-80"],
       color: "#fff",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A100"), _react.default.createElement("div", {
+  }, "black-80")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A90,
+      background: _.default["black-90"],
       color: "#fff",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A90"), _react.default.createElement("div", {
+  }, "black-90")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A80,
+      background: _.default["black-100"],
       color: "#fff",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A80"), _react.default.createElement("div", {
+  }, "black-100"))), _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A70,
-      color: "#fff",
+      background: _.default["gray-10"],
+      color: "#222",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A70"), _react.default.createElement("div", {
+  }, "gray-10")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A60,
-      color: "#fff",
+      background: _.default["gray-20"],
+      color: "#222",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A60"), _react.default.createElement("div", {
+  }, "gray-20")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A50,
-      color: "#fff",
+      background: _.default["gray-30"],
+      color: "#222",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A50"), _react.default.createElement("div", {
+  }, "gray-30")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A40,
-      color: "#fff",
+      background: _.default["gray-40"],
+      color: "#222",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A40"), _react.default.createElement("div", {
+  }, "gray-40")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A30,
-      color: "#fff",
+      background: _.default["gray-50"],
+      color: "#222",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A30"), _react.default.createElement("div", {
+  }, "gray-50")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A20,
-      color: "#fff",
+      background: _.default["gray-60"],
+      color: "#222",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A20"), _react.default.createElement("div", {
+  }, "gray-60")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A10,
-      color: "#fff",
+      background: _.default["gray-70"],
+      color: "#222",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A10"), _react.default.createElement("div", {
+  }, "gray-70")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
     style: {
       height: "120px",
       width: "120px",
       borderRadius: "6px",
-      background: _.default.black.A5,
-      color: "#fff",
+      background: _.default["gray-80"],
+      color: "#222",
       padding: "8px",
-      marginRight: "8px"
+      margin: "8px"
     }
-  }, "black/ A5")));
+  }, "gray-80")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["gray-90"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "gray-90")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["gray-100"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "gray-100"))), _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["primary-light"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "primary-light")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["primary-dark"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "primary-dark")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default.blue,
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "blue")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["blue-light"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "blue-light")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["blue-dark"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "blue-dark"))), _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      borderRadius: "6px",
+      background: _.default.secondary,
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "secondary")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["secondary-light"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "secondary-light")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["secondary-dark"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "secondary-dark"))), _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      borderRadius: "6px",
+      background: _.default.tertiary,
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "tertiary")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["tertiary-light"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "tertiary-light")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["tertiary-dark"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "tertiary-dark"))), _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      borderRadius: "6px",
+      background: _.default.red,
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "red")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["red-light"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "red-light")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["red-dark"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "red-dark"))), _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      borderRadius: "6px",
+      background: _.default.yellow,
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "yellow")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["yellow-light"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "yellow-light")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["yellow-dark"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "yellow-dark"))), _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      borderRadius: "6px",
+      background: _.default.green,
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "green")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["green-light"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "green-light")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["green-dark"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "green-dark"))), _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      borderRadius: "6px",
+      background: _.default.purple,
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "purple")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["purple-light"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "purple-light")), _react.default.createElement("div", {
+    style: {
+      display: "flex"
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      width: "120px",
+      borderRadius: "6px",
+      background: _.default["purple-dark"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "purple-dark"))), _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement("div", {
+    style: {
+      height: "120px",
+      borderRadius: "6px",
+      background: _.default["gradient-primary"],
+      color: "#222",
+      padding: "8px",
+      margin: "8px"
+    }
+  }, "gradient"))));
 });

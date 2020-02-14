@@ -23,13 +23,13 @@ storiesOf('Hyperlinks|Links', module)
   ))
 
   .add('reverse', () => (
-    <div style={{ width: '200px', height: '200px', backgroundColor: Color.primary.main, padding: "24px" }}>
+    <div style={{ width: '200px', height: '200px', backgroundColor: Color["primary-dark"], padding: "24px" }}>
       <VHLink reverse to={"#"} lg label="VH link reverse" />
     </div>
   ))
 
   .add('noUnderscore', () => (
-    <div style={{ width: '200px', height: '200px', backgroundColor: Color.primary.main, padding: "24px" }}>
+    <div style={{ width: '200px', height: '200px', backgroundColor: Color["primary-dark"], padding: "24px" }}>
       <VHLink reverse to={"#"} lg label="VH link reverse" noUnderscore/>
     </div>
   ))

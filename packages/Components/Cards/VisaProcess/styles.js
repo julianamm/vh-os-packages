@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Color from "../../../NewColors";
+import Color from "../../../Colors";
 
 export const PersonalInfo = styled.div`
    width: 100%;

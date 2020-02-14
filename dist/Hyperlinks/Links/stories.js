@@ -4,6 +4,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _react2 = require("@storybook/react");
 
+var _Colors = _interopRequireDefault(require("../../Colors"));
+
 var _ = _interopRequireDefault(require("."));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -43,7 +45,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     style: {
       width: '200px',
       height: '200px',
-      backgroundColor: '#242C3A',
+      backgroundColor: _Colors.default["primary-dark"],
       padding: "24px"
     }
   }, _react.default.createElement(_.default, {
@@ -57,7 +59,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     style: {
       width: '200px',
       height: '200px',
-      backgroundColor: '#242C3A',
+      backgroundColor: _Colors.default["primary-dark"],
       padding: "24px"
     }
   }, _react.default.createElement(_.default, {

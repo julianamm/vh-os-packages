@@ -13,6 +13,7 @@ const VHChips = props => {
         full={props.full}
         transparent={props.transparent}
         disabled={props.disabled}
+        round={props.round}
         className={`vh-chip-component ${props.className ? props.className : ''}`}
         xs={props.xs}
         sm={props.sm}

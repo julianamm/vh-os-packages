@@ -7,7 +7,7 @@ exports.default = exports.Body = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _Colors = _interopRequireDefault(require("@Colors"));
+var _Colors = _interopRequireDefault(require("../../Colors"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26,8 +26,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var Body = _styledComponents.default.a(_templateObject(), function (props) {
   return props.cursor ? props.cursor : 'pointer';
 }, function (props) {
-  return props.color === "primary-light" ? "".concat(_Colors.default.primary.light, " !important") : "".concat(_Colors.default.primary.main);
-}, _Colors.default.primary.main, _Colors.default.primary.light, _Colors.default.primary.dark, function (_ref) {
+  return props.color === "primary-light" ? "".concat(_Colors.default["primary-light"], " !important") : "".concat(_Colors.default["gradient-primary"]);
+}, _Colors.default["gradient-primary"], _Colors.default["primary-light"], _Colors.default["primary-dark"], function (_ref) {
   var sm = _ref.sm;
   return sm && "\n    font-size: 14px;\n    line-height: 18px;\n  ";
 }, function (_ref2) {
