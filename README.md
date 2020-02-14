@@ -56,4 +56,4 @@ You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7
 
 ##### If you have any question please ask on the slack and we'll help you.
 
-# Big Thanks and [WeHackTogheter](#)!!!
+# Big Thanks and [WeHackTogether](https://vanhack.com/)!!!
