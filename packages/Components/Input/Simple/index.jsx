@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import * as S from "./styles"
 
 const VHInput = props => {
-  const [value, handleChange] = React.useState('');
+  const [value, handleChange] = React.useState(props.value);
   return (
     <S.Input
       id={props.id}
@@ -12,7 +12,11 @@ const VHInput = props => {
       className={`vh-input ${props.className ? props.className : ''}`}
       disabled={props.disabled}
       autoFocus={props.autoFocus}
+      value={value}
       noBorder={props.noBorder}
+      onChange={e => {
+        handleChange(e.currentTarget.value)
+      }}
       onKeyUp={e => {
         if (e.key === "Enter") {
           props.onEvent({
