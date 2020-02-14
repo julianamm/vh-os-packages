@@ -28,5 +28,7 @@ const comments = [
 
 storiesOf("Components|Comments", module)
     .add("default", () => (
-        <VHComments comments = {comments}/>
+        <div style={{ width: '589px', padding: "24px"}}>
+            <VHComments comments={comments}/>
+        </div>
     ));
