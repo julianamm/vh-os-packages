@@ -13,6 +13,8 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 
 3 - Create components thinking that could be reused
 
+4 - Don't forget to cover the [LOADING, ERROR and SUCCESS] states
+
 # How to contribute:
 
 * Become a VanHack Organization Member(not mandatory) 
