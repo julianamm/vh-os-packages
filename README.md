@@ -6,7 +6,7 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 `vanhack_test`
 
 # To complete this test you must 
-1 - Create or Update all components needed to compose the user skills section
+1 - Create or Update all components needed to compose the user Skills Section
  * Check the section here [Skills Section](http://localhost:6007/?path=/story/sections-skills--default)
  
 2 - Reuse as much you can
