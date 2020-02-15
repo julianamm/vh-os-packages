@@ -63,4 +63,84 @@ storiesOf("Sections|Skills", module)
                 }}
             />
         </div>
-    ));
+    ))
+    .add("error", () => (
+        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+            <VHSkillsSection
+                controls={{
+                    position: {
+                        loading: false,
+                        error: true,
+                        success: false,
+                        message: 'Database error'
+                    },
+                    skills: {
+                        loading: false,
+                        error: true,
+                        success: false,
+                        message: 'Database error'
+                    },
+                    openedPosition: {
+                        loading: false,
+                        error: true,
+                        success: false,
+                        checked: true,
+                        message: 'Database error'
+                    },
+                }}
+                options={{
+                    position: {
+                        items: items,
+                        currentItem: [items[1]]
+                    },
+                    skills: {
+                        items: items,
+                        currentItem: [items[1]]
+                    }
+                }}
+                onEvent={e => {
+                    console.log(e)
+                }}
+            />
+        </div>
+    ))
+    .add("loading", () => (
+        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+            <VHSkillsSection
+                controls={{
+                    position: {
+                        loading: true,
+                        error: false,
+                        success: false,
+                        message: 'Database error'
+                    },
+                    skills: {
+                        loading: true,
+                        error: false,
+                        success: false,
+                        message: 'Database error'
+                    },
+                    openedPosition: {
+                        loading: true,
+                        error: false,
+                        success: false,
+                        checked: true,
+                        message: 'Database error'
+                    },
+                }}
+                options={{
+                    position: {
+                        items: items,
+                        currentItem: [items[1]]
+                    },
+                    skills: {
+                        items: items,
+                        currentItem: [items[1]]
+                    }
+                }}
+                onEvent={e => {
+                    console.log(e)
+                }}
+            />
+        </div>
+    ))
