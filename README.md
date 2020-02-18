@@ -20,7 +20,7 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 
 6 - Create a Single Page Application using ReactJs with 3 routes
 * `/` => Hello World
-* `/new` => The inital version of the component
+* `/user` => The inital version of the component
 * `/user/[id]` => The view of the component with preload states from our API
 
 # how to use the components on your local environment
