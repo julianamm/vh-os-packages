@@ -20,9 +20,9 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 
 # how to use the components on your local environment
 
-* run `yarn transpile`
-* run `npm pack`
-* see `yarn link` documentation [Here](https://classic.yarnpkg.com/en/docs/cli/link/)
+* Run `yarn transpile`
+* Run `npm pack`
+* See `yarn link` documentations [Here](https://classic.yarnpkg.com/en/docs/cli/link/)
 
 # How to contribute:
 
