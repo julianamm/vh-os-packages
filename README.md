@@ -16,6 +16,8 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 
 4 - Don't forget to cover the [LOADING, ERROR and SUCCESS] states
 
+5 - We want to see your tests!!!
+
 # How to contribute:
 
 * Create a [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) on Github
