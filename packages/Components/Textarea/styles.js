@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import Color from '../../Colors'
+import VHInput from '../Input/Simple'
 
-export const Textarea = styled.textarea`
+export const Textarea = styled(VHInput)`
     width: 100%;
-    height: 25px;
+    height: 45px;
     border-radius: 6px;
     border: solid 1px ${Color["gray-30"]};
     background-color: ${Color["gray-20"]};

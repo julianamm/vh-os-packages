@@ -24,11 +24,33 @@ export const ModalContainer = styled.div`
   transition: all 0.3s;
   display: ${props => (props.open ? "block" : "none")};
   animation: 0.35s ${FadeIn} ease-in;
+  
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  :hover {
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${Color["gray-30"]};
+    border-radius: 4px;
+  }
 `;
 
 export const ModalBox = styled.div`
   position: absolute;
   width: ${props => props.width ? `${props.width}%` : 'auto'};
+  min-width: ${props => props.minWidth ? `${props.minWidth}px` : 'auto'};
+  max-width: 960px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

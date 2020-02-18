@@ -7,7 +7,7 @@ import * as S from './styles';
 const VHModal = props => {
   return (
     <S.ModalContainer open={props.open}>
-      <S.ModalBox width={props.width}>
+      <S.ModalBox width={props.width} minWidth={props.minWidth}>
         <S.Header>
           <div>
            {props.header && props.header}

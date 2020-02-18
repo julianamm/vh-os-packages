@@ -8,6 +8,9 @@ import { Row } from "../../Grid";
 import VHModal from "../Modal";
 import VHComments from "../Comments";
 import VHTimeLine from "../TimeLine";
+import VHAssign from "../Assign";
+import VHTextarea from "../Textarea";
+import VHIconText from "../IconText";
 
 const VHModalVisaPipeline = props => {
   return (
@@ -18,9 +21,11 @@ const VHModalVisaPipeline = props => {
     >
       <VHModal
         width="70"
+        minWidth="660"
         open={true}
         header={
           <Row row>
+            <Row autoWidth paddingRight8>
               <VHAvatar
                 image={
                   "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
@@ -28,33 +33,59 @@ const VHModalVisaPipeline = props => {
                 size={"lg"}
                 showCursor
               />
-               <VHTitleDescription 
-                  title="Manuel Barros Reyes"
-                  description="manuca@gmail.com"
-                  titleVariant="h4"
-                  descriptionVariant="bodyweb"
-                  data={{}}
-                  onEvent={(e) => console.log(e)}
-                />
             </Row>
+            <VHTitleDescription
+              title="Manuel Barros Reyes"
+              description="manuca@gmail.com"
+              titleVariant="h4"
+              titleColor="gray-90"
+              descriptionColor="gray-80"
+              descriptionVariant="platform"
+              onEvent={props.onEvent}
+            />
+          </Row>
         }
         onEvent={props.onEvent}
         content={
           <Row>
-            <div></div>
-            <div></div>
-            <Row row justifySpaceAround>
-              <div>
-                <VHComments comments={props.comments} />
-              </div>
-              <div>
+            <Row row>
+              <S.Wrapper>
+                <Row marginBottom5>
+                  <VHIconText
+                    className="vh-icon-text"
+                    icon="bullet"
+                    iconColor="black-50"
+                    onEvent={props.onEvent}
+                    text="Real Estate Wire"
+                    textColor="gray-80"
+                    variant="platform"
+                  />
+                </Row>
+                <Row marginBottom5>
+                  <VHTextarea
+                    description={props.description}
+                    onEvent={props.onEvent}
+                  />
+                </Row>
+              </S.Wrapper>
+              <Row marginBottom5>
+                <VHAssign items={props.assign.items} onEvent={props.onEvent} />
+              </Row>
+            </Row>
+            <Row row>
+              <S.Wrapper>
+                <Row>
+                  <VHComments comments={props.comments} />
+                </Row>
+              </S.Wrapper>
+              <Row margin>
                 <VHTimeLine
                   items={props.timeLine.items}
                   totalDays={props.timeLine.totalDays}
                   onEvent={props.onEvent}
                 />
                 <S.InfoDate>Projected Start Date: Apr, 19</S.InfoDate>
-              </div>
+              </Row>
             </Row>
           </Row>
         }

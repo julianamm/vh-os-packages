@@ -5,7 +5,7 @@ import VHModalVisaPipeline from ".";
 storiesOf('Components|Modal Visa Pipeline', module)
   .add('VHModalVisaPipeline', () => (
     <div style={{ width: '100vw', height: '100vh' }}>
-      <VHModalVisaPipeline onEvent={event => console.log(event)} comments={comments} timeLine={{...data}}/>
+      <VHModalVisaPipeline onEvent={event => console.log(event)} comments={comments} timeLine={{...timeLineData}} assign={{...assignData}} description={descriptionData.description}/>
     </div>
   ))
 
@@ -35,7 +35,7 @@ const comments = [
 ]
 
 
-const data = {
+const timeLineData = {
   totalDays: "21 days",
   items: [
     {
@@ -71,3 +71,40 @@ const data = {
     }
   ]
 };
+
+const assignData = {
+  items: [
+    {
+      id: 0,
+      name: "Carlos",
+      email: "carlos@gmail.com",
+      avatar:
+        "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
+    },
+    {
+      id: 1,
+      name: "Fabio",
+      email: "fabio@gmail.com",
+      avatar:
+        "https://randomuser.me/api/portraits/men/46.jpg"
+    },
+    {
+      id: 2,
+      name: "Fred",
+      email: "fred@gmail.com",
+      avatar:
+        "https://pbs.twimg.com/profile_images/974736784906248192/gPZwCbdS.jpg"
+    },
+    {
+      id: 3,
+      name: "Jose",
+      email: "jose@gmail.com",
+      avatar:
+        "https://randomuser.me/api/portraits/men/29.jpg"
+    },
+  ]
+};
+
+const descriptionData = {
+  description: "Relocation bonus: CA$ 3,000 (half on signing and half upon  arrival in Canada)"
+}

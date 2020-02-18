@@ -5,26 +5,16 @@ import { Row } from '../../Grid'
 import * as S from './styles'
 
 const VHTextarea = props => {
-    const [ value, setValue ] = React.useState(props.description)
-    const handleChange = (event)  => {
-        setValue(event.target.value)
-    }
 
     return (
         <Row className={`vh-textarea-description ${props.className ? props.className : ''}`}>
             <VHText color="gray-80" variant={'platform'} text="Description"/>
             <S.Textarea 
-                name="textarea"
-                value={value}
-                onChange={handleChange}
-                onKeyUp={() =>  props.onEvent({
-                    type: "onChange",
-                    origin: "VHTextareaDescription",
-                    props: {
-                      data: props.description,
-                      value: value
-                    }
-                  })}/>
+                data="data"
+                type="textarea"
+                value={props.description}
+                placeholder={props.description}
+                onEvent={props.onEvent}/>
         </Row>
     )
 
