@@ -18,6 +18,12 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 
 5 - We want to see your tests!!!
 
+# how to use the components on your local environment
+
+* run `yarn transpile`
+* run `npm pack`
+* see `yarn link` documentation (Here)[https://classic.yarnpkg.com/en/docs/cli/link/]
+
 # How to contribute:
 
 * Create a [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) on Github
