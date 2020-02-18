@@ -22,7 +22,7 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 
 * run `yarn transpile`
 * run `npm pack`
-* see `yarn link` documentation (Here)[https://classic.yarnpkg.com/en/docs/cli/link/]
+* see `yarn link` documentation [Here](https://classic.yarnpkg.com/en/docs/cli/link/)
 
 # How to contribute:
 
