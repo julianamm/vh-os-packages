@@ -18,7 +18,6 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 
 # How to contribute:
 
-* Become a VanHack Organization Member(not mandatory) 
 * Create a [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) on Github
 * Keep your fork up to date
 * Create a new branch from **Open RC (Release Current)** *not from MASTER*
