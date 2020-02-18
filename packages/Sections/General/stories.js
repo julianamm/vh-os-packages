@@ -35,7 +35,7 @@ storiesOf("Sections|General", module)
                         message: 'Database error'
                     },
                     citizenship: {
-                        loading: true,
+                        loading: false,
                         error: false,
                         success: false,
                         message: 'Database error'

@@ -1,13 +1,31 @@
-# This project was Created by VanHack development community!
+# This if part of the hiring processes for the [Front End position](http://bit.ly/vanhack-react-job) at VanHack
+
 
 All Components are made using [ReactJS](https://reactjs.org/) and [Styled Components](https://styled-components.com/) and we use [Storybook](https://storybook.js.org/) as a renderring
 
 # Release Current
-`release/3`
+`vanhack_test`
+
+# To complete this test you must 
+1 - Create or Update all components needed to compose the user Skills Section
+ * After run the project you'll be able to check the Section here [Skills Section](http://localhost:6007/?path=/story/sections-skills--default)
+ 
+2 - Reuse as much you can
+
+3 - Create as many components as you need thinking that could be reused
+
+4 - Don't forget to cover the [LOADING, ERROR and SUCCESS] states
+
+5 - We want to see your tests!!!
+
+# how to use the components on your local environment
+
+* Run `yarn transpile`
+* Run `npm pack`
+* See `yarn link` documentations [Here](https://classic.yarnpkg.com/en/docs/cli/link/)
 
 # How to contribute:
 
-* Become a VanHack Organization Member(not mandatory) 
 * Create a [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) on Github
 * Keep your fork up to date
 * Create a new branch from **Open RC (Release Current)** *not from MASTER*
@@ -20,7 +38,7 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 * run `yarn install`
 * run `yarn add styled-components` *install styled componets but discard the changes on package.json because the styled components must be installed as peerDependence*
 * run `yarn start`
-* The project will run at the port [http://localhost:6007](http://localhost:6007)
+* The project will run at the port (http://localhost:6007)[http://localhost:6007]
 
 
 # Architecture:
