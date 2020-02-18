@@ -16,7 +16,7 @@ const VHAssign = props => {
       className={`vh-assign ${props.className ? props.className : ""}`}
     >
       <Row row alignItemsCenter>
-        <VHText color="gradient-primary" variant="platform" text="Assign" />
+        <VHText color="gradient-primary" variant="platform" text="Assign" data="VHAssign" onEvent={props.onEvent}/>
       </Row>
       <Row row alignItemsCenter>
         {props.items.map((item, index) => {
