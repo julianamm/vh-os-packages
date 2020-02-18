@@ -12,7 +12,7 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
  
 2 - Reuse as much you can
 
-3 - Create components thinking that could be reused
+3 - Create as many components as you need thinking that could be reused
 
 4 - Don't forget to cover the [LOADING, ERROR and SUCCESS] states
 
