@@ -6,10 +6,10 @@ import VHText from "../../Components/Text";
 import VHInputIcon from "../../Components/Input/Icon";
 
 
-const VHSkillsSection = props => {
+const VHSocialSection = props => {
   return (
-    <Container md>
-      <Row>
+    <>
+      <Row marginBottom={5}>
         <VHText
           className={`vh-skills-section-title ${props.className ? props.className : ''}`}
           text={"Social Profile"}
@@ -53,24 +53,24 @@ const VHSkillsSection = props => {
               disabled={props.controls.world.loading}
               error={props.controls.world.error}
               loading={props.controls.world.loading}
+              placeholder="http://sitename.com/"
+              value={props.data.world.value}
               data={'world'}
               icon="world"
               onEvent={props.onEvent}
-              placeholder="http://sitename.com/"
-              value={props.data.world.value}
             />
           </Row>
         </VHCardBase>
       </Row>
-    </Container>
+    </>
   )
 }
 
-VHSkillsSection.propTypes = {
+VHSocialSection.propTypes = {
     onEvent: PropTypes.func,
     title: PropTypes.string.isRequired,
     data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     className: PropTypes.string
 }
 
-export default VHSkillsSection;
+export default VHSocialSection;

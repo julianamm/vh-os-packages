@@ -67,6 +67,7 @@ storiesOf("Sections|General", module)
                         currentItem: [items[2]]
                     },
                 }}
+                phone="+1 778 834 7347"
                 onEvent={e => {
                     console.log(e)
                 }}
