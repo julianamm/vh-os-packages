@@ -6,6 +6,10 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 # Release Current
 `release/4`
 
+# Prototype
+
+You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7deacb0cd7)
+
 # Instructions
 
 1 - Reuse as much you can
@@ -57,9 +61,6 @@ ROOT                      #STORYBOOK CONFIG
 └─── README.md                  # README.md Changes are welcome
 ```
 
-# Prototype
-
-You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7deacb0cd7)
 
 ## Mandatory
 > All components must be created inside `packages/Components`
