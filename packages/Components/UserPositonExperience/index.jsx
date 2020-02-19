@@ -7,39 +7,43 @@ import VHIconTitleList from "../IconTitleList/index";
 import * as S from './styles';
 
 const VHUserPositonExperience = props => {
-    return (        
+    return (
         <Row>
             <S.Wrapper hideTimeline={props.hideTimeline}>
-                <VHBlackTitleDescription 
-                    title={props.headline}
-                    description={props.period}
-                    onEvent={props.onEvent}
-                    rightTitle={props.rightTitle}
-                    className={`vh-user-position-experience ${props.className ? props.className : ''}`}
-                />
-                <VHIconTitleList 
-                    onEvent={props.onEvent}
-                    items={props.description}
-                    color="gray-30"
-                    className={`vh-user-position-experience-title-list ${props.className ? props.className : ''}`}
+                <Row marginBottom={3}>
+                    <VHBlackTitleDescription
+                        title={props.headline}
+                        description={props.period}
+                        onEvent={props.onEvent}
+                        rightTitle={props.rightTitle}
+                        className={`vh-user-position-experience ${props.className ? props.className : ''}`}
+                    />
+                </Row>
+                <Row marginBottom={3}>
+                    <VHIconTitleList
+                        onEvent={props.onEvent}
+                        items={props.description}
+                        color="gray-30"
+                        className={`vh-user-position-experience-title-list ${props.className ? props.className : ''}`}
 
-                />
+                    />
+                </Row>
                 <Row row>
-                    {props.skills.map(skill =>( 
+                    {props.skills.map(skill =>(
                         <VHChip
                             label={skill.label}
                             transparent
-                            round 
+                            round
                             noHover
                             marginRight
                             onEvent={props.onEvent}
                             className={`vh-user-position-experience-chip ${props.className ? props.className : ''}`}
 
-                        />  
+                        />
                     ))}
                 </Row>
             </S.Wrapper>
-        </Row>  
+        </Row>
 
     )
 }
