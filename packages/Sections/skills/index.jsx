@@ -33,10 +33,10 @@ const VHSkillsSection = props => {
                     : null
                   }
                   className={`vh-skills-section-position ${props.className ? props.className : ''}`}
-                  currentItem={props.options.position.currentItem}
+                  currentItem={props.data.position.current}
                   data="position"
                   onEvent={props.onEvent}
-                  items={props.options.position.items}
+                  items={props.positions}
                   isLoading={props.controls.position.loading}
                   description={props.controls.position.error && props.controls.position.message}
                   descriptionColor="red-light"
@@ -44,7 +44,7 @@ const VHSkillsSection = props => {
             </Row>
             <Row marginBottom3>
               <VHInputCheckbox
-                checked={props.controls.openedPosition.checked}
+                checked={props.data.openedPosition}
                 className=""
                 color={
                   props.controls.openedPosition.loading
@@ -54,7 +54,7 @@ const VHSkillsSection = props => {
                   : 'gray-100'
                 }
                 data={{
-                  checked: props.controls.openedPosition.checked,
+                  checked: props.data.openedPosition,
                   id: '1',
                   label: 'yes',
                   value: '123'
@@ -71,19 +71,19 @@ const VHSkillsSection = props => {
                   caption="I would like to work as..."
                   isMulti
                   captionColor={
-                    props.controls.skills.loading
+                    props.controls.workAs.loading
                     ? "gray-40"
-                    : props.controls.skills.error
+                    : props.controls.workAs.error
                     ? "red"
                     : null
                   }
                   className={`vh-skills-section-skills ${props.className ? props.className : ''}`}
-                  currentItem={props.options.skills.currentItem}
+                  currentItem={props.data.workAs.current}
                   data="skills"
                   onEvent={props.onEvent}
-                  items={props.options.skills.items}
-                  isLoading={props.controls.skills.loading}
-                  description={props.controls.skills.error && props.controls.skills.message}
+                  items={props.workAs}
+                  isLoading={props.controls.workAs.loading}
+                  description={props.controls.workAs.error && props.controls.workAs.message}
                   descriptionColor="red-light"
                 />
             </Row>
