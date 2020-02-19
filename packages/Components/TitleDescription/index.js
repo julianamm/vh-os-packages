@@ -6,14 +6,14 @@ import VHText from '../Text'
 const VHTitleDescription = props => {
     return (
       <S.Wrapper inline={props.inline} className={`vh-title-description ${props.className ? props.className : ''}`}>
-        <VHText 
+        <VHText
           color={props.titleColor}
           variant={props.titleVariant}
           text={props.title}
           onEvent={props.onEvent}
         />
         <S.Display inline={props.inline}>
-          <VHText 
+          <VHText
             color={props.descriptionColor}
             variant={props.descriptionVariant}
             text={props.description}
@@ -46,7 +46,7 @@ VHTitleDescription.propTypes = {
   onEvent: PropTypes.func,
   data: PropTypes.object,
   inline: PropTypes.bool,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   description: PropTypes.string,
 }
 

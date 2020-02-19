@@ -25,4 +25,13 @@ export const Input = styled.input`
     letter-spacing: normal;
     color: ${Color["gray-50"]};
   }
+  ${({ disabled }) => disabled && `
+    background-color: ${Color["gray-10"]};
+  `}
+  ${({ error }) => error && `
+    background-color: ${Color["red-dark"]};
+  `}
+  ${({ loading }) => loading && `
+    background-color: ${Color["primary"]};
+  `}
 `;
