@@ -4,25 +4,17 @@
 All Components are made using [ReactJS](https://reactjs.org/) and [Styled Components](https://styled-components.com/) and we use [Storybook](https://storybook.js.org/) as a renderring
 
 # Release Current
-`vanhack_test`
+`release/4`
 
 # To complete this test you must 
-1 - Create or Update all components needed to compose the user Skills Section
- * After run the project you'll be able to check the Section here [Skills Section](http://localhost:6007/?path=/story/sections-skills--default)
  
-2 - Reuse as much you can
+1 - Reuse as much you can
 
-3 - Create as many components as you need thinking that could be reused
+2 - Create as many components as you need thinking that could be reused
 
-4 - Don't forget to cover the [LOADING, ERROR and SUCCESS] states
+3 - Don't forget to cover the [LOADING, ERROR and SUCCESS] states
 
-5 - We want to see your tests!!!
-
-# how to use the components on your local environment
-
-* Run `yarn transpile`
-* Run `npm pack`
-* See `yarn link` documentations [Here](https://classic.yarnpkg.com/en/docs/cli/link/)
+4 - We want to see your tests!!!
 
 # How to contribute:
 
