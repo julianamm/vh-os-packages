@@ -11,6 +11,8 @@ const VHInput = props => {
       placeholder={props.placeholder}
       className={`vh-input ${props.className ? props.className : ''}`}
       disabled={props.disabled}
+      error={props.error}
+      loading={props.loading}
       autoFocus={props.autoFocus}
       value={value}
       noBorder={props.noBorder}

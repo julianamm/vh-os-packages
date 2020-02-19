@@ -24,6 +24,9 @@ const VHSkillsSection = props => {
           <Row marginBottom4>
             <VHInputIcon
               className=""
+              disabled={props.controls.linkedin.loading}
+              error={props.controls.linkedin.error}
+              loading={props.controls.linkedin.loading}
               data={'linkedin'}
               icon="linkedin"
               onEvent={props.onEvent}
@@ -34,6 +37,9 @@ const VHSkillsSection = props => {
           <Row marginBottom4>
             <VHInputIcon
               className=""
+              disabled={props.controls.github.loading}
+              error={props.controls.github.error}
+              loading={props.controls.github.loading}
               data={'github'}
               icon="github"
               onEvent={props.onEvent}
@@ -44,6 +50,9 @@ const VHSkillsSection = props => {
           <Row marginBottom4>
             <VHInputIcon
               className=""
+              disabled={props.controls.world.loading}
+              error={props.controls.world.error}
+              loading={props.controls.world.loading}
               data={'world'}
               icon="world"
               onEvent={props.onEvent}

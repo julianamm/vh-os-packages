@@ -8,14 +8,14 @@ storiesOf("Sections|Social", module)
             <VHSkillsSection
                 controls={{
                     linkedin: {
-                        loading: false,
+                        loading: true,
                         error: false,
                         success: false,
                         message: 'Database error'
                     },
                     github: {
                         loading: false,
-                        error: false,
+                        error: true,
                         success: false,
                         message: 'Database error'
                     },

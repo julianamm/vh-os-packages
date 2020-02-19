@@ -34,7 +34,15 @@ const VHInputIcon = props => {
         title={props.icon}
         sm
       />
-      <VHInput placeholder={props.placeholder} data={props.data} value={props.value} onEvent={props.onEvent} noBorder/>
+      <VHInput
+        disabled={props.disabled}
+        error={props.error}
+        loading={props.loading}
+        placeholder={props.placeholder}
+        data={props.data}
+        value={props.value}
+        onEvent={props.onEvent}
+        noBorder/>
     </S.Wrapper>
   )
 }
@@ -55,6 +63,7 @@ VHInputIcon.propTypes = {
   iconColor:  PropTypes.string,
   textColor:  PropTypes.string,
   textVariant: PropTypes.string,
+  disabled: PropTypes.bool,
   onEvent: PropTypes.func.isRequired,
   data: PropTypes.string,
   placeholder: PropTypes.string,
