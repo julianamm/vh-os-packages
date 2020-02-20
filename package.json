@@ -1,12 +1,12 @@
 {
   "name": "vh-os-packages",
-  "version": "0.0.1-1",
+  "version": "0.0.1-2",
   "private": false,
   "main": "packages",
   "peerDependencies": {
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "styled-components": "^5.0.0"
+    "styled-components": "^5.0.1"
   },
   "scripts": {
     "start": "start-storybook -p 6007",
@@ -44,7 +44,6 @@
     "react-scripts": "^3.3.0"
   },
   "dependencies": {
-    "react-select": "^3.0.8",
-    "styled-components": "^5.0.1"
+    "react-select": "^3.0.8"
   }
 }
