@@ -21,7 +21,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHCardBase = function VHCardBase(props) {
   return _react.default.createElement(S.Card, {
-    onClick: props.onEvent ? props.onEvent : function () {},
+    onClick: function onClick(event) {
+      if (props.onEvent) {
+        props.onEvent({
+          data: props,
+          type: 'onClick',
+          target: 'VHCardBase'
+        });
+      }
+
+      ;
+    },
     draggable: props.draggable,
     onDragEnter: props.onDragEnter,
     onDragLeave: props.onDragLeave,

@@ -42,7 +42,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    max-width: 302px;\n    min-height: 100vh;\n    border-radius: 6px;\n    background-color: transparent;\n    padding: 1rem;\n    box-sizing: border-box;\n    transition: background-color 0.5s ease;\n\n    :hover {\n        background-color: ", ";\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    min-width: 302px;\n    min-height: 100vh;\n    border-radius: 6px;\n    background-color: transparent;\n    padding: 1rem;\n    box-sizing: border-box;\n    transition: background-color 0.5s ease;\n\n    :hover {\n        background-color: ", ";\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

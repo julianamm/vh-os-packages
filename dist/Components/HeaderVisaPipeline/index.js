@@ -11,10 +11,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _Grid = require("../../Grid");
 
-var _IconText = _interopRequireDefault(require("../IconText"));
-
-var _Icon = _interopRequireDefault(require("../Input/Icon"));
-
 var _index = _interopRequireDefault(require("../Text/index"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
