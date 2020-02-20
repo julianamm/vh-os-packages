@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -13,7 +13,11 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _Avatar = _interopRequireDefault(require("../Avatar"));
 
+var _Text = _interopRequireDefault(require("../Text"));
+
 var S = _interopRequireWildcard(require("./styles"));
+
+var _Grid = require("../../Grid");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -22,17 +26,55 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHComments = function VHComments(props) {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Title, null, "Comments (".concat(props.comments.length, ")")), _react.default.createElement("div", {
-    style: {
-      height: '150px',
-      overflow: 'scroll'
-    }
-  }, props.comments.map(function (comment) {
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Avatar.default, {
+  return _react.default.createElement(_Grid.Row, {
+    className: "vh-comments ".concat(props.className ? props.className : '')
+  }, _react.default.createElement(_Grid.Row, {
+    marginBottom5: true
+  }, _react.default.createElement(_Text.default, {
+    variant: "platform2",
+    color: "gray-80",
+    text: "Comments (".concat(props.comments.length, ")")
+  })), _react.default.createElement(_Grid.Row, {
+    margin: true
+  }, _react.default.createElement(S.Wrapper, null, props.comments.map(function (comment) {
+    return _react.default.createElement(_Grid.Row, {
+      row: true,
+      margin: true,
+      justifyBottom: true
+    }, _react.default.createElement(_Grid.Row, {
+      margin: true,
+      autoWidth: true,
+      paddingRight8: true
+    }, _react.default.createElement(_Avatar.default, {
       image: comment.image,
       size: "md"
-    }), _react.default.createElement(S.Name, null, comment.fullName), _react.default.createElement(S.Date, null, comment.days)), _react.default.createElement(S.Description, null, comment.event));
-  })), _react.default.createElement(S.CommentWrapper, null, _react.default.createElement(_Avatar.default, {
+    })), _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Grid.Row, {
+      margin: true,
+      row: true,
+      alignItemsCenter: true
+    }, _react.default.createElement(_Text.default, {
+      variant: "platform",
+      color: "gray-100",
+      text: comment.fullName
+    }), _react.default.createElement(S.TextWrapper, null, _react.default.createElement(_Text.default, {
+      variant: "caption",
+      color: "gray-50",
+      text: comment.days
+    }))), _react.default.createElement(_Grid.Row, {
+      margin: true,
+      marginBottom5: true
+    }, _react.default.createElement(_Text.default, {
+      variant: "platform",
+      color: "gray-80",
+      text: comment.event
+    }))));
+  }))), _react.default.createElement(_Grid.Row, {
+    row: true,
+    margin: true,
+    alignItemsCenter: true
+  }, _react.default.createElement(_Avatar.default, {
     image: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
     size: "md"
   }), _react.default.createElement(S.Area, {
@@ -40,7 +82,15 @@ var VHComments = function VHComments(props) {
   })));
 };
 
-VHComments.defaultProps = {};
-VHComments.propTypes = {};
+VHComments.defaultProps = {
+  comments: [],
+  onEvent: null,
+  className: ""
+};
+VHComments.propTypes = {
+  comments: _propTypes.default.array,
+  onEvent: _propTypes.default.func,
+  className: _propTypes.default.string
+};
 var _default = VHComments;
 exports.default = _default;

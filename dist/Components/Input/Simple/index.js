@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -32,7 +32,7 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var VHInput = function VHInput(props) {
-  var _React$useState = _react.default.useState(''),
+  var _React$useState = _react.default.useState(props.value),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       value = _React$useState2[0],
       handleChange = _React$useState2[1];
@@ -43,7 +43,14 @@ var VHInput = function VHInput(props) {
     placeholder: props.placeholder,
     className: "vh-input ".concat(props.className ? props.className : ''),
     disabled: props.disabled,
+    error: props.error,
+    loading: props.loading,
     autoFocus: props.autoFocus,
+    value: value,
+    noBorder: props.noBorder,
+    onChange: function onChange(e) {
+      handleChange(e.currentTarget.value);
+    },
     onKeyUp: function onKeyUp(e) {
       if (e.key === "Enter") {
         props.onEvent({
@@ -93,10 +100,11 @@ VHInput.defaultProps = {
   type: "text",
   disabled: false,
   autoFocus: false,
-  className: ''
+  className: '',
+  noBorder: false
 };
 VHInput.propTypes = (_VHInput$propTypes = {
   disabled: _propTypes.default.bool
-}, _defineProperty(_VHInput$propTypes, "disabled", _propTypes.default.bool), _defineProperty(_VHInput$propTypes, "autoFocus", _propTypes.default.string), _defineProperty(_VHInput$propTypes, "placeholder", _propTypes.default.string), _VHInput$propTypes);
+}, _defineProperty(_VHInput$propTypes, "disabled", _propTypes.default.bool), _defineProperty(_VHInput$propTypes, "autoFocus", _propTypes.default.string), _defineProperty(_VHInput$propTypes, "placeholder", _propTypes.default.string), _defineProperty(_VHInput$propTypes, "noBorder", _propTypes.default.bool), _VHInput$propTypes);
 var _default = VHInput;
 exports.default = _default;

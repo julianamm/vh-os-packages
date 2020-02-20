@@ -22,9 +22,9 @@ var _checkbox = _interopRequireDefault(require("../../Components/Input/checkbox"
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHSkillsSection = function VHSkillsSection(props) {
-  return _react.default.createElement(_Grid.Container, {
-    md: true
-  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
+    marginBottom: 5
+  }, _react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
     text: "Skills",
     color: "black-50",
@@ -77,7 +77,7 @@ var VHSkillsSection = function VHSkillsSection(props) {
 VHSkillsSection.propTypes = {
   onEvent: _propTypes.default.func,
   title: _propTypes.default.string.isRequired,
-  data: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
+  data: _propTypes.default.object,
   className: _propTypes.default.string
 };
 var _default = VHSkillsSection;

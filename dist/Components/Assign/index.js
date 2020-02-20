@@ -11,11 +11,13 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _Grid = require("../../Grid");
-
 var S = _interopRequireWildcard(require("./styles"));
 
-var _VisaProcess = _interopRequireDefault(require("../Cards/VisaProcess"));
+var _Text = _interopRequireDefault(require("../Text"));
+
+var _Avatar = _interopRequireDefault(require("../Avatar"));
+
+var _Grid = require("../../Grid");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -23,28 +25,58 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VHColumn = function VHColumn(props) {
-  return _react.default.createElement(S.Column, {
-    id: props.id,
-    className: "vh-vp-column-component ".concat(props.className ? props.className : ''),
-    onDragEnter: props.onDragEnter,
-    onDragLeave: props.onDragLeave,
-    onDragOver: props.onDragOver,
-    onDrop: props.onDrop
-  }, _react.default.createElement(_Grid.Row, {
+var VHAssign = function VHAssign(props) {
+  var count = 0;
+  return _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true,
-    className: "vh-vp-row-header-component ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(S.ColumnName, null, props.column.name), _react.default.createElement(S.NumberOfCards, null, props.column.total)), _react.default.createElement(_Grid.Row, {
-    className: "vh-vp-row-avg-time-component ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(S.AvgTime, null, "Avg Time ".concat(props.column.avgTime, " days"))), _react.default.createElement(_Grid.Row, {
-    className: "vh-vp-row-cards-component ".concat(props.className ? props.className : '')
-  }, props.children));
+    justifySpaceAround: true,
+    className: "vh-assign ".concat(props.className ? props.className : "")
+  }, _react.default.createElement(_Grid.Row, {
+    row: true,
+    alignItemsCenter: true
+  }, _react.default.createElement(_Text.default, {
+    color: "gradient-primary",
+    variant: "platform",
+    text: "Assign",
+    data: "VHAssign",
+    onEvent: props.onEvent
+  })), _react.default.createElement(_Grid.Row, {
+    row: true,
+    alignItemsCenter: true
+  }, props.items.map(function (item, index) {
+    if (index < 3) {
+      count++;
+      return _react.default.createElement(S.Wrapper, {
+        key: "vh-assign-".concat(item.id)
+      }, _react.default.createElement(S.Tooltip, null, item.name), _react.default.createElement(_Avatar.default, {
+        content: "test",
+        image: item.avatar,
+        showCursor: true,
+        size: "md"
+      }));
+    }
+
+    if (index > 2 && index === props.items.length - 1) {
+      return _react.default.createElement(S.Wrapper, {
+        key: "vh-assign-".concat(item.id)
+      }, _react.default.createElement(S.Rounded, null, _react.default.createElement(_Text.default, {
+        variant: "platform",
+        text: "+".concat(props.items.length - count)
+      })));
+    }
+  })));
 };
 
-VHColumn.defaultProps = {
-  className: ''
+VHAssign.defaultProps = {
+  items: [],
+  className: "",
+  onEvent: null
 };
-VHColumn.propTypes = {};
-var _default = VHColumn;
+VHAssign.propTypes = {
+  items: _propTypes.default.array,
+  className: _propTypes.default.string,
+  onEvent: _propTypes.default.func
+};
+var _default = VHAssign;
 exports.default = _default;

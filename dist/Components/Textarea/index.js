@@ -11,11 +11,11 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _Text = _interopRequireDefault(require("../Text"));
+
 var _Grid = require("../../Grid");
 
 var S = _interopRequireWildcard(require("./styles"));
-
-var _VisaProcess = _interopRequireDefault(require("../Cards/VisaProcess"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -23,28 +23,31 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VHColumn = function VHColumn(props) {
-  return _react.default.createElement(S.Column, {
-    id: props.id,
-    className: "vh-vp-column-component ".concat(props.className ? props.className : ''),
-    onDragEnter: props.onDragEnter,
-    onDragLeave: props.onDragLeave,
-    onDragOver: props.onDragOver,
-    onDrop: props.onDrop
-  }, _react.default.createElement(_Grid.Row, {
-    row: true,
-    alignItemsCenter: true,
-    className: "vh-vp-row-header-component ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(S.ColumnName, null, props.column.name), _react.default.createElement(S.NumberOfCards, null, props.column.total)), _react.default.createElement(_Grid.Row, {
-    className: "vh-vp-row-avg-time-component ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(S.AvgTime, null, "Avg Time ".concat(props.column.avgTime, " days"))), _react.default.createElement(_Grid.Row, {
-    className: "vh-vp-row-cards-component ".concat(props.className ? props.className : '')
-  }, props.children));
+var VHTextarea = function VHTextarea(props) {
+  return _react.default.createElement(_Grid.Row, {
+    className: "vh-textarea-description ".concat(props.className ? props.className : '')
+  }, _react.default.createElement(_Text.default, {
+    color: "gray-80",
+    variant: 'platform',
+    text: "Description"
+  }), _react.default.createElement(S.Textarea, {
+    data: "data",
+    type: "textarea",
+    value: props.description,
+    placeholder: props.description,
+    onEvent: props.onEvent
+  }));
 };
 
-VHColumn.defaultProps = {
-  className: ''
+VHTextarea.defaultProps = {
+  description: "",
+  onEvent: null,
+  className: ""
 };
-VHColumn.propTypes = {};
-var _default = VHColumn;
+VHTextarea.propTypes = {
+  description: _propTypes.default.string,
+  onEvent: _propTypes.default.func,
+  className: _propTypes.default.string
+};
+var _default = VHTextarea;
 exports.default = _default;

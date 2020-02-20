@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -28,6 +28,7 @@ var VHButton = function VHButton(props) {
       secondary: props.secondary,
       danger: props.danger,
       full: props.full,
+      nowrap: props.nowrap,
       disabled: props.disabled,
       className: "vh-button-component ".concat(props.className ? props.className : ''),
       xs: props.xs,
@@ -57,6 +58,7 @@ var VHButton = function VHButton(props) {
     xs: props.xs,
     sm: props.sm,
     lg: props.lg,
+    nowrap: props.nowrap,
     type: "button",
     onClick: function onClick() {
       props.onEvent({
@@ -73,6 +75,7 @@ var VHButton = function VHButton(props) {
 VHButton.defaultProps = {
   disabled: false,
   danger: false,
+  nowrap: false,
   secondary: false,
   className: '',
   primary: true
@@ -81,6 +84,7 @@ VHButton.propTypes = {
   primary: _propTypes.default.bool,
   secondary: _propTypes.default.bool,
   danger: _propTypes.default.bool,
+  nowrap: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   onEvent: _propTypes.default.func.isRequired,
   className: _propTypes.default.string,

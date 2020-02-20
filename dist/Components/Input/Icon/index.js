@@ -64,7 +64,12 @@ var VHInputIcon = function VHInputIcon(props) {
     title: props.icon,
     sm: true
   }), _react.default.createElement(_Simple.default, {
+    disabled: props.disabled,
+    error: props.error,
+    loading: props.loading,
     placeholder: props.placeholder,
+    data: props.data,
+    value: props.value,
     onEvent: props.onEvent,
     noBorder: true
   }));
@@ -85,6 +90,7 @@ VHInputIcon.propTypes = {
   iconColor: _propTypes.default.string,
   textColor: _propTypes.default.string,
   textVariant: _propTypes.default.string,
+  disabled: _propTypes.default.bool,
   onEvent: _propTypes.default.func.isRequired,
   data: _propTypes.default.string,
   placeholder: _propTypes.default.string,

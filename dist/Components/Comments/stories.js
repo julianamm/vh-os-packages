@@ -28,7 +28,12 @@ var comments = [{
   "event": "Had call with Anastasia. She does not need medicals as she is in Germany."
 }];
 (0, _react2.storiesOf)("Components|Comments", module).add("default", function () {
-  return _react.default.createElement(_.default, {
+  return _react.default.createElement("div", {
+    style: {
+      width: '589px',
+      padding: "24px"
+    }
+  }, _react.default.createElement(_.default, {
     comments: comments
-  });
+  }));
 });

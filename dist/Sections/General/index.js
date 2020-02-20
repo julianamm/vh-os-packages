@@ -24,9 +24,9 @@ var _Simple = _interopRequireDefault(require("../../Components/Input/Simple"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHGeneralSection = function VHGeneralSection(props) {
-  return _react.default.createElement(_Grid.Container, {
-    md: true
-  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
+    marginBottom: 5
+  }, _react.default.createElement(_Text.default, {
     className: "vh-general-section-title ".concat(props.className ? props.className : ''),
     text: "General",
     color: "black-50",
@@ -88,7 +88,12 @@ var VHGeneralSection = function VHGeneralSection(props) {
     titleVariant: "subtitle3"
   }), _react.default.createElement(_Simple.default, {
     data: "phone",
-    onEvent: props.onEvent
+    onEvent: props.onEvent,
+    disabled: props.controls.phone.loading,
+    error: props.controls.phone.error,
+    loading: props.controls.phone.loading,
+    placeholder: "+1 778 000 0000",
+    value: props.phone
   }))))));
 };
 

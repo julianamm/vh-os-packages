@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -19,7 +19,7 @@ var S = _interopRequireWildcard(require("./styles"));
 
 var _Headers = _interopRequireDefault(require("../../../Typography/Headers"));
 
-var _Icon = _interopRequireDefault(require("../../Icon"));
+var _Img = _interopRequireDefault(require("../../Img"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -67,21 +67,21 @@ var VHCardVisaProcess = function VHCardVisaProcess(props) {
   })), _react.default.createElement(S.Name, null, props.name)), _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Img.default, {
     source: CompanyIcon,
     title: "city",
     xs: true
   })), _react.default.createElement(S.Info, null, props.companyName)), _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Img.default, {
     source: PositionIcon,
     title: "position",
     xs: true
   })), _react.default.createElement(S.Info, null, props.positionName)), _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Img.default, {
     source: CityIcon,
     title: "time",
     xs: true
@@ -90,7 +90,7 @@ var VHCardVisaProcess = function VHCardVisaProcess(props) {
   }, _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.TimeWrapper, null, _react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(S.TimeWrapper, null, _react.default.createElement(_Img.default, {
     source: props.time <= props.avgTime ? "".concat(TimeIconGreen) : "".concat(TimeIconRed),
     title: "time",
     xs: true
@@ -99,11 +99,11 @@ var VHCardVisaProcess = function VHCardVisaProcess(props) {
   }, "".concat(props.time, " days ago")))), _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.FavoriteWrapper, null, props.favorite && _react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(S.FavoriteWrapper, null, props.favorite && _react.default.createElement(_Img.default, {
     source: FavoriteIcon,
     title: "comments",
     xs: true
-  })), _react.default.createElement(S.Info, null, props.comments), _react.default.createElement(S.CommentsWrapper, null, _react.default.createElement(_Icon.default, {
+  })), _react.default.createElement(S.Info, null, props.comments), _react.default.createElement(S.CommentsWrapper, null, _react.default.createElement(_Img.default, {
     source: CommentsIcon,
     title: "comments",
     xs: true

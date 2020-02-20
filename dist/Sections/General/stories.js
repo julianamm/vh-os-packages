@@ -72,6 +72,7 @@ var items = [{
         currentItem: [items[2]]
       }
     },
+    phone: "+1 778 834 7347",
     onEvent: function onEvent(e) {
       console.log(e);
     }

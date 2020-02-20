@@ -12,7 +12,7 @@ var _Colors = _interopRequireDefault(require("../../Colors"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Roboto;\n    font-size: 12px;\n    font-weight: 'regular';\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Roboto;\n    font-size: 12px;\n    font-weight: 'regular';\n\n"]);
 
   _templateObject13 = function _templateObject13() {
     return data;
@@ -22,7 +22,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 'regular';\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 'regular';\n\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -32,7 +32,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 'regular';\n    line-height: 21.5px;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 'regular';\n    line-height: 21.5px;\n\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -42,7 +42,7 @@ function _templateObject11() {
 }
 
 function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Roboto;\n    font-size: 16px;\n    font-weight: 'regular';\n    line-height: 28px;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Roboto;\n    font-size: 16px;\n    font-weight: 'regular';\n    line-height: 28px;\n\n"]);
 
   _templateObject10 = function _templateObject10() {
     return data;
@@ -52,7 +52,7 @@ function _templateObject10() {
 }
 
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Roboto;\n    font-size: 16px;\n    font-weight: 'lighter';\n    line-height: 23.1px;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Roboto;\n    font-size: 16px;\n    font-weight: 'lighter';\n    line-height: 23.1px;\n\n"]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -62,7 +62,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Roboto;\n    font-size: 16px;\n    font-weight: 'bold';\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Roboto;\n    font-size: 16px;\n    font-weight: 'bold';\n\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -72,7 +72,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Roboto;\n    font-size: 18px;\n    font-weight: 'regular';\n    line-height: 22.4px;\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Roboto;\n    font-size: 18px;\n    font-weight: 'regular';\n    line-height: 22.4px;\n\n"]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -82,7 +82,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 20px;\n    font-weight: 'regular';\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 20px;\n    font-weight: 'regular';\n\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -92,7 +92,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 22px;\n    font-weight: 'regular';\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 22px;\n    font-weight: 'regular';\n\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -102,7 +102,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 22px;\n    font-weight: 'bold';\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 22px;\n    font-weight: 'bold';\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -112,7 +112,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 24px;\n    font-weight: 'normal';\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 24px;\n    font-weight: 'normal';\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -122,7 +122,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 34px;\n    font-weight: 'lighter';\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 34px;\n    font-weight: 'lighter';\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -132,7 +132,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 48px;\n    font-weight: 'lighter';\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Nunito Sans;\n    font-size: 48px;\n    font-weight: 'lighter';\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
