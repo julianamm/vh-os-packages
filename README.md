@@ -6,6 +6,10 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 # Release Current
 `vanhack_test`
 
+# Prototype
+
+You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7deacb0cd7)
+
 # To complete this test you must 
 1 - Create or Update all components needed to compose the user Skills Section
  * After run the project you'll be able to check the Section here [Skills Section](http://localhost:6007/?path=/story/sections-skills--default)
@@ -69,10 +73,6 @@ ROOT                      #STORYBOOK CONFIG
 └─── package.json               # PACKAGE JSON ***(Don't commit the package.json ever)**
 └─── README.md                  # README.md Changes are welcome
 ```
-
-# Prototype
-
-You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7deacb0cd7)
 
 ## Mandatory
 > All components must be created inside `packages/Components`
