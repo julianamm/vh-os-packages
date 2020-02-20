@@ -3,7 +3,7 @@ import Color from '../../Colors'
 
 export const Body = styled.p`
 font-family: Roboto;
-  color: ${Color.black.A50};
+  color: ${Color["black-A50"]};
   font-size: 14px;
   line-height: 18px;
   margin: 0;
@@ -25,7 +25,7 @@ font-family: Roboto;
   `}
 
   ${({ reverse }) => reverse && `
-    color: ${Color.white.main};
+    color: ${Color.white};
   `}
 
 `

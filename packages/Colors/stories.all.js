@@ -1,380 +1,683 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Color from '.';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Color from ".";
 
-storiesOf('Colors|All', module)
-  .add('All VHcolors', () => (
+storiesOf("Colors|New Colors", module).add("All VHcolors", () => (
+  <div
+    style={{ display: "grid", gridTemplateColumns: "140px 140px 140px 140px 140px 140px 140px 140px 140px 140px" }}
+  >
     <div>
-        <div style={{display: 'flex'}}>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.gradient.h,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        gradient/ H:
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.gradient.v,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        gradient/ V:
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.gradient.d,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        gradient/ D:
-    </div>
-    </div>
-        <div style={{display: 'flex'}}>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.primary.light,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        Primay/ light
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.primary.main,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        Primay/ main
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.primary.dark,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        Primay/ Dark
-    </div>
-
-    </div>
-    <div style={{display: 'flex'}}>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.tertiary.light,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        tertiary/ light
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.tertiary.main,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        tertiary/ main
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.tertiary.dark,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        tertiary/ Dark
-    </div>
-    </div>
-        <div style={{display: 'flex'}}>
-        <div style={{
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
             height: "120px",
             width: "120px",
             borderRadius: "6px",
-            background: Color.warning.light,
-            color: "#fff",
+            background: Color["black-10"],
+            color: "#222",
             padding: "8px",
             margin: "8px"
-        }}>
-            warning/ light
+          }}
+        >
+          black-10
         </div>
-        <div style={{
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
             height: "120px",
             width: "120px",
             borderRadius: "6px",
-            background: Color.warning.main,
-            color: "#fff",
+            background: Color["black-20"],
+            color: "#222",
             padding: "8px",
             margin: "8px"
-        }}>
-            warning/ main
+          }}
+        >
+          black-20
         </div>
-        <div style={{
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
             height: "120px",
             width: "120px",
             borderRadius: "6px",
-            background: Color.warning.dark,
+            background: Color["black-30"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          black-30
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["black-40"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          black-40
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["black-50"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          black-50
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["black-60"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          black-60
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["black-70"],
             color: "#fff",
             padding: "8px",
             margin: "8px"
-        }}>
-            warning/ Dark
+          }}
+        >
+          black-70
         </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["black-80"],
+            color: "#fff",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          black-80
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["black-90"],
+            color: "#fff",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          black-90
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["black-100"],
+            color: "#fff",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          black-100
+        </div>
+      </div>
     </div>
-    <div style={{display: 'flex'}}>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.secondary.light,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        secondary/ light
+    <div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["gray-10"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gray-10
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["gray-20"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gray-20
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["gray-30"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gray-30
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["gray-40"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gray-40
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["gray-50"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gray-50
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["gray-60"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gray-60
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["gray-70"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gray-70
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["gray-80"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gray-80
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["gray-90"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gray-90
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["gray-100"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gray-100
+        </div>
+      </div>
     </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.secondary.main,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        secondary/ main
+    <div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["primary-light"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          primary-light
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["primary-dark"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          primary-dark
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color.blue,
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          blue
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["blue-light"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          blue-light
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["blue-dark"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          blue-dark
+        </div>
+      </div>
     </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.secondary.dark,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        secondary/ Dark
+    <div>
+      <div>
+        <div
+          style={{
+            height: "120px",
+            borderRadius: "6px",
+            background: Color.secondary,
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          secondary
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["secondary-light"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          secondary-light
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["secondary-dark"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          secondary-dark
+        </div>
+      </div>
     </div>
+    <div>
+      <div>
+        <div
+          style={{
+            height: "120px",
+            borderRadius: "6px",
+            background: Color.tertiary,
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          tertiary
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["tertiary-light"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          tertiary-light
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["tertiary-dark"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          tertiary-dark
+        </div>
+      </div>
     </div>
-    <div style={{display: 'flex'}}>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.danger.light,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        Danger/ light
+    <div>
+      <div>
+        <div
+          style={{
+            height: "120px",
+            borderRadius: "6px",
+            background: Color.red,
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          red
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["red-light"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          red-light
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["red-dark"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          red-dark
+        </div>
+      </div>
     </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.danger.main,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        Danger/ main
+    <div>
+      <div>
+        <div
+          style={{
+            height: "120px",
+            borderRadius: "6px",
+            background: Color.yellow,
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          yellow
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["yellow-light"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          yellow-light
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["yellow-dark"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          yellow-dark
+        </div>
+      </div>
     </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.danger.dark,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        Danger/ Dark
+    <div>
+      <div>
+        <div
+          style={{
+            height: "120px",
+            borderRadius: "6px",
+            background: Color.green,
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          green
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["green-light"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          green-light
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["green-dark"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          green-dark
+        </div>
+      </div>
     </div>
+    <div>
+      <div>
+        <div
+          style={{
+            height: "120px",
+            borderRadius: "6px",
+            background: Color.purple,
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          purple
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["purple-light"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          purple-light
+        </div>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div
+          style={{
+            height: "120px",
+            width: "120px",
+            borderRadius: "6px",
+            background: Color["purple-dark"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          purple-dark
+        </div>
+      </div>
     </div>
-    <div style={{display: 'flex'}}>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.success.light,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        success/ light
+    <div>
+      <div>
+        <div
+          style={{
+            height: "120px",
+            borderRadius: "6px",
+            background: Color["gradient-primary"],
+            color: "#222",
+            padding: "8px",
+            margin: "8px"
+          }}
+        >
+          gradient
+        </div>
+      </div>
     </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.success.main,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        success/ main
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.success.dark,
-        color: "#fff",
-        padding: "8px",
-        margin: "8px"
-    }}>
-        success/ Dark
-    </div>
-    </div>
-    <div style={{display: 'flex'}}>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A100,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A100`}
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A90,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A90`}
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A80,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A80`}
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A70,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A70`}
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A60,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A60`}
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A50,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A50`}
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A40,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A40`}
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A30,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A30`}
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A20,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A20`}
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A10,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A10`}
-    </div>
-    <div style={{
-        height: "120px",
-        width: "120px",
-        borderRadius: "6px",
-        background: Color.black.A5,
-        color: "#fff",
-        padding: "8px",
-        marginRight: "8px"
-    }}>
-        {`black/ A5`}
-    </div>
-
-
-    </div>
-    </div>
-  ))
+  </div>
+));

@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Button from './styles'
 
 const VHChips = props => {
-
-
     return (
       <Button
         primary={props.primary}
@@ -13,6 +11,8 @@ const VHChips = props => {
         full={props.full}
         transparent={props.transparent}
         disabled={props.disabled}
+        round={props.round}
+        noHover={props.noHover}
         className={`vh-chip-component ${props.className ? props.className : ''}`}
         xs={props.xs}
         sm={props.sm}
@@ -20,13 +20,14 @@ const VHChips = props => {
         marginRight={props.marginRight}
         type="button"
         onClick={() => {
-          props.onEvent({
-            target: 'VHChips',
-            event: 'onClick',
-            data: {
-              label: props.label
-            },
-          })
+          if (props.onEvent)
+              props.onEvent({
+                target: 'VHChips',
+                event: 'onClick',
+                data: {
+                  label: props.label
+                },
+              })
         }}>
         {
           props.label
