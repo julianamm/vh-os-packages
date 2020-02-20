@@ -3,20 +3,26 @@ import PropTypes from 'prop-types'
 import * as S from './styles'
 
 const VHCardBase = props => {
-    return (
-      <S.Card
-        onClick={props.onEvent ? props.onEvent : () => {}}
-        draggable={props.draggable}
-        onDragEnter={props.onDragEnter}
-        onDragLeave={props.onDragLeave}
-        onDragStart={props.onDragStart}
-        noBorder={props.noBorder}
-        favorite={props.favorite}
-        noHover={props.noHover}
-      >
-        {props.children}
-      </S.Card>
-    )
+  return (
+    <S.Card
+      onClick={event => {
+        if (props.onEvent) {
+          props.onEvent({
+            data: props,
+            type: 'onClick',
+            target: 'VHCardBase'
+          })
+        };
+      }}
+      draggable={props.draggable}
+      onDragEnter={props.onDragEnter}
+      onDragLeave={props.onDragLeave}
+      onDragStart={props.onDragStart}
+      noBorder={props.noBorder} favorite={props.favorite} noHover={props.noHover}>
+      {props.children}
+
+    </S.Card>
+  )
 
 }
 

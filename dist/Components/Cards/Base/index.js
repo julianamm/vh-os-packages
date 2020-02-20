@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -21,7 +21,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHCardBase = function VHCardBase(props) {
   return _react.default.createElement(S.Card, {
-    onClick: props.onEvent ? props.onEvent : function () {},
+    onClick: function onClick(event) {
+      if (props.onEvent) {
+        props.onEvent({
+          data: props,
+          type: 'onClick',
+          target: 'VHCardBase'
+        });
+      }
+
+      ;
+    },
     draggable: props.draggable,
     onDragEnter: props.onDragEnter,
     onDragLeave: props.onDragLeave,
