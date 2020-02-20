@@ -4,15 +4,17 @@ import * as S from './styles'
 
 const VHCardBase = props => {
     return (
-      <S.Card 
-      onClick={props.onEvent}
-      draggable={props.draggable}
-      onDragEnter={props.onDragEnter}
-      onDragLeave={props.onDragLeave}
-      onDragStart={props.onDragStart}
-      noBorder={props.noBorder} favorite={props.favorite} noHover={props.noHover}>
-          {props.children}
-          
+      <S.Card
+        onClick={props.onEvent ? props.onEvent : () => {}}
+        draggable={props.draggable}
+        onDragEnter={props.onDragEnter}
+        onDragLeave={props.onDragLeave}
+        onDragStart={props.onDragStart}
+        noBorder={props.noBorder}
+        favorite={props.favorite}
+        noHover={props.noHover}
+      >
+        {props.children}
       </S.Card>
     )
 

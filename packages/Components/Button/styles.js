@@ -25,6 +25,12 @@ const Button = styled.button`
     background-color: ${Color["primary-dark"]};
   }
 
+  ${({ nowrap }) =>
+    nowrap &&
+    `
+    white-space:nowrap;
+  `}
+
   ${({ sm }) =>
     sm &&
     `
@@ -141,6 +147,12 @@ export const OutlinedButton = styled.button`
     border: 1px solid ${Color["primary-dark"]};
     color: ${Color["white-light"]};
   }
+
+  ${({ nowrap }) =>
+    nowrap &&
+    `
+    white-space:nowrap;
+  `}
 
   ${({ full }) =>
     full &&

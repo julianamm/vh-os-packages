@@ -10,8 +10,8 @@ import VHInput from "../../Components/Input/Simple";
 
 const VHGeneralSection = props => {
   return (
-    <Container md>
-      <Row>
+    <>
+      <Row marginBottom={5}>
         <VHText
           className={`vh-general-section-title ${props.className ? props.className : ''}`}
           text={"General"}
@@ -113,12 +113,17 @@ const VHGeneralSection = props => {
               <VHInput
                 data={"phone"}
                 onEvent={props.onEvent}
+                disabled={props.controls.phone.loading}
+                error={props.controls.phone.error}
+                loading={props.controls.phone.loading}
+                placeholder="+1 778 000 0000"
+                value={props.phone}
               />
             </Row>
           </Row>
         </VHCardBase>
       </Row>
-    </Container>
+    </>
   )
 }
 

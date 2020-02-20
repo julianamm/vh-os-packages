@@ -6,8 +6,12 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 # Release Current
 `release/4`
 
-# To complete this test you must 
- 
+# Prototype
+
+You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7deacb0cd7)
+
+# Instructions
+
 1 - Reuse as much you can
 
 2 - Create as many components as you need thinking that could be reused
@@ -43,7 +47,7 @@ ROOT                      #STORYBOOK CONFIG
 └───packages
 │   └───Colors                 # Colors configuration
 │   └───Grid                   # Grid configuration we must use this component to create all componets grid
-|   └───Components    
+|   └───Components
 |       └───[YOUR COMPONENT FOLDER]# Create your component here with the name
 |       └───input              # All inputs should be created inside input folder
 |           └───Simple         # A simple component
@@ -57,9 +61,6 @@ ROOT                      #STORYBOOK CONFIG
 └─── README.md                  # README.md Changes are welcome
 ```
 
-# Prototype
-
-You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7deacb0cd7)
 
 ## Mandatory
 > All components must be created inside `packages/Components`

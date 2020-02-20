@@ -9,8 +9,8 @@ import VHInputCheckbox from "../../Components/Input/checkbox";
 
 const VHSkillsSection = props => {
   return (
-    <Container md>
-      <Row>
+    <>
+      <Row marginBottom={5}>
         <VHText
           className={`vh-skills-section-title ${props.className ? props.className : ''}`}
           text={"Skills"}
@@ -89,14 +89,14 @@ const VHSkillsSection = props => {
             </Row>
         </VHCardBase>
       </Row>
-    </Container>
+    </>
   )
 }
 
 VHSkillsSection.propTypes = {
     onEvent: PropTypes.func,
     title: PropTypes.string.isRequired,
-    data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    data: PropTypes.object,
     className: PropTypes.string
 }
 
