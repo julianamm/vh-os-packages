@@ -55,6 +55,7 @@ storiesOf("Sections|User Company Experience", module)
             <VHUserCompanyExperienceSection
                 yearsOfExperience={"- 6yrs 3 mos"}
                 userExperience={userExperience}
+                onEvent={e => console.log(e)}
             />
         </div>
     ));

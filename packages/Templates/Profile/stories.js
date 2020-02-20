@@ -108,6 +108,8 @@ storiesOf("Templates|Profile", module)
 
         data: Mock.Social
       }}
+
+      userCompanyExperience={Mock.UserExperience}
     />
   </div>
 ))
