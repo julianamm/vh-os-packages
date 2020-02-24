@@ -11,13 +11,15 @@ import VHTimeLine from "../TimeLine";
 import VHAssign from "../Assign";
 import VHTextarea from "../Textarea";
 import VHIconText from "../IconText";
+import VHPreloader from '../Preloader/index'
+import VHImg from '../Img/index'
 
 const VHModalVisaPipeline = props => {
   return (
     <Row
       className={`vh-modal-visa-pipeline ${
         props.className ? props.className : ""
-      }`}
+        }`}
     >
       <VHModal
         width="70"
@@ -51,15 +53,10 @@ const VHModalVisaPipeline = props => {
             <Row row>
               <S.Wrapper>
                 <Row marginBottom5>
-                  <VHIconText
-                    className="vh-icon-text"
-                    icon="bullet"
-                    iconColor="black-50"
-                    onEvent={props.onEvent}
-                    text="Real Estate Wire"
-                    textColor="gray-80"
-                    variant="platform"
-                  />
+                  {/* <S.IconWrapper>
+                    <VHImg source={CompanyIcon} title="city" xs />
+                  </S.IconWrapper>
+                  <S.Info>{props.companyName}</S.Info> */}
                 </Row>
                 <Row marginBottom5>
                   <VHTextarea
@@ -69,21 +66,27 @@ const VHModalVisaPipeline = props => {
                 </Row>
               </S.Wrapper>
               <Row marginBottom5>
-                <VHAssign items={props.assign.items} onEvent={props.onEvent} />
+                {props.assignedSession.loading ? <VHPreloader size='sm' /> :
+                  <VHAssign items={props.assign.items} onEvent={props.onEvent} />
+                }
               </Row>
             </Row>
             <Row row>
               <S.Wrapper>
                 <Row>
-                  <VHComments comments={props.comments} />
+                  {props.commentsSession.loading ? <VHPreloader size='sm' /> :
+                    <VHComments comments={props.comments} onEvent={props.onEvent}/>
+                  }
                 </Row>
               </S.Wrapper>
               <Row margin>
-                <VHTimeLine
-                  items={props.timeLine.items}
-                  totalDays={props.timeLine.totalDays}
-                  onEvent={props.onEvent}
-                />
+                {props.activitiesSession.loading ? <VHPreloader size='sm' /> :
+                  <VHTimeLine
+                    items={props.timeLine.items}
+                    totalDays={props.timeLine.totalDays}
+                    onEvent={props.onEvent}
+                  />
+                }
                 <S.InfoDate>Projected Start Date: Apr, 19</S.InfoDate>
               </Row>
             </Row>

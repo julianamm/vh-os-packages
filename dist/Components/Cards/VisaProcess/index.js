@@ -56,7 +56,8 @@ var VHCardVisaProcess = function VHCardVisaProcess(props) {
     onDragStart: props.onDragStart,
     favorite: props.favorite,
     draggable: props.draggable,
-    onEvent: props.onEvent
+    onEvent: props.onEvent,
+    userId: props.userId
   }, props.invoiced && _react.default.createElement(S.Tag, null, "Invoiced"), _react.default.createElement(_Grid.Row, {
     row: true
   }, _react.default.createElement(S.PersonalInfo, null, _react.default.createElement(_Grid.Row, {

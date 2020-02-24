@@ -46,7 +46,7 @@ var VHComments = function VHComments(props) {
       autoWidth: true,
       paddingRight8: true
     }, _react.default.createElement(_Avatar.default, {
-      image: comment.image,
+      image: comment.user.avatar,
       size: "md"
     })), _react.default.createElement(_Grid.Row, {
       margin: true
@@ -57,18 +57,18 @@ var VHComments = function VHComments(props) {
     }, _react.default.createElement(_Text.default, {
       variant: "platform",
       color: "gray-100",
-      text: comment.fullName
+      text: comment.user.name
     }), _react.default.createElement(S.TextWrapper, null, _react.default.createElement(_Text.default, {
       variant: "caption",
       color: "gray-50",
-      text: comment.days
+      text: comment.createdOn
     }))), _react.default.createElement(_Grid.Row, {
       margin: true,
       marginBottom5: true
     }, _react.default.createElement(_Text.default, {
       variant: "platform",
       color: "gray-80",
-      text: comment.event
+      text: comment.note
     }))));
   }))), _react.default.createElement(_Grid.Row, {
     row: true,
@@ -78,7 +78,20 @@ var VHComments = function VHComments(props) {
     image: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
     size: "md"
   }), _react.default.createElement(S.Area, {
-    placeholder: "Ask a question or post a uptade"
+    placeholder: "Ask a question or post a uptade",
+    onKeyUp: function onKeyUp(event) {
+      if (props.onEvent && event.key === 'Enter') {
+        props.onEvent({
+          data: props,
+          type: 'onEvent',
+          target: 'VHComments',
+          comment: event.currentTarget.value.replace(/[^a-zA-Z ]/g, "")
+        });
+        event.currentTarget.value = '';
+      }
+
+      ;
+    }
   })));
 };
 
