@@ -15,7 +15,6 @@ import TimeIconGreen from '../../../../assets/icons/icon_time_green.svg'
 import FavoriteIcon from '../../../../assets/icons/icon_star_fill.svg'
 
 const VHCardVisaProcess = props => {
-  console.log('EVENTO ',props.onEvent)
   return (
     <VHCardBase
       onDragEnter={props.onDragEnter}
@@ -23,7 +22,8 @@ const VHCardVisaProcess = props => {
       onDragStart={props.onDragStart}
       favorite={props.favorite} 
       draggable={props.draggable}
-      onEvent={props.onEvent}>
+      onEvent={props.onEvent}
+      userId={props.userId}>
       {props.invoiced && <S.Tag>Invoiced</S.Tag>}
       <Row row>
         <S.PersonalInfo>

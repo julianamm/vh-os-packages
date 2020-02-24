@@ -33,6 +33,10 @@ var _Textarea = _interopRequireDefault(require("../Textarea"));
 
 var _IconText = _interopRequireDefault(require("../IconText"));
 
+var _index = _interopRequireDefault(require("../Preloader/index"));
+
+var _index2 = _interopRequireDefault(require("../Img/index"));
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -69,31 +73,30 @@ var VHModalVisaPipeline = function VHModalVisaPipeline(props) {
       row: true
     }, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
       marginBottom5: true
-    }, _react.default.createElement(_IconText.default, {
-      className: "vh-icon-text",
-      icon: "bullet",
-      iconColor: "black-50",
-      onEvent: props.onEvent,
-      text: "Real Estate Wire",
-      textColor: "gray-80",
-      variant: "platform"
-    })), _react.default.createElement(_Grid.Row, {
+    }), _react.default.createElement(_Grid.Row, {
       marginBottom5: true
     }, _react.default.createElement(_Textarea.default, {
       description: props.description,
       onEvent: props.onEvent
     }))), _react.default.createElement(_Grid.Row, {
       marginBottom5: true
-    }, _react.default.createElement(_Assign.default, {
+    }, props.assignedSession.loading ? _react.default.createElement(_index.default, {
+      size: "sm"
+    }) : _react.default.createElement(_Assign.default, {
       items: props.assign.items,
       onEvent: props.onEvent
     }))), _react.default.createElement(_Grid.Row, {
       row: true
-    }, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Comments.default, {
-      comments: props.comments
+    }, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, null, props.commentsSession.loading ? _react.default.createElement(_index.default, {
+      size: "sm"
+    }) : _react.default.createElement(_Comments.default, {
+      comments: props.comments,
+      onEvent: props.onEvent
     }))), _react.default.createElement(_Grid.Row, {
       margin: true
-    }, _react.default.createElement(_TimeLine.default, {
+    }, props.activitiesSession.loading ? _react.default.createElement(_index.default, {
+      size: "sm"
+    }) : _react.default.createElement(_TimeLine.default, {
       items: props.timeLine.items,
       totalDays: props.timeLine.totalDays,
       onEvent: props.onEvent

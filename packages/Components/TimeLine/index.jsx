@@ -53,7 +53,7 @@ const VHTimeLine = props => {
                           <VHTitleDescription
                             className="vh-title-description-time-line"
                             data={item}
-                            description={item.userName}
+                            description={item.description}
                             descriptionColor="gray-50"
                             descriptionVariant="caption"
                             onEvent={props.onEvent}
@@ -73,7 +73,7 @@ const VHTimeLine = props => {
                           key={`vh-time-line-${item.columnName}`}
                           className="vh-title-description-time-line"
                           data={item}
-                          description={item.userName}
+                          description={item.description}
                           descriptionColor="gray-50"
                           descriptionVariant="caption"
                           onEvent={props.onEvent}
