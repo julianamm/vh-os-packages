@@ -67,7 +67,7 @@ var VHTimeLine = function VHTimeLine(props) {
       }, _react.default.createElement(_TitleDescription.default, {
         className: "vh-title-description-time-line",
         data: item,
-        description: item.userName,
+        description: item.description,
         descriptionColor: "gray-50",
         descriptionVariant: "caption",
         onEvent: props.onEvent,
@@ -80,7 +80,7 @@ var VHTimeLine = function VHTimeLine(props) {
         key: "vh-time-line-".concat(item.columnName),
         className: "vh-title-description-time-line",
         data: item,
-        description: item.userName,
+        description: item.description,
         descriptionColor: "gray-50",
         descriptionVariant: "caption",
         onEvent: props.onEvent,

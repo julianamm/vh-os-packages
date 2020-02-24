@@ -18,34 +18,34 @@ const VHComments = props => {
       <Row margin>
         <S.Wrapper>
           {props.comments.map(comment => (
-              <Row row margin justifyBottom >
-                <Row margin autoWidth paddingRight8>
-                  <VHAvatar image={comment.image} size={"md"} />
+            <Row row margin justifyBottom >
+              <Row margin autoWidth paddingRight8>
+                <VHAvatar image={comment.user.avatar} size={"md"} />
+              </Row>
+              <Row margin>
+                <Row margin row alignItemsCenter >
+                  <VHText
+                    variant={"platform"}
+                    color="gray-100"
+                    text={comment.user.name}
+                  />
+                  <S.TextWrapper>
+                    <VHText
+                      variant={"caption"}
+                      color="gray-50"
+                      text={comment.createdOn}
+                    />
+                  </S.TextWrapper>
                 </Row>
-                <Row margin>
-                  <Row margin row alignItemsCenter >
-                    <VHText
-                      variant={"platform"}
-                      color="gray-100"
-                      text={comment.fullName}
-                    />
-                    <S.TextWrapper>
-                        <VHText
-                        variant={"caption"}
-                        color="gray-50"
-                        text={comment.days}
-                        />
-                    </S.TextWrapper>
-                  </Row>
-                  <Row margin marginBottom5>
-                    <VHText
-                      variant={"platform"}
-                      color="gray-80"
-                      text={comment.event}
-                    />
-                  </Row>
+                <Row margin marginBottom5>
+                  <VHText
+                    variant={"platform"}
+                    color="gray-80"
+                    text={comment.note}
+                  />
                 </Row>
               </Row>
+            </Row>
           ))}
         </S.Wrapper>
       </Row>
@@ -56,22 +56,33 @@ const VHComments = props => {
           }
           size={"md"}
         />
-        <S.Area placeholder="Ask a question or post a uptade"></S.Area>
+        <S.Area placeholder="Ask a question or post a uptade"
+          onKeyUp={event => {
+            if (props.onEvent && event.key === 'Enter') {
+              props.onEvent({
+                data: props,
+                type: 'onEvent',
+                target: 'VHComments',
+                comment: event.currentTarget.value.replace(/[^a-zA-Z ]/g, "")
+              })
+              event.currentTarget.value = ''
+            };
+          }}></S.Area>
       </Row>
     </Row>
   );
 };
 
 VHComments.defaultProps = {
-    comments: [],
-    onEvent: null,
-    className: ""
+  comments: [],
+  onEvent: null,
+  className: ""
 };
 
 VHComments.propTypes = {
-    comments: PropTypes.array,
-    onEvent: PropTypes.func,
-    className: PropTypes.string
+  comments: PropTypes.array,
+  onEvent: PropTypes.func,
+  className: PropTypes.string
 };
 
 export default VHComments;
