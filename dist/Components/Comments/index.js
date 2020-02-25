@@ -85,7 +85,7 @@ var VHComments = function VHComments(props) {
           data: props,
           type: 'onEvent',
           target: 'VHComments',
-          comment: event.currentTarget.value.replace(/[^a-zA-Z ]/g, "")
+          comment: event.currentTarget.value.replace(/\n/g, " ")
         });
         event.currentTarget.value = '';
       }

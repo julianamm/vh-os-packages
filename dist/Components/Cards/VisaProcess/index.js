@@ -49,8 +49,8 @@ var TimeIconGreen = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53M
 var FavoriteIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiNGQ0FCMTAiIGQ9Ik04IDEyLjIxNmw0Ljk0NCAyLjk4NC0xLjMxMi01LjYyNEwxNiA1Ljc5MmwtNS43NTItLjQ4OEw4IDAgNS43NTIgNS4zMDQgMCA1Ljc5Mmw0LjM2OCAzLjc4NEwzLjA1NiAxNS4yIDggMTIuMjE2eiIvPgo8L3N2Zz4K";
 
 var VHCardVisaProcess = function VHCardVisaProcess(props) {
-  console.log('EVENTO ', props.onEvent);
   return _react.default.createElement(_Base.default, {
+    candidate: props.candidate,
     onDragEnter: props.onDragEnter,
     onDragLeave: props.onDragLeave,
     onDragStart: props.onDragStart,

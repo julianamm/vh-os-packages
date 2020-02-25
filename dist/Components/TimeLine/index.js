@@ -38,6 +38,10 @@ var VHTimeLine = function VHTimeLine(props) {
     return getDay(item.createdOn);
   });
   return _react.default.createElement(_Grid.Row, {
+    marginTop: -110,
+    marginBottom: 10,
+    height: 300,
+    overflowY: 'scroll',
     className: "vh-time-line ".concat(props.className ? props.className : "")
   }, _react.default.createElement(_Grid.Row, {
     row: true,
@@ -58,7 +62,7 @@ var VHTimeLine = function VHTimeLine(props) {
       key: "vh-time-line-item".concat(index)
     }, _react.default.createElement(S.Circle, null), _react.default.createElement(S.WrapperText, null, _react.default.createElement(S.Date, null, getDate(item.createdOn), _react.default.createElement(_Text.default, {
       onEvent: props.onEvent,
-      text: dates[index + 1] !== undefined && " ".concat(dates[index + 1] - dates[index], " days"),
+      text: dates[index + 1] !== undefined && " ".concat(dates[index] - dates[index + 1] < 0 ? -(dates[index] - dates[index + 1]) : dates[index] - dates[index + 1], " days"),
       variant: "caption",
       color: "gray-50"
     })), item.items.length > 1 ? _react.default.createElement(_Grid.Row, null, item.items.map(function (item) {

@@ -17,10 +17,11 @@ import FavoriteIcon from '../../../../assets/icons/icon_star_fill.svg'
 const VHCardVisaProcess = props => {
   return (
     <VHCardBase
+      candidate={props.candidate}
       onDragEnter={props.onDragEnter}
       onDragLeave={props.onDragLeave}
       onDragStart={props.onDragStart}
-      favorite={props.favorite} 
+      favorite={props.favorite}
       draggable={props.draggable}
       onEvent={props.onEvent}
       userId={props.userId}>
