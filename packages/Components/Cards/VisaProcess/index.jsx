@@ -19,6 +19,7 @@ const VHCardVisaProcess = props => {
     <VHCardBase
       candidate={props.candidate}
       onDragEnter={props.onDragEnter}
+      id={props.id}
       onDragLeave={props.onDragLeave}
       onDragStart={props.onDragStart}
       favorite={props.favorite}
