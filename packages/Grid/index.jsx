@@ -89,5 +89,17 @@ export const Row = styled.div`
        margin-bottom: ${marginBottom * 3}px;
     `}
 
+    ${({ marginTop}) => marginTop && `
+       margin-top: ${marginTop}px;
+    `}
+
+    ${({ height }) => height && `
+       height: ${height}px;
+    `}
+
+    ${({ overflowY }) => overflowY && `
+       overflow-y: ${overflowY};
+    `}
+
 `
 

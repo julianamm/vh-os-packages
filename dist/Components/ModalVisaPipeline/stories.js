@@ -21,6 +21,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       height: '100vh'
     }
   }, _react.default.createElement(_.default, {
+    job: job,
+    user: user,
     activitiesSession: activitiesSession,
     assignedSession: assignedSession,
     commentsSession: commentsSession,
@@ -48,6 +50,13 @@ var activitiesSession = {
   error: false,
   success: true
 };
+var user = {
+  "id": 141394.0,
+  "name": "Ivan Avdonin",
+  "email": "vh@mailinator.com",
+  "avatar": "https://vanhackblobstorageprod.blob.core.windows.net/img/User/-1.jpg",
+  "isPremium": false
+};
 var comments = [{
   "createdOn": "4 days",
   "note": "Adding a comment 007",
@@ -60,6 +69,12 @@ var comments = [{
   },
   "id": 9021
 }];
+var job = {
+  "location": "Vancouver, Canada",
+  "position": "iOS Developer",
+  "companyName": "Kickstarter",
+  "id": 199
+};
 var timeLineData = {
   totalDays: "21 days",
   items: [{

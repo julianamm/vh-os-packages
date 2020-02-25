@@ -14,7 +14,30 @@ import VHIconText from "../IconText";
 import VHPreloader from '../Preloader/index'
 import VHImg from '../Img/index'
 
+import CompanyIcon from '../../../assets/icons/icon_business.svg'
+import PositionIcon from '../../../assets/icons/icon_skills.svg'
+import CityIcon from '../../../assets/icons/icon_passport.svg'
+import CommentsIcon from '../../../assets/icons/icon_chat-outline.svg'
+import TimeIconRed from '../../../assets/icons/icon_time_red.svg'
+import TimeIconGreen from '../../../assets/icons/icon_time_green.svg'
+import FavoriteIcon from '../../../assets/icons/icon_star_fill.svg'
+
 const VHModalVisaPipeline = props => {
+
+  let projectedDate = ''
+  let showDate = false
+
+  if(props.projectedStartDate != null && typeof props.projectedStartDate != undefined){
+    showDate = true
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+            "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        ];
+
+    let date = new Date(props.projectedStartDate)
+
+    projectedDate = `${monthNames[date.getMonth()]}, ${date.getDate()}`
+  }
+
   return (
     <Row
       className={`vh-modal-visa-pipeline ${
@@ -29,16 +52,14 @@ const VHModalVisaPipeline = props => {
           <Row row>
             <Row autoWidth paddingRight8>
               <VHAvatar
-                image={
-                  "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
-                }
+                image={props.user.avatar}
                 size={"lg"}
                 showCursor
               />
             </Row>
             <VHTitleDescription
-              title="Manuel Barros Reyes"
-              description="manuca@gmail.com"
+              title={props.user.name}
+              description={props.user.email}
               titleVariant="h4"
               titleColor="gray-90"
               descriptionColor="gray-80"
@@ -52,11 +73,25 @@ const VHModalVisaPipeline = props => {
           <Row>
             <Row row>
               <S.Wrapper>
-                <Row marginBottom5>
-                  {/* <S.IconWrapper>
-                    <VHImg source={CompanyIcon} title="city" xs />
+                <Row marginBottom5 row alignItemsCenter>
+                  <S.IconWrapper>
+                    <VHImg source={CompanyIcon} title="company" xs />
                   </S.IconWrapper>
-                  <S.Info>{props.companyName}</S.Info> */}
+                  <S.Info>{props.job.companyName}</S.Info>
+                  <S.IconWrapper>
+                    <VHImg source={PositionIcon} title="position" xs />
+                  </S.IconWrapper>
+                  <S.Info>{props.job.position}</S.Info>
+                </Row>
+                <Row marginBottom5 row alignItemsCenter>
+                  <S.IconWrapper>
+                    <VHImg source={CityIcon} title="city" xs />
+                  </S.IconWrapper>
+                  <S.Info>{props.job.location}</S.Info>
+                  <S.IconWrapper>
+                    <VHImg source={PositionIcon} title="city" xs />
+                  </S.IconWrapper>
+                  <S.Info>{props.salary}</S.Info>
                 </Row>
                 <Row marginBottom5>
                   <VHTextarea
@@ -86,8 +121,9 @@ const VHModalVisaPipeline = props => {
                     totalDays={props.timeLine.totalDays}
                     onEvent={props.onEvent}
                   />
+                }{showDate &&
+                <S.InfoDate>{`Projected Start Date: `}<b>{projectedDate}</b></S.InfoDate>
                 }
-                <S.InfoDate>Projected Start Date: Apr, 19</S.InfoDate>
               </Row>
             </Row>
           </Row>

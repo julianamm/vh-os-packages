@@ -5,7 +5,7 @@ import VHModalVisaPipeline from ".";
 storiesOf('Components|Modal Visa Pipeline', module)
   .add('VHModalVisaPipeline', () => (
     <div style={{ width: '100vw', height: '100vh' }}>
-      <VHModalVisaPipeline activitiesSession={activitiesSession} assignedSession={assignedSession} commentsSession={commentsSession} onEvent={event => console.log(event)} comments={comments} timeLine={{...timeLineData}} assign={{...assignData}} description={descriptionData.description}/>
+      <VHModalVisaPipeline job={job} user={user} activitiesSession={activitiesSession} assignedSession={assignedSession} commentsSession={commentsSession} onEvent={event => console.log(event)} comments={comments} timeLine={{ ...timeLineData }} assign={{ ...assignData }} description={descriptionData.description} />
     </div>
   ))
 
@@ -27,20 +27,36 @@ const activitiesSession = {
   success: true
 }
 
+
+const user = {
+  "id": 141394.0,
+  "name": "Ivan Avdonin",
+  "email": "vh@mailinator.com",
+  "avatar": "https://vanhackblobstorageprod.blob.core.windows.net/img/User/-1.jpg",
+  "isPremium": false
+}
+
 const comments = [
   {
     "createdOn": "4 days",
     "note": "Adding a comment 007",
     "user": {
-        "id": 141394.0,
-        "name": "Anybal Silva",
-        "email": "anybal@vanhack.com",
-        "avatar": "https://vanhackblobstorageprod.blob.core.windows.net/img/User/1498bcb6-6bb6-4def-bd1a-8c2414e21330.jpg",
-        "isPremium": false
+      "id": 141394.0,
+      "name": "Anybal Silva",
+      "email": "anybal@vanhack.com",
+      "avatar": "https://vanhackblobstorageprod.blob.core.windows.net/img/User/1498bcb6-6bb6-4def-bd1a-8c2414e21330.jpg",
+      "isPremium": false
     },
     "id": 9021
-}
+  }
 ]
+
+const job = {
+  "location": "Vancouver, Canada",
+  "position": "iOS Developer",
+  "companyName": "Kickstarter",
+  "id": 199
+}
 
 
 const timeLineData = {
