@@ -1,4 +1,4 @@
-# This if part of the hiring processes for the [Front End position](http://bit.ly/vanhack-react-job) at VanHack
+# This is part of the hiring processes for the [Front End position](http://bit.ly/vanhack-react-job) at VanHack
 
 
 All Components are made using [ReactJS](https://reactjs.org/) and [Styled Components](https://styled-components.com/) and we use [Storybook](https://storybook.js.org/) as a rendering
@@ -12,7 +12,7 @@ You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7
 
 # Instructions
 
-1 - Reuse as much you can
+1 - Reuse as much as you can
 
 2 - Create as many components as you need thinking that could be reused
 
