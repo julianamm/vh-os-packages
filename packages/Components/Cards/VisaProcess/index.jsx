@@ -17,6 +17,7 @@ import FavoriteIcon from '../../../../assets/icons/icon_star_fill.svg'
 const VHCardVisaProcess = props => {
   return (
     <VHCardBase
+      candidate={props.candidate}
       onDragEnter={props.onDragEnter}
       id={props.id}
       onDragLeave={props.onDragLeave}
