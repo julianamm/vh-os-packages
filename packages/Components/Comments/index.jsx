@@ -6,18 +6,20 @@ import * as S from "./styles";
 import { Row } from "../../Grid";
 
 const VHComments = props => {
+  const totalComments = props.comments ? props.comments.length : 0
+  const comments = props.comments ? props.comments : []
   return (
     <Row className={`vh-comments ${props.className ? props.className : ''}`}>
       <Row marginBottom5>
         <VHText
           variant={"platform2"}
           color="gray-80"
-          text={`Comments (${props.comments.length})`}
+          text={`Comments (${totalComments})`}
         />
       </Row>
       <Row margin>
         <S.Wrapper>
-          {props.comments.map(comment => (
+          {comments.map(comment => (
             <Row row margin justifyBottom >
               <Row margin autoWidth paddingRight8>
                 <VHAvatar image={comment.user.avatar} size={"md"} />
@@ -60,8 +62,8 @@ const VHComments = props => {
           onKeyUp={event => {
             if (props.onEvent && event.key === 'Enter') {
               props.onEvent({
-                data: props,
-                type: 'onEvent',
+                data: props.data,
+                type: 'onEnter',
                 target: 'VHComments',
                 comment: event.currentTarget.value.replace(/\n/g, " ")
               })

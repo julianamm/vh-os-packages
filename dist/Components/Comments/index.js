@@ -26,6 +26,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHComments = function VHComments(props) {
+  var totalComments = props.comments ? props.comments.length : 0;
+  var comments = props.comments ? props.comments : [];
   return _react.default.createElement(_Grid.Row, {
     className: "vh-comments ".concat(props.className ? props.className : '')
   }, _react.default.createElement(_Grid.Row, {
@@ -33,10 +35,10 @@ var VHComments = function VHComments(props) {
   }, _react.default.createElement(_Text.default, {
     variant: "platform2",
     color: "gray-80",
-    text: "Comments (".concat(props.comments.length, ")")
+    text: "Comments (".concat(totalComments, ")")
   })), _react.default.createElement(_Grid.Row, {
     margin: true
-  }, _react.default.createElement(S.Wrapper, null, props.comments.map(function (comment) {
+  }, _react.default.createElement(S.Wrapper, null, comments.map(function (comment) {
     return _react.default.createElement(_Grid.Row, {
       row: true,
       margin: true,
@@ -82,8 +84,8 @@ var VHComments = function VHComments(props) {
     onKeyUp: function onKeyUp(event) {
       if (props.onEvent && event.key === 'Enter') {
         props.onEvent({
-          data: props,
-          type: 'onEvent',
+          data: props.data,
+          type: 'onEnter',
           target: 'VHComments',
           comment: event.currentTarget.value.replace(/\n/g, " ")
         });
