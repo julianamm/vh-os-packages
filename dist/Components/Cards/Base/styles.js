@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Card = void 0;
+exports.Card = exports.Bottom = exports.Top = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -11,8 +11,28 @@ var _Colors = _interopRequireDefault(require("../../../Colors"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: ", ";\n    padding: 24px;\n    position: relative;\n    box-sizing: border-box;\n    border-top: ", ";\n\n    :hover {\n        box-shadow: ", ";\n    }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    top: 50%;\n    left: 0;\n    width: 100%;\n    background: blue;\n    height: 50%;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: ", ";\n    padding: 24px;\n    box-sizing: border-box;\n    border-top: ", ";\n\n    :hover {\n        box-shadow: ", ";\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 50%;\n    background: red;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -23,7 +43,15 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Card = _styledComponents.default.div(_templateObject(), _Colors.default["gray-20"], function (props) {
+var Top = _styledComponents.default.span(_templateObject());
+
+exports.Top = Top;
+
+var Bottom = _styledComponents.default.span(_templateObject2());
+
+exports.Bottom = Bottom;
+
+var Card = _styledComponents.default.div(_templateObject3(), _Colors.default["gray-20"], function (props) {
   return props.noBorder ? "0" : "6px";
 }, function (props) {
   return props.favorite ? "3px solid ".concat(_Colors.default["yellow-dark"]) : 'none';

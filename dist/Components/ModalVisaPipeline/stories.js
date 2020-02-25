@@ -21,6 +21,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       height: '100vh'
     }
   }, _react.default.createElement(_.default, {
+    activitiesSession: activitiesSession,
+    assignedSession: assignedSession,
+    commentsSession: commentsSession,
     onEvent: function onEvent(event) {
       return console.log(event);
     },
@@ -30,24 +33,32 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     description: descriptionData.description
   }));
 });
+var commentsSession = {
+  loading: false,
+  error: false,
+  success: true
+};
+var assignedSession = {
+  loading: false,
+  error: false,
+  success: true
+};
+var activitiesSession = {
+  loading: false,
+  error: false,
+  success: true
+};
 var comments = [{
-  "profileId": "74637373",
-  "image": "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-  "fullName": "Anybal Silva",
-  "days": "3 days ago",
-  "event": "Adding a comment like a boss"
-}, {
-  "profileId": "746373373",
-  "image": "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-  "fullName": "João Dias",
-  "days": "4 days ago",
-  "event": "Fixing bug"
-}, {
-  "profileId": "74613437373",
-  "image": "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-  "fullName": "Mário Rodeghiero",
-  "days": "5 days ago",
-  "event": "Had call with Anastasia. She does not need medicals as she is in Germany."
+  "createdOn": "4 days",
+  "note": "Adding a comment 007",
+  "user": {
+    "id": 141394.0,
+    "name": "Anybal Silva",
+    "email": "anybal@vanhack.com",
+    "avatar": "https://vanhackblobstorageprod.blob.core.windows.net/img/User/1498bcb6-6bb6-4def-bd1a-8c2414e21330.jpg",
+    "isPremium": false
+  },
+  "id": 9021
 }];
 var timeLineData = {
   totalDays: "21 days",
