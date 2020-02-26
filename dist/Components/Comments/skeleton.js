@@ -11,11 +11,19 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _Avatar = _interopRequireDefault(require("../Avatar"));
+
 var _Text = _interopRequireDefault(require("../Text"));
+
+var S = _interopRequireWildcard(require("./styles"));
 
 var _Grid = require("../../Grid");
 
-var S = _interopRequireWildcard(require("./styles"));
+var _Avatar2 = _interopRequireDefault(require("../Skeleton/Avatar"));
+
+var _Text2 = _interopRequireDefault(require("../Skeleton/Text"));
+
+var _Description = _interopRequireDefault(require("../Skeleton/Description"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -23,31 +31,44 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VHTextarea = function VHTextarea(props) {
+var VHCommentsSkeleton = function VHCommentsSkeleton(props) {
   return _react.default.createElement(_Grid.Row, {
-    className: "vh-textarea-description ".concat(props.className ? props.className : '')
+    className: "vh-comments ".concat(props.className ? props.className : '')
+  }, _react.default.createElement(_Grid.Row, {
+    marginBottom5: true
   }, _react.default.createElement(_Text.default, {
+    variant: "platform2",
     color: "gray-80",
-    variant: 'platform',
-    text: "Description"
-  }), _react.default.createElement(S.Textarea, {
-    data: "data",
-    type: "textarea",
-    value: props.description,
-    placeholder: props.description,
-    onEvent: props.onEvent
-  }));
+    text: "Comments ..."
+  })), _react.default.createElement(_Grid.Row, {
+    margin: true
+  }, _react.default.createElement(S.Wrapper, null, [1, 2, 3].map(function (comment) {
+    return _react.default.createElement(_Grid.Row, {
+      row: true,
+      marginBottom: 10
+    }, _react.default.createElement(_Grid.Row, {
+      margin: true,
+      autoWidth: true,
+      paddingRight8: true
+    }, _react.default.createElement(_Avatar2.default, null)), _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Text2.default, null)), _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Description.default, null))));
+  }))));
 };
 
-VHTextarea.defaultProps = {
-  description: "",
+VHCommentsSkeleton.defaultProps = {
+  comments: [],
   onEvent: null,
   className: ""
 };
-VHTextarea.propTypes = {
-  description: _propTypes.default.string,
+VHCommentsSkeleton.propTypes = {
+  comments: _propTypes.default.array,
   onEvent: _propTypes.default.func,
   className: _propTypes.default.string
 };
-var _default = VHTextarea;
+var _default = VHCommentsSkeleton;
 exports.default = _default;

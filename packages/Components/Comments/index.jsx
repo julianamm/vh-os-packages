@@ -4,53 +4,60 @@ import VHAvatar from "../Avatar";
 import VHText from "../Text";
 import * as S from "./styles";
 import { Row } from "../../Grid";
+import Skeleton from './skeleton'
 
 const VHComments = props => {
   const totalComments = props.comments ? props.comments.length : 0
   const comments = props.comments ? props.comments : []
   return (
     <Row className={`vh-comments ${props.className ? props.className : ''}`}>
-      <Row marginBottom5>
-        <VHText
-          variant={"platform2"}
-          color="gray-80"
-          text={`Comments (${totalComments})`}
-        />
-      </Row>
-      <Row margin>
-        <S.Wrapper>
-          {comments.map(comment => (
-            <Row row margin justifyBottom >
-              <Row margin autoWidth paddingRight8>
-                <VHAvatar image={comment.user.avatar} size={"md"} />
-              </Row>
-              <Row margin>
-                <Row margin row alignItemsCenter >
-                  <VHText
-                    variant={"platform"}
-                    color="gray-100"
-                    text={comment.user.name}
-                  />
-                  <S.TextWrapper>
+      {
+        props.loading
+        ? <Skeleton />
+        : <>
+        <Row marginBottom5>
+          <VHText
+            variant={"platform2"}
+            color="gray-80"
+            text={`Comments (${totalComments})`}
+          />
+        </Row>
+        <Row margin>
+          <S.Wrapper>
+            {comments.map(comment => (
+              <Row row margin justifyBottom >
+                <Row margin autoWidth paddingRight8>
+                  <VHAvatar image={comment.user.avatar} size={"md"} />
+                </Row>
+                <Row margin>
+                  <Row margin row alignItemsCenter >
                     <VHText
-                      variant={"caption"}
-                      color="gray-50"
-                      text={comment.createdOn}
+                      variant={"platform"}
+                      color="gray-100"
+                      text={comment.user.name}
                     />
-                  </S.TextWrapper>
-                </Row>
-                <Row margin marginBottom5>
-                  <VHText
-                    variant={"platform"}
-                    color="gray-80"
-                    text={comment.note}
-                  />
+                    <S.TextWrapper>
+                      <VHText
+                        variant={"caption"}
+                        color="gray-50"
+                        text={comment.createdOn}
+                      />
+                    </S.TextWrapper>
+                  </Row>
+                  <Row margin marginBottom5>
+                    <VHText
+                      variant={"platform"}
+                      color="gray-80"
+                      text={comment.note}
+                    />
+                  </Row>
                 </Row>
               </Row>
-            </Row>
-          ))}
-        </S.Wrapper>
-      </Row>
+            ))}
+          </S.Wrapper>
+        </Row>
+        </>
+      }
       <Row row margin alignItemsCenter>
         <VHAvatar
           image={

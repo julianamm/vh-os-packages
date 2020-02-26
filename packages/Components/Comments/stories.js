@@ -22,4 +22,9 @@ storiesOf("Components|Comments", module)
         <div style={{ width: '589px', padding: "24px"}}>
             <VHComments comments={comments} onEvent={(event) => console.log(event)}/>
         </div>
-    ));
+    ))
+    .add("loading", () => (
+        <div style={{ width: '589px', padding: "24px"}}>
+            <VHComments loading comments={comments} onEvent={(event) => console.log(event)}/>
+        </div>
+    ))

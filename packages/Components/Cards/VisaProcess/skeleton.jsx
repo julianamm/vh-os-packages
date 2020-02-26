@@ -6,10 +6,14 @@ import * as S from "./styles";
 import VHAvatarSkeleton from '../../Skeleton/Avatar'
 import VHTextSkeleton from '../../Skeleton/Text'
 const VHCardVisaProcessSkeleton = props => {
+  const arr = [1,2,3,4,5,6]
   if ( props.random ) {
-    const x = Math.floor((Math.random() * 5) + 1);
-    const arr = [1,2,3,4,5,6]
+    const x = Math.floor((Math.random() * 3) + 1);
     arr.length = x
+  } else {
+    arr.length = 1
+  }
+
     return (
       <>
         {
@@ -26,7 +30,7 @@ const VHCardVisaProcessSkeleton = props => {
                     <VHAvatarSkeleton />
                   </Row>
                   <Row>
-                    <VHTextSkeleton/>
+                    <VHTextSkeleton primary/>
                   </Row>
                 </Row>
             </Row>
@@ -54,7 +58,7 @@ const VHCardVisaProcessSkeleton = props => {
               <S.Footer>
               <Row row alignItemsCenter>
                 <Row>
-                  <VHTextSkeleton />
+                  <VHTextSkeleton/>
                 </Row>
                 <Row alignItemsRight>
                   <VHAvatarSkeleton />
@@ -72,58 +76,7 @@ const VHCardVisaProcessSkeleton = props => {
 
         </>
     )
-  }
-  return (
-    <Row marginBottom={10}>
-      <VHCardBase>
-        <Row margin>
-          <VHTextSkeleton/>
-        </Row>
-        <Row margin>
-            <Row row alignItemsCenter>
-              <Row autoWidth paddingRight2>
-                <VHAvatarSkeleton />
-              </Row>
-              <Row>
-                <VHTextSkeleton/>
-              </Row>
-            </Row>
-        </Row>
-        <Row margin>
-            <Row row alignItemsCenter>
-              <Row autoWidth paddingRight2>
-                <VHAvatarSkeleton />
-              </Row>
-              <Row>
-                <VHTextSkeleton/>
-              </Row>
-            </Row>
-        </Row>
-        <Row margin>
-            <Row row alignItemsCenter>
-              <Row autoWidth paddingRight2>
-                <VHAvatarSkeleton />
-              </Row>
-              <Row>
-                <VHTextSkeleton/>
-              </Row>
-            </Row>
-        </Row>
-        <Row>
-          <S.Footer>
-            <Row row alignItemsCenter>
-              <Row>
-                <VHTextSkeleton />
-              </Row>
-              <Row alignItemsRight>
-                <VHAvatarSkeleton />
-              </Row>
-              </Row>
-            </S.Footer>
-        </Row>
-      </VHCardBase>
-      </Row>
-  );
+
 };
 
 export default VHCardVisaProcessSkeleton;

@@ -14,27 +14,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-(0, _react2.storiesOf)('Components|Modal Visa Pipeline', module).add('VHModalVisaPipeline', function () {
-  return _react.default.createElement("div", {
-    style: {
-      width: '100vw',
-      height: '100vh'
-    }
-  }, _react.default.createElement(_.default, {
-    job: job,
-    user: user,
-    activitiesSession: activitiesSession,
-    assignedSession: assignedSession,
-    commentsSession: commentsSession,
-    onEvent: function onEvent(event) {
-      return console.log(event);
-    },
-    comments: comments,
-    timeLine: _objectSpread({}, timeLineData),
-    assign: _objectSpread({}, assignData),
-    description: descriptionData.description
-  }));
-});
 var commentsSession = {
   loading: false,
   error: false,
@@ -47,6 +26,21 @@ var assignedSession = {
 };
 var activitiesSession = {
   loading: false,
+  error: false,
+  success: true
+};
+var commentsSessionLoading = {
+  loading: true,
+  error: false,
+  success: true
+};
+var assignedSessionLoading = {
+  loading: true,
+  error: false,
+  success: true
+};
+var activitiesSessionLoading = {
+  loading: true,
   error: false,
   success: true
 };
@@ -126,3 +120,44 @@ var assignData = {
 var descriptionData = {
   description: "Relocation bonus: CA$ 3,000 (half on signing and half upon  arrival in Canada)"
 };
+(0, _react2.storiesOf)('Components|Modal Visa Pipeline', module).add('VHModalVisaPipeline', function () {
+  return _react.default.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh'
+    }
+  }, _react.default.createElement(_.default, {
+    job: job,
+    user: user,
+    activitiesSession: activitiesSession,
+    assignedSession: assignedSession,
+    commentsSession: commentsSession,
+    onEvent: function onEvent(event) {
+      return console.log(event);
+    },
+    comments: comments,
+    timeLine: _objectSpread({}, timeLineData),
+    assign: _objectSpread({}, assignData),
+    description: descriptionData.description
+  }));
+}).add('loading', function () {
+  return _react.default.createElement("div", {
+    style: {
+      width: '100vw',
+      height: '100vh'
+    }
+  }, _react.default.createElement(_.default, {
+    job: job,
+    user: user,
+    activitiesSession: activitiesSessionLoading,
+    assignedSession: assignedSessionLoading,
+    commentsSession: commentsSessionLoading,
+    onEvent: function onEvent(event) {
+      return console.log(event);
+    },
+    comments: comments,
+    timeLine: _objectSpread({}, timeLineData),
+    assign: _objectSpread({}, assignData),
+    description: descriptionData.description
+  }));
+});

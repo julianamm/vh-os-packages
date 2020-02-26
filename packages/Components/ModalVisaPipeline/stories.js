@@ -2,13 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import VHModalVisaPipeline from ".";
 
-storiesOf('Components|Modal Visa Pipeline', module)
-  .add('VHModalVisaPipeline', () => (
-    <div style={{ width: '100vw', height: '100vh' }}>
-      <VHModalVisaPipeline job={job} user={user} activitiesSession={activitiesSession} assignedSession={assignedSession} commentsSession={commentsSession} onEvent={event => console.log(event)} comments={comments} timeLine={{ ...timeLineData }} assign={{ ...assignData }} description={descriptionData.description} />
-    </div>
-  ))
-
 const commentsSession = {
   loading: false,
   error: false,
@@ -23,6 +16,24 @@ const assignedSession = {
 
 const activitiesSession = {
   loading: false,
+  error: false,
+  success: true
+}
+
+const commentsSessionLoading = {
+  loading: true,
+  error: false,
+  success: true
+}
+
+const assignedSessionLoading = {
+  loading: true,
+  error: false,
+  success: true
+}
+
+const activitiesSessionLoading = {
+  loading: true,
   error: false,
   success: true
 }
@@ -132,3 +143,22 @@ const assignData = {
 const descriptionData = {
   description: "Relocation bonus: CA$ 3,000 (half on signing and half upon  arrival in Canada)"
 }
+
+
+
+
+
+
+
+
+storiesOf('Components|Modal Visa Pipeline', module)
+  .add('VHModalVisaPipeline', () => (
+    <div style={{ width: '100vw', height: '100vh' }}>
+      <VHModalVisaPipeline job={job} user={user} activitiesSession={activitiesSession} assignedSession={assignedSession} commentsSession={commentsSession} onEvent={event => console.log(event)} comments={comments} timeLine={{ ...timeLineData }} assign={{ ...assignData }} description={descriptionData.description} />
+    </div>
+  ))
+  .add('loading', () => (
+    <div style={{ width: '100vw', height: '100vh' }}>
+      <VHModalVisaPipeline job={job} user={user} activitiesSession={activitiesSessionLoading} assignedSession={assignedSessionLoading} commentsSession={commentsSessionLoading} onEvent={event => console.log(event)} comments={comments} timeLine={{ ...timeLineData }} assign={{ ...assignData }} description={descriptionData.description} />
+    </div>
+  ))
