@@ -11,15 +11,19 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _Grid = require("../../Grid");
+var _Avatar = _interopRequireDefault(require("../Avatar"));
+
+var _Text = _interopRequireDefault(require("../Text"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
-var _skeleton = _interopRequireDefault(require("../Cards/VisaProcess/skeleton"));
+var _Grid = require("../../Grid");
 
-var _Avatar = _interopRequireDefault(require("../Skeleton/Avatar"));
+var _Avatar2 = _interopRequireDefault(require("../Skeleton/Avatar"));
 
-var _Text = _interopRequireDefault(require("../Skeleton/Text"));
+var _Text2 = _interopRequireDefault(require("../Skeleton/Text"));
+
+var _Description = _interopRequireDefault(require("../Skeleton/Description"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -27,30 +31,44 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VHColumn = function VHColumn(props) {
-  return _react.default.createElement(S.Column, {
-    id: props.id,
-    className: "vh-vp-column-component ".concat(props.className ? props.className : ''),
-    onDragEnter: props.onDragEnter,
-    onDragLeave: props.onDragLeave,
-    onDragOver: props.onDragOver,
-    onDrop: props.onDrop
+var VHCommentsSkeleton = function VHCommentsSkeleton(props) {
+  return _react.default.createElement(_Grid.Row, {
+    className: "vh-comments ".concat(props.className ? props.className : '')
   }, _react.default.createElement(_Grid.Row, {
-    row: true,
-    alignItemsCenter: true,
-    className: "vh-vp-row-header-component ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(S.ColumnName, null, props.name), _react.default.createElement(S.NumberOfCards, null, props.loading ? _react.default.createElement(_Avatar.default, null) : _react.default.createElement(_react.default.Fragment, null, props.total))), _react.default.createElement(_Grid.Row, {
-    className: "vh-vp-row-avg-time-component ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(S.AvgTime, null, props.loading ? _react.default.createElement(_Text.default, null) : _react.default.createElement(_react.default.Fragment, null, "Avg Time ".concat(props.avgTime, " days")))), _react.default.createElement(_Grid.Row, {
-    className: "vh-vp-row-cards-component ".concat(props.className ? props.className : '')
-  }, props.loading ? _react.default.createElement(_skeleton.default, {
-    random: true
-  }) : _react.default.createElement(_react.default.Fragment, null, props.children)));
+    marginBottom5: true
+  }, _react.default.createElement(_Text.default, {
+    variant: "platform2",
+    color: "gray-80",
+    text: "Comments ..."
+  })), _react.default.createElement(_Grid.Row, {
+    margin: true
+  }, _react.default.createElement(S.Wrapper, null, [1, 2, 3].map(function (comment) {
+    return _react.default.createElement(_Grid.Row, {
+      row: true,
+      marginBottom: 10
+    }, _react.default.createElement(_Grid.Row, {
+      margin: true,
+      autoWidth: true,
+      paddingRight8: true
+    }, _react.default.createElement(_Avatar2.default, null)), _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Text2.default, null)), _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Description.default, null))));
+  }))));
 };
 
-VHColumn.defaultProps = {
-  className: ''
+VHCommentsSkeleton.defaultProps = {
+  comments: [],
+  onEvent: null,
+  className: ""
 };
-VHColumn.propTypes = {};
-var _default = VHColumn;
+VHCommentsSkeleton.propTypes = {
+  comments: _propTypes.default.array,
+  onEvent: _propTypes.default.func,
+  className: _propTypes.default.string
+};
+var _default = VHCommentsSkeleton;
 exports.default = _default;

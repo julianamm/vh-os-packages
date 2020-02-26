@@ -18,7 +18,7 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n    height: ", "px;\n    background-color: #ccc;\n    border-radius: 3px;\n    background-image: linear-gradient(90deg, ", " 0px, ", " 40px, ", "  80px);\n    animation: ", " 1.5s  infinite linear;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: ", "px;\n    height: ", "px;\n    background-color: ", ";\n    border-radius: 3px;\n    background-image: linear-gradient(90deg, ", " 0px, ", " 40px, ", "  80px);\n    animation: ", " 8s  infinite linear;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -39,13 +39,13 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var baseColor = _Colors.default["gray-30"];
-var shineColor = _Colors.default["gray-10"];
 var OffsetWidth = '100%';
 var OffsetHeight = 16;
 var shine = (0, _styledComponents.keyframes)(_templateObject());
 
 var _default = _styledComponents.default.div(_templateObject2(), OffsetWidth, OffsetHeight, function (props) {
+  return props.baseColor ? props.baseColor : '#ccc';
+}, function (props) {
   return props.baseColor ? props.baseColor : '#ccc';
 }, function (props) {
   return props.shineColor ? props.shineColor : '#ccc';

@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 import { Row } from "../../Grid";
 
 import * as S from './styles'
-import VHCardVisaProcess from "../Cards/VisaProcess";
+import VHCardVisaProcessSkeleton from "../Cards/VisaProcess/skeleton";
+import VHAvatarSkeleton from "../Skeleton/Avatar";
+import VHTextSkeleton from "../Skeleton/Text";
 
 const VHColumn = props => {
   return (
-    <S.Column 
+    <S.Column
       id={props.id}
       className={`vh-vp-column-component ${props.className ? props.className : ''}`}
       onDragEnter={props.onDragEnter}
@@ -15,16 +17,30 @@ const VHColumn = props => {
       onDragOver={props.onDragOver}
       onDrop={props.onDrop}>
       <Row row alignItemsCenter className={`vh-vp-row-header-component ${props.className ? props.className : ''}`}>
-        <S.ColumnName>{props.column.name}</S.ColumnName>
+        <S.ColumnName>{props.name}</S.ColumnName>
         <S.NumberOfCards>
-          {props.column.total}
+          {
+            props.loading
+            ? <VHAvatarSkeleton />
+            : <>{props.total}</>
+          }
         </S.NumberOfCards>
       </Row>
       <Row className={`vh-vp-row-avg-time-component ${props.className ? props.className : ''}`}>
-        <S.AvgTime>{`Avg Time ${props.column.avgTime} days`}</S.AvgTime>
+        <S.AvgTime>
+          {
+            props.loading
+            ? <VHTextSkeleton />
+            : <>{`Avg Time ${props.avgTime} days`}</>
+          }
+        </S.AvgTime>
       </Row>
       <Row className={`vh-vp-row-cards-component ${props.className ? props.className : ''}`}>
-        {props.children}
+      {
+        props.loading
+        ? <VHCardVisaProcessSkeleton random />
+        : <>{props.children}</>
+      }
       </Row>
     </S.Column>
   )

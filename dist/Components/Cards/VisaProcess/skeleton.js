@@ -28,82 +28,53 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHCardVisaProcessSkeleton = function VHCardVisaProcessSkeleton(props) {
+  var arr = [1, 2, 3, 4, 5, 6];
+
   if (props.random) {
-    var x = Math.floor(Math.random() * 5 + 1);
-    var arr = [1, 2, 3, 4, 5, 6];
+    var x = Math.floor(Math.random() * 3 + 1);
     arr.length = x;
-    return _react.default.createElement(_react.default.Fragment, null, arr.map(function (item) {
-      return _react.default.createElement(_Grid.Row, {
-        marginBottom: 10
-      }, _react.default.createElement(_Base.default, null, _react.default.createElement(_Grid.Row, {
-        margin: true
-      }, _react.default.createElement(_Text.default, null)), _react.default.createElement(_Grid.Row, {
-        margin: true
-      }, _react.default.createElement(_Grid.Row, {
-        row: true,
-        alignItemsCenter: true
-      }, _react.default.createElement(_Grid.Row, {
-        autoWidth: true,
-        paddingRight2: true
-      }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(_Grid.Row, {
-        margin: true
-      }, _react.default.createElement(_Grid.Row, {
-        row: true,
-        alignItemsCenter: true
-      }, _react.default.createElement(_Grid.Row, {
-        autoWidth: true,
-        paddingRight2: true
-      }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(_Grid.Row, {
-        margin: true
-      }, _react.default.createElement(_Grid.Row, {
-        row: true,
-        alignItemsCenter: true
-      }, _react.default.createElement(_Grid.Row, {
-        autoWidth: true,
-        paddingRight2: true
-      }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(_Grid.Row, null, _react.default.createElement(S.Footer, null, _react.default.createElement(_Grid.Row, {
-        row: true,
-        alignItemsCenter: true
-      }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)), _react.default.createElement(_Grid.Row, {
-        alignItemsRight: true
-      }, _react.default.createElement(_Avatar.default, null)))))));
-    }));
+  } else {
+    arr.length = 1;
   }
 
-  return _react.default.createElement(_Grid.Row, {
-    marginBottom: 10
-  }, _react.default.createElement(_Base.default, null, _react.default.createElement(_Grid.Row, {
-    margin: true
-  }, _react.default.createElement(_Text.default, null)), _react.default.createElement(_Grid.Row, {
-    margin: true
-  }, _react.default.createElement(_Grid.Row, {
-    row: true,
-    alignItemsCenter: true
-  }, _react.default.createElement(_Grid.Row, {
-    autoWidth: true,
-    paddingRight2: true
-  }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(_Grid.Row, {
-    margin: true
-  }, _react.default.createElement(_Grid.Row, {
-    row: true,
-    alignItemsCenter: true
-  }, _react.default.createElement(_Grid.Row, {
-    autoWidth: true,
-    paddingRight2: true
-  }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(_Grid.Row, {
-    margin: true
-  }, _react.default.createElement(_Grid.Row, {
-    row: true,
-    alignItemsCenter: true
-  }, _react.default.createElement(_Grid.Row, {
-    autoWidth: true,
-    paddingRight2: true
-  }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(_Grid.Row, null, _react.default.createElement(S.Footer, null, _react.default.createElement(_Grid.Row, {
-    row: true,
-    alignItemsCenter: true
-  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)), _react.default.createElement(_Grid.Row, {
-    alignItemsRight: true
-  }, _react.default.createElement(_Avatar.default, null)))))));
+  return _react.default.createElement(_react.default.Fragment, null, arr.map(function (item) {
+    return _react.default.createElement(_Grid.Row, {
+      marginBottom: 10
+    }, _react.default.createElement(_Base.default, null, _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Text.default, null)), _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Grid.Row, {
+      row: true,
+      alignItemsCenter: true
+    }, _react.default.createElement(_Grid.Row, {
+      autoWidth: true,
+      paddingRight2: true
+    }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, {
+      primary: true
+    })))), _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Grid.Row, {
+      row: true,
+      alignItemsCenter: true
+    }, _react.default.createElement(_Grid.Row, {
+      autoWidth: true,
+      paddingRight2: true
+    }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(_Grid.Row, {
+      margin: true
+    }, _react.default.createElement(_Grid.Row, {
+      row: true,
+      alignItemsCenter: true
+    }, _react.default.createElement(_Grid.Row, {
+      autoWidth: true,
+      paddingRight2: true
+    }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(_Grid.Row, null, _react.default.createElement(S.Footer, null, _react.default.createElement(_Grid.Row, {
+      row: true,
+      alignItemsCenter: true
+    }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)), _react.default.createElement(_Grid.Row, {
+      alignItemsRight: true
+    }, _react.default.createElement(_Avatar.default, null)))))));
+  }));
 };
 
 var _default = VHCardVisaProcessSkeleton;

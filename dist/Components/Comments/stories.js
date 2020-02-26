@@ -32,4 +32,17 @@ var comments = [{
       return console.log(event);
     }
   }));
+}).add("loading", function () {
+  return _react.default.createElement("div", {
+    style: {
+      width: '589px',
+      padding: "24px"
+    }
+  }, _react.default.createElement(_.default, {
+    loading: true,
+    comments: comments,
+    onEvent: function onEvent(event) {
+      return console.log(event);
+    }
+  }));
 });

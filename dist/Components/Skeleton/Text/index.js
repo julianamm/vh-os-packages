@@ -15,11 +15,10 @@ var _Colors = _interopRequireDefault(require("../../../Colors"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var baseColor = _Colors.default["gray-30"];
-var shineColor = _Colors.default["gray-10"];
-
 var VHSkeletonText = function VHSkeletonText(props) {
   console.log(props);
+  var baseColor = _Colors.default["gray-30"];
+  var shineColor = _Colors.default["gray-10"];
 
   if (props.red) {
     baseColor = _Colors.default["red-light"];
@@ -27,6 +26,14 @@ var VHSkeletonText = function VHSkeletonText(props) {
 
   if (props.green) {
     baseColor = _Colors.default["green-light"];
+  }
+
+  if (props.blue) {
+    baseColor = _Colors.default["blue-light"];
+  }
+
+  if (props.primary) {
+    baseColor = _Colors.default["primary-light"];
   }
 
   return _react.default.createElement(_styles.default, {
