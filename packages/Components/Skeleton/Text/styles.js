@@ -17,5 +17,5 @@ export default styled.div`
     background-color: ${props => props.baseColor ? props.baseColor : '#ccc'};
     border-radius: 3px;
     background-image: linear-gradient(90deg, ${props => props.baseColor ? props.baseColor : '#ccc'} 0px, ${props => props.shineColor ? props.shineColor : '#ccc'} 40px, ${props => props.baseColor ? props.baseColor : '#ccc'}  80px);
-    animation: ${shine} 8s  infinite linear;
+    animation: ${shine} 1.5s  infinite linear;
 `

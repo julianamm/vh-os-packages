@@ -30,7 +30,7 @@ const VHCardVisaProcessSkeleton = props => {
                     <VHAvatarSkeleton />
                   </Row>
                   <Row>
-                    <VHTextSkeleton primary/>
+                    <VHTextSkeleton/>
                   </Row>
                 </Row>
             </Row>
