@@ -140,9 +140,8 @@ var VHModalVisaPipeline = function VHModalVisaPipeline(props) {
       onEvent: props.onEvent
     }))), _react.default.createElement(_Grid.Row, {
       row: true
-    }, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, null, props.commentsSession.loading ? _react.default.createElement(_index.default, {
-      size: "sm"
-    }) : _react.default.createElement(_Comments.default, {
+    }, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Comments.default, {
+      loading: props.commentsSession.loading,
       comments: props.comments,
       onEvent: props.onEvent
     }))), _react.default.createElement(_Grid.Row, {
