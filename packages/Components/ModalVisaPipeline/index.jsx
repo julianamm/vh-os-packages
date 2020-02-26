@@ -109,7 +109,7 @@ const VHModalVisaPipeline = props => {
             <Row row>
               <S.Wrapper>
                 <Row>
-                  <VHComments loading={props.commentsSession.loading} comments={props.comments} onEvent={props.onEvent}/>
+                  <VHComments data={props.user} loading={props.commentsSession.loading} comments={props.comments} onEvent={props.onEvent}/>
                 </Row>
               </S.Wrapper>
               <Row margin>
