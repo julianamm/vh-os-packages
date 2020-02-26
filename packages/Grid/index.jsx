@@ -68,6 +68,9 @@ export const Row = styled.div`
     ${({ paddingRight8 }) => paddingRight8 && `
        padding-right: 24px;
     `}
+    ${({ paddingRight2 }) => paddingRight2 && `
+       padding-right: 6px;
+    `}
 
     ${({ margin }) => margin && `
        margin: 3px 0;

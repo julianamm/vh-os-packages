@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import VHCardVisaProcess from '.'
+import VHCardVisaProcessSkeleton from './skeleton'
 
 storiesOf('Components|Cards/Visa Process', module)
 
@@ -49,5 +50,15 @@ storiesOf('Components|Cards/Visa Process', module)
             onEvent={(event) => console.log(event)}
             avgTime={4}
         />
+    </div>
+))
+.add('skeleton', () => (
+    <div style={{backgroundColor: "#f2f2f2", width: "300px", padding: "24px"}}>
+        <VHCardVisaProcessSkeleton />
+    </div>
+))
+.add('skeleton multiply', () => (
+    <div style={{backgroundColor: "#f2f2f2", width: "300px", padding: "24px"}}>
+        <VHCardVisaProcessSkeleton random/>
     </div>
 ))
