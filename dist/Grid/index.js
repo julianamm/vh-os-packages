@@ -10,7 +10,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    width: 100%;\n    padding: 0;\n    margin: 0;\n    flex-direction: column;\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    width: 100%;\n    padding: 0;\n    margin: 0;\n    flex-direction: column;\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -72,28 +72,31 @@ var Row = _styledComponents.default.div(_templateObject2(), function (_ref4) {
   var paddingRight8 = _ref12.paddingRight8;
   return paddingRight8 && "\n       padding-right: 24px;\n    ";
 }, function (_ref13) {
-  var margin = _ref13.margin;
-  return margin && "\n       margin: 3px 0;\n    ";
+  var paddingRight2 = _ref13.paddingRight2;
+  return paddingRight2 && "\n       padding-right: 6px;\n    ";
 }, function (_ref14) {
-  var marginBottom3 = _ref14.marginBottom3;
-  return marginBottom3 && "\n       margin-bottom: 9px;\n    ";
+  var margin = _ref14.margin;
+  return margin && "\n       margin: 3px 0;\n    ";
 }, function (_ref15) {
-  var marginBottom4 = _ref15.marginBottom4;
-  return marginBottom4 && "\n       margin-bottom: 12px;\n    ";
+  var marginBottom3 = _ref15.marginBottom3;
+  return marginBottom3 && "\n       margin-bottom: 9px;\n    ";
 }, function (_ref16) {
-  var marginBottom5 = _ref16.marginBottom5;
-  return marginBottom5 && "\n       margin-bottom: 15px;\n    ";
+  var marginBottom4 = _ref16.marginBottom4;
+  return marginBottom4 && "\n       margin-bottom: 12px;\n    ";
 }, function (_ref17) {
-  var marginBottom = _ref17.marginBottom;
-  return marginBottom && "\n       margin-bottom: ".concat(marginBottom * 3, "px;\n    ");
+  var marginBottom5 = _ref17.marginBottom5;
+  return marginBottom5 && "\n       margin-bottom: 15px;\n    ";
 }, function (_ref18) {
-  var marginTop = _ref18.marginTop;
-  return marginTop && "\n       margin-top: ".concat(marginTop, "px;\n    ");
+  var marginBottom = _ref18.marginBottom;
+  return marginBottom && "\n       margin-bottom: ".concat(marginBottom * 3, "px;\n    ");
 }, function (_ref19) {
-  var height = _ref19.height;
-  return height && "\n       height: ".concat(height, "px;\n    ");
+  var marginTop = _ref19.marginTop;
+  return marginTop && "\n       margin-top: ".concat(marginTop, "px;\n    ");
 }, function (_ref20) {
-  var overflowY = _ref20.overflowY;
+  var height = _ref20.height;
+  return height && "\n       height: ".concat(height, "px;\n    ");
+}, function (_ref21) {
+  var overflowY = _ref21.overflowY;
   return overflowY && "\n       overflow-y: ".concat(overflowY, ";\n    ");
 });
 
