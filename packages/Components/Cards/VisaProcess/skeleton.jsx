@@ -5,6 +5,7 @@ import { Row } from "../../../Grid";
 import * as S from "./styles";
 import VHAvatarSkeleton from '../../Skeleton/Avatar'
 import VHTextSkeleton from '../../Skeleton/Text'
+
 const VHCardVisaProcessSkeleton = props => {
   const arr = [1,2,3,4,5,6]
   if ( props.random ) {
@@ -30,7 +31,7 @@ const VHCardVisaProcessSkeleton = props => {
                     <VHAvatarSkeleton />
                   </Row>
                   <Row>
-                    <VHTextSkeleton/>
+                    <VHTextSkeleton color={'black-20'}/>
                   </Row>
                 </Row>
             </Row>
@@ -54,18 +55,16 @@ const VHCardVisaProcessSkeleton = props => {
                   </Row>
                 </Row>
             </Row>
-            <Row >
               <S.Footer>
-              <Row row alignItemsCenter>
-                <Row>
-                  <VHTextSkeleton/>
-                </Row>
-                <Row alignItemsRight>
-                  <VHAvatarSkeleton />
-                </Row>
-                </Row>
+                <Row row alignItemsRight>
+                  <Row>
+                    <VHTextSkeleton color={'black-20'}/>
+                  </Row>
+                  <Row alignItemsRight>
+                    <VHAvatarSkeleton />
+                  </Row>
+                  </Row>
               </S.Footer>
-            </Row>
           </VHCardBase>
           </Row>
           )
