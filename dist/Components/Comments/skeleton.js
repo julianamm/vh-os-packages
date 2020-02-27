@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -42,7 +42,7 @@ var VHCommentsSkeleton = function VHCommentsSkeleton(props) {
     text: "Comments ..."
   })), _react.default.createElement(_Grid.Row, {
     margin: true
-  }, _react.default.createElement(S.Wrapper, null, [1, 2, 3].map(function (comment) {
+  }, _react.default.createElement(S.Wrapper, null, [1, 2].map(function (comment) {
     return _react.default.createElement(_Grid.Row, {
       row: true,
       marginBottom: 10
@@ -50,9 +50,7 @@ var VHCommentsSkeleton = function VHCommentsSkeleton(props) {
       margin: true,
       autoWidth: true,
       paddingRight8: true
-    }, _react.default.createElement(_Avatar2.default, null)), _react.default.createElement(_Grid.Row, {
-      margin: true
-    }, _react.default.createElement(_Grid.Row, {
+    }, _react.default.createElement(_Avatar2.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Grid.Row, {
       margin: true
     }, _react.default.createElement(_Text2.default, null)), _react.default.createElement(_Grid.Row, {
       margin: true
