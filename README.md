@@ -61,7 +61,6 @@ ROOT                      #STORYBOOK CONFIG
 └─── README.md                  # README.md Changes are welcome
 ```
 
-
 ## Mandatory
 > All components must be created inside `packages/Components`
 
