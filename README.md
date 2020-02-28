@@ -9,15 +9,6 @@ All Components are made using [ReactJS](https://reactjs.org/) and [Styled Compon
 # Prototype
 
 You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7deacb0cd7)
-<<<<<<< HEAD
-
-# To complete this test you must 
-1 - Create or Update all components needed to compose the user Skills Section
- * After run the project you'll be able to check the Section here [Skills Section](http://localhost:6007/?path=/story/sections-skills--default)
- 
-2 - Reuse as much you can
-=======
->>>>>>> ec66ff9c80df15ea306814edc824bae0ed6261ca
 
 # Instructions
 
@@ -25,16 +16,7 @@ You can see the prototype [here](https://scene.zeplin.io/project/5e309b1a46e5cf7
 
 2 - Create as many components as you need thinking that could be reused
 
-<<<<<<< HEAD
-6 - Create a Single Page Application using ReactJs with 3 routes
-* `/` => Hello World
-* `/user` => The inital version of the component
-* `/user/[id]` => The view of the component with preload states from our API
-
-# how to use the components on your local environment
-=======
 3 - Don't forget to cover the [LOADING, ERROR and SUCCESS] states
->>>>>>> ec66ff9c80df15ea306814edc824bae0ed6261ca
 
 4 - We want to see your tests!!!
 
@@ -79,10 +61,6 @@ ROOT                      #STORYBOOK CONFIG
 └─── README.md                  # README.md Changes are welcome
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ec66ff9c80df15ea306814edc824bae0ed6261ca
 ## Mandatory
 > All components must be created inside `packages/Components`
 
