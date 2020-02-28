@@ -15,7 +15,11 @@ var _Grid = require("../../Grid");
 
 var S = _interopRequireWildcard(require("./styles"));
 
-var _VisaProcess = _interopRequireDefault(require("../Cards/VisaProcess"));
+var _skeleton = _interopRequireDefault(require("../Cards/VisaProcess/skeleton"));
+
+var _Avatar = _interopRequireDefault(require("../Skeleton/Avatar"));
+
+var _Text = _interopRequireDefault(require("../Skeleton/Text"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -35,11 +39,13 @@ var VHColumn = function VHColumn(props) {
     row: true,
     alignItemsCenter: true,
     className: "vh-vp-row-header-component ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(S.ColumnName, null, props.column.name), _react.default.createElement(S.NumberOfCards, null, props.column.total)), _react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(S.ColumnName, null, props.name), _react.default.createElement(S.NumberOfCards, null, props.loading ? _react.default.createElement(_Avatar.default, null) : _react.default.createElement(_react.default.Fragment, null, props.total))), _react.default.createElement(_Grid.Row, {
     className: "vh-vp-row-avg-time-component ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(S.AvgTime, null, "Avg Time ".concat(props.column.avgTime, " days"))), _react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(S.AvgTime, null, props.loading ? _react.default.createElement(_Text.default, null) : _react.default.createElement(_react.default.Fragment, null, "Avg Time ".concat(props.avgTime, " days")))), _react.default.createElement(_Grid.Row, {
     className: "vh-vp-row-cards-component ".concat(props.className ? props.className : '')
-  }, props.children));
+  }, props.loading ? _react.default.createElement(_skeleton.default, {
+    random: true
+  }) : _react.default.createElement(_react.default.Fragment, null, props.children)));
 };
 
 VHColumn.defaultProps = {

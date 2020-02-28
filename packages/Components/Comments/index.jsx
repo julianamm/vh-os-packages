@@ -4,51 +4,60 @@ import VHAvatar from "../Avatar";
 import VHText from "../Text";
 import * as S from "./styles";
 import { Row } from "../../Grid";
+import Skeleton from './skeleton'
 
 const VHComments = props => {
+  const totalComments = props.comments ? props.comments.length : 0
+  const comments = props.comments ? props.comments : []
   return (
     <Row className={`vh-comments ${props.className ? props.className : ''}`}>
-      <Row marginBottom5>
-        <VHText
-          variant={"platform2"}
-          color="gray-80"
-          text={`Comments (${props.comments.length})`}
-        />
-      </Row>
-      <Row margin>
-        <S.Wrapper>
-          {props.comments.map(comment => (
+      {
+        props.loading
+        ? <Skeleton />
+        : <>
+        <Row marginBottom5>
+          <VHText
+            variant={"platform2"}
+            color="gray-80"
+            text={`Comments (${totalComments})`}
+          />
+        </Row>
+        <Row margin>
+          <S.Wrapper>
+            {comments.map(comment => (
               <Row row margin justifyBottom >
                 <Row margin autoWidth paddingRight8>
-                  <VHAvatar image={comment.image} size={"md"} />
+                  <VHAvatar image={comment.user.avatar} size={"md"} />
                 </Row>
                 <Row margin>
                   <Row margin row alignItemsCenter >
                     <VHText
                       variant={"platform"}
                       color="gray-100"
-                      text={comment.fullName}
+                      text={comment.user.name}
                     />
                     <S.TextWrapper>
-                        <VHText
+                      <VHText
                         variant={"caption"}
                         color="gray-50"
-                        text={comment.days}
-                        />
+                        text={comment.createdOn}
+                      />
                     </S.TextWrapper>
                   </Row>
                   <Row margin marginBottom5>
                     <VHText
                       variant={"platform"}
                       color="gray-80"
-                      text={comment.event}
+                      text={comment.note}
                     />
                   </Row>
                 </Row>
               </Row>
-          ))}
-        </S.Wrapper>
-      </Row>
+            ))}
+          </S.Wrapper>
+        </Row>
+        </>
+      }
       <Row row margin alignItemsCenter>
         <VHAvatar
           image={
@@ -56,22 +65,33 @@ const VHComments = props => {
           }
           size={"md"}
         />
-        <S.Area placeholder="Ask a question or post a uptade"></S.Area>
+        <S.Area placeholder="Ask a question or post a uptade"
+          onKeyUp={event => {
+            if (props.onEvent && event.key === 'Enter') {
+              props.onEvent({
+                data: props.data,
+                type: 'onEnter',
+                target: 'VHComments',
+                comment: event.currentTarget.value.replace(/\n/g, " ")
+              })
+              event.currentTarget.value = ''
+            };
+          }}></S.Area>
       </Row>
     </Row>
   );
 };
 
 VHComments.defaultProps = {
-    comments: [],
-    onEvent: null,
-    className: ""
+  comments: [],
+  onEvent: null,
+  className: ""
 };
 
 VHComments.propTypes = {
-    comments: PropTypes.array,
-    onEvent: PropTypes.func,
-    className: PropTypes.string
+  comments: PropTypes.array,
+  onEvent: PropTypes.func,
+  className: PropTypes.string
 };
 
 export default VHComments;

@@ -21,6 +21,8 @@ var VHChips = function VHChips(props) {
     full: props.full,
     transparent: props.transparent,
     disabled: props.disabled,
+    round: props.round,
+    noHover: props.noHover,
     className: "vh-chip-component ".concat(props.className ? props.className : ''),
     xs: props.xs,
     sm: props.sm,
@@ -28,7 +30,7 @@ var VHChips = function VHChips(props) {
     marginRight: props.marginRight,
     type: "button",
     onClick: function onClick() {
-      props.onEvent({
+      if (props.onEvent) props.onEvent({
         target: 'VHChips',
         event: 'onClick',
         data: {

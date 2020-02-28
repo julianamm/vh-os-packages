@@ -15,7 +15,7 @@ const VHTimeLine = props => {
 
 
   return (
-    <Row className={`vh-time-line ${props.className ? props.className : ""}`}>
+    <Row marginTop={-110} marginBottom={10} height={300} overflowY={'scroll'} className={`vh-time-line ${props.className ? props.className : ""}`}>
       <Row row alignItemsCenter justifySpaceBetween>
         <VHText
           onEvent={props.onEvent}
@@ -40,7 +40,7 @@ const VHTimeLine = props => {
                   {getDate(item.createdOn)}
                   <VHText
                     onEvent={props.onEvent}
-                    text={ dates[index + 1] !== undefined && ` ${dates[index + 1] - dates[index]} days` }
+                    text={ dates[index + 1] !== undefined && ` ${(dates[index] - dates[index + 1]) < 0 ? -(dates[index] - dates[index + 1]): (dates[index] - dates[index + 1])} days` }
                     variant="caption"
                     color="gray-50"
                   />
@@ -53,7 +53,7 @@ const VHTimeLine = props => {
                           <VHTitleDescription
                             className="vh-title-description-time-line"
                             data={item}
-                            description={item.userName}
+                            description={item.description}
                             descriptionColor="gray-50"
                             descriptionVariant="caption"
                             onEvent={props.onEvent}
@@ -73,7 +73,7 @@ const VHTimeLine = props => {
                           key={`vh-time-line-${item.columnName}`}
                           className="vh-title-description-time-line"
                           data={item}
-                          description={item.userName}
+                          description={item.description}
                           descriptionColor="gray-50"
                           descriptionVariant="caption"
                           onEvent={props.onEvent}

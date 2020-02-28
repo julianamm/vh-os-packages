@@ -61,7 +61,7 @@ VHTitleDescription.propTypes = {
   onEvent: _propTypes.default.func,
   data: _propTypes.default.object,
   inline: _propTypes.default.bool,
-  title: _propTypes.default.string.isRequired,
+  title: _propTypes.default.string,
   description: _propTypes.default.string
 };
 var _default = VHTitleDescription;

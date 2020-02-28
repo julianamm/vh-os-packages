@@ -47,6 +47,60 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     },
     label: "VH chip"
   }), _react.default.createElement(_.default, {
+    marginRight: true,
+    secondary: true,
+    transparent: true,
+    onEvent: function onEvent(event) {
+      console.log(event);
+    },
+    label: "VH chip transparent"
+  }));
+}).add('round', function () {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_.default, {
+    round: true,
+    primary: true,
+    marginRight: true,
+    onEvent: function onEvent(event) {
+      console.log(event);
+    },
+    label: "VH chip"
+  }), _react.default.createElement(_.default, {
+    round: true,
+    primary: true,
+    marginRight: true,
+    transparent: true,
+    onEvent: function onEvent(event) {
+      console.log(event);
+    },
+    label: "VH chip transparent"
+  }), _react.default.createElement(_.default, {
+    round: true,
+    marginRight: true,
+    danger: true,
+    onEvent: function onEvent(event) {
+      console.log(event);
+    },
+    label: "VH chip"
+  }), _react.default.createElement(_.default, {
+    round: true,
+    marginRight: true,
+    danger: true,
+    transparent: true,
+    onEvent: function onEvent(event) {
+      console.log(event);
+    },
+    label: "VH chip transparent"
+  }), _react.default.createElement(_.default, {
+    round: true,
+    marginRight: true,
+    secondary: true,
+    onEvent: function onEvent(event) {
+      console.log(event);
+    },
+    label: "VH chip"
+  }), _react.default.createElement(_.default, {
+    round: true,
+    marginRight: true,
     secondary: true,
     transparent: true,
     onEvent: function onEvent(event) {

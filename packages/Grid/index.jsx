@@ -2,24 +2,25 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
-    width: 100%;
+    width: 96%;
+    @media only screen and (max-width: 768px) {
+        width: 93%;
+    }
+
     padding: 0;
     margin: 0 auto;
     flex-direction: column;
 
     ${({ md }) => md && `
         max-width: 980px;
-        width: 100%;
     `}
 
     ${({ lg }) => lg && `
         max-width: 1200px;
-        width: 100%;
     `}
 
     ${({ sm }) => sm && `
         max-width: 330px;
-        width: 100%;
     `}
 `
 
@@ -67,6 +68,9 @@ export const Row = styled.div`
     ${({ paddingRight8 }) => paddingRight8 && `
        padding-right: 24px;
     `}
+    ${({ paddingRight2 }) => paddingRight2 && `
+       padding-right: 6px;
+    `}
 
     ${({ margin }) => margin && `
        margin: 3px 0;
@@ -82,6 +86,22 @@ export const Row = styled.div`
 
     ${({ marginBottom5 }) => marginBottom5 && `
        margin-bottom: 15px;
+    `}
+
+    ${({ marginBottom }) => marginBottom && `
+       margin-bottom: ${marginBottom * 3}px;
+    `}
+
+    ${({ marginTop}) => marginTop && `
+       margin-top: ${marginTop}px;
+    `}
+
+    ${({ height }) => height && `
+       height: ${height}px;
+    `}
+
+    ${({ overflowY }) => overflowY && `
+       overflow-y: ${overflowY};
     `}
 
 `

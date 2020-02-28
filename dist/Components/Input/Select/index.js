@@ -20,16 +20,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var animatedComponents = (0, _animated.default)();
 
 var VHSelect = function VHSelect(props) {
-  return _react.default.createElement(_react.default.Fragment, null, props.caption && _react.default.createElement(_Text.default, {
+  return _react.default.createElement("div", {
+    style: {
+      position: 'relative',
+      marginBottom: '21px'
+    }
+  }, props.caption && _react.default.createElement(_Text.default, {
     text: props.caption,
-    variant: "platform1"
+    variant: "platform1",
+    color: props.captionColor
   }), _react.default.createElement(_reactSelect.default, {
-    closeMenuOnSelect: false,
+    closeMenuOnSelect: !props.isMulti,
     className: props.className,
     isLoading: props.isLoading,
+    isDisabled: props.isLoading,
     components: animatedComponents,
     defaultValue: props.currentItem,
     isMulti: props.isMulti,
+    isClearable: true,
     options: props.items,
     onChange: function onChange(newValue, actionMeta) {
       switch (true) {
@@ -45,23 +53,41 @@ var VHSelect = function VHSelect(props) {
           });
           break;
 
+        case actionMeta.action === "clear":
+          props.onEvent({
+            type: "OnChange",
+            origin: "VHSelect",
+            props: {
+              data: props.data,
+              item: null,
+              action: "clear"
+            }
+          });
+          break;
+
         case actionMeta.action === "select-option":
           props.onEvent({
             type: "OnChange",
             origin: "VHSelect",
             props: {
               data: props.data,
-              item: actionMeta.option,
+              item: props.isMulti ? actionMeta.option : newValue,
               action: 'add'
             }
           });
           break;
       }
     }
-  }), props.description && _react.default.createElement(_Text.default, {
+  }), props.description && _react.default.createElement("div", {
+    style: {
+      position: 'absolute',
+      top: '60px'
+    }
+  }, _react.default.createElement(_Text.default, {
     text: props.description,
-    variant: "caption"
-  }));
+    variant: "caption",
+    color: props.descriptionColor
+  })));
 };
 
 var _default = VHSelect;

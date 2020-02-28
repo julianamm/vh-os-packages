@@ -19,7 +19,7 @@ var S = _interopRequireWildcard(require("./styles"));
 
 var _Headers = _interopRequireDefault(require("../../../Typography/Headers"));
 
-var _Icon = _interopRequireDefault(require("../../Icon"));
+var _Img = _interopRequireDefault(require("../../Img"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -49,14 +49,16 @@ var TimeIconGreen = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53M
 var FavoriteIcon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICAgIDxwYXRoIGZpbGw9IiNGQ0FCMTAiIGQ9Ik04IDEyLjIxNmw0Ljk0NCAyLjk4NC0xLjMxMi01LjYyNEwxNiA1Ljc5MmwtNS43NTItLjQ4OEw4IDAgNS43NTIgNS4zMDQgMCA1Ljc5Mmw0LjM2OCAzLjc4NEwzLjA1NiAxNS4yIDggMTIuMjE2eiIvPgo8L3N2Zz4K";
 
 var VHCardVisaProcess = function VHCardVisaProcess(props) {
-  console.log('EVENTO ', props.onEvent);
   return _react.default.createElement(_Base.default, {
+    candidate: props.candidate,
     onDragEnter: props.onDragEnter,
+    id: props.id,
     onDragLeave: props.onDragLeave,
     onDragStart: props.onDragStart,
     favorite: props.favorite,
     draggable: props.draggable,
-    onEvent: props.onEvent
+    onEvent: props.onEvent,
+    userId: props.userId
   }, props.invoiced && _react.default.createElement(S.Tag, null, "Invoiced"), _react.default.createElement(_Grid.Row, {
     row: true
   }, _react.default.createElement(S.PersonalInfo, null, _react.default.createElement(_Grid.Row, {
@@ -67,21 +69,21 @@ var VHCardVisaProcess = function VHCardVisaProcess(props) {
   })), _react.default.createElement(S.Name, null, props.name)), _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Img.default, {
     source: CompanyIcon,
     title: "city",
     xs: true
   })), _react.default.createElement(S.Info, null, props.companyName)), _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Img.default, {
     source: PositionIcon,
     title: "position",
     xs: true
   })), _react.default.createElement(S.Info, null, props.positionName)), _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_Img.default, {
     source: CityIcon,
     title: "time",
     xs: true
@@ -90,7 +92,7 @@ var VHCardVisaProcess = function VHCardVisaProcess(props) {
   }, _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.TimeWrapper, null, _react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(S.TimeWrapper, null, _react.default.createElement(_Img.default, {
     source: props.time <= props.avgTime ? "".concat(TimeIconGreen) : "".concat(TimeIconRed),
     title: "time",
     xs: true
@@ -99,11 +101,11 @@ var VHCardVisaProcess = function VHCardVisaProcess(props) {
   }, "".concat(props.time, " days ago")))), _react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.FavoriteWrapper, null, props.favorite && _react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(S.FavoriteWrapper, null, props.favorite && _react.default.createElement(_Img.default, {
     source: FavoriteIcon,
     title: "comments",
     xs: true
-  })), _react.default.createElement(S.Info, null, props.comments), _react.default.createElement(S.CommentsWrapper, null, _react.default.createElement(_Icon.default, {
+  })), _react.default.createElement(S.Info, null, props.comments), _react.default.createElement(S.CommentsWrapper, null, _react.default.createElement(_Img.default, {
     source: CommentsIcon,
     title: "comments",
     xs: true

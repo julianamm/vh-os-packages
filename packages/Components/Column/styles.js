@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Color from "../../Colors";
 
 export const Column = styled.div`
-    max-width: 302px;
+    min-width: 302px;
     min-height: 100vh;
     border-radius: 6px;
     background-color: transparent;

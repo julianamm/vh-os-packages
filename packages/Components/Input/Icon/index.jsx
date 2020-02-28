@@ -12,20 +12,20 @@ const VHInputIcon = props => {
   const checkIcon = () => {
     switch (props.icon) {
       case 'github':
-        return  GitHubIcon   
+        return  GitHubIcon
       case 'world':
-        return  WebSiteIcon  
+        return  WebSiteIcon
       case 'linkedin':
-        return  LinkedInIcon  
+        return  LinkedInIcon
       case 'search':
-        return  SearchIcon  
+        return  SearchIcon
       default:
         return WebSiteIcon;
     }
   }
 
   const Icon = checkIcon()
-  
+
   return (
     <S.Wrapper className={`vh-icon-input ${props.className ? props.className : ''}`}>
       <VHImg
@@ -34,7 +34,15 @@ const VHInputIcon = props => {
         title={props.icon}
         sm
       />
-      <VHInput placeholder={props.placeholder} onEvent={props.onEvent} noBorder/>
+      <VHInput
+        disabled={props.disabled}
+        error={props.error}
+        loading={props.loading}
+        placeholder={props.placeholder}
+        data={props.data}
+        value={props.value}
+        onEvent={props.onEvent}
+        noBorder/>
     </S.Wrapper>
   )
 }
@@ -55,6 +63,7 @@ VHInputIcon.propTypes = {
   iconColor:  PropTypes.string,
   textColor:  PropTypes.string,
   textVariant: PropTypes.string,
+  disabled: PropTypes.bool,
   onEvent: PropTypes.func.isRequired,
   data: PropTypes.string,
   placeholder: PropTypes.string,
