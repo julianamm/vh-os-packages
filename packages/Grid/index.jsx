@@ -47,6 +47,10 @@ export const Row = styled.div`
         justify-content: flex-end;
     `}
 
+    ${({ justifyCenter }) => justifyCenter && `
+        justify-content: center;
+    `}
+
     ${({ alignItemsRight }) => alignItemsRight && `
         align-items: flex-end;
     `}
