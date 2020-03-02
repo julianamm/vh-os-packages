@@ -55,12 +55,19 @@ var VHMediaTemplate = /*#__PURE__*/function (_Component) {
   _createClass(VHMediaTemplate, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, null, _react.default.createElement(S.Wrapper1, null, _react.default.createElement(S.Press, null, this.props.press)), _react.default.createElement(S.Wrapper2, null, _react.default.createElement(_index.default, {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, null, _react.default.createElement(S.Wrapper1, null, _react.default.createElement(_Grid.Container, {
+        md: true,
+        alignItemsCenter: true
+      }, _react.default.createElement(_Grid.Row, {
+        alignItemsCenter: true
+      }, _react.default.createElement(S.Press, null, this.props.press)))), _react.default.createElement(S.Wrapper2, null, _react.default.createElement(_Grid.Container, {
+        md: true
+      }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_index.default, {
         title: this.props.title,
         name: this.props.name,
         email: this.props.email,
         phone: this.props.phone
-      }))));
+      }))))));
     }
   }]);
 

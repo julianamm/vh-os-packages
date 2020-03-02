@@ -12,7 +12,7 @@ var _Colors = _interopRequireDefault(require("../../Colors"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    width: 1440px;\n    height: 300px;\n    background-color: ", ";\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n    height: 50vh;\n    background-color: ", ";\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -32,7 +32,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 1439px;\n    height: 391px;\n    // object-fit: contain;\n    background-color: ", ";\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n    height: 50vh;\n    background-color: ", ";\n    display: flex;\n    align-items: center;\n"]);
 
   _templateObject = function _templateObject() {
     return data;

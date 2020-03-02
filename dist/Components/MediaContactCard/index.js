@@ -26,8 +26,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var VHMediacontactCard = function VHMediacontactCard(props) {
   return _react.default.createElement(_Grid.Row, {
     style: {
-      width: "80%",
-      margin: "-100px",
+      marginTop: "-10%",
       boxShadow: "0 4px 14px 0 rgba(0, 0, 0, 0.1)",
       borderRadius: "6px"
     }
