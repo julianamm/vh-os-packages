@@ -2,14 +2,10 @@ import styled from 'styled-components'
 import Color from '../../Colors'
 
 export const Wrapper1 = styled.div`
-    width: 1439px;
-    height: 391px;
-    // object-fit: contain;
+    height: 50vh;
     background-color: ${Color["gradient-primary"]};
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
 `
 
 export const Press = styled.p`
@@ -25,10 +21,6 @@ export const Press = styled.p`
 `
 
 export const Wrapper2 = styled.div`
-    width: 1440px;
-    height: 300px;
+    height: 50vh;
     background-color: ${Color["gray-20"]};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 `

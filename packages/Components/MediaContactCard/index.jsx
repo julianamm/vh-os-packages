@@ -7,7 +7,7 @@ import * as S from './styles'
 const VHMediacontactCard = props => {
 
     return (
-        <Row style={{width: "80%", margin:"-100px", boxShadow: "0 4px 14px 0 rgba(0, 0, 0, 0.1)", borderRadius: "6px"}}>
+        <Row style={{ marginTop:"-10%", boxShadow: "0 4px 14px 0 rgba(0, 0, 0, 0.1)", borderRadius: "6px"}}>
             <VHCardBase noHover>
                 <Row >
                     <S.Title>{props.title}</S.Title>
@@ -16,7 +16,7 @@ const VHMediacontactCard = props => {
                     <S.Info>{props.phone}</S.Info>
                 </Row>
             </VHCardBase>
-            
+
         </Row>
     )
 }
@@ -28,6 +28,6 @@ VHMediacontactCard.propTypes = {
     email: PropTypes.string,
     phone: PropTypes.string,
     className: PropTypes.string
-};  
+};
 
 export default VHMediacontactCard;
