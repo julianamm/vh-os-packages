@@ -1,6 +1,6 @@
 {
   "name": "vh-os-packages",
-  "version": "0.0.1-9",
+  "version": "0.0.1-13",
   "private": false,
   "main": "packages",
   "peerDependencies": {
@@ -41,7 +41,8 @@
     "@storybook/react": "^5.3.9",
     "babel-loader": "^8.0.6",
     "babel-plugin-inline-import-data-uri": "^1.0.1",
-    "react-scripts": "^3.3.0"
+    "react-scripts": "^3.3.0",
+    "styled-components": "^5.0.1"
   },
   "dependencies": {
     "react-select": "^3.0.8",

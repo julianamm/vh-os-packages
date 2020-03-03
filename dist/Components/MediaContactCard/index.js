@@ -11,19 +11,11 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _Avatar = _interopRequireDefault(require("../Avatar"));
-
-var _Text = _interopRequireDefault(require("../Text"));
-
-var S = _interopRequireWildcard(require("./styles"));
-
 var _Grid = require("../../Grid");
 
-var _Avatar2 = _interopRequireDefault(require("../Skeleton/Avatar"));
+var _index = _interopRequireDefault(require("../Cards/Base/index"));
 
-var _Text2 = _interopRequireDefault(require("../Skeleton/Text"));
-
-var _Description = _interopRequireDefault(require("../Skeleton/Description"));
+var S = _interopRequireWildcard(require("./styles"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
@@ -31,42 +23,25 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VHCommentsSkeleton = function VHCommentsSkeleton(props) {
+var VHMediacontactCard = function VHMediacontactCard(props) {
   return _react.default.createElement(_Grid.Row, {
-    className: "vh-comments ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(_Grid.Row, {
-    marginBottom5: true
-  }, _react.default.createElement(_Text.default, {
-    variant: "platform2",
-    color: "gray-80",
-    text: "Comments ..."
-  })), _react.default.createElement(_Grid.Row, {
-    margin: true
-  }, _react.default.createElement(S.Wrapper, null, [1, 2].map(function (comment) {
-    return _react.default.createElement(_Grid.Row, {
-      row: true,
-      marginBottom: 10
-    }, _react.default.createElement(_Grid.Row, {
-      margin: true,
-      autoWidth: true,
-      paddingRight8: true
-    }, _react.default.createElement(_Avatar2.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Grid.Row, {
-      margin: true
-    }, _react.default.createElement(_Text2.default, null)), _react.default.createElement(_Grid.Row, {
-      margin: true
-    }, _react.default.createElement(_Description.default, null))));
-  }))));
+    style: {
+      marginTop: "-10%",
+      boxShadow: "0 4px 14px 0 rgba(0, 0, 0, 0.1)",
+      borderRadius: "6px"
+    }
+  }, _react.default.createElement(_index.default, {
+    noHover: true
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(S.Title, null, props.title), _react.default.createElement(S.Info, null, props.name), _react.default.createElement(S.Info, null, props.email), _react.default.createElement(S.Info, null, props.phone))));
 };
 
-VHCommentsSkeleton.defaultProps = {
-  comments: [],
-  onEvent: null,
-  className: ""
-};
-VHCommentsSkeleton.propTypes = {
-  comments: _propTypes.default.array,
+VHMediacontactCard.propTypes = {
   onEvent: _propTypes.default.func,
+  title: _propTypes.default.string,
+  name: _propTypes.default.string,
+  email: _propTypes.default.string,
+  phone: _propTypes.default.string,
   className: _propTypes.default.string
 };
-var _default = VHCommentsSkeleton;
+var _default = VHMediacontactCard;
 exports.default = _default;

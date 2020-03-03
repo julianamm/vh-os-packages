@@ -13,19 +13,13 @@ var _styles = _interopRequireDefault(require("./styles"));
 
 var _Colors = _interopRequireDefault(require("../../../Colors"));
 
+var _reactPreloadSkeleton = require("react-preload-skeleton");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHSkeletonDescription = function VHSkeletonDescription(props) {
-  var baseColor = _Colors.default["gray-30"];
-  var shineColor = _Colors.default["gray-10"];
-
-  if (props.red) {
-    baseColor = _Colors.default["red-light"];
-  }
-
-  return _react.default.createElement(_styles.default, {
-    baseColor: baseColor,
-    shineColor: shineColor
+  return _react.default.createElement(_reactPreloadSkeleton.DescriptionSkeleton, {
+    color: props.color
   });
 };
 

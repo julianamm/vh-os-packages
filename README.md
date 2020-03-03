@@ -1,5 +1,4 @@
-# This is part of the hiring processes for the [Front End position](http://bit.ly/vanhack-react-job) at VanHack
-
+# This is the VanHack OpenSource project
 
 All Components are made using [ReactJS](https://reactjs.org/) and [Styled Components](https://styled-components.com/) and we use [Storybook](https://storybook.js.org/) as a rendering
 
@@ -60,7 +59,6 @@ ROOT                      #STORYBOOK CONFIG
 └─── package.json               # PACKAGE JSON ***(Don't commit the package.json ever)**
 └─── README.md                  # README.md Changes are welcome
 ```
-
 
 ## Mandatory
 > All components must be created inside `packages/Components`

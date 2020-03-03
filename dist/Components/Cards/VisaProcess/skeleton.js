@@ -50,7 +50,9 @@ var VHCardVisaProcessSkeleton = function VHCardVisaProcessSkeleton(props) {
     }, _react.default.createElement(_Grid.Row, {
       autoWidth: true,
       paddingRight2: true
-    }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(_Grid.Row, {
+    }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, {
+      color: 'black-20'
+    })))), _react.default.createElement(_Grid.Row, {
       margin: true
     }, _react.default.createElement(_Grid.Row, {
       row: true,
@@ -66,12 +68,14 @@ var VHCardVisaProcessSkeleton = function VHCardVisaProcessSkeleton(props) {
     }, _react.default.createElement(_Grid.Row, {
       autoWidth: true,
       paddingRight2: true
-    }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(_Grid.Row, null, _react.default.createElement(S.Footer, null, _react.default.createElement(_Grid.Row, {
+    }, _react.default.createElement(_Avatar.default, null)), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)))), _react.default.createElement(S.Footer, null, _react.default.createElement(_Grid.Row, {
       row: true,
-      alignItemsCenter: true
-    }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, null)), _react.default.createElement(_Grid.Row, {
       alignItemsRight: true
-    }, _react.default.createElement(_Avatar.default, null)))))));
+    }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, {
+      color: 'black-20'
+    })), _react.default.createElement(_Grid.Row, {
+      alignItemsRight: true
+    }, _react.default.createElement(_Avatar.default, null))))));
   }));
 };
 

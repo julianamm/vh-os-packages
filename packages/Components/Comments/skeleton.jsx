@@ -20,12 +20,12 @@ const VHCommentsSkeleton = props => {
       </Row>
       <Row margin>
         <S.Wrapper>
-          {[1,2,3].map(comment => (
+          {[1,2].map(comment => (
             <Row row marginBottom={10}  >
               <Row margin autoWidth paddingRight8>
-                <VHAvatarSkeleton />
+                <VHAvatarSkeleton/>
               </Row>
-              <Row margin>
+              <Row>
                 <Row margin>
                   <VHTextSkeleton />
                 </Row>

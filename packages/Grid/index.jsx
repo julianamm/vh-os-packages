@@ -22,6 +22,9 @@ export const Container = styled.div`
     ${({ sm }) => sm && `
         max-width: 330px;
     `}
+    ${({ alignItemsCenter }) => alignItemsCenter && `
+        align-items: center;
+    `}
 `
 
 export const Row = styled.div`
