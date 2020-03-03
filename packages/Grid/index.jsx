@@ -35,6 +35,10 @@ export const Row = styled.div`
         flex-direction: row;
     `}
 
+    ${({ column }) => column && `
+        flex-direction: column;
+    `}
+
     ${({ justifySpaceAround }) => justifySpaceAround && `
         justify-content: space-around;
     `}
@@ -49,6 +53,10 @@ export const Row = styled.div`
 
     ${({ alignItemsRight }) => alignItemsRight && `
         align-items: flex-end;
+    `}
+
+    ${({ alignItemsLeft }) => alignItemsLeft && `
+        align-items: flex-start;
     `}
 
     ${({ alignItemsCenter }) => alignItemsCenter && `
@@ -102,6 +110,10 @@ export const Row = styled.div`
 
     ${({ overflowY }) => overflowY && `
        overflow-y: ${overflowY};
+    `}
+
+    ${({ width }) => width && `
+       width: ${width};
     `}
 
 `
