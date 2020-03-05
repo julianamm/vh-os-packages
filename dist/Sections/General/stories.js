@@ -45,7 +45,7 @@ var items = [{
         success: false,
         message: 'Database error'
       },
-      currentLocation: {
+      location: {
         loading: true,
         error: false,
         success: false,

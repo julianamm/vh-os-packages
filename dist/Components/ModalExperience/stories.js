@@ -35,6 +35,11 @@ var controls = {
     loading: false,
     success: true,
     error: false
+  },
+  skillsUsed: {
+    loading: false,
+    success: true,
+    error: false
   }
 };
 var data = {
@@ -47,6 +52,19 @@ var data = {
     name: 'Corporate'
   }]
 };
+var skillsUsed = [{
+  label: 'C#',
+  value: 'c'
+}, {
+  label: 'Java',
+  value: 'b'
+}, {
+  label: 'Python',
+  value: 'o'
+}];
+var workAs = {
+  current: skillsUsed
+};
 (0, _react2.storiesOf)('Components|Modal Experience', module).add('VHModalExperience', function () {
   return _react.default.createElement("div", {
     style: {
@@ -55,6 +73,7 @@ var data = {
     }
   }, _react.default.createElement(_.default, {
     data: data,
+    workAs: workAs,
     currentItem: currentItem,
     items: items,
     controls: controls,

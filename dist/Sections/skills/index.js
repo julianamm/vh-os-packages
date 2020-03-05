@@ -19,9 +19,20 @@ var _Select = _interopRequireDefault(require("../../Components/Input/Select"));
 
 var _checkbox = _interopRequireDefault(require("../../Components/Input/checkbox"));
 
+var _List = _interopRequireDefault(require("../../Components/List"));
+
+var _TitleDescription = _interopRequireDefault(require("../../Components/TitleDescription"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHSkillsSection = function VHSkillsSection(props) {
+  var positions = props.positions;
+  var position = props.positionSkill ? [positions[props.positionSkill]] : {};
+  var yearsOfExperienceList = props.yearsOfExperienceList;
+  var yearsOfExperience = props.yearsOfExperience ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
+  var workAsList = props.workAsList;
+  var workAs = props.workAs ? [workAsList[props.workAs]] : [];
+  var topSkills = props.topSkills ? props.topSkills : [];
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
     marginBottom: 5
   }, _react.default.createElement(_Text.default, {
@@ -31,30 +42,48 @@ var VHSkillsSection = function VHSkillsSection(props) {
     variant: "h2"
   })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Base.default, {
     className: "vh-skills-section-card ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Grid.Row, {
+    row: true,
+    justifySpaceBetween: true
+  }, _react.default.createElement(_Grid.Row, {
+    width: '60%'
+  }, _react.default.createElement(_Select.default, {
     caption: "I am...",
-    captionColor: props.controls.position.loading ? "gray-40" : props.controls.position.error ? "red" : null,
-    className: "vh-skills-section-position ".concat(props.className ? props.className : ''),
-    currentItem: props.data.position.current,
+    captionColor: props.controls.positionSkill.loading ? "gray-40" : props.controls.positionSkill.error ? "red" : null,
+    className: "vh-skills-section-positionSkill ".concat(props.className ? props.className : ''),
+    currentItem: position,
     data: "position",
     onEvent: props.onEvent,
-    items: props.positions,
-    isLoading: props.controls.position.loading,
-    description: props.controls.position.error && props.controls.position.message,
+    items: positions,
+    isLoading: props.controls.positionSkill.loading,
+    description: props.controls.positionSkill.error && props.controls.positionSkill.message,
     descriptionColor: "red-light"
   })), _react.default.createElement(_Grid.Row, {
+    width: '30%'
+  }, _react.default.createElement(_Select.default, {
+    caption: "With...",
+    captionColor: props.controls.yearsOfExperience.loading ? "gray-40" : props.controls.yearsOfExperience.error ? "red" : null,
+    className: "vh-skills-section-yearsOfExperience ".concat(props.className ? props.className : ''),
+    currentItem: yearsOfExperience,
+    data: "yearsOfExperience",
+    onEvent: props.onEvent,
+    items: yearsOfExperienceList,
+    isLoading: props.controls.yearsOfExperience.loading,
+    description: props.controls.yearsOfExperience.error && props.controls.yearsOfExperience.message,
+    descriptionColor: "red-light"
+  }))), _react.default.createElement(_Grid.Row, {
     marginBottom3: true
   }, _react.default.createElement(_checkbox.default, {
-    checked: props.data.openedPosition,
+    checked: props.openForDifferentRole,
     className: "",
-    color: props.controls.openedPosition.loading ? "gray-40" : props.controls.openedPosition.error ? "red" : 'gray-100',
+    color: props.controls.openForDifferentRole.loading ? "gray-40" : props.controls.openForDifferentRole.error ? "red" : 'gray-100',
     data: {
-      checked: props.data.openedPosition,
-      id: '1',
+      checked: props.openForDifferentRole,
+      id: 'openForDifferentRole',
       label: 'yes',
       value: '123'
     },
-    disabled: props.controls.openedPosition.loading,
+    disabled: props.controls.openForDifferentRole.loading,
     onEvent: props.onEvent,
     title: "I am open to working in a different role",
     value: "123",
@@ -62,15 +91,28 @@ var VHSkillsSection = function VHSkillsSection(props) {
   })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
     caption: "I would like to work as...",
     isMulti: true,
-    captionColor: props.controls.workAs.loading ? "gray-40" : props.controls.workAs.error ? "red" : null,
-    className: "vh-skills-section-skills ".concat(props.className ? props.className : ''),
-    currentItem: props.data.workAs.current,
-    data: "skills",
+    captionColor: props.controls.workAsSkills.loading ? "gray-40" : props.controls.workAsSkills.error ? "red" : null,
+    className: "vh-skills-section-workAsSkills ".concat(props.className ? props.className : ''),
+    currentItem: workAs,
+    data: "workAsSkills",
     onEvent: props.onEvent,
-    items: props.workAs,
-    isLoading: props.controls.workAs.loading,
-    description: props.controls.workAs.error && props.controls.workAs.message,
+    items: workAsList,
+    isLoading: props.controls.workAsSkills.loading,
+    description: props.controls.workAsSkills.error && props.controls.workAsSkills.message,
     descriptionColor: "red-light"
+  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_TitleDescription.default, {
+    className: "vh-general-section-topSkills-description ".concat(props.className ? props.className : ''),
+    descriptionColor: props.controls.topSkills.loading ? "gray-40" : props.controls.topSkills.error ? "red-light" : "gray-90",
+    descriptionVariant: "caption",
+    inline: true,
+    onEvent: props.onEvent,
+    title: "Rank your top 3 skills",
+    description: "1st = Highest proficiency level; 3rd = Lowest proficiency level",
+    titleColor: props.controls.topSkills.loading ? "gray-40" : props.controls.topSkills.error ? "red" : "gray-100",
+    titleVariant: "subtitle3"
+  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_List.default, {
+    items: topSkills,
+    data: "vanhack"
   })))));
 };
 

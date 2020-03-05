@@ -27,7 +27,7 @@ var _radio = _interopRequireDefault(require("../../Components/Input/radio"));
 
 var _checkbox = _interopRequireDefault(require("../../Components/Input/checkbox"));
 
-var _reactDatePicker = _interopRequireDefault(require("react-date-picker"));
+var _index3 = _interopRequireDefault(require("../../Components/Textarea/index"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -158,7 +158,12 @@ var VHModalExperience = function VHModalExperience(props) {
       color: "gray-100",
       variant: 'platform',
       text: "Start Date"
-    }), _react.default.createElement(_reactDatePicker.default, null)), _react.default.createElement(_Grid.Row, {
+    }), _react.default.createElement(_Simple.default, {
+      placeholder: "",
+      onEvent: function onEvent(e) {
+        console.log(e);
+      }
+    })), _react.default.createElement(_Grid.Row, {
       width: '40%'
     }, _react.default.createElement(_index.default, {
       color: "gray-100",
@@ -175,11 +180,23 @@ var VHModalExperience = function VHModalExperience(props) {
       color: "gray-100",
       variant: 'platform',
       text: "Description"
-    }), _react.default.createElement(_Simple.default, {
-      placeholder: "",
-      onEvent: function onEvent(e) {
-        console.log(e);
-      }
+    }), _react.default.createElement(_index3.default, {
+      description: props.description,
+      onEvent: props.onEvent
+    })), _react.default.createElement(_Grid.Row, {
+      marginBottom5: true
+    }, _react.default.createElement(_Select.default, {
+      caption: "Skills used on this position",
+      isMulti: true,
+      captionColor: props.controls.skillsUsed.loading ? "gray-40" : props.controls.skillsUsed.error ? "red" : null,
+      className: "vh-skillsUsed-section-skillsUsed ".concat(props.className ? props.className : ''),
+      currentItem: props.workAs.current,
+      data: "skillsUsed",
+      onEvent: props.onEvent,
+      items: props.workAs,
+      isLoading: props.controls.skillsUsed.loading,
+      description: props.controls.skillsUsed.error && props.controls.skillsUsed.message,
+      descriptionColor: "red-light"
     })), _react.default.createElement(_Grid.Row, {
       alignItemsRight: true
     }, _react.default.createElement(_index2.default, {

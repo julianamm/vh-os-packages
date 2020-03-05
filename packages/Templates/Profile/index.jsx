@@ -10,17 +10,17 @@ const VHProfileTemplate = props => (
   <Container md>
     <Row marginBottom={10}>
       <VHGeneralSection
-        {...props.general}
+        {...props}
         onEvent={props.onEvent}
       />
     </Row>
-    <Row marginBottom={10}>
+     <Row marginBottom={10}>
       <VHSkillsSection
-        {...props.skills}
+        {...props}
         onEvent={props.onEvent}
       />
     </Row>
-    <Row marginBottom={10}>
+    {/*<Row marginBottom={10}>
       <VHSocialSection
         {...props.social}
         onEvent={props.onEvent}
@@ -31,7 +31,7 @@ const VHProfileTemplate = props => (
         {...props.userCompanyExperience}
         onEvent={props.onEvent}
       />
-    </Row>
+    </Row> */}
   </Container>
 )
 

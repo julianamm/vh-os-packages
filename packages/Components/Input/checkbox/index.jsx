@@ -8,6 +8,10 @@ import VHInputCheckboxMulti from './multi'
 const VHInputCheckbox = props => {
   const [checked, setChecked] = useState(props.checked)
 
+  React.useEffect(() => {
+    setChecked(props.checked);
+}, [props.checked])
+
   if(props.multi) {
     return <VHInputCheckboxMulti {...props}/>
   }

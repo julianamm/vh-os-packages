@@ -34,19 +34,11 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
     md: true
   }, _react.default.createElement(_Grid.Row, {
     marginBottom: 10
-  }, _react.default.createElement(_General.default, _extends({}, props.general, {
+  }, _react.default.createElement(_General.default, _extends({}, props, {
     onEvent: props.onEvent
   }))), _react.default.createElement(_Grid.Row, {
     marginBottom: 10
-  }, _react.default.createElement(_skills.default, _extends({}, props.skills, {
-    onEvent: props.onEvent
-  }))), _react.default.createElement(_Grid.Row, {
-    marginBottom: 10
-  }, _react.default.createElement(_Social.default, _extends({}, props.social, {
-    onEvent: props.onEvent
-  }))), _react.default.createElement(_Grid.Row, {
-    marginBottom: 10
-  }, _react.default.createElement(_UserCompanyExperience.default, _extends({}, props.userCompanyExperience, {
+  }, _react.default.createElement(_skills.default, _extends({}, props, {
     onEvent: props.onEvent
   }))));
 };

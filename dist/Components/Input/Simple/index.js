@@ -37,6 +37,10 @@ var VHInput = function VHInput(props) {
       value = _React$useState2[0],
       handleChange = _React$useState2[1];
 
+  _react.default.useEffect(function () {
+    handleChange(props.value);
+  }, [props.value]);
+
   return _react.default.createElement(S.Input, {
     id: props.id,
     type: props.type,
@@ -87,7 +91,7 @@ var VHInput = function VHInput(props) {
       props.onEvent({
         data: {
           value: value,
-          data: props.data
+          key: props.data
         },
         event: "onBlur",
         origin: "VHInput"

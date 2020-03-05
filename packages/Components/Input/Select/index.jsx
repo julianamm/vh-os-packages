@@ -8,6 +8,21 @@ import VHText from '../../Text'
 const animatedComponents = makeAnimated();
 
 const VHSelect = props =>  {
+
+  const [value, handleChange] = React.useState(props.currentItem);
+  React.useEffect(() => {
+    handleChange(props.currentItem);
+}, [props.currentItem])
+
+const style = {
+  control: base => ({
+    ...base,
+    border: 0,
+    boxShadow: "none",
+    fontWeight: '500'
+  })
+};
+
   return (
     <div style={{position: 'relative', marginBottom: '21px'}}>
       {
@@ -19,12 +34,13 @@ const VHSelect = props =>  {
           />
       }
       <Select
+        styles={props.removeBorder ? style : '' }
         closeMenuOnSelect={!props.isMulti}
         className={props.className}
         isLoading={props.isLoading}
         isDisabled={props.isLoading}
         components={animatedComponents}
-        defaultValue={props.currentItem}
+        value={value}
         isMulti={props.isMulti}
         isClearable={true}
         options={props.items}
