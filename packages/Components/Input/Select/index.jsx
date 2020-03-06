@@ -47,13 +47,19 @@ const style = {
         onChange={(newValue, actionMeta) => {
           switch(true) {
             case actionMeta.action === "remove-value":
+              let finalValue = []
+              handleChange(newValue);
+              newValue.map(item => {
+                finalValue.push(parseInt(item.value))
+              })
               props.onEvent({
                 type: "OnChange",
                 origin: "VHSelect",
                 props: {
                   data: props.data,
-                  item: actionMeta.removedValue,
-                  action: 'delete'
+                  item: finalValue,
+                  action: 'delete',
+                  order: props.order
                 }
               })
               break
@@ -69,13 +75,21 @@ const style = {
               })
               break
             case actionMeta.action === "select-option":
+              let finalValueChange = []
+              handleChange(newValue);
+              if(props.isMulti){
+              newValue.map(item => {
+                finalValueChange.push(parseInt(item.value))
+              })
+            }
               props.onEvent({
                 type: "OnChange",
                 origin: "VHSelect",
                 props: {
                   data: props.data,
-                  item: props.isMulti ? actionMeta.option : newValue,
-                  action: 'add'
+                  item: props.isMulti ? finalValueChange : newValue,
+                  action: 'add',
+                  order: props.order
                 }
               })
               break

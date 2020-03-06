@@ -30,9 +30,25 @@ var VHSkillsSection = function VHSkillsSection(props) {
   var position = props.positionSkill ? [positions[props.positionSkill]] : {};
   var yearsOfExperienceList = props.yearsOfExperienceList;
   var yearsOfExperience = props.yearsOfExperience ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
-  var workAsList = props.workAsList;
-  var workAs = props.workAs ? [workAsList[props.workAs]] : [];
-  var topSkills = props.topSkills ? props.topSkills : [];
+  var workAsList = props.positions;
+  var workAs = [];
+
+  if (props.workAs) {
+    props.workAs.map(function (item) {
+      if (item.id) {
+        workAs.push({
+          value: item.id,
+          label: item.name
+        });
+      } else {
+        workAs.push({
+          value: item,
+          label: positions[item].label
+        });
+      }
+    });
+  }
+
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
     marginBottom: 5
   }, _react.default.createElement(_Text.default, {
@@ -52,7 +68,7 @@ var VHSkillsSection = function VHSkillsSection(props) {
     captionColor: props.controls.positionSkill.loading ? "gray-40" : props.controls.positionSkill.error ? "red" : null,
     className: "vh-skills-section-positionSkill ".concat(props.className ? props.className : ''),
     currentItem: position,
-    data: "position",
+    data: "positionSkill",
     onEvent: props.onEvent,
     items: positions,
     isLoading: props.controls.positionSkill.loading,
@@ -91,27 +107,32 @@ var VHSkillsSection = function VHSkillsSection(props) {
   })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
     caption: "I would like to work as...",
     isMulti: true,
-    captionColor: props.controls.workAsSkills.loading ? "gray-40" : props.controls.workAsSkills.error ? "red" : null,
-    className: "vh-skills-section-workAsSkills ".concat(props.className ? props.className : ''),
+    captionColor: props.controls.workAs.loading ? "gray-40" : props.controls.workAs.error ? "red" : null,
+    className: "vh-skills-section-workAs ".concat(props.className ? props.className : ''),
     currentItem: workAs,
-    data: "workAsSkills",
+    data: "workAs",
     onEvent: props.onEvent,
     items: workAsList,
-    isLoading: props.controls.workAsSkills.loading,
-    description: props.controls.workAsSkills.error && props.controls.workAsSkills.message,
+    isLoading: props.controls.workAs.loading,
+    description: props.controls.workAs.error && props.controls.workAs.message,
     descriptionColor: "red-light"
-  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_TitleDescription.default, {
-    className: "vh-general-section-topSkills-description ".concat(props.className ? props.className : ''),
-    descriptionColor: props.controls.topSkills.loading ? "gray-40" : props.controls.topSkills.error ? "red-light" : "gray-90",
-    descriptionVariant: "caption",
+  })), _react.default.createElement(_Grid.Row, {
+    column: true,
+    marginBottom: 5
+  }, _react.default.createElement(_TitleDescription.default, {
+    className: "vh-general-section-topSkill-description ".concat(props.className ? props.className : ''),
+    descriptionColor: props.controls.topSkill.loading ? "gray-40" : props.controls.topSkill.error ? "red-light" : "gray-90",
     inline: true,
     onEvent: props.onEvent,
     title: "Rank your top 3 skills",
     description: "1st = Highest proficiency level; 3rd = Lowest proficiency level",
-    titleColor: props.controls.topSkills.loading ? "gray-40" : props.controls.topSkills.error ? "red" : "gray-100",
+    titleColor: props.controls.topSkill.loading ? "gray-40" : props.controls.topSkill.error ? "red" : "gray-100",
     titleVariant: "subtitle3"
   })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_List.default, {
-    items: topSkills,
+    onEvent: props.onEvent,
+    secondList: props.yearsOfExperienceList,
+    list: props.skillList,
+    items: props.topSkill,
     data: "vanhack"
   })))));
 };

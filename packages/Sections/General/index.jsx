@@ -115,7 +115,7 @@ const VHGeneralSection = props => {
                   }
                 />
             </Row>
-            <Row>
+            <Row column>
               <VHTitleDescription
                 className={`vh-general-section-phone ${props.className ? props.className : ''}`}
                 descriptionColor={

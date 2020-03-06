@@ -58,7 +58,6 @@ storiesOf("Sections|Skills", module)
   .add("Default", () => (
     <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
       <VHSkillsSection
-        topSkills={topSkills}
         controls={{
           positionSkill: {
             loading: false,
@@ -72,7 +71,7 @@ storiesOf("Sections|Skills", module)
             success: false,
             message: 'Database error'
           },
-          workAsSkills: {
+          workAs: {
             loading: false,
             error: false,
             success: false,
@@ -84,7 +83,13 @@ storiesOf("Sections|Skills", module)
             success: false,
             message: 'Database error'
           },
-          topSkills: {
+          topSkill: {
+            loading: false,
+            error: false,
+            success: false,
+            message: 'Database error'
+          },
+          salaryExpectationCad: {
             loading: false,
             error: false,
             success: false,
@@ -117,7 +122,7 @@ storiesOf("Sections|Skills", module)
             success: false,
             message: 'Database error'
           },
-          workAsSkills: {
+          workAs: {
             loading: false,
             error: true,
             success: false,
@@ -129,7 +134,13 @@ storiesOf("Sections|Skills", module)
             success: false,
             message: 'Database error'
           },
-          topSkills: {
+          topSkill: {
+            loading: false,
+            error: false,
+            success: false,
+            message: 'Database error'
+          },
+          salaryExpectationCad: {
             loading: false,
             error: false,
             success: false,
@@ -163,7 +174,7 @@ storiesOf("Sections|Skills", module)
             success: false,
             message: 'Database error'
           },
-          workAsSkills: {
+          workAs: {
             loading: true,
             error: false,
             success: false,
@@ -175,7 +186,13 @@ storiesOf("Sections|Skills", module)
             success: false,
             message: 'Database error'
           },
-          topSkills: {
+          topSkill: {
+            loading: false,
+            error: false,
+            success: false,
+            message: 'Database error'
+          },
+          salaryExpectationCad: {
             loading: false,
             error: false,
             success: false,

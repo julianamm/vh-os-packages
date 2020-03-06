@@ -25,40 +25,95 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHList = function VHList(props) {
   var items = props.items ? props.items : [];
-  var currentItem = props.currentItem ? props.currentItem : [];
-  return _react.default.createElement(_react.default.Fragment, null, items.map(function (item) {
-    return _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
-      width: '20%'
-    }, _react.default.createElement(_Select.default, {
-      removeBorder: true,
-      caption: "",
-      data: 'AnyObjectOrString',
-      className: 'AnyObjectOrString',
-      currentItem: currentItem,
-      items: items,
-      description: "",
-      descriptionColor: "primary",
-      leftText: "",
-      onEvent: function onEvent(e) {
-        console.log(e);
-      }
-    })), _react.default.createElement(_Grid.Row, {
-      width: '20%'
-    }, _react.default.createElement(_Select.default, {
-      removeBorder: true,
-      caption: "",
-      data: 'AnyObjectOrString',
-      className: 'AnyObjectOrString',
-      currentItem: currentItem,
-      items: items,
-      description: "",
-      descriptionColor: "primary",
-      leftText: "",
-      onEvent: function onEvent(e) {
-        console.log(e);
-      }
-    })));
-  }));
+  console.log(items);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+    width: '20%'
+  }, _react.default.createElement(_Select.default, {
+    removeBorder: true,
+    caption: "",
+    data: 'topSkillExperience',
+    className: 'topSkillExperience',
+    currentItem: items[0] ? props.list.find(function (element) {
+      return element.value === items[0].id;
+    }) : {},
+    items: props.list,
+    description: "",
+    descriptionColor: "primary",
+    onEvent: props.onEvent,
+    order: 0
+  })), _react.default.createElement(_Grid.Row, {
+    width: '20%'
+  }, _react.default.createElement(_Select.default, {
+    removeBorder: true,
+    caption: "",
+    data: 'topSkillYears',
+    className: 'topSkillYears',
+    currentItem: items[0] ? [props.secondList[items[0].yearsOfExperience]] : {},
+    items: props.secondList,
+    description: "",
+    descriptionColor: "primary",
+    leftText: "",
+    onEvent: props.onEvent,
+    order: 0
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+    width: '20%'
+  }, _react.default.createElement(_Select.default, {
+    removeBorder: true,
+    caption: "",
+    data: 'topSkillExperience',
+    className: 'topSkillExperience',
+    currentItem: items[1] ? props.list.find(function (element) {
+      return element.value === items[1].id;
+    }) : {},
+    items: props.list,
+    description: "",
+    descriptionColor: "primary",
+    onEvent: props.onEvent,
+    order: 1
+  })), _react.default.createElement(_Grid.Row, {
+    width: '20%'
+  }, _react.default.createElement(_Select.default, {
+    removeBorder: true,
+    caption: "",
+    data: 'topSkillYears',
+    className: 'topSkillYears',
+    currentItem: items[1] ? [props.secondList[items[1].yearsOfExperience]] : {},
+    items: props.secondList,
+    description: "",
+    descriptionColor: "primary",
+    leftText: "",
+    onEvent: props.onEvent,
+    order: 1
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+    width: '20%'
+  }, _react.default.createElement(_Select.default, {
+    removeBorder: true,
+    caption: "",
+    data: 'topSkillExperience',
+    className: 'topSkillExperience',
+    currentItem: items[2] ? props.list.find(function (element) {
+      return element.value === items[2].id;
+    }) : {},
+    items: props.list,
+    description: "",
+    descriptionColor: "primary",
+    onEvent: props.onEvent,
+    order: 2
+  })), _react.default.createElement(_Grid.Row, {
+    width: '20%'
+  }, _react.default.createElement(_Select.default, {
+    removeBorder: true,
+    caption: "",
+    data: 'topSkillYears',
+    className: 'topSkillYears',
+    currentItem: items[2] ? [props.secondList[items[2].yearsOfExperience]] : {},
+    items: props.secondList,
+    description: "",
+    descriptionColor: "primary",
+    leftText: "",
+    onEvent: props.onEvent,
+    order: 2
+  }))));
 };
 
 var _default = VHList;

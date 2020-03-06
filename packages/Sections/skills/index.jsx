@@ -16,10 +16,19 @@ const VHSkillsSection = props => {
   const yearsOfExperienceList = props.yearsOfExperienceList
   const yearsOfExperience = props.yearsOfExperience ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
 
-  const workAsList = props.workAsList
-  const workAs = props.workAs ? [workAsList[props.workAs]] : [];
+  const workAsList = props.positions
 
-  const topSkills = props.topSkills ? props.topSkills : []
+  let workAs = []
+
+  if(props.workAs){
+    props.workAs.map(item=>{
+      if(item.id){
+      workAs.push({value: item.id, label: item.name})
+      }else{
+        workAs.push({value: item, label: positions[item].label})
+      }
+    })
+  }
 
   return (
     <>
@@ -48,7 +57,7 @@ const VHSkillsSection = props => {
                 }
                 className={`vh-skills-section-positionSkill ${props.className ? props.className : ''}`}
                 currentItem={position}
-                data="position"
+                data="positionSkill"
                 onEvent={props.onEvent}
                 items={positions}
                 isLoading={props.controls.positionSkill.loading}
@@ -106,41 +115,40 @@ const VHSkillsSection = props => {
               caption="I would like to work as..."
               isMulti
               captionColor={
-                props.controls.workAsSkills.loading
+                props.controls.workAs.loading
                   ? "gray-40"
-                  : props.controls.workAsSkills.error
+                  : props.controls.workAs.error
                     ? "red"
                     : null
               }
-              className={`vh-skills-section-workAsSkills ${props.className ? props.className : ''}`}
+              className={`vh-skills-section-workAs ${props.className ? props.className : ''}`}
               currentItem={workAs}
-              data="workAsSkills"
+              data="workAs"
               onEvent={props.onEvent}
               items={workAsList}
-              isLoading={props.controls.workAsSkills.loading}
-              description={props.controls.workAsSkills.error && props.controls.workAsSkills.message}
+              isLoading={props.controls.workAs.loading}
+              description={props.controls.workAs.error && props.controls.workAs.message}
               descriptionColor="red-light"
             />
           </Row>
-          <Row>
+          <Row column marginBottom={5}>
           <VHTitleDescription
-                className={`vh-general-section-topSkills-description ${props.className ? props.className : ''}`}
+                className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
                 descriptionColor={
-                  props.controls.topSkills.loading
+                  props.controls.topSkill.loading
                   ? "gray-40"
-                  : props.controls.topSkills.error
+                  : props.controls.topSkill.error
                   ? "red-light"
                   : "gray-90"
                 }
-                descriptionVariant="caption"
                 inline
                 onEvent={props.onEvent}
                 title="Rank your top 3 skills"
                 description="1st = Highest proficiency level; 3rd = Lowest proficiency level"
                 titleColor={
-                  props.controls.topSkills.loading
+                  props.controls.topSkill.loading
                   ? "gray-40"
-                  : props.controls.topSkills.error
+                  : props.controls.topSkill.error
                   ? "red"
                   : "gray-100"
                 }
@@ -149,7 +157,10 @@ const VHSkillsSection = props => {
           </Row>
           <Row>
             <VHList
-              items={topSkills}
+              onEvent={props.onEvent}
+              secondList={props.yearsOfExperienceList}
+              list={props.skillList}
+              items={props.topSkill}
               data="vanhack" />
           </Row> 
         </VHCardBase>

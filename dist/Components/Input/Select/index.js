@@ -75,13 +75,19 @@ var VHSelect = function VHSelect(props) {
     onChange: function onChange(newValue, actionMeta) {
       switch (true) {
         case actionMeta.action === "remove-value":
+          var finalValue = [];
+          handleChange(newValue);
+          newValue.map(function (item) {
+            finalValue.push(parseInt(item.value));
+          });
           props.onEvent({
             type: "OnChange",
             origin: "VHSelect",
             props: {
               data: props.data,
-              item: actionMeta.removedValue,
-              action: 'delete'
+              item: finalValue,
+              action: 'delete',
+              order: props.order
             }
           });
           break;
@@ -99,13 +105,23 @@ var VHSelect = function VHSelect(props) {
           break;
 
         case actionMeta.action === "select-option":
+          var finalValueChange = [];
+          handleChange(newValue);
+
+          if (props.isMulti) {
+            newValue.map(function (item) {
+              finalValueChange.push(parseInt(item.value));
+            });
+          }
+
           props.onEvent({
             type: "OnChange",
             origin: "VHSelect",
             props: {
               data: props.data,
-              item: props.isMulti ? actionMeta.option : newValue,
-              action: 'add'
+              item: props.isMulti ? finalValueChange : newValue,
+              action: 'add',
+              order: props.order
             }
           });
           break;

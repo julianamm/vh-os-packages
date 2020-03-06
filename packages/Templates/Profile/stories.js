@@ -51,6 +51,48 @@ const controls = {
     error: false,
     success: false,
     message: 'Database error'
+  },
+  positionSkill: {
+    loading: false,
+    error: false,
+    success: false,
+    message: 'Database error'
+  },
+  yearsOfExperience: {
+    loading: false,
+    error: true,
+    success: false,
+    message: 'Database error'
+  },
+  workAs: {
+    loading: false,
+    error: false,
+    success: false,
+    message: 'Database error'
+  },
+  openForDifferentRole: {
+    loading: false,
+    error: false,
+    success: false,
+    message: 'Database error'
+  },
+  topSkill: {
+    loading: false,
+    error: false,
+    success: false,
+    message: 'Database error'
+  },
+  salaryExpectationCad: {
+    loading: false,
+    error: false,
+    success: false,
+    message: 'Database error'
+  },
+  salaryExpectationEur: {
+    loading: false,
+    error: false,
+    success: false,
+    message: 'Database error'
   }
 }
 

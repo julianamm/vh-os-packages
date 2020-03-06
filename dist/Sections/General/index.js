@@ -91,7 +91,9 @@ var VHGeneralSection = function VHGeneralSection(props) {
     description: props.controls.gender.error && props.controls.gender.message,
     descriptionColor: "red-light",
     captionColor: props.controls.gender.loading ? "gray-40" : props.controls.gender.error ? "red" : null
-  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_TitleDescription.default, {
+  })), _react.default.createElement(_Grid.Row, {
+    column: true
+  }, _react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-phone ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red-light" : "gray-90",
     descriptionVariant: "caption",

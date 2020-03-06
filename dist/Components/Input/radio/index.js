@@ -37,7 +37,10 @@ var VHInputRadio = function VHInputRadio(props) {
       checked = _useState2[0],
       setChecked = _useState2[1];
 
-  var items = props.data.items;
+  _react.default.useEffect(function () {
+    setChecked(props.checked);
+  }, [props.checked]);
+
   return _react.default.createElement(_Grid.Row, {
     column: true,
     alignItemsLeft: true,
@@ -47,29 +50,44 @@ var VHInputRadio = function VHInputRadio(props) {
   }, _react.default.createElement(_Text.default, {
     variant: props.variant,
     color: props.color,
-    text: props.data.text
-  })), _react.default.createElement(S.Wrapper, null, items.map(function (item) {
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Input, {
-      name: props.data.text,
-      id: item.name,
-      checked: checked,
-      disabled: props.disabled,
-      type: "radio" //   onClick={() => {
-      //     setChecked(!checked),
-      //     props.onEvent({
-      //       type: "OnClick",
-      //       origin: "VHInputRadio",
-      //       props: {
-      //         data: props.data,
-      //         checked: !checked
-      //        }
-      //     })
-      // }}
-
-    }), _react.default.createElement(S.Label, {
-      for: item.name
-    }, item.name));
-  })));
+    text: props.text
+  })), _react.default.createElement(S.Wrapper, null, _react.default.createElement(S.Input, {
+    name: props.text,
+    id: 'Yes',
+    checked: checked,
+    disabled: props.disabled,
+    type: "radio",
+    onClick: function onClick() {
+      setChecked(!checked), props.onEvent({
+        type: "OnClick",
+        origin: "VHInputRadio",
+        props: {
+          data: props.data,
+          checked: checked
+        }
+      });
+    }
+  }), _react.default.createElement(S.Label, {
+    for: props.text
+  }, 'Yes'), _react.default.createElement(S.Input, {
+    name: props.text,
+    id: "No",
+    checked: !checked,
+    disabled: props.disabled,
+    type: "radio",
+    onClick: function onClick() {
+      setChecked(!checked), props.onEvent({
+        type: "OnClick",
+        origin: "VHInputRadio",
+        props: {
+          data: props.data,
+          checked: checked
+        }
+      });
+    }
+  }), _react.default.createElement(S.Label, {
+    for: props.text
+  }, 'No')));
 };
 
 VHInputRadio.defaultProps = {

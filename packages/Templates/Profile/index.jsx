@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Container, Row } from '../../Grid';
 import VHGeneralSection from '../../Sections/General'
 import VHSkillsSection from '../../Sections/skills'
+import VHRelocationSection from '../../Sections/Relocation'
 import VHSocialSection from '../../Sections/Social'
 import VHUserCompanyExperienceSection from '../../Sections/UserCompanyExperience'
 
@@ -16,6 +17,12 @@ const VHProfileTemplate = props => (
     </Row>
      <Row marginBottom={10}>
       <VHSkillsSection
+        {...props}
+        onEvent={props.onEvent}
+      />
+    </Row>
+    <Row marginBottom={10}>
+      <VHRelocationSection
         {...props}
         onEvent={props.onEvent}
       />

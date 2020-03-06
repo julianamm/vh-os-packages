@@ -55,7 +55,6 @@ var apiResponse = {
       padding: "24px"
     }
   }, _react.default.createElement(_.default, {
-    topSkills: topSkills,
     controls: {
       positionSkill: {
         loading: false,
@@ -69,7 +68,7 @@ var apiResponse = {
         success: false,
         message: 'Database error'
       },
-      workAsSkills: {
+      workAs: {
         loading: false,
         error: false,
         success: false,
@@ -81,7 +80,7 @@ var apiResponse = {
         success: false,
         message: 'Database error'
       },
-      topSkills: {
+      topSkill: {
         loading: false,
         error: false,
         success: false,
@@ -116,7 +115,7 @@ var apiResponse = {
         success: false,
         message: 'Database error'
       },
-      workAsSkills: {
+      workAs: {
         loading: false,
         error: true,
         success: false,
@@ -128,7 +127,7 @@ var apiResponse = {
         success: false,
         message: 'Database error'
       },
-      topSkills: {
+      topSkill: {
         loading: false,
         error: false,
         success: false,
@@ -164,7 +163,7 @@ var apiResponse = {
         success: false,
         message: 'Database error'
       },
-      workAsSkills: {
+      workAs: {
         loading: true,
         error: false,
         success: false,
@@ -176,7 +175,7 @@ var apiResponse = {
         success: false,
         message: 'Database error'
       },
-      topSkills: {
+      topSkill: {
         loading: false,
         error: false,
         success: false,
