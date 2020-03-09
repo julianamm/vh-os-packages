@@ -1,0 +1,110 @@
+import React from 'react';
+import * as S from './styles';
+import VHText from '../Text'
+import VHSelect from '../Input/Select'
+import { Container, Row } from '../../Grid';
+
+const VHList = props => {
+    const items = props.items ? props.items : [];
+    const list = props.list ? props.list : [];
+    const secondList = props.secondList ? props.secondList : []
+    return (
+        <React.Fragment>
+            < S.Wrapper >
+                <Row width={'20%'}>
+                    <VHSelect
+                        removeBorder
+                        caption=""
+                        data={'topSkillExperience'}
+                        className={'topSkillExperience'}
+                        currentItem={items[0] ? list.find(element => element.value === items[0].id) : {}}
+                        items={props.list}
+                        description=""
+                        descriptionColor="primary"
+                        onEvent={props.onEvent}
+                        order={0}
+                    />
+                </Row>
+                <Row width={'20%'}>
+                    <VHSelect
+                        removeBorder
+                        caption=""
+                        data={'topSkillYears'}
+                        className={'topSkillYears'}
+                        currentItem={items[0] ? [secondList[items[0].yearsOfExperience]] : {}}
+                        items={secondList}
+                        description=""
+                        descriptionColor="primary"
+                        leftText=""
+                        onEvent={props.onEvent}
+                        order={0}
+                    />
+                </Row>
+            </ S.Wrapper>
+            < S.Wrapper >
+                <Row width={'20%'}>
+                    <VHSelect
+                        removeBorder
+                        caption=""
+                        data={'topSkillExperience'}
+                        className={'topSkillExperience'}
+                        currentItem={items[1] ? list.find(element => element.value === items[1].id) : {}}
+                        items={props.list}
+                        description=""
+                        descriptionColor="primary"
+                        onEvent={props.onEvent}
+                        order={1}
+                    />
+                </Row>
+                <Row width={'20%'}>
+                    <VHSelect
+                        removeBorder
+                        caption=""
+                        data={'topSkillYears'}
+                        className={'topSkillYears'}
+                        currentItem={items[1] ? [secondList[items[1].yearsOfExperience]] : {}}
+                        items={secondList}
+                        description=""
+                        descriptionColor="primary"
+                        leftText=""
+                        onEvent={props.onEvent}
+                        order={1}
+                    />
+                </Row>
+            </S.Wrapper>
+            <S.Wrapper>
+                <Row width={'20%'}>
+                    <VHSelect
+                        removeBorder
+                        caption=""
+                        data={'topSkillExperience'}
+                        className={'topSkillExperience'}
+                        currentItem={items[2] ? list.find(element => element.value === items[2].id) : {}}
+                        items={props.list}
+                        description=""
+                        descriptionColor="primary"
+                        onEvent={props.onEvent}
+                        order={2}
+                    />
+                </Row>
+                <Row width={'20%'}>
+                    <VHSelect
+                        removeBorder
+                        caption=""
+                        data={'topSkillYears'}
+                        className={'topSkillYears'}
+                        currentItem={items[2] ? [secondList[items[2].yearsOfExperience]] : {}}
+                        items={secondList}
+                        description=""
+                        descriptionColor="primary"
+                        leftText=""
+                        onEvent={props.onEvent}
+                        order={2}
+                    />
+                </Row>
+            </S.Wrapper>
+        </React.Fragment>
+    )
+}
+
+export default VHList;

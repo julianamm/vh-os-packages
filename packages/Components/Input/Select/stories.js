@@ -15,13 +15,12 @@ const items = [
   { value: 'silver', label: 'Silver', color: '#666666' },
 ]
 
-const currentItem = [items[4]]
+const currentItem = [items[4], items[5]]
 
 storiesOf("Components|Input/Select", module)
   .add("default", () => (
     <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
       <VHSelect
-        isLoading
         caption="Annual salary expectation"
         data={'AnyObjectOrString'}
         className={'AnyObjectOrString'}
@@ -40,6 +39,24 @@ storiesOf("Components|Input/Select", module)
   .add("single", () => (
     <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
       <VHSelect
+        caption="Annual salary expectation"
+        data={'AnyObjectOrString'}
+        className={'AnyObjectOrString'}
+        currentItem={currentItem}
+        items={items}
+        description="See salaries for this position"
+        descriptionColor="primary"
+        leftText="$CAD"
+        onEvent={e => {
+          console.log(e)
+        }}
+      />
+    </div>
+  ))
+  .add("border remover", () => (
+    <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
+      <VHSelect
+        removeBorder
         caption="Annual salary expectation"
         data={'AnyObjectOrString'}
         className={'AnyObjectOrString'}

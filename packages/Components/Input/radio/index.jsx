@@ -6,39 +6,56 @@ import { Row } from '../../../Grid'
 
 const VHInputRadio = props => {
     const [checked, setChecked] = useState(props.checked)
-    const items = props.data.items
 
+    React.useEffect(() => {
+        setChecked(props.checked);
+    }, [props.checked])
+
+    
     return (
         <Row column alignItemsLeft className={`vh-radio ${props.className ? props.className : ''}`} >
             <Row marginBottom5>
-                <VHText variant={props.variant} color={props.color} text={props.data.text} />
+                <VHText variant={props.variant} color={props.color} text={props.text} />
             </Row>
             <S.Wrapper>
-                {items.map(item => {
-                    return (
-                        <React.Fragment>
-                            <S.Input
-                                name={props.data.text}
-                                id={item.name}
-                                checked={checked}
-                                disabled={props.disabled}
-                                type="radio"
-                            //   onClick={() => {
-                            //     setChecked(!checked),
-                            //     props.onEvent({
-                            //       type: "OnClick",
-                            //       origin: "VHInputRadio",
-                            //       props: {
-                            //         data: props.data,
-                            //         checked: !checked
-                            //        }
-                            //     })
-                            // }}
-                            />
-                            <S.Label for={item.name}>{item.name}</S.Label>
-                        </React.Fragment>
-                    )
-                })}
+                <S.Input
+                    name={props.text}
+                    id={'Yes'}
+                    checked={checked}
+                    disabled={props.disabled}
+                    type="radio"
+                    onClick={() => {
+                        setChecked(!checked),
+                            props.onEvent({
+                                type: "OnClick",
+                                origin: "VHInputRadio",
+                                props: {
+                                    data: props.data,
+                                    checked: checked
+                                }
+                            })
+                    }}
+                />
+                <S.Label for={props.text}>{'Yes'}</S.Label>
+                <S.Input
+                    name={props.text}
+                    id={"No"}
+                    checked={!checked}
+                    disabled={props.disabled}
+                    type="radio"
+                    onClick={() => {
+                        setChecked(!checked),
+                            props.onEvent({
+                                type: "OnClick",
+                                origin: "VHInputRadio",
+                                props: {
+                                    data: props.data,
+                                    checked: checked
+                                }
+                            })
+                    }}
+                />
+                <S.Label for={props.text}>{'No'}</S.Label>
             </S.Wrapper>
         </Row>
     )

@@ -8,6 +8,21 @@ import VHText from '../../Text'
 const animatedComponents = makeAnimated();
 
 const VHSelect = props =>  {
+
+  const [value, handleChange] = React.useState(props.currentItem);
+  React.useEffect(() => {
+    handleChange(props.currentItem);
+}, [props.currentItem])
+
+const style = {
+  control: base => ({
+    ...base,
+    border: 0,
+    boxShadow: "none",
+    fontWeight: '500'
+  })
+};
+
   return (
     <div style={{position: 'relative', marginBottom: '21px'}}>
       {
@@ -19,25 +34,32 @@ const VHSelect = props =>  {
           />
       }
       <Select
+        styles={props.removeBorder ? style : '' }
         closeMenuOnSelect={!props.isMulti}
         className={props.className}
         isLoading={props.isLoading}
         isDisabled={props.isLoading}
         components={animatedComponents}
-        defaultValue={props.currentItem}
+        value={value}
         isMulti={props.isMulti}
         isClearable={true}
         options={props.items}
         onChange={(newValue, actionMeta) => {
           switch(true) {
             case actionMeta.action === "remove-value":
+              let finalValue = []
+              handleChange(newValue);
+              newValue.map(item => {
+                finalValue.push(parseInt(item.value))
+              })
               props.onEvent({
                 type: "OnChange",
                 origin: "VHSelect",
                 props: {
                   data: props.data,
-                  item: actionMeta.removedValue,
-                  action: 'delete'
+                  item: finalValue,
+                  action: 'delete',
+                  order: props.order
                 }
               })
               break
@@ -53,13 +75,21 @@ const VHSelect = props =>  {
               })
               break
             case actionMeta.action === "select-option":
+              let finalValueChange = []
+              handleChange(newValue);
+              if(props.isMulti){
+              newValue.map(item => {
+                finalValueChange.push(parseInt(item.value))
+              })
+            }
               props.onEvent({
                 type: "OnChange",
                 origin: "VHSelect",
                 props: {
                   data: props.data,
-                  item: props.isMulti ? actionMeta.option : newValue,
-                  action: 'add'
+                  item: props.isMulti ? finalValueChange : newValue,
+                  action: 'add',
+                  order: props.order
                 }
               })
               break

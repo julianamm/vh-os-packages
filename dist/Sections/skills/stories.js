@@ -8,6 +8,16 @@ var _ = _interopRequireDefault(require("."));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var topSkills = [{
+  label: 'React',
+  value: 'c'
+}, {
+  label: 'Java',
+  value: 'b'
+}, {
+  label: 'Python',
+  value: 'o'
+}];
 var items = [{
   label: 'Item 1',
   value: 'c'
@@ -46,9 +56,15 @@ var apiResponse = {
     }
   }, _react.default.createElement(_.default, {
     controls: {
-      position: {
+      positionSkill: {
         loading: false,
         error: false,
+        success: false,
+        message: 'Database error'
+      },
+      yearsOfExperience: {
+        loading: false,
+        error: true,
         success: false,
         message: 'Database error'
       },
@@ -58,14 +74,19 @@ var apiResponse = {
         success: false,
         message: 'Database error'
       },
-      openedPosition: {
+      openForDifferentRole: {
+        loading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      topSkill: {
         loading: false,
         error: false,
         success: false,
         message: 'Database error'
       }
     },
-    workAs: items,
     mainSkills: items,
     positions: items,
     data: apiResponse,
@@ -82,7 +103,13 @@ var apiResponse = {
     }
   }, _react.default.createElement(_.default, {
     controls: {
-      position: {
+      positionSkill: {
+        loading: false,
+        error: true,
+        success: false,
+        message: 'Database error'
+      },
+      yearsOfExperience: {
         loading: false,
         error: true,
         success: false,
@@ -94,9 +121,15 @@ var apiResponse = {
         success: false,
         message: 'Database error'
       },
-      openedPosition: {
+      openForDifferentRole: {
         loading: false,
         error: true,
+        success: false,
+        message: 'Database error'
+      },
+      topSkill: {
+        loading: false,
+        error: false,
         success: false,
         message: 'Database error'
       }
@@ -118,9 +151,15 @@ var apiResponse = {
     }
   }, _react.default.createElement(_.default, {
     controls: {
-      position: {
+      positionSkill: {
         loading: true,
         error: false,
+        success: false,
+        message: 'Database error'
+      },
+      yearsOfExperience: {
+        loading: false,
+        error: true,
         success: false,
         message: 'Database error'
       },
@@ -130,14 +169,19 @@ var apiResponse = {
         success: false,
         message: 'Database error'
       },
-      openedPosition: {
+      openForDifferentRole: {
         loading: true,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      topSkill: {
+        loading: false,
         error: false,
         success: false,
         message: 'Database error'
       }
     },
-    workAs: items,
     mainSkills: items,
     positions: items,
     data: apiResponse,

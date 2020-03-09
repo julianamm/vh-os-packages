@@ -52,7 +52,7 @@ var items = [{
   label: 'Silver',
   color: '#666666'
 }];
-var currentItem = [items[4]];
+var currentItem = [items[4], items[5]];
 (0, _react2.storiesOf)("Components|Input/Select", module).add("default", function () {
   return _react.default.createElement("div", {
     style: {
@@ -61,7 +61,6 @@ var currentItem = [items[4]];
       padding: '9px'
     }
   }, _react.default.createElement(_.default, {
-    isLoading: true,
     caption: "Annual salary expectation",
     data: 'AnyObjectOrString',
     className: 'AnyObjectOrString',
@@ -83,6 +82,27 @@ var currentItem = [items[4]];
       padding: '9px'
     }
   }, _react.default.createElement(_.default, {
+    caption: "Annual salary expectation",
+    data: 'AnyObjectOrString',
+    className: 'AnyObjectOrString',
+    currentItem: currentItem,
+    items: items,
+    description: "See salaries for this position",
+    descriptionColor: "primary",
+    leftText: "$CAD",
+    onEvent: function onEvent(e) {
+      console.log(e);
+    }
+  }));
+}).add("border remover", function () {
+  return _react.default.createElement("div", {
+    style: {
+      width: '80%',
+      marginLeft: '1%',
+      padding: '9px'
+    }
+  }, _react.default.createElement(_.default, {
+    removeBorder: true,
     caption: "Annual salary expectation",
     data: 'AnyObjectOrString',
     className: 'AnyObjectOrString',

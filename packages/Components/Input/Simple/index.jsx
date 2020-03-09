@@ -4,6 +4,11 @@ import * as S from "./styles"
 
 const VHInput = props => {
   const [value, handleChange] = React.useState(props.value);
+
+  React.useEffect(() => {
+    handleChange(props.value);
+}, [props.value])
+
   return (
     <S.Input
       id={props.id}
@@ -57,7 +62,7 @@ const VHInput = props => {
         props.onEvent({
           data: {
             value,
-            data: props.data
+            key: props.data
           },
           event: "onBlur",
           origin: "VHInput"

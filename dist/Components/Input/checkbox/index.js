@@ -39,6 +39,10 @@ var VHInputCheckbox = function VHInputCheckbox(props) {
       checked = _useState2[0],
       setChecked = _useState2[1];
 
+  _react.default.useEffect(function () {
+    setChecked(props.checked);
+  }, [props.checked]);
+
   if (props.multi) {
     return _react.default.createElement(_multi.default, props);
   }
