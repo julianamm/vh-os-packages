@@ -85,6 +85,12 @@ var apiResponse = {
         error: false,
         success: false,
         message: 'Database error'
+      },
+      salaryExpectationCad: {
+        loading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
       }
     },
     mainSkills: items,
@@ -128,6 +134,12 @@ var apiResponse = {
         message: 'Database error'
       },
       topSkill: {
+        loading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      salaryExpectationCad: {
         loading: false,
         error: false,
         success: false,
@@ -176,6 +188,12 @@ var apiResponse = {
         message: 'Database error'
       },
       topSkill: {
+        loading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      salaryExpectationCad: {
         loading: false,
         error: false,
         success: false,

@@ -25,7 +25,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHList = function VHList(props) {
   var items = props.items ? props.items : [];
-  console.log(items);
+  var list = props.list ? props.list : [];
+  var secondList = props.secondList ? props.secondList : [];
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     width: '20%'
   }, _react.default.createElement(_Select.default, {
@@ -33,7 +34,7 @@ var VHList = function VHList(props) {
     caption: "",
     data: 'topSkillExperience',
     className: 'topSkillExperience',
-    currentItem: items[0] ? props.list.find(function (element) {
+    currentItem: items[0] ? list.find(function (element) {
       return element.value === items[0].id;
     }) : {},
     items: props.list,
@@ -48,8 +49,8 @@ var VHList = function VHList(props) {
     caption: "",
     data: 'topSkillYears',
     className: 'topSkillYears',
-    currentItem: items[0] ? [props.secondList[items[0].yearsOfExperience]] : {},
-    items: props.secondList,
+    currentItem: items[0] ? [secondList[items[0].yearsOfExperience]] : {},
+    items: secondList,
     description: "",
     descriptionColor: "primary",
     leftText: "",
@@ -62,7 +63,7 @@ var VHList = function VHList(props) {
     caption: "",
     data: 'topSkillExperience',
     className: 'topSkillExperience',
-    currentItem: items[1] ? props.list.find(function (element) {
+    currentItem: items[1] ? list.find(function (element) {
       return element.value === items[1].id;
     }) : {},
     items: props.list,
@@ -77,8 +78,8 @@ var VHList = function VHList(props) {
     caption: "",
     data: 'topSkillYears',
     className: 'topSkillYears',
-    currentItem: items[1] ? [props.secondList[items[1].yearsOfExperience]] : {},
-    items: props.secondList,
+    currentItem: items[1] ? [secondList[items[1].yearsOfExperience]] : {},
+    items: secondList,
     description: "",
     descriptionColor: "primary",
     leftText: "",
@@ -91,7 +92,7 @@ var VHList = function VHList(props) {
     caption: "",
     data: 'topSkillExperience',
     className: 'topSkillExperience',
-    currentItem: items[2] ? props.list.find(function (element) {
+    currentItem: items[2] ? list.find(function (element) {
       return element.value === items[2].id;
     }) : {},
     items: props.list,
@@ -106,8 +107,8 @@ var VHList = function VHList(props) {
     caption: "",
     data: 'topSkillYears',
     className: 'topSkillYears',
-    currentItem: items[2] ? [props.secondList[items[2].yearsOfExperience]] : {},
-    items: props.secondList,
+    currentItem: items[2] ? [secondList[items[2].yearsOfExperience]] : {},
+    items: secondList,
     description: "",
     descriptionColor: "primary",
     leftText: "",

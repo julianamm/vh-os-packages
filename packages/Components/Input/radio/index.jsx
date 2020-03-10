@@ -25,7 +25,7 @@ const VHInputRadio = props => {
                     disabled={props.disabled}
                     type="radio"
                     onClick={() => {
-                        setChecked(!checked),
+                        setChecked(true),
                             props.onEvent({
                                 type: "OnClick",
                                 origin: "VHInputRadio",
@@ -44,7 +44,7 @@ const VHInputRadio = props => {
                     disabled={props.disabled}
                     type="radio"
                     onClick={() => {
-                        setChecked(!checked),
+                        setChecked(false),
                             props.onEvent({
                                 type: "OnClick",
                                 origin: "VHInputRadio",
