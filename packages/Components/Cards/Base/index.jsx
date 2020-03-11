@@ -16,7 +16,10 @@ const VHCardBase = props => {
       }}
       draggable={props.draggable}
       id={props.id}
+      width={props.width}
+      height={props.height}
       onDragEnter={props.onDragEnter}
+      noPadding={props.noPadding}
       onDragLeave={props.onDragLeave}
       onDragStart={props.onDragStart}
       noBorder={props.noBorder} favorite={props.favorite} noHover={props.noHover}>

@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex;
     width: 96%;
+
+
     @media only screen and (max-width: 768px) {
         width: 93%;
     }
@@ -24,6 +26,17 @@ export const Container = styled.div`
     `}
     ${({ alignItemsCenter }) => alignItemsCenter && `
         align-items: center;
+    `}
+    ${({ fullHeight }) => fullHeight && `
+        height: 100vh;
+    `}
+
+    ${({ justifyCenter }) => justifyCenter && `
+        justify-content: center;
+    `}
+
+    ${({ fullWidth }) => fullWidth && `
+        width: 100% !important;
     `}
 `
 

@@ -28,5 +28,16 @@ export const Card = styled.div`
     :hover {
         box-shadow: ${props => !props.noHover && `0 4px 14px 0 rgba(0, 0, 0, 0.1)`};
     }
+
+    ${({ noPadding }) => noPadding &&`
+        padding: 0;
+    `}
+
+    ${({ width }) => width &&`
+        width: ${width};
+    `}
+    ${({ height }) => height &&`
+        height: ${height};
+    `}
 `
 
