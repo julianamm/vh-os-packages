@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 
 const VHConfirmationTemplate = props => {
     return (
-        <Container style={{width:'80%'}}>
+        <Container>
             <Row alignItemsCenter marginTop={90}>
                 <VHText text={props.title} variant="h4"/>
             </Row>
