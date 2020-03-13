@@ -9,6 +9,10 @@ export const H1 = styled.h1`
     font-size: 48px;
     font-weight: 'lighter';
 
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
+
 `
 export const H2 = styled.h2`
     margin: 0;
@@ -17,6 +21,10 @@ export const H2 = styled.h2`
     font-family: Nunito Sans;
     font-size: 34px;
     font-weight: 'lighter';
+
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
 
 `
 export const H3 = styled.h3`
@@ -27,6 +35,10 @@ export const H3 = styled.h3`
     font-size: 24px;
     font-weight: 'normal';
 
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
+
 `
 export const H4 = styled.h4`
     margin: 0;
@@ -35,6 +47,10 @@ export const H4 = styled.h4`
     font-family: Nunito Sans;
     font-size: 22px;
     font-weight: 'bold';
+
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
 
 `
 export const H5 = styled.h5`
@@ -45,6 +61,10 @@ export const H5 = styled.h5`
     font-size: 22px;
     font-weight: 'regular';
 
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
+
 `
 export const H6 = styled.h6`
     margin: 0;
@@ -53,6 +73,10 @@ export const H6 = styled.h6`
     font-family: Nunito Sans;
     font-size: 20px;
     font-weight: 'regular';
+
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
 
 `
 export const Subtitle1 = styled.p`
@@ -73,6 +97,10 @@ export const Subtitle2 = styled.p`
     font-size: 16px;
     font-weight: 'bold';
 
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
+
 `
 export const Subtitle3 = styled.p`
     margin: 0;
@@ -82,6 +110,10 @@ export const Subtitle3 = styled.p`
     font-size: 16px;
     font-weight: 'lighter';
     line-height: 23.1px;
+
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
 
 `
 export const BodyWeb = styled.p`
@@ -93,6 +125,10 @@ export const BodyWeb = styled.p`
     font-weight: 'regular';
     line-height: 28px;
 
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
+
 `
 export const BodyPlatform = styled.p`
     margin: 0;
@@ -103,6 +139,10 @@ export const BodyPlatform = styled.p`
     font-weight: 'regular';
     line-height: 21.5px;
 
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
+
 `
 export const BodyPlatform2 = styled.p`
     margin: 0;
@@ -112,6 +152,10 @@ export const BodyPlatform2 = styled.p`
     font-size: 14px;
     font-weight: 'regular';
 
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
+
 `
 export const Caption = styled.p`
     margin: 0;
@@ -120,5 +164,9 @@ export const Caption = styled.p`
     font-family: Roboto;
     font-size: 12px;
     font-weight: 'regular';
+
+    ${({alignCenter}) => alignCenter && `
+        text-align: center;
+    `}
 
 `

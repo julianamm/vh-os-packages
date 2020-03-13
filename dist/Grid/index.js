@@ -20,7 +20,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    width: 96%;\n    @media only screen and (max-width: 768px) {\n        width: 93%;\n    }\n\n    padding: 0;\n    margin: 0 auto;\n    flex-direction: column;\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    width: 96%;\n\n\n    @media only screen and (max-width: 768px) {\n        width: 93%;\n    }\n\n    padding: 0;\n    margin: 0 auto;\n    flex-direction: column;\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -43,72 +43,81 @@ var Container = _styledComponents.default.div(_templateObject(), function (_ref)
 }, function (_ref4) {
   var alignItemsCenter = _ref4.alignItemsCenter;
   return alignItemsCenter && "\n        align-items: center;\n    ";
+}, function (_ref5) {
+  var fullHeight = _ref5.fullHeight;
+  return fullHeight && "\n        height: 100vh;\n    ";
+}, function (_ref6) {
+  var justifyCenter = _ref6.justifyCenter;
+  return justifyCenter && "\n        justify-content: center;\n    ";
+}, function (_ref7) {
+  var fullWidth = _ref7.fullWidth;
+  return fullWidth && "\n        width: 100% !important;\n    ";
 });
 
 exports.Container = Container;
 
-var Row = _styledComponents.default.div(_templateObject2(), function (_ref5) {
-  var row = _ref5.row;
+var Row = _styledComponents.default.div(_templateObject2(), function (_ref8) {
+  var row = _ref8.row;
   return row && "\n        flex-direction: row;\n    ";
-}, function (_ref6) {
-  var column = _ref6.column;
-  return column && "\n        flex-direction: column;\n    ";
-}, function (_ref7) {
-  var justifySpaceAround = _ref7.justifySpaceAround;
-  return justifySpaceAround && "\n        justify-content: space-around;\n    ";
-}, function (_ref8) {
-  var justifySpaceBetween = _ref8.justifySpaceBetween;
-  return justifySpaceBetween && "\n        justify-content: space-between;\n    ";
 }, function (_ref9) {
-  var justifyBottom = _ref9.justifyBottom;
-  return justifyBottom && "\n        justify-content: flex-end;\n    ";
+  var column = _ref9.column;
+  return column && "\n        flex-direction: column;\n    ";
 }, function (_ref10) {
-  var alignItemsRight = _ref10.alignItemsRight;
-  return alignItemsRight && "\n        align-items: flex-end;\n    ";
+  var justifySpaceAround = _ref10.justifySpaceAround;
+  return justifySpaceAround && "\n        justify-content: space-around;\n    ";
 }, function (_ref11) {
-  var alignItemsLeft = _ref11.alignItemsLeft;
-  return alignItemsLeft && "\n        align-items: flex-start;\n    ";
+  var justifySpaceBetween = _ref11.justifySpaceBetween;
+  return justifySpaceBetween && "\n        justify-content: space-between;\n    ";
 }, function (_ref12) {
-  var alignItemsCenter = _ref12.alignItemsCenter;
-  return alignItemsCenter && "\n        align-items: center;\n    ";
+  var justifyBottom = _ref12.justifyBottom;
+  return justifyBottom && "\n        justify-content: flex-end;\n    ";
 }, function (_ref13) {
-  var responsive = _ref13.responsive;
-  return responsive && "\n        @media only screen and (max-width: 768px) {\n            flex-direction: column;\n        }\n    ";
+  var alignItemsRight = _ref13.alignItemsRight;
+  return alignItemsRight && "\n        align-items: flex-end;\n    ";
 }, function (_ref14) {
-  var autoWidth = _ref14.autoWidth;
-  return autoWidth && "\n       width: auto;\n    ";
+  var alignItemsLeft = _ref14.alignItemsLeft;
+  return alignItemsLeft && "\n        align-items: flex-start;\n    ";
 }, function (_ref15) {
-  var paddingRight8 = _ref15.paddingRight8;
-  return paddingRight8 && "\n       padding-right: 24px;\n    ";
+  var alignItemsCenter = _ref15.alignItemsCenter;
+  return alignItemsCenter && "\n        align-items: center;\n    ";
 }, function (_ref16) {
-  var paddingRight2 = _ref16.paddingRight2;
-  return paddingRight2 && "\n       padding-right: 6px;\n    ";
+  var responsive = _ref16.responsive;
+  return responsive && "\n        @media only screen and (max-width: 768px) {\n            flex-direction: column;\n        }\n    ";
 }, function (_ref17) {
-  var margin = _ref17.margin;
-  return margin && "\n       margin: 3px 0;\n    ";
+  var autoWidth = _ref17.autoWidth;
+  return autoWidth && "\n       width: auto;\n    ";
 }, function (_ref18) {
-  var marginBottom3 = _ref18.marginBottom3;
-  return marginBottom3 && "\n       margin-bottom: 9px;\n    ";
+  var paddingRight8 = _ref18.paddingRight8;
+  return paddingRight8 && "\n       padding-right: 24px;\n    ";
 }, function (_ref19) {
-  var marginBottom4 = _ref19.marginBottom4;
-  return marginBottom4 && "\n       margin-bottom: 12px;\n    ";
+  var paddingRight2 = _ref19.paddingRight2;
+  return paddingRight2 && "\n       padding-right: 6px;\n    ";
 }, function (_ref20) {
-  var marginBottom5 = _ref20.marginBottom5;
-  return marginBottom5 && "\n       margin-bottom: 15px;\n    ";
+  var margin = _ref20.margin;
+  return margin && "\n       margin: 3px 0;\n    ";
 }, function (_ref21) {
-  var marginBottom = _ref21.marginBottom;
-  return marginBottom && "\n       margin-bottom: ".concat(marginBottom * 3, "px;\n    ");
+  var marginBottom3 = _ref21.marginBottom3;
+  return marginBottom3 && "\n       margin-bottom: 9px;\n    ";
 }, function (_ref22) {
-  var marginTop = _ref22.marginTop;
-  return marginTop && "\n       margin-top: ".concat(marginTop, "px;\n    ");
+  var marginBottom4 = _ref22.marginBottom4;
+  return marginBottom4 && "\n       margin-bottom: 12px;\n    ";
 }, function (_ref23) {
-  var height = _ref23.height;
-  return height && "\n       height: ".concat(height, "px;\n    ");
+  var marginBottom5 = _ref23.marginBottom5;
+  return marginBottom5 && "\n       margin-bottom: 15px;\n    ";
 }, function (_ref24) {
-  var overflowY = _ref24.overflowY;
-  return overflowY && "\n       overflow-y: ".concat(overflowY, ";\n    ");
+  var marginBottom = _ref24.marginBottom;
+  return marginBottom && "\n       margin-bottom: ".concat(marginBottom * 3, "px;\n    ");
 }, function (_ref25) {
-  var width = _ref25.width;
+  var marginTop = _ref25.marginTop;
+  return marginTop && "\n       margin-top: ".concat(marginTop, "px;\n    ");
+}, function (_ref26) {
+  var height = _ref26.height;
+  return height && "\n       height: ".concat(height, "px;\n    ");
+}, function (_ref27) {
+  var overflowY = _ref27.overflowY;
+  return overflowY && "\n       overflow-y: ".concat(overflowY, ";\n    ");
+}, function (_ref28) {
+  var width = _ref28.width;
   return width && "\n       width: ".concat(width, ";\n    ");
 });
 
