@@ -32,21 +32,22 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var VHEducationSection = function VHEducationSection(props) {
-  console.log(props.education);
-
   var _React$useState = _react.default.useState(false),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       openModal = _React$useState2[0],
       setOpenModal = _React$useState2[1];
 
   var education = props.education ? props.education : [];
+  var items = props.degreeTypeList;
   return _react.default.createElement(_react.default.Fragment, null, openModal && _react.default.createElement(_ModalEducation.default, {
     openModal: openModal,
     onClose: function onClose() {
       return setOpenModal(false);
     },
+    closeModal: props.closeModal,
+    modalEducation: props.modalEducation,
     currentItem: props.currentItem,
-    items: props.items,
+    items: items,
     controls: props.controls,
     onEvent: props.onEvent
   }), _react.default.createElement(_Grid.Row, {
@@ -64,23 +65,28 @@ var VHEducationSection = function VHEducationSection(props) {
     return _react.default.createElement(_Grid.Row, {
       marginBottom5: true
     }, _react.default.createElement(_TitleDescription.default, {
-      title: item.title,
+      title: item.degreeTitle,
       titleColor: "primary-light",
-      description: item.subTitle,
+      description: item.schoolName,
       titleVariant: "h4",
       descriptionVariant: "bodyweb",
-      data: {},
-      onEvent: function onEvent(e) {
-        return console.log(e);
-      }
+      onEvent: props.onEvent
+    }), _react.default.createElement(_Text.default, {
+      variant: 'caption',
+      text: item.start,
+      color: 'gray-90',
+      onEvent: props.onEvent
     }));
   }), _react.default.createElement(_Grid.Row, {
-    width: '10%',
+    width: '20%',
     lg: true
   }, _react.default.createElement(_Button.default, {
+    data: 'openModal',
     primary: true,
-    onEvent: function onEvent(e) {
-      setOpenModal(true);
+    onEvent: props.onEvent,
+    closeModal: props.closeModal,
+    onOpen: function onOpen() {
+      return setOpenModal(true);
     },
     label: "Add Education"
   })))));

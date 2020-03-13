@@ -7,83 +7,84 @@ import VHSelect from "../../Components/Input/Select";
 import VHInput from "../../Components/Input/Simple";
 import VHText from "../../Components/Text/index";
 import VHButton from "../../Components/Button/index";
+import * as S from "./styles"
 
 const VHModalEducation = props => {
-    const [value, handleChange] = React.useState(props.currentItem);
+    const [degreeTitle, setDegreeTitle] = React.useState('');
+    const [schoolName, setSchoolName] = React.useState('');
+    const [startYear, setStartYear] = React.useState('');
+    const [endYear, setEndYear] = React.useState('');
+
+    console.log(props.modalEducation)
+
     return (
-            <VHModal
-                width="732"
-                minWidth="660"
-                open={props.openModal}
-                onClose={props.onClose}
-                onEvent={props.onEvent}
-                header={
-                    <Row row>
-                        <VHTitleDescription
-                            title={'Add Education'}
-                            description={''}
-                            titleVariant="h3"
-                            titleColor="black-50"
-                            descriptionColor="gray-100"
-                            descriptionVariant="platform"
-                            onEvent={props.onEvent} />
+        <VHModal
+            width="732"
+            minWidth="660"
+            open={props.openModal}
+            onClose={props.onClose}
+            onEvent={props.onEvent}
+            header={
+                <Row row>
+                    <VHTitleDescription
+                        title={'Add Education'}
+                        description={''}
+                        titleVariant="h3"
+                        titleColor="black-50"
+                        descriptionColor="gray-100"
+                        descriptionVariant="platform"
+                        onEvent={props.onEvent} />
+                </Row>
+            }
+            content={
+                <Row column>
+                    <div style={{ width: '40%' }}>
+                        <VHSelect
+                            caption="Degree Type"
+                            captionColor={null}
+                            className={`vh-general-section-degree ${props.className ? props.className : ''}`}
+                            currentItem={props.currentItem}
+                            data="degree"
+                            onEvent={props.onEvent}
+                            items={props.items}
+                        />
+                        {props.modalEducation.degreeType.messageError && (
+                            <S.ErrorMessage>Field required</S.ErrorMessage>
+                        )}
+                    </div>
+                    <Row marginBottom5>
+                        <VHText color="gray-100" variant={'platform'} text="Degree Title" />
+                        <VHInput placeholder="" onEvent={props.onEvent} value={degreeTitle} data={{ id: "ModalEducation", field: "degreeTitle" }} />
+                        {props.modalEducation.degreeTitle.messageError && (
+                            <S.ErrorMessage>Field required</S.ErrorMessage>
+                        )}
                     </Row>
-                }
-                content={
-                    <Row column>
-                        <div style={{ width: '40%' }}>
-                            <VHSelect
-                                caption="Degree Type"
-                                captionColor={
-                                    props.controls.degree.loading
-                                        ? "gray-40"
-                                        : props.controls.degree.error
-                                            ? "red"
-                                            : null
-                                }
-                                className={`vh-general-section-degree ${props.className ? props.className : ''}`}
-                                currentItem={props.currentItem}
-                                data="degree"
-                                onEvent={e => {if(e.type === 'OnChange'){handleChange(e.props.item)}}}
-                                items={props.items}
-                                isLoading={props.controls.degree.loading}
-                                description={props.controls.degree.error && props.controls.degree.message}
-                                descriptionColor="red-light"
-                            />
-                        </div>
-                        <Row marginBottom5>
-                            <VHText color="gray-100" variant={'platform'} text="Degree Title" />
-                            <VHInput placeholder="" onEvent={e => {
-                                console.log(e)
-                            }} />
+                    <Row marginBottom5>
+                        <VHText color="gray-100" variant={'platform'} text="School Name" />
+                        <VHInput placeholder="" onEvent={props.onEvent} value={schoolName} data={{ id: "ModalEducation", field: "schoolName" }} />
+                        {props.modalEducation.schoolName.messageError && (
+                            <S.ErrorMessage>Field required</S.ErrorMessage>
+                        )}
+                    </Row>
+                    <Row marginBottom5 row justifySpaceBetween>
+                        <Row width={'40%'}>
+                            <VHText color="gray-100" variant={'platform'} text="Start Year" />
+                            <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={startYear} data={{ id: "ModalEducation", field: "startYear" }} />
+                            {props.modalEducation.startYear.messageError && (
+                                <S.ErrorMessage>Field required</S.ErrorMessage>
+                            )}
                         </Row>
-                        <Row marginBottom5>
-                            <VHText color="gray-100" variant={'platform'} text="School Name" />
-                            <VHInput placeholder="" onEvent={e => {
-                                console.log(e)
-                            }} />
-                        </Row>
-                        <Row marginBottom5 row justifySpaceBetween>
-                            <Row width={'40%'}>
-                                <VHText color="gray-100" variant={'platform'} text="Start Year" />
-                                <VHInput placeholder="" onEvent={e => {
-                                    console.log(e)
-                                }} />
-                            </Row>
-                            <Row width={'40%'}>
-                                <VHText color="gray-100" variant={'platform'} text="End Year" />
-                                <VHInput placeholder="" onEvent={e => {
-                                    console.log(e)
-                                }} />
-                            </Row>
-                        </Row>
-                        <Row alignItemsRight>
-                            <VHButton primary onEvent={e => {
-                            }} label="Save" />
+                        <Row width={'40%'}>
+                            <VHText color="gray-100" variant={'platform'} text="End Year" />
+                            <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={endYear} data={{ id: "ModalEducation", field: "endYear" }} />
                         </Row>
                     </Row>
-                }>
-            </VHModal>
+                    <Row alignItemsRight>
+                        <VHButton primary onEvent={props.onEvent} data={'saveEducation'} onClose={props.onClose} closeModal={props.closeModal} label="Save" />
+                    </Row>
+                </Row>
+            }>
+        </VHModal>
     )
 }
 

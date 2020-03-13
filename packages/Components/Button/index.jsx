@@ -3,7 +3,13 @@ import PropTypes from 'prop-types'
 import Button, { OutlinedButton, } from './styles'
 
 const VHButton = props => {
-  if ( props.outline ) {
+
+  const [closeModal, setCloseModal] = React.useState(props.closeModal);
+  React.useEffect(() => {
+    setCloseModal(props.closeModal);
+  }, [props.closeModal])
+
+  if (props.outline) {
     return (
       <OutlinedButton
         id={props.id}
@@ -25,7 +31,7 @@ const VHButton = props => {
             origin: "VHButton",
             props: {
               data: props.data
-             }
+            }
           })
         }}>
         {
@@ -49,12 +55,20 @@ const VHButton = props => {
       nowrap={props.nowrap}
       type="button"
       onClick={() => {
+        console.log(props.onOpen)
+        console.log(closeModal)
+        if (props.onOpen) {
+          props.onOpen()
+        }
+        else if (closeModal) {
+          props.onClose()
+        }
         props.onEvent({
           type: "OnClick",
           origin: "VHButton",
           props: {
             data: props.data
-           }
+          }
         })
       }}>
       {

@@ -8,15 +8,17 @@ import VHCardBase from "../../Components/Cards/Base/"
 import VHText from "../../Components/Text/"
 
 const VHEducationSection = props => {
-  console.log(props.education)
   const [openModal, setOpenModal] = React.useState(false);
   const education = props.education ? props.education : [];
+  const items = props.degreeTypeList
   return (
     <React.Fragment>
       {openModal &&
         <VHModalEducation openModal={openModal} onClose={() => setOpenModal(false)}
+          closeModal={props.closeModal}
+          modalEducation={props.modalEducation}
           currentItem={props.currentItem}
-          items={props.items}
+          items={items}
           controls={props.controls}
           onEvent={props.onEvent} />
       }
@@ -36,22 +38,20 @@ const VHEducationSection = props => {
             return (
               <Row marginBottom5>
                 <VHTitleDescription
-                  title={item.title}
+                  title={item.degreeTitle}
                   titleColor="primary-light"
-                  description={item.subTitle}
+                  description={item.schoolName}
                   titleVariant="h4"
                   descriptionVariant="bodyweb"
-                  data={{}}
-                  onEvent={(e) => console.log(e)}
+                  onEvent={props.onEvent}
                 />
+                <VHText variant={'caption'} text={item.start} color={'gray-90'} onEvent={props.onEvent} />
               </Row>
             )
           })
           }
-          <Row width={'10%'} lg>
-            <VHButton primary onEvent={e => {
-              setOpenModal(true)
-            }} label="Add Education" />
+          <Row width={'20%'} lg>
+            <VHButton data={'openModal'} primary onEvent={props.onEvent} closeModal={props.closeModal} onOpen={() => setOpenModal(true)} label="Add Education" />
           </Row>
         </Row>
       </VHCardBase>
