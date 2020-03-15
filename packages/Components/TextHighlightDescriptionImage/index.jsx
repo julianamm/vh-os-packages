@@ -7,10 +7,10 @@ import * as S from './styles';
 const VHTextHighlightDescriptionImage = props => {
     return (
         <Container>
-            <Row row>
+            <Row row marginBottom={40}>
                 <S.Wrapper reverse={props.reverse}>
                     <Row width={"50%"}>
-                        <Row width={"22%"} marginBottom5 style={{ borderBottom: "3px solid #059ca6" }}>
+                        <Row width={"35%"} marginBottom5 style={{ borderBottom: "3px solid #059ca6" }}>
                             <VHText 
                                 variant={"platform2"}
                                 color="tertiary-dark"
