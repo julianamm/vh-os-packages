@@ -8,5 +8,7 @@ export const TextWrapper = styled.span`
 `
 
 export const RightBorder = styled.span`
-    border-right: 1px solid ${Color["gray-40"]};
+    border-right: ${props => props.noBorder ? "0": `1px solid ${Color["gray-40"]}`};
+    min-height: 200px;
+    max-height: 200px;
 `
