@@ -9,7 +9,7 @@ const VHTitleHighlightDescriptionButtonImage = props => {
     return (
         <Container>
             <Row row>
-                <Row width={"40%"} marginTop={150}>
+                <Row width={"40%"} marginTop={150} style={{marginLeft: "50px"}}>
                     <Row marginBottom5>
                         <VHText 
                             variant={"h3"}
