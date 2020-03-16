@@ -13,6 +13,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
+var _util = require("../../../util");
+
 var _VHInput$propTypes;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -36,6 +38,11 @@ var VHInput = function VHInput(props) {
       _React$useState2 = _slicedToArray(_React$useState, 2),
       value = _React$useState2[0],
       handleChange = _React$useState2[1];
+
+  var _React$useState3 = _react.default.useState(false),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      inputValid = _React$useState4[0],
+      setInputInvalid = _React$useState4[1];
 
   _react.default.useEffect(function () {
     handleChange(props.value);

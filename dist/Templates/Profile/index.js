@@ -19,6 +19,8 @@ var _skills = _interopRequireDefault(require("../../Sections/skills"));
 
 var _Relocation = _interopRequireDefault(require("../../Sections/Relocation"));
 
+var _Education = _interopRequireDefault(require("../../Sections/Education"));
+
 var _Social = _interopRequireDefault(require("../../Sections/Social"));
 
 var _UserCompanyExperience = _interopRequireDefault(require("../../Sections/UserCompanyExperience"));
@@ -45,6 +47,10 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
   }))), _react.default.createElement(_Grid.Row, {
     marginBottom: 10
   }, _react.default.createElement(_Relocation.default, _extends({}, props, {
+    onEvent: props.onEvent
+  }))), _react.default.createElement(_Grid.Row, {
+    marginBottom: 10
+  }, _react.default.createElement(_Education.default, _extends({}, props, {
     onEvent: props.onEvent
   }))));
 };

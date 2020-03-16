@@ -1,9 +1,11 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import * as S from "./styles"
+import { requiredField } from '../../../util';
 
 const VHInput = props => {
   const [value, handleChange] = React.useState(props.value);
+  const [inputValid, setInputInvalid] = React.useState(false);
 
   React.useEffect(() => {
     handleChange(props.value);
