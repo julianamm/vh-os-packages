@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Container } from '../../Grid/index';
+import { Row, Container, } from '../../Grid/index';
 import VHText from "../Text/index";
 import * as S from './styles';
 
 const VHTextHighlightDescriptionImage = props => {
     return (
         <Container>
-            <Row row marginBottom={40}>
+            <Row row marginBottom={50}>
                 <S.Wrapper reverse={props.reverse}>
                     <Row width={"50%"}>
                         <Row width={"35%"} marginBottom5 style={{ borderBottom: "3px solid #059ca6" }}>
@@ -30,6 +30,9 @@ const VHTextHighlightDescriptionImage = props => {
                                 color="gray-90"
                                 text={props.description}
                             />     
+                        </Row>
+                        <Row>
+                            {props.children}
                         </Row>
                     </Row>
                     <Row width={"50%"}>

@@ -11,6 +11,9 @@ import premiumProfile from "../../../assets/images/img_premium_profile.svg";
 import premiumSlack from "../../../assets/images/img_premium_slack.svg";
 import premiumWebinars from "../../../assets/images/img_premium_webinars.svg";
 import iconArrowRight from "../../../assets/icons/icon_arrow_right.svg";
+import premiumTestimonial1 from "../../../assets/images/premium_testimonial_marco_texeira.jpg";
+import premiumTestimonial2 from "../../../assets/images/premium_testimonial_shara_shami.jpg";
+import premiumTestimonial3 from "../../../assets/images/premium_testimonial_marcelo_blaz.jpg";
 
 const VHPremiumServicesSection = props => {
   return (
@@ -30,15 +33,16 @@ const VHPremiumServicesSection = props => {
                         highlight="Learn how to ace an interview and improve your English skills at the same time"
                         description="Our teachers specialize in English for interviews. With 40+ hours of live classes every month, you’re bound to find a slot that works in your timezone. You will receive personalized interaction and feedback in every class making this a unique experience."
                         image={premiumInterview}
-                    />
-                    <VHLinkImage
-                        to={"#"}
-                        xsImg
-                        xsLabel
-                        label="watch a class"
-                        title="interview class"
-                        source={iconArrowRight}
-                    />
+                    >
+                        <VHLinkImage
+                            to={"#"}
+                            xsImg
+                            xsLabel
+                            label="watch a class"
+                            title="interview class"
+                            source={iconArrowRight}
+                        />
+                    </VHTextHighlightDescriptionImage>
                 </Row>
                 <Row width={"100%"}>
                     <VHTextHighlightDescriptionImage
@@ -47,11 +51,12 @@ const VHPremiumServicesSection = props => {
                         description="All improvements directly translate to your resume and LinkedIn Profile. Impove all three at once! LinkedIn’s own data shows candidates with an improved profile are around 30% more likely to be hired"
                         image={premiumProfile}
                         reverse
-                    />
-                    <VHTestimonial
-                        image={props.image}
-                        testimonial='”The preparation provided made a huge difference in my success” - Marco Teixeira'
-                    />
+                    >
+                        <VHTestimonial
+                            image={premiumTestimonial1}
+                            testimonial='”The preparation provided made a huge difference in my success” - Marco Teixeira'
+                        />
+                    </VHTextHighlightDescriptionImage>
                 </Row>
                 <Row>
                     <VHTextHighlightDescriptionImage
@@ -59,11 +64,12 @@ const VHPremiumServicesSection = props => {
                         highlight="Exclusive Premium Slack Group. Connect with thousands of  motivated Premium Members"
                         description="Get exciting information that’s not publicly available and access specific channels like #leap and #immigration where our specialists will answer your questions. Be motivated with the #I-got-a_job. And most of all, inspire each other in your common quest"
                         image={premiumSlack}
-                    />
-                    <VHTestimonial
-                        image={props.image}
-                        testimonial='”All their tips were very valuable!” - Shara Shami Araujo Alves'
-                    />
+                    >
+                        <VHTestimonial
+                            image={premiumTestimonial2}
+                            testimonial='”All their tips were very valuable!” - Shara Shami Araujo Alves'
+                        />
+                    </VHTextHighlightDescriptionImage>
                 </Row>
                 <Row width={"100%"}>
                     <VHTextHighlightDescriptionImage
@@ -72,13 +78,13 @@ const VHPremiumServicesSection = props => {
                         description="Get access to real experts and learn from them. There’s nothing quite like a live Questions and Answers session with someone who’s been there and done that. "
                         image={premiumWebinars}
                         reverse
-                    />
-                    <Container>
+                    >
+
                         <VHTestimonial
-                            image={props.image}
+                            image={premiumTestimonial3}
                             testimonial='”It was the best decision ever!” - Marcelo Blaz'
                         />
-                    </Container>
+                    </VHTextHighlightDescriptionImage>
                 </Row>
             </Row>
         </Container>

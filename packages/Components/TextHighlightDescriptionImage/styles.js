@@ -12,7 +12,7 @@ export const ImgWrapper = styled.div`
 
 export const Wrapper = styled.div`
     display: flex;
-    
+
     ${({ reverse }) => reverse && `
         flex-direction: row-reverse;
   `}
