@@ -68,6 +68,7 @@ const VHCardPricing = props => {
 VHCardPricing.defaultProps = {
   className: "",
   show: false,
+  marginRight: true
 };
 
 VHCardPricing.propTypes = {
