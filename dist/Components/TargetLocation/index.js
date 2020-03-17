@@ -52,44 +52,75 @@ var Netherlands = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5
 var UK = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSIzOCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDUwIDM4Ij4KICAgIDxnIGNsaXAtcGF0aD0idXJsKCNwcmVmaXhfX2NsaXAwKSI+CiAgICAgICAgPHBhdGggZmlsbD0iIzAxMjE2OSIgZD0iTS0xMi41NSAwaDc1LjJ2MzcuNmgtNzUuMlYweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0tMTIuNTUgMHY0LjJsNjYuNzkyIDMzLjRoOC40MDh2LTQuMkwtNC4xNCAwaC04LjQwOXptNzUuMiAwdjQuMkwtNC4xNCAzNy42aC04LjQwOXYtNC4yTDU0LjI0MiAwaDguNDA4eiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0xOC43ODYgMHYzNy42aDEyLjUyOFYwSDE4Ljc4NnpNLTEyLjU1IDEyLjUzNnYxMi41MjhoNzUuMlYxMi41MzZoLTc1LjJ6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0iI0M4MTAyRSIgZD0iTS0xMi41NSAxNS4wNHY3LjUyaDc1LjJ2LTcuNTJoLTc1LjJ6TTIxLjI5IDB2MzcuNmg3LjUyVjBoLTcuNTJ6bS0zMy44NCAzNy42bDI1LjA2NC0xMi41MzZoNS42MTFMLTYuOTQ3IDM3LjZoLTUuNjAzem0wLTM3LjZsMjUuMDY0IDEyLjUzNkg2LjkxMWwtMTkuNDYtOS43M1Ywem00NC41MzMgMTIuNTM2TDU3LjA0NyAwaDUuNjAzTDM3LjU4NiAxMi41MzZoLTUuNjAzek02Mi42NSAzNy42TDM3LjU4NiAyNS4wNjRoNS42MDNsMTkuNDYxIDkuNzNWMzcuNnoiLz4KICAgIDwvZz4KICAgIDxkZWZzPgogICAgICAgIDxjbGlwUGF0aCBpZD0icHJlZml4X19jbGlwMCI+CiAgICAgICAgICAgIDxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoNTB2MzcuNUgwVjB6Ii8+CiAgICAgICAgPC9jbGlwUGF0aD4KICAgIDwvZGVmcz4KPC9zdmc+Cg==";
 
 var VHTargetLocation = function VHTargetLocation(props) {
-  var _useState = (0, _react.useState)(false),
+  var items = Object.keys(props.items).length > 0 ? props.items : [{
+    status: false
+  }, {
+    status: false
+  }, {
+    status: false
+  }, {
+    status: false
+  }, {
+    status: false
+  }, {
+    status: false
+  }];
+  console.log('props.items.length', items);
+  console.log(items[0]);
+
+  var _useState = (0, _react.useState)(items[0].status),
       _useState2 = _slicedToArray(_useState, 2),
       canada = _useState2[0],
       setCanada = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(false),
+  var _useState3 = (0, _react.useState)(items[1].status),
       _useState4 = _slicedToArray(_useState3, 2),
       germany = _useState4[0],
       setGermany = _useState4[1];
 
-  var _useState5 = (0, _react.useState)(false),
+  var _useState5 = (0, _react.useState)(items[2].status),
       _useState6 = _slicedToArray(_useState5, 2),
       ireland = _useState6[0],
       setIreland = _useState6[1];
 
-  var _useState7 = (0, _react.useState)(false),
+  var _useState7 = (0, _react.useState)(items[3].status),
       _useState8 = _slicedToArray(_useState7, 2),
       netherlands = _useState8[0],
       setNetherlands = _useState8[1];
 
-  var _useState9 = (0, _react.useState)(false),
+  var _useState9 = (0, _react.useState)(items[4].status),
       _useState10 = _slicedToArray(_useState9, 2),
       uk = _useState10[0],
       setUk = _useState10[1];
 
-  var _useState11 = (0, _react.useState)(false),
+  var _useState11 = (0, _react.useState)(items[5].status),
       _useState12 = _slicedToArray(_useState11, 2),
       usa = _useState12[0],
       setUsa = _useState12[1];
+
+  _react.default.useEffect(function () {
+    setCanada(items[0].status), setGermany(items[1].status), setIreland(items[2].status), setNetherlands(items[3].status), setUk(items[4].status), setUsa(items[5].status);
+  }, [items[0].status, items[1].status, items[2].status, items[3].status, items[4].status, items[5].status]);
 
   return _react.default.createElement(_Grid.Row, {
     className: "vh-target-location ".concat(props.className ? props.className : ''),
     row: true,
     justifySpaceBetween: true
   }, _react.default.createElement(S.Wrapper, {
-    disabled: canada,
+    disabled: !canada,
     onClick: function onClick() {
       setCanada(!canada);
+      props.onEvent({
+        type: "OnClick",
+        origin: "VHTargetLocation",
+        props: {
+          data: {
+            id: items[0].id,
+            status: canada ? 0 : 1
+          },
+          position: 0
+        }
+      });
     }
   }, _react.default.createElement(_index.default, {
     source: Canada,
@@ -100,9 +131,20 @@ var VHTargetLocation = function VHTargetLocation(props) {
     color: "black-100",
     text: 'Canada'
   })), _react.default.createElement(S.Wrapper, {
-    disabled: germany,
+    disabled: !germany,
     onClick: function onClick() {
       setGermany(!germany);
+      props.onEvent({
+        type: "OnClick",
+        origin: "VHTargetLocation",
+        props: {
+          data: {
+            id: items[1].id,
+            status: germany ? 0 : 1
+          },
+          position: 1
+        }
+      });
     }
   }, _react.default.createElement(_index.default, {
     source: Germany,
@@ -113,9 +155,20 @@ var VHTargetLocation = function VHTargetLocation(props) {
     color: "black-100",
     text: 'Germany'
   })), _react.default.createElement(S.Wrapper, {
-    disabled: ireland,
+    disabled: !ireland,
     onClick: function onClick() {
       setIreland(!ireland);
+      props.onEvent({
+        type: "OnClick",
+        origin: "VHTargetLocation",
+        props: {
+          data: {
+            id: items[2].id,
+            status: ireland ? 0 : 1
+          },
+          position: 2
+        }
+      });
     }
   }, _react.default.createElement(_index.default, {
     source: Ireland,
@@ -126,9 +179,20 @@ var VHTargetLocation = function VHTargetLocation(props) {
     color: "black-100",
     text: 'Ireland'
   })), _react.default.createElement(S.Wrapper, {
-    disabled: netherlands,
+    disabled: !netherlands,
     onClick: function onClick() {
       setNetherlands(!netherlands);
+      props.onEvent({
+        type: "OnClick",
+        origin: "VHTargetLocation",
+        props: {
+          data: {
+            id: items[3].id,
+            status: netherlands ? 0 : 1
+          },
+          position: 3
+        }
+      });
     }
   }, _react.default.createElement(_index.default, {
     source: Netherlands,
@@ -139,9 +203,20 @@ var VHTargetLocation = function VHTargetLocation(props) {
     color: "black-100",
     text: 'Netherlands'
   })), _react.default.createElement(S.Wrapper, {
-    disabled: uk,
+    disabled: !uk,
     onClick: function onClick() {
       setUk(!uk);
+      props.onEvent({
+        type: "OnClick",
+        origin: "VHTargetLocation",
+        props: {
+          data: {
+            id: items[4].id,
+            status: uk ? 0 : 1
+          },
+          position: 4
+        }
+      });
     }
   }, _react.default.createElement(_index.default, {
     source: UK,
@@ -152,9 +227,20 @@ var VHTargetLocation = function VHTargetLocation(props) {
     color: "black-100",
     text: 'U.K'
   })), _react.default.createElement(S.Wrapper, {
-    disabled: usa,
+    disabled: !usa,
     onClick: function onClick() {
       setUsa(!usa);
+      props.onEvent({
+        type: "OnClick",
+        origin: "VHTargetLocation",
+        props: {
+          data: {
+            id: items[5].id,
+            status: usa ? 0 : 1
+          },
+          position: 5
+        }
+      });
     }
   }, _react.default.createElement(_index.default, {
     source: USA,

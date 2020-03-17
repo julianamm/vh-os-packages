@@ -38,6 +38,10 @@ export const Container = styled.div`
     ${({ fullWidth }) => fullWidth && `
         width: 100% !important;
     `}
+
+    ${({ fixed }) => fixed && `
+        position: fixed;
+    `}
 `
 
 export const Row = styled.div`
@@ -130,6 +134,10 @@ export const Row = styled.div`
 
     ${({ width }) => width && `
        width: ${width};
+    `}
+
+    ${({ fixed }) => fixed && `
+       position: fixed;
     `}
 
 `

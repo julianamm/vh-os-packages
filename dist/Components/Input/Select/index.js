@@ -50,6 +50,28 @@ var VHSelect = function VHSelect(props) {
         boxShadow: "none",
         fontWeight: '500'
       });
+    },
+    indicatorSeparator: function indicatorSeparator(styles) {
+      return {
+        display: 'none'
+      };
+    },
+    clearIndicator: function clearIndicator(styles) {
+      return {
+        display: 'none'
+      };
+    }
+  };
+  var styled = {
+    indicatorSeparator: function indicatorSeparator(styles) {
+      return {
+        display: 'none'
+      };
+    },
+    clearIndicator: function clearIndicator(styles) {
+      return {
+        display: 'none'
+      };
     }
   };
   return _react.default.createElement("div", {
@@ -62,7 +84,7 @@ var VHSelect = function VHSelect(props) {
     variant: "platform1",
     color: props.captionColor
   }), _react.default.createElement(_reactSelect.default, {
-    styles: props.removeBorder ? style : '',
+    styles: props.removeBorder ? style : styled,
     closeMenuOnSelect: !props.isMulti,
     className: props.className,
     isLoading: props.isLoading,
