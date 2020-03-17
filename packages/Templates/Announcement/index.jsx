@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import { Wrapper1 } from './styles'
 
 
-const VHConfirmationTemplate = props => {
+const VHAnnouncementTemplate = props => {
     return (
         <Wrapper1>
             <Container md >
@@ -36,10 +36,10 @@ const VHConfirmationTemplate = props => {
         </Wrapper1>
     )
 }
-VHConfirmationTemplate.defaultProps = {
+VHAnnouncementTemplate.defaultProps = {
 }
 
-VHConfirmationTemplate.propTypes = {
+VHAnnouncementTemplate.propTypes = {
 }
 
-export default VHConfirmationTemplate
+export default VHAnnouncementTemplate
