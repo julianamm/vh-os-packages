@@ -44,8 +44,8 @@ var VHInputMultiple = function VHInputMultiple(props) {
 
   var _useState5 = (0, _react.useState)(1),
       _useState6 = _slicedToArray(_useState5, 2),
-      maxItems = _useState6[0],
-      setMaxItems = _useState6[1];
+      render = _useState6[0],
+      reRender = _useState6[1];
 
   return _react.default.createElement(_react.default.Fragment, null, items.map(function (item, index) {
     return _react.default.createElement("div", {
@@ -55,20 +55,20 @@ var VHInputMultiple = function VHInputMultiple(props) {
       }
     }, _react.default.createElement(_Simple.default, {
       value: item.value,
+      data: item,
       placeholder: props.placeholder,
-      autoFocus: true,
+      error: item.error,
+      loading: item.loading,
       onEvent: function onEvent(e) {
         switch (true) {
           case e.event === "onKeyUpAction":
             if (e.data.value !== '') {
-              // newItems.push({value: e.data.value})
-              // setNewItems(newItems)
-              // if (items.length + newItems.length <= props.max)
-              // setMaxItems((maxItems +1))
               items[index] = {
-                value: e.data.value
+                value: e.data.value,
+                loading: e.data.data.id === item.id
               };
               setItems(items);
+              reRender(render + 1);
               props.onEvent({
                 data: {
                   value: JSON.stringify(items.concat(newItems)),
@@ -91,13 +91,17 @@ var VHInputMultiple = function VHInputMultiple(props) {
       }
     }, _react.default.createElement(_Simple.default, {
       placeholder: props.placeholder,
+      error: item.error,
+      loading: item.loading,
       value: "",
+      autoFocus: true,
       onEvent: function onEvent(e) {
         switch (true) {
           case e.event === "onKeyUpAction":
             if (e.data.value !== '') {
               newItems[index] = {
-                value: e.data.value
+                value: e.data.value,
+                loading: true
               };
 
               if (items.length + newItems.length < props.max) {
@@ -107,7 +111,7 @@ var VHInputMultiple = function VHInputMultiple(props) {
               }
 
               setNewItems(newItems);
-              setMaxItems(maxItems + 1);
+              reRender(render + 1);
               props.onEvent({
                 data: {
                   value: JSON.stringify(items.concat(newItems)),

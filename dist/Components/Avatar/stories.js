@@ -18,42 +18,42 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   return _react.default.createElement(_.default, {
     image: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
     size: "md",
-    showCursor: false
+    showCursor: true
   });
 }).add("VHAvatar sm", function () {
   return _react.default.createElement(_.default, {
     image: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
     size: "sm",
-    showCursor: false
+    showCursor: true
   });
 }).add("VHAvatar md", function () {
   return _react.default.createElement(_.default, {
     image: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
     size: "md",
-    showCursor: false
+    showCursor: true
   });
 }).add("VHAvatar lg", function () {
   return _react.default.createElement(_.default, {
     image: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
     size: "lg",
-    showCursor: false
+    showCursor: true
   });
 }).add("VHAvatar xs", function () {
   return _react.default.createElement(_.default, {
     image: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
     size: "xs",
-    showCursor: false
+    showCursor: true
   });
 }).add("VHAvatar xl", function () {
   return _react.default.createElement(_.default, {
     image: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
     size: "xl",
-    showCursor: false
+    showCursor: true
   });
 }).add("VHAvatar xxl", function () {
   return _react.default.createElement(_.default, {
     image: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
     size: "xxl",
-    showCursor: false
+    showCursor: true
   });
 });

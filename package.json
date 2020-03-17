@@ -1,6 +1,6 @@
 {
   "name": "vh-os-packages",
-  "version": "0.0.1-16",
+  "version": "0.0.1-19",
   "private": false,
   "main": "packages",
   "peerDependencies": {
@@ -45,6 +45,7 @@
     "styled-components": "^5.0.1"
   },
   "dependencies": {
+    "react-image-crop": "^8.5.0",
     "react-preload-skeleton": "^0.0.1-8",
     "react-scrollable-anchor": "^0.6.1",
     "react-select": "^3.0.8"

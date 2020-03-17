@@ -19,7 +19,7 @@ storiesOf("Components|Avatar", module)
         "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
       }
       size={"md"}
-      showCursor={false}
+      showCursor={true}
     />
   ))
   .add("VHAvatar sm", () => (
@@ -28,7 +28,7 @@ storiesOf("Components|Avatar", module)
         "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
       }
       size={"sm"}
-      showCursor={false}
+      showCursor={true}
     />
   ))
   .add("VHAvatar md", () => (
@@ -37,7 +37,7 @@ storiesOf("Components|Avatar", module)
         "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
       }
       size={"md"}
-      showCursor={false}
+      showCursor={true}
     />
   ))
   .add("VHAvatar lg", () => (
@@ -46,7 +46,7 @@ storiesOf("Components|Avatar", module)
         "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
       }
       size={"lg"}
-      showCursor={false}
+      showCursor={true}
     />
   ))
   .add("VHAvatar xs", () => (
@@ -55,7 +55,7 @@ storiesOf("Components|Avatar", module)
         "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
       }
       size={"xs"}
-      showCursor={false}
+      showCursor={true}
     />
   ))
   .add("VHAvatar xl", () => (
@@ -64,7 +64,7 @@ storiesOf("Components|Avatar", module)
         "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
       }
       size={"xl"}
-      showCursor={false}
+      showCursor={true}
     />
   ))
   .add("VHAvatar xxl", () => (
@@ -73,6 +73,6 @@ storiesOf("Components|Avatar", module)
         "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
       }
       size={"xxl"}
-      showCursor={false}
+      showCursor={true}
     />
   ));
