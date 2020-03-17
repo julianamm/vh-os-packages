@@ -20,7 +20,14 @@ const style = {
     border: 0,
     boxShadow: "none",
     fontWeight: '500'
-  })
+  }),
+  indicatorSeparator: (styles) => ({display:'none'}),
+  clearIndicator: (styles) => ({display:'none'})
+};
+
+const styled = {
+  indicatorSeparator: (styles) => ({display:'none'}),
+  clearIndicator: (styles) => ({display:'none'})
 };
 
   return (
@@ -34,7 +41,7 @@ const style = {
           />
       }
       <Select
-        styles={props.removeBorder ? style : '' }
+        styles={props.removeBorder ? style : styled }
         closeMenuOnSelect={!props.isMulti}
         className={props.className}
         isLoading={props.isLoading}

@@ -22,6 +22,9 @@ const VHRelocationSection = props => {
     const visaStatusEU = props.visaStatusEU ? visaStatusEUList[props.visaStatusEU] : []
     const companySize = props.companySize ? props.companySize : [{value:false}, {value:false}, {value:false}]
 
+    const targetLocation = props.targetLocation ? props.targetLocation.items : []
+    console.log(targetLocation)
+
     return (
         <>
             <Row marginBottom={5}>
@@ -72,7 +75,7 @@ const VHRelocationSection = props => {
                                     />
                         </Row>
                         <Row marginBottom={10} width={'600px'}>
-                            <VHTargetLocation />
+                            <VHTargetLocation onEvent={props.onEvent} items={targetLocation}/>
                          </Row>   
                         <Row row>
                             <Row paddingRight8>

@@ -43,6 +43,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
   }, {
     value: false
   }];
+  var targetLocation = props.targetLocation ? props.targetLocation.items : [];
+  console.log(targetLocation);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
     marginBottom: 5
   }, _react.default.createElement(_Text.default, {
@@ -77,7 +79,10 @@ var VHRelocationSection = function VHRelocationSection(props) {
   })), _react.default.createElement(_Grid.Row, {
     marginBottom: 10,
     width: '600px'
-  }, _react.default.createElement(_TargetLocation.default, null)), _react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_TargetLocation.default, {
+    onEvent: props.onEvent,
+    items: targetLocation
+  })), _react.default.createElement(_Grid.Row, {
     row: true
   }, _react.default.createElement(_Grid.Row, {
     paddingRight8: true

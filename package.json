@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "react-preload-skeleton": "^0.0.1-8",
+    "react-scrollable-anchor": "^0.6.1",
     "react-select": "^3.0.8"
   }
 }
