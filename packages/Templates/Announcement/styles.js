@@ -6,4 +6,10 @@ export const Wrapper1 = styled.div`
     background-color: ${Color["gradient-primary"]};
     display: flex;
     align-items: center;
+    ${({ cover }) => cover && `
+        background-image: url(${cover});
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    `}
 `

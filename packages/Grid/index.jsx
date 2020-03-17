@@ -13,6 +13,13 @@ export const Container = styled.div`
     margin: 0 auto;
     flex-direction: column;
 
+    ${({ cover }) => cover && `
+        background-image: url(${cover});
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    `}
+
     ${({ md }) => md && `
         max-width: 980px;
     `}
