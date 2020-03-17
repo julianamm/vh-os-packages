@@ -5,6 +5,7 @@ import * as S from './styles';
 const VHAvatar = props => {
   return (
     <S.Avatar center={props.center} image={props.image} size={props.size} showCursor={props.showCursor}>{props.label}</S.Avatar>
+  
   );
 };
 
