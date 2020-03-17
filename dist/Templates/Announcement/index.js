@@ -19,7 +19,7 @@ var _styles = require("./styles");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VHConfirmationTemplate = function VHConfirmationTemplate(props) {
+var VHAnnouncementTemplate = function VHAnnouncementTemplate(props) {
   return _react.default.createElement(_styles.Wrapper1, null, _react.default.createElement(_Grid.Container, {
     md: true
   }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, {
@@ -49,7 +49,7 @@ var VHConfirmationTemplate = function VHConfirmationTemplate(props) {
   }))));
 };
 
-VHConfirmationTemplate.defaultProps = {};
-VHConfirmationTemplate.propTypes = {};
-var _default = VHConfirmationTemplate;
+VHAnnouncementTemplate.defaultProps = {};
+VHAnnouncementTemplate.propTypes = {};
+var _default = VHAnnouncementTemplate;
 exports.default = _default;
