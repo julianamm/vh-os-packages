@@ -7,7 +7,7 @@ const VHInputMultiple = props => {
   const [items, setItems] = useState(it)
   const [newItems, setNewItems] = useState([{value: ''}])
 
-  const [maxItems, setMaxItems] = useState(1)
+  const [render, reRender] = useState(1)
 
   return (
     <>
@@ -19,19 +19,20 @@ const VHInputMultiple = props => {
         >
           <VHInput
             value={item.value}
+            data={item}
             placeholder={props.placeholder}
-            autoFocus
+            error={item.error}
+            loading={item.loading}
             onEvent={e => {
               switch(true) {
                 case e.event ===  "onKeyUpAction":
                   if (e.data.value !== '') {
-
-                    // newItems.push({value: e.data.value})
-                    // setNewItems(newItems)
-                    // if (items.length + newItems.length <= props.max)
-                    // setMaxItems((maxItems +1))
-                    items[index] = {value: e.data.value}
+                    items[index] = {
+                      value: e.data.value,
+                      loading: e.data.data.id === item.id
+                    }
                     setItems(items)
+                    reRender(render +1)
 
                     props.onEvent({
                       data: {
@@ -42,7 +43,6 @@ const VHInputMultiple = props => {
                         origin: "VHInputMultiple"
                       })
                     }
-
                   break
               }
             }}
@@ -58,19 +58,22 @@ const VHInputMultiple = props => {
         >
           <VHInput
             placeholder={props.placeholder}
+            error={item.error}
+            loading={item.loading}
             value=''
+            autoFocus
             onEvent={e => {
               switch(true) {
                 case e.event ===  "onKeyUpAction":
                   if (e.data.value !== '') {
-                    newItems[index] = {value: e.data.value}
+                    newItems[index] = {value: e.data.value, loading: true}
 
                     if (items.length + newItems.length < props.max) {
                       newItems.push({value: ''})
                     }
 
                     setNewItems(newItems)
-                    setMaxItems((maxItems +1))
+                    reRender(render +1)
                     props.onEvent({
                       data: {
                         value: JSON.stringify(items.concat(newItems)),

@@ -42,6 +42,7 @@ export const Input = styled.input`
 
   ${({ error }) => error && `
     color: ${Color["red-dark"]};
+    border-color: ${Color["red-dark"]};
   `}
 
   ${({ loading }) => loading && `
