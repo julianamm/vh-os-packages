@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const Avatar = styled.div`
-  width: 32px;
-  height: 32px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
   background-image: url(${props => props.image && props.image});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 100%;
+  border-radius: 50%;
   text-align: center;
   align-content: center;
   margin: ${props => (props.center ? "0 auto" : "0")}
