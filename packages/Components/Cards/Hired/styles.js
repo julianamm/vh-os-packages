@@ -9,8 +9,8 @@ export const OutterImg = styled.div`
 `
 export const InnerImg = styled.div`
     position: absolute;
-    right: -10%;
-    bottom: 10%;
+    right: -3%;
+    bottom: 3%;
     z-index: 2;
 `
 

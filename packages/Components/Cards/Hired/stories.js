@@ -51,7 +51,7 @@ const candidates = [
 storiesOf("Components|Cards/Hired", module)
 
 .add("default", () => (
-  <div style={{ backgroundColor: "#f2f6f9", width: "150px", height: "150px", padding: "24px" }}>
+  <div style={{ backgroundColor: "#f2f6f9", width: "180px", height: "180px", padding: "24px" }}>
       <VHCardHired 
         name="Mitchell Watson"
         position="Backend Developer"
@@ -65,7 +65,7 @@ storiesOf("Components|Cards/Hired", module)
 .add("multiply", () => (
     <Row row>
         {candidates.map(candidate => (
-            <Row style={{ backgroundColor: "#f2f6f9", width: "150px", height: "150px", padding: "24px", marginRight: "10px" }}>
+            <Row style={{ backgroundColor: "#f2f6f9", width: "180px", height: "180px", padding: "24px", marginRight: "10px" }}>
                 <VHCardHired 
                     name={candidate.name}
                     position={candidate.position}

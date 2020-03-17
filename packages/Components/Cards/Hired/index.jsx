@@ -13,18 +13,18 @@ const VHCardHired = props => {
                 <VHAvatar 
                     image={props.userPhoto}
                     size={"xl"}
-                    showCursor={false}
+                    showCursor={true}
                 />
                 <S.InnerImg>
                     <VHAvatar 
                         image={props.flag}
-                        size={"xs"}
-                        showCursor={false}
+                        size={"md"}
+                        showCursor={true}
                         />
                 </S.InnerImg>
             </S.OutterImg>
         </Row>
-        <Row alignItemsCenter marginTop={20}>
+        <Row alignItemsCenter marginTop={10}>
             <VHText 
                 variant={"subtitle3"}
                 color={"gray-90"}
