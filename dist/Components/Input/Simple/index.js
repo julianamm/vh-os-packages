@@ -13,7 +13,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
-var _util = require("../../../util");
+var _Preloader = _interopRequireDefault(require("../../Preloader"));
 
 var _VHInput$propTypes;
 
@@ -48,12 +48,12 @@ var VHInput = function VHInput(props) {
     handleChange(props.value);
   }, [props.value]);
 
-  return _react.default.createElement(S.Input, {
+  return _react.default.createElement(S.Container, null, _react.default.createElement(S.Input, {
     id: props.id,
     type: props.type,
     placeholder: props.placeholder,
     className: "vh-input ".concat(props.className ? props.className : ''),
-    disabled: props.disabled,
+    disabled: props.disabled || props.loading,
     error: props.error,
     loading: props.loading,
     autoFocus: props.autoFocus,
@@ -104,18 +104,25 @@ var VHInput = function VHInput(props) {
         origin: "VHInput"
       });
     }
-  });
+  }), props.loading && _react.default.createElement(S.LoaderContainer, null, _react.default.createElement(_Preloader.default, {
+    type: "bubble",
+    size: "xs"
+  })));
 };
 
 VHInput.defaultProps = {
   type: "text",
   disabled: false,
   autoFocus: false,
+  loading: false,
   className: '',
+  placeholder: '',
   noBorder: false
 };
 VHInput.propTypes = (_VHInput$propTypes = {
-  disabled: _propTypes.default.bool
-}, _defineProperty(_VHInput$propTypes, "disabled", _propTypes.default.bool), _defineProperty(_VHInput$propTypes, "autoFocus", _propTypes.default.string), _defineProperty(_VHInput$propTypes, "placeholder", _propTypes.default.string), _defineProperty(_VHInput$propTypes, "noBorder", _propTypes.default.bool), _VHInput$propTypes);
+  disabled: _propTypes.default.bool,
+  autoFocus: _propTypes.default.bool,
+  loading: _propTypes.default.bool
+}, _defineProperty(_VHInput$propTypes, "autoFocus", _propTypes.default.string), _defineProperty(_VHInput$propTypes, "placeholder", _propTypes.default.string), _defineProperty(_VHInput$propTypes, "noBorder", _propTypes.default.bool), _defineProperty(_VHInput$propTypes, "type", _propTypes.default.string), _VHInput$propTypes);
 var _default = VHInput;
 exports.default = _default;

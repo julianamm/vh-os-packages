@@ -57,8 +57,10 @@ var VHInputIcon = function VHInputIcon(props) {
 
   var Icon = checkIcon();
   return _react.default.createElement(S.Wrapper, {
-    className: "vh-icon-input ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(_Img.default, {
+    className: "vh-icon-input ".concat(props.className ? props.className : ''),
+    loading: props.loading,
+    error: props.error
+  }, !props.loading && _react.default.createElement(_Img.default, {
     className: "vh-icon-with-input-icon",
     source: Icon,
     title: props.icon,
@@ -71,7 +73,7 @@ var VHInputIcon = function VHInputIcon(props) {
     data: props.data,
     value: props.value,
     onEvent: props.onEvent,
-    noBorder: true
+    noBorder: !props.loading
   }));
 };
 

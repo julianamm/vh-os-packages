@@ -39,6 +39,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     onEvent: function onEvent() {
       return console.log(event);
     }
+  }), _react.default.createElement(_.default, {
+    placeholder: "http://github.com/",
+    value: "http://github.com/",
+    icon: "github",
+    data: {},
+    loading: true,
+    onEvent: function onEvent() {
+      return console.log(event);
+    }
   }));
 }).add("linkedIn", function () {
   return _react.default.createElement("div", {
