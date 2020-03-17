@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import Color from "../../../Colors";
 
+export const Container = styled.div`
+  position: relative;
+`
+export const LoaderContainer = styled.div`
+  position: absolute;
+  top: 12px;
+  right: 18px;
+`
+
 export const Input = styled.input`
   border: ${ props => props.noBorder ? 'none' : `1px solid ${Color["gray-30"]}`};
   border-radius: 6px;
@@ -16,6 +25,7 @@ export const Input = styled.input`
   background: transparent;
   outline: 0;
   box-sizing: border-box;
+
   ::placeholder {
     font-size: 14px;
     font-weight: normal;
@@ -25,13 +35,19 @@ export const Input = styled.input`
     letter-spacing: normal;
     color: ${Color["gray-50"]};
   }
+
   ${({ disabled }) => disabled && `
     background-color: ${Color["gray-10"]};
   `}
+
   ${({ error }) => error && `
-    background-color: ${Color["red-dark"]};
+    border-color: ${Color["red-dark"]};
+    color: ${Color["red-dark"]};
   `}
+
   ${({ loading }) => loading && `
-    background-color: ${Color["primary"]};
+    color: ${Color["primary-light"]};
+    border-color: ${Color["primary-light"]};
   `}
+
 `;

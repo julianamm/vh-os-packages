@@ -23,6 +23,14 @@ storiesOf("Components|Input/Icon", module)
         data={{}}
         onEvent={() => console.log(event)}
       />
+      <VHInputIcon
+        placeholder="http://github.com/"
+        value="http://github.com/"
+        icon="github"
+        data={{}}
+        loading
+        onEvent={() => console.log(event)}
+      />
     </div>
   ))
   .add("linkedIn", () => (
