@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
         margin: 0 0 0 0;
         display: ${props => props.inline ? 'inline' : 'block'};
     }
+    cursor: ${props => props.pointer && 'pointer'};
 `
 
 export const Display = styled.div`

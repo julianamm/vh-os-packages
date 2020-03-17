@@ -22,7 +22,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    * {\n        margin: 0 0 0 0;\n        display: ", ";\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    * {\n        margin: 0 0 0 0;\n        display: ", ";\n    }\n    cursor: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -35,6 +35,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var Wrapper = _styledComponents.default.div(_templateObject(), function (props) {
   return props.inline ? 'inline' : 'block';
+}, function (props) {
+  return props.pointer && 'pointer';
 });
 
 exports.Wrapper = Wrapper;

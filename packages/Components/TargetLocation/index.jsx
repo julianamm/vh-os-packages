@@ -14,8 +14,6 @@ import UK from '../../../assets/flags/flag_uk.svg'
 const VHTargetLocation = props => {
 
     const items = Object.keys(props.items).length > 0 ? props.items : [{ status: false }, { status: false }, { status: false }, { status: false }, { status: false }, { status: false }]
-    console.log('props.items.length', items)
-    console.log(items[0])
     const [canada, setCanada] = useState(items[0].status);
     const [germany, setGermany] = useState(items[1].status);
     const [ireland, setIreland] = useState(items[2].status);

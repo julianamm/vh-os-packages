@@ -10,12 +10,33 @@ import VHButton from "../../Components/Button/index";
 import * as S from "./styles"
 
 const VHModalEducation = props => {
-    const [degreeTitle, setDegreeTitle] = React.useState('');
-    const [schoolName, setSchoolName] = React.useState('');
-    const [startYear, setStartYear] = React.useState('');
-    const [endYear, setEndYear] = React.useState('');
 
-    console.log(props.modalEducation)
+    function getFormatedDate(date) {
+        let result = ''
+        if (date) {
+            let d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2) {
+                month = '0' + month;
+            }
+            if (day.length < 2) {
+                day = '0' + day;
+            }
+
+            result = [year, month, day].join('-');
+        }
+        return result
+    }
+
+    const item = props.currentItem ? props.currentItem : {};
+    const [degreeType, setDegreeType] = React.useState({ value: item.degreeType, label: item.degreeTypeStr });
+    const [degreeTitle, setDegreeTitle] = React.useState(item.degreeTitle);
+    const [schoolName, setSchoolName] = React.useState(item.schoolName);
+    const [startYear, setStartYear] = React.useState(getFormatedDate(item.startDate));
+    const [endYear, setEndYear] = React.useState(getFormatedDate(item.endYear));
 
     return (
         <VHModal
@@ -43,7 +64,7 @@ const VHModalEducation = props => {
                             caption="Degree Type"
                             captionColor={null}
                             className={`vh-general-section-degree ${props.className ? props.className : ''}`}
-                            currentItem={props.currentItem}
+                            currentItem={degreeType}
                             data="degree"
                             onEvent={props.onEvent}
                             items={props.items}

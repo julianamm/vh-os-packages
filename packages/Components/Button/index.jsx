@@ -55,8 +55,6 @@ const VHButton = props => {
       nowrap={props.nowrap}
       type="button"
       onClick={() => {
-        console.log(props.onOpen)
-        console.log(closeModal)
         if (props.onOpen) {
           props.onOpen()
         }

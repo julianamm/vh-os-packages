@@ -23,7 +23,6 @@ const VHRelocationSection = props => {
     const companySize = props.companySize ? props.companySize : [{value:false}, {value:false}, {value:false}]
 
     const targetLocation = props.targetLocation ? props.targetLocation.items : []
-    console.log(targetLocation)
 
     return (
         <>
