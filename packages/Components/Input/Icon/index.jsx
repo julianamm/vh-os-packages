@@ -27,13 +27,21 @@ const VHInputIcon = props => {
   const Icon = checkIcon()
 
   return (
-    <S.Wrapper className={`vh-icon-input ${props.className ? props.className : ''}`}>
-      <VHImg
-        className="vh-icon-with-input-icon"
-        source={Icon}
-        title={props.icon}
-        sm
-      />
+    <S.Wrapper
+      className={`vh-icon-input ${props.className ? props.className : ''}`}
+      loading={props.loading}
+      error={props.error}
+    >
+      {
+        !props.loading && (
+          <VHImg
+            className="vh-icon-with-input-icon"
+            source={Icon}
+            title={props.icon}
+            sm
+          />
+        )
+      }
       <VHInput
         disabled={props.disabled}
         error={props.error}
@@ -42,7 +50,7 @@ const VHInputIcon = props => {
         data={props.data}
         value={props.value}
         onEvent={props.onEvent}
-        noBorder/>
+        noBorder={!props.loading} />
     </S.Wrapper>
   )
 }

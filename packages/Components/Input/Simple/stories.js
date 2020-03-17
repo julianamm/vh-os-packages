@@ -17,3 +17,17 @@ storiesOf("Components|Input/Simple", module)
     }} />
     </div>
   ))
+  .add("loading", () => (
+    <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
+      <VHInput value="durand" loading placeholder="VH Simple Input" onEvent={e => {
+      console.log(e)
+    }} />
+    </div>
+  ))
+  .add("error", () => (
+    <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
+      <VHInput value="durand" error='error from server' placeholder="VH Simple Input" onEvent={e => {
+      console.log(e)
+    }} />
+    </div>
+  ))
