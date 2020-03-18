@@ -65,8 +65,6 @@ var VHTargetLocation = function VHTargetLocation(props) {
   }, {
     status: false
   }];
-  console.log('props.items.length', items);
-  console.log(items[0]);
 
   var _useState = (0, _react.useState)(items[0].status),
       _useState2 = _slicedToArray(_useState, 2),

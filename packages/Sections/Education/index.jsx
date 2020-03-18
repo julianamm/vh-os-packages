@@ -57,7 +57,7 @@ const VHEducationSection = props => {
           })
           }
           <Row width={'20%'} lg>
-            <VHButton data={'openModal'} primary onEvent={props.onEvent} closeModal={props.closeModal} onOpen={() => setOpenModal(true)} label="Add Education" />
+            <VHButton data={'openModal'} primary onEvent={props.onEvent} closeModal={props.closeModal} onOpen={() => {setCurrentItem({}); setOpenModal(true)}} label="Add Education" />
           </Row>
         </Row>
       </VHCardBase>

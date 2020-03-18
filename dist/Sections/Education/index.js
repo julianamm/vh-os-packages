@@ -108,7 +108,9 @@ var VHEducationSection = function VHEducationSection(props) {
     onEvent: props.onEvent,
     closeModal: props.closeModal,
     onOpen: function onOpen() {
-      return setOpenModal(true);
+      _setCurrentItem({});
+
+      setOpenModal(true);
     },
     label: "Add Education"
   })))));
