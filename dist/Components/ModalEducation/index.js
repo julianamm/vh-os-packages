@@ -95,8 +95,6 @@ var VHModalEducation = function VHModalEducation(props) {
       endYear = _React$useState10[0],
       setEndYear = _React$useState10[1];
 
-  console.log(props.modalEducation);
-  console.log(startYear);
   return _react.default.createElement(_Modal.default, {
     width: "732",
     minWidth: "660",

@@ -44,7 +44,6 @@ var VHRelocationSection = function VHRelocationSection(props) {
     value: false
   }];
   var targetLocation = props.targetLocation ? props.targetLocation.items : [];
-  console.log(targetLocation);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
     marginBottom: 5
   }, _react.default.createElement(_Text.default, {
