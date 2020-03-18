@@ -23,6 +23,12 @@ var _Text = _interopRequireDefault(require("../../Components/Text/"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -39,7 +45,13 @@ var VHEducationSection = function VHEducationSection(props) {
 
   var education = props.education ? props.education : [];
   var items = props.degreeTypeList;
-  return _react.default.createElement(_react.default.Fragment, null, openModal && _react.default.createElement(_ModalEducation.default, {
+
+  var _React$useState3 = _react.default.useState({}),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      currentItem = _React$useState4[0],
+      _setCurrentItem = _React$useState4[1];
+
+  return _react.default.createElement(_react.default.Fragment, null, openModal && _react.default.createElement(_ModalEducation.default, _defineProperty({
     openModal: openModal,
     onClose: function onClose() {
       return setOpenModal(false);
@@ -50,7 +62,7 @@ var VHEducationSection = function VHEducationSection(props) {
     items: items,
     controls: props.controls,
     onEvent: props.onEvent
-  }), _react.default.createElement(_Grid.Row, {
+  }, "currentItem", currentItem)), _react.default.createElement(_Grid.Row, {
     marginBottom: 5
   }, _react.default.createElement(_Text.default, {
     className: "vh-education-section-title ".concat(props.className ? props.className : ''),
@@ -65,12 +77,22 @@ var VHEducationSection = function VHEducationSection(props) {
     return _react.default.createElement(_Grid.Row, {
       marginBottom5: true
     }, _react.default.createElement(_TitleDescription.default, {
+      pointer: true,
       title: item.degreeTitle,
       titleColor: "primary-light",
       description: item.schoolName,
       titleVariant: "h4",
       descriptionVariant: "bodyweb",
-      onEvent: props.onEvent
+      onEvent: props.onEvent,
+      data: _objectSpread({
+        label: 'openModalEducation'
+      }, item),
+      onOpen: function onOpen() {
+        return setOpenModal(true);
+      },
+      setCurrentItem: function setCurrentItem() {
+        return _setCurrentItem(item);
+      }
     }), _react.default.createElement(_Text.default, {
       variant: 'caption',
       text: item.start,

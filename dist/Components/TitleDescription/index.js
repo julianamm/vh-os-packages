@@ -23,20 +23,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHTitleDescription = function VHTitleDescription(props) {
   return _react.default.createElement(S.Wrapper, {
+    pointer: props.pointer,
     inline: props.inline,
-    className: "vh-title-description ".concat(props.className ? props.className : '')
+    className: "vh-title-description ".concat(props.className ? props.className : ''),
+    onClick: function onClick() {
+      props.setCurrentItem ? props.setCurrentItem() : '';
+      props.onOpen ? props.onOpen() : '';
+    }
   }, _react.default.createElement(_Text.default, {
     color: props.titleColor,
     variant: props.titleVariant,
     text: props.title,
-    onEvent: props.onEvent
+    onEvent: props.onEvent,
+    data: props.data
   }), _react.default.createElement(S.Display, {
     inline: props.inline
   }, _react.default.createElement(_Text.default, {
     color: props.descriptionColor,
     variant: props.descriptionVariant,
     text: props.description,
-    onEvent: props.onEvent
+    onEvent: props.onEvent,
+    data: props.data
   })));
 };
 

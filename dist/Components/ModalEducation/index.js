@@ -42,27 +42,61 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var VHModalEducation = function VHModalEducation(props) {
-  var _React$useState = _react.default.useState(''),
+  function getFormatedDate(date) {
+    var result = '';
+
+    if (date) {
+      var d = new Date(date),
+          month = '' + (d.getMonth() + 1),
+          day = '' + d.getDate(),
+          year = d.getFullYear();
+
+      if (month.length < 2) {
+        month = '0' + month;
+      }
+
+      if (day.length < 2) {
+        day = '0' + day;
+      }
+
+      result = [year, month, day].join('-');
+    }
+
+    return result;
+  }
+
+  var item = props.currentItem ? props.currentItem : {};
+
+  var _React$useState = _react.default.useState({
+    value: item.degreeType,
+    label: item.degreeTypeStr
+  }),
       _React$useState2 = _slicedToArray(_React$useState, 2),
-      degreeTitle = _React$useState2[0],
-      setDegreeTitle = _React$useState2[1];
+      degreeType = _React$useState2[0],
+      setDegreeType = _React$useState2[1];
 
-  var _React$useState3 = _react.default.useState(''),
+  var _React$useState3 = _react.default.useState(item.degreeTitle),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
-      schoolName = _React$useState4[0],
-      setSchoolName = _React$useState4[1];
+      degreeTitle = _React$useState4[0],
+      setDegreeTitle = _React$useState4[1];
 
-  var _React$useState5 = _react.default.useState(''),
+  var _React$useState5 = _react.default.useState(item.schoolName),
       _React$useState6 = _slicedToArray(_React$useState5, 2),
-      startYear = _React$useState6[0],
-      setStartYear = _React$useState6[1];
+      schoolName = _React$useState6[0],
+      setSchoolName = _React$useState6[1];
 
-  var _React$useState7 = _react.default.useState(''),
+  var _React$useState7 = _react.default.useState(getFormatedDate(item.startDate)),
       _React$useState8 = _slicedToArray(_React$useState7, 2),
-      endYear = _React$useState8[0],
-      setEndYear = _React$useState8[1];
+      startYear = _React$useState8[0],
+      setStartYear = _React$useState8[1];
+
+  var _React$useState9 = _react.default.useState(getFormatedDate(item.endYear)),
+      _React$useState10 = _slicedToArray(_React$useState9, 2),
+      endYear = _React$useState10[0],
+      setEndYear = _React$useState10[1];
 
   console.log(props.modalEducation);
+  console.log(startYear);
   return _react.default.createElement(_Modal.default, {
     width: "732",
     minWidth: "660",
@@ -90,7 +124,7 @@ var VHModalEducation = function VHModalEducation(props) {
       caption: "Degree Type",
       captionColor: null,
       className: "vh-general-section-degree ".concat(props.className ? props.className : ''),
-      currentItem: props.currentItem,
+      currentItem: degreeType,
       data: "degree",
       onEvent: props.onEvent,
       items: props.items

@@ -4,24 +4,32 @@ import * as S from './styles'
 import VHText from '../Text'
 
 const VHTitleDescription = props => {
-    return (
-      <S.Wrapper inline={props.inline} className={`vh-title-description ${props.className ? props.className : ''}`}>
+  return (
+    <S.Wrapper pointer={props.pointer}
+      inline={props.inline}
+      className={`vh-title-description ${props.className ? props.className : ''}`}
+      onClick={() => {
+        props.setCurrentItem ? props.setCurrentItem() : ''
+        props.onOpen ? props.onOpen() : ''
+      }}>
+      <VHText
+        color={props.titleColor}
+        variant={props.titleVariant}
+        text={props.title}
+        onEvent={props.onEvent}
+        data={props.data}
+      />
+      <S.Display inline={props.inline}>
         <VHText
-          color={props.titleColor}
-          variant={props.titleVariant}
-          text={props.title}
+          color={props.descriptionColor}
+          variant={props.descriptionVariant}
+          text={props.description}
           onEvent={props.onEvent}
+          data={props.data}
         />
-        <S.Display inline={props.inline}>
-          <VHText
-            color={props.descriptionColor}
-            variant={props.descriptionVariant}
-            text={props.description}
-            onEvent={props.onEvent}
-          />
-        </S.Display>
-      </S.Wrapper>
-    )
+      </S.Display>
+    </S.Wrapper>
+  )
 }
 
 VHTitleDescription.defaultProps = {
