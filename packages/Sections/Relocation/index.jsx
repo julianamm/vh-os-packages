@@ -16,10 +16,10 @@ const VHRelocationSection = props => {
     const visaStatusCanadianList = props.visaStatusCanadianList
     const visaStatusEUList = props.visaStatusEUList
 
-    const salaryRangeCad = props.salaryRangeCad ? salaryRangeCadList[props.salaryRangeCad] : []
-    const salaryRangeEur = props.salaryRangeEur ? salaryRangeEurList[parseInt(props.salaryRangeEur)] : []
-    const visaStatusCanadian = props.visaStatusCanadian ? visaStatusCanadianList[props.visaStatusCanadian] : []
-    const visaStatusEU = props.visaStatusEU ? visaStatusEUList[props.visaStatusEU] : []
+    const salaryRangeCad = props.salaryRangeCad != undefined ? salaryRangeCadList[props.salaryRangeCad] : []
+    const salaryRangeEur = props.salaryRangeEur != undefined ? salaryRangeEurList[parseInt(props.salaryRangeEur)] : []
+    const visaStatusCanadian = props.visaStatusCanadian != undefined ? visaStatusCanadianList[props.visaStatusCanadian] : []
+    const visaStatusEU = props.visaStatusEU != undefined ? visaStatusEUList[props.visaStatusEU] : []
     const companySize = props.companySize ? props.companySize : [{value:false}, {value:false}, {value:false}]
 
     const targetLocation = props.targetLocation ? props.targetLocation.items : []

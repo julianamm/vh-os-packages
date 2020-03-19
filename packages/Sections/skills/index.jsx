@@ -11,10 +11,10 @@ import VHTitleDescription from "../../Components/TitleDescription";
 
 const VHSkillsSection = props => {
   const positions = props.positions
-  const position = props.positionSkill ? [positions[props.positionSkill]] : {};
+  const position = props.positionSkill != undefined ? [positions[props.positionSkill]] : {};
 
   const yearsOfExperienceList = props.yearsOfExperienceList
-  const yearsOfExperience = props.yearsOfExperience ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
+  const yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
 
   const workAsList = props.positions
 
@@ -133,6 +133,7 @@ const VHSkillsSection = props => {
           </Row>
           <Row column marginBottom={5}>
           <VHTitleDescription
+          contents={true}
                 className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
                 descriptionColor={
                   props.controls.topSkill.loading

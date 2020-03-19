@@ -27,9 +27,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHSkillsSection = function VHSkillsSection(props) {
   var positions = props.positions;
-  var position = props.positionSkill ? [positions[props.positionSkill]] : {};
+  var position = props.positionSkill != undefined ? [positions[props.positionSkill]] : {};
   var yearsOfExperienceList = props.yearsOfExperienceList;
-  var yearsOfExperience = props.yearsOfExperience ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
+  var yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
   var workAsList = props.positions;
   var workAs = [];
 
@@ -120,6 +120,7 @@ var VHSkillsSection = function VHSkillsSection(props) {
     column: true,
     marginBottom: 5
   }, _react.default.createElement(_TitleDescription.default, {
+    contents: true,
     className: "vh-general-section-topSkill-description ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.topSkill.loading ? "gray-40" : props.controls.topSkill.error ? "red-light" : "gray-90",
     inline: true,

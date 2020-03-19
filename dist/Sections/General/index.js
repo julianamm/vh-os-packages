@@ -25,7 +25,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHGeneralSection = function VHGeneralSection(props) {
   var genders = props.genders;
-  var gender = props.gender ? [genders[props.gender]] : {};
+  var gender = props.gender != undefined ? [genders[props.gender]] : {};
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
     marginBottom: 5
   }, _react.default.createElement(_Text.default, {
