@@ -7,33 +7,53 @@ import VHRelocationSection from '../../Sections/Relocation'
 import VHEducationSection from '../../Sections/Education'
 import VHSocialSection from '../../Sections/Social'
 import VHUserCompanyExperienceSection from '../../Sections/UserCompanyExperience'
+import VHPageSection from '../PageSection/index'
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 const VHProfileTemplate = props => (
   <Container md>
     <Row marginBottom={10}>
-      <VHGeneralSection
-        {...props}
-        onEvent={props.onEvent}
-      />
-    </Row>
-     <Row marginBottom={10}>
-      <VHSkillsSection
-        {...props}
-        onEvent={props.onEvent}
-      />
+      <ScrollableAnchor id={"general"}>
+        <VHPageSection content={
+          <VHGeneralSection
+            {...props}
+            onEvent={props.onEvent}
+          />
+        } />
+      </ScrollableAnchor>
     </Row>
     <Row marginBottom={10}>
-      <VHRelocationSection
-        {...props}
-        onEvent={props.onEvent}
-      />
+      <ScrollableAnchor id={"skills"}>
+        <VHPageSection content={
+          <VHSkillsSection
+            {...props}
+            onEvent={props.onEvent}
+          />
+        } />
+      </ScrollableAnchor>
     </Row>
     <Row marginBottom={10}>
-      <VHEducationSection
-        {...props}
-        onEvent={props.onEvent}
-      />
+      <ScrollableAnchor id={"relocation"}>
+        <VHPageSection content={
+          <VHRelocationSection
+            {...props}
+            onEvent={props.onEvent}
+          />
+        } />
+      </ScrollableAnchor>
     </Row>
+
+    <Row marginBottom={10}>
+      <ScrollableAnchor id={"education"}>
+        <VHPageSection content={
+          <VHEducationSection
+            {...props}
+            onEvent={props.onEvent}
+          />
+        } />
+      </ScrollableAnchor>
+    </Row>
+
     {/*<Row marginBottom={10}>
       <VHSocialSection
         {...props.social}

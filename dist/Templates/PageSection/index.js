@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = require("react");
 
+var _reactScrollableAnchor = require("react-scrollable-anchor");
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -39,6 +41,16 @@ var VHPageSection = /*#__PURE__*/function (_Component) {
   }
 
   _createClass(VHPageSection, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      (0, _reactScrollableAnchor.configureAnchors)({
+        offset: -80,
+        scrollDuration: 1000,
+        keepLastAnchorHash: false
+      });
+      (0, _reactScrollableAnchor.removeHash)();
+    }
+  }, {
     key: "render",
     value: function render() {
       return this.props.content;
