@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _reactScrollableAnchor = _interopRequireDefault(require("react-scrollable-anchor"));
+var _reactScrollableAnchor = require("react-scrollable-anchor");
 
 var S = _interopRequireWildcard(require("./styles"));
 
@@ -62,6 +62,9 @@ var VHProfileMenu = /*#__PURE__*/function (_Component) {
           source: link.img,
           sm: true
         }), _react.default.createElement(S.Link, {
+          onClick: function onClick() {
+            (0, _reactScrollableAnchor.removeHash)();
+          },
           href: link.href
         }, link.name));
       })));

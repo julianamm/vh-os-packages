@@ -31,32 +31,32 @@ const VHSocialSection = props => {
               icon="linkedin"
               onEvent={props.onEvent}
               placeholder="http://linkedin.com/"
-              value={props.data.linkedin.value}
+              value={props.linkedin}
             />
           </Row>
           <Row marginBottom4>
             <VHInputIcon
               className=""
-              disabled={props.controls.github.loading}
-              error={props.controls.github.error}
-              loading={props.controls.github.loading}
-              data={'github'}
+              disabled={props.controls.git.loading}
+              error={props.controls.git.error}
+              loading={props.controls.git.loading}
+              data={'git'}
               icon="github"
               onEvent={props.onEvent}
               placeholder="http://github.com/"
-              value={props.data.github.value}
+              value={props.git}
             />
           </Row>
           <Row marginBottom4>
             <VHInputIcon
               className=""
-              disabled={props.controls.world.loading}
-              error={props.controls.world.error}
-              loading={props.controls.world.loading}
+              disabled={props.controls.webSite.loading}
+              error={props.controls.webSite.error}
+              loading={props.controls.webSite.loading}
               placeholder="http://sitename.com/"
-              value={props.data.world.value}
-              data={'world'}
-              icon="world"
+              value={props.webSite}
+              data={'webSite'}
+              icon="webSite"
               onEvent={props.onEvent}
             />
           </Row>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ScrollableAnchor from 'react-scrollable-anchor'
+import { ScrollableAnchor, removeHash } from 'react-scrollable-anchor'
 import * as S from './styles'
 import { Container, Row } from '../../Grid/';
 import VHImg from "../Img";
@@ -13,7 +13,7 @@ export default class VHProfileMenu extends Component {
                             return (
                                 <S.Wrapper>
                                     <VHImg source={link.img} sm />
-                                    <S.Link href={link.href}>{link.name}</S.Link>
+                                    <S.Link onClick={()=>{removeHash()}} href={link.href}>{link.name}</S.Link>
                                 </S.Wrapper>
                             )
                         })

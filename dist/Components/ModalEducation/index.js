@@ -27,6 +27,8 @@ var _index2 = _interopRequireDefault(require("../../Components/Button/index"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
+var _index3 = require("../../util/index");
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -42,29 +44,6 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var VHModalEducation = function VHModalEducation(props) {
-  function getFormatedDate(date) {
-    var result = '';
-
-    if (date) {
-      var d = new Date(date),
-          month = '' + (d.getMonth() + 1),
-          day = '' + d.getDate(),
-          year = d.getFullYear();
-
-      if (month.length < 2) {
-        month = '0' + month;
-      }
-
-      if (day.length < 2) {
-        day = '0' + day;
-      }
-
-      result = [year, month, day].join('-');
-    }
-
-    return result;
-  }
-
   var item = props.currentItem ? props.currentItem : {};
 
   var _React$useState = _react.default.useState({
@@ -85,12 +64,12 @@ var VHModalEducation = function VHModalEducation(props) {
       schoolName = _React$useState6[0],
       setSchoolName = _React$useState6[1];
 
-  var _React$useState7 = _react.default.useState(getFormatedDate(item.startDate)),
+  var _React$useState7 = _react.default.useState((0, _index3.getFormatedDate)(item.startDate)),
       _React$useState8 = _slicedToArray(_React$useState7, 2),
       startYear = _React$useState8[0],
       setStartYear = _React$useState8[1];
 
-  var _React$useState9 = _react.default.useState(getFormatedDate(item.endYear)),
+  var _React$useState9 = _react.default.useState((0, _index3.getFormatedDate)(item.endYear)),
       _React$useState10 = _slicedToArray(_React$useState9, 2),
       endYear = _React$useState10[0],
       setEndYear = _React$useState10[1];

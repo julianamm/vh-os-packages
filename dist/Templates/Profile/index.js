@@ -27,8 +27,6 @@ var _UserCompanyExperience = _interopRequireDefault(require("../../Sections/User
 
 var _index = _interopRequireDefault(require("../PageSection/index"));
 
-var _reactScrollableAnchor = _interopRequireDefault(require("react-scrollable-anchor"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -42,7 +40,7 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
     md: true
   }, _react.default.createElement(_Grid.Row, {
     marginBottom: 10
-  }, _react.default.createElement(_reactScrollableAnchor.default, {
+  }, _react.default.createElement("div", {
     id: "general"
   }, _react.default.createElement(_index.default, {
     content: _react.default.createElement(_General.default, _extends({}, props, {
@@ -50,7 +48,7 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
     }))
   }))), _react.default.createElement(_Grid.Row, {
     marginBottom: 10
-  }, _react.default.createElement(_reactScrollableAnchor.default, {
+  }, _react.default.createElement("div", {
     id: "skills"
   }, _react.default.createElement(_index.default, {
     content: _react.default.createElement(_skills.default, _extends({}, props, {
@@ -58,7 +56,7 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
     }))
   }))), _react.default.createElement(_Grid.Row, {
     marginBottom: 10
-  }, _react.default.createElement(_reactScrollableAnchor.default, {
+  }, _react.default.createElement("div", {
     id: "relocation"
   }, _react.default.createElement(_index.default, {
     content: _react.default.createElement(_Relocation.default, _extends({}, props, {
@@ -66,7 +64,11 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
     }))
   }))), _react.default.createElement(_Grid.Row, {
     marginBottom: 10
-  }, _react.default.createElement(_reactScrollableAnchor.default, {
+  }, _react.default.createElement(_Social.default, _extends({}, props, {
+    onEvent: props.onEvent
+  }))), _react.default.createElement(_Grid.Row, {
+    marginBottom: 10
+  }, _react.default.createElement("div", {
     id: "education"
   }, _react.default.createElement(_index.default, {
     content: _react.default.createElement(_Education.default, _extends({}, props, {
