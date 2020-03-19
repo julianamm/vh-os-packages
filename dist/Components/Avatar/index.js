@@ -24,7 +24,18 @@ var VHAvatar = function VHAvatar(props) {
     center: props.center,
     image: props.image,
     size: props.size,
-    showCursor: props.showCursor
+    showCursor: props.showCursor,
+    onClick: function onClick(event) {
+      if (props.onEvent) {
+        props.onEvent({
+          data: props.data,
+          type: 'onClick',
+          target: 'VHAvatar'
+        });
+      }
+
+      ;
+    }
   }, props.label);
 };
 

@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var items = JSON.stringify([{
   id: 1,
   value: 'Durand',
-  loading: true
+  loading: false
 }, {
   id: 2,
   value: 'Robson',
