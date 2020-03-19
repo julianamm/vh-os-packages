@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import VHInputMultiple from ".";
 
-const items = JSON.stringify([{id: 1, value: 'Durand', loading: true}, { id: 2, value: 'Robson', error: true}])
+const items = JSON.stringify([{id: 1, value: 'Durand', loading: false}, { id: 2, value: 'Robson', error: true}])
 // const items = []
 // const items = '[{"id":1,"value":"Durand Neto"},{"id":2,"value":"Robson"},{"value":"asdas"}]'
 storiesOf("Components|Input/Multiple", module)

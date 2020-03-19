@@ -10,8 +10,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _react2.storiesOf)('Source|Img Crop', module).add('VHImg Crop', function () {
   return _react.default.createElement(_.default, {
-    xs: true,
-    title: "Zoombi",
-    source: "http://via.placeholder.com/200x200"
+    source: "http://via.placeholder.com/200x200",
+    onEvent: function onEvent(e) {
+      console.log(e);
+    }
   });
 });

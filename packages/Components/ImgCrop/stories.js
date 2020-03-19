@@ -7,8 +7,9 @@ storiesOf('Source|Img Crop', module)
 
 .add('VHImg Crop', () => (
     <VHImg
-        xs
-        title="Zoombi"
         source="http://via.placeholder.com/200x200"
+        onEvent={e => {
+            console.log(e)
+        }}
     />
 ))
