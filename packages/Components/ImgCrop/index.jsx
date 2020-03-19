@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import ReactCrop from 'react-image-crop';
-import 'react-image-crop/dist/ReactCrop.css';
+// import 'react-image-crop/dist/ReactCrop.css';
+const styles = require('react-image-crop/dist/ReactCrop.css');
 import { Container, Row } from '../../Grid'
 import VHAvatar from '../Avatar'
 import VHButton from '../Button'

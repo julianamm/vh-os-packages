@@ -45,6 +45,32 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+// import 'react-image-crop/dist/ReactCrop.css';
+var styles = {
+  "ReactCrop": "ReactCrop__ReactCrop___3dEzP",
+  "ReactCrop--disabled": "ReactCrop__ReactCrop--disabled___1w1fh",
+  "ReactCrop--locked": "ReactCrop__ReactCrop--locked___3Gh6L",
+  "ReactCrop__image": "ReactCrop__ReactCrop__image___3y189",
+  "ReactCrop--crop-invisible": "ReactCrop__ReactCrop--crop-invisible___2ENos",
+  "ReactCrop__crop-selection": "ReactCrop__ReactCrop__crop-selection___3nPpG",
+  "ReactCrop--circular-crop": "ReactCrop__ReactCrop--circular-crop___3eVjG",
+  "ReactCrop__rule-of-thirds-vt": "ReactCrop__ReactCrop__rule-of-thirds-vt___1qu-F",
+  "ReactCrop__rule-of-thirds-hz": "ReactCrop__ReactCrop__rule-of-thirds-hz___3cL8w",
+  "ReactCrop__drag-handle": "ReactCrop__ReactCrop__drag-handle___1712x",
+  "ord-nw": "ReactCrop__ord-nw___20lmC",
+  "ord-n": "ReactCrop__ord-n___2SaoW",
+  "ord-ne": "ReactCrop__ord-ne___1LvoU",
+  "ord-e": "ReactCrop__ord-e___3SWGL",
+  "ord-se": "ReactCrop__ord-se___1avBL",
+  "ord-s": "ReactCrop__ord-s___1FPBX",
+  "ord-sw": "ReactCrop__ord-sw___1gqRv",
+  "ord-w": "ReactCrop__ord-w___jW5Gj",
+  "ReactCrop__disabled": "ReactCrop__ReactCrop__disabled___3hRe2",
+  "ReactCrop__drag-bar": "ReactCrop__ReactCrop__drag-bar___1rsD9",
+  "ReactCrop--new-crop": "ReactCrop__ReactCrop--new-crop___34bLi",
+  "ReactCrop--fixed-aspect": "ReactCrop__ReactCrop--fixed-aspect___2iD5W"
+};
+
 var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
   _inherits(VHImgCrop, _PureComponent);
 
