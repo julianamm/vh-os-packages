@@ -13,7 +13,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _index = require("../../Grid/index");
 
-var _index2 = _interopRequireDefault(require("../Text/index"));
+var _index2 = _interopRequireDefault(require("../../Components/TextHighlightDescriptionImage/index"));
+
+var _index3 = _interopRequireDefault(require("../../Hyperlinks/LinkImage/index"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
@@ -23,50 +25,63 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VHTextHighlightDescriptionImage = function VHTextHighlightDescriptionImage(props) {
-  return _react.default.createElement(_index.Container, null, _react.default.createElement(_index.Row, {
-    row: true,
-    justifySpaceBetween: true
-  }, _react.default.createElement(S.Wrapper, {
-    reverse: props.reverse
+var VHTextsImageLink = function VHTextsImageLink(props) {
+  return _react.default.createElement(_index.Container, null, _react.default.createElement(_index.Row, null, _react.default.createElement(_index2.default, {
+    title: props.title,
+    highlight: props.highlight,
+    description: props.description,
+    image: props.image,
+    reverse: props.reverseTop
+  }), _react.default.createElement(_index.Container, null, _react.default.createElement(S.Wrapper, {
+    reverse: props.reverseBottom
   }, _react.default.createElement(_index.Row, {
     width: "50%"
-  }, _react.default.createElement(_index.Row, {
-    alignItemsLeft: true,
-    marginBottom: 8
-  }, _react.default.createElement(S.UnderlineText, null, _react.default.createElement(_index2.default, {
-    variant: "platform2",
-    color: "tertiary-dark",
-    text: props.title
-  }))), _react.default.createElement(_index.Row, {
-    marginBottom5: true
-  }, _react.default.createElement(_index2.default, {
-    variant: "h2",
-    color: "gray-90",
-    text: props.highlight
+  }, _react.default.createElement(_index3.default, {
+    xsLabel: props.xsLabel,
+    smLabel: props.smLabel,
+    lgLabel: props.lgLabel,
+    label: props.label,
+    color: props.color,
+    to: props.to,
+    source: props.source,
+    xsImg: props.xsImg,
+    smImg: props.smImg,
+    mdImg: props.mdImg,
+    lgImg: props.lgImg
   })), _react.default.createElement(_index.Row, {
-    marginBottom5: true
-  }, _react.default.createElement(_index2.default, {
-    variant: "bodyweb",
-    color: "gray-90",
-    text: props.description
-  }))), _react.default.createElement(_index.Row, {
     width: "50%"
-  }, _react.default.createElement(S.ImgWrapper, {
-    image: props.image
   })))));
 };
 
-VHTextHighlightDescriptionImage.defaultProps = {
-  reverse: false
+VHTextsImageLink.defaultProps = {
+  reverseTop: false,
+  xsLabel: false,
+  smLabel: true,
+  lgLabel: false,
+  xsImg: false,
+  smImg: true,
+  mdImg: false,
+  lgImg: false,
+  reverseBottom: false
 };
-VHTextHighlightDescriptionImage.prototypes = {
+VHTextsImageLink.prototypes = {
   className: '',
   title: _propTypes.default.string.isRequired,
   highlight: _propTypes.default.string.isRequired,
   description: _propTypes.default.string.isRequired,
   image: _propTypes.default.string.isRequired,
-  reverse: _propTypes.default.bool
+  reverseTop: _propTypes.default.bool,
+  smLabel: _propTypes.default.bool,
+  xsLabel: _propTypes.default.bool,
+  lgLabel: _propTypes.default.bool,
+  label: _propTypes.default.string.isRequired,
+  color: _propTypes.default.string,
+  source: _propTypes.default.string.isRequired,
+  xsImg: _propTypes.default.bool,
+  smImg: _propTypes.default.bool,
+  mdImg: _propTypes.default.bool,
+  lgImg: _propTypes.default.bool,
+  reverseBottom: _propTypes.default.bool
 };
-var _default = VHTextHighlightDescriptionImage;
+var _default = VHTextsImageLink;
 exports.default = _default;
