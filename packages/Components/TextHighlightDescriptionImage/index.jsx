@@ -7,7 +7,7 @@ import * as S from './styles';
 const VHTextHighlightDescriptionImage = props => {
     return (
         <Container>
-            <Row row marginBottom={50} justifySpaceBetween>
+            <Row row justifySpaceBetween>
                 <S.Wrapper reverse={props.reverse}>
                     <Row width={"50%"}>
                         <Row alignItemsLeft marginBottom={8}>
