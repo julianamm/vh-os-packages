@@ -11,7 +11,7 @@
   "scripts": {
     "start": "start-storybook -p 6007",
     "build": "build-storybook -o docs",
-    "transpile": "babel --plugins inline-import-data-uri,@babel/plugin-proposal-class-properties packages --out-dir dist"
+    "transpile": "babel --plugins css-modules-transform,inline-import-data-uri,@babel/plugin-proposal-class-properties packages --out-dir dist"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,6 +42,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-inline-import-data-uri": "^1.0.1",
     "react-scripts": "^3.3.0",
+    "babel-plugin-css-modules-transform": "^1.6.2",
     "styled-components": "^5.0.1"
   },
   "dependencies": {

@@ -9,8 +9,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactImageCrop = _interopRequireDefault(require("react-image-crop"));
 
-require("react-image-crop/dist/ReactCrop.css");
-
 var _Grid = require("../../Grid");
 
 var _Avatar = _interopRequireDefault(require("../Avatar"));
