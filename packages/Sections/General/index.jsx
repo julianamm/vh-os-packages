@@ -10,7 +10,7 @@ import VHInput from "../../Components/Input/Simple";
 
 const VHGeneralSection = props => {
   const genders = props.genders
-  const gender = props.gender ? [genders[props.gender]] : {};
+  const gender = props.gender != undefined ? [genders[props.gender]] : {};
 
   return (
     <>

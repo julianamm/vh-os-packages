@@ -32,10 +32,10 @@ var VHRelocationSection = function VHRelocationSection(props) {
   var salaryRangeEurList = props.salaryRangeEurList;
   var visaStatusCanadianList = props.visaStatusCanadianList;
   var visaStatusEUList = props.visaStatusEUList;
-  var salaryRangeCad = props.salaryRangeCad ? salaryRangeCadList[props.salaryRangeCad] : [];
-  var salaryRangeEur = props.salaryRangeEur ? salaryRangeEurList[parseInt(props.salaryRangeEur)] : [];
-  var visaStatusCanadian = props.visaStatusCanadian ? visaStatusCanadianList[props.visaStatusCanadian] : [];
-  var visaStatusEU = props.visaStatusEU ? visaStatusEUList[props.visaStatusEU] : [];
+  var salaryRangeCad = props.salaryRangeCad != undefined ? salaryRangeCadList[props.salaryRangeCad] : [];
+  var salaryRangeEur = props.salaryRangeEur != undefined ? salaryRangeEurList[parseInt(props.salaryRangeEur)] : [];
+  var visaStatusCanadian = props.visaStatusCanadian != undefined ? visaStatusCanadianList[props.visaStatusCanadian] : [];
+  var visaStatusEU = props.visaStatusEU != undefined ? visaStatusEUList[props.visaStatusEU] : [];
   var companySize = props.companySize ? props.companySize : [{
     value: false
   }, {

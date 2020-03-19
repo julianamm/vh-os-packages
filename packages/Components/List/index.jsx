@@ -11,22 +11,31 @@ const VHList = props => {
     return (
         <React.Fragment>
             < S.Wrapper >
-                <Row width={'20%'}>
-                    <VHSelect
-                        removeBorder
-                        caption=""
-                        data={'topSkillExperience'}
-                        className={'topSkillExperience'}
-                        currentItem={items[0] ? list.find(element => element.value === items[0].id) : {}}
-                        items={props.list}
-                        description=""
-                        descriptionColor="primary"
-                        onEvent={props.onEvent}
-                        order={0}
-                    />
+                <Row width={'30%'} alignItemsCenter row >
+                    <Row width={'15%'}>
+                        <VHText variant={'platform'} text="1st" color={'gray-90'} />
+                    </Row>
+                    <Row width={'70%'}>
+                        <VHSelect
+                            bold={true}
+                            marginBottom={'0px'}
+                            removeBorder
+                            caption=""
+                            data={'topSkillExperience'}
+                            className={'topSkillExperience'}
+                            currentItem={items[0] ? list.find(element => element.value === items[0].id) : {}}
+                            items={props.list}
+                            description=""
+                            descriptionColor="primary"
+                            onEvent={props.onEvent}
+                            order={0}
+                        />
+                    </Row>
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
+                        isDisabled={!items[0] ? true : false}
+                        marginBottom={'0px'}
                         removeBorder
                         caption=""
                         data={'topSkillYears'}
@@ -42,22 +51,31 @@ const VHList = props => {
                 </Row>
             </ S.Wrapper>
             < S.Wrapper >
-                <Row width={'20%'}>
-                    <VHSelect
-                        removeBorder
-                        caption=""
-                        data={'topSkillExperience'}
-                        className={'topSkillExperience'}
-                        currentItem={items[1] ? list.find(element => element.value === items[1].id) : {}}
-                        items={props.list}
-                        description=""
-                        descriptionColor="primary"
-                        onEvent={props.onEvent}
-                        order={1}
-                    />
+                <Row width={'30%'} alignItemsCenter row >
+                    <Row width={'15%'}>
+                        <VHText variant={'platform'} text="2nd" color={'gray-90'} />
+                    </Row>
+                    <Row width={'70%'}>
+                        <VHSelect
+                            bold={true}
+                            marginBottom={'0px'}
+                            removeBorder
+                            caption=""
+                            data={'topSkillExperience'}
+                            className={'topSkillExperience'}
+                            currentItem={items[1] ? list.find(element => element.value === items[1].id) : {}}
+                            items={props.list}
+                            description=""
+                            descriptionColor="primary"
+                            onEvent={props.onEvent}
+                            order={1}
+                        />
+                    </Row>
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
+                        isDisabled={!items[1] ? true : false}
+                        marginBottom={'0px'}
                         removeBorder
                         caption=""
                         data={'topSkillYears'}
@@ -73,22 +91,30 @@ const VHList = props => {
                 </Row>
             </S.Wrapper>
             <S.Wrapper>
-                <Row width={'20%'}>
-                    <VHSelect
-                        removeBorder
-                        caption=""
-                        data={'topSkillExperience'}
-                        className={'topSkillExperience'}
-                        currentItem={items[2] ? list.find(element => element.value === items[2].id) : {}}
-                        items={props.list}
-                        description=""
-                        descriptionColor="primary"
-                        onEvent={props.onEvent}
-                        order={2}
-                    />
+                <Row width={'30%'} alignItemsCenter row >
+                    <Row width={'15%'}>
+                        <VHText variant={'platform'} text="3rd" color={'gray-90'} />
+                    </Row>
+                    <Row width={'70%'}>
+                        <VHSelect
+                            bold={true}
+                            marginBottom={'0px'}
+                            removeBorder
+                            caption=""
+                            data={'topSkillExperience'}
+                            className={'topSkillExperience'}
+                            currentItem={items[2] ? list.find(element => element.value === items[2].id) : {}}
+                            items={props.list}
+                            description=""
+                            descriptionColor="primary"
+                            onEvent={props.onEvent}
+                            order={2}
+                        />
+                    </Row>
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
+                        marginBottom={'0px'}
                         removeBorder
                         caption=""
                         data={'topSkillYears'}

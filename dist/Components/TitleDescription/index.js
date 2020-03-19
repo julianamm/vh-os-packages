@@ -23,6 +23,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHTitleDescription = function VHTitleDescription(props) {
   return _react.default.createElement(S.Wrapper, {
+    contents: props.contents,
     pointer: props.pointer,
     inline: props.inline,
     className: "vh-title-description ".concat(props.className ? props.className : ''),

@@ -5,7 +5,8 @@ import VHText from '../Text'
 
 const VHTitleDescription = props => {
   return (
-    <S.Wrapper pointer={props.pointer}
+    <S.Wrapper contents={props.contents}
+    pointer={props.pointer}
       inline={props.inline}
       className={`vh-title-description ${props.className ? props.className : ''}`}
       onClick={() => {

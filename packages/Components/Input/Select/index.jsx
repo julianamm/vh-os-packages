@@ -7,57 +7,60 @@ import VHText from '../../Text'
 
 const animatedComponents = makeAnimated();
 
-const VHSelect = props =>  {
+const VHSelect = props => {
 
   const [value, handleChange] = React.useState(props.currentItem);
   React.useEffect(() => {
     handleChange(props.currentItem);
-}, [props.currentItem])
+  }, [props.currentItem])
 
-const style = {
-  control: base => ({
-    ...base,
-    border: 0,
-    boxShadow: "none",
-    fontWeight: '500'
-  }),
-  indicatorSeparator: (styles) => ({display:'none'}),
-  clearIndicator: (styles) => ({display:'none'})
-};
+  const style = {
+    control: base => ({
+      ...base,
+      border: 0,
+      boxShadow: "none",
+      fontWeight: props.bold ? 'bold' : '500'
+    }),
+    indicatorSeparator: (styles) => ({ display: 'none' }),
+    clearIndicator: (styles) => ({ display: 'none' })
+  };
 
-const styled = {
-  indicatorSeparator: (styles) => ({display:'none'}),
-  clearIndicator: (styles) => ({display:'none'})
-};
+  const styled = {
+    indicatorSeparator: (styles) => ({ display: 'none' }),
+    clearIndicator: (styles) => ({ display: 'none' })
+  };
 
   return (
-    <div style={{position: 'relative', marginBottom: '21px'}}>
+    <div style={{ position: 'relative', marginBottom: props.marginBottom ? props.marginBottom : '21px' }}>
       {
         props.caption &&
-          <VHText
-            text={props.caption}
-            variant="platform1"
-            color={props.captionColor}
-          />
+        <VHText
+          text={props.caption}
+          variant="platform1"
+          color={props.captionColor}
+        />
       }
       <Select
-        styles={props.removeBorder ? style : styled }
+        styles={props.removeBorder ? style : styled}
         closeMenuOnSelect={!props.isMulti}
         className={props.className}
         isLoading={props.isLoading}
-        isDisabled={props.isLoading}
+        isDisabled={props.isLoading || props.isDisabled}
         components={animatedComponents}
         value={value}
         isMulti={props.isMulti}
         isClearable={true}
         options={props.items}
         onChange={(newValue, actionMeta) => {
-          switch(true) {
+          switch (true) {
             case actionMeta.action === "remove-value":
               let finalValue = []
+              if (newValue.value === 'zero') {
+                newValue.value = 0
+              }
               handleChange(newValue);
               newValue.map(item => {
-                finalValue.push(parseInt(item.value))
+                finalValue.push(parseInt(item.value === 'zero' ? 0 : item.value))
               })
               props.onEvent({
                 type: "OnChange",
@@ -83,12 +86,15 @@ const styled = {
               break
             case actionMeta.action === "select-option":
               let finalValueChange = []
+              if (newValue.value === 'zero') {
+                newValue.value = 0
+              }
               handleChange(newValue);
-              if(props.isMulti){
-              newValue.map(item => {
-                finalValueChange.push(parseInt(item.value))
-              })
-            }
+              if (props.isMulti) {
+                newValue.map(item => {
+                  finalValueChange.push(parseInt(item.value === 'zero' ? 0 : item.value))
+                })
+              }
               props.onEvent({
                 type: "OnChange",
                 origin: "VHSelect",
@@ -105,13 +111,13 @@ const styled = {
       />
       {
         props.description &&
-          <div style={{position: 'absolute', top: '60px'}}>
-            <VHText
-              text={props.description}
-              variant="caption"
-              color={props.descriptionColor}
-            />
-          </div>
+        <div style={{ position: 'absolute', top: '60px' }}>
+          <VHText
+            text={props.description}
+            variant="caption"
+            color={props.descriptionColor}
+          />
+        </div>
       }
     </div>
   );

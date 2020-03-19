@@ -48,7 +48,7 @@ var VHSelect = function VHSelect(props) {
       return _objectSpread({}, base, {
         border: 0,
         boxShadow: "none",
-        fontWeight: '500'
+        fontWeight: props.bold ? 'bold' : '500'
       });
     },
     indicatorSeparator: function indicatorSeparator(styles) {
@@ -77,7 +77,7 @@ var VHSelect = function VHSelect(props) {
   return _react.default.createElement("div", {
     style: {
       position: 'relative',
-      marginBottom: '21px'
+      marginBottom: props.marginBottom ? props.marginBottom : '21px'
     }
   }, props.caption && _react.default.createElement(_Text.default, {
     text: props.caption,
@@ -88,7 +88,7 @@ var VHSelect = function VHSelect(props) {
     closeMenuOnSelect: !props.isMulti,
     className: props.className,
     isLoading: props.isLoading,
-    isDisabled: props.isLoading,
+    isDisabled: props.isLoading || props.isDisabled,
     components: animatedComponents,
     value: value,
     isMulti: props.isMulti,
@@ -98,9 +98,14 @@ var VHSelect = function VHSelect(props) {
       switch (true) {
         case actionMeta.action === "remove-value":
           var finalValue = [];
+
+          if (newValue.value === 'zero') {
+            newValue.value = 0;
+          }
+
           handleChange(newValue);
           newValue.map(function (item) {
-            finalValue.push(parseInt(item.value));
+            finalValue.push(parseInt(item.value === 'zero' ? 0 : item.value));
           });
           props.onEvent({
             type: "OnChange",
@@ -128,11 +133,16 @@ var VHSelect = function VHSelect(props) {
 
         case actionMeta.action === "select-option":
           var finalValueChange = [];
+
+          if (newValue.value === 'zero') {
+            newValue.value = 0;
+          }
+
           handleChange(newValue);
 
           if (props.isMulti) {
             newValue.map(function (item) {
-              finalValueChange.push(parseInt(item.value));
+              finalValueChange.push(parseInt(item.value === 'zero' ? 0 : item.value));
             });
           }
 
