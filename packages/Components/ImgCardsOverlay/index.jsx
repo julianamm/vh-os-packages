@@ -9,23 +9,23 @@ const VHImgCardsOverlay = props => {
     return (
         <Container>
             <Row alignItemsCenter>
-                <Row width={"100%"} height={"100%"} alignItemsCenter>
+                <Row alignItemsCenter>
                     <S.ImgWrapper image={props.image}/>
                 </Row>
                 <S.Wrapper>
-                    <Row row width={"100%"} height={"100%"} alignItemsCenter>
+                    <Row row alignItemsCenter>
                         <Row width={"50%"} style={{ height: "100%", alignItems: "flex-end", justifyContent: "start"}}>
                             <S.CardLeftWrapper>
                                 <VHCardBase noHover>
                                     <Row alignItemsCenter style={{ padding: "50px 0", textAlign: "center"}}>
-                                        <Row alignItemsCenter>
+                                        <Row width={"80%"} alignItemsCenter>
                                             <VHText 
                                                 variant={"h2"}
                                                 color={"gray-100"}
                                                 text={props.cardLeftTitle}
                                             />
                                         </Row>
-                                        <Row alignItemsCenter style={{ textAlign: "center"}}>
+                                        <Row width={"80%"} alignItemsCenter style={{ textAlign: "center"}}>
                                             <VHText 
                                                 variant={"subtitle2"}
                                                 color={"black-60"}
@@ -39,15 +39,15 @@ const VHImgCardsOverlay = props => {
                         <Row width={"50%"} style={{ marginTop: "25%", alignItems: "flex-start", justifyContent: "flex-end"}}>
                             <S.CardRightWrapper>
                                 <VHCardBase noHover>
-                                    <Row style={{ padding: "50px 0", textAlign: "center"}}>
-                                        <Row alignItemsCenter>
+                                    <Row alignItemsCenter style={{ padding: "50px 0", textAlign: "center"}}>
+                                        <Row width={"80%"} alignItemsCenter>
                                             <VHText 
                                                 variant={"h2"}
                                                 color={"gray-100"}
                                                 text={props.cardRightTitle}
                                             />
                                         </Row>
-                                        <Row alignItemsCenter style={{ textAlign: "center"}}>
+                                        <Row width={"80%"} alignItemsCenter style={{ textAlign: "center"}}>
                                             <VHText 
                                                 variant={"subtitle2"}
                                                 color={"black-60"}

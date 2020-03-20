@@ -8,7 +8,7 @@ export const ImgWrapper = styled.div`
     background-image: url(${props => props.image && props.image});
     background-repeat: no-repeat;
     background-position: center;
-    position: fixed; 
+    position: absolute; 
 ` 
 
 export const Wrapper = styled.div`
@@ -17,18 +17,16 @@ export const Wrapper = styled.div`
 ` 
 
 export const CardLeftWrapper = styled.div`
-    width: 250px;
+    width: 280px;
     height: 100%;
-    // min-height: 600px;
-    margin-right: 10px;
+    margin-right: 25px;
     z-index: 2;
     
 ` 
 
 export const CardRightWrapper = styled.div`
-    width: 250px;
+    width: 280px;
     height: 100%;
-    // min-height: 600px;
-    margin-left: 10px;
+    margin-left: 25px;
     z-index: 2;
 ` 
