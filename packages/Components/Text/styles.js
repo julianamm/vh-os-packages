@@ -7,7 +7,7 @@ export const H1 = styled.h1`
     color: ${props => Color[props.color]};
     font-family: Nunito Sans;
     font-size: 48px;
-    font-weight: 'lighter';
+    font-weight: lighter;
 
     ${({alignCenter}) => alignCenter && `
         text-align: center;
@@ -20,7 +20,7 @@ export const H2 = styled.h2`
     color: ${props => Color[props.color]};
     font-family: Nunito Sans;
     font-size: 34px;
-    font-weight: 'lighter';
+    font-weight: lighter;
 
     ${({alignCenter}) => alignCenter && `
         text-align: center;
@@ -33,7 +33,7 @@ export const H3 = styled.h3`
     color: ${props => Color[props.color]};
     font-family: Nunito Sans;
     font-size: 24px;
-    font-weight: 'normal';
+    font-weight: normal;
 
     ${({alignCenter}) => alignCenter && `
         text-align: center;
@@ -46,7 +46,7 @@ export const H4 = styled.h4`
     color: ${props => Color[props.color]};
     font-family: Nunito Sans;
     font-size: 22px;
-    font-weight: 'bold';
+    font-weight: bold;
 
     ${({alignCenter}) => alignCenter && `
         text-align: center;
@@ -59,7 +59,7 @@ export const H5 = styled.h5`
     color: ${props => Color[props.color]};
     font-family: Nunito Sans;
     font-size: 22px;
-    font-weight: 'regular';
+    font-weight: normal;
 
     ${({alignCenter}) => alignCenter && `
         text-align: center;
@@ -72,7 +72,7 @@ export const H6 = styled.h6`
     color: ${props => Color[props.color]};
     font-family: Nunito Sans;
     font-size: 20px;
-    font-weight: 'regular';
+    font-weight: normal;
 
     ${({alignCenter}) => alignCenter && `
         text-align: center;
@@ -85,7 +85,7 @@ export const Subtitle1 = styled.p`
     color: ${props => Color[props.color]};
     font-family: Roboto;
     font-size: 18px;
-    font-weight: 'regular';
+    font-weight: normal;
     line-height: 22.4px;
 
 `
@@ -95,7 +95,7 @@ export const Subtitle2 = styled.p`
     color: ${props => Color[props.color]};
     font-family: Roboto;
     font-size: 16px;
-    font-weight: 'bold';
+    font-weight: bold;
 
     ${({alignCenter}) => alignCenter && `
         text-align: center;
@@ -108,7 +108,7 @@ export const Subtitle3 = styled.p`
     color: ${props => Color[props.color]};
     font-family: Roboto;
     font-size: 16px;
-    font-weight: 'lighter';
+    font-weight: lighter;
     line-height: 23.1px;
 
     ${({alignCenter}) => alignCenter && `
@@ -122,7 +122,7 @@ export const BodyWeb = styled.p`
     color: ${props => Color[props.color]};
     font-family: Roboto;
     font-size: 16px;
-    font-weight: 'regular';
+    font-weight: normal;
     line-height: 28px;
 
     ${({alignCenter}) => alignCenter && `
@@ -136,7 +136,7 @@ export const BodyPlatform = styled.p`
     color: ${props => Color[props.color]};
     font-family: Roboto;
     font-size: 14px;
-    font-weight: 'regular';
+    font-weight: normal;
     line-height: 21.5px;
 
     ${({alignCenter}) => alignCenter && `
@@ -150,7 +150,7 @@ export const BodyPlatform2 = styled.p`
     color: ${props => Color[props.color]};
     font-family: Roboto;
     font-size: 14px;
-    font-weight: 'regular';
+    font-weight: normal;
 
     ${({alignCenter}) => alignCenter && `
         text-align: center;
@@ -163,7 +163,7 @@ export const Caption = styled.p`
     color: ${props => Color[props.color]};
     font-family: Roboto;
     font-size: 12px;
-    font-weight: 'regular';
+    font-weight: normal;
 
     ${({alignCenter}) => alignCenter && `
         text-align: center;
