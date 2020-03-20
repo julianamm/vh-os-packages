@@ -13,14 +13,25 @@ export const FadeIn = keyframes`
   }
 `;
 
-export const ModalContainer = styled.div`
+export const ModalWrapper = styled.div`
+  width: 100%;
+  height: 100%;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.75);
-  top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  top: 0;
+  // background-color: rgba(0, 0, 0, 0.75)
   z-index: 999;
+`;
+
+export const ModalContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 12px;
+  background: #fff;
+  background-color: rgba(0, 0, 0, 0.75);
+
   transition: all 0.3s;
   display: ${props => (props.open ? "block" : "none")};
   animation: 0.35s ${FadeIn} ease-in;
@@ -58,7 +69,11 @@ export const ModalBox = styled.div`
   border: solid 1px #e0e0e0;
   border-radius: 3px;
   padding: 32px;
+  margin: 32px 0;
   animation: 0.35s ${FadeIn} ease-in;
+
+  max-height: 100%;
+  overflow-y: auto;
 `;
 
 export const Header = styled.div`
