@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import ReactCrop from 'react-image-crop';
 import { createGlobalStyle } from 'styled-components'
 import reactImageCropCss from 'react-image-crop/dist/ReactCrop.css'
+import VHModal from '../Modal'
 const GlobalStyle = createGlobalStyle`
 ${reactImageCropCss};
 `
@@ -113,6 +114,9 @@ class VHImgCrop extends PureComponent {
             })
           }}
         />
+        <VHModal
+        content={<>
+
         {
           showCropper && (
               <VHButton
@@ -144,6 +148,11 @@ class VHImgCrop extends PureComponent {
             onChange={this.onCropChange}
           />
         )}
+        </>}
+        onEvent={function noRefCheck() {}}
+        open={showCropper}
+      />
+
         {croppedImageUrl && cropped && (
           <img alt="Crop" style={{ maxWidth: '100%' }} src={croppedImageUrl} />
         )}
