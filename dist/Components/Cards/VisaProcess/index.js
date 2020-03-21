@@ -21,19 +21,19 @@ var _Headers = _interopRequireDefault(require("../../../Typography/Headers"));
 
 var _Img = _interopRequireDefault(require("../../Img"));
 
-var _index = _interopRequireDefault(require("../../../assets/svg/icons/icon_business.svg/index.jsx"));
+var _index = _interopRequireDefault(require("../../../assets/svg/icons/icon_business.svg/index.js"));
 
-var _index2 = _interopRequireDefault(require("../../../assets/svg/icons/icon_skills.svg/index.jsx"));
+var _index2 = _interopRequireDefault(require("../../../assets/svg/icons/icon_skills.svg/index.js"));
 
-var _index3 = _interopRequireDefault(require("../../../assets/svg/icons/icon_passport.svg/index.jsx"));
+var _index3 = _interopRequireDefault(require("../../../assets/svg/icons/icon_passport.svg/index.js"));
 
-var _index4 = _interopRequireDefault(require("../../../assets/svg/icons/icon_chat_outline.svg/index.jsx"));
+var _index4 = _interopRequireDefault(require("../../../assets/svg/icons/icon_chat_outline.svg/index.js"));
 
-var _index5 = _interopRequireDefault(require("../../../assets/svg/icons/icon_time_red.svg/index.jsx"));
+var _index5 = _interopRequireDefault(require("../../../assets/svg/icons/icon_time_red.svg/index.js"));
 
-var _index6 = _interopRequireDefault(require("../../../assets/svg/icons/icon_time_green.svg/index.jsx"));
+var _index6 = _interopRequireDefault(require("../../../assets/svg/icons/icon_time_green.svg/index.js"));
 
-var _index7 = _interopRequireDefault(require("../../../assets/svg/icons/icon_star_fill.svg/index.jsx"));
+var _index7 = _interopRequireDefault(require("../../../assets/svg/icons/icon_star_fill.svg/index.js"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 

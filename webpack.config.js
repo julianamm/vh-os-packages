@@ -16,7 +16,7 @@ function getEntries(pattern) {
 }
 
 module.exports = {
-  entry: getEntries('./**/index.jsx'),
+  entry: getEntries('./**/index.js'),
   output: {
     path: path.resolve(__dirname, 'lib'),
     filename: '[name]',

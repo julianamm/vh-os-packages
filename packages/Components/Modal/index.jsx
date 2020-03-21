@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CloseIcon from '../../assets/svg/icons/close.svg/index.jsx';
+import CloseIcon from '../../assets/svg/icons/close.svg/index.js';
 import VHButton from '../Button';
 import * as S from './styles';
 

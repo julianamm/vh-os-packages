@@ -13,9 +13,9 @@ import VHTextarea from "../Textarea";
 import VHIconText from "../IconText";
 import VHPreloader from '../Preloader/index';
 import VHImg from '../Img/index';
-import CompanyIcon from '../../assets/svg/icons/icon_business.svg/index.jsx';
-import PositionIcon from '../../assets/svg/icons/icon_skills.svg/index.jsx';
-import CityIcon from '../../assets/svg/icons/icon_passport.svg/index.jsx';
+import CompanyIcon from '../../assets/svg/icons/icon_business.svg/index.js';
+import PositionIcon from '../../assets/svg/icons/icon_skills.svg/index.js';
+import CityIcon from '../../assets/svg/icons/icon_passport.svg/index.js';
 
 const VHModalVisaPipeline = props => {
 

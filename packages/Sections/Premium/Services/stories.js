@@ -9,7 +9,7 @@ const premiumInterviewClass = {
     image: require("../../../assets/svg/background/img_premium_interview.svg"),
     label: "watch a class",
     to: "#",
-    source: require("../../../assets/svg/icons/icon_arrow_right.svg/index.jsx"),
+    source: require("../../../assets/svg/icons/icon_arrow_right.svg/index.js"),
 };
 
 const premiumOtherServices = [

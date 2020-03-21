@@ -13,7 +13,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
-var _index = _interopRequireDefault(require("../../assets/svg/icons/vanhack_loading.svg/index.jsx"));
+var _index = _interopRequireDefault(require("../../assets/svg/icons/vanhack_loading.svg/index.js"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 

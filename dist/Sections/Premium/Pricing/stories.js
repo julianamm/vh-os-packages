@@ -6,7 +6,7 @@ var _react2 = require("@storybook/react");
 
 var _ = _interopRequireDefault(require("."));
 
-var _index = _interopRequireDefault(require("../../../assets/svg/icons/icon_medal.svg/index.jsx"));
+var _index = _interopRequireDefault(require("../../../assets/svg/icons/icon_medal.svg/index.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

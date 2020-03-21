@@ -9,21 +9,21 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _index = _interopRequireDefault(require("../../assets/svg/icons/dot.svg/index.jsx"));
+var _index = _interopRequireDefault(require("../../assets/svg/icons/dot.svg/index.js"));
 
-var _index2 = _interopRequireDefault(require("../../assets/svg/icons/icon_filter.svg/index.jsx"));
+var _index2 = _interopRequireDefault(require("../../assets/svg/icons/icon_filter.svg/index.js"));
 
-var _index3 = _interopRequireDefault(require("../../assets/svg/icons/icon_arrow_left.svg/index.jsx"));
+var _index3 = _interopRequireDefault(require("../../assets/svg/icons/icon_arrow_left.svg/index.js"));
 
-var _index4 = _interopRequireDefault(require("../../assets/svg/icons/icon_swap_vert.svg/index.jsx"));
+var _index4 = _interopRequireDefault(require("../../assets/svg/icons/icon_swap_vert.svg/index.js"));
 
-var _index5 = _interopRequireDefault(require("../../assets/svg/icons/mdi_search.svg/index.jsx"));
+var _index5 = _interopRequireDefault(require("../../assets/svg/icons/mdi_search.svg/index.js"));
 
-var _index6 = _interopRequireDefault(require("../../assets/svg/icons/icon_github.svg/index.jsx"));
+var _index6 = _interopRequireDefault(require("../../assets/svg/icons/icon_github.svg/index.js"));
 
-var _index7 = _interopRequireDefault(require("../../assets/svg/icons/icon_linkedin_login.svg/index.jsx"));
+var _index7 = _interopRequireDefault(require("../../assets/svg/icons/icon_linkedin_login.svg/index.js"));
 
-var _index8 = _interopRequireDefault(require("../../assets/svg/icons/icon_globe.svg/index.jsx"));
+var _index8 = _interopRequireDefault(require("../../assets/svg/icons/icon_globe.svg/index.js"));
 
 var _Colors = _interopRequireDefault(require("../../Colors"));
 

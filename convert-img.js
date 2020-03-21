@@ -80,7 +80,7 @@ function ConvertFiles(){
                 // console.log(template(file))
                 fs.unlinkSync(`${file.fullPath}`)
                 fs.mkdirSync(`${file.fullPath}`)
-                fs.writeFileSync(`${file.fullPath}/index.jsx`, template(file))
+                fs.writeFileSync(`${file.fullPath}/index.js`, template(file))
 
             })
             // console.log(files)

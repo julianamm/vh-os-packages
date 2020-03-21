@@ -11,7 +11,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _index = _interopRequireDefault(require("../../assets/svg/icons/close.svg/index.jsx"));
+var _index = _interopRequireDefault(require("../../assets/svg/icons/close.svg/index.js"));
 
 var _Button = _interopRequireDefault(require("../Button"));
 

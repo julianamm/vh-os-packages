@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BulletIcon  from '../../assets/svg/icons/dot.svg/index.jsx'
-import FilterIcon  from '../../assets/svg/icons/icon_filter.svg/index.jsx'
-import ArrowLeftIcon  from '../../assets/svg/icons/icon_arrow_left.svg/index.jsx'
-import SortIcon  from '../../assets/svg/icons/icon_swap_vert.svg/index.jsx'
-import SearchIcon  from '../../assets/svg/icons/mdi_search.svg/index.jsx'
-import GitHubIcon from '../../assets/svg/icons/icon_github.svg/index.jsx'
-import LinkedInIcon from '../../assets/svg/icons/icon_linkedin_login.svg/index.jsx'
-import WebSiteIcon from '../../assets/svg/icons/icon_globe.svg/index.jsx'
+import BulletIcon  from '../../assets/svg/icons/dot.svg/index.js'
+import FilterIcon  from '../../assets/svg/icons/icon_filter.svg/index.js'
+import ArrowLeftIcon  from '../../assets/svg/icons/icon_arrow_left.svg/index.js'
+import SortIcon  from '../../assets/svg/icons/icon_swap_vert.svg/index.js'
+import SearchIcon  from '../../assets/svg/icons/mdi_search.svg/index.js'
+import GitHubIcon from '../../assets/svg/icons/icon_github.svg/index.js'
+import LinkedInIcon from '../../assets/svg/icons/icon_linkedin_login.svg/index.js'
+import WebSiteIcon from '../../assets/svg/icons/icon_globe.svg/index.js'
 
 import Color from "../../Colors";
 
