@@ -16,7 +16,7 @@ import * as S from './styles.js'
 const VHModalExperience = props => {
 
     const item = props.modalExperience;
-    const [companyName, setCompanyName] = React.useState(item.companyName.value);
+    const [country, setCompanyName] = React.useState(item.companyName.value);
     return (
         <VHModal
             width="732"
@@ -50,7 +50,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-location ${props.className ? props.className : ''}`}
-                                currentItem={{ value: item.countryId, label: item.country }}
+                                currentItem={{ value: item.countryId.value, label: item.country }}
                                 data={{ id: "ModalExperience", field: "countryId" }}
                                 onEvent={props.onEvent}
                                 items={props.countries}
@@ -68,7 +68,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-company-size ${props.className ? props.className : ''}`}
-                                currentItem={{ value: item.companySize, label: item.companySizeStr }}
+                                currentItem={{ value: item.companySize.value, label: item.companySizeStr }}
                                 data={{ id: "ModalExperience", field: "companySize" }}
                                 onEvent={props.onEvent}
                                 items={props.companyList}
@@ -84,7 +84,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-industry ${props.className ? props.className : ''}`}
-                                currentItem={{ value: item.industryId, label: item.industry }}
+                                currentItem={{ value: item.industryId.value, label: item.industry }}
                                 data={{ id: "ModalExperience", field: "industryId" }}
                                 onEvent={props.onEvent}
                                 items={props.industryList}
@@ -104,7 +104,7 @@ const VHModalExperience = props => {
                                         captionColor={null
                                         }
                                         className={`vh-general-section-position ${props.className ? props.className : ''}`}
-                                        currentItem={{ value: experience.positionId, label: experience.position }}
+                                        currentItem={{ value: experience.positionId.value, label: experience.position }}
                                         data={{ id: "ModalExperience", field: "positionId", index: index }}
                                         onEvent={props.onEvent}
                                         items={props.positions}
@@ -136,19 +136,19 @@ const VHModalExperience = props => {
                                 <Row marginBottom5 row justifySpaceBetween>
                                     <Row width={'40%'}>
                                         <VHText color="gray-100" variant={'platform'} text="Start Date" />
-                                        <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={getFormatedDate(experience.startDate.value)} data={{ id: "ModalEducation", field: "startDate", index: index }} />
+                                        <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={getFormatedDate(experience.startDate.value)} data={{ id: "ModalExperience", field: "startDate", index: index }} />
                                         {experience.startDate.messageError && (
                                             <S.ErrorMessage>Field required</S.ErrorMessage>
                                         )}
                                     </Row>
                                     <Row width={'40%'}>
                                         <VHText color="gray-100" variant={'platform'} text="End Date" />
-                                        <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={getFormatedDate(experience.endDate.value)} data={{ id: "ModalEducation", field: "endDate", index: index }} />
+                                        <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={getFormatedDate(experience.endDate.value)} data={{ id: "ModalExperience", field: "endDate", index: index }} />
                                     </Row>
                                 </Row>
                                 <Row marginBottom5>
                                     <VHText color="gray-100" variant={'platform'} text="Description" />
-                                    <VHInput placeholder="" onEvent={props.onEvent} value={experience.description.value} data={{ id: "ModalEducation", field: "description", index: index }}
+                                    <VHInput placeholder="" onEvent={props.onEvent} value={experience.description.value} data={{ id: "ModalExperience", field: "description", index: index }}
                                     />
                                     {experience.description.messageError && (
                                         <S.ErrorMessage>Field required</S.ErrorMessage>

@@ -54,7 +54,7 @@ var VHModalExperience = function VHModalExperience(props) {
 
   var _React$useState = _react.default.useState(item.companyName.value),
       _React$useState2 = _slicedToArray(_React$useState, 2),
-      companyName = _React$useState2[0],
+      country = _React$useState2[0],
       setCompanyName = _React$useState2[1];
 
   return _react.default.createElement(_Modal.default, {
@@ -104,7 +104,7 @@ var VHModalExperience = function VHModalExperience(props) {
       captionColor: null,
       className: "vh-general-section-location ".concat(props.className ? props.className : ''),
       currentItem: {
-        value: item.countryId,
+        value: item.countryId.value,
         label: item.country
       },
       data: {
@@ -126,7 +126,7 @@ var VHModalExperience = function VHModalExperience(props) {
       captionColor: null,
       className: "vh-general-section-company-size ".concat(props.className ? props.className : ''),
       currentItem: {
-        value: item.companySize,
+        value: item.companySize.value,
         label: item.companySizeStr
       },
       data: {
@@ -145,7 +145,7 @@ var VHModalExperience = function VHModalExperience(props) {
       captionColor: null,
       className: "vh-general-section-industry ".concat(props.className ? props.className : ''),
       currentItem: {
-        value: item.industryId,
+        value: item.industryId.value,
         label: item.industry
       },
       data: {
@@ -164,7 +164,7 @@ var VHModalExperience = function VHModalExperience(props) {
         captionColor: null,
         className: "vh-general-section-position ".concat(props.className ? props.className : ''),
         currentItem: {
-          value: experience.positionId,
+          value: experience.positionId.value,
           label: experience.position
         },
         data: {
@@ -207,7 +207,7 @@ var VHModalExperience = function VHModalExperience(props) {
         onEvent: props.onEvent,
         value: (0, _index4.getFormatedDate)(experience.startDate.value),
         data: {
-          id: "ModalEducation",
+          id: "ModalExperience",
           field: "startDate",
           index: index
         }
@@ -223,7 +223,7 @@ var VHModalExperience = function VHModalExperience(props) {
         onEvent: props.onEvent,
         value: (0, _index4.getFormatedDate)(experience.endDate.value),
         data: {
-          id: "ModalEducation",
+          id: "ModalExperience",
           field: "endDate",
           index: index
         }
@@ -238,7 +238,7 @@ var VHModalExperience = function VHModalExperience(props) {
         onEvent: props.onEvent,
         value: experience.description.value,
         data: {
-          id: "ModalEducation",
+          id: "ModalExperience",
           field: "description",
           index: index
         }
