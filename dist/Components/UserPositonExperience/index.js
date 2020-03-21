@@ -33,8 +33,8 @@ var VHUserPositonExperience = function VHUserPositonExperience(props) {
   }, _react.default.createElement(_Grid.Row, {
     marginBottom: 3
   }, _react.default.createElement(_index2.default, {
-    title: props.headline,
-    description: props.period,
+    title: props.position,
+    description: "".concat(new Date(props.startDate).getFullYear(), " - ").concat(props.endDate ? new Date(props.endDate).getFullYear() : 'Present'),
     onEvent: props.onEvent,
     rightTitle: props.rightTitle,
     className: "vh-user-position-experience ".concat(props.className ? props.className : '')
@@ -45,18 +45,6 @@ var VHUserPositonExperience = function VHUserPositonExperience(props) {
     items: props.description,
     color: "gray-30",
     className: "vh-user-position-experience-title-list ".concat(props.className ? props.className : '')
-  })), _react.default.createElement(_Grid.Row, {
-    row: true
-  }, props.skills.map(function (skill) {
-    return _react.default.createElement(_index.default, {
-      label: skill.label,
-      transparent: true,
-      round: true,
-      noHover: true,
-      marginRight: true,
-      onEvent: props.onEvent,
-      className: "vh-user-position-experience-chip ".concat(props.className ? props.className : '')
-    });
   }))));
 };
 

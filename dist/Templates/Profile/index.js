@@ -74,6 +74,14 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
     content: _react.default.createElement(_Education.default, _extends({}, props, {
       onEvent: props.onEvent
     }))
+  }))), _react.default.createElement(_Grid.Row, {
+    marginBottom: 10
+  }, _react.default.createElement("div", {
+    id: "education"
+  }, _react.default.createElement(_index.default, {
+    content: _react.default.createElement(_UserCompanyExperience.default, _extends({}, props, {
+      onEvent: props.onEvent
+    }))
   }))));
 };
 

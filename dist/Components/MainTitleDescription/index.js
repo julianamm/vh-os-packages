@@ -17,6 +17,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHMainTitleDescription = function VHMainTitleDescription(props) {
   return _react.default.createElement(_Grid.Row, null, _react.default.createElement(_index.default, {
+    pointer: props.pointer,
+    onEvent: props.onEvent,
+    onOpen: props.onOpen,
+    setCurrentItem: props.setCurrentItem,
     className: "vh-main-title-description",
     data: props.data,
     description: props.rightTitle,
@@ -25,8 +29,13 @@ var VHMainTitleDescription = function VHMainTitleDescription(props) {
     inline: true,
     title: props.title,
     titleColor: "primary-light",
-    titleVariant: "subtitle1"
+    titleVariant: "subtitle1",
+    setNewExperience: props.setNewExperience
   }), _react.default.createElement(_index.default, {
+    pointer: props.pointer,
+    onEvent: props.onEvent,
+    onOpen: props.onOpen,
+    setCurrentItem: props.setCurrentItem,
     className: "vh-main-title-description",
     data: props.data,
     title: props.description,

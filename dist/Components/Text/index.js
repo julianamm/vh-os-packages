@@ -119,6 +119,7 @@ var VHText = function VHText(props) {
     case 'platform':
       return _react.default.createElement(Text.BodyPlatform, {
         color: props.color,
+        cursor: props.cursor,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
         alignCenter: props.alignCenter

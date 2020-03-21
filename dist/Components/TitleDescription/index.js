@@ -28,6 +28,7 @@ var VHTitleDescription = function VHTitleDescription(props) {
     inline: props.inline,
     className: "vh-title-description ".concat(props.className ? props.className : ''),
     onClick: function onClick() {
+      props.setNewExperience ? props.setNewExperience() : '';
       props.setCurrentItem ? props.setCurrentItem() : '';
       props.onOpen ? props.onOpen() : '';
     }

@@ -32,7 +32,7 @@ function _templateObject12() {
 }
 
 function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 'regular';\n    line-height: 21.5px;\n\n    ", "\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    margin: 0;\n    padding: 0;\n    color: ", ";\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 'regular';\n    line-height: 21.5px;\n\n    ", "\n\n    ", "\n\n"]);
 
   _templateObject11 = function _templateObject11() {
     return data;
@@ -235,14 +235,17 @@ var BodyPlatform = _styledComponents.default.p(_templateObject11(), function (pr
 }, function (_ref10) {
   var alignCenter = _ref10.alignCenter;
   return alignCenter && "\n        text-align: center;\n    ";
+}, function (_ref11) {
+  var cursor = _ref11.cursor;
+  return cursor && "\n        cursor: pointer;\n    ";
 });
 
 exports.BodyPlatform = BodyPlatform;
 
 var BodyPlatform2 = _styledComponents.default.p(_templateObject12(), function (props) {
   return _Colors.default[props.color];
-}, function (_ref11) {
-  var alignCenter = _ref11.alignCenter;
+}, function (_ref12) {
+  var alignCenter = _ref12.alignCenter;
   return alignCenter && "\n        text-align: center;\n    ";
 });
 
@@ -250,8 +253,8 @@ exports.BodyPlatform2 = BodyPlatform2;
 
 var Caption = _styledComponents.default.p(_templateObject13(), function (props) {
   return _Colors.default[props.color];
-}, function (_ref12) {
-  var alignCenter = _ref12.alignCenter;
+}, function (_ref13) {
+  var alignCenter = _ref13.alignCenter;
   return alignCenter && "\n        text-align: center;\n    ";
 });
 

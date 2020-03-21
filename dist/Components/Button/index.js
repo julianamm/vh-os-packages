@@ -78,6 +78,10 @@ var VHButton = function VHButton(props) {
     nowrap: props.nowrap,
     type: "button",
     onClick: function onClick() {
+      if (props.setNewExperience) {
+        props.setNewExperience();
+      }
+
       if (props.onOpen) {
         props.onOpen();
       } else if (closeModal) {

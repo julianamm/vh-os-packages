@@ -5,19 +5,29 @@ import VHMainTitleDescription from "../MainTitleDescription";
 import VHUserPositonExperience from "../UserPositonExperience"
 
 const VHUserCompanyExperience = props => {
+  const industryList = props.industryList
+  const companyList = props.companyList
+  const [currentItem, setCurrentItem] = React.useState({});
   return (
     <>
       <Row marginBottom={5}>
         <VHMainTitleDescription
-          title={props.title}
-          description={props.description}
+          setNewExperience={props.setNewExperience}
+          pointer
+          onEvent={props.onEvent}
+          data={{ label: 'openModalExperience', item: props.item }}
+          onOpen={props.onOpen}
+          setCurrentItem={props.setCurrentItem}
+          item={props.item}
+          title={props.item.companyName}
+          description={`${industryList[0].label} - ${companyList[0].label} - ${props.item.country}`}
           rightTitle={props.rightTitle}
           className={`vh-user-company-position-experience ${props.className ? props.className : ''}`}
         />
       </Row>
       <Row>
         {
-          props.userPositions.map( userPosition => (
+          props.item.workExperiences.map(userPosition => (
             <VHUserPositonExperience
               className={`vh-user-company-position-experience ${props.className ? props.className : ''}`}
               {...userPosition}

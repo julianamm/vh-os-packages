@@ -57,6 +57,16 @@ const VHProfileTemplate = props => (
         } />
       </div>
     </Row>
+    <Row marginBottom={10}>
+      <div id={"education"}>
+        <VHPageSection content={
+          <VHUserCompanyExperienceSection
+            {...props}
+            onEvent={props.onEvent}
+          />
+        } />
+      </div>
+    </Row>
     {/*<Row marginBottom={10}>
       <VHUserCompanyExperienceSection
         {...props.userCompanyExperience}

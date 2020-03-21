@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -29,6 +31,14 @@ var _checkbox = _interopRequireDefault(require("../../Components/Input/checkbox"
 
 var _index3 = _interopRequireDefault(require("../../Components/Textarea/index"));
 
+var _index4 = require("../../util/index");
+
+var S = _interopRequireWildcard(require("./styles.js"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
@@ -40,13 +50,16 @@ function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) ||
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var VHModalExperience = function VHModalExperience(props) {
-  var _React$useState = _react.default.useState(props.currentItem),
+  var item = props.modalExperience;
+
+  var _React$useState = _react.default.useState(item.companyName.value),
       _React$useState2 = _slicedToArray(_React$useState, 2),
-      value = _React$useState2[0],
-      handleChange = _React$useState2[1];
+      companyName = _React$useState2[0],
+      setCompanyName = _React$useState2[1];
 
   return _react.default.createElement(_Modal.default, {
-    minWidth: "700",
+    width: "732",
+    minWidth: "660",
     open: true,
     onClose: props.onClose,
     onEvent: props.onEvent,
@@ -76,8 +89,11 @@ var VHModalExperience = function VHModalExperience(props) {
       text: "Company Name"
     }), _react.default.createElement(_Simple.default, {
       placeholder: "",
-      onEvent: function onEvent(e) {
-        console.log(e);
+      onEvent: props.onEvent,
+      value: item.companyName.value,
+      data: {
+        id: "ModalExperience",
+        field: "companyName"
       }
     })), _react.default.createElement("div", {
       style: {
@@ -85,123 +101,165 @@ var VHModalExperience = function VHModalExperience(props) {
       }
     }, _react.default.createElement(_Select.default, {
       caption: "Location",
-      captionColor: props.controls.location.loading ? "gray-40" : props.controls.location.error ? "red" : null,
+      captionColor: null,
       className: "vh-general-section-location ".concat(props.className ? props.className : ''),
-      currentItem: props.currentItem,
-      data: "location",
-      onEvent: function onEvent(e) {
-        if (e.type === 'OnChange') {
-          handleChange(e.props.item);
-        }
+      currentItem: {
+        value: item.countryId,
+        label: item.country
       },
-      items: props.items,
-      isLoading: props.controls.location.loading,
-      description: props.controls.location.error && props.controls.location.message,
+      data: {
+        id: "ModalExperience",
+        field: "countryId"
+      },
+      onEvent: props.onEvent,
+      items: props.countries,
       descriptionColor: "red-light"
-    }))), _react.default.createElement(_Grid.Row, {
-      row: true
-    }, _react.default.createElement(_radio.default, {
-      color: "gray-100",
-      variant: "platform1",
-      onEvent: function onEvent(event) {
-        return console.log(event);
-      },
-      data: props.data
-    }), _react.default.createElement("div", {
+    }), item.countryId.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required"))), _react.default.createElement(_Grid.Row, {
+      row: true,
+      justifySpaceBetween: true
+    }, _react.default.createElement("div", {
       style: {
-        width: '66%'
+        width: '40%'
+      }
+    }, _react.default.createElement(_Select.default, {
+      caption: "Company Size",
+      captionColor: null,
+      className: "vh-general-section-company-size ".concat(props.className ? props.className : ''),
+      currentItem: {
+        value: item.companySize,
+        label: item.companySizeStr
+      },
+      data: {
+        id: "ModalExperience",
+        field: "companySize"
+      },
+      onEvent: props.onEvent,
+      items: props.companyList,
+      descriptionColor: "red-light"
+    }), item.companySize.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required")), _react.default.createElement("div", {
+      style: {
+        width: '40%'
       }
     }, _react.default.createElement(_Select.default, {
       caption: "Industry",
-      captionColor: props.controls.industry.loading ? "gray-40" : props.controls.industry.error ? "red" : null,
+      captionColor: null,
       className: "vh-general-section-industry ".concat(props.className ? props.className : ''),
-      currentItem: props.currentItem,
-      data: "industry",
-      onEvent: function onEvent(e) {
-        if (e.type === 'OnChange') {
-          handleChange(e.props.item);
-        }
+      currentItem: {
+        value: item.industryId,
+        label: item.industry
       },
-      items: props.items,
-      isLoading: props.controls.industry.loading,
-      description: props.controls.industry.error && props.controls.industry.message,
-      descriptionColor: "red-light"
-    }))), _react.default.createElement(_Grid.Row, {
-      marginBottom5: true
-    }, _react.default.createElement(_index.default, {
-      color: "gray-100",
-      variant: 'platform',
-      text: "Role Title"
-    }), _react.default.createElement(_Simple.default, {
-      placeholder: "",
-      onEvent: function onEvent(e) {
-        console.log(e);
-      }
-    })), _react.default.createElement(_Grid.Row, {
-      marginBottom5: true
-    }, _react.default.createElement(_checkbox.default, {
-      title: 'I am currently working in this role',
-      color: "gray-100",
-      variant: "platform1",
-      data: '',
-      value: '',
-      name: 'working-role'.concat("-input-checkbox"),
-      id: 'working-role'.concat("-vh-input-checkbox"),
-      onEvent: props.onEvent
-    })), _react.default.createElement(_Grid.Row, {
-      marginBottom5: true,
-      row: true,
-      justifySpaceBetween: true
-    }, _react.default.createElement(_Grid.Row, {
-      width: '40%'
-    }, _react.default.createElement(_index.default, {
-      color: "gray-100",
-      variant: 'platform',
-      text: "Start Date"
-    }), _react.default.createElement(_Simple.default, {
-      placeholder: "",
-      onEvent: function onEvent(e) {
-        console.log(e);
-      }
-    })), _react.default.createElement(_Grid.Row, {
-      width: '40%'
-    }, _react.default.createElement(_index.default, {
-      color: "gray-100",
-      variant: 'platform',
-      text: "End Date"
-    }), _react.default.createElement(_Simple.default, {
-      placeholder: "",
-      onEvent: function onEvent(e) {
-        console.log(e);
-      }
-    }))), _react.default.createElement(_Grid.Row, {
-      marginBottom5: true
-    }, _react.default.createElement(_index.default, {
-      color: "gray-100",
-      variant: 'platform',
-      text: "Description"
-    }), _react.default.createElement(_index3.default, {
-      description: props.description,
-      onEvent: props.onEvent
-    })), _react.default.createElement(_Grid.Row, {
-      marginBottom5: true
-    }, _react.default.createElement(_Select.default, {
-      caption: "Skills used on this position",
-      isMulti: true,
-      captionColor: props.controls.skillsUsed.loading ? "gray-40" : props.controls.skillsUsed.error ? "red" : null,
-      className: "vh-skillsUsed-section-skillsUsed ".concat(props.className ? props.className : ''),
-      currentItem: props.workAs.current,
-      data: "skillsUsed",
+      data: {
+        id: "ModalExperience",
+        field: "industryId"
+      },
       onEvent: props.onEvent,
-      items: props.workAs,
-      isLoading: props.controls.skillsUsed.loading,
-      description: props.controls.skillsUsed.error && props.controls.skillsUsed.message,
+      items: props.industryList,
       descriptionColor: "red-light"
-    })), _react.default.createElement(_Grid.Row, {
+    }), item.industryId.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required"))), item.workExperiences.map(function (experience, index) {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
+        width: '70%',
+        marginBottom5: true
+      }, _react.default.createElement(_Select.default, {
+        caption: "Role Title",
+        captionColor: null,
+        className: "vh-general-section-position ".concat(props.className ? props.className : ''),
+        currentItem: {
+          value: experience.positionId,
+          label: experience.position
+        },
+        data: {
+          id: "ModalExperience",
+          field: "positionId",
+          index: index
+        },
+        onEvent: props.onEvent,
+        items: props.positions,
+        descriptionColor: "red-light"
+      }), experience.positionId.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required")), index === item.workExperiences.length - 1 && _react.default.createElement(_Grid.Row, {
+        marginBottom5: true
+      }, _react.default.createElement(_checkbox.default, {
+        title: 'I am currently working in this role',
+        color: "gray-100",
+        variant: "platform1",
+        data: {
+          checked: experience.isCurrentRole,
+          id: 'isCurrentRole',
+          index: index
+        },
+        checked: experience.isCurrentRole,
+        value: '',
+        name: 'working-role'.concat("-input-checkbox"),
+        id: 'working-role'.concat("-vh-input-checkbox"),
+        onEvent: props.onEvent
+      })), _react.default.createElement(_Grid.Row, {
+        marginBottom5: true,
+        row: true,
+        justifySpaceBetween: true
+      }, _react.default.createElement(_Grid.Row, {
+        width: '40%'
+      }, _react.default.createElement(_index.default, {
+        color: "gray-100",
+        variant: 'platform',
+        text: "Start Date"
+      }), _react.default.createElement(_Simple.default, {
+        placeholder: "",
+        type: 'date',
+        onEvent: props.onEvent,
+        value: (0, _index4.getFormatedDate)(experience.startDate.value),
+        data: {
+          id: "ModalEducation",
+          field: "startDate",
+          index: index
+        }
+      }), experience.startDate.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required")), _react.default.createElement(_Grid.Row, {
+        width: '40%'
+      }, _react.default.createElement(_index.default, {
+        color: "gray-100",
+        variant: 'platform',
+        text: "End Date"
+      }), _react.default.createElement(_Simple.default, {
+        placeholder: "",
+        type: 'date',
+        onEvent: props.onEvent,
+        value: (0, _index4.getFormatedDate)(experience.endDate.value),
+        data: {
+          id: "ModalEducation",
+          field: "endDate",
+          index: index
+        }
+      }))), _react.default.createElement(_Grid.Row, {
+        marginBottom5: true
+      }, _react.default.createElement(_index.default, {
+        color: "gray-100",
+        variant: 'platform',
+        text: "Description"
+      }), _react.default.createElement(_Simple.default, {
+        placeholder: "",
+        onEvent: props.onEvent,
+        value: experience.description.value,
+        data: {
+          id: "ModalEducation",
+          field: "description",
+          index: index
+        }
+      }), experience.description.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required")), index === item.workExperiences.length - 1 && _react.default.createElement(_Grid.Row, {
+        marginBottom5: true
+      }, _react.default.createElement(_index.default, {
+        color: "gradient-primary",
+        onEvent: props.onEvent,
+        data: 'addRole',
+        variant: 'platform',
+        text: "+ Add other role for this company",
+        cursor: true
+      })));
+    }), _react.default.createElement(_Grid.Row, {
       alignItemsRight: true
     }, _react.default.createElement(_index2.default, {
       primary: true,
-      onEvent: function onEvent(e) {},
+      data: 'saveExperience',
+      onEvent: props.onEvent,
+      onClose: props.onClose,
+      closeModal: props.closeModal,
       label: "Save"
     })))
   });

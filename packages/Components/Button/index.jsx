@@ -55,6 +55,9 @@ const VHButton = props => {
       nowrap={props.nowrap}
       type="button"
       onClick={() => {
+        if (props.setNewExperience) {
+          props.setNewExperience()
+        }
         if (props.onOpen) {
           props.onOpen()
         }

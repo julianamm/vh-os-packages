@@ -25,6 +25,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHList = function VHList(props) {
   var items = props.items ? props.items : [];
+
+  if (items.length > 0) {
+    items.sort(function (a, b) {
+      return a.order > b.order ? 1 : -1;
+    });
+  }
+
   var list = props.list ? props.list : [];
   var secondList = props.secondList ? props.secondList : [];
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
@@ -143,6 +150,7 @@ var VHList = function VHList(props) {
   }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
   }, _react.default.createElement(_Select.default, {
+    isDisabled: !items[2] ? true : false,
     marginBottom: '0px',
     removeBorder: true,
     caption: "",

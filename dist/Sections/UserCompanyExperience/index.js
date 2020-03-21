@@ -19,10 +19,51 @@ var _Button = _interopRequireDefault(require("../../Components/Button"));
 
 var _UserCompanyPositonExperience = _interopRequireDefault(require("../../Components/UserCompanyPositonExperience"));
 
+var _ModalExperience = _interopRequireDefault(require("../../Components/ModalExperience"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(props) {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
+  var _React$useState = _react.default.useState(false),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      openModal = _React$useState2[0],
+      setOpenModal = _React$useState2[1];
+
+  var _React$useState3 = _react.default.useState(false),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      newExperience = _React$useState4[0],
+      _setNewExperience = _React$useState4[1];
+
+  var experience = props.experience.experiences ? props.experience.experiences : [];
+
+  var _React$useState5 = _react.default.useState({}),
+      _React$useState6 = _slicedToArray(_React$useState5, 2),
+      currentItem = _React$useState6[0],
+      setCurrentItem = _React$useState6[1];
+
+  return _react.default.createElement(_react.default.Fragment, null, openModal && _react.default.createElement(_ModalExperience.default, {
+    openModal: openModal,
+    onClose: function onClose() {
+      return setOpenModal(false);
+    },
+    modalExperience: props.modalExperience,
+    currentItem: currentItem,
+    controls: props.controls,
+    onEvent: props.onEvent,
+    newExperience: newExperience,
+    countries: props.countries,
+    companyList: props.companyList,
+    industryList: props.industryList,
+    positions: props.positions
+  }), _react.default.createElement(_Grid.Row, {
     marginBottom: 5
   }, _react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
@@ -31,10 +72,18 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     variant: "h2"
   })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Base.default, {
     className: "vh-skills-section-card ".concat(props.className ? props.className : '')
-  }, props.userExperience.map(function (userPosition) {
+  }, experience.map(function (userPosition) {
     return _react.default.createElement(_Grid.Row, {
       marginBottom: 10
-    }, _react.default.createElement(_UserCompanyPositonExperience.default, userPosition));
+    }, _react.default.createElement(_UserCompanyPositonExperience.default, {
+      item: userPosition,
+      companyList: props.companyList,
+      industryList: props.industryList,
+      onOpen: function onOpen() {
+        setOpenModal(true);
+      },
+      onEvent: props.onEvent
+    }));
   }), _react.default.createElement(_Grid.Row, {
     row: true
   }, _react.default.createElement(_Grid.Row, {
@@ -45,7 +94,14 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     primary: true,
     onEvent: props.onEvent,
     data: "AddExperience",
-    label: "Add Experience"
+    label: "Add Experience",
+    closeModal: props.closeModal,
+    onOpen: function onOpen() {
+      setOpenModal(true);
+    },
+    setNewExperience: function setNewExperience() {
+      _setNewExperience(true);
+    }
   })), _react.default.createElement(_Grid.Row, {
     row: true
   }, _react.default.createElement(_Button.default, {

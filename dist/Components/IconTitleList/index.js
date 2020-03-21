@@ -14,17 +14,15 @@ var _index = _interopRequireDefault(require("../IconText/index"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHIconTitleList = function VHIconTitleList(props) {
-  return props.items.map(function (item) {
-    return _react.default.createElement(_index.default, {
-      iconColor: "gray-30",
-      textColor: "gray-90",
-      text: item.label,
-      icon: "bullet",
-      className: "vh-icon-title-list ".concat(props.className ? props.className : ''),
-      variant: "platform",
-      data: props.data,
-      onEvent: props.onEvent
-    });
+  return _react.default.createElement(_index.default, {
+    iconColor: "gray-30",
+    textColor: "gray-90",
+    text: props.description,
+    icon: "bullet",
+    className: "vh-icon-title-list ".concat(props.className ? props.className : ''),
+    variant: "platform",
+    data: props.data,
+    onEvent: props.onEvent
   });
 };
 
