@@ -10,28 +10,4 @@ var requiredField = function requiredField(val) {
 };
 
 exports.requiredField = requiredField;
-
-var getFormatedDate = function getFormatedDate(date) {
-  var result = '';
-
-  if (date) {
-    var d = new Date(date),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
-
-    if (month.length < 2) {
-      month = '0' + month;
-    }
-
-    if (day.length < 2) {
-      day = '0' + day;
-    }
-
-    result = [year, month, day].join('-');
-  }
-
-  return result;
-};
-
-exports.getFormatedDate = getFormatedDate;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3BhY2thZ2VzL3V0aWwvaW5kZXguanMiXSwibmFtZXMiOlsicmVxdWlyZWRGaWVsZCIsInZhbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFPLElBQU1BLGFBQWEsR0FBRyxTQUFoQkEsYUFBZ0IsQ0FBQUMsR0FBRztBQUFBLFNBQ2hDQSxHQUFHLEtBQUssV0FBUixJQUF1QkEsR0FBRyxLQUFLLEVBREM7QUFBQSxDQUF6QiIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBjb25zdCByZXF1aXJlZEZpZWxkID0gdmFsID0+XG52YWwgIT09ICd1bmRlZmluZWQnICYmIHZhbCAhPT0gJyc7Il19

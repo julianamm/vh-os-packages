@@ -1,6 +1,11 @@
 import React, { PureComponent } from 'react';
 import ReactCrop from 'react-image-crop';
-import 'react-image-crop/dist/ReactCrop.css';
+import { createGlobalStyle } from 'styled-components'
+import reactImageCropCss from 'react-image-crop/dist/ReactCrop.css'
+import VHModal from '../Modal'
+const GlobalStyle = createGlobalStyle`
+${reactImageCropCss};
+`
 import { Container, Row } from '../../Grid'
 import VHAvatar from '../Avatar'
 import VHButton from '../Button'
@@ -94,9 +99,10 @@ class VHImgCrop extends PureComponent {
 
   render() {
     const { crop, cropped, croppedImageUrlSent, showCropper, croppedImageUrl, src } = this.state;
-
+    // console.log('reactImageCropCss', reactImageCropCss)
     return (
       <div className="imgCrop">
+        <GlobalStyle />
         <VHAvatar
           content=""
           image={ croppedImageUrlSent || this.props.source}
@@ -108,6 +114,9 @@ class VHImgCrop extends PureComponent {
             })
           }}
         />
+        <VHModal
+        content={<>
+
         {
           showCropper && (
               <VHButton
@@ -139,6 +148,11 @@ class VHImgCrop extends PureComponent {
             onChange={this.onCropChange}
           />
         )}
+        </>}
+        onEvent={function noRefCheck() {}}
+        open={showCropper}
+      />
+
         {croppedImageUrl && cropped && (
           <img alt="Crop" style={{ maxWidth: '100%' }} src={croppedImageUrl} />
         )}
