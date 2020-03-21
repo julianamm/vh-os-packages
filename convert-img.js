@@ -102,7 +102,7 @@ function ConvertFiles(){
 }
 
 const Obj = new ConvertFiles()
-Obj.setDir(dirImages)
+Obj.setDir(dirDurand)
 Obj.run().then(response => {
     console.log(response)
 }).catch(err => {
