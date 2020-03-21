@@ -1,6 +1,4 @@
 
-import * as React from "react";
-
 const  icon_time = props => (
     <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "16px"} height={props.height || "16px"} fill={props.fill || "none"} viewBox={props.viewBox || "0 0 16 16"}>
         

@@ -42,7 +42,6 @@ VHInputIcon.defaultProps = {
   data: null,
   placeholder: "",
   value: "",
-  icon: WebSiteIcon,
   className: '',
 }
 

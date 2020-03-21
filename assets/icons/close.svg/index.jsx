@@ -1,8 +1,7 @@
 
-import * as React from "react";
 
 const  close = props => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "24pxpx"} height={props.height || "24pxpx"} fill={props.fill || "undefined"} viewBox={props.viewBox || "0 0 24 24"}>
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "24px"} height={props.height || "24px"} fill={props.fill || "undefined"} viewBox={props.viewBox || "0 0 24 24"}>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Artboard" transform="translate(-580.000000, -100.000000)">
             <g id="close" transform="translate(580.000000, 100.000000)">

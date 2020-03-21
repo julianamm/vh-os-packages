@@ -6,13 +6,13 @@ import * as S from "./styles";
 import VHHeader from "../../../Typography/Headers";
 import VHImg from "../../Img";
 
-import CompanyIcon from '../../../../assets/icons/icon_business.svg'
-import PositionIcon from '../../../../assets/icons/icon_skills.svg'
-import CityIcon from '../../../../assets/icons/icon_passport.svg'
-import CommentsIcon from '../../../../assets/icons/icon_chat-outline.svg'
-import TimeIconRed from '../../../../assets/icons/icon_time_red.svg'
-import TimeIconGreen from '../../../../assets/icons/icon_time_green.svg'
-import FavoriteIcon from '../../../../assets/icons/icon_star_fill.svg'
+import CompanyIcon from '../../../../assets/icons/icon_business.svg/index.jsx'
+import PositionIcon from '../../../../assets/icons/icon_skills.svg/index.jsx'
+import CityIcon from '../../../../assets/icons/icon_passport.svg/index.jsx'
+import CommentsIcon from '../../../../assets/icons/icon_chat-outline.svg/index.jsx'
+import TimeIconRed from '../../../../assets/icons/icon_time_red.svg/index.jsx'
+import TimeIconGreen from '../../../../assets/icons/icon_time_green.svg/index.jsx'
+import FavoriteIcon from '../../../../assets/icons/icon_star_fill.svg/index.jsx'
 
 const VHCardVisaProcess = props => {
   return (

@@ -1,5 +1,4 @@
 
-import * as React from "react";
 
 const  icon_filter = props => (
     <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "24px"} height={props.height || "24px"} fill={props.fill || "none"} viewBox={props.viewBox || "0 0 24 24"}>

@@ -1,5 +1,5 @@
 
-import * as React from "react";
+
 
 const  icon_medal = props => (
     <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "36px"} height={props.height || "36px"} fill={props.fill || "none"} viewBox={props.viewBox || "0 0 36 36"}>

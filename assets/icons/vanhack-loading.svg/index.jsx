@@ -1,8 +1,6 @@
 
-import * as React from "react";
-
 const  vanhackLoading = props => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "71pxpx"} height={props.height || "71pxpx"} fill={props.fill || "undefined"} viewBox={props.viewBox || "0 0 71 71"}>
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "71px"} height={props.height || "71px"} fill={props.fill || "undefined"} viewBox={props.viewBox || "0 0 71 71"}>
     <g id="StyleGuide" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="VH---Style-Guide" transform="translate(-888.000000, -10699.000000)">
             <g id="vh-/-brand-/-vanhack-favicon-copy-3" transform="translate(888.000000, 10699.000000)">

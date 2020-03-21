@@ -14,13 +14,9 @@ import VHIconText from "../IconText";
 import VHPreloader from '../Preloader/index'
 import VHImg from '../Img/index'
 
-import CompanyIcon from '../../../assets/icons/icon_business.svg'
-import PositionIcon from '../../../assets/icons/icon_skills.svg'
-import CityIcon from '../../../assets/icons/icon_passport.svg'
-import CommentsIcon from '../../../assets/icons/icon_chat-outline.svg'
-import TimeIconRed from '../../../assets/icons/icon_time_red.svg'
-import TimeIconGreen from '../../../assets/icons/icon_time_green.svg'
-import FavoriteIcon from '../../../assets/icons/icon_star_fill.svg'
+import CompanyIcon from '../../../assets/icons/icon_business.svg/index.jsx'
+import PositionIcon from '../../../assets/icons/icon_skills.svg/index.jsx'
+import CityIcon from '../../../assets/icons/icon_passport.svg/index.jsx'
 
 const VHModalVisaPipeline = props => {
 

@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BulletIcon  from '../../../assets/icons/dot.svg'
-import FilterIcon  from '../../../assets/icons/icon_filter.svg'
-import ArrowLeftIcon  from '../../../assets/icons/ico-arrow-left.svg'
-import SortIcon  from '../../../assets/icons/icon_swap-vert.svg'
-import SearchIcon  from '../../../assets/icons/mdi_search.svg'
-import GitHubIcon from '../../../../assets/icons/iconGithub.svg'
-import LinkedInIcon from '../../../../assets/icons/iconLikedin-login.svg'
-import WebSiteIcon from '../../../../assets/icons/iconGlobe.svg'
+import BulletIcon  from '../../../assets/icons/dot.svg/index.jsx'
+import FilterIcon  from '../../../assets/icons/icon_filter.svg/index.jsx'
+import ArrowLeftIcon  from '../../../assets/icons/ico-arrow-left.svg/index.jsx'
+import SortIcon  from '../../../assets/icons/icon_swap-vert.svg/index.jsx'
+import SearchIcon  from '../../../assets/icons/mdi_search.svg/index.jsx'
+import GitHubIcon from '../../../assets/icons/iconGithub.svg/index.jsx'
+import LinkedInIcon from '../../../assets/icons/iconLikedin-login.svg/index.jsx'
+import WebSiteIcon from '../../../assets/icons/iconGlobe.svg/index.jsx'
 
 import Color from "../../Colors";
 
