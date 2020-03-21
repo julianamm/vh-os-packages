@@ -8,7 +8,7 @@ const items = {
     highlight: "Get ready to get hired abroad",
     description: "Acquire career skills that will make you stand out from the herd! Live interview practice, profile review, exclusive webinars and more.",
     label: "JOIN VANHACK PREMIUM",
-    image: require("../../../assets/images/img_hero_premium.png"),
+    image: require("../../assets/general/background/img_hero_premium.png"),
 }
 
 storiesOf("Components|Title Highlight Description Button Image", module)

@@ -11,12 +11,11 @@ import VHTimeLine from "../TimeLine";
 import VHAssign from "../Assign";
 import VHTextarea from "../Textarea";
 import VHIconText from "../IconText";
-import VHPreloader from '../Preloader/index'
-import VHImg from '../Img/index'
-
-import CompanyIcon from '../../../assets/icons/icon_business.svg/index.jsx'
-import PositionIcon from '../../../assets/icons/icon_skills.svg/index.jsx'
-import CityIcon from '../../../assets/icons/icon_passport.svg/index.jsx'
+import VHPreloader from '../Preloader/index';
+import VHImg from '../Img/index';
+import CompanyIcon from '../../assets/svg/icons/icon_business.svg/index.jsx';
+import PositionIcon from '../../assets/svg/icons/icon_skills.svg/index.jsx';
+import CityIcon from '../../assets/svg/icons/icon_passport.svg/index.jsx';
 
 const VHModalVisaPipeline = props => {
 
