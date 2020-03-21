@@ -10,8 +10,9 @@
   },
   "scripts": {
     "start": "start-storybook -p 6007",
+    "webpack": "webpack",
     "build": "build-storybook -o docs",
-    "transpile": "babel --plugins inline-import-data-uri,@babel/plugin-proposal-class-properties packages --source-maps inline --out-dir dist "
+    "transpile": "babel --plugins inline-import-data-uri,@babel/plugin-proposal-class-properties packages --out-dir dist "
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,6 +33,7 @@
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
     "@storybook/addon-actions": "^5.3.9",
@@ -40,10 +42,11 @@
     "@storybook/addons": "^5.3.9",
     "@storybook/react": "^5.3.9",
     "babel-loader": "^8.0.6",
+    "babel-plugin-css-modules-transform": "^1.6.2",
     "babel-plugin-inline-import-data-uri": "^1.0.1",
     "react-scripts": "^3.3.0",
-    "babel-plugin-css-modules-transform": "^1.6.2",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "react-image-crop": "^8.5.0",

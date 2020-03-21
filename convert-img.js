@@ -1,9 +1,9 @@
 const fs = require("fs")
 const path = require("path")
-const dirDurand = path.join(__dirname ,'./assets/durand')
-const dirFlags = path.join(__dirname ,'./assets/flags')
-const dirIcons = path.join(__dirname ,'./assets/icons')
-const dirImages = path.join(__dirname ,'./assets/images')
+const dirDurand = path.join(__dirname ,'./packages/assets/durand')
+const dirFlags = path.join(__dirname ,'./packages/assets/flags')
+const dirIcons = path.join(__dirname ,'./packages/assets/icons')
+const dirImages = path.join(__dirname ,'./packages/assets/images')
 const  { parse }  = require('svg-parser');
 
 const template = props => {
@@ -102,7 +102,11 @@ function ConvertFiles(){
 }
 
 const Obj = new ConvertFiles()
-Obj.setDir(dirDurand)
+// Obj.setDir(dirDurand)
+// Obj.setDir(dirFlags)
+// Obj.setDir(dirIcons)
+Obj.setDir(dirImages)
+
 Obj.run().then(response => {
     console.log(response)
 }).catch(err => {

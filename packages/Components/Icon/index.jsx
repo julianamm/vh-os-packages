@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BulletIcon  from '../../assets/icons/dot.svg'
-import FilterIcon  from '../../assets/icons/icon_filter.svg'
-import ArrowLeftIcon  from '../../assets/icons/icon_arrow_left.svg'
-import SortIcon  from '../../assets/icons/icon_swap_vert.svg'
-import SearchIcon  from '../../assets/icons/mdi_search.svg'
-import GitHubIcon from '../../assets/icons/icon_github.svg'
-import LinkedInIcon from '../../assets/icons/likedinIcon.svg'
-import WebSiteIcon from '../../assets/icons/icon_globe.svg'
+import BulletIcon  from '../../assets/svg/icons/dot.svg/index.jsx'
+import FilterIcon  from '../../assets/svg/icons/icon_filter.svg/index.jsx'
+import ArrowLeftIcon  from '../../assets/svg/icons/icon_arrow_left.svg/index.jsx'
+import SortIcon  from '../../assets/svg/icons/icon_swap_vert.svg/index.jsx'
+import SearchIcon  from '../../assets/svg/icons/mdi_search.svg/index.jsx'
+import GitHubIcon from '../../assets/svg/icons/icon_github.svg/index.jsx'
+import LinkedInIcon from '../../assets/svg/icons/icon_linkedin_login.svg/index.jsx'
+import Durand from '../../assets/svg/durand/flag_canada.svg/index.jsx'
+import WebSiteIcon from '../../assets/svg/icons/icon_globe.svg/index.jsx'
 
 import Color from "../../Colors";
 
@@ -65,28 +66,28 @@ const VHIcon = props => {
   if(props.color) {
     defaultColor = Color[props.color];
   }
-  defaultColor = Color["primary-light"];
+
   switch (props.icon) {
-    // case "bullet":
-    //   return <BulletIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
-    // case "sort":
-    //   return <SortIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
-    // case "filter":
-    //   return <FilterIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
-    // case "search":
-    //   return <SearchIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
-    // case "arrow-left":
-    //   return <ArrowLeftIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
-    // case 'github':
-    //   return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
-    // case 'world':
-    //   return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
-    // case 'linkedin':
-    //   return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
-    // case 'search':
-      // return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case "bullet":
+      return <BulletIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case "sort":
+      return <SortIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case "filter":
+      return <FilterIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case "search":
+      return <SearchIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case "arrow-left":
+      return <ArrowLeftIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case 'github':
+      return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case 'world':
+      return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case 'linkedin':
+      return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case 'search':
+      return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
     default:
-      return <LinkedInIcon fill={'red'}  className={`vh-icon ${props.className ? props.className : ''}`}/>
+      return <span />
 
   }
 }
