@@ -9,7 +9,7 @@ const premiumInterviewClass = {
     image: require("../../../assets/svg/background/img_premium_interview.svg"),
     label: "watch a class",
     to: "#",
-    source: require("../../../assets/svg/icons/icon_arrow_right.svg"),
+    source: require("../../../assets/svg/icons/icon_arrow_right.svg/index.jsx"),
 };
 
 const premiumOtherServices = [
@@ -17,10 +17,9 @@ const premiumOtherServices = [
         title: "PROFILE REVIEW",
         highlight: "Have experts review your VanHack profile - improve all your profiles at once",
         description: "All improvements directly translate to your resume and LinkedIn Profile. Impove all three at once! LinkedIn’s own data shows candidates with an improved profile are around 30% more likely to be hired.",
-        image: require("../../../../assets/images/img_premium_profile.svg"),
         image: require("../../../assets/svg/background/img_premium_profile.svg"),
         reverseTop: true,
-        avatar: require("../../../assets/general/UserTestimonials/marco_teixeira.jpg"),
+        avatar: require("../../../assets/general/UserTestimonials/marco_texeira.jpg"),
         sizeAvatar: "md",
         testimonial: '”The preparation provided made a huge difference in my success” - Marco Teixeira',
         color: "gray-90",
@@ -30,7 +29,7 @@ const premiumOtherServices = [
         title: "PREMIUM SLACK GROUP",
         highlight: "Exclusive Premium Slack Group. Connect with thousands of  motivated Premium Members",
         description: "Get exciting information that’s not publicly available and access specific channels like #leap and #immigration where our specialists will answer your questions. Be motivated with the #I-got-a_job. And most of all, inspire each other in your common quest.",
-        image: rrequire("../../../assets/svg/background/img_premium_profile.svg"),
+        image: require("../../../assets/svg/background/img_premium_profile.svg"),
         reverseTop: false,
         avatar: require("../../../assets/general/UserTestimonials/shara_shami.jpg"),
         sizeAvatar: "md",

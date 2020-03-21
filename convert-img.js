@@ -1,9 +1,9 @@
 const fs = require("fs")
 const path = require("path")
-const dirDurand = path.join(__dirname ,'./packages/assets/durand')
-const dirFlags = path.join(__dirname ,'./packages/assets/flags')
-const dirIcons = path.join(__dirname ,'./packages/assets/icons')
-const dirImages = path.join(__dirname ,'./packages/assets/images')
+const dirDurand = path.join(__dirname ,'./packages/assets/svg/durand')
+const dirFlags = path.join(__dirname ,'./packages/assets/svg/flags')
+const dirIcons = path.join(__dirname ,'./packages/assets/svg/icons')
+const dirBackground = path.join(__dirname ,'./packages/assets/svg/background')
 const  { parse }  = require('svg-parser');
 
 const template = props => {
@@ -56,8 +56,9 @@ function ConvertFiles(){
         filesFromDir = fs.readdirSync(dir)
         files.length = 0
         filesFromDir.map((file, index) => {
-            if (path.extname(file).split(".")[1] === 'svg') {
 
+            const isFile = !fs.lstatSync(`${dir}/${file}`).isDirectory()
+            if (isFile && path.extname(file).split(".")[1] === 'svg') {
                 files.push({
                     name: file.split('.')[0],
                     path: `${dir}`,
@@ -105,7 +106,7 @@ const Obj = new ConvertFiles()
 // Obj.setDir(dirDurand)
 // Obj.setDir(dirFlags)
 // Obj.setDir(dirIcons)
-Obj.setDir(dirImages)
+Obj.setDir(dirBackground)
 
 Obj.run().then(response => {
     console.log(response)

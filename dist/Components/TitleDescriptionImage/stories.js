@@ -17,7 +17,7 @@ var items = {
   descriptionVariant: "h6",
   title: "Have questions about VanHack Premium?",
   description: "Give us your email and we’ll get in touch.",
-  image: require("../../../assets/images/img_hero_premium.png")
+  image: require("../../assets/general/background/img_hero_premium.png")
 };
 (0, _react2.storiesOf)("Components|Title Description Image", module).add("Default", function () {
   return _react.default.createElement(_index.Row, {

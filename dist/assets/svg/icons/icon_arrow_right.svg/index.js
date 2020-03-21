@@ -7,45 +7,24 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var S = _interopRequireWildcard(require("./styles"));
-
-var _index = _interopRequireDefault(require("../../assets/svg/icons/vanhack_loading.svg/index.jsx"));
+var React = _interopRequireWildcard(require("react"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var VHPreloader = function VHPreloader(props) {
-  if (props.type === "bubble") {
-    return _react.default.createElement(S.PreloaderBubble, {
-      size: props.size
-    }, _react.default.createElement("div", null), _react.default.createElement("div", null), _react.default.createElement("div", null));
-  }
-
-  if (props.type === "fullPage") {
-    return _react.default.createElement(S.Container, null, _react.default.createElement(S.ImageSection, null, _react.default.createElement(S.Image, {
-      image: _index.default
-    })), _react.default.createElement(S.PreloaderSection, null, _react.default.createElement(S.PreloaderBubble, {
-      size: props.size
-    }, _react.default.createElement("div", null), _react.default.createElement("div", null), _react.default.createElement("div", null))));
-  }
-
-  return _react.default.createElement(S.PreloaderCircle, {
-    size: props.size
-  }, _react.default.createElement("div", null));
+var icon_arrow_right = function icon_arrow_right(props) {
+  return React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: props.width || "24",
+    height: props.height || "24",
+    fill: props.fill || "none",
+    viewBox: props.viewBox || "0 0 24 24"
+  }, React.createElement("path", {
+    fill: "#0675CE",
+    d: "M12 2.4l-1.41 1.41 5.58 5.59H4v2h12.17l-5.58 5.59L12 18.4l8-8-8-8z"
+  }));
 };
 
-VHPreloader.defaultProps = {
-  content: ''
-};
-VHPreloader.propTypes = {
-  size: _propTypes.default.string
-};
-var _default = VHPreloader;
+var _default = icon_arrow_right;
 exports.default = _default;

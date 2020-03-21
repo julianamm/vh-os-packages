@@ -19,17 +19,17 @@ var _Grid = require("../../Grid");
 
 var S = _interopRequireWildcard(require("./styles"));
 
-var _index3 = _interopRequireDefault(require("../../../assets/flags/flag_usa.svg/index.jsx"));
+var _index3 = _interopRequireDefault(require("../../assets/svg/flags/flag_usa.svg/index.jsx"));
 
-var _index4 = _interopRequireDefault(require("../../../assets/flags/flag_canada.svg/index.jsx"));
+var _index4 = _interopRequireDefault(require("../../assets/svg/flags/flag_canada.svg/index.jsx"));
 
-var _index5 = _interopRequireDefault(require("../../../assets/flags/flag_germany.svg/index.jsx"));
+var _index5 = _interopRequireDefault(require("../../assets/svg/flags/flag_germany.svg/index.jsx"));
 
-var _index6 = _interopRequireDefault(require("../../../assets/flags/flag_ireland.svg/index.jsx"));
+var _index6 = _interopRequireDefault(require("../../assets/svg/flags/flag_ireland.svg/index.jsx"));
 
-var _index7 = _interopRequireDefault(require("../../../assets/flags/flag_netherlands.svg/index.jsx"));
+var _index7 = _interopRequireDefault(require("../../assets/svg/flags/flag_netherlands.svg/index.jsx"));
 
-var _index8 = _interopRequireDefault(require("../../../assets/flags/flag_uk.svg/index.jsx"));
+var _index8 = _interopRequireDefault(require("../../assets/svg/flags/flag_uk.svg/index.jsx"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

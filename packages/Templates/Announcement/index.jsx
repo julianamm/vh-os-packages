@@ -4,7 +4,7 @@ import VHText from '../../Components/Text'
 import VHButton from '../../Components/Button'
 import PropTypes from 'prop-types'
 import { Wrapper1 } from './styles'
-import cover from '../../../assets/covers/MaskGroup.png'
+import cover from '../../assets/general/covers/MaskGroup.png'
 
 const VHAnnouncementTemplate = props => {
     return (

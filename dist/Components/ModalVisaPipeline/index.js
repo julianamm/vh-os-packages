@@ -35,11 +35,11 @@ var _index = _interopRequireDefault(require("../Preloader/index"));
 
 var _index2 = _interopRequireDefault(require("../Img/index"));
 
-var _index3 = _interopRequireDefault(require("../../../assets/icons/icon_business.svg/index.jsx"));
+var _index3 = _interopRequireDefault(require("../../assets/svg/icons/icon_business.svg/index.jsx"));
 
-var _index4 = _interopRequireDefault(require("../../../assets/icons/icon_skills.svg/index.jsx"));
+var _index4 = _interopRequireDefault(require("../../assets/svg/icons/icon_skills.svg/index.jsx"));
 
-var _index5 = _interopRequireDefault(require("../../../assets/icons/icon_passport.svg/index.jsx"));
+var _index5 = _interopRequireDefault(require("../../assets/svg/icons/icon_passport.svg/index.jsx"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 

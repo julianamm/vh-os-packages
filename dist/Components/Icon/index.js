@@ -9,23 +9,21 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _index = _interopRequireDefault(require("../../assets/icons/dot.svg/index.jsx"));
+var _index = _interopRequireDefault(require("../../assets/svg/icons/dot.svg/index.jsx"));
 
-var _index2 = _interopRequireDefault(require("../../assets/icons/icon_filter.svg/index.jsx"));
+var _index2 = _interopRequireDefault(require("../../assets/svg/icons/icon_filter.svg/index.jsx"));
 
-var _index3 = _interopRequireDefault(require("../../assets/icons/icon_arrow_left.svg/index.jsx"));
+var _index3 = _interopRequireDefault(require("../../assets/svg/icons/icon_arrow_left.svg/index.jsx"));
 
-var _index4 = _interopRequireDefault(require("../../assets/icons/icon_swap_vert.svg/index.jsx"));
+var _index4 = _interopRequireDefault(require("../../assets/svg/icons/icon_swap_vert.svg/index.jsx"));
 
-var _index5 = _interopRequireDefault(require("../../assets/icons/mdi_search.svg/index.jsx"));
+var _index5 = _interopRequireDefault(require("../../assets/svg/icons/mdi_search.svg/index.jsx"));
 
-var _index6 = _interopRequireDefault(require("../../assets/icons/icon_github.svg/index.jsx"));
+var _index6 = _interopRequireDefault(require("../../assets/svg/icons/icon_github.svg/index.jsx"));
 
-var _index7 = _interopRequireDefault(require("../../assets/icons/icon_linkedin_login.svg/index.jsx"));
+var _index7 = _interopRequireDefault(require("../../assets/svg/icons/icon_linkedin_login.svg/index.jsx"));
 
-var _index8 = _interopRequireDefault(require("../../assets/durand/flag_canada.svg/index.jsx"));
-
-var _index9 = _interopRequireDefault(require("../../assets/icons/icon_globe.svg/index.jsx"));
+var _index8 = _interopRequireDefault(require("../../assets/svg/icons/icon_globe.svg/index.jsx"));
 
 var _Colors = _interopRequireDefault(require("../../Colors"));
 
@@ -133,7 +131,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'github':
-      return _react.default.createElement(_index7.default, {
+      return _react.default.createElement(_index6.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -141,7 +139,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'world':
-      return _react.default.createElement(_index7.default, {
+      return _react.default.createElement(_index8.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -157,7 +155,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'search':
-      return _react.default.createElement(_index7.default, {
+      return _react.default.createElement(_index5.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),

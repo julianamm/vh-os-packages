@@ -10,7 +10,7 @@ const items = {
     descriptionVariant: "h6",
     title: "Have questions about VanHack Premium?",
     description: "Give us your email and we’ll get in touch.",
-    image: require("../../assets/general/backgroundimg_hero_premium.png"),
+    image: require("../../assets/general/background/img_hero_premium.png"),
 };
 
 storiesOf("Components|Title Description Image", module)
@@ -28,4 +28,4 @@ storiesOf("Components|Title Description Image", module)
                 />
             </Row>
         </Row>
-    )); 
+    ));

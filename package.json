@@ -12,7 +12,7 @@
     "start": "start-storybook -p 6007",
     "webpack": "webpack",
     "build": "build-storybook -o docs",
-    "transpile": "babel --plugins inline-import-data-uri,@babel/plugin-proposal-class-properties packages --out-dir dist "
+    "transpile": "babel --plugins inline-import-data-uri,@babel/plugin-proposal-class-properties packages --copy-files --out-dir dist "
   },
   "eslintConfig": {
     "extends": "react-app"
