@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="53" height="40" fill="none" viewBox="0 0 53 40">
-    <g fill-rule="evenodd" clip-path="url(#prefix__clip0)" clip-rule="evenodd">
+<svg width="53" height="40" fill="none" viewBox="0 0 53 40">
+    <g fillRule="evenodd" clipPath="url(#prefix__clip0)" clipRule="evenodd">
         <path fill="#fff" d="M0 0h53v39.75H0V0z"/>
         <path fill="#009A49" d="M0 0h17.664v39.75H0V0z"/>
         <path fill="#FF7900" d="M35.336 0H53v39.75H35.336V0z"/>
