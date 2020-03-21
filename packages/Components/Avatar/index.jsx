@@ -25,7 +25,8 @@ const VHAvatar = props => {
 };
 
 VHAvatar.defaultProps = {
-  content: ''
+  content: '',
+  showCursor: true,
 };
 
 VHAvatar.propTypes = {
