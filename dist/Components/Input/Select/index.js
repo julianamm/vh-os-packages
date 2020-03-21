@@ -15,6 +15,8 @@ var _animated = _interopRequireDefault(require("react-select/animated"));
 
 var _Text = _interopRequireDefault(require("../../Text"));
 
+var _reactPreloadSkeleton = require("react-preload-skeleton");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -34,6 +36,10 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var animatedComponents = (0, _animated.default)();
 
 var VHSelect = function VHSelect(props) {
+  if (props.preLoading) {
+    return _react.default.createElement(_reactPreloadSkeleton.TitleDescriptionSkeleton, null);
+  }
+
   var _React$useState = _react.default.useState(props.currentItem),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       value = _React$useState2[0],

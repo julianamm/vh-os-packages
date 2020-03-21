@@ -35,23 +35,27 @@ var items = [{
     controls: {
       gender: {
         loading: false,
+        preLoading: false,
         error: true,
         success: false,
         message: 'Database error'
       },
       citizenship: {
+        preLoading: false,
         loading: false,
         error: false,
         success: false,
         message: 'Database error'
       },
       location: {
+        preLoading: false,
         loading: true,
         error: false,
         success: false,
         message: 'Database error'
       },
       phone: {
+        preLoading: true,
         loading: true,
         error: false,
         success: false,

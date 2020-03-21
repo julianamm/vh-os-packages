@@ -23,9 +23,23 @@ var _Simple = _interopRequireDefault(require("../../Components/Input/Simple"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 var VHGeneralSection = function VHGeneralSection(props) {
   var genders = props.genders;
   var gender = props.gender != undefined ? [genders[props.gender]] : {};
+
+  var _React$useState = _react.default.useState(true),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      preloaderPhone = _React$useState2[0],
+      setPreloaderPhone = _React$useState2[1];
+
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
     marginBottom: 5
   }, _react.default.createElement(_Text.default, {
@@ -42,6 +56,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
   }, _react.default.createElement(_Grid.Row, {
     paddingRight8: true
   }, _react.default.createElement(_TitleDescription.default, {
+    preLoading: props.controls.citizenship.preLoading,
     className: "vh-general-section-citizenship ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.citizenship.loading ? "gray-40" : props.controls.citizenship.error ? "red-light" : "gray-90",
     descriptionVariant: "caption",
@@ -50,7 +65,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     title: "Citizenship",
     titleColor: props.controls.citizenship.loading ? "gray-40" : props.controls.citizenship.error ? "red" : "gray-100",
     titleVariant: "subtitle3"
-  }), _react.default.createElement(_Simple.default, {
+  }), !props.controls.citizenship.preLoading && _react.default.createElement(_Simple.default, {
     type: 'text',
     data: "citizenship",
     onEvent: props.onEvent,
@@ -61,13 +76,14 @@ var VHGeneralSection = function VHGeneralSection(props) {
   })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-currentLocation ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.location.loading ? "gray-40" : props.controls.location.error ? "red-light" : "gray-90",
+    preLoading: props.controls.location.preLoading,
     descriptionVariant: "caption",
     inline: true,
     onEvent: props.onEvent,
     title: "Current Location",
     titleColor: props.controls.location.loading ? "gray-40" : props.controls.location.error ? "red" : "gray-100",
     titleVariant: "subtitle3"
-  }), _react.default.createElement(_Simple.default, {
+  }), !props.controls.location.preLoading && _react.default.createElement(_Simple.default, {
     type: 'text',
     data: "location",
     onEvent: props.onEvent,
@@ -81,6 +97,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
   }, _react.default.createElement(_Grid.Row, {
     paddingRight8: true
   }, _react.default.createElement(_Select.default, {
+    preLoading: props.controls.gender.preLoading,
     caption: "Gender",
     className: "vh-general-section-gender ".concat(props.className ? props.className : ''),
     currentItem: gender,
@@ -96,13 +113,14 @@ var VHGeneralSection = function VHGeneralSection(props) {
   }, _react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-phone ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red-light" : "gray-90",
+    preLoading: props.controls.phone.preLoading,
     descriptionVariant: "caption",
     inline: true,
     onEvent: props.onEvent,
     title: "Phone number",
     titleColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red" : "gray-100",
     titleVariant: "subtitle3"
-  }), _react.default.createElement(_Simple.default, {
+  }), !props.controls.phone.preLoading && _react.default.createElement(_Simple.default, {
     data: "phone",
     onEvent: props.onEvent,
     disabled: props.controls.phone.loading,
