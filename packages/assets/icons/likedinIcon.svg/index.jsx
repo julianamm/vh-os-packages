@@ -1,12 +1,20 @@
 
-const  iconLikedinLogin = props => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "24px"} height={props.height || "24px"} fill={props.fill || "none"} viewBox={props.viewBox || "0 0 24 24"}>
+import * as React from "react";
 
-    <circle cx="12" cy="12" r="10" fill="#fff"/>
-    <path fill="#007AB9" fillRule="evenodd"
-    d="M17.612 16.712v-3.904c0-2.091-1.116-3.065-2.605-3.065-1.201 0-1.74.661-2.04 1.125v-.965h-2.263c.03.64 0 6.81 0 6.81h2.263V12.91c0-.203.015-.407.075-.552.163-.407.536-.828 1.16-.828.82 0 1.147.625 1.147 1.54v3.643h2.263zM8.32 8.974c.789 0 1.28-.523 1.28-1.177-.014-.668-.491-1.176-1.265-1.176-.774 0-1.28.508-1.28 1.176 0 .654.49 1.177 1.25 1.177h.015zM12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-2.549-5.288V9.903H7.188v6.81h2.263z" clipRule="evenodd"/>
+const  close = props => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "24px"} height={props.height || "24px"} fill={props.fill || "undefined"} viewBox={props.viewBox || "0 0 24 24"}>
 
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Artboard" transform="translate(-580.000000, -100.000000)">
+            <g id="close" transform="translate(580.000000, 100.000000)">
+                <g id="vh-/-icons-/-material-/-24">
+                    <rect id="bounds" fill="#0675CE" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                    <polygon id="" fill="#95A1AC" fillRule="nonzero" points="18.984375 6.421875 13.40625 12 18.984375 17.578125 17.578125 18.984375 12 13.40625 6.421875 18.984375 5.015625 17.578125 10.59375 12 5.015625 6.421875 6.421875 5.015625 12 10.59375 17.578125 5.015625"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
     </svg>
   )
 
-export default iconLikedinLogin
+export default close

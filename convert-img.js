@@ -31,7 +31,7 @@ var res = props.content.substring(firstMatch[0].length, props.content.length - e
 import * as React from "react";
 
 const  ${props.name} = props => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "${parsed.width}px"} height={props.height || "${parsed.height}px"} fill={props.fill || "${parsed.fill}"} viewBox={props.viewBox || "${parsed.viewBox}"}>
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "${parsed.width}"} height={props.height || "${parsed.height}"} fill={props.fill || "${parsed.fill}"} viewBox={props.viewBox || "${parsed.viewBox}"}>
         ${res}
     </svg>
   )
