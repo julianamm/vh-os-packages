@@ -5,6 +5,9 @@ import FilterIcon  from '../../../assets/icons/icon_filter.svg'
 import ArrowLeftIcon  from '../../../assets/icons/ico-arrow-left.svg'
 import SortIcon  from '../../../assets/icons/icon_swap-vert.svg'
 import SearchIcon  from '../../../assets/icons/mdi_search.svg'
+import GitHubIcon from '../../../../assets/icons/iconGithub.svg'
+import LinkedInIcon from '../../../../assets/icons/iconLikedin-login.svg'
+import WebSiteIcon from '../../../../assets/icons/iconGlobe.svg'
 
 import Color from "../../Colors";
 
@@ -75,6 +78,14 @@ const VHIcon = props => {
       return <SearchIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
     case "arrow-left":
       return <ArrowLeftIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case 'github':
+      return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case 'world':
+      return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case 'linkedin':
+      return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+    case 'search':
+      return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
     default:
       return <span/>
 

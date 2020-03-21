@@ -3,10 +3,6 @@ import * as React from "react";
 
 const  close = props => (
     <svg xmlns="http://www.w3.org/2000/svg" width={props.width || "24pxpx"} height={props.height || "24pxpx"} fill={props.fill || "undefined"} viewBox={props.viewBox || "0 0 24 24"}>
-        s:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
-    <title>arrow-down</title>
-    <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Artboard" transform="translate(-580.000000, -100.000000)">
             <g id="close" transform="translate(580.000000, 100.000000)">

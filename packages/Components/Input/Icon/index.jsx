@@ -2,29 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import * as S from "./styles"
 import VHInput from '../Simple'
-import VHImg from '../../Img'
-import GitHubIcon from '../../../../assets/icons/icon-github.svg'
-import LinkedInIcon from '../../../../assets/icons/icon-likedin-login.svg'
-import WebSiteIcon from '../../../../assets/icons/icon-globe.svg'
-import SearchIcon from '../../../../assets/icons/mdi_search.svg'
+import VHIcon from '../../Icon'
+
 
 const VHInputIcon = props => {
-  const checkIcon = () => {
-    switch (props.icon) {
-      case 'github':
-        return  GitHubIcon
-      case 'world':
-        return  WebSiteIcon
-      case 'linkedin':
-        return  LinkedInIcon
-      case 'search':
-        return  SearchIcon
-      default:
-        return WebSiteIcon;
-    }
-  }
-
-  const Icon = checkIcon()
 
   return (
     <S.Wrapper
@@ -34,11 +15,9 @@ const VHInputIcon = props => {
     >
       {
         !props.loading && (
-          <VHImg
+          <VHIcon
             className="vh-icon-with-input-icon"
-            source={Icon}
-            title={props.icon}
-            sm
+            icon={props.icon}
           />
         )
       }
