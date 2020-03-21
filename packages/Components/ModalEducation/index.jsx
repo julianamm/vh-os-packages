@@ -8,28 +8,9 @@ import VHInput from "../../Components/Input/Simple";
 import VHText from "../../Components/Text/index";
 import VHButton from "../../Components/Button/index";
 import * as S from "./styles"
+import {getFormatedDate} from '../../util/index'
 
 const VHModalEducation = props => {
-
-    function getFormatedDate(date) {
-        let result = ''
-        if (date) {
-            let d = new Date(date),
-                month = '' + (d.getMonth() + 1),
-                day = '' + d.getDate(),
-                year = d.getFullYear();
-
-            if (month.length < 2) {
-                month = '0' + month;
-            }
-            if (day.length < 2) {
-                day = '0' + day;
-            }
-
-            result = [year, month, day].join('-');
-        }
-        return result
-    }
 
     const item = props.currentItem ? props.currentItem : {};
     const [degreeType, setDegreeType] = React.useState({ value: item.degreeType, label: item.degreeTypeStr });

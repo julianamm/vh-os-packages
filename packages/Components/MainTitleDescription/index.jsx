@@ -9,6 +9,10 @@ const VHMainTitleDescription = props => {
     return (
         <Row>
             <VHTitleDescription
+                pointer={props.pointer}
+                onEvent={props.onEvent}
+                onOpen={props.onOpen}
+                setCurrentItem={props.setCurrentItem}
                 className="vh-main-title-description"
                 data={props.data}
                 description={props.rightTitle}
@@ -18,8 +22,13 @@ const VHMainTitleDescription = props => {
                 title={props.title}
                 titleColor="primary-light"
                 titleVariant="subtitle1"
+                setNewExperience={props.setNewExperience}
             />
             <VHTitleDescription
+                pointer={props.pointer}
+                onEvent={props.onEvent}
+                onOpen={props.onOpen}
+                setCurrentItem={props.setCurrentItem}
                 className="vh-main-title-description"
                 data={props.data}
                 title={props.description}

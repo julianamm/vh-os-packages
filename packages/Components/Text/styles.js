@@ -143,6 +143,10 @@ export const BodyPlatform = styled.p`
         text-align: center;
     `}
 
+    ${({cursor}) => cursor && `
+        cursor: pointer;
+    `}
+
 `
 export const BodyPlatform2 = styled.p`
     margin: 0;

@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import VHPremiumPricingSection from ".";
 
-import iconMedal from "../../../../assets/icons/icon_medal.svg";
+import iconMedal from "../../../../assets/icons/icon_medal.svg/index.jsx";
 
 const cardItems = [
     {

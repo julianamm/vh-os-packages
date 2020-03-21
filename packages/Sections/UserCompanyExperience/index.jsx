@@ -5,11 +5,28 @@ import VHCardBase from "../../Components/Cards/Base";
 import VHText from "../../Components/Text";
 import VHButton from "../../Components/Button";
 import VHUserCompanyPositionExperience from "../../Components/UserCompanyPositonExperience";
+import VHModalExperience from '../../Components/ModalExperience'
 
 
 const VHUserCompanyExperienceSection = props => {
+  const [openModal, setOpenModal] = React.useState(false);
+  const [newExperience, setNewExperience] = React.useState(false);
+  const experience = props.experience.experiences ? props.experience.experiences : [];
+  const [currentItem, setCurrentItem] = React.useState({});
   return (
     <>
+    {openModal &&
+        <VHModalExperience openModal={openModal} onClose={() => setOpenModal(false)}
+          modalExperience={props.modalExperience}
+          currentItem={currentItem}
+          controls={props.controls}
+          onEvent={props.onEvent}
+          newExperience={newExperience}
+          countries={props.countries}
+          companyList={props.companyList}
+          industryList={props.industryList}
+          positions={props.positions}/>
+      }
       <Row marginBottom={5}>
         <VHText
           className={`vh-skills-section-title ${props.className ? props.className : ''}`}
@@ -23,12 +40,16 @@ const VHUserCompanyExperienceSection = props => {
           className={`vh-skills-section-card ${props.className ? props.className : ''}`}
         >
           {
-            props.userExperience.map(userPosition => {
+            experience.map(userPosition => {
               return (
                 <Row marginBottom={10}>
                   <VHUserCompanyPositionExperience
-                    {...userPosition}
-                    />
+                    item={userPosition}
+                    companyList={props.companyList}
+                    industryList={props.industryList}
+                    onOpen={() => {setOpenModal(true)}}
+                    onEvent={props.onEvent}
+                  />
                 </Row>
               )
             })
@@ -41,6 +62,9 @@ const VHUserCompanyExperienceSection = props => {
                 onEvent={props.onEvent}
                 data={"AddExperience"}
                 label="Add Experience"
+                closeModal={props.closeModal} 
+                onOpen={() => {setOpenModal(true)}}
+                setNewExperience={()=>{setNewExperience(true)}}
               />
             </Row>
             <Row row>
@@ -60,10 +84,10 @@ const VHUserCompanyExperienceSection = props => {
 }
 
 VHUserCompanyExperienceSection.propTypes = {
-    onEvent: PropTypes.func,
-    title: PropTypes.string.isRequired,
-    data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    className: PropTypes.string
+  onEvent: PropTypes.func,
+  title: PropTypes.string.isRequired,
+  data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  className: PropTypes.string
 }
 
 export default VHUserCompanyExperienceSection;

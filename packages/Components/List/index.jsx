@@ -5,7 +5,10 @@ import VHSelect from '../Input/Select'
 import { Container, Row } from '../../Grid';
 
 const VHList = props => {
-    const items = props.items ? props.items : [];
+    let items = props.items ? props.items : [];
+    if (items.length > 0) {
+        items.sort((a, b) => (a.order > b.order) ? 1 : -1)
+    }
     const list = props.list ? props.list : [];
     const secondList = props.secondList ? props.secondList : []
     return (
@@ -114,6 +117,7 @@ const VHList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
+                        isDisabled={!items[2] ? true : false}
                         marginBottom={'0px'}
                         removeBorder
                         caption=""

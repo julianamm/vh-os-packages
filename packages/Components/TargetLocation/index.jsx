@@ -4,12 +4,12 @@ import VHImg from '../Img/index'
 import VHText from '../Text/index'
 import { Row } from '../../Grid'
 import * as S from './styles'
-import USA from '../../../assets/flags/flag_usa.svg'
-import Canada from '../../../assets/flags/flag_canada.svg'
-import Germany from '../../../assets/flags/flag_germany.svg'
-import Ireland from '../../../assets/flags/flag_ireland.svg'
-import Netherlands from '../../../assets/flags/flag_netherlands.svg'
-import UK from '../../../assets/flags/flag_uk.svg'
+import USA from '../../../assets/flags/flag_usa.svg/index.jsx'
+import Canada from '../../../assets/flags/flag_canada.svg/index.jsx'
+import Germany from '../../../assets/flags/flag_germany.svg/index.jsx'
+import Ireland from '../../../assets/flags/flag_ireland.svg/index.jsx'
+import Netherlands from '../../../assets/flags/flag_netherlands.svg/index.jsx'
+import UK from '../../../assets/flags/flag_uk.svg/index.jsx'
 
 const VHTargetLocation = props => {
 

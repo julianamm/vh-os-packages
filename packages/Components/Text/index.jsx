@@ -54,7 +54,7 @@ const VHText = props => {
                 onClick={ props.onEvent ? action : () => {}} alignCenter={props.alignCenter} >{props.text}</Text.BodyWeb>
         case 'platform1':
         case 'platform':
-            return <Text.BodyPlatform color={props.color}
+            return <Text.BodyPlatform color={props.color} cursor={props.cursor}
                 className={`${initialState.className} ${props.className ? props.className : ''}`}
                 onClick={ props.onEvent ? action : () => {}} alignCenter={props.alignCenter} >{props.text}</Text.BodyPlatform>
         case 'platform2':

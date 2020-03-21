@@ -10,6 +10,7 @@ const VHTitleDescription = props => {
       inline={props.inline}
       className={`vh-title-description ${props.className ? props.className : ''}`}
       onClick={() => {
+        props.setNewExperience ? props.setNewExperience() : '' 
         props.setCurrentItem ? props.setCurrentItem() : ''
         props.onOpen ? props.onOpen() : ''
       }}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as S from './styles';
-import VHLoading from '../../../assets/icons/vanhack-loading.svg'
+import VHLoading from '../../../assets/icons/vanhack-loading.svg/index.jsx'
 
 const VHPreloader = props => {
   if (props.type === "bubble") {
