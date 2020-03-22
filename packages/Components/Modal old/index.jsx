@@ -12,23 +12,24 @@ const GlobalStyle = createGlobalStyle`
 `
 const VHModal = props => {
   return (
-    <S.ModalWrapper open={props.open}>
+    <S.ModalWrapper>
+      <S.ModalContainer open={props.open}>
         <GlobalStyle />
-      <S.ModalContainer >
-      <S.Header>
-          <div>
+        <S.ModalBox width={props.width} minWidth={props.minWidth}>
+          <S.Header>
+            <div>
             {props.header && props.header}
-          </div>
+            </div>
             {!props.hideBtnClose && (
-              <S.Close
-                onClick={() => {
-                  props.onEvent({
-                    event: 'onClose',
-                    target: 'VHModal'
-                  })
-                }}>
-                <CloseIcon />
-              </S.Close>
+                <S.Close
+                  onClick={() => {
+                    props.onEvent({
+                      event: 'onClose',
+                      target: 'VHModal'
+                    })
+                    props.onClose()}}>
+                  <img src={CloseIcon} alt="Close icon"/>
+                </S.Close>
             )}
           </S.Header>
           <S.Content>
@@ -55,6 +56,7 @@ const VHModal = props => {
                         props.onClose()}}/>
             </S.ConfirmationSection>
           )}
+        </S.ModalBox>
       </S.ModalContainer>
     </S.ModalWrapper>
   );

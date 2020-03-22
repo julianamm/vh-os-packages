@@ -7,7 +7,7 @@ const user = {
   image: 'https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg'
 };
 
-storiesOf('Components|Modal', module)
+storiesOf('Components|Modal old', module)
   .add('VHModal with title', () => (
     <div style={{ width: '100vw', height: '100vh' }}>
       em Ipsum is simply dummy text of the printing and typesetting
