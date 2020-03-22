@@ -26,22 +26,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var VHGeneralSection = function VHGeneralSection(props) {
   var genders = props.genders;
   var gender = props.gender != undefined ? [genders[props.gender]] : {};
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5
-  }, _react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-general-section-title ".concat(props.className ? props.className : ''),
     text: "General",
     color: "black-50",
     variant: "h2"
-  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Base.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Base.default, {
     className: "vh-general-section-card ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     responsive: true,
     marginBottom: 5
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
-  }, _react.default.createElement(_TitleDescription.default, {
+  }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-citizenship ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.citizenship.loading ? "gray-40" : props.controls.citizenship.error ? "red-light" : "gray-90",
     descriptionVariant: "caption",
@@ -50,7 +50,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     title: "Citizenship",
     titleColor: props.controls.citizenship.loading ? "gray-40" : props.controls.citizenship.error ? "red" : "gray-100",
     titleVariant: "subtitle3"
-  }), _react.default.createElement(_Simple.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
     type: 'text',
     data: "citizenship",
     onEvent: props.onEvent,
@@ -58,7 +58,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     error: props.controls.citizenship.error,
     loading: props.controls.citizenship.loading,
     value: props.citizenship
-  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_TitleDescription.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-currentLocation ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.location.loading ? "gray-40" : props.controls.location.error ? "red-light" : "gray-90",
     descriptionVariant: "caption",
@@ -67,7 +67,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     title: "Current Location",
     titleColor: props.controls.location.loading ? "gray-40" : props.controls.location.error ? "red" : "gray-100",
     titleVariant: "subtitle3"
-  }), _react.default.createElement(_Simple.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
     type: 'text',
     data: "location",
     onEvent: props.onEvent,
@@ -75,12 +75,12 @@ var VHGeneralSection = function VHGeneralSection(props) {
     error: props.controls.location.error,
     loading: props.controls.location.loading,
     value: props.location
-  }))), _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     responsive: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: "Gender",
     className: "vh-general-section-gender ".concat(props.className ? props.className : ''),
     currentItem: gender,
@@ -91,9 +91,9 @@ var VHGeneralSection = function VHGeneralSection(props) {
     description: props.controls.gender.error && props.controls.gender.message,
     descriptionColor: "red-light",
     captionColor: props.controls.gender.loading ? "gray-40" : props.controls.gender.error ? "red" : null
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
-  }, _react.default.createElement(_TitleDescription.default, {
+  }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-phone ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red-light" : "gray-90",
     descriptionVariant: "caption",
@@ -102,7 +102,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     title: "Phone number",
     titleColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red" : "gray-100",
     titleVariant: "subtitle3"
-  }), _react.default.createElement(_Simple.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
     data: "phone",
     onEvent: props.onEvent,
     disabled: props.controls.phone.loading,

@@ -16,7 +16,7 @@ import * as S from './styles.js'
 const VHModalExperience = props => {
 
     const item = props.modalExperience;
-    const [country, setCompanyName] = React.useState(item.companyName.value);
+    const currentItem = props.currentItem ? props.currentItem : {};
     return (
         <VHModal
             width="732"
@@ -50,7 +50,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-location ${props.className ? props.className : ''}`}
-                                currentItem={{ value: item.countryId.value, label: item.country }}
+                                currentItem={{ value: item.countryId.value, label: currentItem.country}}
                                 data={{ id: "ModalExperience", field: "countryId" }}
                                 onEvent={props.onEvent}
                                 items={props.countries}
@@ -68,7 +68,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-company-size ${props.className ? props.className : ''}`}
-                                currentItem={{ value: item.companySize.value, label: item.companySizeStr }}
+                                currentItem={{ value: item.companySize.value, label: currentItem.companySizeStr }}
                                 data={{ id: "ModalExperience", field: "companySize" }}
                                 onEvent={props.onEvent}
                                 items={props.companyList}
@@ -84,7 +84,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-industry ${props.className ? props.className : ''}`}
-                                currentItem={{ value: item.industryId.value, label: item.industry }}
+                                currentItem={{ value: item.industryId.value, label: item.industryId.value ? props.industryList[item.industryId.value].label : ''}}
                                 data={{ id: "ModalExperience", field: "industryId" }}
                                 onEvent={props.onEvent}
                                 items={props.industryList}
@@ -104,7 +104,7 @@ const VHModalExperience = props => {
                                         captionColor={null
                                         }
                                         className={`vh-general-section-position ${props.className ? props.className : ''}`}
-                                        currentItem={{ value: experience.positionId.value, label: experience.position }}
+                                        currentItem={{ value: experience.positionId.value, label: experience.positionId.value ? props.positions[experience.positionId.value].label : '' }}
                                         data={{ id: "ModalExperience", field: "positionId", index: index }}
                                         onEvent={props.onEvent}
                                         items={props.positions}
@@ -163,7 +163,7 @@ const VHModalExperience = props => {
                         )
                     })}
                     <Row alignItemsRight>
-                        <VHButton primary data={'saveExperience'} onEvent={props.onEvent} onClose={props.onClose} closeModal={props.closeModal} label="Save" />
+                        <VHButton primary data={{action: 'saveExperience', id:currentItem.id}} onEvent={props.onEvent} onClose={props.onClose} closeModal={props.closeModal} label="Save" />
                     </Row>
                 </Row>
             }>

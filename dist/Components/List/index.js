@@ -34,19 +34,19 @@ var VHList = function VHList(props) {
 
   var list = props.list ? props.list : [];
   var secondList = props.secondList ? props.secondList : [];
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '30%',
     alignItemsCenter: true,
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '15%'
-  }, _react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: 'platform',
     text: "1st",
     color: 'gray-90'
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     bold: true,
     marginBottom: '0px',
     removeBorder: true,
@@ -61,9 +61,9 @@ var VHList = function VHList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 0
-  }))), _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     isDisabled: !items[0] ? true : false,
     marginBottom: '0px',
     removeBorder: true,
@@ -77,19 +77,19 @@ var VHList = function VHList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 0
-  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '30%',
     alignItemsCenter: true,
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '15%'
-  }, _react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: 'platform',
     text: "2nd",
     color: 'gray-90'
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     bold: true,
     marginBottom: '0px',
     removeBorder: true,
@@ -104,9 +104,9 @@ var VHList = function VHList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 1
-  }))), _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     isDisabled: !items[1] ? true : false,
     marginBottom: '0px',
     removeBorder: true,
@@ -120,19 +120,19 @@ var VHList = function VHList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 1
-  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '30%',
     alignItemsCenter: true,
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '15%'
-  }, _react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: 'platform',
     text: "3rd",
     color: 'gray-90'
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     bold: true,
     marginBottom: '0px',
     removeBorder: true,
@@ -147,9 +147,9 @@ var VHList = function VHList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 2
-  }))), _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     isDisabled: !items[2] ? true : false,
     marginBottom: '0px',
     removeBorder: true,

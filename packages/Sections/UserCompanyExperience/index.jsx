@@ -49,6 +49,7 @@ const VHUserCompanyExperienceSection = props => {
                     industryList={props.industryList}
                     onOpen={() => {setOpenModal(true)}}
                     onEvent={props.onEvent}
+                    setCurrentItem={()=>setCurrentItem(userPosition)}
                   />
                 </Row>
               )
@@ -63,7 +64,7 @@ const VHUserCompanyExperienceSection = props => {
                 data={"AddExperience"}
                 label="Add Experience"
                 closeModal={props.closeModal} 
-                onOpen={() => {setOpenModal(true)}}
+                onOpen={() => {setCurrentItem({}); setOpenModal(true)}}
                 setNewExperience={()=>{setNewExperience(true)}}
               />
             </Row>

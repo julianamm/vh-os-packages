@@ -22,7 +22,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHTitleDescription = function VHTitleDescription(props) {
-  return _react.default.createElement(S.Wrapper, {
+  return /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     contents: props.contents,
     pointer: props.pointer,
     inline: props.inline,
@@ -32,15 +32,15 @@ var VHTitleDescription = function VHTitleDescription(props) {
       props.setCurrentItem ? props.setCurrentItem() : '';
       props.onOpen ? props.onOpen() : '';
     }
-  }, _react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     color: props.titleColor,
     variant: props.titleVariant,
     text: props.title,
     onEvent: props.onEvent,
     data: props.data
-  }), _react.default.createElement(S.Display, {
+  }), /*#__PURE__*/_react.default.createElement(S.Display, {
     inline: props.inline
-  }, _react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     color: props.descriptionColor,
     variant: props.descriptionVariant,
     text: props.description,
