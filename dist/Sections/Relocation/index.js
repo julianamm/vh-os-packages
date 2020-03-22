@@ -44,29 +44,29 @@ var VHRelocationSection = function VHRelocationSection(props) {
     value: false
   }];
   var targetLocation = props.targetLocation ? props.targetLocation.items : [];
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5
-  }, _react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-general-section-title ".concat(props.className ? props.className : ''),
     text: "Relocation",
     color: "black-50",
     variant: "h2"
-  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Base.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Base.default, {
     className: "vh-general-section-card ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5
-  }, _react.default.createElement(_radio.default, {
+  }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'openForRemoteJobs',
     color: "gray-100",
     variant: "subtitle3",
     onEvent: props.onEvent,
     text: 'Are you open to remote jobs?',
     checked: props.openForRemoteJobs
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5
-  }, _react.default.createElement(_TitleDescription.default, {
+  }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-companySize ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red-light" : "gray-90",
     descriptionVariant: "caption",
@@ -75,17 +75,17 @@ var VHRelocationSection = function VHRelocationSection(props) {
     title: "Where would you like to work?",
     titleColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : "gray-100",
     titleVariant: "subtitle3"
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 10,
     width: '600px'
-  }, _react.default.createElement(_TargetLocation.default, {
+  }, /*#__PURE__*/_react.default.createElement(_TargetLocation.default, {
     onEvent: props.onEvent,
     items: targetLocation
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: 'Annual salary expectation CAD',
     leftText: "$CAD",
     className: "vh-general-section-salaryRangeCad ".concat(props.className ? props.className : ''),
@@ -97,7 +97,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
     description: props.controls.salaryRangeCad.error && props.controls.salaryRangeCad.message,
     descriptionColor: "red-light",
     captionColor: props.controls.salaryRangeCad.loading ? "gray-40" : props.controls.salaryRangeCad.error ? "red" : null
-  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: 'Annual salary expectation EUR',
     className: "vh-general-section-salaryRangeEur ".concat(props.className ? props.className : ''),
     currentItem: salaryRangeEur,
@@ -108,13 +108,13 @@ var VHRelocationSection = function VHRelocationSection(props) {
     description: props.controls.salaryRangeEur.error && props.controls.salaryRangeEur.message,
     descriptionColor: "red-light",
     captionColor: props.controls.salaryRangeEur.loading ? "gray-40" : props.controls.salaryRangeEur.error ? "red" : null
-  })))), _react.default.createElement(_Grid.Row, {
+  })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: "Canadian Visa Status",
     className: "vh-general-section-visaStatusCanadian ".concat(props.className ? props.className : ''),
     currentItem: visaStatusCanadian,
@@ -125,7 +125,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
     description: props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message,
     descriptionColor: "red-light",
     captionColor: props.controls.visaStatusCanadian.loading ? "gray-40" : props.controls.visaStatusCanadian.error ? "red" : null
-  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: "EU Visa Status",
     className: "vh-general-section-visaStatusEU ".concat(props.className ? props.className : ''),
     currentItem: visaStatusEU,
@@ -136,26 +136,26 @@ var VHRelocationSection = function VHRelocationSection(props) {
     description: props.controls.visaStatusEU.error && props.controls.visaStatusEU.message,
     descriptionColor: "red-light",
     captionColor: props.controls.visaStatusEU.loading ? "gray-40" : props.controls.visaStatusEU.error ? "red" : null
-  })))), _react.default.createElement(_Grid.Row, {
+  })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true,
     marginBottom: 5
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     marginBottom: 5
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
-  }, _react.default.createElement(_radio.default, {
+  }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'passportValid',
     color: "gray-100",
     variant: "subtitle3",
     onEvent: props.onEvent,
     text: 'Do you have a valid passport?',
     checked: props.passportValid
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5
-  }, _react.default.createElement(_TitleDescription.default, {
+  }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-companySize ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red-light" : "gray-90",
     descriptionVariant: "caption",
@@ -164,9 +164,9 @@ var VHRelocationSection = function VHRelocationSection(props) {
     title: "What size company do you prefer?",
     titleColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : "gray-100",
     titleVariant: "subtitle3"
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true
-  }, _react.default.createElement(_checkbox.default, {
+  }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
     checked: companySize[0].value,
     className: "",
     color: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : 'gray-100',
@@ -180,7 +180,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
     title: "Startup",
     value: "123",
     variant: "platform1"
-  }), _react.default.createElement(_checkbox.default, {
+  }), /*#__PURE__*/_react.default.createElement(_checkbox.default, {
     checked: companySize[1].value,
     className: "",
     color: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : 'gray-100',
@@ -194,7 +194,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
     title: "Midsize",
     value: "123",
     variant: "platform1"
-  }), _react.default.createElement(_checkbox.default, {
+  }), /*#__PURE__*/_react.default.createElement(_checkbox.default, {
     checked: companySize[2].value,
     className: "",
     color: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : 'gray-100',
@@ -208,18 +208,18 @@ var VHRelocationSection = function VHRelocationSection(props) {
     title: "Corporate",
     value: "123",
     variant: "platform1"
-  })))), _react.default.createElement(_Grid.Row, {
+  })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
-  }, _react.default.createElement(_radio.default, {
+  }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'openForRemoteJobs',
     color: "gray-100",
     variant: "subtitle3",
     onEvent: props.onEvent,
     text: 'Are you actively looking for a job?',
     checked: props.openForRemoteJobs
-  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_radio.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'openForRemoteJobs',
     color: "gray-100",
     variant: "subtitle3",

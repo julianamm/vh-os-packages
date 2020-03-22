@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from "prop-types";
-import VHImg from '../Img/index';
+import VHIcon from '../Icon/index';
 import VHText from '../Text/index';
 import { Row } from '../../Grid';
 import * as S from './styles';
-import USA from '../../assets/svg/flags/flag_usa.svg/index.js';
-import Canada from '../../assets/svg/flags/flag_canada.svg/index.js';
-import Germany from '../../assets/svg/flags/flag_germany.svg/index.js';
-import Ireland from '../../assets/svg/flags/flag_ireland.svg/index.js';
-import Netherlands from '../../assets/svg/flags/flag_netherlands.svg/index.js';
-import UK from '../../assets/svg/flags/flag_uk.svg/index.js';
+
 
 const VHTargetLocation = props => {
 
@@ -49,7 +44,7 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHImg source={Canada} title="city" lg />
+                <VHIcon icon={'canada'} title="city" lg />
                 <VHText
                     variant={"platform2"}
                     color="black-100"
@@ -68,7 +63,7 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHImg source={Germany} title="city" lg />
+                <VHIcon icon={'germany'} title="city" lg />
                 <VHText
                     variant={"platform2"}
                     color="black-100"
@@ -87,7 +82,7 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHImg source={Ireland} title="city" lg />
+                <VHIcon icon={'ireland'} title="city" lg />
                 <VHText
                     variant={"platform2"}
                     color="black-100"
@@ -106,7 +101,7 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHImg source={Netherlands} title="city" lg />
+                <VHIcon icon={'netherlands'} title="city" lg />
                 <VHText
                     variant={"platform2"}
                     color="black-100"
@@ -125,7 +120,7 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHImg source={UK} title="city" lg />
+                <VHIcon icon={'uk'} title="city" lg />
                 <VHText
                     variant={"platform2"}
                     color="black-100"
@@ -144,7 +139,7 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHImg source={USA} title="city" lg />
+                <VHIcon icon={'usa'} title="city" lg />
                 <VHText
                     variant={"platform2"}
                     color="black-100"

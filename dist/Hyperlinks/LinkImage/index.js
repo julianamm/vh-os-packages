@@ -58,9 +58,9 @@ var VHLinkImage = function VHLinkImage(props) {
       break;
   }
 
-  return _react.default.createElement(_index.Row, {
+  return /*#__PURE__*/_react.default.createElement(_index.Row, {
     row: true
-  }, _react.default.createElement(S.A, {
+  }, /*#__PURE__*/_react.default.createElement(S.A, {
     cursor: props.cursor,
     xs: props.xsLabel,
     sm: props.smLabel,
@@ -74,7 +74,7 @@ var VHLinkImage = function VHLinkImage(props) {
     noUnderscore: props.noUnderscore,
     to: props.to,
     label: props.label
-  }, props.label, _react.default.createElement(S.ImgWrapper, null, _react.default.createElement("img", {
+  }, props.label, /*#__PURE__*/_react.default.createElement(S.ImgWrapper, null, /*#__PURE__*/_react.default.createElement("img", {
     src: props.source,
     alt: props.title,
     title: props.title,

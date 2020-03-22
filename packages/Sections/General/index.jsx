@@ -123,7 +123,7 @@ const VHGeneralSection = props => {
                     ? "gray-40"
                     : props.controls.gender.error
                     ? "red"
-                    : null
+                    : 'gray-100'
                   }
                 />
             </Row>

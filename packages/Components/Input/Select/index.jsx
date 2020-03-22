@@ -42,7 +42,7 @@ if (props.preLoading) {
         props.caption &&
         <VHText
           text={props.caption}
-          variant="platform1"
+          variant="subtitle3"
           color={props.captionColor}
         />
       }
