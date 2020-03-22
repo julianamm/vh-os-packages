@@ -12,7 +12,7 @@ var user = {
   firstName: 'John',
   image: 'https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg'
 };
-(0, _react2.storiesOf)('Components|Modal', module).add('VHModal with title', function () {
+(0, _react2.storiesOf)('Components|Modal old', module).add('VHModal with title', function () {
   return _react.default.createElement("div", {
     style: {
       width: '100vw',

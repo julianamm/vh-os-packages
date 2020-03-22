@@ -5,7 +5,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ConfirmationSection = exports.Content = exports.Close = exports.Header = exports.ModalBox = exports.ModalContainer = exports.ModalWrapper = exports.FadeIn = void 0;
+exports.ConfirmationSection = exports.Content = exports.Close = exports.Header = exports.ModalContainer = exports.ModalWrapper = void 0;
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
@@ -17,28 +17,8 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: auto auto;\n  grid-column-gap: 1rem;\n  justify-content: end;\n  margin-top: 2rem;\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  margin-top: 1rem;\n  font-family: Roboto;\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  float: right;\n  color: #000000;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: auto auto;\n  grid-column-gap: 1rem;\n  justify-content: end;\n  margin-top: 2rem;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -48,7 +28,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: 95% 5%;\n  margin: 0;\n  padding: 0;\n  font-family: NunitoSans, sans-serif;\n  color: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-top: 1rem;\n  font-family: Roboto;\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -58,7 +38,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  width: ", ";\n  min-width: ", ";\n  max-width: 960px;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: ", ";\n  border: solid 1px #e0e0e0;\n  border-radius: 3px;\n  padding: 32px;\n  margin: 32px 0;\n  animation: 0.35s ", " ease-in;\n\n  max-height: 100%;\n  overflow-y: auto;\n"]);
+  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  float: right;\n  color: #000000;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -68,7 +48,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  width: 100%;\n  height: 100%;\n  padding: 20px;\n  margin: 12px;\n  background: #fff;\n  background-color: rgba(0, 0, 0, 0.75);\n\n  transition: all 0.3s;\n  display: ", ";\n  animation: 0.35s ", " ease-in;\n  \n  overflow: scroll;\n  overflow-x: hidden;\n  overflow-y: hidden;\n\n  :hover {\n    overflow-y: auto;\n    overflow-x: auto;\n  }\n\n  ::-webkit-scrollbar {\n    background-color: transparent;\n    width: 8px;\n    height: 8px;\n  }\n\n  ::-webkit-scrollbar-thumb {\n    background-color: ", ";\n    border-radius: 4px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: 95% 5%;\n  margin: 0;\n  padding: 0;\n  font-family: NunitoSans, sans-serif;\n  color: ", ";\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -78,7 +58,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  position: fixed;\n  left: 0;\n  top: 0;\n  // background-color: rgba(0, 0, 0, 0.75)\n  z-index: 999;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin: 9px auto;\n  max-width: 90%;\n  width: 1000%;\n  min-height: 10vh;\n\n  ", "\n\n  ", "\n\n  padding: 30px;\n  background: rgb(255,255,255);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -88,7 +68,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  0% {\n    opacity: 0;\n  }\n  100% {\n    opacity: 1;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  overflow-y: scroll;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: ", ";\n  background-color: rgba(0, 0, 0, 0.75);\n  z-index: 666;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -99,42 +79,34 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-/**
- * FadeIn Animation
- */
-var FadeIn = (0, _styledComponents.keyframes)(_templateObject());
-exports.FadeIn = FadeIn;
-
-var ModalWrapper = _styledComponents.default.div(_templateObject2());
+var ModalWrapper = _styledComponents.default.div(_templateObject(), function (props) {
+  return props.open ? "block" : "none";
+});
 
 exports.ModalWrapper = ModalWrapper;
 
-var ModalContainer = _styledComponents.default.div(_templateObject3(), function (props) {
-  return props.open ? "block" : "none";
-}, FadeIn, _Colors.default["gray-30"]);
+var ModalContainer = _styledComponents.default.div(_templateObject2(), function (_ref) {
+  var width = _ref.width;
+  return width && "\n    width: ".concat(width, ";\n  ");
+}, function (_ref2) {
+  var height = _ref2.height;
+  return height && "\n    height: ".concat(height, ";\n  ");
+});
 
 exports.ModalContainer = ModalContainer;
 
-var ModalBox = _styledComponents.default.div(_templateObject4(), function (props) {
-  return props.width ? "".concat(props.width, "%") : 'auto';
-}, function (props) {
-  return props.minWidth ? "".concat(props.minWidth, "px") : 'auto';
-}, _Colors.default.white, FadeIn);
-
-exports.ModalBox = ModalBox;
-
-var Header = _styledComponents.default.div(_templateObject5(), _Colors.default["black-90"]);
+var Header = _styledComponents.default.div(_templateObject3(), _Colors.default["black-90"]);
 
 exports.Header = Header;
 
-var Close = _styledComponents.default.span(_templateObject6());
+var Close = _styledComponents.default.span(_templateObject4());
 
 exports.Close = Close;
 
-var Content = _styledComponents.default.div(_templateObject7());
+var Content = _styledComponents.default.div(_templateObject5());
 
 exports.Content = Content;
 
-var ConfirmationSection = _styledComponents.default.div(_templateObject8());
+var ConfirmationSection = _styledComponents.default.div(_templateObject6());
 
 exports.ConfirmationSection = ConfirmationSection;

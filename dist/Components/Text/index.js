@@ -36,7 +36,7 @@ var VHText = function VHText(props) {
 
   switch (props.variant) {
     case 'h1':
-      return /*#__PURE__*/_react.default.createElement(Text.H1, {
+      return _react.default.createElement(Text.H1, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -44,7 +44,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'h2':
-      return /*#__PURE__*/_react.default.createElement(Text.H2, {
+      return _react.default.createElement(Text.H2, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -52,7 +52,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'h3':
-      return /*#__PURE__*/_react.default.createElement(Text.H3, {
+      return _react.default.createElement(Text.H3, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -60,7 +60,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'h4':
-      return /*#__PURE__*/_react.default.createElement(Text.H4, {
+      return _react.default.createElement(Text.H4, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -68,7 +68,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'h5':
-      return /*#__PURE__*/_react.default.createElement(Text.H5, {
+      return _react.default.createElement(Text.H5, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -76,7 +76,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'h6':
-      return /*#__PURE__*/_react.default.createElement(Text.H6, {
+      return _react.default.createElement(Text.H6, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -84,7 +84,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'subtitle1':
-      return /*#__PURE__*/_react.default.createElement(Text.Subtitle1, {
+      return _react.default.createElement(Text.Subtitle1, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -92,7 +92,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'subtitle2':
-      return /*#__PURE__*/_react.default.createElement(Text.Subtitle2, {
+      return _react.default.createElement(Text.Subtitle2, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -100,7 +100,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'subtitle3':
-      return /*#__PURE__*/_react.default.createElement(Text.Subtitle3, {
+      return _react.default.createElement(Text.Subtitle3, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -108,7 +108,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'bodyweb':
-      return /*#__PURE__*/_react.default.createElement(Text.BodyWeb, {
+      return _react.default.createElement(Text.BodyWeb, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -117,7 +117,7 @@ var VHText = function VHText(props) {
 
     case 'platform1':
     case 'platform':
-      return /*#__PURE__*/_react.default.createElement(Text.BodyPlatform, {
+      return _react.default.createElement(Text.BodyPlatform, {
         color: props.color,
         cursor: props.cursor,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
@@ -126,7 +126,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'platform2':
-      return /*#__PURE__*/_react.default.createElement(Text.BodyPlatform2, {
+      return _react.default.createElement(Text.BodyPlatform2, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -134,7 +134,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     case 'caption':
-      return /*#__PURE__*/_react.default.createElement(Text.Caption, {
+      return _react.default.createElement(Text.Caption, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
@@ -142,7 +142,7 @@ var VHText = function VHText(props) {
       }, props.text);
 
     default:
-      return /*#__PURE__*/_react.default.createElement(Text.Caption, {
+      return _react.default.createElement(Text.Caption, {
         color: props.color,
         className: "".concat(initialState.className, " ").concat(props.className ? props.className : ''),
         onClick: props.onEvent ? action : function () {},
