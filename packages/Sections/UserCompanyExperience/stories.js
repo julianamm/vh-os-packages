@@ -186,6 +186,7 @@ storiesOf("Sections|User Company Experience", module)
                 yearsOfExperience={"- 6yrs 3 mos"}
                 experience={experience}
                 onEvent={e => console.log(e)}
+                preLoading={true}
             />
         </div>
     ));
