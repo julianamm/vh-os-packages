@@ -24,16 +24,16 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHTitleDescriptionImage = function VHTitleDescriptionImage(props) {
-  return /*#__PURE__*/_react.default.createElement(_index.Row, {
+  return _react.default.createElement(_index.Row, {
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index2.default, {
+  }, _react.default.createElement(_index.Row, null, _react.default.createElement(_index2.default, {
     titleColor: props.titleColor,
     descriptionColor: props.descriptionColor,
     titleVariant: props.titleVariant,
     descriptionVariant: props.descriptionVariant,
     title: props.title,
     description: props.description
-  })), /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(S.ImgWrapper, {
+  })), _react.default.createElement(_index.Row, null, _react.default.createElement(S.ImgWrapper, {
     image: props.image
   })));
 };

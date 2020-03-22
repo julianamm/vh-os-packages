@@ -44,15 +44,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var VHModalExperience = function VHModalExperience(props) {
   var item = props.modalExperience;
   var currentItem = props.currentItem ? props.currentItem : {};
-  return /*#__PURE__*/_react.default.createElement(_Modal.default, {
+  return _react.default.createElement(_Modal.default, {
     width: "732",
     minWidth: "660",
     open: true,
     onClose: props.onClose,
     onEvent: props.onEvent,
-    header: /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    header: _react.default.createElement(_Grid.Row, {
       row: true
-    }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
+    }, _react.default.createElement(_TitleDescription.default, {
       title: 'Add Experience',
       description: '',
       titleVariant: "h3",
@@ -61,20 +61,20 @@ var VHModalExperience = function VHModalExperience(props) {
       descriptionVariant: "platform",
       onEvent: props.onEvent
     })),
-    content: /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    content: _react.default.createElement(_Grid.Row, {
       column: true
-    }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    }, _react.default.createElement(_Grid.Row, {
       row: true,
       justifySpaceBetween: true
-    }, /*#__PURE__*/_react.default.createElement("div", {
+    }, _react.default.createElement("div", {
       style: {
         width: '40%'
       }
-    }, /*#__PURE__*/_react.default.createElement(_index.default, {
+    }, _react.default.createElement(_index.default, {
       color: "gray-100",
       variant: 'platform',
       text: "Company Name"
-    }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
+    }), _react.default.createElement(_Simple.default, {
       placeholder: "",
       onEvent: props.onEvent,
       value: item.companyName.value,
@@ -82,11 +82,11 @@ var VHModalExperience = function VHModalExperience(props) {
         id: "ModalExperience",
         field: "companyName"
       }
-    })), /*#__PURE__*/_react.default.createElement("div", {
+    })), _react.default.createElement("div", {
       style: {
         width: '40%'
       }
-    }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    }, _react.default.createElement(_Select.default, {
       caption: "Location",
       captionColor: null,
       className: "vh-general-section-location ".concat(props.className ? props.className : ''),
@@ -101,14 +101,14 @@ var VHModalExperience = function VHModalExperience(props) {
       onEvent: props.onEvent,
       items: props.countries,
       descriptionColor: "red-light"
-    }), item.countryId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required"))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    }), item.countryId.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required"))), _react.default.createElement(_Grid.Row, {
       row: true,
       justifySpaceBetween: true
-    }, /*#__PURE__*/_react.default.createElement("div", {
+    }, _react.default.createElement("div", {
       style: {
         width: '40%'
       }
-    }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    }, _react.default.createElement(_Select.default, {
       caption: "Company Size",
       captionColor: null,
       className: "vh-general-section-company-size ".concat(props.className ? props.className : ''),
@@ -123,11 +123,11 @@ var VHModalExperience = function VHModalExperience(props) {
       onEvent: props.onEvent,
       items: props.companyList,
       descriptionColor: "red-light"
-    }), item.companySize.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), /*#__PURE__*/_react.default.createElement("div", {
+    }), item.companySize.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required")), _react.default.createElement("div", {
       style: {
         width: '40%'
       }
-    }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    }, _react.default.createElement(_Select.default, {
       caption: "Industry",
       captionColor: null,
       className: "vh-general-section-industry ".concat(props.className ? props.className : ''),
@@ -142,11 +142,11 @@ var VHModalExperience = function VHModalExperience(props) {
       onEvent: props.onEvent,
       items: props.industryList,
       descriptionColor: "red-light"
-    }), item.industryId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required"))), item.workExperiences.map(function (experience, index) {
-      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    }), item.industryId.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required"))), item.workExperiences.map(function (experience, index) {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
         width: '70%',
         marginBottom5: true
-      }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+      }, _react.default.createElement(_Select.default, {
         caption: "Role Title",
         captionColor: null,
         className: "vh-general-section-position ".concat(props.className ? props.className : ''),
@@ -162,9 +162,9 @@ var VHModalExperience = function VHModalExperience(props) {
         onEvent: props.onEvent,
         items: props.positions,
         descriptionColor: "red-light"
-      }), experience.positionId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), index === item.workExperiences.length - 1 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      }), experience.positionId.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required")), index === item.workExperiences.length - 1 && _react.default.createElement(_Grid.Row, {
         marginBottom5: true
-      }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
+      }, _react.default.createElement(_checkbox.default, {
         title: 'I am currently working in this role',
         color: "gray-100",
         variant: "platform1",
@@ -178,17 +178,17 @@ var VHModalExperience = function VHModalExperience(props) {
         name: 'working-role'.concat("-input-checkbox"),
         id: 'working-role'.concat("-vh-input-checkbox"),
         onEvent: props.onEvent
-      })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      })), _react.default.createElement(_Grid.Row, {
         marginBottom5: true,
         row: true,
         justifySpaceBetween: true
-      }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      }, _react.default.createElement(_Grid.Row, {
         width: '40%'
-      }, /*#__PURE__*/_react.default.createElement(_index.default, {
+      }, _react.default.createElement(_index.default, {
         color: "gray-100",
         variant: 'platform',
         text: "Start Date"
-      }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
+      }), _react.default.createElement(_Simple.default, {
         placeholder: "",
         type: 'date',
         onEvent: props.onEvent,
@@ -198,13 +198,13 @@ var VHModalExperience = function VHModalExperience(props) {
           field: "startDate",
           index: index
         }
-      }), experience.startDate.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      }), experience.startDate.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required")), _react.default.createElement(_Grid.Row, {
         width: '40%'
-      }, /*#__PURE__*/_react.default.createElement(_index.default, {
+      }, _react.default.createElement(_index.default, {
         color: "gray-100",
         variant: 'platform',
         text: "End Date"
-      }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
+      }), _react.default.createElement(_Simple.default, {
         placeholder: "",
         type: 'date',
         onEvent: props.onEvent,
@@ -214,13 +214,13 @@ var VHModalExperience = function VHModalExperience(props) {
           field: "endDate",
           index: index
         }
-      }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      }))), _react.default.createElement(_Grid.Row, {
         marginBottom5: true
-      }, /*#__PURE__*/_react.default.createElement(_index.default, {
+      }, _react.default.createElement(_index.default, {
         color: "gray-100",
         variant: 'platform',
         text: "Description"
-      }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
+      }), _react.default.createElement(_Simple.default, {
         placeholder: "",
         onEvent: props.onEvent,
         value: experience.description.value,
@@ -229,9 +229,9 @@ var VHModalExperience = function VHModalExperience(props) {
           field: "description",
           index: index
         }
-      }), experience.description.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), index === item.workExperiences.length - 1 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      }), experience.description.messageError && _react.default.createElement(S.ErrorMessage, null, "Field required")), index === item.workExperiences.length - 1 && _react.default.createElement(_Grid.Row, {
         marginBottom5: true
-      }, /*#__PURE__*/_react.default.createElement(_index.default, {
+      }, _react.default.createElement(_index.default, {
         color: "gradient-primary",
         onEvent: props.onEvent,
         data: 'addRole',
@@ -239,9 +239,9 @@ var VHModalExperience = function VHModalExperience(props) {
         text: "+ Add other role for this company",
         cursor: true
       })));
-    }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    }), _react.default.createElement(_Grid.Row, {
       alignItemsRight: true
-    }, /*#__PURE__*/_react.default.createElement(_index2.default, {
+    }, _react.default.createElement(_index2.default, {
       primary: true,
       data: {
         action: 'saveExperience',

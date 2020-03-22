@@ -22,7 +22,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var VHPremiumServicesSection = function VHPremiumServicesSection(props) {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_TextsImageLink.default, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_TextsImageLink.default, {
     title: props.title,
     highlight: props.highlight,
     description: props.description,
@@ -36,9 +36,9 @@ var VHPremiumServicesSection = function VHPremiumServicesSection(props) {
     smImg: true,
     reverseBottom: false
   }), props.premiumOtherServices.map(function (service) {
-    return /*#__PURE__*/_react.default.createElement(_index.Row, {
+    return _react.default.createElement(_index.Row, {
       marginTop: 120
-    }, /*#__PURE__*/_react.default.createElement(_TextsImageTestimonial.default, {
+    }, _react.default.createElement(_TextsImageTestimonial.default, {
       title: service.title,
       highlight: service.highlight,
       description: service.description,

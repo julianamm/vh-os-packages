@@ -30,7 +30,7 @@ const VHGeneralSection = props => {
           <Row row responsive marginBottom={5}>
             <Row paddingRight8>
             <VHTitleDescription
-                preLoading={props.controls.citizenship.preLoading}
+                preLoading={props.controls.citizenship.preLoading || false}
                 className={`vh-general-section-citizenship ${props.className ? props.className : ''}`}
                 descriptionColor={
                   props.controls.citizenship.loading
@@ -76,7 +76,7 @@ const VHGeneralSection = props => {
                   ? "red-light"
                   : "gray-90"
                 }
-                preLoading={props.controls.location.preLoading}
+                preLoading={props.controls.location.preLoading || false}
                 descriptionVariant="caption"
                 inline
                 onEvent={props.onEvent}
@@ -108,7 +108,7 @@ const VHGeneralSection = props => {
           <Row row responsive>
             <Row paddingRight8>
                 <VHSelect
-                  preLoading={props.controls.gender.preLoading}
+                  preLoading={props.controls.gender.preLoading || false}
                   caption="Gender"
                   className={`vh-general-section-gender ${props.className ? props.className : ''}`}
                   currentItem={gender}
@@ -137,7 +137,7 @@ const VHGeneralSection = props => {
                   ? "red-light"
                   : "gray-90"
                 }
-                preLoading={props.controls.phone.preLoading}
+                preLoading={props.controls.phone.preLoading || false}
                 descriptionVariant="caption"
                 inline
                 onEvent={props.onEvent}

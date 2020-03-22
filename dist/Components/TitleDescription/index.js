@@ -38,15 +38,15 @@ var VHTitleDescription = function VHTitleDescription(props) {
       props.setCurrentItem ? props.setCurrentItem() : '';
       props.onOpen ? props.onOpen() : '';
     }
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, _react.default.createElement(_Text.default, {
     color: props.titleColor,
     variant: props.titleVariant,
     text: props.title,
     onEvent: props.onEvent,
     data: props.data
-  }), /*#__PURE__*/_react.default.createElement(S.Display, {
+  }), _react.default.createElement(S.Display, {
     inline: props.inline
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, _react.default.createElement(_Text.default, {
     color: props.descriptionColor,
     variant: props.descriptionVariant,
     text: props.description,

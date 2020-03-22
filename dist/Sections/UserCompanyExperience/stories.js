@@ -45,13 +45,13 @@ ArrayOfUserExperience.push(UserPositionExperience2);
 company.userPositions = ArrayOfUserExperience;
 var userExperience = [company, company];
 (0, _react2.storiesOf)("Sections|User Company Experience", module).add("Default", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f2f2",
       height: "100vh",
       padding: "24px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
     yearsOfExperience: "- 6yrs 3 mos",
     userExperience: userExperience,
     onEvent: function onEvent(e) {

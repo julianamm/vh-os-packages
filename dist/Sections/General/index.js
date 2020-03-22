@@ -42,21 +42,21 @@ var VHGeneralSection = function VHGeneralSection(props) {
 
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
     marginBottom: 5
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, _react.default.createElement(_Text.default, {
     className: "vh-general-section-title ".concat(props.className ? props.className : ''),
     text: "General",
     color: "black-50",
     variant: "h2"
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Base.default, {
+  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Base.default, {
     className: "vh-general-section-card ".concat(props.className ? props.className : '')
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     row: true,
     responsive: true,
     marginBottom: 5
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     paddingRight8: true
   }, _react.default.createElement(_TitleDescription.default, {
-    preLoading: props.controls.citizenship.preLoading,
+    preLoading: props.controls.citizenship.preLoading || false,
     className: "vh-general-section-citizenship ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.citizenship.loading ? "gray-40" : props.controls.citizenship.error ? "red-light" : "gray-90",
     descriptionVariant: "caption",
@@ -73,10 +73,10 @@ var VHGeneralSection = function VHGeneralSection(props) {
     error: props.controls.citizenship.error,
     loading: props.controls.citizenship.loading,
     value: props.citizenship
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
+  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-currentLocation ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.location.loading ? "gray-40" : props.controls.location.error ? "red-light" : "gray-90",
-    preLoading: props.controls.location.preLoading,
+    preLoading: props.controls.location.preLoading || false,
     descriptionVariant: "caption",
     inline: true,
     onEvent: props.onEvent,
@@ -91,13 +91,13 @@ var VHGeneralSection = function VHGeneralSection(props) {
     error: props.controls.location.error,
     loading: props.controls.location.loading,
     value: props.location
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     row: true,
     responsive: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     paddingRight8: true
   }, _react.default.createElement(_Select.default, {
-    preLoading: props.controls.gender.preLoading,
+    preLoading: props.controls.gender.preLoading || false,
     caption: "Gender",
     className: "vh-general-section-gender ".concat(props.className ? props.className : ''),
     currentItem: gender,
@@ -108,12 +108,12 @@ var VHGeneralSection = function VHGeneralSection(props) {
     description: props.controls.gender.error && props.controls.gender.message,
     descriptionColor: "red-light",
     captionColor: props.controls.gender.loading ? "gray-40" : props.controls.gender.error ? "red" : null
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  })), _react.default.createElement(_Grid.Row, {
     column: true
-  }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
+  }, _react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-phone ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red-light" : "gray-90",
-    preLoading: props.controls.phone.preLoading,
+    preLoading: props.controls.phone.preLoading || false,
     descriptionVariant: "caption",
     inline: true,
     onEvent: props.onEvent,
