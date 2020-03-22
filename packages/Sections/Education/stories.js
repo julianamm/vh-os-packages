@@ -38,4 +38,18 @@ storiesOf("Sections|Education", module)
                 }}
             />
         </div>
-    ));
+    ))
+    .add("Preloading", () => (
+        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+            <VHEducationSection
+                education={education}
+                preLoading
+                items={items}
+                currentItem={currentItem}
+                controls={controls}
+                onEvent={e => {
+                    console.log(e)
+                }}
+            />
+        </div>
+    ))

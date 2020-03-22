@@ -4,7 +4,7 @@ import { Container, Row } from "../../Grid";
 import VHCardBase from "../../Components/Cards/Base";
 import VHText from "../../Components/Text";
 import VHInputIcon from "../../Components/Input/Icon";
-
+import { InputSkeleton } from 'react-preload-skeleton'
 
 const VHSocialSection = props => {
   return (
@@ -21,45 +21,55 @@ const VHSocialSection = props => {
         <VHCardBase
           className={`vh-skills-section-card ${props.className ? props.className : ''}`}
         >
-          <Row marginBottom4>
-            <VHInputIcon
-              className=""
-              disabled={props.controls.linkedin.loading}
-              error={props.controls.linkedin.error}
-              loading={props.controls.linkedin.loading}
-              data={'linkedin'}
-              icon="linkedin"
-              onEvent={props.onEvent}
-              placeholder="http://linkedin.com/"
-              value={props.linkedin}
-            />
-          </Row>
-          <Row marginBottom4>
-            <VHInputIcon
-              className=""
-              disabled={props.controls.git.loading}
-              error={props.controls.git.error}
-              loading={props.controls.git.loading}
-              data={'git'}
-              icon="github"
-              onEvent={props.onEvent}
-              placeholder="http://github.com/"
-              value={props.git}
-            />
-          </Row>
-          <Row marginBottom4>
-            <VHInputIcon
-              className=""
-              disabled={props.controls.webSite.loading}
-              error={props.controls.webSite.error}
-              loading={props.controls.webSite.loading}
-              placeholder="http://sitename.com/"
-              value={props.webSite}
-              data={'webSite'}
-              icon="webSite"
-              onEvent={props.onEvent}
-            />
-          </Row>
+          {
+            props.preLoading ? (
+              <Row marginBottom4>
+                <InputSkeleton lines={3} />
+              </Row>
+            ) : (
+              <>
+                <Row marginBottom4>
+                  <VHInputIcon
+                    className=""
+                    disabled={props.controls.linkedin.loading}
+                    error={props.controls.linkedin.error}
+                    loading={props.controls.linkedin.loading}
+                    data={'linkedin'}
+                    icon="linkedin"
+                    onEvent={props.onEvent}
+                    placeholder="http://linkedin.com/"
+                    value={props.linkedin}
+                  />
+                </Row>
+                <Row marginBottom4>
+                  <VHInputIcon
+                    className=""
+                    disabled={props.controls.git.loading}
+                    error={props.controls.git.error}
+                    loading={props.controls.git.loading}
+                    data={'git'}
+                    icon="github"
+                    onEvent={props.onEvent}
+                    placeholder="http://github.com/"
+                    value={props.git}
+                  />
+                </Row>
+                <Row marginBottom4>
+                  <VHInputIcon
+                    className=""
+                    disabled={props.controls.webSite.loading}
+                    error={props.controls.webSite.error}
+                    loading={props.controls.webSite.loading}
+                    placeholder="http://sitename.com/"
+                    value={props.webSite}
+                    data={'webSite'}
+                    icon="webSite"
+                    onEvent={props.onEvent}
+                  />
+                </Row>
+              </>
+            )
+          }
         </VHCardBase>
       </Row>
     </>
