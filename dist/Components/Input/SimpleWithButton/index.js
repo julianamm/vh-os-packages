@@ -18,14 +18,14 @@ var _index3 = _interopRequireDefault(require("../../Button/index"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHInputSimpleWithButton = function VHInputSimpleWithButton(props) {
-  return /*#__PURE__*/_react.default.createElement(_index.Row, {
+  return _react.default.createElement(_index.Row, {
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
+  }, _react.default.createElement(_index.Row, {
     width: "85%",
     style: {
       marginRight: "4px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
+  }, _react.default.createElement(_index2.default, {
     disabled: props.disabled,
     error: props.error,
     loading: props.loading,
@@ -33,9 +33,9 @@ var VHInputSimpleWithButton = function VHInputSimpleWithButton(props) {
     data: props.data,
     value: props.value,
     onEvent: props.onEvent
-  })), /*#__PURE__*/_react.default.createElement(_index.Row, {
+  })), _react.default.createElement(_index.Row, {
     width: "15%"
-  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+  }, _react.default.createElement(_index3.default, {
     primary: true,
     lg: true,
     onEvent: props.onEvent,
