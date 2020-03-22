@@ -3,14 +3,20 @@ import PropTypes from 'prop-types'
 import * as S from './styles'
 import VHText from '../Text'
 
+import { TitleDescriptionSkeleton } from 'react-preload-skeleton'
+
 const VHTitleDescription = props => {
+  if (props.preLoading) {
+    return <TitleDescriptionSkeleton />
+  }
+
   return (
     <S.Wrapper contents={props.contents}
     pointer={props.pointer}
       inline={props.inline}
       className={`vh-title-description ${props.className ? props.className : ''}`}
       onClick={() => {
-        props.setNewExperience ? props.setNewExperience() : '' 
+        props.setNewExperience ? props.setNewExperience() : ''
         props.setCurrentItem ? props.setCurrentItem() : ''
         props.onOpen ? props.onOpen() : ''
       }}>

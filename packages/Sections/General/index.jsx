@@ -11,6 +11,7 @@ import VHInput from "../../Components/Input/Simple";
 const VHGeneralSection = props => {
   const genders = props.genders
   const gender = props.gender != undefined ? [genders[props.gender]] : {};
+  const [preloaderPhone, setPreloaderPhone] = React.useState(true);
 
   return (
     <>
@@ -29,6 +30,7 @@ const VHGeneralSection = props => {
           <Row row responsive marginBottom={5}>
             <Row paddingRight8>
             <VHTitleDescription
+                preLoading={props.controls.citizenship.preLoading}
                 className={`vh-general-section-citizenship ${props.className ? props.className : ''}`}
                 descriptionColor={
                   props.controls.citizenship.loading
@@ -50,15 +52,19 @@ const VHGeneralSection = props => {
                 }
                 titleVariant="subtitle3"
               />
-              <VHInput
-                type={'text'}
-                data={"citizenship"}
-                onEvent={props.onEvent}
-                disabled={props.controls.citizenship.loading}
-                error={props.controls.citizenship.error}
-                loading={props.controls.citizenship.loading}
-                value={props.citizenship}
-              />
+              {
+                !props.controls.citizenship.preLoading && (
+                  <VHInput
+                    type={'text'}
+                    data={"citizenship"}
+                    onEvent={props.onEvent}
+                    disabled={props.controls.citizenship.loading}
+                    error={props.controls.citizenship.error}
+                    loading={props.controls.citizenship.loading}
+                    value={props.citizenship}
+                  />
+                )
+              }
             </Row>
             <Row>
             <VHTitleDescription
@@ -70,6 +76,7 @@ const VHGeneralSection = props => {
                   ? "red-light"
                   : "gray-90"
                 }
+                preLoading={props.controls.location.preLoading}
                 descriptionVariant="caption"
                 inline
                 onEvent={props.onEvent}
@@ -83,20 +90,25 @@ const VHGeneralSection = props => {
                 }
                 titleVariant="subtitle3"
               />
-              <VHInput
-                type={'text'}
-                data={"location"}
-                onEvent={props.onEvent}
-                disabled={props.controls.location.loading}
-                error={props.controls.location.error}
-                loading={props.controls.location.loading}
-                value={props.location}
-              />
+              {
+                !props.controls.location.preLoading && (
+                  <VHInput
+                  type={'text'}
+                  data={"location"}
+                  onEvent={props.onEvent}
+                  disabled={props.controls.location.loading}
+                  error={props.controls.location.error}
+                  loading={props.controls.location.loading}
+                  value={props.location}
+                />
+                )
+              }
             </Row>
           </Row>
           <Row row responsive>
             <Row paddingRight8>
                 <VHSelect
+                  preLoading={props.controls.gender.preLoading}
                   caption="Gender"
                   className={`vh-general-section-gender ${props.className ? props.className : ''}`}
                   currentItem={gender}
@@ -125,6 +137,7 @@ const VHGeneralSection = props => {
                   ? "red-light"
                   : "gray-90"
                 }
+                preLoading={props.controls.phone.preLoading}
                 descriptionVariant="caption"
                 inline
                 onEvent={props.onEvent}
@@ -138,15 +151,19 @@ const VHGeneralSection = props => {
                 }
                 titleVariant="subtitle3"
               />
-              <VHInput
-                data={"phone"}
-                onEvent={props.onEvent}
-                disabled={props.controls.phone.loading}
-                error={props.controls.phone.error}
-                loading={props.controls.phone.loading}
-                placeholder="+1 778 000 0000"
-                value={props.phone}
-              />
+              {
+                !props.controls.phone.preLoading && (
+                  <VHInput
+                    data={"phone"}
+                    onEvent={props.onEvent}
+                    disabled={props.controls.phone.loading}
+                    error={props.controls.phone.error}
+                    loading={props.controls.phone.loading}
+                    placeholder="+1 778 000 0000"
+                    value={props.phone}
+                  />
+                )
+              }
             </Row>
           </Row>
         </VHCardBase>

@@ -4,10 +4,16 @@ import PropTypes from 'prop-types'
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import VHText from '../../Text'
+import { TitleDescriptionSkeleton } from 'react-preload-skeleton'
 
 const animatedComponents = makeAnimated();
 
 const VHSelect = props => {
+
+if (props.preLoading) {
+  return <TitleDescriptionSkeleton />
+}
+
 
   const [value, handleChange] = React.useState(props.currentItem);
   React.useEffect(() => {
