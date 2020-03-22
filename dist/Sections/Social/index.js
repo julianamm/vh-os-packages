@@ -20,18 +20,18 @@ var _Icon = _interopRequireDefault(require("../../Components/Input/Icon"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHSocialSection = function VHSocialSection(props) {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5
-  }, _react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
     text: "Social Profile",
     color: "black-50",
     variant: "h2"
-  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Base.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Base.default, {
     className: "vh-skills-section-card ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom4: true
-  }, _react.default.createElement(_Icon.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     className: "",
     disabled: props.controls.linkedin.loading,
     error: props.controls.linkedin.error,
@@ -41,9 +41,9 @@ var VHSocialSection = function VHSocialSection(props) {
     onEvent: props.onEvent,
     placeholder: "http://linkedin.com/",
     value: props.linkedin
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom4: true
-  }, _react.default.createElement(_Icon.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     className: "",
     disabled: props.controls.git.loading,
     error: props.controls.git.error,
@@ -53,9 +53,9 @@ var VHSocialSection = function VHSocialSection(props) {
     onEvent: props.onEvent,
     placeholder: "http://github.com/",
     value: props.git
-  })), _react.default.createElement(_Grid.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom4: true
-  }, _react.default.createElement(_Icon.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     className: "",
     disabled: props.controls.webSite.loading,
     error: props.controls.webSite.error,

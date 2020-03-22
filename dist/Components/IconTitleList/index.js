@@ -14,7 +14,7 @@ var _index = _interopRequireDefault(require("../IconText/index"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHIconTitleList = function VHIconTitleList(props) {
-  return _react.default.createElement(_index.default, {
+  return /*#__PURE__*/_react.default.createElement(_index.default, {
     iconColor: "gray-30",
     textColor: "gray-90",
     text: props.description,

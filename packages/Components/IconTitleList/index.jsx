@@ -8,7 +8,7 @@ const VHIconTitleList = (props) => {
         <VHIconText
             iconColor="gray-30"
             textColor="gray-90"
-            text={props.description}
+            text={props.items}
             icon="bullet"
             className={`vh-icon-title-list ${props.className ? props.className : ''}`}
             variant="platform"

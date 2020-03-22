@@ -24,35 +24,35 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHTextHighlightDescriptionImage = function VHTextHighlightDescriptionImage(props) {
-  return _react.default.createElement(_index.Container, null, _react.default.createElement(_index.Row, {
+  return /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     row: true,
     justifySpaceBetween: true
-  }, _react.default.createElement(S.Wrapper, {
+  }, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     reverse: props.reverse
-  }, _react.default.createElement(_index.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "50%"
-  }, _react.default.createElement(_index.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsLeft: true,
     marginBottom: 8
-  }, _react.default.createElement(S.UnderlineText, null, _react.default.createElement(_index2.default, {
+  }, /*#__PURE__*/_react.default.createElement(S.UnderlineText, null, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "platform2",
     color: "tertiary-dark",
     text: props.title
-  }))), _react.default.createElement(_index.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_index.Row, {
     marginBottom5: true
-  }, _react.default.createElement(_index2.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "h2",
     color: "gray-90",
     text: props.highlight
-  })), _react.default.createElement(_index.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     marginBottom5: true
-  }, _react.default.createElement(_index2.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "bodyweb",
     color: "gray-90",
     text: props.description
-  }))), _react.default.createElement(_index.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "50%"
-  }, _react.default.createElement(S.ImgWrapper, {
+  }, /*#__PURE__*/_react.default.createElement(S.ImgWrapper, {
     image: props.image
   })))));
 };

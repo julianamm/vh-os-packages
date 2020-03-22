@@ -26,28 +26,28 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHCardHired = function VHCardHired(props) {
-  return _react.default.createElement(_index.Row, null, _react.default.createElement(_index.Row, {
+  return /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true
-  }, _react.default.createElement(S.OutterImg, null, _react.default.createElement(_index2.default, {
+  }, /*#__PURE__*/_react.default.createElement(S.OutterImg, null, /*#__PURE__*/_react.default.createElement(_index2.default, {
     image: props.userPhoto,
     size: "xl",
     showCursor: true
-  }), _react.default.createElement(S.InnerImg, null, _react.default.createElement(_index2.default, {
+  }), /*#__PURE__*/_react.default.createElement(S.InnerImg, null, /*#__PURE__*/_react.default.createElement(_index2.default, {
     image: props.flag,
     size: "md",
     showCursor: true
-  })))), _react.default.createElement(_index.Row, {
+  })))), /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true,
     marginTop: 10
-  }, _react.default.createElement(_index3.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
     variant: "subtitle3",
     color: "gray-90",
     text: props.name
-  }), _react.default.createElement(_index3.default, {
+  }), /*#__PURE__*/_react.default.createElement(_index3.default, {
     variant: "platform",
     color: "gray-70",
     text: props.position
-  }), _react.default.createElement(_index3.default, {
+  }), /*#__PURE__*/_react.default.createElement(_index3.default, {
     variant: "platform",
     color: "gray-70",
     text: props.country
