@@ -35,6 +35,7 @@ const VHProfileTemplate = props => (
       <div id={"relocation"}>
         <VHPageSection content={
           <VHRelocationSection
+            preLoading={props.controls.gender.preLoading}
             {...props}
             onEvent={props.onEvent}
           />
@@ -52,6 +53,7 @@ const VHProfileTemplate = props => (
         <VHPageSection content={
           <VHEducationSection
             {...props}
+            preLoading={props.controls.educationSection.preLoading}
             onEvent={props.onEvent}
           />
         } />
@@ -62,6 +64,7 @@ const VHProfileTemplate = props => (
         <VHPageSection content={
           <VHUserCompanyExperienceSection
             {...props}
+            preLoading={props.controls.experienceSection.preLoading}
             onEvent={props.onEvent}
           />
         } />
