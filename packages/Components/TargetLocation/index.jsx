@@ -18,11 +18,11 @@ const VHTargetLocation = props => {
 
     React.useEffect(() => {
         setCanada(items[0].status),
-        setGermany(items[1].status),
-        setIreland(items[2].status),
-        setNetherlands(items[3].status),
-        setUk(items[4].status),
-        setUsa(items[5].status)
+            setGermany(items[1].status),
+            setIreland(items[2].status),
+            setNetherlands(items[3].status),
+            setUk(items[4].status),
+            setUsa(items[5].status)
     },
         [items[0].status,
         items[1].status,
@@ -44,7 +44,9 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHIcon icon={'canada'} title="city" lg />
+                <Row marginBottom3>
+                    <VHIcon icon={'canada'} title="city" lg />
+                </Row>
                 <VHText
                     variant={"platform2"}
                     color="black-100"
@@ -63,7 +65,9 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHIcon icon={'germany'} title="city" lg />
+                <Row marginBottom3>
+                    <VHIcon icon={'germany'} title="city" lg />
+                </Row>
                 <VHText
                     variant={"platform2"}
                     color="black-100"
@@ -82,7 +86,9 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHIcon icon={'ireland'} title="city" lg />
+                <Row marginBottom3>
+                    <VHIcon icon={'ireland'} title="city" lg />
+                </Row>
                 <VHText
                     variant={"platform2"}
                     color="black-100"
@@ -101,7 +107,9 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHIcon icon={'netherlands'} title="city" lg />
+                <Row marginBottom3>
+                    <VHIcon icon={'netherlands'} title="city" lg />
+                </Row>
                 <VHText
                     variant={"platform2"}
                     color="black-100"
@@ -120,7 +128,9 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHIcon icon={'uk'} title="city" lg />
+                <Row marginBottom3>
+                    <VHIcon icon={'uk'} title="city" lg />
+                </Row>
                 <VHText
                     variant={"platform2"}
                     color="black-100"
@@ -139,7 +149,9 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <VHIcon icon={'usa'} title="city" lg />
+                <Row marginBottom3>
+                    <VHIcon icon={'usa'} title="city" lg />
+                </Row>
                 <VHText
                     variant={"platform2"}
                     color="black-100"
