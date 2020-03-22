@@ -107,16 +107,19 @@ var VHTargetLocation = function VHTargetLocation(props) {
       });
     }
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom3: true
+    marginBottom3: true,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
     icon: 'canada',
     title: "city",
     lg: true
-  })), /*#__PURE__*/_react.default.createElement(_index2.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "platform2",
     color: "black-100",
     text: 'Canada'
-  })), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     disabled: !germany,
     onClick: function onClick() {
       setGermany(!germany);
@@ -133,16 +136,19 @@ var VHTargetLocation = function VHTargetLocation(props) {
       });
     }
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom3: true
+    marginBottom3: true,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
     icon: 'germany',
     title: "city",
     lg: true
-  })), /*#__PURE__*/_react.default.createElement(_index2.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "platform2",
     color: "black-100",
     text: 'Germany'
-  })), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     disabled: !ireland,
     onClick: function onClick() {
       setIreland(!ireland);
@@ -159,16 +165,19 @@ var VHTargetLocation = function VHTargetLocation(props) {
       });
     }
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom3: true
+    marginBottom3: true,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
     icon: 'ireland',
     title: "city",
     lg: true
-  })), /*#__PURE__*/_react.default.createElement(_index2.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "platform2",
     color: "black-100",
     text: 'Ireland'
-  })), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     disabled: !netherlands,
     onClick: function onClick() {
       setNetherlands(!netherlands);
@@ -185,16 +194,19 @@ var VHTargetLocation = function VHTargetLocation(props) {
       });
     }
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom3: true
+    marginBottom3: true,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
     icon: 'netherlands',
     title: "city",
     lg: true
-  })), /*#__PURE__*/_react.default.createElement(_index2.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "platform2",
     color: "black-100",
     text: 'Netherlands'
-  })), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     disabled: !uk,
     onClick: function onClick() {
       setUk(!uk);
@@ -211,16 +223,19 @@ var VHTargetLocation = function VHTargetLocation(props) {
       });
     }
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom3: true
+    marginBottom3: true,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
     icon: 'uk',
     title: "city",
     lg: true
-  })), /*#__PURE__*/_react.default.createElement(_index2.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "platform2",
     color: "black-100",
     text: 'U.K'
-  })), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     disabled: !usa,
     onClick: function onClick() {
       setUsa(!usa);
@@ -237,16 +252,19 @@ var VHTargetLocation = function VHTargetLocation(props) {
       });
     }
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom3: true
+    marginBottom3: true,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
     icon: 'usa',
     title: "city",
     lg: true
-  })), /*#__PURE__*/_react.default.createElement(_index2.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "platform2",
     color: "black-100",
     text: 'U.S.A'
-  })));
+  }))));
 };
 
 VHTargetLocation.defaultProps = {

@@ -44,14 +44,16 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <Row marginBottom3>
+                <Row marginBottom3 alignItemsCenter>
                     <VHIcon icon={'canada'} title="city" lg />
                 </Row>
-                <VHText
-                    variant={"platform2"}
-                    color="black-100"
-                    text={'Canada'}
-                />
+                <Row alignItemsCenter>
+                    <VHText
+                        variant={"platform2"}
+                        color="black-100"
+                        text={'Canada'}
+                    />
+                </Row>
             </S.Wrapper>
 
             <S.Wrapper disabled={!germany} onClick={() => {
@@ -65,14 +67,16 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <Row marginBottom3>
+                <Row marginBottom3 alignItemsCenter>
                     <VHIcon icon={'germany'} title="city" lg />
                 </Row>
-                <VHText
-                    variant={"platform2"}
-                    color="black-100"
-                    text={'Germany'}
-                />
+                <Row alignItemsCenter>
+                    <VHText
+                        variant={"platform2"}
+                        color="black-100"
+                        text={'Germany'}
+                    />
+                </Row>
             </S.Wrapper>
 
             <S.Wrapper disabled={!ireland} onClick={() => {
@@ -86,14 +90,16 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <Row marginBottom3>
+                <Row marginBottom3 alignItemsCenter>
                     <VHIcon icon={'ireland'} title="city" lg />
                 </Row>
-                <VHText
-                    variant={"platform2"}
-                    color="black-100"
-                    text={'Ireland'}
-                />
+                <Row alignItemsCenter>
+                    <VHText
+                        variant={"platform2"}
+                        color="black-100"
+                        text={'Ireland'}
+                    />
+                </Row>
             </S.Wrapper>
 
             <S.Wrapper disabled={!netherlands} onClick={() => {
@@ -107,14 +113,16 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <Row marginBottom3>
+                <Row marginBottom3 alignItemsCenter>
                     <VHIcon icon={'netherlands'} title="city" lg />
                 </Row>
-                <VHText
-                    variant={"platform2"}
-                    color="black-100"
-                    text={'Netherlands'}
-                />
+                <Row alignItemsCenter>
+                    <VHText
+                        variant={"platform2"}
+                        color="black-100"
+                        text={'Netherlands'}
+                    />
+                </Row>
             </S.Wrapper>
 
             <S.Wrapper disabled={!uk} onClick={() => {
@@ -128,14 +136,16 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <Row marginBottom3>
+                <Row marginBottom3 alignItemsCenter>
                     <VHIcon icon={'uk'} title="city" lg />
                 </Row>
-                <VHText
-                    variant={"platform2"}
-                    color="black-100"
-                    text={'U.K'}
-                />
+                <Row alignItemsCenter>
+                    <VHText
+                        variant={"platform2"}
+                        color="black-100"
+                        text={'U.K'}
+                    />
+                </Row>
             </S.Wrapper>
 
             <S.Wrapper disabled={!usa} onClick={() => {
@@ -149,14 +159,16 @@ const VHTargetLocation = props => {
                     }
                 })
             }}>
-                <Row marginBottom3>
+                <Row marginBottom3 alignItemsCenter>
                     <VHIcon icon={'usa'} title="city" lg />
                 </Row>
-                <VHText
-                    variant={"platform2"}
-                    color="black-100"
-                    text={'U.S.A'}
-                />
+                <Row alignItemsCenter>
+                    <VHText
+                        variant={"platform2"}
+                        color="black-100"
+                        text={'U.S.A'}
+                    />
+                </Row>
             </S.Wrapper>
         </Row>
     )

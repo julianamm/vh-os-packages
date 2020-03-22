@@ -32,10 +32,12 @@ var VHRelocationSection = function VHRelocationSection(props) {
   var salaryRangeEurList = props.salaryRangeEurList;
   var visaStatusCanadianList = props.visaStatusCanadianList;
   var visaStatusEUList = props.visaStatusEUList;
+  var noticePeriodList = props.noticePeriodList;
   var salaryRangeCad = props.salaryRangeCad != undefined ? salaryRangeCadList[props.salaryRangeCad] : [];
   var salaryRangeEur = props.salaryRangeEur != undefined ? salaryRangeEurList[parseInt(props.salaryRangeEur)] : [];
   var visaStatusCanadian = props.visaStatusCanadian != undefined ? visaStatusCanadianList[props.visaStatusCanadian] : [];
   var visaStatusEU = props.visaStatusEU != undefined ? visaStatusEUList[props.visaStatusEU] : [];
+  var noticePeriod = props.noticePeriod != undefined ? noticePeriodList[props.noticePeriod] : [];
   var companySize = props.companySize ? props.companySize : [{
     value: false
   }, {
@@ -213,19 +215,23 @@ var VHRelocationSection = function VHRelocationSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
-    data: 'openForRemoteJobs',
+    data: 'activelyLookingForJob',
     color: "gray-100",
     variant: "subtitle3",
     onEvent: props.onEvent,
     text: 'Are you actively looking for a job?',
-    checked: props.openForRemoteJobs
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_radio.default, {
-    data: 'openForRemoteJobs',
-    color: "gray-100",
-    variant: "subtitle3",
+    checked: props.activelyLookingForJob
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    caption: "What is your notice period?",
+    className: "vh-general-section-notice-period ".concat(props.className ? props.className : ''),
+    currentItem: noticePeriod,
+    data: "noticePeriod",
+    items: noticePeriodList,
     onEvent: props.onEvent,
-    text: 'What is your notice period?',
-    checked: props.openForRemoteJobs
+    isLoading: props.controls.noticePeriod.loading,
+    description: props.controls.noticePeriod.error && props.controls.noticePeriod.message,
+    descriptionColor: "red-light",
+    captionColor: props.controls.noticePeriod.loading ? "gray-40" : props.controls.noticePeriod.error ? "red" : null
   })))))));
 };
 

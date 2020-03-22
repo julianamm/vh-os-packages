@@ -15,11 +15,13 @@ const VHRelocationSection = props => {
     const salaryRangeEurList = props.salaryRangeEurList
     const visaStatusCanadianList = props.visaStatusCanadianList
     const visaStatusEUList = props.visaStatusEUList
+    const noticePeriodList = props.noticePeriodList
 
     const salaryRangeCad = props.salaryRangeCad != undefined ? salaryRangeCadList[props.salaryRangeCad] : []
     const salaryRangeEur = props.salaryRangeEur != undefined ? salaryRangeEurList[parseInt(props.salaryRangeEur)] : []
     const visaStatusCanadian = props.visaStatusCanadian != undefined ? visaStatusCanadianList[props.visaStatusCanadian] : []
     const visaStatusEU = props.visaStatusEU != undefined ? visaStatusEUList[props.visaStatusEU] : []
+    const noticePeriod = props.noticePeriod != undefined ? noticePeriodList[props.noticePeriod] : []
     const companySize = props.companySize ? props.companySize : [{value:false}, {value:false}, {value:false}]
 
     const targetLocation = props.targetLocation ? props.targetLocation.items : []
@@ -271,22 +273,32 @@ const VHRelocationSection = props => {
                         <Row row >
                             <Row paddingRight8>
                                 <VHInputRadio
-                                    data={'openForRemoteJobs'}
+                                    data={'activelyLookingForJob'}
                                     color="gray-100"
                                     variant="subtitle3"
                                     onEvent={props.onEvent}
                                     text={'Are you actively looking for a job?'}
-                                    checked={props.openForRemoteJobs}
+                                    checked={props.activelyLookingForJob}
                                 />
                             </Row>
                             <Row>
-                                <VHInputRadio
-                                    data={'openForRemoteJobs'}
-                                    color="gray-100"
-                                    variant="subtitle3"
+                            <VHSelect
+                                    caption="What is your notice period?"
+                                    className={`vh-general-section-notice-period ${props.className ? props.className : ''}`}
+                                    currentItem={noticePeriod}
+                                    data="noticePeriod"
+                                    items={noticePeriodList}
                                     onEvent={props.onEvent}
-                                    text={'What is your notice period?'}
-                                    checked={props.openForRemoteJobs}
+                                    isLoading={props.controls.noticePeriod.loading}
+                                    description={props.controls.noticePeriod.error && props.controls.noticePeriod.message}
+                                    descriptionColor="red-light"
+                                    captionColor={
+                                        props.controls.noticePeriod.loading
+                                            ? "gray-40"
+                                            : props.controls.noticePeriod.error
+                                                ? "red"
+                                                : null
+                                    }
                                 />
                             </Row>
                         </Row>
