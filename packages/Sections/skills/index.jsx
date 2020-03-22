@@ -6,6 +6,7 @@ import VHText from "../../Components/Text";
 import VHSelect from "../../Components/Input/Select";
 import VHInputCheckbox from "../../Components/Input/checkbox";
 import VHList from "../../Components/List";
+import VHSecondaryList from "../../Components/SecondaryList";
 import VHTitleDescription from "../../Components/TitleDescription";
 
 
@@ -53,7 +54,7 @@ const VHSkillsSection = props => {
                     ? "gray-40"
                     : props.controls.positionSkill.error
                       ? "red"
-                      : null
+                      : 'gray-100'
                 }
                 className={`vh-skills-section-positionSkill ${props.className ? props.className : ''}`}
                 currentItem={position}
@@ -73,7 +74,7 @@ const VHSkillsSection = props => {
                     ? "gray-40"
                     : props.controls.yearsOfExperience.error
                       ? "red"
-                      : null
+                      : 'gray-100'
                 }
                 className={`vh-skills-section-yearsOfExperience ${props.className ? props.className : ''}`}
                 currentItem={yearsOfExperience}
@@ -131,7 +132,7 @@ const VHSkillsSection = props => {
               descriptionColor="red-light"
             />
           </Row>
-          <Row column marginBottom={5}>
+          <Row column marginBottom={10}>
           <VHTitleDescription
           contents={true}
                 className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
@@ -156,12 +157,46 @@ const VHSkillsSection = props => {
                 titleVariant="subtitle3"
               />
           </Row>
-          <Row>
+          <Row marginBottom={15}>
             <VHList
               onEvent={props.onEvent}
               secondList={props.yearsOfExperienceList}
               list={props.skillList}
               items={props.topSkill}
+              data="vanhack" />
+          </Row> 
+          <Row column marginBottom={5}>
+          <VHTitleDescription
+          contents={true}
+                className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
+                descriptionColor={
+                  props.controls.secondarySkill.loading
+                  ? "gray-40"
+                  : props.controls.secondarySkill.error
+                  ? "red-light"
+                  : "gray-90"
+                }
+                inline
+                onEvent={props.onEvent}
+                title="Add up to 5 secondary skills"
+                description=""
+                titleColor={
+                  props.controls.secondarySkill.loading
+                  ? "gray-40"
+                  : props.controls.secondarySkill.error
+                  ? "red"
+                  : "gray-100"
+                }
+                titleVariant="subtitle3"
+              />
+          </Row>
+          <Row>
+            <VHSecondaryList
+              controls={props.controls}
+              onEvent={props.onEvent}
+              secondList={props.yearsOfExperienceList}
+              list={props.skillList}
+              items={props.secondarySkill}
               data="vanhack" />
           </Row> 
         </VHCardBase>

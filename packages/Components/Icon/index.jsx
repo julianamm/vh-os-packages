@@ -1,13 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BulletIcon  from '../../assets/svg/icons/dot.svg/index.js'
-import FilterIcon  from '../../assets/svg/icons/icon_filter.svg/index.js'
-import ArrowLeftIcon  from '../../assets/svg/icons/icon_arrow_left.svg/index.js'
-import SortIcon  from '../../assets/svg/icons/icon_swap_vert.svg/index.js'
-import SearchIcon  from '../../assets/svg/icons/mdi_search.svg/index.js'
+import BulletIcon from '../../assets/svg/icons/dot.svg/index.js'
+import FilterIcon from '../../assets/svg/icons/icon_filter.svg/index.js'
+import ArrowLeftIcon from '../../assets/svg/icons/icon_arrow_left.svg/index.js'
+import SortIcon from '../../assets/svg/icons/icon_swap_vert.svg/index.js'
+import SearchIcon from '../../assets/svg/icons/mdi_search.svg/index.js'
 import GitHubIcon from '../../assets/svg/icons/icon_github.svg/index.js'
 import LinkedInIcon from '../../assets/svg/icons/icon_linkedin_login.svg/index.js'
 import WebSiteIcon from '../../assets/svg/icons/icon_globe.svg/index.js'
+import USA from '../../assets/svg/flags/flag_usa.svg/index.js';
+import Canada from '../../assets/svg/flags/flag_canada.svg/index.js';
+import Germany from '../../assets/svg/flags/flag_germany.svg/index.js';
+import Ireland from '../../assets/svg/flags/flag_ireland.svg/index.js';
+import Netherlands from '../../assets/svg/flags/flag_netherlands.svg/index.js';
+import UK from '../../assets/svg/flags/flag_uk.svg/index.js';
 
 import Color from "../../Colors";
 
@@ -62,29 +68,41 @@ const VHIcon = props => {
       break
   }
 
-  if(props.color) {
+  if (props.color) {
     defaultColor = Color[props.color];
   }
 
   switch (props.icon) {
     case "bullet":
-      return <BulletIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+      return <BulletIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case "sort":
-      return <SortIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+      return <SortIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case "filter":
-      return <FilterIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+      return <FilterIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case "search":
-      return <SearchIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+      return <SearchIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case "arrow-left":
-      return <ArrowLeftIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+      return <ArrowLeftIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'github':
-      return <GitHubIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+      return <GitHubIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'world':
-      return <WebSiteIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+      return <WebSiteIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'linkedin':
-      return <LinkedInIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+      return <LinkedInIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'search':
-      return <SearchIcon fill={defaultColor}  width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`}/>
+      return <SearchIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'usa':
+      return <USA fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'canada':
+      return <Canada fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'ireland':
+      return <Ireland fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'uk':
+      return <UK fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'germany':
+      return <Germany fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'netherlands':
+      return <Netherlands fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     default:
       return <span />
 
