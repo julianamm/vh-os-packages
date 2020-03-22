@@ -8,6 +8,7 @@ import VHEducationSection from '../../Sections/Education'
 import VHSocialSection from '../../Sections/Social'
 import VHUserCompanyExperienceSection from '../../Sections/UserCompanyExperience'
 import VHPageSection from '../PageSection/index'
+import VHLanguageSection from '../../Sections/LanguageSection'
 
 const VHProfileTemplate = props => (
   <Container md>
@@ -47,6 +48,17 @@ const VHProfileTemplate = props => (
         {...props}
         onEvent={props.onEvent}
       />
+    </Row>
+    <Row marginBottom={10}>
+      <div id={"education"}>
+        <VHPageSection content={
+          <VHLanguageSection
+            {...props}
+            preLoading={props.controls.language.preLoading}
+            onEvent={props.onEvent}
+          />
+        } />
+      </div>
     </Row>
     <Row marginBottom={10}>
       <div id={"education"}>
