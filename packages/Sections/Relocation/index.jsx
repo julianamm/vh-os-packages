@@ -9,6 +9,8 @@ import VHSelect from "../../Components/Input/Select";
 import VHInputCheckbox from "../../Components/Input/checkbox";
 import VHTargetLocation from '../../Components/TargetLocation';
 
+import { RelocationSkeleton } from 'react-preload-skeleton'
+
 const VHRelocationSection = props => {
 
     const salaryRangeCadList = props.salaryRangeCadList
@@ -40,269 +42,279 @@ const VHRelocationSection = props => {
                 <VHCardBase
                     className={`vh-general-section-card ${props.className ? props.className : ''}`}
                 >
-                    <Row column>
-                        <Row marginBottom={5}>
-                            <VHInputRadio
-                                data={'openForRemoteJobs'}
-                                color="gray-100"
-                                variant="subtitle3"
-                                onEvent={props.onEvent}
-                                text={'Are you open to remote jobs?'}
-                                checked={props.openForRemoteJobs}
-                            />
-                        </Row>
-                        <Row marginBottom={5}>
-                        <VHTitleDescription
-                                        className={`vh-general-section-companySize ${props.className ? props.className : ''}`}
-                                        descriptionColor={
-                                            props.controls.companySize.loading
-                                                ? "gray-40"
-                                                : props.controls.companySize.error
-                                                    ? "red-light"
-                                                    : "gray-90"
-                                        }
-                                        descriptionVariant="caption"
-                                        inline
-                                        onEvent={props.onEvent}
-                                        title="Where would you like to work?"
-                                        titleColor={
-                                            props.controls.companySize.loading
-                                                ? "gray-40"
-                                                : props.controls.companySize.error
-                                                    ? "red"
-                                                    : "gray-100"
-                                        }
-                                        titleVariant="subtitle3"
-                                    />
-                        </Row>
-                        <Row marginBottom={10} width={'600px'}>
-                            <VHTargetLocation onEvent={props.onEvent} items={targetLocation}/>
-                         </Row>   
-                        <Row row>
-                            <Row paddingRight8>
-                                <VHSelect
-                                    caption={'Annual salary expectation CAD'}
-                                    leftText="$CAD"
-                                    className={`vh-general-section-salaryRangeCad ${props.className ? props.className : ''}`}
-                                    currentItem={salaryRangeCad}
-                                    data="salaryRangeCad"
-                                    items={salaryRangeCadList}
-                                    onEvent={props.onEvent}
-                                    isLoading={props.controls.salaryRangeCad.loading}
-                                    description={props.controls.salaryRangeCad.error && props.controls.salaryRangeCad.message}
-                                    descriptionColor="red-light"
-                                    captionColor={
-                                        props.controls.salaryRangeCad.loading
-                                            ? "gray-40"
-                                            : props.controls.salaryRangeCad.error
-                                                ? "red"
-                                                : null
-                                    }
-                                />
-                            </Row>
+                    {
+                        props.preLoading ? (
                             <Row>
-                                <VHSelect
-                                    caption={'Annual salary expectation EUR'}
-                                    className={`vh-general-section-salaryRangeEur ${props.className ? props.className : ''}`}
-                                    currentItem={salaryRangeEur}
-                                    data="salaryRangeEur"
-                                    items={salaryRangeEurList}
-                                    onEvent={props.onEvent}
-                                    isLoading={props.controls.salaryRangeEur.loading}
-                                    description={props.controls.salaryRangeEur.error && props.controls.salaryRangeEur.message}
-                                    descriptionColor="red-light"
-                                    captionColor={
-                                        props.controls.salaryRangeEur.loading
-                                            ? "gray-40"
-                                            : props.controls.salaryRangeEur.error
-                                                ? "red"
-                                                : null
-                                    }
-                                />
+                                <RelocationSkeleton />
                             </Row>
-                        </Row>
-                    </Row>
-                    <Row column>
-                        <Row row>
-                            <Row paddingRight8>
-                                <VHSelect
-                                    caption="Canadian Visa Status"
-                                    className={`vh-general-section-visaStatusCanadian ${props.className ? props.className : ''}`}
-                                    currentItem={visaStatusCanadian}
-                                    data="visaStatusCanadian"
-                                    items={visaStatusCanadianList}
-                                    onEvent={props.onEvent}
-                                    isLoading={props.controls.visaStatusCanadian.loading}
-                                    description={props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message}
-                                    descriptionColor="red-light"
-                                    captionColor={
-                                        props.controls.visaStatusCanadian.loading
-                                            ? "gray-40"
-                                            : props.controls.visaStatusCanadian.error
-                                                ? "red"
-                                                : null
-                                    }
-                                />
-                            </Row>
-                            <Row>
-                                <VHSelect
-                                    caption="EU Visa Status"
-                                    className={`vh-general-section-visaStatusEU ${props.className ? props.className : ''}`}
-                                    currentItem={visaStatusEU}
-                                    data="visaStatusEU"
-                                    items={visaStatusEUList}
-                                    onEvent={props.onEvent}
-                                    isLoading={props.controls.visaStatusEU.loading}
-                                    description={props.controls.visaStatusEU.error && props.controls.visaStatusEU.message}
-                                    descriptionColor="red-light"
-                                    captionColor={
-                                        props.controls.visaStatusEU.loading
-                                            ? "gray-40"
-                                            : props.controls.visaStatusEU.error
-                                                ? "red"
-                                                : null
-                                    }
-                                />
-                            </Row>
-                        </Row>
-                    </Row>
-                    <Row column marginBottom={5}>
-                        <Row row marginBottom={5}>
-                            <Row paddingRight8>
-                                <VHInputRadio
-                                    data={'passportValid'}
-                                    color="gray-100"
-                                    variant="subtitle3"
-                                    onEvent={props.onEvent}
-                                    text={'Do you have a valid passport?'}
-                                    checked={props.passportValid}
-                                />
-                            </Row>
-                            <Row column>
-                                <Row marginBottom={5}>
+                        ) : (
+                            <>
+                                <Row column>
+                                    <Row marginBottom={5}>
+                                        <VHInputRadio
+                                            data={'openForRemoteJobs'}
+                                            color="gray-100"
+                                            variant="subtitle3"
+                                            onEvent={props.onEvent}
+                                            text={'Are you open to remote jobs?'}
+                                            checked={props.openForRemoteJobs}
+                                        />
+                                    </Row>
+                                    <Row marginBottom={5}>
                                     <VHTitleDescription
-                                        className={`vh-general-section-companySize ${props.className ? props.className : ''}`}
-                                        descriptionColor={
-                                            props.controls.companySize.loading
-                                                ? "gray-40"
-                                                : props.controls.companySize.error
-                                                    ? "red-light"
-                                                    : "gray-90"
-                                        }
-                                        descriptionVariant="caption"
-                                        inline
-                                        onEvent={props.onEvent}
-                                        title="What size company do you prefer?"
-                                        titleColor={
-                                            props.controls.companySize.loading
-                                                ? "gray-40"
-                                                : props.controls.companySize.error
-                                                    ? "red"
-                                                    : "gray-100"
-                                        }
-                                        titleVariant="subtitle3"
-                                    />
+                                                    className={`vh-general-section-companySize ${props.className ? props.className : ''}`}
+                                                    descriptionColor={
+                                                        props.controls.companySize.loading
+                                                            ? "gray-40"
+                                                            : props.controls.companySize.error
+                                                                ? "red-light"
+                                                                : "gray-90"
+                                                    }
+                                                    descriptionVariant="caption"
+                                                    inline
+                                                    onEvent={props.onEvent}
+                                                    title="Where would you like to work?"
+                                                    titleColor={
+                                                        props.controls.companySize.loading
+                                                            ? "gray-40"
+                                                            : props.controls.companySize.error
+                                                                ? "red"
+                                                                : "gray-100"
+                                                    }
+                                                    titleVariant="subtitle3"
+                                                />
+                                    </Row>
+                                    <Row marginBottom={10} width={'600px'}>
+                                        <VHTargetLocation onEvent={props.onEvent} items={targetLocation}/>
+                                    </Row>
+                                    <Row row>
+                                        <Row paddingRight8>
+                                            <VHSelect
+                                                caption={'Annual salary expectation CAD'}
+                                                leftText="$CAD"
+                                                className={`vh-general-section-salaryRangeCad ${props.className ? props.className : ''}`}
+                                                currentItem={salaryRangeCad}
+                                                data="salaryRangeCad"
+                                                items={salaryRangeCadList}
+                                                onEvent={props.onEvent}
+                                                isLoading={props.controls.salaryRangeCad.loading}
+                                                description={props.controls.salaryRangeCad.error && props.controls.salaryRangeCad.message}
+                                                descriptionColor="red-light"
+                                                captionColor={
+                                                    props.controls.salaryRangeCad.loading
+                                                        ? "gray-40"
+                                                        : props.controls.salaryRangeCad.error
+                                                            ? "red"
+                                                            : null
+                                                }
+                                            />
+                                        </Row>
+                                        <Row>
+                                            <VHSelect
+                                                caption={'Annual salary expectation EUR'}
+                                                className={`vh-general-section-salaryRangeEur ${props.className ? props.className : ''}`}
+                                                currentItem={salaryRangeEur}
+                                                data="salaryRangeEur"
+                                                items={salaryRangeEurList}
+                                                onEvent={props.onEvent}
+                                                isLoading={props.controls.salaryRangeEur.loading}
+                                                description={props.controls.salaryRangeEur.error && props.controls.salaryRangeEur.message}
+                                                descriptionColor="red-light"
+                                                captionColor={
+                                                    props.controls.salaryRangeEur.loading
+                                                        ? "gray-40"
+                                                        : props.controls.salaryRangeEur.error
+                                                            ? "red"
+                                                            : null
+                                                }
+                                            />
+                                        </Row>
+                                    </Row>
                                 </Row>
-                                <Row row>
-                                    <VHInputCheckbox
-                                        checked={companySize[0].value}
-                                        className=""
-                                        color={
-                                            props.controls.companySize.loading
-                                                ? "gray-40"
-                                                : props.controls.companySize.error
-                                                    ? "red"
-                                                    : 'gray-100'
-                                        }
-                                        data={{
-                                            id: 'companySize',
-                                            label: 'yes',
-                                            value: '1'
-                                        }}
-                                        disabled={props.controls.companySize.loading}
-                                        onEvent={props.onEvent}
-                                        title="Startup"
-                                        value="123"
-                                        variant="platform1"
-                                    />
-                                    <VHInputCheckbox
-                                        checked={companySize[1].value}
-                                        className=""
-                                        color={
-                                            props.controls.companySize.loading
-                                                ? "gray-40"
-                                                : props.controls.companySize.error
-                                                    ? "red"
-                                                    : 'gray-100'
-                                        }
-                                        data={{
-                                            id: 'companySize',
-                                            label: 'yes',
-                                            value: '2'
-                                        }}
-                                        disabled={props.controls.companySize.loading}
-                                        onEvent={props.onEvent}
-                                        title="Midsize"
-                                        value="123"
-                                        variant="platform1"
-                                    />
-                                    <VHInputCheckbox
-                                        checked={companySize[2].value}
-                                        className=""
-                                        color={
-                                            props.controls.companySize.loading
-                                                ? "gray-40"
-                                                : props.controls.companySize.error
-                                                    ? "red"
-                                                    : 'gray-100'
-                                        }
-                                        data={{
-                                            id: 'companySize',
-                                            label: 'yes',
-                                            value: '4'
-                                        }}
-                                        disabled={props.controls.companySize.loading}
-                                        onEvent={props.onEvent}
-                                        title="Corporate"
-                                        value="123"
-                                        variant="platform1"
-                                    />
+                                <Row column>
+                                    <Row row>
+                                        <Row paddingRight8>
+                                            <VHSelect
+                                                caption="Canadian Visa Status"
+                                                className={`vh-general-section-visaStatusCanadian ${props.className ? props.className : ''}`}
+                                                currentItem={visaStatusCanadian}
+                                                data="visaStatusCanadian"
+                                                items={visaStatusCanadianList}
+                                                onEvent={props.onEvent}
+                                                isLoading={props.controls.visaStatusCanadian.loading}
+                                                description={props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message}
+                                                descriptionColor="red-light"
+                                                captionColor={
+                                                    props.controls.visaStatusCanadian.loading
+                                                        ? "gray-40"
+                                                        : props.controls.visaStatusCanadian.error
+                                                            ? "red"
+                                                            : null
+                                                }
+                                            />
+                                        </Row>
+                                        <Row>
+                                            <VHSelect
+                                                caption="EU Visa Status"
+                                                className={`vh-general-section-visaStatusEU ${props.className ? props.className : ''}`}
+                                                currentItem={visaStatusEU}
+                                                data="visaStatusEU"
+                                                items={visaStatusEUList}
+                                                onEvent={props.onEvent}
+                                                isLoading={props.controls.visaStatusEU.loading}
+                                                description={props.controls.visaStatusEU.error && props.controls.visaStatusEU.message}
+                                                descriptionColor="red-light"
+                                                captionColor={
+                                                    props.controls.visaStatusEU.loading
+                                                        ? "gray-40"
+                                                        : props.controls.visaStatusEU.error
+                                                            ? "red"
+                                                            : null
+                                                }
+                                            />
+                                        </Row>
+                                    </Row>
                                 </Row>
-                            </Row>
-                        </Row>
-                        <Row row >
-                            <Row paddingRight8>
-                                <VHInputRadio
-                                    data={'activelyLookingForJob'}
-                                    color="gray-100"
-                                    variant="subtitle3"
-                                    onEvent={props.onEvent}
-                                    text={'Are you actively looking for a job?'}
-                                    checked={props.activelyLookingForJob}
-                                />
-                            </Row>
-                            <Row>
-                            <VHSelect
-                                    caption="What is your notice period?"
-                                    className={`vh-general-section-notice-period ${props.className ? props.className : ''}`}
-                                    currentItem={noticePeriod}
-                                    data="noticePeriod"
-                                    items={noticePeriodList}
-                                    onEvent={props.onEvent}
-                                    isLoading={props.controls.noticePeriod.loading}
-                                    description={props.controls.noticePeriod.error && props.controls.noticePeriod.message}
-                                    descriptionColor="red-light"
-                                    captionColor={
-                                        props.controls.noticePeriod.loading
-                                            ? "gray-40"
-                                            : props.controls.noticePeriod.error
-                                                ? "red"
-                                                : null
-                                    }
-                                />
-                            </Row>
-                        </Row>
-                    </Row>
+                                <Row column marginBottom={5}>
+                                    <Row row marginBottom={5}>
+                                        <Row paddingRight8>
+                                            <VHInputRadio
+                                                data={'passportValid'}
+                                                color="gray-100"
+                                                variant="subtitle3"
+                                                onEvent={props.onEvent}
+                                                text={'Do you have a valid passport?'}
+                                                checked={props.passportValid}
+                                            />
+                                        </Row>
+                                        <Row column>
+                                            <Row marginBottom={5}>
+                                                <VHTitleDescription
+                                                    className={`vh-general-section-companySize ${props.className ? props.className : ''}`}
+                                                    descriptionColor={
+                                                        props.controls.companySize.loading
+                                                            ? "gray-40"
+                                                            : props.controls.companySize.error
+                                                                ? "red-light"
+                                                                : "gray-90"
+                                                    }
+                                                    descriptionVariant="caption"
+                                                    inline
+                                                    onEvent={props.onEvent}
+                                                    title="What size company do you prefer?"
+                                                    titleColor={
+                                                        props.controls.companySize.loading
+                                                            ? "gray-40"
+                                                            : props.controls.companySize.error
+                                                                ? "red"
+                                                                : "gray-100"
+                                                    }
+                                                    titleVariant="subtitle3"
+                                                />
+                                            </Row>
+                                            <Row row>
+                                                <VHInputCheckbox
+                                                    checked={companySize[0].value}
+                                                    className=""
+                                                    color={
+                                                        props.controls.companySize.loading
+                                                            ? "gray-40"
+                                                            : props.controls.companySize.error
+                                                                ? "red"
+                                                                : 'gray-100'
+                                                    }
+                                                    data={{
+                                                        id: 'companySize',
+                                                        label: 'yes',
+                                                        value: '1'
+                                                    }}
+                                                    disabled={props.controls.companySize.loading}
+                                                    onEvent={props.onEvent}
+                                                    title="Startup"
+                                                    value="123"
+                                                    variant="platform1"
+                                                />
+                                                <VHInputCheckbox
+                                                    checked={companySize[1].value}
+                                                    className=""
+                                                    color={
+                                                        props.controls.companySize.loading
+                                                            ? "gray-40"
+                                                            : props.controls.companySize.error
+                                                                ? "red"
+                                                                : 'gray-100'
+                                                    }
+                                                    data={{
+                                                        id: 'companySize',
+                                                        label: 'yes',
+                                                        value: '2'
+                                                    }}
+                                                    disabled={props.controls.companySize.loading}
+                                                    onEvent={props.onEvent}
+                                                    title="Midsize"
+                                                    value="123"
+                                                    variant="platform1"
+                                                />
+                                                <VHInputCheckbox
+                                                    checked={companySize[2].value}
+                                                    className=""
+                                                    color={
+                                                        props.controls.companySize.loading
+                                                            ? "gray-40"
+                                                            : props.controls.companySize.error
+                                                                ? "red"
+                                                                : 'gray-100'
+                                                    }
+                                                    data={{
+                                                        id: 'companySize',
+                                                        label: 'yes',
+                                                        value: '4'
+                                                    }}
+                                                    disabled={props.controls.companySize.loading}
+                                                    onEvent={props.onEvent}
+                                                    title="Corporate"
+                                                    value="123"
+                                                    variant="platform1"
+                                                />
+                                            </Row>
+                                        </Row>
+                                    </Row>
+                                    <Row row >
+                                        <Row paddingRight8>
+                                            <VHInputRadio
+                                                data={'activelyLookingForJob'}
+                                                color="gray-100"
+                                                variant="subtitle3"
+                                                onEvent={props.onEvent}
+                                                text={'Are you actively looking for a job?'}
+                                                checked={props.activelyLookingForJob}
+                                            />
+                                        </Row>
+                                        <Row>
+                                        <VHSelect
+                                                caption="What is your notice period?"
+                                                className={`vh-general-section-notice-period ${props.className ? props.className : ''}`}
+                                                currentItem={noticePeriod}
+                                                data="noticePeriod"
+                                                items={noticePeriodList}
+                                                onEvent={props.onEvent}
+                                                isLoading={props.controls.noticePeriod.loading}
+                                                description={props.controls.noticePeriod.error && props.controls.noticePeriod.message}
+                                                descriptionColor="red-light"
+                                                captionColor={
+                                                    props.controls.noticePeriod.loading
+                                                        ? "gray-40"
+                                                        : props.controls.noticePeriod.error
+                                                            ? "red"
+                                                            : null
+                                                }
+                                            />
+                                        </Row>
+                                    </Row>
+                                </Row>
+                            </>
+                        )
+                    }
                 </VHCardBase>
             </Row>
         </>

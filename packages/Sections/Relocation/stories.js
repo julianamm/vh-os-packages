@@ -23,7 +23,7 @@ const items = [
 
 const currentItem = [items[4]]
 
-const controls = { salaryRangeCad: { loading: false, success: true, error: false }, 
+const controls = { salaryRangeCad: { loading: false, success: true, error: false },
 salaryRangeEur: { loading: false, success: true, error: false },
 visaStatusEU: { loading: false, success: true, error: false },
 visaStatusCanadian: { loading: false, success: true, error: false },
@@ -37,6 +37,8 @@ storiesOf("Sections|Relocation", module)
                 items={items}
                 currentItem={currentItem}
                 controls={controls}
+                preLoading={true}
+                loading={true}
                 onEvent={e => {
                     console.log(e)
                 }}

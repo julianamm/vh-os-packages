@@ -10,6 +10,7 @@ export const ModalWrapper = styled.div`
   left: 0;
   display: ${props => (props.open ? "block" : "none")};
   background-color: rgba(0, 0, 0, 0.75);
+  z-index: 666;
 `;
 
 export const ModalContainer = styled.div`
