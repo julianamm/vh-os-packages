@@ -14,8 +14,8 @@ const VHSecondaryList = props => {
     return (
         <React.Fragment>
             < S.Wrapper >
-                <Row width={'30%'} alignItemsCenter row >
-                    <Row width={'70%'}>
+                <Row  alignItemsCenter row >
+                    <Row>
                         <VHSelect
                             preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
@@ -52,8 +52,8 @@ const VHSecondaryList = props => {
                 </Row>
             </ S.Wrapper>
             < S.Wrapper >
-                <Row width={'30%'} alignItemsCenter row >
-                    <Row width={'70%'}>
+                <Row  alignItemsCenter row >
+                    <Row>
                         <VHSelect
                         preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
@@ -90,8 +90,8 @@ const VHSecondaryList = props => {
                 </Row>
             </S.Wrapper>
             <S.Wrapper>
-                <Row width={'30%'} alignItemsCenter row >
-                    <Row width={'70%'}>
+                <Row  alignItemsCenter row >
+                    <Row>
                         <VHSelect
                         preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
@@ -128,8 +128,8 @@ const VHSecondaryList = props => {
                 </Row>
             </S.Wrapper>
             <S.Wrapper>
-                <Row width={'30%'} alignItemsCenter row >
-                    <Row width={'70%'}>
+                <Row  alignItemsCenter row >
+                    <Row>
                         <VHSelect
                         preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
@@ -166,8 +166,8 @@ const VHSecondaryList = props => {
                 </Row>
             </S.Wrapper>
             <S.Wrapper>
-                <Row width={'30%'} alignItemsCenter row >
-                    <Row width={'70%'}>
+                <Row  alignItemsCenter row >
+                    <Row>
                         <VHSelect
                         preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}

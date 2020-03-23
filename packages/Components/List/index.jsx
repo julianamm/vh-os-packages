@@ -14,11 +14,11 @@ const VHList = props => {
     return (
         <React.Fragment>
             < S.Wrapper >
-                <Row width={'30%'} alignItemsCenter row responsive>
-                    <Row width={'15%'} responsive>
+                <Row alignItemsCenter row responsive>
+                    <Row responsive width="27px">
                         <VHText variant={'platform'} text="1st" color={'gray-90'} />
                     </Row>
-                    <Row width={'70%'} responsive>
+                    <Row responsive>
                         <VHSelect
                             bold={true}
                             marginBottom={'0px'}
@@ -54,11 +54,11 @@ const VHList = props => {
                 </Row>
             </ S.Wrapper>
             < S.Wrapper >
-                <Row width={'30%'} responsive alignItemsCenter row >
-                    <Row width={'15%'} responsive>
+                <Row responsive alignItemsCenter row >
+                    <Row responsive width="27px">
                         <VHText variant={'platform'} text="2nd" color={'gray-90'} />
                     </Row>
-                    <Row width={'70%'} responsive>
+                    <Row responsive>
                         <VHSelect
                             bold={true}
                             marginBottom={'0px'}
@@ -94,11 +94,11 @@ const VHList = props => {
                 </Row>
             </S.Wrapper>
             <S.Wrapper>
-                <Row width={'30%'} alignItemsCenter row responsive>
-                    <Row width={'15%'}>
+                <Row  alignItemsCenter row responsive>
+                    <Row responsive width="27px">
                         <VHText variant={'platform'} text="3rd" color={'gray-90'} />
                     </Row>
-                    <Row width={'70%'} responsive>
+                    <Row responsive>
                         <VHSelect
                             bold={true}
                             marginBottom={'0px'}
