@@ -152,7 +152,7 @@ const VHModalExperience = props => {
                                         max={5}
                                         items={experience.description}
                                         placeholder="Job Experience"
-                                        data={{id: 'multipleInput'}}
+                                        data={{id: 'multipleInput', order: index}}
                                         onEvent={props.onEvent}
                                     />
                                     {experience.description.messageError && (
@@ -168,7 +168,7 @@ const VHModalExperience = props => {
                         )
                     })}
                     <Row alignItemsRight>
-                        <VHButton primary data={{ action: 'saveExperience', id: currentItem.id }} onEvent={props.onEvent} onClose={props.onClose} closeModal={props.closeModal} label="Save" />
+                        <VHButton primary data={{ action: 'saveExperience', id: currentItem.id }} onEvent={props.onEvent} onClose={props.onClose} closeModal={props.closeModalExperience} label="Save" />
                     </Row>
                 </Row>
             }>
