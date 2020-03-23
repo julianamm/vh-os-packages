@@ -3,7 +3,7 @@ import Color from '../../Colors'
 
 export const Wrapper = styled.div`
     width: 54px;
-    height: 54px;
+    height: 90px;
     opacity: ${props => props.disabled ? "0.3" : ""};
     cursor: pointer;
     display: flex;

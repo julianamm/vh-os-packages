@@ -32,7 +32,8 @@ const VHTargetLocation = props => {
         items[5].status])
 
     return (
-        <Row className={`vh-target-location ${props.className ? props.className : ''}`} row justifySpaceBetween>
+        <Row justifySpaceBetween row className={`vh-target-location ${props.className ? props.className : ''}`} row justifySpaceBetween>
+            <Row row responsive justifySpaceAround >
             <S.Wrapper disabled={!canada} onClick={() => {
                 setCanada(!canada)
                 props.onEvent({
@@ -78,7 +79,8 @@ const VHTargetLocation = props => {
                     />
                 </Row>
             </S.Wrapper>
-
+            </Row>
+            <Row row responsive justifySpaceAround >
             <S.Wrapper disabled={!ireland} onClick={() => {
                 setIreland(!ireland)
                 props.onEvent({
@@ -101,7 +103,6 @@ const VHTargetLocation = props => {
                     />
                 </Row>
             </S.Wrapper>
-
             <S.Wrapper disabled={!netherlands} onClick={() => {
                 setNetherlands(!netherlands)
                 props.onEvent({
@@ -124,7 +125,8 @@ const VHTargetLocation = props => {
                     />
                 </Row>
             </S.Wrapper>
-
+            </Row>
+            <Row row responsive justifySpaceAround >
             <S.Wrapper disabled={!uk} onClick={() => {
                 setUk(!uk)
                 props.onEvent({
@@ -170,6 +172,7 @@ const VHTargetLocation = props => {
                     />
                 </Row>
             </S.Wrapper>
+            </Row>
         </Row>
     )
 

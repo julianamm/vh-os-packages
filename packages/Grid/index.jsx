@@ -151,6 +151,5 @@ export const Row = styled.div`
     ${({ fixed }) => fixed && `
        position: fixed;
     `}
-
 `
 

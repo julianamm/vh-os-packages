@@ -87,8 +87,8 @@ const VHRelocationSection = props => {
                                     <Row marginBottom={10} width={'600px'}>
                                         <VHTargetLocation onEvent={props.onEvent} items={targetLocation}/>
                                     </Row>
-                                    <Row row>
-                                        <Row paddingRight8>
+                                    <Row row responsive>
+                                        <Row paddingRight8 responsive>
                                             <VHSelect
                                                 caption={'Annual salary expectation CAD'}
                                                 leftText="$CAD"
@@ -132,7 +132,7 @@ const VHRelocationSection = props => {
                                     </Row>
                                 </Row>
                                 <Row column>
-                                    <Row row>
+                                    <Row row responsive>
                                         <Row paddingRight8>
                                             <VHSelect
                                                 caption="Canadian Visa Status"
@@ -176,7 +176,7 @@ const VHRelocationSection = props => {
                                     </Row>
                                 </Row>
                                 <Row column marginBottom={5}>
-                                    <Row row marginBottom={5}>
+                                    <Row row marginBottom={5} responsive>
                                         <Row paddingRight8>
                                             <VHInputRadio
                                                 data={'passportValid'}
@@ -212,28 +212,30 @@ const VHRelocationSection = props => {
                                                     titleVariant="subtitle3"
                                                 />
                                             </Row>
-                                            <Row row>
-                                                <VHInputCheckbox
-                                                    checked={companySize[0].value}
-                                                    className=""
-                                                    color={
-                                                        props.controls.companySize.loading
-                                                            ? "gray-40"
-                                                            : props.controls.companySize.error
-                                                                ? "red"
-                                                                : 'gray-100'
-                                                    }
-                                                    data={{
-                                                        id: 'companySize',
-                                                        label: 'yes',
-                                                        value: '1'
-                                                    }}
-                                                    disabled={props.controls.companySize.loading}
-                                                    onEvent={props.onEvent}
-                                                    title="Startup"
-                                                    value="123"
-                                                    variant="platform1"
-                                                />
+                                            <Row row responsive>
+                                                <Row>
+                                                    <VHInputCheckbox
+                                                        checked={companySize[0].value}
+                                                        className=""
+                                                        color={
+                                                            props.controls.companySize.loading
+                                                                ? "gray-40"
+                                                                : props.controls.companySize.error
+                                                                    ? "red"
+                                                                    : 'gray-100'
+                                                        }
+                                                        data={{
+                                                            id: 'companySize',
+                                                            label: 'yes',
+                                                            value: '1'
+                                                        }}
+                                                        disabled={props.controls.companySize.loading}
+                                                        onEvent={props.onEvent}
+                                                        title="Startup"
+                                                        value="123"
+                                                        variant="platform1"
+                                                    />
+                                                </Row>
                                                 <VHInputCheckbox
                                                     checked={companySize[1].value}
                                                     className=""
@@ -279,7 +281,7 @@ const VHRelocationSection = props => {
                                             </Row>
                                         </Row>
                                     </Row>
-                                    <Row row >
+                                    <Row row responsive>
                                         <Row paddingRight8>
                                             <VHInputRadio
                                                 data={'activelyLookingForJob'}

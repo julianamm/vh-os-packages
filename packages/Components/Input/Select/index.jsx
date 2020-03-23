@@ -5,7 +5,7 @@ import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import VHText from '../../Text'
 import { TitleDescriptionSkeleton } from 'react-preload-skeleton'
-
+import { Row } from '../../../Grid'
 const animatedComponents = makeAnimated();
 
 const VHSelect = props => {
@@ -37,7 +37,7 @@ if (props.preLoading) {
   };
 
   return (
-    <div style={{ position: 'relative', marginBottom: props.marginBottom ? props.marginBottom : '21px' }}>
+    <Row responsive style={{ position: 'relative', marginBottom: props.marginBottom ? props.marginBottom : '21px' }}>
       {
         props.caption &&
         <VHText
@@ -125,7 +125,7 @@ if (props.preLoading) {
           />
         </div>
       }
-    </div>
+    </Row>
   );
 }
 

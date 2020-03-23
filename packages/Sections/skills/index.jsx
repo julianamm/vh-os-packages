@@ -89,7 +89,7 @@ const VHSkillsSection = props => {
               />
             </Row>
           </Row>
-          <Row marginBottom3>
+          <Row marginBottom3 responsive>
             <VHInputCheckbox
               checked={props.openForDifferentRole}
               className=""
@@ -135,7 +135,7 @@ const VHSkillsSection = props => {
               descriptionColor="red-light"
             />
           </Row>
-          <Row column marginBottom={10} responsive>
+          <Row column marginBottom={10}>
           <VHTitleDescription
           contents={true}
                 className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
