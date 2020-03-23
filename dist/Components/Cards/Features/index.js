@@ -28,35 +28,35 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHCardFeatures = function VHCardFeatures(props) {
-  return _react.default.createElement(_index.Container, {
+  return /*#__PURE__*/_react.default.createElement(_index.Container, {
     alignItemsCenter: true
-  }, _react.default.createElement(_index4.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index4.default, {
     noHover: props.noHover
-  }, _react.default.createElement(_index.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     row: true,
     alignItemsCenter: true,
     height: 300
-  }, _react.default.createElement(S.Group, null, props.features.map(function (feature) {
-    return _react.default.createElement(S.Item, null, _react.default.createElement(_index.Row, {
+  }, /*#__PURE__*/_react.default.createElement(S.Group, null, props.features.map(function (feature) {
+    return /*#__PURE__*/_react.default.createElement(S.Item, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
       width: 300
-    }, _react.default.createElement(_index.Row, {
+    }, /*#__PURE__*/_react.default.createElement(_index.Row, {
       alignItemsCenter: true,
       marginBottom5: true
-    }, _react.default.createElement(_index2.default, {
+    }, /*#__PURE__*/_react.default.createElement(_index2.default, {
       source: feature.icon,
       title: feature.title,
       md: true
-    })), _react.default.createElement(_index.Row, {
+    })), /*#__PURE__*/_react.default.createElement(_index.Row, {
       alignItemsCenter: true,
       marginBottom5: true
-    }, _react.default.createElement(S.TextWrapper, null, _react.default.createElement(_index3.default, {
+    }, /*#__PURE__*/_react.default.createElement(S.TextWrapper, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
       variant: "h4",
       color: "gray-90",
       text: feature.title
-    }))), _react.default.createElement(_index.Row, {
+    }))), /*#__PURE__*/_react.default.createElement(_index.Row, {
       alignItemsCenter: true,
       marginBottom5: true
-    }, _react.default.createElement(S.TextWrapper, null, _react.default.createElement(_index3.default, {
+    }, /*#__PURE__*/_react.default.createElement(S.TextWrapper, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
       variant: "bodyweb",
       color: "gray-60",
       text: feature.description

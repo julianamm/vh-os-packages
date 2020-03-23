@@ -26,6 +26,7 @@ const VHProfileTemplate = props => (
       <div id={"skills"}>
         <VHPageSection content={
           <VHSkillsSection
+            preLoading={props.controls.gender.preLoading}
             {...props}
             onEvent={props.onEvent}
           />
@@ -45,6 +46,7 @@ const VHProfileTemplate = props => (
     </Row>
     <Row marginBottom={10}>
       <VHSocialSection
+        preLoading={props.controls.linkedin.preLoading}
         {...props}
         onEvent={props.onEvent}
       />
