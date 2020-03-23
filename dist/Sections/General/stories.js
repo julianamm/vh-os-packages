@@ -25,13 +25,13 @@ var items = [{
   value: 'o'
 }];
 (0, _react2.storiesOf)("Sections|General", module).add("Default", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f2f2",
       height: "100vh",
       padding: "24px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
     controls: {
       gender: {
         loading: false,

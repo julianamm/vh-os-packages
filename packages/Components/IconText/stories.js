@@ -7,16 +7,16 @@ storiesOf("Components|Icon Text", module)
 .add("default", () => (
     <VHIconText
       text="Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"
-      onEvent={(event) => console.log(event)}  
+      onEvent={(event) => console.log(event)}
     />
-))  
+))
 .add("color", () => (
     <VHIconText
-      icon="bullet-primary"
+      icon="bullet"
       textColor="primary-light"
       iconColor="primary-light"
-      variant="caption"
+      variant="platform"
       text="Vue.js"
-      onEvent={(event) => console.log(event)}  
+      onEvent={(event) => console.log(event)}
     />
-))  
+))

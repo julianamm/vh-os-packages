@@ -34,13 +34,11 @@ var VHSecondaryList = function VHSecondaryList(props) {
 
   var list = props.list ? props.list : [];
   var secondList = props.secondList ? props.secondList : [];
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '30%',
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
+    removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
     removeBorder: true,
@@ -55,9 +53,10 @@ var VHSecondaryList = function VHSecondaryList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 0
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
+    removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     isDisabled: !items[0] ? true : false,
     marginBottom: '0px',
@@ -72,13 +71,11 @@ var VHSecondaryList = function VHSecondaryList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 0
-  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '30%',
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
+    removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
     removeBorder: true,
@@ -93,9 +90,10 @@ var VHSecondaryList = function VHSecondaryList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 1
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
+    removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     isDisabled: !items[1] ? true : false,
     marginBottom: '0px',
@@ -110,13 +108,11 @@ var VHSecondaryList = function VHSecondaryList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 1
-  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '30%',
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
+    removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
     removeBorder: true,
@@ -131,9 +127,10 @@ var VHSecondaryList = function VHSecondaryList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 2
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
+    removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     isDisabled: !items[2] ? true : false,
     marginBottom: '0px',
@@ -148,13 +145,11 @@ var VHSecondaryList = function VHSecondaryList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 2
-  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '30%',
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
+    removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
     removeBorder: true,
@@ -169,9 +164,10 @@ var VHSecondaryList = function VHSecondaryList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 3
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
+    removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     isDisabled: !items[3] ? true : false,
     marginBottom: '0px',
@@ -186,13 +182,11 @@ var VHSecondaryList = function VHSecondaryList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 3
-  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '30%',
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
+    removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
     removeBorder: true,
@@ -207,9 +201,10 @@ var VHSecondaryList = function VHSecondaryList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 4
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
+    removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     isDisabled: !items[4] ? true : false,
     marginBottom: '0px',

@@ -20,16 +20,16 @@ var items = {
   image: require("../../assets/general/background/img_hero_premium.png")
 };
 (0, _react2.storiesOf)("Components|Title Description Image", module).add("Default", function () {
-  return /*#__PURE__*/_react.default.createElement(_index.Row, {
+  return _react.default.createElement(_index.Row, {
     style: {
       backgroundColor: "#f2f2f2",
       width: "100vw",
       height: "100vh",
       padding: "24px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
+  }, _react.default.createElement(_index.Row, {
     width: "50%"
-  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
+  }, _react.default.createElement(_index2.default, {
     titleColor: items.titleColor,
     descriptionColor: items.descriptionColor,
     titleVariant: items.titleVariant,

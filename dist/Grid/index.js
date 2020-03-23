@@ -10,7 +10,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    width: 100%;\n    padding: 0;\n    margin: 0;\n    flex-direction: column;\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    width: 100%;\n    padding: 0;\n    margin: 0;\n    flex-direction: column;\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -124,7 +124,7 @@ var Row = _styledComponents.default.div(_templateObject2(), function (_ref10) {
   return overflowY && "\n       overflow-y: ".concat(overflowY, ";\n    ");
 }, function (_ref30) {
   var width = _ref30.width;
-  return width && "\n       width: ".concat(width, ";\n    ");
+  return width && "\n        @media only screen and (min-width: 768px) {\n            width: ".concat(width, ";\n        }\n        @media only screen and (max-width: 768px) {\n            width: 100%;\n        }\n    ");
 }, function (_ref31) {
   var fixed = _ref31.fixed;
   return fixed && "\n       position: fixed;\n    ";

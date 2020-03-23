@@ -8,105 +8,633 @@ var _ = _interopRequireDefault(require("."));
 
 var _Mock = _interopRequireDefault(require("./Mock"));
 
-var _controls;
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var controls = (_controls = {
-  gender: {
-    loading: false,
-    error: true,
-    success: false,
-    message: 'Database error'
-  },
+var controls = {
   citizenship: {
     loading: false,
+    preLoading: false,
     error: false,
-    success: false,
-    message: 'Database error'
+    success: false
+  },
+  linkedin: {
+    loading: false,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  git: {
+    loading: false,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  webSite: {
+    loading: false,
+    preLoading: false,
+    error: false,
+    success: false
   },
   location: {
-    loading: true,
+    loading: false,
+    preLoading: false,
     error: false,
-    success: false,
-    message: 'Database error'
+    success: false
+  },
+  gender: {
+    loading: false,
+    preLoading: false,
+    error: false,
+    success: false
   },
   phone: {
-    loading: true,
-    error: false,
-    success: false,
-    message: 'Database error'
-  },
-  position: {
-    loading: true,
-    error: false,
-    success: false,
-    message: 'Database error'
-  },
-  yearsOfExperience: {
     loading: false,
-    error: true,
-    success: false,
-    message: 'Database error'
-  },
-  workAs: {
-    loading: true,
+    preLoading: false,
     error: false,
-    success: false,
-    message: 'Database error'
-  },
-  openedPosition: {
-    loading: true,
-    error: false,
-    success: false,
-    message: 'Database error'
+    success: false
   },
   positionSkill: {
     loading: false,
+    preLoading: false,
     error: false,
+    success: false
+  },
+  openForDifferentRole: {
+    loading: false,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  yearsOfExperience: {
+    loading: false,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  workAs: {
+    loading: false,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  topSkill: {
+    loading: false,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  salaryRangeEur: {
+    loading: false,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  salaryRangeCad: {
+    loading: false,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  visaStatusEU: {
+    loading: false,
+    preLoading: false,
     success: false,
-    message: 'Database error'
+    error: false
+  },
+  visaStatusCanadian: {
+    loading: false,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  companySize: {
+    loading: false,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  secondarySkill: {
+    loading: false,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  noticePeriod: {
+    loading: false,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  experienceSection: {
+    loading: false,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  educationSection: {
+    loading: false,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  language: {
+    loading: false,
+    preLoading: false,
+    success: false,
+    error: false
   }
-}, _defineProperty(_controls, "yearsOfExperience", {
-  loading: false,
-  error: true,
-  success: false,
-  message: 'Database error'
-}), _defineProperty(_controls, "workAs", {
-  loading: false,
-  error: false,
-  success: false,
-  message: 'Database error'
-}), _defineProperty(_controls, "openForDifferentRole", {
-  loading: false,
-  error: false,
-  success: false,
-  message: 'Database error'
-}), _defineProperty(_controls, "topSkill", {
-  loading: false,
-  error: false,
-  success: false,
-  message: 'Database error'
-}), _defineProperty(_controls, "salaryExpectationCad", {
-  loading: false,
-  error: false,
-  success: false,
-  message: 'Database error'
-}), _defineProperty(_controls, "salaryExpectationEur", {
-  loading: false,
-  error: false,
-  success: false,
-  message: 'Database error'
-}), _controls);
+};
+var controlsPreloading = {
+  citizenship: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  linkedin: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  git: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  webSite: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  location: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  gender: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  phone: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  positionSkill: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  openForDifferentRole: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  yearsOfExperience: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  workAs: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  topSkill: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  salaryRangeEur: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  salaryRangeCad: {
+    loading: false,
+    preLoading: true,
+    error: false,
+    success: false
+  },
+  visaStatusEU: {
+    loading: false,
+    preLoading: true,
+    success: false,
+    error: false
+  },
+  visaStatusCanadian: {
+    loading: false,
+    preLoading: true,
+    success: false,
+    error: false
+  },
+  companySize: {
+    loading: false,
+    preLoading: true,
+    success: false,
+    error: false
+  },
+  secondarySkill: {
+    loading: false,
+    preLoading: true,
+    success: false,
+    error: false
+  },
+  noticePeriod: {
+    loading: false,
+    preLoading: true,
+    success: false,
+    error: false
+  },
+  experienceSection: {
+    loading: false,
+    preLoading: true,
+    success: false,
+    error: false
+  },
+  educationSection: {
+    loading: false,
+    preLoading: true,
+    success: false,
+    error: false
+  },
+  language: {
+    loading: false,
+    preLoading: true,
+    success: false,
+    error: false
+  }
+};
+var controlsLoading = {
+  citizenship: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  linkedin: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  git: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  webSite: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  location: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  gender: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  phone: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  positionSkill: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  openForDifferentRole: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  yearsOfExperience: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  workAs: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  topSkill: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  salaryRangeEur: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  salaryRangeCad: {
+    loading: true,
+    preLoading: false,
+    error: false,
+    success: false
+  },
+  visaStatusEU: {
+    loading: true,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  visaStatusCanadian: {
+    loading: true,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  companySize: {
+    loading: true,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  secondarySkill: {
+    loading: true,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  noticePeriod: {
+    loading: true,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  experienceSection: {
+    loading: true,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  educationSection: {
+    loading: true,
+    preLoading: false,
+    success: false,
+    error: false
+  },
+  language: {
+    loading: true,
+    preLoading: false,
+    success: false,
+    error: false
+  }
+};
+var experiences = {
+  "firstExperienceDate": "2019-08-01T00:00:00",
+  "experiences": [{
+    "workExperiences": [{
+      "companyName": "new companynew company",
+      "countryId": 661882,
+      "country": "Åland",
+      "companySize": 1,
+      "companySizeStr": "Startup",
+      "industry": null,
+      "industryId": 3,
+      "positionId": 7,
+      "position": "UI/UX Designer",
+      "isCurrentRole": null,
+      "startDate": "2020-03-12T00:00:00",
+      "endDate": "2020-03-27T00:00:00",
+      "description": "new description",
+      "skills": [],
+      "id": 146671
+    }, {
+      "companyName": "new companynew company",
+      "countryId": 661882,
+      "country": "Åland",
+      "companySize": 1,
+      "companySizeStr": "Startup",
+      "industry": null,
+      "industryId": 3,
+      "positionId": 1,
+      "position": "Backend Engineer",
+      "isCurrentRole": null,
+      "startDate": "2020-03-12T00:00:00",
+      "endDate": "2020-03-27T00:00:00",
+      "description": "new description",
+      "skills": [],
+      "id": 146672
+    }, {
+      "companyName": "new companynew company",
+      "countryId": 661882,
+      "country": "Åland",
+      "companySize": 1,
+      "companySizeStr": "Startup",
+      "industry": null,
+      "industryId": 3,
+      "positionId": 3,
+      "position": "Full Stack Engineer",
+      "isCurrentRole": null,
+      "startDate": "2020-03-05T00:00:00",
+      "endDate": "2020-03-02T00:00:00",
+      "description": "dsfdsdfsfd",
+      "skills": [],
+      "id": 146669
+    }, {
+      "companyName": "new companynew company",
+      "countryId": 661882,
+      "country": "Åland",
+      "companySize": 1,
+      "companySizeStr": "Startup",
+      "industry": null,
+      "industryId": 3,
+      "positionId": 3,
+      "position": "Full Stack Engineer",
+      "isCurrentRole": null,
+      "startDate": "2020-03-05T00:00:00",
+      "endDate": "2020-03-02T00:00:00",
+      "description": "dsfdsdfsfd",
+      "skills": [],
+      "id": 146670
+    }, {
+      "companyName": "new companynew company",
+      "countryId": 661882,
+      "country": "Åland",
+      "companySize": 1,
+      "companySizeStr": "Startup",
+      "industry": null,
+      "industryId": 3,
+      "positionId": 1,
+      "position": "Backend Engineer",
+      "isCurrentRole": null,
+      "startDate": "2020-03-05T00:00:00",
+      "endDate": "2020-03-02T00:00:00",
+      "description": "dsfdsdfsfd",
+      "skills": [],
+      "id": 146673
+    }, {
+      "companyName": "new companynew company",
+      "countryId": 661882,
+      "country": "Åland",
+      "companySize": 1,
+      "companySizeStr": "Startup",
+      "industry": null,
+      "industryId": 3,
+      "positionId": 1,
+      "position": "Backend Engineer",
+      "isCurrentRole": null,
+      "startDate": "2020-03-05T00:00:00",
+      "endDate": "2020-03-02T00:00:00",
+      "description": "dsfdsdfsfd",
+      "skills": [],
+      "id": 146674
+    }],
+    "companyName": "new companynew company",
+    "countryId": 661882,
+    "country": "Åland",
+    "companySize": 1,
+    "companySizeStr": "Startup",
+    "industry": null,
+    "industryId": 3,
+    "id": 146671
+  }, {
+    "workExperiences": [{
+      "companyName": "dassas",
+      "countryId": 661882,
+      "country": "Åland",
+      "companySize": 2,
+      "companySizeStr": "Mid Size",
+      "industry": null,
+      "industryId": 3,
+      "positionId": 3,
+      "position": "Full Stack Engineer",
+      "isCurrentRole": null,
+      "startDate": "2020-03-04T00:00:00",
+      "endDate": null,
+      "description": "[{\"value\":\"teste 1\",\"loading\":true},{\"value\":\"teste 2\",\"loading\":true},{\"value\":\"\"}]",
+      "skills": [],
+      "id": 146676
+    }],
+    "companyName": "dassas",
+    "countryId": 661882,
+    "country": "Åland",
+    "companySize": 2,
+    "companySizeStr": "Mid Size",
+    "industry": null,
+    "industryId": 3,
+    "id": 146676
+  }, {
+    "workExperiences": [{
+      "companyName": "FInal company",
+      "countryId": 3469034,
+      "country": "Brazil",
+      "companySize": 2,
+      "companySizeStr": "Mid Size",
+      "industry": null,
+      "industryId": 12,
+      "positionId": 7,
+      "position": "UI/UX Designer",
+      "isCurrentRole": null,
+      "startDate": "2020-03-02T00:00:00",
+      "endDate": null,
+      "description": "just a description",
+      "skills": [],
+      "id": 146675
+    }],
+    "companyName": "FInal company",
+    "countryId": 3469034,
+    "country": "Brazil",
+    "companySize": 2,
+    "companySizeStr": "Mid Size",
+    "industry": null,
+    "industryId": 12,
+    "id": 146675
+  }, {
+    "workExperiences": [{
+      "companyName": "sdasasdas",
+      "countryId": 3469034,
+      "country": "Brazil",
+      "companySize": 2,
+      "companySizeStr": "Mid Size",
+      "industry": null,
+      "industryId": 3,
+      "positionId": 3,
+      "position": "Full Stack Engineer",
+      "isCurrentRole": null,
+      "startDate": "2019-08-01T00:00:00",
+      "endDate": "2019-01-01T00:00:00",
+      "description": "[{\"value\":\"teste 1\",\"loading\":true},{\"value\":\"\"}]",
+      "skills": [],
+      "id": 119938
+    }],
+    "companyName": "sdasasdas",
+    "countryId": 3469034,
+    "country": "Brazil",
+    "companySize": 2,
+    "companySizeStr": "Mid Size",
+    "industry": null,
+    "industryId": 3,
+    "id": 119938
+  }]
+};
+var languages = [{
+  value: 0,
+  label: 'English'
+}];
 (0, _react2.storiesOf)("Templates|Profile", module).add("default", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f2f2",
       height: "100%"
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
+    experience: experiences,
+    languages: languages,
     controls: controls
+  }));
+}).add("preLoading", function () {
+  return _react.default.createElement("div", {
+    style: {
+      backgroundColor: "#f2f2f2",
+      height: "100%"
+    }
+  }, _react.default.createElement(_.default, {
+    experience: experiences,
+    languages: languages,
+    controls: controlsPreloading
+  }));
+}).add("loading", function () {
+  return _react.default.createElement("div", {
+    style: {
+      backgroundColor: "#f2f2f2",
+      height: "100%"
+    }
+  }, _react.default.createElement(_.default, {
+    experience: experiences,
+    languages: languages,
+    controls: controlsLoading
   }));
 });

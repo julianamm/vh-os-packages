@@ -60,13 +60,30 @@ var controls = {
   }
 };
 (0, _react2.storiesOf)("Sections|Relocation", module).add("Default", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f2f2",
       height: "100vh",
       padding: "24px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
+    education: education,
+    items: items,
+    currentItem: currentItem,
+    controls: controls,
+    loading: true,
+    onEvent: function onEvent(e) {
+      console.log(e);
+    }
+  }));
+}).add("preloading", function () {
+  return _react.default.createElement("div", {
+    style: {
+      backgroundColor: "#f2f2f2",
+      height: "100vh",
+      padding: "24px"
+    }
+  }, _react.default.createElement(_.default, {
     education: education,
     items: items,
     currentItem: currentItem,
