@@ -24,23 +24,24 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHLanguageList = function VHLanguageList(props) {
-  var items = props.items ? props.items : [];
-
-  if (items.length > 0) {
-    items.sort(function (a, b) {
-      return a.order > b.order ? 1 : -1;
-    });
-  }
-
+  var english = props.items.find(function (element) {
+    return element.code === 'en';
+  });
+  var french = props.items.find(function (element) {
+    return element.code === 'fr';
+  });
+  var other = props.items.find(function (element) {
+    return element.code != 'en' && element.code != 'fr';
+  });
   var list = props.list ? props.list : [];
   var secondList = props.secondList ? props.secondList : [];
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '30%',
     alignItemsCenter: true,
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
     removeBorder: true,
@@ -59,29 +60,29 @@ var VHLanguageList = function VHLanguageList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 0
-  }))), _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
     removeBorder: true,
     caption: "",
     data: 'proficiency',
     className: 'proficiency',
-    currentItem: items[0] ? [secondList[items[0].level]] : {},
+    currentItem: english != undefined ? secondList[english.level] : {},
     items: secondList,
     description: "",
     descriptionColor: "primary",
     leftText: "",
     onEvent: props.onEvent,
     order: 0
-  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '30%',
     alignItemsCenter: true,
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
     removeBorder: true,
@@ -100,60 +101,61 @@ var VHLanguageList = function VHLanguageList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 1
-  }))), _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
     removeBorder: true,
     caption: "",
     data: 'proficiency',
     className: 'proficiency',
-    currentItem: items[1] ? [secondList[items[1].level]] : {},
+    currentItem: french != undefined ? secondList[french.level] : {},
     items: secondList,
     description: "",
     descriptionColor: "primary",
     leftText: "",
     onEvent: props.onEvent,
     order: 1
-  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '30%',
     alignItemsCenter: true,
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
     removeBorder: true,
     caption: "",
     data: 'language',
     className: 'language',
-    currentItem: items[2] ? list.find(function (element) {
-      return element.value === items[2].id;
-    }) : {},
+    currentItem: other != undefined ? {
+      value: other.code,
+      label: other.name
+    } : {},
     items: props.list,
     description: "",
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 2
-  }))), _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.language.preLoading,
-    isDisabled: !items[2] ? true : false,
+    isDisabled: other === undefined ? true : false,
     marginBottom: '0px',
     removeBorder: true,
     caption: "",
     data: 'proficiency',
     className: 'proficiency',
-    currentItem: items[2] ? [secondList[items[2].level]] : {},
+    currentItem: other != undefined ? secondList[other.level] : {},
     items: secondList,
     description: "",
     descriptionColor: "primary",
     leftText: "",
     onEvent: props.onEvent,
-    order: items[2] ? items[2] : ''
+    order: 2
   }))));
 };
 

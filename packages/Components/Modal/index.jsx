@@ -22,6 +22,9 @@ const VHModal = props => {
             {!props.hideBtnClose && (
               <S.Close
                 onClick={() => {
+                  if(props.onClose){
+                    props.onClose()
+                  }
                   props.onEvent({
                     event: 'onClose',
                     target: 'VHModal'

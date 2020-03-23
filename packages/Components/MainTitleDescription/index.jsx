@@ -9,6 +9,7 @@ const VHMainTitleDescription = props => {
     return (
         <Row>
             <VHTitleDescription
+                hover={props.hover}
                 pointer={props.pointer}
                 onEvent={props.onEvent}
                 onOpen={props.onOpen}
@@ -25,6 +26,7 @@ const VHMainTitleDescription = props => {
                 setNewExperience={props.setNewExperience}
             />
             <VHTitleDescription
+                hover={props.hover}
                 pointer={props.pointer}
                 onEvent={props.onEvent}
                 onOpen={props.onOpen}

@@ -12,7 +12,7 @@ var _Colors = _interopRequireDefault(require("../../Colors"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    padding-left: 20px;\n    text-decoration: none;\n    color: ", ";\n    :hover {\n        color: ", ";\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding-left: 20px;\n    text-decoration: none;\n    color: ", ";\n    cursor: pointer;\n    :hover {\n        color: ", ";\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;

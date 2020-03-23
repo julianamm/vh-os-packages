@@ -73,6 +73,8 @@ const VHIcon = props => {
   }
 
   switch (props.icon) {
+    case 'webSite':
+      return <WebSiteIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case "bullet":
       return <BulletIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case "sort":

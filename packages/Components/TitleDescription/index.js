@@ -12,7 +12,7 @@ const VHTitleDescription = props => {
 
   return (
     <S.Wrapper contents={props.contents}
-    pointer={props.pointer}
+      pointer={props.pointer}
       inline={props.inline}
       className={`vh-title-description ${props.className ? props.className : ''}`}
       onClick={() => {
@@ -21,6 +21,7 @@ const VHTitleDescription = props => {
         props.onOpen ? props.onOpen() : ''
       }}>
       <VHText
+        hover={props.hover}
         color={props.titleColor}
         variant={props.titleVariant}
         text={props.title}
@@ -29,6 +30,7 @@ const VHTitleDescription = props => {
       />
       <S.Display inline={props.inline}>
         <VHText
+          hover={props.hover}
           color={props.descriptionColor}
           variant={props.descriptionVariant}
           text={props.description}

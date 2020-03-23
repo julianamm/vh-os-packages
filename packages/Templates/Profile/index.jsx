@@ -52,7 +52,7 @@ const VHProfileTemplate = props => (
       />
     </Row>
     <Row marginBottom={10}>
-      <div id={"education"}>
+      <div id={"language"}>
         <VHPageSection content={
           <VHLanguageSection
             {...props}
@@ -74,7 +74,7 @@ const VHProfileTemplate = props => (
       </div>
     </Row>
     <Row marginBottom={10}>
-      <div id={"education"}>
+      <div id={"experience"}>
         <VHPageSection content={
           <VHUserCompanyExperienceSection
             {...props}
