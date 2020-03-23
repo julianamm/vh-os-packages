@@ -37,6 +37,20 @@ storiesOf("Sections|Relocation", module)
                 items={items}
                 currentItem={currentItem}
                 controls={controls}
+                loading={true}
+                onEvent={e => {
+                    console.log(e)
+                }}
+            />
+        </div>
+    ))
+    .add("preloading", () => (
+        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+            <VHRelocationSection
+                education={education}
+                items={items}
+                currentItem={currentItem}
+                controls={controls}
                 preLoading={true}
                 loading={true}
                 onEvent={e => {
@@ -44,4 +58,4 @@ storiesOf("Sections|Relocation", module)
                 }}
             />
         </div>
-    ));
+    ))

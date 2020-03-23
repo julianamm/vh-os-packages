@@ -14,11 +14,11 @@ const VHList = props => {
     return (
         <React.Fragment>
             < S.Wrapper >
-                <Row width={'30%'} alignItemsCenter row >
-                    <Row width={'15%'}>
+                <Row width={'30%'} alignItemsCenter row responsive>
+                    <Row width={'15%'} responsive>
                         <VHText variant={'platform'} text="1st" color={'gray-90'} />
                     </Row>
-                    <Row width={'70%'}>
+                    <Row width={'70%'} responsive>
                         <VHSelect
                             bold={true}
                             marginBottom={'0px'}
@@ -35,7 +35,7 @@ const VHList = props => {
                         />
                     </Row>
                 </Row>
-                <Row width={'20%'}>
+                <Row width={'20%'} responsive>
                     <VHSelect
                         isDisabled={!items[0] ? true : false}
                         marginBottom={'0px'}
@@ -54,11 +54,11 @@ const VHList = props => {
                 </Row>
             </ S.Wrapper>
             < S.Wrapper >
-                <Row width={'30%'} alignItemsCenter row >
-                    <Row width={'15%'}>
+                <Row width={'30%'} responsive alignItemsCenter row >
+                    <Row width={'15%'} responsive>
                         <VHText variant={'platform'} text="2nd" color={'gray-90'} />
                     </Row>
-                    <Row width={'70%'}>
+                    <Row width={'70%'} responsive>
                         <VHSelect
                             bold={true}
                             marginBottom={'0px'}
@@ -75,7 +75,7 @@ const VHList = props => {
                         />
                     </Row>
                 </Row>
-                <Row width={'20%'}>
+                <Row width={'20%'} responsive>
                     <VHSelect
                         isDisabled={!items[1] ? true : false}
                         marginBottom={'0px'}
@@ -94,11 +94,11 @@ const VHList = props => {
                 </Row>
             </S.Wrapper>
             <S.Wrapper>
-                <Row width={'30%'} alignItemsCenter row >
+                <Row width={'30%'} alignItemsCenter row responsive>
                     <Row width={'15%'}>
                         <VHText variant={'platform'} text="3rd" color={'gray-90'} />
                     </Row>
-                    <Row width={'70%'}>
+                    <Row width={'70%'} responsive>
                         <VHSelect
                             bold={true}
                             marginBottom={'0px'}
@@ -115,7 +115,7 @@ const VHList = props => {
                         />
                     </Row>
                 </Row>
-                <Row width={'20%'}>
+                <Row width={'20%'} responsive>
                     <VHSelect
                         isDisabled={!items[2] ? true : false}
                         marginBottom={'0px'}

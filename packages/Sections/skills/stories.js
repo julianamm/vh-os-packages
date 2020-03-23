@@ -209,3 +209,55 @@ storiesOf("Sections|Skills", module)
       />
     </div>
   ))
+  .add("preLoading", () => (
+    <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+      <VHSkillsSection
+        preLoading
+        controls={{
+          positionSkill: {
+            loading: true,
+            error: false,
+            success: false,
+            message: 'Database error'
+          },
+          yearsOfExperience: {
+            loading: false,
+            error: true,
+            success: false,
+            message: 'Database error'
+          },
+          workAs: {
+            loading: true,
+            error: false,
+            success: false,
+            message: 'Database error'
+          },
+          openForDifferentRole: {
+            loading: true,
+            error: false,
+            success: false,
+            message: 'Database error'
+          },
+          topSkill: {
+            loading: false,
+            error: false,
+            success: false,
+            message: 'Database error'
+          },
+          salaryExpectationCad: {
+            loading: false,
+            error: false,
+            success: false,
+            message: 'Database error'
+          }
+        }
+        }
+        mainSkills={items}
+        positions={items}
+        data={apiResponse}
+        onEvent={e => {
+          console.log(e)
+        }}
+      />
+    </div>
+  ))

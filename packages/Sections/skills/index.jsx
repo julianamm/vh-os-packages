@@ -45,9 +45,10 @@ const VHSkillsSection = props => {
         <VHCardBase
           className={`vh-skills-section-card ${props.className ? props.className : ''}`}
         >
-          <Row row justifySpaceBetween>
+          <Row row justifySpaceBetween responsive>
             <Row width={'60%'}>
               <VHSelect
+                preLoading={props.preLoading}
                 caption="I am..."
                 captionColor={
                   props.controls.positionSkill.loading
@@ -68,6 +69,7 @@ const VHSkillsSection = props => {
             </Row>
             <Row width={'30%'}>
               <VHSelect
+                preLoading={props.preLoading}
                 caption="With..."
                 captionColor={
                   props.controls.yearsOfExperience.loading
@@ -113,6 +115,7 @@ const VHSkillsSection = props => {
           </Row>
           <Row>
             <VHSelect
+              preLoading={props.preLoading}
               caption="I would like to work as..."
               isMulti
               captionColor={
@@ -132,7 +135,7 @@ const VHSkillsSection = props => {
               descriptionColor="red-light"
             />
           </Row>
-          <Row column marginBottom={10}>
+          <Row column marginBottom={10} responsive>
           <VHTitleDescription
           contents={true}
                 className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
@@ -164,7 +167,7 @@ const VHSkillsSection = props => {
               list={props.skillList}
               items={props.topSkill}
               data="vanhack" />
-          </Row> 
+          </Row>
           <Row column marginBottom={5}>
           <VHTitleDescription
           contents={true}
@@ -198,7 +201,7 @@ const VHSkillsSection = props => {
               list={props.skillList}
               items={props.secondarySkill}
               data="vanhack" />
-          </Row> 
+          </Row>
         </VHCardBase>
       </Row>
     </>

@@ -186,7 +186,16 @@ storiesOf("Sections|User Company Experience", module)
                 yearsOfExperience={"- 6yrs 3 mos"}
                 experience={experience}
                 onEvent={e => console.log(e)}
+            />
+        </div>
+    ))
+    .add("preloading", () => (
+        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+            <VHUserCompanyExperienceSection
+                yearsOfExperience={"- 6yrs 3 mos"}
+                experience={experience}
+                onEvent={e => console.log(e)}
                 preLoading={true}
             />
         </div>
-    ));
+    ))
