@@ -7,10 +7,8 @@ import VHSelect from "../../Components/Input/Select";
 import VHInput from "../../Components/Input/Simple";
 import VHText from "../../Components/Text/index";
 import VHButton from "../../Components/Button/index";
-import VHInputRadio from "../../Components/Input/radio"
 import VHInputCheckbox from "../../Components/Input/checkbox"
 import VHInputMultiple from "../../Components/Input/Multiple"
-import VHTextarea from "../../Components/Textarea/index"
 import { getFormatedDate } from '../../util/index'
 import * as S from './styles.js'
 

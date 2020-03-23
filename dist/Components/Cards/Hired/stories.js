@@ -48,14 +48,14 @@ var candidates = [{
   flag: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
 }];
 (0, _react2.storiesOf)("Components|Cards/Hired", module).add("default", function () {
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f6f9",
       width: "180px",
       height: "180px",
       padding: "24px"
     }
-  }, _react.default.createElement(_.default, {
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
     name: "Mitchell Watson",
     position: "Backend Developer",
     country: "from Brazil",
@@ -63,10 +63,10 @@ var candidates = [{
     flag: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
   }));
 }).add("multiply", function () {
-  return _react.default.createElement(_index.Row, {
+  return /*#__PURE__*/_react.default.createElement(_index.Row, {
     row: true
   }, candidates.map(function (candidate) {
-    return _react.default.createElement(_index.Row, {
+    return /*#__PURE__*/_react.default.createElement(_index.Row, {
       style: {
         backgroundColor: "#f2f6f9",
         width: "180px",
@@ -74,7 +74,7 @@ var candidates = [{
         padding: "24px",
         marginRight: "10px"
       }
-    }, _react.default.createElement(_.default, {
+    }, /*#__PURE__*/_react.default.createElement(_.default, {
       name: candidate.name,
       position: candidate.position,
       country: candidate.country,

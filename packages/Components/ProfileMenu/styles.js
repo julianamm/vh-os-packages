@@ -21,6 +21,7 @@ export const Link = styled.a`
     padding-left: 20px;
     text-decoration: none;
     color: ${Color["black-100"]};
+    cursor: pointer;
     :hover {
         color: ${Color["primary-light"]};
     }

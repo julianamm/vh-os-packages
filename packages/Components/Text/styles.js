@@ -9,9 +9,15 @@ export const H1 = styled.h1`
     font-size: 48px;
     font-weight: lighter;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+    ${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const H2 = styled.h2`
@@ -22,9 +28,15 @@ export const H2 = styled.h2`
     font-size: 34px;
     font-weight: lighter;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const H3 = styled.h3`
@@ -35,9 +47,15 @@ export const H3 = styled.h3`
     font-size: 24px;
     font-weight: normal;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const H4 = styled.h4`
@@ -48,9 +66,15 @@ export const H4 = styled.h4`
     font-size: 22px;
     font-weight: bold;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const H5 = styled.h5`
@@ -61,9 +85,15 @@ export const H5 = styled.h5`
     font-size: 22px;
     font-weight: normal;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const H6 = styled.h6`
@@ -74,9 +104,15 @@ export const H6 = styled.h6`
     font-size: 20px;
     font-weight: normal;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const Subtitle1 = styled.p`
@@ -88,6 +124,11 @@ export const Subtitle1 = styled.p`
     font-weight: normal;
     line-height: 22.4px;
 
+    ${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 `
 export const Subtitle2 = styled.p`
     margin: 0;
@@ -97,9 +138,15 @@ export const Subtitle2 = styled.p`
     font-size: 16px;
     font-weight: bold;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const Subtitle3 = styled.p`
@@ -111,9 +158,15 @@ export const Subtitle3 = styled.p`
     font-weight: lighter;
     line-height: 23.1px;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const BodyWeb = styled.p`
@@ -125,9 +178,15 @@ export const BodyWeb = styled.p`
     font-weight: normal;
     line-height: 28px;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const BodyPlatform = styled.p`
@@ -139,13 +198,19 @@ export const BodyPlatform = styled.p`
     font-weight: normal;
     line-height: 21.5px;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
 
-    ${({cursor}) => cursor && `
+    ${({ cursor }) => cursor && `
         cursor: pointer;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const BodyPlatform2 = styled.p`
@@ -156,9 +221,15 @@ export const BodyPlatform2 = styled.p`
     font-size: 14px;
     font-weight: normal;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `
 export const Caption = styled.p`
@@ -169,8 +240,14 @@ export const Caption = styled.p`
     font-size: 12px;
     font-weight: normal;
 
-    ${({alignCenter}) => alignCenter && `
+    ${({ alignCenter }) => alignCenter && `
         text-align: center;
     `}
+
+${({ hover }) => hover && `
+            :hover {
+                text-decoration: underline;
+            }
+        `}
 
 `

@@ -13,7 +13,12 @@ export default class VHProfileMenu extends Component {
                             return (
                                 <S.Wrapper>
                                     <VHImg source={link.img} sm />
-                                    <S.Link onClick={()=>{removeHash()}} href={link.href}>{link.name}</S.Link>
+                                    <S.Link onClick={() => {
+                                        document.getElementById(link.href).scrollIntoView({
+                                            behavior: 'smooth',
+                                            block: 'start'
+                                        });
+                                    }}>{link.name}</S.Link>
                                 </S.Wrapper>
                             )
                         })

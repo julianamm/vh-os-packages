@@ -48,6 +48,7 @@ const VHEducationSection = props => {
                 return (
                   <Row marginBottom5>
                     <VHTitleDescription
+                    hover
                       pointer
                       title={item.degreeTitle}
                       titleColor="primary-light"
@@ -59,7 +60,7 @@ const VHEducationSection = props => {
                       onOpen={() => setOpenModal(true)}
                       setCurrentItem={() => setCurrentItem(item)}
                     />
-                    <VHText variant={'caption'} text={item.start} color={'gray-90'} onEvent={props.onEvent} />
+                    <VHText variant={'caption'} text={`${new Date(item.startDate).getFullYear()} - ${item.endDate ? new Date(item.endDate).getFullYear() : 'Present'}`} color={'gray-90'} onEvent={props.onEvent} />
                   </Row>
                 )
               })

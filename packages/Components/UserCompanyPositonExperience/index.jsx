@@ -13,6 +13,7 @@ const VHUserCompanyExperience = props => {
     <>
       <Row marginBottom={5}>
         <VHMainTitleDescription
+          hover
           setNewExperience={props.setNewExperience}
           pointer
           onEvent={props.onEvent}
