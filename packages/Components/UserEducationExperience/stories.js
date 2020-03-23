@@ -10,15 +10,9 @@ const ArrayOfSkills = [
 ];
 
 const ArrayOfDescriptions = [
-    {
-      label: "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"
-    },
-    {
-      label: "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"
-    },
-    {
-      label: "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"
-    }
+    "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum",
+    "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum",
+    "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"
 ]
 
 const UserPositionExperience = {
@@ -60,7 +54,7 @@ storiesOf("Components|User Positon Experience", module)
             />
         </Row>
     </Container>
-    ))  
+    ))
 
 .add("many Timeline", () => (
     <Container>
@@ -72,7 +66,7 @@ storiesOf("Components|User Positon Experience", module)
             ))}
         </Row>
     </Container>
-    ))  
+    ))
 
 .add("without Timeline", () => (
     <Container>
@@ -86,4 +80,4 @@ storiesOf("Components|User Positon Experience", module)
             />
         </Row>
     </Container>
-    ))  
+    ))

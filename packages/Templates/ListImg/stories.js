@@ -3,10 +3,10 @@ import { storiesOf } from "@storybook/react";
 import VHComfirmationTemplate from ".";
 
 const ArrayOfItems = [
-    "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum",
-    "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum",
-    "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum",
-    "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"
+    { label: "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"},
+    { label: "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"},
+    { label: "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"},
+    { label: "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"}
 ]
 
 storiesOf("Templates|List img", module)

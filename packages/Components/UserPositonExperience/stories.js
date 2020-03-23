@@ -60,7 +60,7 @@ storiesOf("Components|User Positon Experience", module)
             />
         </Row>
     </Container>
-    ))  
+    ))
 
 .add("many Timeline", () => (
     <Container>
@@ -72,7 +72,7 @@ storiesOf("Components|User Positon Experience", module)
             ))}
         </Row>
     </Container>
-    ))  
+    ))
 
 .add("without Timeline", () => (
     <Container>
@@ -86,4 +86,4 @@ storiesOf("Components|User Positon Experience", module)
             />
         </Row>
     </Container>
-    ))  
+    ))
