@@ -8,7 +8,7 @@ const VHUserCompanyExperience = props => {
   const industryList = props.industryList
   const companyList = props.companyList
   const [currentItem, setCurrentItem] = React.useState({});
-
+console.log(props.item)
   return (
     <>
       <Row marginBottom={5}>
@@ -22,7 +22,7 @@ const VHUserCompanyExperience = props => {
           setCurrentItem={props.setCurrentItem}
           item={props.item}
           title={props.item.companyName}
-          description={`${props.item.position} - ${props.itemcompanySizeStr} - ${props.item.country}`}
+          description={`${props.item.workExperiences[0].position} - ${props.item.companySizeStr} - ${props.item.country}`}
           rightTitle={props.rightTitle}
           className={`vh-user-company-position-experience ${props.className ? props.className : ''}`}
         />
