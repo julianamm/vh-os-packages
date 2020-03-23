@@ -10,17 +10,21 @@ const VHIconText = props => {
     <S.Wrapper
       inline={props.inline}
       className={`${props.className ? props.className : ""}`}
-      onClick={() => props.onEvent({
-        type: "Click",
-        origin: "VHIconText",
-        props: {
-          data: props.data
+      onClick={() => {
+        if (props.onEvent) {
+          props.onEvent({
+            type: "Click",
+            origin: "VHIconText",
+            props: {
+              data: props.data
+            }
+          })
         }
-      })}
-   >
-      <VHIcon 
+      }}
+    >
+      <VHIcon
         color={props.iconColor}
-        sm 
+        sm
         title={props.text}
         icon={props.icon} />
       <VHText

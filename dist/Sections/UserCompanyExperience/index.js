@@ -68,7 +68,8 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     countries: props.countries,
     companyList: props.companyList,
     industryList: props.industryList,
-    positions: props.positions
+    positions: props.positions,
+    closeModalExperience: props.closeModalExperience
   }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {

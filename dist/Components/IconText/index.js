@@ -28,13 +28,15 @@ var VHIconText = function VHIconText(props) {
     inline: props.inline,
     className: "".concat(props.className ? props.className : ""),
     onClick: function onClick() {
-      return props.onEvent({
-        type: "Click",
-        origin: "VHIconText",
-        props: {
-          data: props.data
-        }
-      });
+      if (props.onEvent) {
+        props.onEvent({
+          type: "Click",
+          origin: "VHIconText",
+          props: {
+            data: props.data
+          }
+        });
+      }
     }
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     color: props.iconColor,

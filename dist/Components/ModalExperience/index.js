@@ -224,7 +224,8 @@ var VHModalExperience = function VHModalExperience(props) {
         items: experience.description,
         placeholder: "Job Experience",
         data: {
-          id: 'multipleInput'
+          id: 'multipleInput',
+          order: index
         },
         onEvent: props.onEvent
       }), experience.description.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), index === item.workExperiences.length - 1 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
@@ -247,7 +248,7 @@ var VHModalExperience = function VHModalExperience(props) {
       },
       onEvent: props.onEvent,
       onClose: props.onClose,
-      closeModal: props.closeModal,
+      closeModal: props.closeModalExperience,
       label: "Save"
     })))
   });

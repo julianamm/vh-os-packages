@@ -26,7 +26,8 @@ const VHUserCompanyExperienceSection = props => {
           countries={props.countries}
           companyList={props.companyList}
           industryList={props.industryList}
-          positions={props.positions}/>
+          positions={props.positions}
+          closeModalExperience={props.closeModalExperience}/>
       }
       <Row marginBottom={5}>
         <VHText
