@@ -9,13 +9,13 @@ var _ = _interopRequireDefault(require("."));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _react2.storiesOf)("Sections|Social", module).add("Default", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f2f2",
       height: "100vh",
       padding: "24px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
     controls: {
       linkedin: {
         loading: true,
@@ -52,13 +52,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     }
   }));
 }).add("Preloading", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f2f2",
       height: "100vh",
       padding: "24px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
     preLoading: true,
     controls: {
       linkedin: {

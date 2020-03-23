@@ -26,17 +26,17 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHTextsImageTestimonial = function VHTextsImageTestimonial(props) {
-  return /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index2.default, {
+  return _react.default.createElement(_index.Container, null, _react.default.createElement(_index.Row, null, _react.default.createElement(_index2.default, {
     title: props.title,
     highlight: props.highlight,
     description: props.description,
     image: props.image,
     reverse: props.reverseTop
-  }), /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  }), _react.default.createElement(_index.Container, null, _react.default.createElement(S.Wrapper, {
     reverse: props.reverseBottom
-  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
+  }, _react.default.createElement(_index.Row, {
     width: "50%"
-  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+  }, _react.default.createElement(_index3.default, {
     image: props.avatar,
     sizeImg: props.sizeAvatar,
     color: props.color,
@@ -44,7 +44,7 @@ var VHTextsImageTestimonial = function VHTextsImageTestimonial(props) {
     xsTestimonial: props.xsTestimonial,
     smTestimonial: props.smTestimonial,
     lgTestimonial: props.lgTestimonial
-  })), /*#__PURE__*/_react.default.createElement(_index.Row, {
+  })), _react.default.createElement(_index.Row, {
     width: "50%"
   })))));
 };
