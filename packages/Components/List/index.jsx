@@ -20,6 +20,8 @@ const VHList = props => {
                     </Row>
                     <Row responsive>
                         <VHSelect
+                            placeholder='Select your top skill'
+                            removeIndicator
                             bold={true}
                             marginBottom={'0px'}
                             removeBorder
@@ -37,6 +39,8 @@ const VHList = props => {
                 </Row>
                 <Row width={'20%'} responsive>
                     <VHSelect
+                        placeholder='Select your top skill'
+                        removeIndicator
                         isDisabled={!items[0] ? true : false}
                         marginBottom={'0px'}
                         removeBorder
@@ -60,6 +64,8 @@ const VHList = props => {
                     </Row>
                     <Row responsive>
                         <VHSelect
+                            placeholder='Select your top skill'
+                            removeIndicator
                             bold={true}
                             marginBottom={'0px'}
                             removeBorder
@@ -77,6 +83,8 @@ const VHList = props => {
                 </Row>
                 <Row width={'20%'} responsive>
                     <VHSelect
+                        placeholder='Select your top skill'
+                        removeIndicator
                         isDisabled={!items[1] ? true : false}
                         marginBottom={'0px'}
                         removeBorder
@@ -100,6 +108,8 @@ const VHList = props => {
                     </Row>
                     <Row responsive>
                         <VHSelect
+                            placeholder='Select your top skill'
+                            removeIndicator
                             bold={true}
                             marginBottom={'0px'}
                             removeBorder
@@ -117,6 +127,8 @@ const VHList = props => {
                 </Row>
                 <Row width={'20%'} responsive>
                     <VHSelect
+                        placeholder='Select your top skill'
+                        removeIndicator
                         isDisabled={!items[2] ? true : false}
                         marginBottom={'0px'}
                         removeBorder

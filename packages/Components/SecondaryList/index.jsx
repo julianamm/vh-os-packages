@@ -17,6 +17,7 @@ const VHSecondaryList = props => {
                 <Row  alignItemsCenter row >
                     <Row>
                         <VHSelect
+                        removeIndicator
                             preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
@@ -34,6 +35,7 @@ const VHSecondaryList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
+                    removeIndicator
                     preLoading={props.controls.secondarySkill.preLoading}
                         isDisabled={!items[0] ? true : false}
                         marginBottom={'0px'}
@@ -55,6 +57,7 @@ const VHSecondaryList = props => {
                 <Row  alignItemsCenter row >
                     <Row>
                         <VHSelect
+                        removeIndicator
                         preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
@@ -72,6 +75,7 @@ const VHSecondaryList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
+                    removeIndicator
                     preLoading={props.controls.secondarySkill.preLoading}
                         isDisabled={!items[1] ? true : false}
                         marginBottom={'0px'}
@@ -93,6 +97,7 @@ const VHSecondaryList = props => {
                 <Row  alignItemsCenter row >
                     <Row>
                         <VHSelect
+                        removeIndicator
                         preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
@@ -110,6 +115,7 @@ const VHSecondaryList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
+                    removeIndicator
                     preLoading={props.controls.secondarySkill.preLoading}
                         isDisabled={!items[2] ? true : false}
                         marginBottom={'0px'}
@@ -131,6 +137,7 @@ const VHSecondaryList = props => {
                 <Row  alignItemsCenter row >
                     <Row>
                         <VHSelect
+                        removeIndicator
                         preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
@@ -148,6 +155,7 @@ const VHSecondaryList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
+                    removeIndicator
                     preLoading={props.controls.secondarySkill.preLoading}
                         isDisabled={!items[3] ? true : false}
                         marginBottom={'0px'}
@@ -169,6 +177,7 @@ const VHSecondaryList = props => {
                 <Row  alignItemsCenter row >
                     <Row>
                         <VHSelect
+                        removeIndicator
                         preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
@@ -186,6 +195,7 @@ const VHSecondaryList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
+                    removeIndicator
                     preLoading={props.controls.secondarySkill.preLoading}
                         isDisabled={!items[4] ? true : false}
                         marginBottom={'0px'}

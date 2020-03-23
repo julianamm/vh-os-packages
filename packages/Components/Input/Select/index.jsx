@@ -6,9 +6,9 @@ import makeAnimated from 'react-select/animated';
 import VHText from '../../Text'
 import { TitleDescriptionSkeleton } from 'react-preload-skeleton'
 import { Row } from '../../../Grid'
-const animatedComponents = makeAnimated();
 
 const VHSelect = props => {
+  let animatedComponents = makeAnimated();
 
 if (props.preLoading) {
   return <TitleDescriptionSkeleton />
@@ -36,6 +36,10 @@ if (props.preLoading) {
     clearIndicator: (styles) => ({ display: 'none' })
   };
 
+  if (props.removeIndicator) {
+    animatedComponents={ DropdownIndicator:() => null, IndicatorSeparator:() => null }
+  }
+
   return (
     <Row responsive style={{ position: 'relative', marginBottom: props.marginBottom ? props.marginBottom : '21px' }}>
       {
@@ -50,6 +54,7 @@ if (props.preLoading) {
         styles={props.removeBorder ? style : styled}
         closeMenuOnSelect={!props.isMulti}
         className={props.className}
+        placeholder={props.placeholder}
         isLoading={props.isLoading}
         isDisabled={props.isLoading || props.isDisabled}
         components={animatedComponents}

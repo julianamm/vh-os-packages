@@ -40,6 +40,25 @@ storiesOf("Components|Input/Select", module)
     <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
       <VHSelect
         caption="Annual salary expectation"
+        placeholder="Annual salary expectation"
+        data={'AnyObjectOrString'}
+        className={'AnyObjectOrString'}
+        currentItem={currentItem}
+        items={items}
+        description="See salaries for this position"
+        descriptionColor="primary"
+        leftText="$CAD"
+        onEvent={e => {
+          console.log(e)
+        }}
+      />
+    </div>
+  ))
+  .add("single clear indicator", () => (
+    <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
+      <VHSelect
+        removeIndicator
+        caption="Annual salary expectation"
         data={'AnyObjectOrString'}
         className={'AnyObjectOrString'}
         currentItem={currentItem}
