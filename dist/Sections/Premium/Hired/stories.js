@@ -50,13 +50,13 @@ var candidates = [{
   flag: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
 }];
 (0, _react2.storiesOf)("Sections|Premium/Hired", module).add("Default", function () {
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       backgroundColor: "#ffffff",
       height: "100vh",
       padding: "24px"
     }
-  }, _react.default.createElement(_.default, {
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
     sectionTitle: items.sectionTitle,
     btnLabel: items.btnLabel,
     candidates: candidates

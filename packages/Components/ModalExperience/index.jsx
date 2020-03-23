@@ -9,12 +9,14 @@ import VHText from "../../Components/Text/index";
 import VHButton from "../../Components/Button/index";
 import VHInputRadio from "../../Components/Input/radio"
 import VHInputCheckbox from "../../Components/Input/checkbox"
+import VHInputMultiple from "../../Components/Input/Multiple"
 import VHTextarea from "../../Components/Textarea/index"
 import { getFormatedDate } from '../../util/index'
 import * as S from './styles.js'
 
 const VHModalExperience = props => {
 
+    const items = JSON.stringify([])
     const item = props.modalExperience;
     const currentItem = props.currentItem ? props.currentItem : {};
     return (
@@ -50,7 +52,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-location ${props.className ? props.className : ''}`}
-                                currentItem={{ value: item.countryId.value, label: currentItem.country}}
+                                currentItem={{ value: item.countryId.value, label: currentItem.country }}
                                 data={{ id: "ModalExperience", field: "countryId" }}
                                 onEvent={props.onEvent}
                                 items={props.countries}
@@ -84,7 +86,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-industry ${props.className ? props.className : ''}`}
-                                currentItem={{ value: item.industryId.value, label: item.industryId.value ? props.industryList[item.industryId.value].label : ''}}
+                                currentItem={{ value: item.industryId.value, label: item.industryId.value ? props.industryList[item.industryId.value].label : '' }}
                                 data={{ id: "ModalExperience", field: "industryId" }}
                                 onEvent={props.onEvent}
                                 items={props.industryList}
@@ -98,7 +100,7 @@ const VHModalExperience = props => {
                     {item.workExperiences.map((experience, index) => {
                         return (
                             <React.Fragment>
-                                <Row width={'70%'} marginBottom5>
+                                <Row width={'40%'} marginBottom5>
                                     <VHSelect
                                         caption="Role Title"
                                         captionColor={null
@@ -148,7 +150,12 @@ const VHModalExperience = props => {
                                 </Row>
                                 <Row marginBottom5>
                                     <VHText color="gray-100" variant={'platform'} text="Description" />
-                                    <VHInput placeholder="" onEvent={props.onEvent} value={experience.description.value} data={{ id: "ModalExperience", field: "description", index: index }}
+                                    <VHInputMultiple
+                                        max={5}
+                                        items={experience.description}
+                                        placeholder="Job Experience"
+                                        data={{id: 'multipleInput'}}
+                                        onEvent={props.onEvent}
                                     />
                                     {experience.description.messageError && (
                                         <S.ErrorMessage>Field required</S.ErrorMessage>
@@ -163,7 +170,7 @@ const VHModalExperience = props => {
                         )
                     })}
                     <Row alignItemsRight>
-                        <VHButton primary data={{action: 'saveExperience', id:currentItem.id}} onEvent={props.onEvent} onClose={props.onClose} closeModal={props.closeModal} label="Save" />
+                        <VHButton primary data={{ action: 'saveExperience', id: currentItem.id }} onEvent={props.onEvent} onClose={props.onClose} closeModal={props.closeModal} label="Save" />
                     </Row>
                 </Row>
             }>
