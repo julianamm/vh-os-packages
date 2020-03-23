@@ -29,13 +29,13 @@ var features = [{
   description: "Join thousands of motivated premium members from all over the world. Learn from your peers in a judgement-free environment"
 }];
 (0, _react2.storiesOf)("Sections|Premium/Intro", module).add("Default", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f8fc",
       height: "100vh",
       padding: "24px"
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
     title: items.title,
     highlight: items.highlight,
     description: items.description,

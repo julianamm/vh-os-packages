@@ -24,14 +24,14 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHInputIcon = function VHInputIcon(props) {
-  return /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  return _react.default.createElement(S.Wrapper, {
     className: "vh-icon-input ".concat(props.className ? props.className : ''),
     loading: props.loading,
     error: props.error
-  }, !props.loading && /*#__PURE__*/_react.default.createElement(_Icon.default, {
+  }, !props.loading && _react.default.createElement(_Icon.default, {
     className: "vh-icon-with-input-icon",
     icon: props.icon
-  }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
+  }), _react.default.createElement(_Simple.default, {
     disabled: props.disabled,
     error: props.error,
     loading: props.loading,
