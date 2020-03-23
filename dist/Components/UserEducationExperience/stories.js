@@ -17,13 +17,7 @@ var ArrayOfSkills = [{
 }, {
   label: "Docker"
 }];
-var ArrayOfDescriptions = [{
-  label: "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"
-}, {
-  label: "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"
-}, {
-  label: "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"
-}];
+var ArrayOfDescriptions = ["Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum", "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum", "Ad tempor proident enim veniam duis. Occaecat veniam irure minim cillum"];
 var UserPositionExperience = {
   headline: "Full Stack Developer",
   period: "Oct 2019 - Present . 3 mos",
