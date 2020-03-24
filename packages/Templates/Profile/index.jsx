@@ -9,9 +9,18 @@ import VHSocialSection from '../../Sections/Social'
 import VHUserCompanyExperienceSection from '../../Sections/UserCompanyExperience'
 import VHPageSection from '../PageSection/index'
 import VHLanguageSection from '../../Sections/LanguageSection'
+import VHProfileAvatar from '../../Components/VHUserPhotoIconTitleDescription'
 
 const VHProfileTemplate = props => (
   <Container md>
+    <Row marginBottom={10}>
+      <VHProfileAvatar
+        avatar= {props.User.avatar}
+        name= {props.User.name}
+        email= {props.User.email}
+        onEvent={props.onEvent}
+      />
+    </Row>
     <Row marginBottom={10}>
       <div id={"general"}>
         <VHPageSection content={
