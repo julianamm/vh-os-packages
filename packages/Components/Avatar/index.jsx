@@ -4,11 +4,14 @@ import * as S from './styles';
 
 const VHAvatar = props => {
   return (
+
     <S.Avatar
       center={props.center}
       image={props.image}
       size={props.size}
       showCursor={props.showCursor}
+      loading={props.loading}
+      uploading={100 - props.uploading}
       onClick={event => {
         if (props.onEvent) {
           props.onEvent({

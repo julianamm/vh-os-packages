@@ -12,6 +12,7 @@ export const Avatar = styled.div`
   border-radius: 50%;
   text-align: center;
   align-content: center;
+
   margin: ${props => (props.center ? "0 auto" : "0")}
     ${({ showCursor }) =>
       showCursor &&
@@ -53,5 +54,17 @@ export const Avatar = styled.div`
       `
     width: 16px;
     height: 16px;
+  `};
+
+    ${({ loading }) =>
+      loading  &&
+      `
+      filter: blur(4px);
+  `};
+    ${({ uploading }) =>
+      uploading  &&
+      `
+      filter: blur(${uploading}px);
+      border: solid 1px;
   `};
 `;

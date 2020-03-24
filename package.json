@@ -12,7 +12,8 @@
     "start": "start-storybook -p 6007",
     "webpack": "webpack",
     "build": "build-storybook -o docs",
-    "transpile": "babel --plugins inline-import-data-uri,@babel/plugin-proposal-class-properties packages --copy-files --out-dir dist "
+    "transpile": "babel --plugins inline-import-data-uri,@babel/plugin-proposal-class-properties packages --copy-files --out-dir dist ",
+    "transpile-upload": "babel --plugins inline-import-data-uri,@babel/plugin-proposal-class-properties UploadChunkManager.js --out-file upload-chunk-compiled.js  "
   },
   "eslintConfig": {
     "extends": "react-app"
