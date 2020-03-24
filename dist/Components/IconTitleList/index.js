@@ -15,7 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHIconTitleList = function VHIconTitleList(props) {
   if (!Array.isArray(props.items)) {
-    return _react.default.createElement(_index.default, {
+    return /*#__PURE__*/_react.default.createElement(_index.default, {
       iconColor: props.color || "gray-30",
       textColor: props.color || "gray-90",
       text: props.items,
@@ -27,8 +27,8 @@ var VHIconTitleList = function VHIconTitleList(props) {
     });
   }
 
-  return _react.default.createElement(_react.default.Fragment, null, props.items.map(function (text) {
-    return _react.default.createElement(_index.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, props.items.map(function (text) {
+    return /*#__PURE__*/_react.default.createElement(_index.default, {
       iconColor: props.color || "gray-30",
       textColor: props.color || "gray-90",
       text: text.label,

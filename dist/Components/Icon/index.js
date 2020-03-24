@@ -37,6 +37,8 @@ var _index13 = _interopRequireDefault(require("../../assets/svg/flags/flag_nethe
 
 var _index14 = _interopRequireDefault(require("../../assets/svg/flags/flag_uk.svg/index.js"));
 
+var _index15 = _interopRequireDefault(require("../../assets/svg/icons/icon_camera.svg/index.js"));
+
 var _Colors = _interopRequireDefault(require("../../Colors"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -103,7 +105,7 @@ var VHIcon = function VHIcon(props) {
 
   switch (props.icon) {
     case 'webSite':
-      return _react.default.createElement(_index8.default, {
+      return /*#__PURE__*/_react.default.createElement(_index8.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -111,7 +113,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case "bullet":
-      return _react.default.createElement(_index.default, {
+      return /*#__PURE__*/_react.default.createElement(_index.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -119,7 +121,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case "sort":
-      return _react.default.createElement(_index4.default, {
+      return /*#__PURE__*/_react.default.createElement(_index4.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -127,7 +129,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case "filter":
-      return _react.default.createElement(_index2.default, {
+      return /*#__PURE__*/_react.default.createElement(_index2.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -135,7 +137,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case "search":
-      return _react.default.createElement(_index5.default, {
+      return /*#__PURE__*/_react.default.createElement(_index5.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -143,7 +145,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case "arrow-left":
-      return _react.default.createElement(_index3.default, {
+      return /*#__PURE__*/_react.default.createElement(_index3.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -151,7 +153,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'github':
-      return _react.default.createElement(_index6.default, {
+      return /*#__PURE__*/_react.default.createElement(_index6.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -159,7 +161,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'world':
-      return _react.default.createElement(_index8.default, {
+      return /*#__PURE__*/_react.default.createElement(_index8.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -167,7 +169,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'linkedin':
-      return _react.default.createElement(_index7.default, {
+      return /*#__PURE__*/_react.default.createElement(_index7.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -175,7 +177,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'search':
-      return _react.default.createElement(_index5.default, {
+      return /*#__PURE__*/_react.default.createElement(_index5.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -183,7 +185,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'usa':
-      return _react.default.createElement(_index9.default, {
+      return /*#__PURE__*/_react.default.createElement(_index9.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -191,7 +193,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'canada':
-      return _react.default.createElement(_index10.default, {
+      return /*#__PURE__*/_react.default.createElement(_index10.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -199,7 +201,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'ireland':
-      return _react.default.createElement(_index12.default, {
+      return /*#__PURE__*/_react.default.createElement(_index12.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -207,7 +209,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'uk':
-      return _react.default.createElement(_index14.default, {
+      return /*#__PURE__*/_react.default.createElement(_index14.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -215,7 +217,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'germany':
-      return _react.default.createElement(_index11.default, {
+      return /*#__PURE__*/_react.default.createElement(_index11.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -223,7 +225,15 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'netherlands':
-      return _react.default.createElement(_index13.default, {
+      return /*#__PURE__*/_react.default.createElement(_index13.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'camera':
+      return /*#__PURE__*/_react.default.createElement(_index15.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -231,7 +241,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     default:
-      return _react.default.createElement("span", null);
+      return /*#__PURE__*/_react.default.createElement("span", null);
   }
 };
 
