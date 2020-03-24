@@ -9,6 +9,11 @@ import VHInput from "../../Components/Input/Simple";
 
 
 const VHGeneralSection = props => {
+
+  const citizenships = props.citizenships
+  const citizenship = props.citizenship != undefined ? [citizenships[props.citizenship]] : {};
+  const locations = props.locations
+  const location = props.location != undefined ? [locations[props.location]] : {};
   const genders = props.genders
   const gender = props.gender != undefined ? [genders[props.gender]] : {};
   const [preloaderPhone, setPreloaderPhone] = React.useState(true);
@@ -29,80 +34,46 @@ const VHGeneralSection = props => {
         >
           <Row row responsive marginBottom={5}>
             <Row paddingRight8>
-            <VHTitleDescription
+              <VHSelect
                 preLoading={props.controls.citizenship.preLoading || false}
+                caption="Citizenship"
                 className={`vh-general-section-citizenship ${props.className ? props.className : ''}`}
-                descriptionColor={
-                  props.controls.citizenship.loading
-                  ? "gray-40"
-                  : props.controls.citizenship.error
-                  ? "red-light"
-                  : "gray-90"
-                }
-                descriptionVariant="caption"
-                inline
+                currentItem={citizenship}
+                data="citizenship"
+                items={citizenships}
                 onEvent={props.onEvent}
-                title="Citizenship"
-                titleColor={
+                isLoading={props.controls.citizenship.loading}
+                description={props.controls.citizenship.error && props.controls.citizenship.message}
+                descriptionColor="gray-100"
+                captionColor={
                   props.controls.citizenship.loading
                   ? "gray-40"
                   : props.controls.citizenship.error
                   ? "red"
-                  : "gray-100"
+                  : 'gray-100'
                 }
-                titleVariant="subtitle3"
               />
-              {
-                !props.controls.citizenship.preLoading && (
-                  <VHInput
-                    type={'text'}
-                    data={"citizenship"}
-                    onEvent={props.onEvent}
-                    disabled={props.controls.citizenship.loading}
-                    error={props.controls.citizenship.error}
-                    loading={props.controls.citizenship.loading}
-                    value={props.citizenship}
-                  />
-                )
-              }
             </Row>
-            <Row>
-            <VHTitleDescription
-                className={`vh-general-section-currentLocation ${props.className ? props.className : ''}`}
-                descriptionColor={
-                  props.controls.location.loading
-                  ? "gray-40"
-                  : props.controls.location.error
-                  ? "red-light"
-                  : "gray-90"
-                }
-                preLoading={props.controls.location.preLoading || false}
-                descriptionVariant="caption"
-                inline
-                onEvent={props.onEvent}
-                title="Current Location"
-                titleColor={
-                  props.controls.location.loading
-                  ? "gray-40"
-                  : props.controls.location.error
-                  ? "red"
-                  : "gray-100"
-                }
-                titleVariant="subtitle3"
-              />
-              {
-                !props.controls.location.preLoading && (
-                  <VHInput
-                  type={'text'}
-                  data={"location"}
+            <Row paddingRight8>
+              <VHSelect
+                  preLoading={props.controls.location.preLoading || false}
+                  caption="Location"
+                  className={`vh-general-section-location ${props.className ? props.className : ''}`}
+                  currentItem={location}
+                  data="location"
+                  items={locations}
                   onEvent={props.onEvent}
-                  disabled={props.controls.location.loading}
-                  error={props.controls.location.error}
-                  loading={props.controls.location.loading}
-                  value={props.location}
+                  isLoading={props.controls.location.loading}
+                  description={props.controls.location.error && props.controls.location.message}
+                  descriptionColor="gray-100"
+                  captionColor={
+                    props.controls.location.loading
+                    ? "gray-40"
+                    : props.controls.location.error
+                    ? "red"
+                    : 'gray-100'
+                  }
                 />
-                )
-              }
             </Row>
           </Row>
           <Row row responsive>
@@ -127,7 +98,7 @@ const VHGeneralSection = props => {
                   }
                 />
             </Row>
-            <Row column>
+            <Row column paddingRight8>
               <VHTitleDescription
                 className={`vh-general-section-phone ${props.className ? props.className : ''}`}
                 descriptionColor={
