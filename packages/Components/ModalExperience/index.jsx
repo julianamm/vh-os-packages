@@ -121,6 +121,7 @@ const VHModalExperience = props => {
                                             color="gray-100"
                                             variant="platform1"
                                             data={{
+                                                modal: 'ModalExperience',
                                                 checked: experience.isCurrentRole,
                                                 id: 'isCurrentRole',
                                                 index: index

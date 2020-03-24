@@ -605,34 +605,34 @@ var languages = [{
   label: 'English'
 }];
 (0, _react2.storiesOf)("Templates|Profile", module).add("default", function () {
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f2f2",
       height: "100%"
     }
-  }, _react.default.createElement(_.default, {
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
     experience: experiences,
     languages: languages,
     controls: controls
   }));
 }).add("preLoading", function () {
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f2f2",
       height: "100%"
     }
-  }, _react.default.createElement(_.default, {
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
     experience: experiences,
     languages: languages,
     controls: controlsPreloading
   }));
 }).add("loading", function () {
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f2f2",
       height: "100%"
     }
-  }, _react.default.createElement(_.default, {
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
     experience: experiences,
     languages: languages,
     controls: controlsLoading

@@ -10,15 +10,16 @@ import VHInput from "../../Components/Input/Simple";
 
 const VHGeneralSection = props => {
 
-  const citizenships = props.citizenships
-  const citizenship = props.citizenship != undefined ? [citizenships[props.citizenship]] : {};
+  const citizenships = props.countries
+  const citizenship = props.citizenship != undefined ? citizenships.find(element => element.value === props.citizenship) : {};
   const locations = props.locations
-  const location = props.location != undefined ? [locations[props.location]] : {};
+  const location = props.location != undefined ? citizenships.find(element => element.value === props.location) : {};
   const genders = props.genders
   const gender = props.gender != undefined ? [genders[props.gender]] : {};
   const [preloaderPhone, setPreloaderPhone] = React.useState(true);
 
   return (
+    
     <>
       <Row marginBottom={5}>
         <VHText
@@ -61,7 +62,7 @@ const VHGeneralSection = props => {
                   className={`vh-general-section-location ${props.className ? props.className : ''}`}
                   currentItem={location}
                   data="location"
-                  items={locations}
+                  items={citizenships}
                   onEvent={props.onEvent}
                   isLoading={props.controls.location.loading}
                   description={props.controls.location.error && props.controls.location.message}

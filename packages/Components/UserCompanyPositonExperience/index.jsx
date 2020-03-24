@@ -8,7 +8,6 @@ const VHUserCompanyExperience = props => {
   const industryList = props.industryList
   const companyList = props.companyList
   const [currentItem, setCurrentItem] = React.useState({});
-console.log(props.item)
   return (
     <>
       <Row marginBottom={5}>
