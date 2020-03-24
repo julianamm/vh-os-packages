@@ -35,11 +35,14 @@ const values = [
 
 const currentItem = [items[4]]
 
-storiesOf("Components|Secondary List", module)
-    .add("Types", () => {
+const controls = {language: { preLoading: false, loading: false, success: true, error: false}}
+
+storiesOf("Components|Language List", module)
+    .add("Default", () => {
         return (
             <VHLanguageList
                 items={items} 
-                data="vanhack" />
+                data="vanhack" 
+                controls={controls} />
         );
     });

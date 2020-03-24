@@ -19,6 +19,7 @@ const VHLanguageList = props => {
                 <Row width={'30%'} alignItemsCenter row >
                     <Row width={'70%'}>
                         <VHSelect
+                            removeIndicator
                             preLoading={props.controls.language.preLoading}
                             marginBottom={'0px'}
                             removeBorder
@@ -56,6 +57,7 @@ const VHLanguageList = props => {
                 <Row width={'30%'} alignItemsCenter row >
                     <Row width={'70%'}>
                         <VHSelect
+                            removeIndicator
                             preLoading={props.controls.language.preLoading}
                             marginBottom={'0px'}
                             removeBorder
@@ -93,6 +95,7 @@ const VHLanguageList = props => {
                 <Row width={'30%'} alignItemsCenter row >
                     <Row width={'70%'}>
                         <VHSelect
+                            removeIndicator
                             preLoading={props.controls.language.preLoading}
                             marginBottom={'0px'}
                             removeBorder
