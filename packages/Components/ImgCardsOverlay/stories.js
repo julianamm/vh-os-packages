@@ -18,7 +18,7 @@ const items = {
 
 storiesOf("Components|Img Cards Overlay", module)
     .add("Default", () => (
-        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+        <div style={{ backgroundColor: "#fff", width: '50%', padding: "24px" }}>
                 <VHImgCardsOverlay
                     cardLeftTitle={items.cardLeft.title}
                     cardLeftDescription={items.cardLeft.description}

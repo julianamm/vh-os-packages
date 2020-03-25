@@ -8,24 +8,22 @@ import * as S from './styles';
 const VHImgCardsOverlay = props => {
     return (
         <Container>
-            <Row alignItemsCenter>
-                <Row alignItemsCenter>
-                    <S.ImgWrapper image={props.image}/>
-                </Row>
+            <Row responsive>
                 <S.Wrapper>
-                    <Row row alignItemsCenter>
-                        <Row width={"50%"} style={{ height: "100%", alignItems: "flex-end", justifyContent: "start"}}>
+                    <S.ImgItem image={props.image}/>
+                    <S.CardsWrapper>
+                        <Row row alignItemsCenter>
                             <S.CardLeftWrapper>
                                 <VHCardBase noHover>
-                                    <Row alignItemsCenter style={{ padding: "50px 0", textAlign: "center"}}>
-                                        <Row width={"80%"} alignItemsCenter>
+                                    <Row alignItemsCenter style={{ padding: "50px 0", textAlign: "center" }}>
+                                        <Row width={"90%"} alignItemsCenter>
                                             <VHText 
                                                 variant={"h2"}
                                                 color={"gray-100"}
                                                 text={props.cardLeftTitle}
                                             />
                                         </Row>
-                                        <Row width={"80%"} alignItemsCenter style={{ textAlign: "center"}}>
+                                        <Row width={"90%"} alignItemsCenter style={{ textAlign: "center"}}>
                                             <VHText 
                                                 variant={"subtitle2"}
                                                 color={"black-60"}
@@ -35,19 +33,18 @@ const VHImgCardsOverlay = props => {
                                     </Row>
                                 </VHCardBase>
                             </S.CardLeftWrapper>
-                        </Row>
-                        <Row width={"50%"} style={{ marginTop: "25%", alignItems: "flex-start", justifyContent: "flex-end"}}>
+
                             <S.CardRightWrapper>
                                 <VHCardBase noHover>
                                     <Row alignItemsCenter style={{ padding: "50px 0", textAlign: "center"}}>
-                                        <Row width={"80%"} alignItemsCenter>
+                                        <Row width={"90%"} alignItemsCenter>
                                             <VHText 
                                                 variant={"h2"}
                                                 color={"gray-100"}
                                                 text={props.cardRightTitle}
                                             />
                                         </Row>
-                                        <Row width={"80%"} alignItemsCenter style={{ textAlign: "center"}}>
+                                        <Row width={"90%"} alignItemsCenter style={{ textAlign: "center"}}>
                                             <VHText 
                                                 variant={"subtitle2"}
                                                 color={"black-60"}
@@ -58,7 +55,7 @@ const VHImgCardsOverlay = props => {
                                 </VHCardBase>
                             </S.CardRightWrapper>
                         </Row>
-                    </Row>
+                    </S.CardsWrapper>
                 </S.Wrapper>
             </Row>
         </Container>
