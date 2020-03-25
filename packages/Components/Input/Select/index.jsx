@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 
-import Select from 'react-select';
+import Select, { components }  from 'react-select';
 import makeAnimated from 'react-select/animated';
 import VHText from '../../Text'
 import { TitleDescriptionSkeleton } from 'react-preload-skeleton'
 import { Row } from '../../../Grid'
+
+import IconDropdown from '../../../assets/svg/icons/icon_dropdown.svg/index.js'
 
 const VHSelect = props => {
   let animatedComponents = makeAnimated();
@@ -13,7 +15,6 @@ const VHSelect = props => {
 if (props.preLoading) {
   return <TitleDescriptionSkeleton />
 }
-
 
   const [value, handleChange] = React.useState(props.currentItem);
   React.useEffect(() => {
@@ -28,107 +29,126 @@ if (props.preLoading) {
       fontWeight: props.bold ? 'bold' : '500'
     }),
     indicatorSeparator: (styles) => ({ display: 'none' }),
-    clearIndicator: (styles) => ({ display: 'none' })
+    clearIndicator: (styles) => ({ display: 'none' }),
   };
 
   const styled = {
     indicatorSeparator: (styles) => ({ display: 'none' }),
-    clearIndicator: (styles) => ({ display: 'none' })
+    clearIndicator: (styles) => ({ display: 'none' }),
+    valueContainer: (base) => ({ height: '40px', width: 'auto', display: 'flex', marginLeft: 8 }),
+    multiValue: (base) => ({ width: 'auto', height: 'auto', marginLeft: 8, display: 'flex', alignItems: 'center' }),
   };
+  
+  const DropdownIcon = () => {
+    return <IconDropdown />
+  };
+  
+  const DropdownIndicator = (props2) => {
+    // if (props.removeIndicator) {
+    //   return <>{ DropdownIndicator = () => null, IndicatorSeparator = () => null }</>
+    // }
+    return (
 
-  if (props.removeIndicator) {
-    animatedComponents={ DropdownIndicator:() => null, IndicatorSeparator:() => null }
-  }
-
+      <components.DropdownIndicator {...props2}>
+        <DropdownIcon />
+      </components.DropdownIndicator>
+    );
+  };
+  
   return (
     <Row responsive style={{ position: 'relative', marginBottom: props.marginBottom ? props.marginBottom : '21px' }}>
       {
         props.caption &&
-        <VHText
-          text={props.caption}
-          variant="subtitle3"
-          color={props.captionColor}
-        />
+        <Row style={{ marginBottom : '5px' }}>
+          <VHText
+            text={props.caption}
+            variant="platform1"
+            color={props.captionColor}
+          />
+        </Row>
       }
-      <Select
-        styles={props.removeBorder ? style : styled}
-        closeMenuOnSelect={!props.isMulti}
-        className={props.className}
-        placeholder={props.placeholder}
-        isLoading={props.isLoading}
-        isDisabled={props.isLoading || props.isDisabled}
-        components={animatedComponents}
-        value={value}
-        isMulti={props.isMulti}
-        isClearable={true}
-        options={props.items}
-        onChange={(newValue, actionMeta) => {
-          switch (true) {
-            case actionMeta.action === "remove-value":
-              let finalValue = []
-              if (newValue.value === 'zero') {
-                newValue.value = 0
-              }
-              handleChange(newValue);
-              newValue.map(item => {
-                finalValue.push(parseInt(item.value === 'zero' ? 0 : item.value))
-              })
-              props.onEvent({
-                type: "OnChange",
-                origin: "VHSelect",
-                props: {
-                  data: props.data,
-                  item: finalValue,
-                  action: 'delete',
-                  order: props.order
+      <Row>
+        <Select
+          styles={props.removeBorder ? style : styled}
+          closeMenuOnSelect={!props.isMulti}
+          className={props.className}
+          placeholder={props.placeholder}
+          isLoading={props.isLoading}
+          isDisabled={props.isLoading || props.isDisabled}
+          // components={animatedComponents}
+          components={{ DropdownIndicator }}
+          value={value}
+          isMulti={props.isMulti}
+          isClearable={true}
+          options={props.items}
+          onChange={(newValue, actionMeta) => {
+            switch (true) {
+              case actionMeta.action === "remove-value":
+                let finalValue = []
+                if (newValue.value === 'zero') {
+                  newValue.value = 0
                 }
-              })
-              break
-            case actionMeta.action === "clear":
-              props.onEvent({
-                type: "OnChange",
-                origin: "VHSelect",
-                props: {
-                  data: props.data,
-                  item: null,
-                  action: "clear"
-                }
-              })
-              break
-            case actionMeta.action === "select-option":
-              let finalValueChange = []
-              if (newValue.value === 'zero') {
-                newValue.value = 0
-              }
-              handleChange(newValue);
-              if (props.isMulti) {
+                handleChange(newValue);
                 newValue.map(item => {
-                  finalValueChange.push(parseInt(item.value === 'zero' ? 0 : item.value))
+                  finalValue.push(parseInt(item.value === 'zero' ? 0 : item.value))
                 })
-              }
-              props.onEvent({
-                type: "OnChange",
-                origin: "VHSelect",
-                props: {
-                  data: props.data,
-                  item: props.isMulti ? finalValueChange : newValue,
-                  action: 'add',
-                  order: props.order
+                props.onEvent({
+                  type: "OnChange",
+                  origin: "VHSelect",
+                  props: {
+                    data: props.data,
+                    item: finalValue,
+                    action: 'delete',
+                    order: props.order
+                  }
+                })
+                break
+              case actionMeta.action === "clear":
+                props.onEvent({
+                  type: "OnChange",
+                  origin: "VHSelect",
+                  props: {
+                    data: props.data,
+                    item: null,
+                    action: "clear"
+                  }
+                })
+                break
+              case actionMeta.action === "select-option":
+                let finalValueChange = []
+                if (newValue.value === 'zero') {
+                  newValue.value = 0
                 }
-              })
-              break
-          }
-        }}
-      />
+                handleChange(newValue);
+                if (props.isMulti) {
+                  newValue.map(item => {
+                    finalValueChange.push(parseInt(item.value === 'zero' ? 0 : item.value))
+                  })
+                }
+                props.onEvent({
+                  type: "OnChange",
+                  origin: "VHSelect",
+                  props: {
+                    data: props.data,
+                    item: props.isMulti ? finalValueChange : newValue,
+                    action: 'add',
+                    order: props.order
+                  }
+                })
+                break
+            }
+          }}
+        />
+      </Row>
       {
         props.description &&
-        <div style={{ position: 'absolute', top: '60px' }}>
+        <Row style={{ position: 'absolute', top: '60px', marginTop: '8px'}}>
           <VHText
             text={props.description}
             variant="caption"
             color={props.descriptionColor}
           />
-        </div>
+        </Row>
       }
     </Row>
   );

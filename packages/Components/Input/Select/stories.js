@@ -22,6 +22,7 @@ storiesOf("Components|Input/Select", module)
     <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
       <VHSelect
         caption="Annual salary expectation"
+        captionColor="gray-100"
         data={'AnyObjectOrString'}
         className={'AnyObjectOrString'}
         currentItem={currentItem}
