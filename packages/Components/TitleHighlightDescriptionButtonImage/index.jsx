@@ -34,8 +34,10 @@ const VHTitleHighlightDescriptionButtonImage = props => {
                     <Row width={"50%"} marginTop={30}>
                         <VHButton 
                             secondary
-                            onEvent={e => {}} 
+                            onEvent={props.onEvent}
+                            data={props.data} 
                             label={props.label}
+
                         />
                     </Row>
                 </Row>
