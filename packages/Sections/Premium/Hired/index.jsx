@@ -15,9 +15,9 @@ const VHPremiumHiredSection = props => {
                     text={props.sectionTitle}
                 />
             </Row>
-            <Row row marginBottom={30}>
+            <Row row alignItemsCenter marginBottom={30} responsive>
                 {props.candidates.map(candidate => (
-                    <Row style={{ backgroundColor: "#f2f6f9", width: "180px", height: "180px", padding: "24px", marginRight: "10px" }}>
+                    <Row marginBottom5 style={{ backgroundColor: "#f2f6f9", width: "210px", height: "205px", padding: "24px", marginRight: "10px" }}>
                         <VHCardHired 
                             name={candidate.name}
                             position={candidate.position}
