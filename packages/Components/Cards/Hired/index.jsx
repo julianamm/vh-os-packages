@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Row } from "../../../Grid/index";
 import VHAvatar from "../../Avatar/index";
+import VHIcon from "../../Icon/index";
 import VHText from "../../Text/index";
 import * as S from './styles';
 
 const VHCardHired = props => {
   return (
-    <Row>
-        <Row alignItemsCenter>
+    <Row responsive>
+        <Row alignItemsCenter responsive>
             <S.OutterImg>
                 <VHAvatar 
                     image={props.userPhoto}
@@ -16,15 +17,16 @@ const VHCardHired = props => {
                     showCursor={true}
                 />
                 <S.InnerImg>
-                    <VHAvatar 
-                        image={props.flag}
-                        size={"md"}
-                        showCursor={true}
-                        />
+                    <VHIcon
+                        title={props.name}
+                        icon={props.flag}
+                        round
+                        sm
+                    />
                 </S.InnerImg>
             </S.OutterImg>
         </Row>
-        <Row alignItemsCenter marginTop={10}>
+        <Row marginTop={10} responsive style={{ textAlign: "center"}}>
             <VHText 
                 variant={"subtitle3"}
                 color={"gray-90"}
@@ -53,10 +55,10 @@ VHCardHired.defaultProps = {
 VHCardHired.propTypes = {
   className: PropTypes.string,
   name: PropTypes.string.isRequired,
-  position: PropTypes.string.isRequired,
+  position: PropTypes.string,
   country: PropTypes.string,
   userPhoto: PropTypes.string.isRequired,
-  flag: PropTypes.string.isRequired,
+  flag: PropTypes.string,
 }
 
 export default VHCardHired;
