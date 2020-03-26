@@ -13,6 +13,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _index = require("../../Grid/index");
 
+var _index2 = _interopRequireDefault(require("../../Components/Icon/index"));
+
 var S = _interopRequireWildcard(require("./styles"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -21,46 +23,16 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var size = {
-  w: 18,
-  h: 18
-};
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var VHLinkImage = function VHLinkImage(props) {
-  switch (true) {
-    default:
-    case props.xsImg:
-      size = {
-        w: 18,
-        h: 18
-      };
-      break;
+  var _React$createElement;
 
-    case props.smImg:
-      size = {
-        w: 24,
-        h: 24
-      };
-      break;
-
-    case props.mdImg:
-      size = {
-        w: 36,
-        h: 36
-      };
-      break;
-
-    case props.lgImg:
-      size = {
-        w: 48,
-        h: 48
-      };
-      break;
-  }
-
-  return /*#__PURE__*/_react.default.createElement(_index.Row, {
-    row: true
-  }, /*#__PURE__*/_react.default.createElement(S.A, {
+  return _react.default.createElement(_index.Row, {
+    row: true,
+    width: 500
+  }, _react.default.createElement(S.A, {
+    reverse: props.reverse,
     cursor: props.cursor,
     xs: props.xsLabel,
     sm: props.smLabel,
@@ -70,37 +42,44 @@ var VHLinkImage = function VHLinkImage(props) {
       props.onClick();
     },
     className: "vh-link-image-component ".concat(props.className ? props.className : ''),
-    color: props.color,
+    color: props.colorLabel,
     noUnderscore: props.noUnderscore,
     to: props.to,
     label: props.label
-  }, props.label, /*#__PURE__*/_react.default.createElement(S.ImgWrapper, null, /*#__PURE__*/_react.default.createElement("img", {
-    src: props.source,
-    alt: props.title,
-    title: props.title,
-    width: size.w,
-    height: size.h,
-    className: "vh-link-image-component ".concat(props.className ? props.className : '')
-  }))));
+  }, props.label, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_index2.default, (_React$createElement = {
+    icon: props.icon,
+    xs: props.xsIcon,
+    sm: props.smIcon,
+    md: props.mdIcon
+  }, _defineProperty(_React$createElement, "md", props.mdIcon), _defineProperty(_React$createElement, "lg", props.lgIcon), _defineProperty(_React$createElement, "color", props.colorIcon), _React$createElement)))));
 };
 
 VHLinkImage.defaultProps = {
   xsLabel: false,
   smLabel: true,
   lgLabel: false,
+  reverse: false,
   noUnderscore: false
 };
 VHLinkImage.propTypes = {
   reverse: _propTypes.default.bool,
+  noUnderscore: _propTypes.default.bool,
+  round: _propTypes.default.bool,
   smLabel: _propTypes.default.bool,
   xsLabel: _propTypes.default.bool,
   lgLabel: _propTypes.default.bool,
   label: _propTypes.default.string.isRequired,
   className: _propTypes.default.string,
-  color: _propTypes.default.string,
+  colorLabel: _propTypes.default.string,
   to: _propTypes.default.string.isRequired,
-  source: _propTypes.default.string.isRequired,
-  title: _propTypes.default.string.isRequired
+  icon: _propTypes.default.string,
+  xsIcon: _propTypes.default.bool,
+  smIcon: _propTypes.default.bool,
+  mdIcon: _propTypes.default.bool,
+  lgIcon: _propTypes.default.bool,
+  colorIcon: _propTypes.default.string // title: PropTypes.string,
+  // source: PropTypes.string,
+
 };
 var _default = VHLinkImage;
 exports.default = _default;

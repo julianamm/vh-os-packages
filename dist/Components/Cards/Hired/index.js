@@ -15,7 +15,9 @@ var _index = require("../../../Grid/index");
 
 var _index2 = _interopRequireDefault(require("../../Avatar/index"));
 
-var _index3 = _interopRequireDefault(require("../../Text/index"));
+var _index3 = _interopRequireDefault(require("../../Icon/index"));
+
+var _index4 = _interopRequireDefault(require("../../Text/index"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
@@ -26,28 +28,35 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHCardHired = function VHCardHired(props) {
-  return /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
-    alignItemsCenter: true
-  }, /*#__PURE__*/_react.default.createElement(S.OutterImg, null, /*#__PURE__*/_react.default.createElement(_index2.default, {
+  return _react.default.createElement(_index.Row, {
+    responsive: true
+  }, _react.default.createElement(_index.Row, {
+    alignItemsCenter: true,
+    responsive: true
+  }, _react.default.createElement(S.OutterImg, null, _react.default.createElement(_index2.default, {
     image: props.userPhoto,
     size: "xl",
     showCursor: true
-  }), /*#__PURE__*/_react.default.createElement(S.InnerImg, null, /*#__PURE__*/_react.default.createElement(_index2.default, {
-    image: props.flag,
-    size: "md",
-    showCursor: true
-  })))), /*#__PURE__*/_react.default.createElement(_index.Row, {
-    alignItemsCenter: true,
-    marginTop: 10
-  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+  }), _react.default.createElement(S.InnerImg, null, _react.default.createElement(_index3.default, {
+    title: props.name,
+    icon: props.flag,
+    round: true,
+    sm: true
+  })))), _react.default.createElement(_index.Row, {
+    marginTop: 10,
+    responsive: true,
+    style: {
+      textAlign: "center"
+    }
+  }, _react.default.createElement(_index4.default, {
     variant: "subtitle3",
     color: "gray-90",
     text: props.name
-  }), /*#__PURE__*/_react.default.createElement(_index3.default, {
+  }), _react.default.createElement(_index4.default, {
     variant: "platform",
     color: "gray-70",
     text: props.position
-  }), /*#__PURE__*/_react.default.createElement(_index3.default, {
+  }), _react.default.createElement(_index4.default, {
     variant: "platform",
     color: "gray-70",
     text: props.country
@@ -61,10 +70,10 @@ VHCardHired.defaultProps = {
 VHCardHired.propTypes = {
   className: _propTypes.default.string,
   name: _propTypes.default.string.isRequired,
-  position: _propTypes.default.string.isRequired,
+  position: _propTypes.default.string,
   country: _propTypes.default.string,
   userPhoto: _propTypes.default.string.isRequired,
-  flag: _propTypes.default.string.isRequired
+  flag: _propTypes.default.string
 };
 var _default = VHCardHired;
 exports.default = _default;
