@@ -4,7 +4,7 @@ import { Row } from "../../../Grid/index";
 import VHText from "../../../Components/Text/index";
 import VHTitleDescriptionImage from "../../../Components/TitleDescriptionImage/index";
 import VHInputSimpleWithButton from  "../../../Components/Input/SimpleWithButton/index";
-import { background } from '@storybook/theming';
+
 
 const VHPremiumFaqSection = props => {
   return (
@@ -20,7 +20,7 @@ const VHPremiumFaqSection = props => {
             <Row width={"50%"} alignItemsCenter>
                 <Row width={"80%"}>
                     <Row marginBottom={12} style={{ marginLeft: "30px" }}>
-                        <VHTitleDescriptionImage 
+                        <VHTitleDescriptionImage
                             titleColor={"gray-100"}
                             descriptionColor={"black-70"}
                             titleVariant={"h4"}
@@ -31,7 +31,7 @@ const VHPremiumFaqSection = props => {
                         />
                     </Row>
                     <Row style={{ backgroundColor: "#ffffff"}}>
-                        <VHInputSimpleWithButton 
+                        <VHInputSimpleWithButton
                             placeholder={"E-mail"}
                             label={"SEND"}
                         />
@@ -42,14 +42,14 @@ const VHPremiumFaqSection = props => {
                 {props.faqs.map(faq => (
                     <Row width={"80%"} alignItemsCenter marginBottom={20} style={{marginLeft: "20px"}}>
                         <Row marginBottom={3}>
-                            <VHText 
+                            <VHText
                                 variant={"h4"}
                                 color={"gray-90"}
                                 text={faq.question}
                             />
                         </Row>
                         <Row>
-                            <VHText 
+                            <VHText
                                 variant={"h6"}
                                 color={"gray-90"}
                                 text={faq.answer}
