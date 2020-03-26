@@ -14,9 +14,9 @@ import * as S from './styles.js'
 
 const VHModalExperience = props => {
 
-    const items = JSON.stringify([])
     const item = props.modalExperience;
     const currentItem = props.currentItem ? props.currentItem : {};
+
     return (
         <VHModal
             width="732"
@@ -50,7 +50,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-location ${props.className ? props.className : ''}`}
-                                currentItem={{ value: item.countryId.value, label: currentItem.country }}
+                                currentItem={item.countryId.value ? props.countries.find(element => element.value === item.countryId.value) : {} }
                                 data={{ id: "ModalExperience", field: "countryId" }}
                                 onEvent={props.onEvent}
                                 items={props.countries}
@@ -68,7 +68,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-company-size ${props.className ? props.className : ''}`}
-                                currentItem={{ value: item.companySize.value, label: currentItem.companySizeStr }}
+                                currentItem={item.companySize.value ? props.companyList.find(element => element.value === item.companySize.value) : {} }
                                 data={{ id: "ModalExperience", field: "companySize" }}
                                 onEvent={props.onEvent}
                                 items={props.companyList}
@@ -114,7 +114,7 @@ const VHModalExperience = props => {
                                         <S.ErrorMessage>Field required</S.ErrorMessage>
                                     )}
                                 </Row>
-                                {index === item.workExperiences.length - 1 &&
+                                {index === 0 &&
                                     <Row marginBottom5>
                                         <VHInputCheckbox
                                             title={'I am currently working in this role'}
@@ -147,7 +147,7 @@ const VHModalExperience = props => {
                                         <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={getFormatedDate(experience.endDate.value)} data={{ id: "ModalExperience", field: "endDate", index: index }} />
                                     </Row>
                                 </Row>
-                                <Row marginBottom5>
+                                <Row marginBottom5 paddingBottom borderBottom>
                                     <VHText color="gray-100" variant={'platform'} text="Description" />
                                     <VHInputMultiple
                                         max={5}

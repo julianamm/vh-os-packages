@@ -10,7 +10,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);\n  background-image: url(", ");\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n  border-radius: 50%;\n  text-align: center;\n  align-content: center;\n  margin: ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);\n  background-image: url(", ");\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n  border-radius: 50%;\n  text-align: center;\n  align-content: center;\n\n  margin: ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", "\n    ", ";\n\n    ", ";\n    ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -46,6 +46,12 @@ var Avatar = _styledComponents.default.div(_templateObject(), function (props) {
 }, function (_ref7) {
   var size = _ref7.size;
   return size === "xs" && "\n    width: 16px;\n    height: 16px;\n  ";
+}, function (_ref8) {
+  var loading = _ref8.loading;
+  return loading && "\n      filter: blur(4px);\n  ";
+}, function (_ref9) {
+  var uploading = _ref9.uploading;
+  return uploading && "\n      filter: blur(".concat(uploading, "px);\n      border: solid 1px;\n  ");
 });
 
 exports.Avatar = Avatar;

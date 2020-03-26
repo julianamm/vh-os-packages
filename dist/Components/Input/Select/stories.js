@@ -62,6 +62,7 @@ var currentItem = [items[4], items[5]];
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
     caption: "Annual salary expectation",
+    captionColor: "gray-100",
     data: 'AnyObjectOrString',
     className: 'AnyObjectOrString',
     currentItem: currentItem,

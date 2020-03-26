@@ -29,6 +29,8 @@ var _index = _interopRequireDefault(require("../PageSection/index"));
 
 var _LanguageSection = _interopRequireDefault(require("../../Sections/LanguageSection"));
 
+var _VHUserPhotoIconTitleDescription = _interopRequireDefault(require("../../Components/VHUserPhotoIconTitleDescription"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -41,6 +43,15 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
   return /*#__PURE__*/_react.default.createElement(_Grid.Container, {
     md: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom: 10
+  }, /*#__PURE__*/_react.default.createElement(_VHUserPhotoIconTitleDescription.default, {
+    avatar: props.User.image,
+    name: props.User.name,
+    email: props.User.email,
+    onEvent: function onEvent(e) {
+      props.onEvent;
+    }
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 10
   }, /*#__PURE__*/_react.default.createElement("div", {
     id: "general"
