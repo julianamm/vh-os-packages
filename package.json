@@ -1,6 +1,6 @@
 {
   "name": "vh-os-packages",
-  "version": "0.0.1-39",
+  "version": "0.0.1-40",
   "private": false,
   "main": "packages",
   "peerDependencies": {
@@ -47,7 +47,7 @@
     "babel-plugin-inline-import-data-uri": "^1.0.1",
     "react-scripts": "^3.3.0",
     "styled-components": "^5.0.1"
-    },
+  },
   "dependencies": {
     "react-image-crop": "^8.5.0",
     "react-preload-skeleton": "^0.0.1-16",
