@@ -12,6 +12,8 @@ const VHPremiumIntroSection = props => {
             description={props.description}
             label={props.label}
             image={props.image}
+            onEvent={props.onEvent}
+            data={"VHTitleHighlightDescriptionButtonImage"}
         />
         <VHCardFeatures 
             features={props.features}

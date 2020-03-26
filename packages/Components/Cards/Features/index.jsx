@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Container } from '../../../Grid/index';
-import VHImg from '../../Img/index';
+import VHIcon from '../../Icon/index';
 import VHText from "../../Text/index";
 import VHCardBase from "../../Cards/Base/index";
 import * as S from './styles';
@@ -16,8 +16,8 @@ const VHCardFeatures = props => {
                             <S.Item>
                                 <Row width={300}>
                                     <Row alignItemsCenter marginBottom5>
-                                        <VHImg
-                                            source={feature.icon}
+                                        <VHIcon
+                                            icon={feature.icon}
                                             title={feature.title}
                                             md
                                         />
