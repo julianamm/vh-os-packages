@@ -40,7 +40,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHModalExperience = function VHModalExperience(props) {
-  var items = JSON.stringify([]);
   var item = props.modalExperience;
   var currentItem = props.currentItem ? props.currentItem : {};
   return /*#__PURE__*/_react.default.createElement(_Modal.default, {
@@ -89,10 +88,9 @@ var VHModalExperience = function VHModalExperience(props) {
       caption: "Location",
       captionColor: null,
       className: "vh-general-section-location ".concat(props.className ? props.className : ''),
-      currentItem: {
-        value: item.countryId.value,
-        label: currentItem.country
-      },
+      currentItem: item.countryId.value ? props.countries.find(function (element) {
+        return element.value === item.countryId.value;
+      }) : {},
       data: {
         id: "ModalExperience",
         field: "countryId"
@@ -111,10 +109,9 @@ var VHModalExperience = function VHModalExperience(props) {
       caption: "Company Size",
       captionColor: null,
       className: "vh-general-section-company-size ".concat(props.className ? props.className : ''),
-      currentItem: {
-        value: item.companySize.value,
-        label: currentItem.companySizeStr
-      },
+      currentItem: item.companySize.value ? props.companyList.find(function (element) {
+        return element.value === item.companySize.value;
+      }) : {},
       data: {
         id: "ModalExperience",
         field: "companySize"
@@ -215,7 +212,9 @@ var VHModalExperience = function VHModalExperience(props) {
           index: index
         }
       }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-        marginBottom5: true
+        marginBottom5: true,
+        paddingBottom: true,
+        borderBottom: true
       }, /*#__PURE__*/_react.default.createElement(_index.default, {
         color: "gray-100",
         variant: 'platform',

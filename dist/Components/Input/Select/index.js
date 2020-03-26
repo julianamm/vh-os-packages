@@ -1,5 +1,7 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -9,7 +11,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _reactSelect = _interopRequireDefault(require("react-select"));
+var _reactSelect = _interopRequireWildcard(require("react-select"));
 
 var _animated = _interopRequireDefault(require("react-select/animated"));
 
@@ -18,6 +20,12 @@ var _Text = _interopRequireDefault(require("../../Text"));
 var _reactPreloadSkeleton = require("react-preload-skeleton");
 
 var _Grid = require("../../../Grid");
+
+var _index = _interopRequireDefault(require("../../../assets/svg/icons/icon_dropdown.svg/index.js"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -84,19 +92,36 @@ var VHSelect = function VHSelect(props) {
       return {
         display: 'none'
       };
+    },
+    valueContainer: function valueContainer(base) {
+      return {
+        height: '40px',
+        width: 'auto',
+        display: 'flex',
+        marginLeft: 8
+      };
+    },
+    multiValue: function multiValue(base) {
+      return {
+        width: 'auto',
+        height: 'auto',
+        marginLeft: 8,
+        display: 'flex',
+        alignItems: 'center'
+      };
     }
   };
 
-  if (props.removeIndicator) {
-    animatedComponents = {
-      DropdownIndicator: function DropdownIndicator() {
-        return null;
-      },
-      IndicatorSeparator: function IndicatorSeparator() {
-        return null;
-      }
-    };
-  }
+  var DropdownIcon = function DropdownIcon() {
+    return /*#__PURE__*/_react.default.createElement(_index.default, null);
+  };
+
+  var DropdownIndicator = function DropdownIndicator(props2) {
+    // if (props.removeIndicator) {
+    //   return <>{ DropdownIndicator = () => null, IndicatorSeparator = () => null }</>
+    // }
+    return /*#__PURE__*/_react.default.createElement(_reactSelect.components.DropdownIndicator, props2, /*#__PURE__*/_react.default.createElement(DropdownIcon, null));
+  };
 
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     responsive: true,
@@ -104,18 +129,25 @@ var VHSelect = function VHSelect(props) {
       position: 'relative',
       marginBottom: props.marginBottom ? props.marginBottom : '21px'
     }
-  }, props.caption && /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, props.caption && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    style: {
+      marginBottom: '5px'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     text: props.caption,
-    variant: "subtitle3",
+    variant: "platform1",
     color: props.captionColor
-  }), /*#__PURE__*/_react.default.createElement(_reactSelect.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_reactSelect.default, {
     styles: props.removeBorder ? style : styled,
     closeMenuOnSelect: !props.isMulti,
     className: props.className,
     placeholder: props.placeholder,
     isLoading: props.isLoading,
-    isDisabled: props.isLoading || props.isDisabled,
-    components: animatedComponents,
+    isDisabled: props.isLoading || props.isDisabled // components={animatedComponents}
+    ,
+    components: {
+      DropdownIndicator: DropdownIndicator
+    },
     value: value,
     isMulti: props.isMulti,
     isClearable: true,
@@ -185,10 +217,11 @@ var VHSelect = function VHSelect(props) {
           break;
       }
     }
-  }), props.description && /*#__PURE__*/_react.default.createElement("div", {
+  })), props.description && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
       position: 'absolute',
-      top: '60px'
+      top: '60px',
+      marginTop: '8px'
     }
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     text: props.description,

@@ -11,6 +11,12 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _index = require("../../Grid/index");
+
+var _index2 = _interopRequireDefault(require("../Text/index"));
+
+var _index3 = _interopRequireDefault(require("../Icon/index"));
+
 var S = _interopRequireWildcard(require("./styles"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -19,37 +25,43 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var VHAvatar = function VHAvatar(props) {
-  return /*#__PURE__*/_react.default.createElement(S.Avatar, {
-    center: props.center,
-    image: props.image,
-    size: props.size,
-    showCursor: props.showCursor,
-    loading: props.loading,
-    uploading: 100 - props.uploading,
-    onClick: function onClick(event) {
-      if (props.onEvent) {
-        props.onEvent({
-          data: props.data,
-          type: 'onClick',
-          target: 'VHAvatar'
-        });
-      }
-
-      ;
+var VHImgVideoIconText = function VHImgVideoIconText(props) {
+  return /*#__PURE__*/_react.default.createElement(_index.Row, {
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(S.ImgItem, {
+    image: props.image
+  }), /*#__PURE__*/_react.default.createElement(S.ItemsWrapper, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
+    row: true
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
+    width: "10%",
+    alignItemsCenter: true,
+    style: {
+      justifyContent: "center",
+      marginLeft: "15px"
     }
-  }, props.label);
+  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+    icon: props.icon,
+    color: props.color,
+    md: true
+  })), /*#__PURE__*/_react.default.createElement(_index.Row, {
+    width: "60%"
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
+    variant: "platform1",
+    color: "gray-10",
+    text: props.text
+  })))), /*#__PURE__*/_react.default.createElement(S.ImgOverlay, null)));
 };
 
-VHAvatar.defaultProps = {
-  content: '',
-  showCursor: true
+VHImgVideoIconText.defaultProps = {
+  className: ''
 };
-VHAvatar.propTypes = {
+VHImgVideoIconText.prototypes = {
+  className: _propTypes.default.string,
+  onEvent: _propTypes.default.func,
+  data: _propTypes.default.object,
   image: _propTypes.default.string,
-  center: _propTypes.default.bool,
-  showCursor: _propTypes.default.bool,
-  size: _propTypes.default.string
+  icon: _propTypes.default.string,
+  text: _propTypes.default.string
 };
-var _default = VHAvatar;
+var _default = VHImgVideoIconText;
 exports.default = _default;

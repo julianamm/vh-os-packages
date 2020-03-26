@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 const VHModal = props => {
   return (
     <S.ModalWrapper open={props.open}>
-        <GlobalStyle />
+        {/* //<GlobalStyle /> */}
       <S.ModalContainer >
       <S.Header>
           <div>

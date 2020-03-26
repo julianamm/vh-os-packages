@@ -151,5 +151,13 @@ export const Row = styled.div`
     ${({ fixed }) => fixed && `
        position: fixed;
     `}
+
+    ${({ borderBottom }) => borderBottom && `
+       border-bottom: 1px solid #bdbdbd;
+    `}
+
+    ${({ paddingBottom }) => paddingBottom && `
+       padding-bottom: 50px;
+    `}
 `
 

@@ -15,6 +15,10 @@ var _index = require("../../Grid/index");
 
 var _index2 = _interopRequireDefault(require("../Avatar/index"));
 
+var _ = _interopRequireDefault(require("."));
+
+var _ImgCrop = _interopRequireDefault(require("../ImgCrop"));
+
 var _index3 = _interopRequireDefault(require("../Icon/index"));
 
 var _index4 = _interopRequireDefault(require("../Text/index"));
@@ -30,10 +34,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var VHUserAvatar = function VHUserAvatar(props) {
   return /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true
-  }, /*#__PURE__*/_react.default.createElement(S.OutterImg, null, /*#__PURE__*/_react.default.createElement(_index2.default, {
-    image: props.avatar,
-    size: "xl",
-    showCursor: true
+  }, /*#__PURE__*/_react.default.createElement(S.OutterImg, null, /*#__PURE__*/_react.default.createElement(_ImgCrop.default, {
+    source: props.avatar,
+    data: {
+      context: 2
+    },
+    uploading: props.uploading || 100,
+    acceptTypes: "image/*",
+    onEvent: props.onEvent
   }), /*#__PURE__*/_react.default.createElement(S.InnerImg, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
     title: props.name,
     icon: 'camera',

@@ -5,7 +5,7 @@ import VHInput from '../Simple'
 const VHInputMultiple = props => {
   let it = []
   try {
-    it = JSON.parse(props.items)
+    it = JSON.parse(props.items.value)
   } catch (error) {
 
   }
@@ -13,7 +13,6 @@ const VHInputMultiple = props => {
   const [newItems, setNewItems] = useState([{ value: '' }])
 
   const [render, reRender] = useState(1)
-
   return (
     <>
       {
@@ -23,7 +22,7 @@ const VHInputMultiple = props => {
             style={{ margin: '9px 0' }}
           >
             <VHInput
-              value={item.value}
+              value={item.Value}
               data={item}
               placeholder={props.placeholder}
               onEvent={e => {

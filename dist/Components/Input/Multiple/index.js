@@ -35,7 +35,7 @@ var VHInputMultiple = function VHInputMultiple(props) {
   var it = [];
 
   try {
-    it = JSON.parse(props.items);
+    it = JSON.parse(props.items.value);
   } catch (error) {}
 
   var _useState = (0, _react.useState)(it),
@@ -62,7 +62,7 @@ var VHInputMultiple = function VHInputMultiple(props) {
         margin: '9px 0'
       }
     }, /*#__PURE__*/_react.default.createElement(_Simple.default, {
-      value: item.value,
+      value: item.Value,
       data: item,
       placeholder: props.placeholder,
       onEvent: function onEvent(e) {

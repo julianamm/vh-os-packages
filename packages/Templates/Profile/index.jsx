@@ -15,10 +15,10 @@ const VHProfileTemplate = props => (
   <Container md>
     <Row marginBottom={10}>
       <VHProfileAvatar
-        avatar= {props.User.avatar}
+        avatar= {props.User.image}
         name= {props.User.name}
         email= {props.User.email}
-        onEvent={props.onEvent}
+        onEvent={(e)=>{props.onEvent}}
       />
     </Row>
     <Row marginBottom={10}>
