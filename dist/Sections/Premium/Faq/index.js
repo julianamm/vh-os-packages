@@ -17,8 +17,6 @@ var _index3 = _interopRequireDefault(require("../../../Components/TitleDescripti
 
 var _index4 = _interopRequireDefault(require("../../../Components/Input/SimpleWithButton/index"));
 
-var _theming = require("@storybook/theming");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHPremiumFaqSection = function VHPremiumFaqSection(props) {
