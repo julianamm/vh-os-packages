@@ -106,11 +106,7 @@ const Obj = new ConvertFiles()
 // Obj.setDir(dirDurand)
 // Obj.setDir(dirFlags)
 Obj.setDir(dirIcons)
-<<<<<<< HEAD
-//Obj.setDir(dirBackground)
-=======
 // Obj.setDir(dirBackground)
->>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
 
 Obj.run().then(response => {
     console.log(response)
