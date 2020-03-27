@@ -23,6 +23,8 @@ var _Text = _interopRequireDefault(require("../../Components/Text/"));
 
 var _reactPreloadSkeleton = require("react-preload-skeleton");
 
+var _Preloader = _interopRequireDefault(require("../../Components/Preloader"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -77,7 +79,9 @@ var VHEducationSection = function VHEducationSection(props) {
     variant: "h2"
   })), /*#__PURE__*/_react.default.createElement(_Base.default, {
     className: "vh-education-section-card ".concat(props.className ? props.className : '')
-  }, props.preLoading ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.CardSkeleton, null), /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.CardSkeleton, {
+  }, props.controls.educationSection.loading ? /*#__PURE__*/_react.default.createElement(_Preloader.default, {
+    type: "circle"
+  }) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, props.preLoading ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.CardSkeleton, null), /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.CardSkeleton, {
     button: true
   })) : /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
@@ -122,7 +126,7 @@ var VHEducationSection = function VHEducationSection(props) {
       setOpenModal(true);
     },
     label: "Add Education"
-  })))));
+  }))))));
 };
 
 VHEducationSection.propTypes = {

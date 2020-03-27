@@ -8,9 +8,13 @@ const VHIconText = props => {
 
   return (
     <S.Wrapper
+      cursor={props.cursor}
       inline={props.inline}
       className={`${props.className ? props.className : ""}`}
       onClick={() => {
+        if (props.onClose) {
+          props.onClose()
+        }
         if (props.onEvent) {
           props.onEvent({
             type: "Click",
@@ -26,9 +30,11 @@ const VHIconText = props => {
         color={props.iconColor}
         sm
         title={props.text}
-        icon={props.icon} />
+        icon={props.icon}
+        data={props.data} />
       <VHText
-        color={props.iconColor}
+        data={props.data}
+        color={props.textColor}
         variant={props.variant}
         text={props.text}
         onEvent={props.onEvent}

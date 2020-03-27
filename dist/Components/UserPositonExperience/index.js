@@ -43,7 +43,7 @@ var VHUserPositonExperience = function VHUserPositonExperience(props) {
   }, /*#__PURE__*/_react.default.createElement(_index3.default, {
     onEvent: props.onEvent,
     items: props.description,
-    color: "gray-30",
+    color: "gray-90",
     className: "vh-user-position-experience-title-list ".concat(props.className ? props.className : '')
   }))));
 };

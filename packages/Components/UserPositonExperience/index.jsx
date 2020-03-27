@@ -23,7 +23,7 @@ const VHUserPositonExperience = props => {
                     <VHIconTitleList
                         onEvent={props.onEvent}
                         items={props.description}
-                        color="gray-30"
+                        color="gray-90"
                         className={`vh-user-position-experience-title-list ${props.className ? props.className : ''}`}
 
                     />

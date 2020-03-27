@@ -15,44 +15,38 @@ var candidates = [{
   position: "Backend Developer",
   country: "from Brazil",
   userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-  flag: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
+  flag: "canada"
 }, {
   name: "Mitchell Watson",
   position: "Backend Developer",
   country: "from Brazil",
   userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-  flag: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
+  flag: "usa"
 }, {
   name: "Mitchell Watson",
   position: "Backend Developer",
   country: "from Brazil",
   userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-  flag: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
+  flag: "ireland"
 }, {
   name: "Mitchell Watson",
   position: "Backend Developer",
   country: "from Brazil",
   userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-  flag: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
+  flag: "uk"
 }, {
   name: "Mitchell Watson",
   position: "Backend Developer",
   country: "from Brazil",
   userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-  flag: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
-}, {
-  name: "Mitchell Watson",
-  position: "Backend Developer",
-  country: "from Brazil",
-  userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-  flag: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
+  flag: "germany"
 }];
 (0, _react2.storiesOf)("Components|Cards/Hired", module).add("default", function () {
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f6f9",
-      width: "180px",
-      height: "180px",
+      width: "210px",
+      height: "205px",
       padding: "24px"
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
@@ -60,17 +54,20 @@ var candidates = [{
     position: "Backend Developer",
     country: "from Brazil",
     userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-    flag: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg"
+    flag: "canada"
   }));
 }).add("multiply", function () {
   return /*#__PURE__*/_react.default.createElement(_index.Row, {
-    row: true
+    row: true,
+    responsive: true,
+    alignItemsCenter: true
   }, candidates.map(function (candidate) {
     return /*#__PURE__*/_react.default.createElement(_index.Row, {
+      marginBottom5: true,
       style: {
         backgroundColor: "#f2f6f9",
-        width: "180px",
-        height: "180px",
+        width: "210px",
+        height: "205px",
         padding: "24px",
         marginRight: "10px"
       }

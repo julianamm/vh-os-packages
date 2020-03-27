@@ -209,7 +209,7 @@ const VHSecondaryList = props => {
                         descriptionColor="primary"
                         leftText=""
                         onEvent={props.onEvent}
-                        order={2}
+                        order={4}
                     />
                 </Row>
             </S.Wrapper>

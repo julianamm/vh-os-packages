@@ -30,13 +30,16 @@ var VHPremiumHiredSection = function VHPremiumHiredSection(props) {
     text: props.sectionTitle
   })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     row: true,
-    marginBottom: 30
+    alignItemsCenter: true,
+    marginBottom: 30,
+    responsive: true
   }, props.candidates.map(function (candidate) {
     return /*#__PURE__*/_react.default.createElement(_index.Row, {
+      marginBottom5: true,
       style: {
         backgroundColor: "#f2f6f9",
-        width: "180px",
-        height: "180px",
+        width: "210px",
+        height: "205px",
         padding: "24px",
         marginRight: "10px"
       }

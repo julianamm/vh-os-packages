@@ -218,7 +218,7 @@ var VHSecondaryList = function VHSecondaryList(props) {
     descriptionColor: "primary",
     leftText: "",
     onEvent: props.onEvent,
-    order: 2
+    order: 4
   }))));
 };
 

@@ -23,6 +23,8 @@ var _ModalExperience = _interopRequireDefault(require("../../Components/ModalExp
 
 var _reactPreloadSkeleton = require("react-preload-skeleton");
 
+var _Preloader = _interopRequireDefault(require("../../Components/Preloader"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -79,7 +81,9 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     variant: "h2"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Base.default, {
     className: "vh-skills-section-card ".concat(props.className ? props.className : '')
-  }, props.preLoading ? /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.PostDescriptionSkeleton, null) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, experience.map(function (userPosition) {
+  }, props.controls.experienceSection.loading ? /*#__PURE__*/_react.default.createElement(_Preloader.default, {
+    type: "circle"
+  }) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, props.preLoading ? /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.PostDescriptionSkeleton, null) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, experience.map(function (userPosition) {
     return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       marginBottom: 10
     }, /*#__PURE__*/_react.default.createElement(_UserCompanyPositonExperience.default, {
@@ -122,7 +126,7 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     onEvent: props.onEvent,
     data: "RequestProfileReview",
     label: "Request Profile Review"
-  })))))));
+  }))))))));
 };
 
 VHUserCompanyExperienceSection.propTypes = {

@@ -158,7 +158,7 @@ var VHModalExperience = function VHModalExperience(props) {
         onEvent: props.onEvent,
         items: props.positions,
         descriptionColor: "red-light"
-      }), experience.positionId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), index === item.workExperiences.length - 1 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      }), experience.positionId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), index === 0 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
         marginBottom5: true
       }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
         title: 'I am currently working in this role',

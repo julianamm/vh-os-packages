@@ -110,6 +110,24 @@ var VHSkillsSection = function VHSkillsSection(props) {
     title: "I am open to working in a different role",
     value: "123",
     variant: "platform1"
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom3: true,
+    responsive: true
+  }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
+    checked: props.leadershipExperience,
+    className: "",
+    color: props.controls.leadershipExperience.loading ? "gray-40" : props.controls.leadershipExperience.error ? "red" : 'gray-100',
+    data: {
+      checked: props.leadershipExperience,
+      id: 'leadershipExperience',
+      label: 'yes',
+      value: '123'
+    },
+    disabled: props.controls.leadershipExperience.loading,
+    onEvent: props.onEvent,
+    title: "I have leadership experience",
+    value: "123",
+    variant: "platform1"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.preLoading,
     caption: "I would like to work as...",
@@ -139,6 +157,7 @@ var VHSkillsSection = function VHSkillsSection(props) {
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 15
   }, /*#__PURE__*/_react.default.createElement(_List.default, {
+    controls: props.controls,
     onEvent: props.onEvent,
     secondList: props.yearsOfExperienceList,
     list: props.skillList,
