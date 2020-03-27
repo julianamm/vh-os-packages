@@ -18,6 +18,10 @@ const VHInputIcon = props => {
           <VHIcon
             className="vh-icon-with-input-icon"
             icon={props.icon}
+            lg={props.lg}
+            sm={props.sm}
+            md={props.md}
+            xs={props.xs}
           />
         )
       }

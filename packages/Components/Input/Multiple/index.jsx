@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import VHInput from '../Simple'
+import VHInputIcon from '../Icon'
 
 const VHInputMultiple = props => {
   let it = []
@@ -21,7 +21,9 @@ const VHInputMultiple = props => {
             key={`VHInputMultiple-${index}`}
             style={{ margin: '9px 0' }}
           >
-            <VHInput
+            <VHInputIcon
+              icon='bullet'
+              sm
               value={item.Value}
               data={item}
               placeholder={props.placeholder}
@@ -58,7 +60,9 @@ const VHInputMultiple = props => {
             key={`VHInputMultiple-item-${index}`}
             style={{ margin: '9px 0' }}
           >
-            <VHInput
+            <VHInputIcon
+              icon='bullet'
+              sm
               placeholder={props.placeholder}
               value=''
               autoFocus
