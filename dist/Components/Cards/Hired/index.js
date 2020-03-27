@@ -28,7 +28,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHCardHired = function VHCardHired(props) {
-<<<<<<< HEAD
   return /*#__PURE__*/_react.default.createElement(_index.Row, {
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
@@ -39,33 +38,16 @@ var VHCardHired = function VHCardHired(props) {
     size: "xl",
     showCursor: true
   }), /*#__PURE__*/_react.default.createElement(S.InnerImg, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
-=======
-  return _react.default.createElement(_index.Row, {
-    responsive: true
-  }, _react.default.createElement(_index.Row, {
-    alignItemsCenter: true,
-    responsive: true
-  }, _react.default.createElement(S.OutterImg, null, _react.default.createElement(_index2.default, {
-    image: props.userPhoto,
-    size: "xl",
-    showCursor: true
-  }), _react.default.createElement(S.InnerImg, null, _react.default.createElement(_index3.default, {
->>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
     title: props.name,
     icon: props.flag,
     round: true,
     sm: true
-<<<<<<< HEAD
   })))), /*#__PURE__*/_react.default.createElement(_index.Row, {
-=======
-  })))), _react.default.createElement(_index.Row, {
->>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
     marginTop: 10,
     responsive: true,
     style: {
       textAlign: "center"
     }
-<<<<<<< HEAD
   }, /*#__PURE__*/_react.default.createElement(_index4.default, {
     variant: "subtitle3",
     color: "gray-90",
@@ -75,17 +57,6 @@ var VHCardHired = function VHCardHired(props) {
     color: "gray-70",
     text: props.position
   }), /*#__PURE__*/_react.default.createElement(_index4.default, {
-=======
-  }, _react.default.createElement(_index4.default, {
-    variant: "subtitle3",
-    color: "gray-90",
-    text: props.name
-  }), _react.default.createElement(_index4.default, {
-    variant: "platform",
-    color: "gray-70",
-    text: props.position
-  }), _react.default.createElement(_index4.default, {
->>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
     variant: "platform",
     color: "gray-70",
     text: props.country

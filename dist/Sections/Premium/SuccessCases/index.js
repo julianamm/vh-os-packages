@@ -24,37 +24,37 @@ var _index6 = _interopRequireDefault(require("../../../Hyperlinks/LinkImage/inde
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHPremiumSuccessCasesSection = function VHPremiumSuccessCasesSection(props) {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_index.Container, null, _react.default.createElement(_index.Row, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true,
     marginBottom: 40
-  }, _react.default.createElement(_index2.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "h2",
     color: "gray-100",
     text: props.sectionTitle
-  })), _react.default.createElement(_index.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     row: true,
     responsive: true
-  }, _react.default.createElement(_index.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true
-  }, _react.default.createElement(_index.Row, null, _react.default.createElement(_index3.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
     title: props.title,
     highlight: props.highlight
-  })), _react.default.createElement(_index.Row, null, _react.default.createElement(_index4.default, {
+  })), /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index4.default, {
     image: props.imgBackgroundCards,
     cardLeftTitle: props.cardLeftTitle,
     cardLeftDescription: props.cardLeftDescription,
     cardRightTitle: props.cardRightTitle,
     cardRightDescription: props.cardRightDescription
-  }))), _react.default.createElement(_index.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true
-  }, _react.default.createElement(_index.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     marginBottom: 8,
     marginTop: 50
-  }, _react.default.createElement(_index5.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index5.default, {
     image: props.imgVideo,
     icon: props.icon,
     text: props.videoDescription
-  })), _react.default.createElement(_index.Row, null, _react.default.createElement(_index6.default, {
+  })), /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index6.default, {
     lgLabel: true,
     label: props.label,
     to: props.to,

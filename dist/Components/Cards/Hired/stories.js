@@ -42,14 +42,14 @@ var candidates = [{
   flag: "germany"
 }];
 (0, _react2.storiesOf)("Components|Cards/Hired", module).add("default", function () {
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f6f9",
       width: "210px",
       height: "205px",
       padding: "24px"
     }
-  }, _react.default.createElement(_.default, {
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
     name: "Mitchell Watson",
     position: "Backend Developer",
     country: "from Brazil",
@@ -57,20 +57,12 @@ var candidates = [{
     flag: "canada"
   }));
 }).add("multiply", function () {
-<<<<<<< HEAD
   return /*#__PURE__*/_react.default.createElement(_index.Row, {
-=======
-  return _react.default.createElement(_index.Row, {
->>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
     row: true,
     responsive: true,
     alignItemsCenter: true
   }, candidates.map(function (candidate) {
-<<<<<<< HEAD
     return /*#__PURE__*/_react.default.createElement(_index.Row, {
-=======
-    return _react.default.createElement(_index.Row, {
->>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
       marginBottom5: true,
       style: {
         backgroundColor: "#f2f6f9",
@@ -79,7 +71,7 @@ var candidates = [{
         padding: "24px",
         marginRight: "10px"
       }
-    }, _react.default.createElement(_.default, {
+    }, /*#__PURE__*/_react.default.createElement(_.default, {
       name: candidate.name,
       position: candidate.position,
       country: candidate.country,
