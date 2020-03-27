@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.A = exports.ImgWrapper = void 0;
+exports.A = exports.IconWrapper = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -12,7 +12,7 @@ var _Colors = _interopRequireDefault(require("../../Colors"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  font-family: Roboto;\n  font-size: 14px;\n  line-height: 18px;\n  text-decoration: none;\n  cursor: ", ";\n  color: ", ";\n  :visited {\n    color: ", ";\n  }\n  :hover {\n    color: ", ";\n    text-decoration: underline;\n  }\n  :active {\n    color: ", ";\n    text-decoration: underline;\n  }\n  ", "\n  ", "\n  ", "\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  font-family: Roboto;\n  font-size: 14px;\n  line-height: 18px;\n  text-decoration: none;\n  width: 100%;\n  align-items: center;\n  cursor: ", ";\n  color: ", ";\n  :visited {\n    color: ", ";\n  }\n  :hover {\n    color: ", ";\n    text-decoration: underline;\n  }\n  :active {\n    color: ", ";\n    text-decoration: underline;\n  }\n  ", "\n  ", "\n  ", "\n  ", "\n    \n  ", "\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -33,9 +33,9 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var ImgWrapper = _styledComponents.default.span(_templateObject());
+var IconWrapper = _styledComponents.default.span(_templateObject());
 
-exports.ImgWrapper = ImgWrapper;
+exports.IconWrapper = IconWrapper;
 
 var A = _styledComponents.default.a(_templateObject2(), function (props) {
   return props.cursor ? props.cursor : 'pointer';
@@ -53,6 +53,9 @@ var A = _styledComponents.default.a(_templateObject2(), function (props) {
 }, function (_ref4) {
   var noUnderscore = _ref4.noUnderscore;
   return noUnderscore && "\n    text-decoration: none !important;\n  ";
+}, function (_ref5) {
+  var reverse = _ref5.reverse;
+  return reverse && "\n      justify-content: flex-end;\n";
 });
 
 exports.A = A;

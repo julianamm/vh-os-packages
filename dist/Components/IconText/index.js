@@ -24,8 +24,12 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHIconText = function VHIconText(props) {
+<<<<<<< HEAD
   return /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     cursor: props.cursor,
+=======
+  return _react.default.createElement(S.Wrapper, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
     inline: props.inline,
     className: "".concat(props.className ? props.className : ""),
     onClick: function onClick() {
@@ -43,15 +47,21 @@ var VHIconText = function VHIconText(props) {
         });
       }
     }
-  }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(_Icon.default, {
     color: props.iconColor,
     sm: true,
     title: props.text,
+<<<<<<< HEAD
     icon: props.icon,
     data: props.data
   }), /*#__PURE__*/_react.default.createElement(_Text.default, {
     data: props.data,
     color: props.textColor,
+=======
+    icon: props.icon
+  }), _react.default.createElement(_Text.default, {
+    color: props.iconColor,
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
     variant: props.variant,
     text: props.text,
     onEvent: props.onEvent

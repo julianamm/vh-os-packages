@@ -13,7 +13,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _index = require("../../../Grid/index");
 
-var _index2 = _interopRequireDefault(require("../../Img/index"));
+var _index2 = _interopRequireDefault(require("../../Icon/index"));
 
 var _index3 = _interopRequireDefault(require("../../Text/index"));
 
@@ -28,35 +28,35 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHCardFeatures = function VHCardFeatures(props) {
-  return /*#__PURE__*/_react.default.createElement(_index.Container, {
+  return _react.default.createElement(_index.Container, {
     alignItemsCenter: true
-  }, /*#__PURE__*/_react.default.createElement(_index4.default, {
+  }, _react.default.createElement(_index4.default, {
     noHover: props.noHover
-  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
+  }, _react.default.createElement(_index.Row, {
     row: true,
     alignItemsCenter: true,
     height: 300
-  }, /*#__PURE__*/_react.default.createElement(S.Group, null, props.features.map(function (feature) {
-    return /*#__PURE__*/_react.default.createElement(S.Item, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
+  }, _react.default.createElement(S.Group, null, props.features.map(function (feature) {
+    return _react.default.createElement(S.Item, null, _react.default.createElement(_index.Row, {
       width: 300
-    }, /*#__PURE__*/_react.default.createElement(_index.Row, {
+    }, _react.default.createElement(_index.Row, {
       alignItemsCenter: true,
       marginBottom5: true
-    }, /*#__PURE__*/_react.default.createElement(_index2.default, {
-      source: feature.icon,
+    }, _react.default.createElement(_index2.default, {
+      icon: feature.icon,
       title: feature.title,
       md: true
-    })), /*#__PURE__*/_react.default.createElement(_index.Row, {
+    })), _react.default.createElement(_index.Row, {
       alignItemsCenter: true,
       marginBottom5: true
-    }, /*#__PURE__*/_react.default.createElement(S.TextWrapper, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
+    }, _react.default.createElement(S.TextWrapper, null, _react.default.createElement(_index3.default, {
       variant: "h4",
       color: "gray-90",
       text: feature.title
-    }))), /*#__PURE__*/_react.default.createElement(_index.Row, {
+    }))), _react.default.createElement(_index.Row, {
       alignItemsCenter: true,
       marginBottom5: true
-    }, /*#__PURE__*/_react.default.createElement(S.TextWrapper, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
+    }, _react.default.createElement(S.TextWrapper, null, _react.default.createElement(_index3.default, {
       variant: "bodyweb",
       color: "gray-60",
       text: feature.description

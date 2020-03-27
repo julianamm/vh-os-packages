@@ -7,21 +7,19 @@ storiesOf('Hyperlinks|Link Image', module)
     <div style={{ padding: "24px" }}>
       <VHLinkImage 
               to={"#"}
-              xsImg
+              xsIcon
               xsLabel
-              label="Link image xs"
-              title="Zoombi"
-              source="http://via.placeholder.com/200x200"/>
+              label="Link icon xs"
+              icon= "canada" />
     </div>
   ))
   .add('sm', () => (
     <div style={{ padding: "24px" }}>
       <VHLinkImage               to={"#"}
               smLabel
-              label="Link image sm"
-              smImg
-              title="Zoombi"
-              source="http://via.placeholder.com/200x200"/>
+              label="Link icon sm"
+              icon= "canada"
+              smIcon />
     </div>
   ))
 
@@ -29,11 +27,11 @@ storiesOf('Hyperlinks|Link Image', module)
     <div style={{ padding: "24px" }}>
       <VHLinkImage               
               to={"#"}
+              
               lgLabel
-              label="Link image lg"
-              lgImg
-              title="Zoombi"
-              source="http://via.placeholder.com/200x200"/>
+              label="Link icon lg"
+              icon= "canada"
+              lgIcon />
     </div>
   ))
 
@@ -42,8 +40,27 @@ storiesOf('Hyperlinks|Link Image', module)
       <VHLinkImage               
               to={"#"}
               noUnderscore
-              label="Link image"
-              title="Zoombi"
-              source="http://via.placeholder.com/200x200" />
+              label="Link icon noUnderscore"
+              icon= "canada" />
+    </div>
+  ))
+
+  .add('round', () => (
+    <div style={{ padding: "24px" }}>
+      <VHLinkImage               
+              to={"#"}
+              round
+              label="Link icon round"
+              icon= "canada" />
+    </div>
+  ))
+
+  .add('reverse', () => (
+    <div style={{ padding: "24px" }}>
+      <VHLinkImage               
+              to={"#"}
+              reverse
+              label="Link icon reverse"
+              icon= "canada" />
     </div>
   ));

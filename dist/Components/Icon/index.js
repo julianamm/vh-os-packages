@@ -41,6 +41,12 @@ var _index15 = _interopRequireDefault(require("../../assets/svg/flags/flag_uk.sv
 
 var _index16 = _interopRequireDefault(require("../../assets/svg/icons/icon_camera.svg/index.js"));
 
+var _index16 = _interopRequireDefault(require("../../assets/svg/icons/icon_interview.svg/index.js"));
+
+var _index17 = _interopRequireDefault(require("../../assets/svg/icons/icon_profile.svg/index.js"));
+
+var _index18 = _interopRequireDefault(require("../../assets/svg/icons/icon_community.svg/index.js"));
+
 var _Colors = _interopRequireDefault(require("../../Colors"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -107,7 +113,11 @@ var VHIcon = function VHIcon(props) {
 
   switch (props.icon) {
     case 'webSite':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index9.default, {
+=======
+      return _react.default.createElement(_index8.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -115,7 +125,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case "bullet":
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index2.default, {
+=======
+      return _react.default.createElement(_index.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -123,7 +137,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case "sort":
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index5.default, {
+=======
+      return _react.default.createElement(_index4.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -131,7 +149,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case "filter":
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index3.default, {
+=======
+      return _react.default.createElement(_index2.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -139,7 +161,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case "search":
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index6.default, {
+=======
+      return _react.default.createElement(_index5.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -147,7 +173,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case "arrow-left":
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index4.default, {
+=======
+      return _react.default.createElement(_index3.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -155,7 +185,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'github':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index7.default, {
+=======
+      return _react.default.createElement(_index6.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -163,7 +197,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'world':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index9.default, {
+=======
+      return _react.default.createElement(_index8.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -171,7 +209,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'linkedin':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index8.default, {
+=======
+      return _react.default.createElement(_index7.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -179,7 +221,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'search':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index6.default, {
+=======
+      return _react.default.createElement(_index5.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -187,7 +233,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'usa':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index10.default, {
+=======
+      return _react.default.createElement(_index9.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -195,7 +245,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'canada':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index11.default, {
+=======
+      return _react.default.createElement(_index10.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -203,7 +257,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'ireland':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index13.default, {
+=======
+      return _react.default.createElement(_index12.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -211,7 +269,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'uk':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index15.default, {
+=======
+      return _react.default.createElement(_index14.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -219,7 +281,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'germany':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index12.default, {
+=======
+      return _react.default.createElement(_index11.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -227,7 +293,11 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'netherlands':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index14.default, {
+=======
+      return _react.default.createElement(_index13.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -235,15 +305,40 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'camera':
+<<<<<<< HEAD
       return /*#__PURE__*/_react.default.createElement(_index16.default, {
+=======
+      return _react.default.createElement(_index15.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
         className: "vh-icon ".concat(props.className ? props.className : '')
       });
 
+<<<<<<< HEAD
     case 'delete':
       return /*#__PURE__*/_react.default.createElement(_index.default, {
+=======
+    case 'interview':
+      return _react.default.createElement(_index16.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'community':
+      return _react.default.createElement(_index18.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'profile':
+      return _react.default.createElement(_index17.default, {
+>>>>>>> b9178afb2e4be2f635049ecc30cd26026e626ba6
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -251,7 +346,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     default:
-      return /*#__PURE__*/_react.default.createElement("span", null);
+      return _react.default.createElement("span", null);
   }
 };
 
