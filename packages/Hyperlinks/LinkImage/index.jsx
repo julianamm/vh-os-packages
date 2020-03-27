@@ -35,8 +35,6 @@ const VHLinkImage = props => {
               md={props.mdIcon}
               lg={props.lgIcon}
               color={props.colorIcon}
-              // title={props.title}
-              // source={props.source}
             />
           </S.IconWrapper>
         </S.A>
@@ -69,8 +67,6 @@ VHLinkImage.propTypes = {
   mdIcon: PropTypes.bool,      
   lgIcon: PropTypes.bool,            
   colorIcon: PropTypes.string,         
-  // title: PropTypes.string,
-  // source: PropTypes.string,
 }
 
 export default VHLinkImage;

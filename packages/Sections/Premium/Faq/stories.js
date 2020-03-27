@@ -2,13 +2,11 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import VHPremiumIntroSection from ".";
 
-import imageTest from "../../../assets/svg/background/img_meeting.svg/index.js";
-
 const items = {
     sectionTitle: "Frequently Asking Questions",
     title: "Have questions about VanHack Premium?",
     description: "Give us your email and we’ll get in touch.",
-    image: require("../../../assets/svg/background/img_meeting.svg"),
+    imgSvg: "meeting",
 }
 
 const faqs = [
@@ -33,7 +31,7 @@ storiesOf("Sections|Premium/Faq", module)
                 sectionTitle={items.sectionTitle}
                 title={items.title}
                 description={items.description}
-                image={imageTest}
+                imgSvg={items.imgSvg}
                 faqs={faqs}
             />
         </div>

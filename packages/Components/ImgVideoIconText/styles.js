@@ -14,6 +14,7 @@ export const ImgItem = styled.div`
     background-image: url(${props => props.image && props.image});
     background-repeat: no-repeat;
     background-position: center;
+    z-index: -1;
 ` 
 
 export const ImgOverlay = styled.div`
@@ -28,10 +29,11 @@ export const ImgOverlay = styled.div`
     transition: all ease .5s;
     filter: blur(8px);
     -webkit-filter: blur(8px);
+    z-index: 0;
 ` 
 
 export const ItemsWrapper = styled.div`
     position: absolute;
     bottom: 30px;
-    z-index: 99;
+    z-index: 3;
 ` 

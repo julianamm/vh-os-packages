@@ -2,8 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import VHPremiumPricingSection from ".";
 
-import iconMedal from "../../../assets/svg/icons/icon_medal.svg/index.js";
-
 const cardItems = [
     {
         show: false,
@@ -50,7 +48,7 @@ storiesOf("Sections|Premium/Pricing", module)
         <div style={{ backgroundColor: "rgba(203, 248, 251, 0.44)", height: "100vh", padding: "24px" }}>
             <VHPremiumPricingSection
                 sectionTitle="Pricing"
-                source={iconMedal}
+                icon="medal"
                 title="30 Days Money Back Guarantee"
                 description="If you're not getting incredible value and feeling more prepared than ever to get a job in Canada or Europe in the first 30 days, just talk to us and we'll refund 100% of your purchase, no questions asked."
                 cardItems={cardItems}

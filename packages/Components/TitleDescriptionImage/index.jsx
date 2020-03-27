@@ -1,24 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row } from '../../Grid/index';
-import VHTitleDescription from "../TitleDescription/index";
-import * as S from './styles';
+import VHText from "../Text/index";
+import VHImgSvg from "../ImgSvg";
 
 const VHTitleDescriptionImage = props => {
     return (
-        <Row row>
-            <Row>
-                <VHTitleDescription 
-                    titleColor={props.titleColor}
-                    descriptionColor={props.descriptionColor}
-                    titleVariant={props.titleVariant}
-                    descriptionVariant={props.descriptionVariant}
-                    title={props.title}
-                    description={props.description}
+        <Row row alignItemsCenter responsive>
+            <Row style={{ justifyContent: "center", marginRight: "30px"}}>
+                <Row marginBottom5 responsive>
+                    <VHText 
+                        variant={"h4"}
+                        color={"gray-100"}
+                        text={props.title}
+                    />
+                </Row>
+                <VHText 
+                    variant={"h6"}
+                    color={"black-70"}
+                    text={props.description}
                 />
             </Row>
-            <Row>
-                <S.ImgWrapper image={props.image}/>
+            <Row alignItemsCenter>
+                <VHImgSvg imgSvg={props.imgSvg} />
             </Row>
         </Row>
     )
@@ -32,13 +36,9 @@ VHTitleDescriptionImage.prototypes = {
     className: PropTypes.string,
     onEvent: PropTypes.func,
     data: PropTypes.object,
-    titleColor: PropTypes.string,
-    descriptionColor: PropTypes.string,
-    titleVariant: PropTypes.string,
-    descriptionVariant: PropTypes.string,
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     description: PropTypes.string,
-    image: PropTypes.string,
+    imgSvg: PropTypes.string.isRequired,
 }
 
 export default VHTitleDescriptionImage;
