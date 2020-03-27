@@ -17,7 +17,7 @@ var _index3 = _interopRequireDefault(require("../../../Components/Cards/Pricing/
 
 var _index4 = _interopRequireDefault(require("../../../Components/TitleDescription/index"));
 
-var _index5 = _interopRequireDefault(require("../../../Components/Img/index"));
+var _index5 = _interopRequireDefault(require("../../../Components/Icon/index"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -62,8 +62,7 @@ var VHPremiumPricingSection = function VHPremiumPricingSection(props) {
     marginBottom5: true,
     alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index5.default, {
-    title: props.title,
-    source: props.source,
+    icon: props.icon,
     md: true
   })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true
@@ -87,7 +86,7 @@ VHPremiumPricingSection.propTypes = {
   data: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
   className: _propTypes.default.string,
   sectionTitle: _propTypes.default.string,
-  source: _propTypes.default.string,
+  icon: _propTypes.default.string,
   title: _propTypes.default.string,
   description: _propTypes.default.string,
   show: _propTypes.default.bool,

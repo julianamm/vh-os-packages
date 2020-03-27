@@ -30,13 +30,11 @@ var VHTextsImageTestimonial = function VHTextsImageTestimonial(props) {
     title: props.title,
     highlight: props.highlight,
     description: props.description,
-    image: props.image,
+    imgSvg: props.imgSvg,
     reverse: props.reverseTop
   }), /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     reverse: props.reverseBottom
-  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
-    width: "50%"
-  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
     image: props.avatar,
     sizeImg: props.sizeAvatar,
     color: props.color,
@@ -44,9 +42,7 @@ var VHTextsImageTestimonial = function VHTextsImageTestimonial(props) {
     xsTestimonial: props.xsTestimonial,
     smTestimonial: props.smTestimonial,
     lgTestimonial: props.lgTestimonial
-  })), /*#__PURE__*/_react.default.createElement(_index.Row, {
-    width: "50%"
-  })))));
+  })), /*#__PURE__*/_react.default.createElement(_index.Row, null)))));
 };
 
 VHTextsImageTestimonial.defaultProps = {
@@ -62,7 +58,7 @@ VHTextsImageTestimonial.prototypes = {
   title: _propTypes.default.string.isRequired,
   highlight: _propTypes.default.string.isRequired,
   description: _propTypes.default.string.isRequired,
-  image: _propTypes.default.string.isRequired,
+  imgSvg: _propTypes.default.string.isRequired,
   reverseTop: _propTypes.default.bool,
   avatar: _propTypes.default.string.isRequired,
   sizeAvatar: _propTypes.default.string,

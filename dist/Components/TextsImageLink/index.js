@@ -30,7 +30,7 @@ var VHTextsImageLink = function VHTextsImageLink(props) {
     title: props.title,
     highlight: props.highlight,
     description: props.description,
-    image: props.image,
+    imgSvg: props.imgSvg,
     reverse: props.reverseTop
   }), /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     reverse: props.reverseBottom
@@ -43,11 +43,11 @@ var VHTextsImageLink = function VHTextsImageLink(props) {
     label: props.label,
     color: props.color,
     to: props.to,
-    source: props.source,
-    xsImg: props.xsImg,
-    smImg: props.smImg,
-    mdImg: props.mdImg,
-    lgImg: props.lgImg
+    icon: props.icon,
+    xsIcon: props.xsIcon,
+    smIcon: props.smIcon,
+    mdIcon: props.mdIcon,
+    lgIcon: props.lgImg
   })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "50%"
   })))));
@@ -58,10 +58,10 @@ VHTextsImageLink.defaultProps = {
   xsLabel: false,
   smLabel: true,
   lgLabel: false,
-  xsImg: false,
-  smImg: true,
-  mdImg: false,
-  lgImg: false,
+  xsIcon: false,
+  smIcon: true,
+  mdIcon: false,
+  lgIcon: false,
   reverseBottom: false
 };
 VHTextsImageLink.prototypes = {
@@ -69,18 +69,18 @@ VHTextsImageLink.prototypes = {
   title: _propTypes.default.string.isRequired,
   highlight: _propTypes.default.string.isRequired,
   description: _propTypes.default.string.isRequired,
-  image: _propTypes.default.string.isRequired,
+  imgSvg: _propTypes.default.string.isRequired,
   reverseTop: _propTypes.default.bool,
   smLabel: _propTypes.default.bool,
   xsLabel: _propTypes.default.bool,
   lgLabel: _propTypes.default.bool,
   label: _propTypes.default.string.isRequired,
   color: _propTypes.default.string,
-  source: _propTypes.default.string.isRequired,
-  xsImg: _propTypes.default.bool,
-  smImg: _propTypes.default.bool,
-  mdImg: _propTypes.default.bool,
-  lgImg: _propTypes.default.bool,
+  icon: _propTypes.default.string.isRequired,
+  xsIcon: _propTypes.default.bool,
+  smIcon: _propTypes.default.bool,
+  mdIcon: _propTypes.default.bool,
+  lgIcon: _propTypes.default.bool,
   reverseBottom: _propTypes.default.bool
 };
 var _default = VHTextsImageLink;

@@ -30,7 +30,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 90%;\n    height: 90%;\n    background-size: contain;\n    background-image: url(", ");\n    background-repeat: no-repeat;\n    background-position: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    justify-content: ", ";\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -42,7 +42,7 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var ImgWrapper = _styledComponents.default.div(_templateObject(), function (props) {
-  return props.image && props.image;
+  return props.justifyContentRight ? 'flex-end' : 'flex-start';
 });
 
 exports.ImgWrapper = ImgWrapper;

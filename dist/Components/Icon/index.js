@@ -47,6 +47,12 @@ var _index18 = _interopRequireDefault(require("../../assets/svg/icons/icon_profi
 
 var _index19 = _interopRequireDefault(require("../../assets/svg/icons/icon_community.svg/index.js"));
 
+var _index20 = _interopRequireDefault(require("../../assets/svg/icons/icon_arrow_right.svg/index.js"));
+
+var _index21 = _interopRequireDefault(require("../../assets/svg/icons/icon_medal.svg/index.js"));
+
+var _index22 = _interopRequireDefault(require("../../assets/svg/icons/icon_play.svg/index.js"));
+
 var _Colors = _interopRequireDefault(require("../../Colors"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -266,6 +272,30 @@ var VHIcon = function VHIcon(props) {
 
     case 'profile':
       return /*#__PURE__*/_react.default.createElement(_index18.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'arrow-right':
+      return /*#__PURE__*/_react.default.createElement(_index20.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'medal':
+      return /*#__PURE__*/_react.default.createElement(_index21.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'play':
+      return /*#__PURE__*/_react.default.createElement(_index22.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),

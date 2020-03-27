@@ -34,20 +34,17 @@ var VHPremiumFaqSection = function VHPremiumFaqSection(props) {
     width: "50%",
     alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
-    width: "80%"
+    width: "80%",
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     marginBottom: 12,
     style: {
       marginLeft: "30px"
     }
   }, /*#__PURE__*/_react.default.createElement(_index3.default, {
-    titleColor: "gray-100",
-    descriptionColor: "black-70",
-    titleVariant: "h4",
-    descriptionVariant: "h6",
     title: props.title,
     description: props.description,
-    image: props.image
+    imgSvg: props.imgSvg
   })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     style: {
       backgroundColor: "#ffffff"
@@ -84,6 +81,9 @@ VHPremiumFaqSection.propTypes = {
   data: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
   className: _propTypes.default.string,
   sectionTitle: _propTypes.default.string,
+  title: _propTypes.default.string,
+  description: _propTypes.default.string,
+  imgSvg: _propTypes.default.string,
   question: _propTypes.default.string,
   answer: _propTypes.default.string
 };

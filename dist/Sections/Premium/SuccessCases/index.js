@@ -36,11 +36,13 @@ var VHPremiumSuccessCasesSection = function VHPremiumSuccessCasesSection(props) 
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true
-  }, /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
+    marginBottom: 30
+  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
     title: props.title,
     highlight: props.highlight
   })), /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index4.default, {
-    image: props.imgBackgroundCards,
+    imgSvg: props.imgBackgroundCards,
     cardLeftTitle: props.cardLeftTitle,
     cardLeftDescription: props.cardLeftDescription,
     cardRightTitle: props.cardRightTitle,
@@ -52,15 +54,15 @@ var VHPremiumSuccessCasesSection = function VHPremiumSuccessCasesSection(props) 
     marginTop: 50
   }, /*#__PURE__*/_react.default.createElement(_index5.default, {
     image: props.imgVideo,
-    icon: props.icon,
+    icon: props.iconVideo,
     text: props.videoDescription
   })), /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index6.default, {
     lgLabel: true,
     label: props.label,
     to: props.to,
-    source: props.linkIcon // title={props.label}
-    ,
-    smImg: true
+    icon: props.iconLink,
+    smIcon: true,
+    reverse: true
   }))))));
 };
 
@@ -77,11 +79,11 @@ VHPremiumSuccessCasesSection.propTypes = {
   cardRightTitle: _propTypes.default.string,
   cardRightDescription: _propTypes.default.string,
   imgVideo: _propTypes.default.string,
-  icon: _propTypes.default.string,
+  iconVideo: _propTypes.default.string,
   videoDescription: _propTypes.default.string,
   label: _propTypes.default.string,
   to: _propTypes.default.string,
-  linkIcon: _propTypes.default.string
+  iconLink: _propTypes.default.string
 };
 var _default = VHPremiumSuccessCasesSection;
 exports.default = _default;
