@@ -5,7 +5,6 @@ import VHText from "../../../Components/Text/index";
 import VHTitleDescriptionImage from "../../../Components/TitleDescriptionImage/index";
 import VHInputSimpleWithButton from  "../../../Components/Input/SimpleWithButton/index";
 
-
 const VHPremiumFaqSection = props => {
   return (
     <React.Fragment>
@@ -18,16 +17,12 @@ const VHPremiumFaqSection = props => {
         </Row>
         <Row row responsive>
             <Row width={"50%"} alignItemsCenter>
-                <Row width={"80%"}>
+                <Row width={"80%"} alignItemsCenter>
                     <Row marginBottom={12} style={{ marginLeft: "30px" }}>
                         <VHTitleDescriptionImage
-                            titleColor={"gray-100"}
-                            descriptionColor={"black-70"}
-                            titleVariant={"h4"}
-                            descriptionVariant={"h6"}
                             title={props.title}
                             description={props.description}
-                            image={props.image}
+                            imgSvg={props.imgSvg}
                         />
                     </Row>
                     <Row style={{ backgroundColor: "#ffffff"}}>
@@ -68,7 +63,9 @@ VHPremiumFaqSection.propTypes = {
   data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   className: PropTypes.string,
   sectionTitle: PropTypes.string,
-
+  title: PropTypes.string,
+  description: PropTypes.string,
+  imgSvg: PropTypes.string,
   question: PropTypes.string,
   answer: PropTypes.string,
 }

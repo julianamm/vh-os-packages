@@ -2,7 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import VHImgCardsOverlay from "./index";
 
-import imgBubble from "../../../assets/images/img_bubble.svg";
 const items = {
     cardLeft: 
         {
@@ -18,13 +17,13 @@ const items = {
 
 storiesOf("Components|Img Cards Overlay", module)
     .add("Default", () => (
-        <div style={{ backgroundColor: "#fff", width: '50%', padding: "24px" }}>
+        <div style={{ backgroundColor: "#fff", padding: "24px" }}>
                 <VHImgCardsOverlay
                     cardLeftTitle={items.cardLeft.title}
                     cardLeftDescription={items.cardLeft.description}
                     cardRightTitle={items.cardRight.title}
                     cardRightDescription={items.cardRight.description}
-                    image={imgBubble}
+                    imgSvg="bubble"
                 />
         </div>
     ));

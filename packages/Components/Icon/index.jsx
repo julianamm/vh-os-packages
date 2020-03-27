@@ -18,6 +18,9 @@ import CameraIcon from '../../assets/svg/icons/icon_camera.svg/index.js';
 import Interview from '../../assets/svg/icons/icon_interview.svg/index.js';
 import Profile from '../../assets/svg/icons/icon_profile.svg/index.js';
 import Community from '../../assets/svg/icons/icon_community.svg/index.js';
+import ArrowRightIcon from '../../assets/svg/icons/icon_arrow_right.svg/index.js';
+import MedalIcon from '../../assets/svg/icons/icon_medal.svg/index.js';
+import PlayIcon from '../../assets/svg/icons/icon_play.svg/index.js';
 
 import Color from "../../Colors";
 
@@ -117,6 +120,12 @@ const VHIcon = props => {
       return <Community fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'profile':
       return <Profile fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'arrow-right':
+      return <ArrowRightIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'medal':
+      return <MedalIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'play':
+      return <PlayIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     default:
       return <span />
 

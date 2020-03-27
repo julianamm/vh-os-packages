@@ -13,7 +13,7 @@ const VHTextsImageLink = props => {
                         title={props.title}
                         highlight={props.highlight}
                         description={props.description}
-                        image={props.image}
+                        imgSvg={props.imgSvg}
                         reverse={props.reverseTop}
                     />
                     <Container>
@@ -26,11 +26,11 @@ const VHTextsImageLink = props => {
                                     label={props.label}
                                     color={props.color}
                                     to={props.to}
-                                    source={props.source}
-                                    xsImg={props.xsImg}
-                                    smImg={props.smImg}
-                                    mdImg={props.mdImg}
-                                    lgImg={props.lgImg}
+                                    icon={props.icon}
+                                    xsIcon={props.xsIcon}
+                                    smIcon={props.smIcon}
+                                    mdIcon={props.mdIcon}
+                                    lgIcon={props.lgImg}
                                 />
                             </Row>
                             <Row width={"50%"}></Row>
@@ -46,10 +46,10 @@ VHTextsImageLink.defaultProps = {
     xsLabel: false,
     smLabel: true,
     lgLabel: false,
-    xsImg: false,
-    smImg: true,
-    mdImg: false,
-    lgImg: false,
+    xsIcon: false,
+    smIcon: true,
+    mdIcon: false,
+    lgIcon: false,
     reverseBottom: false,
 }
 
@@ -58,18 +58,18 @@ VHTextsImageLink.prototypes = {
     title: PropTypes.string.isRequired,
     highlight: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    imgSvg: PropTypes.string.isRequired,
     reverseTop: PropTypes.bool,
     smLabel: PropTypes.bool,
     xsLabel: PropTypes.bool,
     lgLabel: PropTypes.bool,
     label: PropTypes.string.isRequired,
     color: PropTypes.string,
-    source: PropTypes.string.isRequired,
-    xsImg: PropTypes.bool,
-    smImg: PropTypes.bool,
-    mdImg: PropTypes.bool,
-    lgImg: PropTypes.bool,
+    icon: PropTypes.string.isRequired,
+    xsIcon: PropTypes.bool,
+    smIcon: PropTypes.bool,
+    mdIcon: PropTypes.bool,
+    lgIcon: PropTypes.bool,
     reverseBottom: PropTypes.bool,
 }
 

@@ -4,7 +4,7 @@ import { Row } from '../../../Grid/index';
 import VHText from "../../../Components/Text/index"; 
 import VHCardPrincing from "../../../Components/Cards/Pricing/index"; 
 import VHTitleDescription from "../../../Components/TitleDescription/index"; 
-import VHImg from "../../../Components/Img/index"; 
+import VHIcon from "../../../Components/Icon/index"; 
 
 const VHPremiumPricingSection = props => {
   return (
@@ -40,9 +40,8 @@ const VHPremiumPricingSection = props => {
             ))}
         </Row>
         <Row marginBottom5 alignItemsCenter>
-            <VHImg 
-                title={props.title}
-                source={props.source}
+            <VHIcon 
+                icon={props.icon}
                 md
             />
         </Row>
@@ -67,10 +66,9 @@ VHPremiumPricingSection.propTypes = {
     data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     className: PropTypes.string,
     sectionTitle: PropTypes.string,
-    source: PropTypes.string,
+    icon: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
-
     show: PropTypes.bool,                         
     label: PropTypes.string,
     save: PropTypes.string,

@@ -20,7 +20,7 @@ const VHPremiumSuccessCasesSection = props => {
             </Row>
             <Row row responsive>
                 <Row alignItemsCenter>
-                    <Row>
+                    <Row marginBottom={30} >
                         <VHTextHighlightDescriptionImage 
                             title={props.title}
                             highlight={props.highlight}
@@ -28,7 +28,7 @@ const VHPremiumSuccessCasesSection = props => {
                     </Row>
                     <Row>
                         <VHImgCardsOverlay 
-                            image={props.imgBackgroundCards}
+                            imgSvg={props.imgBackgroundCards}
                             cardLeftTitle={props.cardLeftTitle}
                             cardLeftDescription={props.cardLeftDescription}
                             cardRightTitle={props.cardRightTitle}
@@ -40,7 +40,7 @@ const VHPremiumSuccessCasesSection = props => {
                     <Row marginBottom={8} marginTop={50}>
                         <VHImgVideoIconText 
                             image={props.imgVideo}
-                            icon={props.icon}
+                            icon={props.iconVideo}
                             text={props.videoDescription}
                         />
                     </Row>
@@ -49,9 +49,9 @@ const VHPremiumSuccessCasesSection = props => {
                             lgLabel
                             label={props.label}
                             to={props.to}
-                            source={props.linkIcon}
-                            // title={props.label}
-                            smImg
+                            icon={props.iconLink}
+                            smIcon
+                            reverse
                         />
                     </Row>
                 </Row>
@@ -74,11 +74,11 @@ VHPremiumSuccessCasesSection.propTypes = {
     cardRightTitle: PropTypes.string,
     cardRightDescription: PropTypes.string,
     imgVideo: PropTypes.string,
-    icon: PropTypes.string,
+    iconVideo: PropTypes.string,
     videoDescription: PropTypes.string,
     label: PropTypes.string,
     to: PropTypes.string,
-    linkIcon: PropTypes.string,
+    iconLink: PropTypes.string,
 }
 
 export default VHPremiumSuccessCasesSection;

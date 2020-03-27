@@ -13,12 +13,12 @@ const VHTextsImageTestimonial = props => {
                         title={props.title}
                         highlight={props.highlight}
                         description={props.description}
-                        image={props.image}
+                        imgSvg={props.imgSvg}
                         reverse={props.reverseTop}
                     />
                     <Container>
                         <S.Wrapper reverse={props.reverseBottom}>
-                            <Row width={"50%"}>
+                            <Row>
                                 <VHTestimonial 
                                     image={props.avatar}
                                     sizeImg={props.sizeAvatar}
@@ -29,7 +29,7 @@ const VHTextsImageTestimonial = props => {
                                     lgTestimonial={props.lgTestimonial}
                                 />
                             </Row>
-                            <Row width={"50%"}></Row>
+                            <Row></Row>
                         </S.Wrapper>
                     </Container>
                 </Row>
@@ -51,7 +51,7 @@ VHTextsImageTestimonial.prototypes = {
     title: PropTypes.string.isRequired,
     highlight: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    imgSvg: PropTypes.string.isRequired,
     reverseTop: PropTypes.bool,
     avatar: PropTypes.string.isRequired,
     sizeAvatar: PropTypes.string,
