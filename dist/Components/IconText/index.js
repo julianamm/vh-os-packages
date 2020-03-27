@@ -24,10 +24,15 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHIconText = function VHIconText(props) {
-  return _react.default.createElement(S.Wrapper, {
+  return /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+    cursor: props.cursor,
     inline: props.inline,
     className: "".concat(props.className ? props.className : ""),
     onClick: function onClick() {
+      if (props.onClose) {
+        props.onClose();
+      }
+
       if (props.onEvent) {
         props.onEvent({
           type: "Click",
@@ -38,13 +43,15 @@ var VHIconText = function VHIconText(props) {
         });
       }
     }
-  }, _react.default.createElement(_Icon.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     color: props.iconColor,
     sm: true,
     title: props.text,
-    icon: props.icon
-  }), _react.default.createElement(_Text.default, {
-    color: props.iconColor,
+    icon: props.icon,
+    data: props.data
+  }), /*#__PURE__*/_react.default.createElement(_Text.default, {
+    data: props.data,
+    color: props.textColor,
     variant: props.variant,
     text: props.text,
     onEvent: props.onEvent

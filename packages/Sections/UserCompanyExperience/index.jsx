@@ -7,6 +7,7 @@ import VHButton from "../../Components/Button";
 import VHUserCompanyPositionExperience from "../../Components/UserCompanyPositonExperience";
 import VHModalExperience from '../../Components/ModalExperience'
 import { PostDescriptionSkeleton } from 'react-preload-skeleton'
+import VHPreloader from '../../Components/Preloader';
 
 const VHUserCompanyExperienceSection = props => {
   const [openModal, setOpenModal] = React.useState(false);
@@ -16,7 +17,7 @@ const VHUserCompanyExperienceSection = props => {
 
   return (
     <>
-    {openModal &&
+      {openModal &&
         <VHModalExperience openModal={openModal} onClose={() => setOpenModal(false)}
           modalExperience={props.modalExperience}
           currentItem={currentItem}
@@ -27,7 +28,7 @@ const VHUserCompanyExperienceSection = props => {
           companyList={props.companyList}
           industryList={props.industryList}
           positions={props.positions}
-          closeModalExperience={props.closeModalExperience}/>
+          closeModalExperience={props.closeModalExperience} />
       }
       <Row marginBottom={5}>
         <VHText
@@ -41,55 +42,59 @@ const VHUserCompanyExperienceSection = props => {
         <VHCardBase
           className={`vh-skills-section-card ${props.className ? props.className : ''}`}
         >
-          {
-            props.preLoading ? (
-              <PostDescriptionSkeleton />
-            ) : (
-              <>
+          {props.controls.experienceSection.loading ?
+            <VHPreloader type="circle" />
+            :
+            <React.Fragment>
               {
+                props.preLoading ? (
+                  <PostDescriptionSkeleton />
+                ) : (
+                    <>
+                      {
 
-              experience.map(userPosition => {
-                return (
-                  <Row marginBottom={10}>
-                    <VHUserCompanyPositionExperience
-                      item={userPosition}
-                      companyList={props.companyList}
-                      industryList={props.industryList}
-                      onOpen={() => {setOpenModal(true)}}
-                      onEvent={props.onEvent}
-                      setCurrentItem={()=>setCurrentItem(userPosition)}
-                    />
-                  </Row>
-                )
-              })
-            }
-            <Row row>
-              <Row paddingRight8 autoWidth>
-                <VHButton
-                  nowrap
-                  primary
-                  onEvent={props.onEvent}
-                  data={"AddExperience"}
-                  label="Add Experience"
-                  closeModal={props.closeModal}
-                  onOpen={() => {setCurrentItem({}); setOpenModal(true)}}
-                  setNewExperience={()=>{setNewExperience(true)}}
-                />
-              </Row>
-              <Row row>
-                <VHButton
-                  outline
-                  primary
-                  onEvent={props.onEvent}
-                  data={"RequestProfileReview"}
-                  label="Request Profile Review"
-                />
-              </Row>
-            </Row>
-              </>
-            )
-          }
-
+                        experience.map(userPosition => {
+                          return (
+                            <Row marginBottom={10}>
+                              <VHUserCompanyPositionExperience
+                                item={userPosition}
+                                companyList={props.companyList}
+                                industryList={props.industryList}
+                                onOpen={() => { setOpenModal(true) }}
+                                onEvent={props.onEvent}
+                                setCurrentItem={() => setCurrentItem(userPosition)}
+                              />
+                            </Row>
+                          )
+                        })
+                      }
+                      <Row row>
+                        <Row paddingRight8 autoWidth>
+                          <VHButton
+                            nowrap
+                            primary
+                            onEvent={props.onEvent}
+                            data={"AddExperience"}
+                            label="Add Experience"
+                            closeModal={props.closeModal}
+                            onOpen={() => { setCurrentItem({}); setOpenModal(true) }}
+                            setNewExperience={() => { setNewExperience(true) }}
+                          />
+                        </Row>
+                        <Row row>
+                          <VHButton
+                            outline
+                            primary
+                            onEvent={props.onEvent}
+                            data={"RequestProfileReview"}
+                            label="Request Profile Review"
+                          />
+                        </Row>
+                      </Row>
+                    </>
+                  )
+              }
+            </React.Fragment>}
         </VHCardBase>
       </Row>
     </>

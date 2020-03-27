@@ -22,8 +22,8 @@ const VHIconTitleList = (props) => {
         {
             items.map(text => (
                 <VHIconText
-                    iconColor={props.color || "gray-30"}
-                    textColor={props.color || "gray-90"}
+                    iconColor={"gray-30"}
+                    textColor={"gray-90"}
                     text={text.Value}
                     icon="bullet"
                     className={`vh-icon-title-list ${props.className ? props.className : ''}`}
