@@ -13,6 +13,11 @@ storiesOf("Templates|Premium", module)
         onEvent={ e => {
             console.log(e)
         }}
+        services={Mock.services}
+        pricing={Mock.pricing}
+        success={Mock.success}
+        hired={Mock.hired}
+        faq={Mock.faq}
       />
     </div>
   ))
