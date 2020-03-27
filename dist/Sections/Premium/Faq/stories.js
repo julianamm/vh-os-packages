@@ -6,15 +6,13 @@ var _react2 = require("@storybook/react");
 
 var _ = _interopRequireDefault(require("."));
 
-var _index = _interopRequireDefault(require("../../../assets/svg/background/img_meeting.svg/index.js"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var items = {
   sectionTitle: "Frequently Asking Questions",
   title: "Have questions about VanHack Premium?",
   description: "Give us your email and we’ll get in touch.",
-  image: require("../../../assets/svg/background/img_meeting.svg")
+  imgSvg: "meeting"
 };
 var faqs = [{
   question: "Do I need Premium to get a Job through VH?",
@@ -37,7 +35,7 @@ var faqs = [{
     sectionTitle: items.sectionTitle,
     title: items.title,
     description: items.description,
-    image: _index.default,
+    imgSvg: items.imgSvg,
     faqs: faqs
   }));
 });

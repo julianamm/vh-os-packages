@@ -11,7 +11,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _Simple = _interopRequireDefault(require("../Simple"));
+var _Icon = _interopRequireDefault(require("../Icon"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -61,7 +61,9 @@ var VHInputMultiple = function VHInputMultiple(props) {
       style: {
         margin: '9px 0'
       }
-    }, /*#__PURE__*/_react.default.createElement(_Simple.default, {
+    }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
+      icon: "bullet",
+      sm: true,
       value: item.Value,
       data: item,
       placeholder: props.placeholder,
@@ -95,7 +97,9 @@ var VHInputMultiple = function VHInputMultiple(props) {
       style: {
         margin: '9px 0'
       }
-    }, /*#__PURE__*/_react.default.createElement(_Simple.default, {
+    }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
+      icon: "bullet",
+      sm: true,
       placeholder: props.placeholder,
       value: "",
       autoFocus: true,

@@ -15,6 +15,8 @@ var _index = require("../../Grid/index");
 
 var _index2 = _interopRequireDefault(require("../Text/index"));
 
+var _index3 = _interopRequireDefault(require("../ImgSvg/index"));
+
 var S = _interopRequireWildcard(require("./styles"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -24,13 +26,13 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHTextHighlightDescriptionImage = function VHTextHighlightDescriptionImage(props) {
-  return /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
-    row: true,
-    justifySpaceBetween: true
-  }, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  return /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     reverse: props.reverse
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
-    width: "50%"
+    style: {
+      justifyContent: "center"
+    },
+    responsive: true
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsLeft: true,
     marginBottom: 8
@@ -51,10 +53,11 @@ var VHTextHighlightDescriptionImage = function VHTextHighlightDescriptionImage(p
     color: "gray-90",
     text: props.description
   }))), /*#__PURE__*/_react.default.createElement(_index.Row, {
-    width: "50%"
-  }, /*#__PURE__*/_react.default.createElement(S.ImgWrapper, {
-    image: props.image
-  })))));
+    alignItemsCenter: true,
+    responsive: true
+  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+    imgSvg: props.imgSvg
+  }))));
 };
 
 VHTextHighlightDescriptionImage.defaultProps = {
@@ -65,7 +68,7 @@ VHTextHighlightDescriptionImage.prototypes = {
   title: _propTypes.default.string.isRequired,
   highlight: _propTypes.default.string.isRequired,
   description: _propTypes.default.string.isRequired,
-  image: _propTypes.default.string.isRequired,
+  imgSvg: _propTypes.default.string.isRequired,
   reverse: _propTypes.default.bool
 };
 var _default = VHTextHighlightDescriptionImage;

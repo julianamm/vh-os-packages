@@ -12,7 +12,7 @@ var _Colors = _interopRequireDefault(require("../../Colors"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 30px;\n    z-index: 99;\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 30px;\n    z-index: 3;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -22,7 +22,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n    height: 30%;\n    border-radius: 0 0 7px 7px;\n    background-image: linear-gradient(to top, #080809, rgba(88, 90, 90, 0));\n    -webkit-transition: all ease .5s;\n    -moz-transition: all ease .5s;\n    transition: all ease .5s;\n    filter: blur(8px);\n    -webkit-filter: blur(8px);\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n    height: 30%;\n    border-radius: 0 0 7px 7px;\n    background-image: linear-gradient(to top, #080809, rgba(88, 90, 90, 0));\n    -webkit-transition: all ease .5s;\n    -moz-transition: all ease .5s;\n    transition: all ease .5s;\n    filter: blur(8px);\n    -webkit-filter: blur(8px);\n    z-index: 0;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -32,7 +32,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 100%;\n    background-size: contain;\n    background-image: url(", ");\n    background-repeat: no-repeat;\n    background-position: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 100%;\n    background-size: contain;\n    background-image: url(", ");\n    background-repeat: no-repeat;\n    background-position: center;\n    z-index: -1;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;

@@ -20,6 +20,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     intro: _Mock.default.intro,
     onEvent: function onEvent(e) {
       console.log(e);
-    }
+    },
+    services: _Mock.default.services,
+    pricing: _Mock.default.pricing,
+    success: _Mock.default.success,
+    hired: _Mock.default.hired,
+    faq: _Mock.default.faq
   }));
 });

@@ -77,9 +77,7 @@ VHLinkImage.propTypes = {
   smIcon: _propTypes.default.bool,
   mdIcon: _propTypes.default.bool,
   lgIcon: _propTypes.default.bool,
-  colorIcon: _propTypes.default.string // title: PropTypes.string,
-  // source: PropTypes.string,
-
+  colorIcon: _propTypes.default.string
 };
 var _default = VHLinkImage;
 exports.default = _default;

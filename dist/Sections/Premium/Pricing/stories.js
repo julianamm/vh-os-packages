@@ -6,8 +6,6 @@ var _react2 = require("@storybook/react");
 
 var _ = _interopRequireDefault(require("."));
 
-var _index = _interopRequireDefault(require("../../../assets/svg/icons/icon_medal.svg/index.js"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var cardItems = [{
@@ -55,7 +53,7 @@ var cardItems = [{
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
     sectionTitle: "Pricing",
-    source: _index.default,
+    icon: "medal",
     title: "30 Days Money Back Guarantee",
     description: "If you're not getting incredible value and feeling more prepared than ever to get a job in Canada or Europe in the first 30 days, just talk to us and we'll refund 100% of your purchase, no questions asked.",
     cardItems: cardItems,

@@ -14,8 +14,7 @@ var items = {
   sectionTitle: "Our Success Cases",
   title: "VANHACK PREMIUM CHANGE LIVES",
   highlight: "We've helped over 800 VanHackers get hired abroad in amazing companies in Canada and Europe.",
-  // imgBackgroundCards: require("../../../../assets/images/img_bubble.svg"),
-  // imgBackgroundCards: require("../../../assets/svg/background/img_bubble.svg/index.js"),
+  imgBackgroundCards: "bubble",
   cardLeft: {
     title: "250+",
     description: "VanHack Premium Members have been hired internationally"
@@ -25,11 +24,11 @@ var items = {
     description: "of Premium Members recommend Premium to their friends"
   },
   imgVideo: require("../../../assets/general/background/img_video_premium_success_case.png"),
-  icon: "world",
+  iconVideo: "play",
   videoDescription: "How Marcelo got hired in Saskatoon, Canada as an Engineering Manager from Brazil",
   label: "See our youtube channel",
   to: "#",
-  linkIcon: require("../../../assets/svg/icons/icon_arrow_right.svg/index.js")
+  iconLink: "arrow-right"
 };
 (0, _react2.storiesOf)("Sections|Premium/Success Cases", module).add("Default", function () {
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -42,16 +41,16 @@ var items = {
     sectionTitle: items.sectionTitle,
     title: items.title,
     highlight: items.highlight,
-    imgBackgroundCards: _index.default,
+    imgBackgroundCards: items.imgBackgroundCards,
     cardLeftTitle: items.cardLeft.title,
     cardLeftDescription: items.cardLeft.description,
     cardRightTitle: items.cardRight.title,
     cardRightDescription: items.cardRight.description,
     imgVideo: items.imgVideo,
-    icon: items.icon,
+    iconVideo: items.iconVideo,
     videoDescription: items.videoDescription,
     label: items.label,
     to: items.to,
-    linkIcon: items.linkIcon
+    iconLink: items.iconLink
   }));
 });

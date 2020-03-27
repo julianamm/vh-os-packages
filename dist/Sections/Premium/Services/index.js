@@ -11,9 +11,11 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _index = require("../../../Grid/index");
 
-var _TextsImageLink = _interopRequireDefault(require("../../../Components/TextsImageLink"));
+var _index2 = _interopRequireDefault(require("../../../Components/Text/index"));
 
-var _TextsImageTestimonial = _interopRequireDefault(require("../../../Components/TextsImageTestimonial"));
+var _index3 = _interopRequireDefault(require("../../../Components/TextsImageLink/index"));
+
+var _index4 = _interopRequireDefault(require("../../../Components/TextsImageTestimonial/index"));
 
 var _VHPremiumServicesSec;
 
@@ -22,27 +24,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var VHPremiumServicesSection = function VHPremiumServicesSection(props) {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_TextsImageLink.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
+    alignItemsCenter: true,
+    marginBottom: 40
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
+    variant: "h2",
+    color: "gray-90",
+    text: props.sectionTitle
+  })), /*#__PURE__*/_react.default.createElement(_index3.default, {
     title: props.title,
     highlight: props.highlight,
     description: props.description,
-    image: props.image,
+    imgSvg: props.imgSvg,
     reverseTop: false,
     smLabel: true,
     label: props.label,
     to: props.to,
     color: "gray-90",
-    source: props.source,
-    smImg: true,
+    icon: props.icon,
+    xsIcon: true,
     reverseBottom: false
   }), props.premiumOtherServices.map(function (service) {
     return /*#__PURE__*/_react.default.createElement(_index.Row, {
       marginTop: 120
-    }, /*#__PURE__*/_react.default.createElement(_TextsImageTestimonial.default, {
+    }, /*#__PURE__*/_react.default.createElement(_index4.default, {
       title: service.title,
       highlight: service.highlight,
       description: service.description,
-      image: service.image,
+      imgSvg: service.imgSvg,
       reverseTop: service.reverseTop,
       avatar: service.avatar,
       sizeAvatar: "md",
@@ -60,12 +69,12 @@ VHPremiumServicesSection.propTypes = (_VHPremiumServicesSec = {
   title: _propTypes.default.string,
   highlight: _propTypes.default.string,
   description: _propTypes.default.string,
-  image: _propTypes.default.string,
+  imgSvg: _propTypes.default.string,
   reverseTop: _propTypes.default.bool,
   label: _propTypes.default.string,
   to: _propTypes.default.string,
   smLabel: _propTypes.default.bool,
-  source: _propTypes.default.string,
+  icon: _propTypes.default.string,
   color: _propTypes.default.string,
   avatar: _propTypes.default.string,
   sizeAvatar: _propTypes.default.string
