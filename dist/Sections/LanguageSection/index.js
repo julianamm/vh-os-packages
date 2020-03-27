@@ -51,18 +51,18 @@ var VHLanguageSection = function VHLanguageSection(props) {
     });
   }
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5
-  }, _react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
     text: "Languages",
     color: "black-50",
     variant: "h2"
-  })), _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Base.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Base.default, {
     className: "vh-skills-section-card ".concat(props.className ? props.className : '')
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true
-  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_LanguageList.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_LanguageList.default, {
     controls: props.controls,
     onEvent: props.onEvent,
     secondList: props.proficiencyList,

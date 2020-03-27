@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import DeleteIcon from '../../assets/svg/icons/icon_delete.svg/index.js'
 import BulletIcon from '../../assets/svg/icons/dot.svg/index.js'
 import FilterIcon from '../../assets/svg/icons/icon_filter.svg/index.js'
 import ArrowLeftIcon from '../../assets/svg/icons/icon_arrow_left.svg/index.js'
@@ -126,9 +127,10 @@ const VHIcon = props => {
       return <MedalIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'play':
       return <PlayIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'delete':
+      return <DeleteIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     default:
       return <span />
-
   }
 }
 

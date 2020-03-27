@@ -8,7 +8,8 @@ import VHInput from "../../Components/Input/Simple";
 import VHText from "../../Components/Text/index";
 import VHButton from "../../Components/Button/index";
 import * as S from "./styles"
-import {getFormatedDate} from '../../util/index'
+import { getFormatedDate } from '../../util/index'
+import VHIconText from '../../Components/IconText/'
 
 const VHModalEducation = props => {
 
@@ -17,7 +18,7 @@ const VHModalEducation = props => {
     const [degreeTitle, setDegreeTitle] = React.useState(item.degreeTitle);
     const [schoolName, setSchoolName] = React.useState(item.schoolName);
     const [startYear, setStartYear] = React.useState(getFormatedDate(item.startDate));
-    const [endYear, setEndYear] = React.useState(getFormatedDate(item.endYear));
+    const [endYear, setEndYear] = React.useState(getFormatedDate(item.endDate));
 
     return (
         <VHModal
@@ -81,8 +82,26 @@ const VHModalEducation = props => {
                             <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={endYear} data={{ id: "ModalEducation", field: "endYear" }} />
                         </Row>
                     </Row>
-                    <Row alignItemsRight>
-                        <VHButton primary onEvent={props.onEvent} data={'saveEducation'} onClose={props.onClose} closeModal={props.closeModal} label="Save" />
+                    <Row row>
+                        {item.id &&
+                            <Row alignItemsLeft>
+                                <VHIconText
+                                    cursor
+                                    iconColor="gray-60"
+                                    textColor="gray-60"
+                                    text={'Delete'}
+                                    icon="delete"
+                                    className={`vh-delete-education ${props.className ? props.className : ''}`}
+                                    variant="platform"
+                                    data={{ action: 'deleteEducation', id: item.id }}
+                                    onEvent={props.onEvent}
+                                    onClose={props.onClose}
+                                />
+                            </Row>
+                        }
+                        <Row alignItemsRight>
+                            <VHButton primary onEvent={props.onEvent} data={'saveEducation'} onClose={props.onClose} closeModal={props.closeModal} label="Save" />
+                        </Row>
                     </Row>
                 </Row>
             }>

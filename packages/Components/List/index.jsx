@@ -20,6 +20,7 @@ const VHList = props => {
                     </Row>
                     <Row responsive>
                         <VHSelect
+                            preLoading={props.controls.topSkill.preLoading}
                             placeholder='Select your top skill'
                             removeIndicator
                             bold={true}
@@ -39,6 +40,7 @@ const VHList = props => {
                 </Row>
                 <Row width={'20%'} responsive>
                     <VHSelect
+                        preLoading={props.controls.topSkill.preLoading}
                         placeholder='Select your top skill'
                         removeIndicator
                         isDisabled={!items[0] ? true : false}
@@ -64,6 +66,7 @@ const VHList = props => {
                     </Row>
                     <Row responsive>
                         <VHSelect
+                            preLoading={props.controls.topSkill.preLoading}
                             placeholder='Select your top skill'
                             removeIndicator
                             bold={true}
@@ -83,6 +86,7 @@ const VHList = props => {
                 </Row>
                 <Row width={'20%'} responsive>
                     <VHSelect
+                        preLoading={props.controls.topSkill.preLoading}
                         placeholder='Select your top skill'
                         removeIndicator
                         isDisabled={!items[1] ? true : false}
@@ -102,12 +106,13 @@ const VHList = props => {
                 </Row>
             </S.Wrapper>
             <S.Wrapper>
-                <Row  alignItemsCenter row responsive>
+                <Row alignItemsCenter row responsive>
                     <Row responsive width="27px">
                         <VHText variant={'platform'} text="3rd" color={'gray-90'} />
                     </Row>
                     <Row responsive>
                         <VHSelect
+                            preLoading={props.controls.topSkill.preLoading}
                             placeholder='Select your top skill'
                             removeIndicator
                             bold={true}
@@ -127,6 +132,7 @@ const VHList = props => {
                 </Row>
                 <Row width={'20%'} responsive>
                     <VHSelect
+                        preLoading={props.controls.topSkill.preLoading}
                         placeholder='Select your top skill'
                         removeIndicator
                         isDisabled={!items[2] ? true : false}

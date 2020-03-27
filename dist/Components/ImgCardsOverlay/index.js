@@ -26,60 +26,60 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHImgCardsOverlay = function VHImgCardsOverlay(props) {
-  return _react.default.createElement(_index.Container, null, _react.default.createElement(_index.Row, {
+  return /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     responsive: true
-  }, _react.default.createElement(S.Wrapper, null, _react.default.createElement(S.ImgItem, {
+  }, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(S.ImgItem, {
     image: props.image
-  }), _react.default.createElement(S.CardsWrapper, null, _react.default.createElement(_index.Row, {
+  }), /*#__PURE__*/_react.default.createElement(S.CardsWrapper, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     row: true,
     alignItemsCenter: true
-  }, _react.default.createElement(S.CardLeftWrapper, null, _react.default.createElement(_index3.default, {
+  }, /*#__PURE__*/_react.default.createElement(S.CardLeftWrapper, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
     noHover: true
-  }, _react.default.createElement(_index.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true,
     style: {
       padding: "50px 0",
       textAlign: "center"
     }
-  }, _react.default.createElement(_index.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "90%",
     alignItemsCenter: true
-  }, _react.default.createElement(_index2.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "h2",
     color: "gray-100",
     text: props.cardLeftTitle
-  })), _react.default.createElement(_index.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "90%",
     alignItemsCenter: true,
     style: {
       textAlign: "center"
     }
-  }, _react.default.createElement(_index2.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "subtitle2",
     color: "black-60",
     text: props.cardLeftDescription
-  }))))), _react.default.createElement(S.CardRightWrapper, null, _react.default.createElement(_index3.default, {
+  }))))), /*#__PURE__*/_react.default.createElement(S.CardRightWrapper, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
     noHover: true
-  }, _react.default.createElement(_index.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true,
     style: {
       padding: "50px 0",
       textAlign: "center"
     }
-  }, _react.default.createElement(_index.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "90%",
     alignItemsCenter: true
-  }, _react.default.createElement(_index2.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "h2",
     color: "gray-100",
     text: props.cardRightTitle
-  })), _react.default.createElement(_index.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "90%",
     alignItemsCenter: true,
     style: {
       textAlign: "center"
     }
-  }, _react.default.createElement(_index2.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "subtitle2",
     color: "black-60",
     text: props.cardRightDescription
