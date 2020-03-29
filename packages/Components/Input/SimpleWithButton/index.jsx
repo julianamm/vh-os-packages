@@ -17,6 +17,7 @@ const VHInputSimpleWithButton = props => {
                 data={props.data}
                 value={props.value}
                 onEvent={props.onEvent}
+                data={props.data}
             />
         </Row>
         <Row width={"15%"}>
@@ -39,6 +40,8 @@ VHInputSimpleWithButton.defaultProps = {
 }
 
 VHInputSimpleWithButton.propTypes = {
+    onEvent: PropTypes.func,
+    data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     disabled: PropTypes.bool,
     error: PropTypes.bool,
     loading: PropTypes.bool,

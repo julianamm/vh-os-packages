@@ -52,6 +52,8 @@ const VHPremiumSuccessCasesSection = props => {
                             icon={props.iconLink}
                             smIcon
                             reverse
+                            onEvent={props.onEvent}
+                            data={"VHLinkImage"}
                         />
                     </Row>
                 </Row>

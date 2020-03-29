@@ -29,6 +29,8 @@ const VHPremiumFaqSection = props => {
                         <VHInputSimpleWithButton
                             placeholder={"E-mail"}
                             label={"SEND"}
+                            onEvent={props.onEvent}
+                            data={"VHInputSimpleWithButton"}
                         />
                     </Row>
                 </Row>

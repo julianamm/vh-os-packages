@@ -34,6 +34,8 @@ const VHPremiumHiredSection = props => {
                             label={props.btnLabel}
                             secondary
                             lg
+                            onEvent={props.onEvent}
+                            data={props.data}
                         />
                     </Row>
                 </Row>

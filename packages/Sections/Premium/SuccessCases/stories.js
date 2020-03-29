@@ -23,7 +23,7 @@ const items = {
     iconVideo: "play",
     videoDescription: "How Marcelo got hired in Saskatoon, Canada as an Engineering Manager from Brazil",
     label: "See our youtube channel",
-    to: "#",
+    to: "https://www.youtube.com/channel/UCmg0eAiV7f8LZf8vePG1tlA",
     iconLink: "arrow-right",
 };
 

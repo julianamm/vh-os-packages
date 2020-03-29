@@ -28,6 +28,8 @@ const VHPremiumServicesSection = props => {
             icon={props.icon}
             xsIcon
             reverseBottom={false}
+            onEvent={props.onEvent}
+            data={"VHTextsImageLink"}
         />
         {props.premiumOtherServices.map(service => (
             <Row marginTop={120}>

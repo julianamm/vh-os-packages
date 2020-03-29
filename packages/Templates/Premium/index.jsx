@@ -32,6 +32,7 @@ const VHPremiumTemplate = props => (
         to={props.services.interviewClass.to}
         icon={props.services.interviewClass.icon}
         premiumOtherServices={props.services.otherServices}
+        onEvent={props.onEvent}
       />
     </Row>
     <Row style={{ backgroundColor: "rgba(203, 248, 251, 0.44)", height: "100vh", padding: "50px 0 20px 0" }}>
@@ -69,6 +70,7 @@ const VHPremiumTemplate = props => (
         btnLabel="JOIN VANHACK PREMIUM"
         candidates={props.hired.candidates}
         onEvent={props.onEvent}
+        data={"VHPremiumHiredSection"}
       />
     </Row>
     <Row style={{ backgroundColor: "#f2f6f9", height: "100vh", padding: "50px 0" }}>
@@ -88,6 +90,8 @@ VHPremiumTemplate.defaultProps = {
 }
 
 VHPremiumTemplate.propTypes = {
+  onEvent: PropTypes.func,
+  data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 }
 
 export default VHPremiumTemplate;
