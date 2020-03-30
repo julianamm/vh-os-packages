@@ -59,7 +59,7 @@ if (props.preLoading) {
     <Row responsive style={{ position: 'relative', marginBottom: props.marginBottom ? props.marginBottom : '21px' }}>
       {
         props.caption &&
-        <Row style={{ marginBottom : '5px' }}>
+        <Row style={{ marginBottom : '6px' }}>
           <VHText
             text={props.caption}
             variant="platform1"
@@ -142,7 +142,7 @@ if (props.preLoading) {
       </Row>
       {
         props.description &&
-        <Row style={{ position: 'absolute', top: '60px', marginTop: '8px'}}>
+        <Row style={{ position: 'absolute', top: '64px', marginTop: '8px'}}>
           <VHText
             text={props.description}
             variant="caption"

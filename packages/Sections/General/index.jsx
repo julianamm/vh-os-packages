@@ -99,8 +99,8 @@ const VHGeneralSection = props => {
                   }
                 />
             </Row>
-            <Row column paddingRight8>
-              <VHTitleDescription
+            <Row column paddingRight8 style={{marginBottom: '6px'}} >
+              <VHTitleDescription 
                 className={`vh-general-section-phone ${props.className ? props.className : ''}`}
                 descriptionColor={
                   props.controls.phone.loading
@@ -121,7 +121,7 @@ const VHGeneralSection = props => {
                   ? "red"
                   : "gray-100"
                 }
-                titleVariant="subtitle3"
+                titleVariant="platform1"
               />
               {
                 !props.controls.phone.preLoading && (
