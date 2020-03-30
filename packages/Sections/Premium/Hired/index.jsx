@@ -8,14 +8,14 @@ import VHButton from "../../../Components/Button/index";
 const VHPremiumHiredSection = props => {
   return (
         <React.Fragment>
-            <Row alignItemsCenter marginTop={40} marginBottom={30}>
+            <Row alignItemsCenter marginBottom={20} style={{textAlign: "center"}}>
                 <VHText 
                     variant={"h2"}
                     color={"gray-100"}
                     text={props.sectionTitle}
                 />
             </Row>
-            <Row row alignItemsCenter marginBottom={30} responsive>
+            <Row row alignItemsCenter marginBottom={30} responsive mobileMarginSM>
                 {props.candidates.map(candidate => (
                     <Row marginBottom5 style={{ backgroundColor: "#f2f6f9", width: "210px", height: "205px", padding: "24px", marginRight: "10px" }}>
                         <VHCardHired 

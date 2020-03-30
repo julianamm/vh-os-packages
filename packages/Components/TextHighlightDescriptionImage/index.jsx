@@ -7,9 +7,9 @@ import * as S from './styles';
 
 const VHTextHighlightDescriptionImage = props => {
     return (
-        <Container>
-            <S.Wrapper reverse={props.reverse}>
-                <Row  style={{ justifyContent: "center"}} responsive>
+        <Row>
+            <S.Wrapper reverse={props.reverse} responsive>
+                <Row marginBottom5 style={{ justifyContent: "center"}}>
                     <Row alignItemsLeft marginBottom={8}>
                         <S.UnderlineText>
                             <VHText 
@@ -34,12 +34,12 @@ const VHTextHighlightDescriptionImage = props => {
                         />     
                     </Row>
                 </Row>
-                <Row alignItemsCenter responsive>
+                <Row alignItemsCenter marginBottom5 mobileImgsSM>
                     <VHImgSvg imgSvg={props.imgSvg} />
                 </Row>
             </S.Wrapper>
 
-        </Container>
+        </Row>
     )
 }
 

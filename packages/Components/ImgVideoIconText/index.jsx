@@ -8,18 +8,18 @@ import * as S from './styles';
 const VHImgVideoIconText = props => {
     return (
         <Row alignItemsCenter>
-            <S.Wrapper>
+            <S.Wrapper responsive>
                 <S.ImgItem image={props.image} />
                 <S.ItemsWrapper>
                     <Row row>
-                        <Row width={"10%"} alignItemsCenter style={{ justifyContent: "center", marginLeft: "15px" }}>
+                        <Row width={"10%"} alignItemsCenter style={{ justifyContent: "center", marginLeft: "15px" }} mobileDisplayNone>
                             <VHIcon 
                                 icon={props.icon}
                                 color={props.color}
                                 md
                             />
                         </Row>
-                        <Row width={"60%"}>
+                        <Row width={"60%"} style={{ padding: "0 15px" }}>
                             <VHText 
                                 variant={"platform1"}
                                 color={"gray-10"}
@@ -29,7 +29,6 @@ const VHImgVideoIconText = props => {
 
                     </Row>
                 </S.ItemsWrapper>
-             
                 <S.ImgOverlay />
             </S.Wrapper>
         </Row>

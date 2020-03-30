@@ -10,19 +10,19 @@ const VHCardFeatures = props => {
     return (
         <Container alignItemsCenter>
             <VHCardBase noHover={props.noHover}>
-                <Row row alignItemsCenter height={300}>
-                    <S.Group>
+                <Row row alignItemsCenter responsive>
+                    {/* <S.Group> */}
                         {props.features.map(feature => (
-                            <S.Item>
-                                <Row width={300}>
-                                    <Row alignItemsCenter marginBottom5>
+                            // <S.Item>
+                                <Row marginTop={15} marginBottom5>
+                                    <Row alignItemsCenter marginBottom5 height={50}>
                                         <VHIcon
                                             icon={feature.icon}
                                             title={feature.title}
                                             md
                                         />
                                     </Row>
-                                    <Row alignItemsCenter marginBottom5>
+                                    <Row alignItemsCenter marginBottom5 height={50}>
                                         <S.TextWrapper>
                                             <VHText 
                                                 variant={"h4"}
@@ -31,7 +31,7 @@ const VHCardFeatures = props => {
                                             />
                                         </S.TextWrapper>
                                     </Row>
-                                    <Row alignItemsCenter marginBottom5>
+                                    <Row alignItemsCenter marginBottom5 height={160}>
                                         <S.TextWrapper>
                                         <VHText 
                                             variant={"bodyweb"}
@@ -41,9 +41,9 @@ const VHCardFeatures = props => {
                                         </S.TextWrapper>       
                                     </Row>
                                 </Row>
-                            </S.Item>
+                            // </S.Item>
                         ))}
-                    </S.Group>
+                    {/* </S.Group> */}
                 </Row>
             </VHCardBase>
         </Container>

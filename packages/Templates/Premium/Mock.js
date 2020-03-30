@@ -29,6 +29,10 @@ Mock.intro = {
 };
 
 Mock.services = {
+    items: {
+        sectionTitle: "How Does Premium Work"
+    },
+
     interviewClass:  {
         title: "INTERVIEW CLASS",
         highlight: "Learn how to ace an interview and improve your English skills at the same time",
@@ -80,6 +84,13 @@ Mock.services = {
 };
 
 Mock.pricing = {
+    items: {
+        sectionTitle: "Pricing",
+        icon: "medal",
+        title: "30 Days Money Back Guarantee",
+        description: "If you're not getting incredible value and feeling more prepared than ever to get a job in Canada or Europe in the first 30 days, just talk to us and we'll refund 100% of your purchase, no questions asked.",
+
+    },
     cardItems: [
         {
             show: false,
@@ -148,6 +159,10 @@ Mock.success = {
 };
 
 Mock.hired = {
+    items: {
+        sectionTitle: "Premium Vanhackers hired",
+        btnLabel: "JOIN VANHACK PREMIUM"
+    },
     candidates: [
         {   
             name: "Mitchell Watson",
@@ -188,6 +203,12 @@ Mock.hired = {
 };
 
 Mock.faq = {
+    items: {
+        sectionTitle: "Frequently Asking Questions",
+        title: "Have questions about VanHack Premium?",
+        description: "Give us your email and we’ll get in touch.",
+        imgSvg: "meeting",
+    },
     faqs: [
         {
             question: "Do I need Premium to get a Job through VH?",

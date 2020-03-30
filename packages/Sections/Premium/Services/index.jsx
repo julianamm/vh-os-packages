@@ -8,7 +8,7 @@ import VHTextsImageTestimonial from "../../../Components/TextsImageTestimonial/i
 const VHPremiumServicesSection = props => {
   return (
     <React.Fragment>
-        <Row alignItemsCenter marginBottom={40}>
+        <Row alignItemsCenter marginBottom={40} style={{ textAlign: "center"}} mobileMarginBottomSM>
             <VHText 
                 variant="h2"
                 color="gray-90"

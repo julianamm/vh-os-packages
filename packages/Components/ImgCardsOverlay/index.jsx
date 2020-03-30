@@ -9,7 +9,7 @@ import * as S from './styles';
 const VHImgCardsOverlay = props => {
     return (
         <Container>
-            <Row alignItemsCenter responsive>
+            <Row alignItemsCenter responsive marginTop={30} mobileMarginSM>
                 <S.Wrapper>
                     <Row alignItemsCenter>
                         <VHImgSvg imgSvg={props.imgSvg} />

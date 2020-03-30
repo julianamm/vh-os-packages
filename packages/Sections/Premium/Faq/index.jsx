@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row } from "../../../Grid/index";
+import { Row, Container } from "../../../Grid/index";
 import VHText from "../../../Components/Text/index";
 import VHTitleDescriptionImage from "../../../Components/TitleDescriptionImage/index";
 import VHInputSimpleWithButton from  "../../../Components/Input/SimpleWithButton/index";
@@ -8,7 +8,7 @@ import VHInputSimpleWithButton from  "../../../Components/Input/SimpleWithButton
 const VHPremiumFaqSection = props => {
   return (
     <React.Fragment>
-        <Row alignItemsCenter marginBottom={40}>
+        <Row alignItemsCenter marginBottom={20} style={{textAlign: "center"}}>
             <VHText
                 variant={"h2"}
                 color={"gray-100"}
@@ -18,14 +18,14 @@ const VHPremiumFaqSection = props => {
         <Row row responsive>
             <Row width={"50%"} alignItemsCenter>
                 <Row width={"80%"} alignItemsCenter>
-                    <Row marginBottom={12} style={{ marginLeft: "30px" }}>
+                    <Row marginBottom={12} style={{ marginLeft: "30px" }} mobileTxtCenter>
                         <VHTitleDescriptionImage
                             title={props.title}
                             description={props.description}
                             imgSvg={props.imgSvg}
                         />
                     </Row>
-                    <Row style={{ backgroundColor: "#ffffff"}}>
+                    <Row marginBottom={12} style={{ backgroundColor: "#ffffff"}}>
                         <VHInputSimpleWithButton
                             placeholder={"E-mail"}
                             label={"SEND"}
@@ -35,9 +35,9 @@ const VHPremiumFaqSection = props => {
                     </Row>
                 </Row>
             </Row>
-            <Row width={"50%"}>
+            <Row width={"50%"} alignItemsCenter>
                 {props.faqs.map(faq => (
-                    <Row width={"80%"} alignItemsCenter marginBottom={20} style={{marginLeft: "20px"}}>
+                    <Row width={"80%"} alignItemsCenter marginBottom={20} style={{ padding: "20px" }} mobileTxtCenter>
                         <Row marginBottom={3}>
                             <VHText
                                 variant={"h4"}
