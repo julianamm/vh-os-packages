@@ -26,7 +26,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var VHPremiumSuccessCasesSection = function VHPremiumSuccessCasesSection(props) {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true,
-    marginBottom: 40
+    marginBottom: 20
   }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "h2",
     color: "gray-100",
@@ -37,7 +37,8 @@ var VHPremiumSuccessCasesSection = function VHPremiumSuccessCasesSection(props) 
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
-    marginBottom: 30
+    marginBottom: 30,
+    mobileDisplayNone: true
   }, /*#__PURE__*/_react.default.createElement(_index3.default, {
     title: props.title,
     highlight: props.highlight
@@ -62,7 +63,9 @@ var VHPremiumSuccessCasesSection = function VHPremiumSuccessCasesSection(props) 
     to: props.to,
     icon: props.iconLink,
     smIcon: true,
-    reverse: true
+    reverse: true,
+    onEvent: props.onEvent,
+    data: "VHLinkImage"
   }))))));
 };
 

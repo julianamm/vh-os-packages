@@ -9,6 +9,7 @@ import VHText from "../../Components/Text/index";
 import VHButton from "../../Components/Button/index";
 import VHInputCheckbox from "../../Components/Input/checkbox"
 import VHInputMultiple from "../../Components/Input/Multiple"
+import VHIconText from '../../Components/IconText/'
 import { getFormatedDate } from '../../util/index'
 import * as S from './styles.js'
 
@@ -50,7 +51,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-location ${props.className ? props.className : ''}`}
-                                currentItem={item.countryId.value ? props.countries.find(element => element.value === item.countryId.value) : {} }
+                                currentItem={item.countryId.value ? props.countries.find(element => element.value === item.countryId.value) : {}}
                                 data={{ id: "ModalExperience", field: "countryId" }}
                                 onEvent={props.onEvent}
                                 items={props.countries}
@@ -68,7 +69,7 @@ const VHModalExperience = props => {
                                 captionColor={null
                                 }
                                 className={`vh-general-section-company-size ${props.className ? props.className : ''}`}
-                                currentItem={item.companySize.value ? props.companyList.find(element => element.value === item.companySize.value) : {} }
+                                currentItem={item.companySize.value ? props.companyList.find(element => element.value === item.companySize.value) : {}}
                                 data={{ id: "ModalExperience", field: "companySize" }}
                                 onEvent={props.onEvent}
                                 items={props.companyList}
@@ -153,7 +154,7 @@ const VHModalExperience = props => {
                                         max={5}
                                         items={experience.description}
                                         placeholder="Job Experience"
-                                        data={{id: 'multipleInput', order: index}}
+                                        data={{ id: 'multipleInput', order: index }}
                                         onEvent={props.onEvent}
                                     />
                                     {experience.description.messageError && (
@@ -168,8 +169,26 @@ const VHModalExperience = props => {
                             </React.Fragment>
                         )
                     })}
-                    <Row alignItemsRight>
-                        <VHButton primary data={{ action: 'saveExperience', id: currentItem.id }} onEvent={props.onEvent} onClose={props.onClose} closeModal={props.closeModalExperience} label="Save" />
+                    <Row row>
+                        {currentItem.id &&
+                            <Row alignItemsLeft>
+                                <VHIconText
+                                    cursor
+                                    iconColor="gray-60"
+                                    textColor="gray-60"
+                                    text={'Delete'}
+                                    icon="delete"
+                                    className={`vh-delete-education ${props.className ? props.className : ''}`}
+                                    variant="platform"
+                                    data={{ action: 'deleteExperience', id: currentItem.id }}
+                                    onEvent={props.onEvent}
+                                    onClose={props.onClose}
+                                />
+                            </Row>
+                        }
+                        <Row alignItemsRight>
+                            <VHButton primary data={{ action: 'saveExperience', id: currentItem.id }} onEvent={props.onEvent} onClose={props.onClose} closeModal={props.closeModalExperience} label="Save" />
+                        </Row>
                     </Row>
                 </Row>
             }>

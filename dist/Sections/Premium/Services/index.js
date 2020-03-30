@@ -26,7 +26,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var VHPremiumServicesSection = function VHPremiumServicesSection(props) {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true,
-    marginBottom: 40
+    marginBottom: 40,
+    style: {
+      textAlign: "center"
+    },
+    mobileMarginBottomSM: true
   }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "h2",
     color: "gray-90",
@@ -43,7 +47,9 @@ var VHPremiumServicesSection = function VHPremiumServicesSection(props) {
     color: "gray-90",
     icon: props.icon,
     xsIcon: true,
-    reverseBottom: false
+    reverseBottom: false,
+    onEvent: props.onEvent,
+    data: "VHTextsImageLink"
   }), props.premiumOtherServices.map(function (service) {
     return /*#__PURE__*/_react.default.createElement(_index.Row, {
       marginTop: 120

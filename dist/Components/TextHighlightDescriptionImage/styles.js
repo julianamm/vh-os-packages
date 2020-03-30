@@ -10,7 +10,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    \n    ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    \n    ", "\n\n    ", "\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -52,7 +52,10 @@ var UnderlineText = _styledComponents.default.span(_templateObject2());
 exports.UnderlineText = UnderlineText;
 
 var Wrapper = _styledComponents.default.div(_templateObject3(), function (_ref) {
-  var reverse = _ref.reverse;
+  var responsive = _ref.responsive;
+  return responsive && "\n        @media only screen and (max-width: 768px) {\n            flex-direction: column;\n        }\n    ";
+}, function (_ref2) {
+  var reverse = _ref2.reverse;
   return reverse && "\n        flex-direction: row-reverse;\n  ";
 });
 

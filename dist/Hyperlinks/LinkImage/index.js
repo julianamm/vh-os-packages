@@ -37,14 +37,19 @@ var VHLinkImage = function VHLinkImage(props) {
     xs: props.xsLabel,
     sm: props.smLabel,
     lg: props.lgLabel,
-    onClick: function onClick(e) {
-      e.preventDefault();
-      props.onClick();
+    onClick: function onClick() {
+      props.onEvent({
+        type: "OnClick",
+        origin: "VHLinkImage",
+        props: {
+          data: props.data
+        }
+      });
     },
     className: "vh-link-image-component ".concat(props.className ? props.className : ''),
     color: props.colorLabel,
     noUnderscore: props.noUnderscore,
-    to: props.to,
+    href: props.to,
     label: props.label
   }, props.label, /*#__PURE__*/_react.default.createElement(S.IconWrapper, null, /*#__PURE__*/_react.default.createElement(_index2.default, (_React$createElement = {
     icon: props.icon,
@@ -62,6 +67,8 @@ VHLinkImage.defaultProps = {
   noUnderscore: false
 };
 VHLinkImage.propTypes = {
+  onEvent: _propTypes.default.func,
+  data: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
   reverse: _propTypes.default.bool,
   noUnderscore: _propTypes.default.bool,
   round: _propTypes.default.bool,

@@ -24,9 +24,9 @@ var cardItems = [{
   noHoverChip: true,
   transparentChip: true,
   period: "Month",
-  price: "65",
+  price: "55",
   unit: "CAD$/month",
-  subscription: "Renew every month",
+  subscription: "Renew every 3 months",
   cta: "Get Started",
   outlineBtn: true,
   note: ""
@@ -37,9 +37,9 @@ var cardItems = [{
   transparentChip: true,
   round: true,
   period: "Month",
-  price: "65",
+  price: "50",
   unit: "CAD$/month",
-  subscription: "Renew every month",
+  subscription: "Renew every 6 months",
   cta: "Get Started",
   secondaryBtn: true,
   note: "The choice of 46% of premium members"

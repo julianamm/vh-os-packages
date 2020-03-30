@@ -28,13 +28,16 @@ Mock.intro = {
   }]
 };
 Mock.services = {
+  items: {
+    sectionTitle: "How Does Premium Work"
+  },
   interviewClass: {
     title: "INTERVIEW CLASS",
     highlight: "Learn how to ace an interview and improve your English skills at the same time",
     description: "Our teachers specialize in English for interviews. With 40+ hours of live classes every month, you’re bound to find a slot that works in your timezone. You will receive personalized interaction and feedback in every class making this a unique experience.",
     imgSvg: "interview",
     label: "watch a class",
-    to: "#",
+    to: "https://youtu.be/UXJCtKh14JI",
     icon: "arrow-right"
   },
   otherServices: [{
@@ -73,6 +76,12 @@ Mock.services = {
   }]
 };
 Mock.pricing = {
+  items: {
+    sectionTitle: "Pricing",
+    icon: "medal",
+    title: "30 Days Money Back Guarantee",
+    description: "If you're not getting incredible value and feeling more prepared than ever to get a job in Canada or Europe in the first 30 days, just talk to us and we'll refund 100% of your purchase, no questions asked."
+  },
   cardItems: [{
     show: false,
     save: "",
@@ -128,11 +137,15 @@ Mock.success = {
     iconVideo: "play",
     videoDescription: "How Marcelo got hired in Saskatoon, Canada as an Engineering Manager from Brazil",
     label: "See our youtube channel",
-    to: "#",
+    to: "https://www.youtube.com/channel/UCmg0eAiV7f8LZf8vePG1tlA",
     iconLink: "arrow-right"
   }
 };
 Mock.hired = {
+  items: {
+    sectionTitle: "Premium Vanhackers hired",
+    btnLabel: "JOIN VANHACK PREMIUM"
+  },
   candidates: [{
     name: "Mitchell Watson",
     position: "Backend Developer",
@@ -166,6 +179,12 @@ Mock.hired = {
   }]
 };
 Mock.faq = {
+  items: {
+    sectionTitle: "Frequently Asking Questions",
+    title: "Have questions about VanHack Premium?",
+    description: "Give us your email and we’ll get in touch.",
+    imgSvg: "meeting"
+  },
   faqs: [{
     question: "Do I need Premium to get a Job through VH?",
     answer: "No. Premium is a value-added service for people who wish to improve their professional skills. It does not guarantee you a job."

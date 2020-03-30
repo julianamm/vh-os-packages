@@ -23,11 +23,15 @@ var _index3 = _interopRequireDefault(require("../../Button/index"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
+var _VHCardPricing$propTy;
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var VHCardPricing = function VHCardPricing(props) {
   return /*#__PURE__*/_react.default.createElement(_Base.default, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
@@ -47,8 +51,8 @@ var VHCardPricing = function VHCardPricing(props) {
     marginRight: props.marginRight
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
-    marginTop: 15,
-    marginBottom: 5
+    marginTop: 30,
+    marginBottom: 10
   }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "h4",
     color: "black-60",
@@ -67,25 +71,25 @@ var VHCardPricing = function VHCardPricing(props) {
     text: props.subscription
   }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
-    marginTop: 15,
-    marginBottom: 5,
-    style: {
-      width: "50%",
-      height: "40px"
-    }
+    marginTop: 30,
+    marginBottom: 10,
+    width: "60%"
   }, /*#__PURE__*/_react.default.createElement(_index3.default, {
     onEvent: props.onEvent,
+    data: props.data,
     label: props.cta,
-    lg: true,
+    full: true,
     outline: props.outlineBtn,
     primary: props.primaryBtn,
-    secondary: props.secondaryBtn,
-    full: true
+    secondary: props.secondaryBtn
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    height: 20,
-    alignItemsCenter: true
+    height: 30,
+    alignItemsCenter: true,
+    style: {
+      textAlign: "center"
+    }
   }, /*#__PURE__*/_react.default.createElement(_index2.default, {
-    variant: "subtitle2",
+    variant: "caption",
     color: "black-60",
     text: props.note
   }))));
@@ -95,18 +99,10 @@ VHCardPricing.defaultProps = {
   className: "",
   show: false
 };
-VHCardPricing.propTypes = {
-  show: _propTypes.default.bool,
+VHCardPricing.propTypes = (_VHCardPricing$propTy = {
   onEvent: _propTypes.default.func,
-  label: _propTypes.default.string,
-  save: _propTypes.default.string,
-  period: _propTypes.default.string,
-  price: _propTypes.default.string,
-  unit: _propTypes.default.string,
-  subscription: _propTypes.default.string,
-  cta: _propTypes.default.string,
-  note: _propTypes.default.string,
-  className: _propTypes.default.string
-};
+  data: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
+  show: _propTypes.default.bool
+}, _defineProperty(_VHCardPricing$propTy, "onEvent", _propTypes.default.func), _defineProperty(_VHCardPricing$propTy, "label", _propTypes.default.string), _defineProperty(_VHCardPricing$propTy, "save", _propTypes.default.string), _defineProperty(_VHCardPricing$propTy, "period", _propTypes.default.string), _defineProperty(_VHCardPricing$propTy, "price", _propTypes.default.string), _defineProperty(_VHCardPricing$propTy, "unit", _propTypes.default.string), _defineProperty(_VHCardPricing$propTy, "subscription", _propTypes.default.string), _defineProperty(_VHCardPricing$propTy, "cta", _propTypes.default.string), _defineProperty(_VHCardPricing$propTy, "note", _propTypes.default.string), _defineProperty(_VHCardPricing$propTy, "className", _propTypes.default.string), _VHCardPricing$propTy);
 var _default = VHCardPricing;
 exports.default = _default;
