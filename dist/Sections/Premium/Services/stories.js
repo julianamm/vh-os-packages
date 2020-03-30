@@ -14,7 +14,7 @@ var premiumInterviewClass = {
   description: "Our teachers specialize in English for interviews. With 40+ hours of live classes every month, you’re bound to find a slot that works in your timezone. You will receive personalized interaction and feedback in every class making this a unique experience.",
   imgSvg: "interview",
   label: "watch a class",
-  to: "#",
+  to: "https://youtu.be/UXJCtKh14JI",
   icon: "arrow-right"
 };
 var premiumOtherServices = [{

@@ -12,7 +12,7 @@ var _Colors = _interopRequireDefault(require("../../Colors"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 30px;\n    z-index: 3;\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 20px;\n    z-index: 3;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -22,7 +22,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n    height: 30%;\n    border-radius: 0 0 7px 7px;\n    background-image: linear-gradient(to top, #080809, rgba(88, 90, 90, 0));\n    -webkit-transition: all ease .5s;\n    -moz-transition: all ease .5s;\n    transition: all ease .5s;\n    filter: blur(8px);\n    -webkit-filter: blur(8px);\n    z-index: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n    height: 40%;\n    border-radius: 0 0 7px 7px;\n    background-image: linear-gradient(to top, #080809, rgba(88, 90, 90, 0));\n    -webkit-transition: all ease .5s;\n    -moz-transition: all ease .5s;\n    transition: all ease .5s;\n    filter: blur(8px);\n    -webkit-filter: blur(8px);\n    z-index: 0;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -42,7 +42,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 600px;\n    height: 470px;\n    position: relative;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 600px;\n    height: 470px;\n    position: relative;\n\n    ", "\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -53,7 +53,10 @@ function _templateObject() {
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Wrapper = _styledComponents.default.div(_templateObject());
+var Wrapper = _styledComponents.default.div(_templateObject(), function (_ref) {
+  var responsive = _ref.responsive;
+  return responsive && "\n    @media only screen and (max-width: 768px) {\n        width: 300px;\n        height: 250px;\n        position: relative;\n    }\n";
+});
 
 exports.Wrapper = Wrapper;
 

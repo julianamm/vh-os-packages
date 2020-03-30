@@ -28,7 +28,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var VHImgVideoIconText = function VHImgVideoIconText(props) {
   return /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true
-  }, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(S.ImgItem, {
+  }, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+    responsive: true
+  }, /*#__PURE__*/_react.default.createElement(S.ImgItem, {
     image: props.image
   }), /*#__PURE__*/_react.default.createElement(S.ItemsWrapper, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     row: true
@@ -38,13 +40,17 @@ var VHImgVideoIconText = function VHImgVideoIconText(props) {
     style: {
       justifyContent: "center",
       marginLeft: "15px"
-    }
+    },
+    mobileDisplayNone: true
   }, /*#__PURE__*/_react.default.createElement(_index3.default, {
     icon: props.icon,
     color: props.color,
     md: true
   })), /*#__PURE__*/_react.default.createElement(_index.Row, {
-    width: "60%"
+    width: "60%",
+    style: {
+      padding: "0 15px"
+    }
   }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "platform1",
     color: "gray-10",

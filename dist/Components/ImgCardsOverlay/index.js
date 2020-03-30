@@ -30,7 +30,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var VHImgCardsOverlay = function VHImgCardsOverlay(props) {
   return /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true,
-    responsive: true
+    responsive: true,
+    marginTop: 30,
+    mobileMarginSM: true
   }, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_index4.default, {

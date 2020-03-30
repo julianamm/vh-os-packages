@@ -47,7 +47,9 @@ var VHTextsImageLink = function VHTextsImageLink(props) {
     xsIcon: props.xsIcon,
     smIcon: props.smIcon,
     mdIcon: props.mdIcon,
-    lgIcon: props.lgImg
+    lgIcon: props.lgImg,
+    data: props.data,
+    onEvent: props.onEvent
   })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "50%"
   })))));
@@ -65,6 +67,8 @@ VHTextsImageLink.defaultProps = {
   reverseBottom: false
 };
 VHTextsImageLink.prototypes = {
+  onEvent: _propTypes.default.func,
+  data: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object]),
   className: '',
   title: _propTypes.default.string.isRequired,
   highlight: _propTypes.default.string.isRequired,

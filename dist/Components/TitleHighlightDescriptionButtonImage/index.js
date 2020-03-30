@@ -27,7 +27,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHTitleHighlightDescriptionButtonImage = function VHTitleHighlightDescriptionButtonImage(props) {
   return /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
-    row: true
+    row: true,
+    responsive: true
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "40%",
     marginTop: 150
@@ -51,16 +52,19 @@ var VHTitleHighlightDescriptionButtonImage = function VHTitleHighlightDescriptio
     text: props.description
   })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "50%",
-    marginTop: 30
+    marginTop: 30,
+    marginBottom: 30
   }, /*#__PURE__*/_react.default.createElement(_index3.default, {
     secondary: true,
     onEvent: props.onEvent,
     data: props.data,
-    label: props.label
+    label: props.label,
+    lg: true
   }))), /*#__PURE__*/_react.default.createElement(_index.Row, {
     width: "60%",
-    height: 500,
-    marginTop: 50
+    height: 600,
+    marginTop: 50,
+    mobileDisplayNone: true
   }, /*#__PURE__*/_react.default.createElement(S.ImgWrapper, {
     image: props.image
   }))));

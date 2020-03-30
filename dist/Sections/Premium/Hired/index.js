@@ -22,8 +22,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var VHPremiumHiredSection = function VHPremiumHiredSection(props) {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true,
-    marginTop: 40,
-    marginBottom: 30
+    marginBottom: 20,
+    style: {
+      textAlign: "center"
+    }
   }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     variant: "h2",
     color: "gray-100",
@@ -32,7 +34,8 @@ var VHPremiumHiredSection = function VHPremiumHiredSection(props) {
     row: true,
     alignItemsCenter: true,
     marginBottom: 30,
-    responsive: true
+    responsive: true,
+    mobileMarginSM: true
   }, props.candidates.map(function (candidate) {
     return /*#__PURE__*/_react.default.createElement(_index.Row, {
       marginBottom5: true,
@@ -57,7 +60,9 @@ var VHPremiumHiredSection = function VHPremiumHiredSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_index4.default, {
     label: props.btnLabel,
     secondary: true,
-    lg: true
+    lg: true,
+    onEvent: props.onEvent,
+    data: props.data
   }))));
 };
 

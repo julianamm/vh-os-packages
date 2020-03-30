@@ -32,12 +32,13 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var VHPremiumTemplate = function VHPremiumTemplate(props) {
-  return /*#__PURE__*/_react.default.createElement(_Grid.Container, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  return /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
       backgroundColor: "#f2f8fc",
-      height: "100vh",
-      padding: "20px 0 40px 0"
+      padding: "0px 0 50px 0"
     }
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Container, {
+    lg: true
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
     title: props.intro.items.title,
     highlight: props.intro.items.highlight,
@@ -46,13 +47,15 @@ var VHPremiumTemplate = function VHPremiumTemplate(props) {
     image: props.intro.items.image,
     features: props.intro.features,
     onEvent: props.onEvent
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
       backgroundColor: "#fffffff",
-      padding: "270px 0 150px 0"
+      padding: "50px 0"
     }
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Container, {
+    lg: true
   }, /*#__PURE__*/_react.default.createElement(_index2.default, {
-    sectionTitle: "How Does Premium Work",
+    sectionTitle: props.services.items.sectionTitle,
     title: props.services.interviewClass.title,
     highlight: props.services.interviewClass.highlight,
     description: props.services.interviewClass.description,
@@ -60,25 +63,27 @@ var VHPremiumTemplate = function VHPremiumTemplate(props) {
     label: props.services.interviewClass.label,
     to: props.services.interviewClass.to,
     icon: props.services.interviewClass.icon,
-    premiumOtherServices: props.services.otherServices
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    premiumOtherServices: props.services.otherServices,
+    onEvent: props.onEvent
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
       backgroundColor: "rgba(203, 248, 251, 0.44)",
-      height: "100vh",
-      padding: "50px 0 20px 0"
+      padding: "50px 0"
     }
-  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
-    sectionTitle: "Pricing",
-    icon: "medal",
-    title: "30 Days Money Back Guarantee",
-    description: "If you're not getting incredible value and feeling more prepared than ever to get a job in Canada or Europe in the first 30 days, just talk to us and we'll refund 100% of your purchase, no questions asked.",
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Container, null, /*#__PURE__*/_react.default.createElement(_index3.default, {
+    sectionTitle: props.pricing.items.sectionTitle,
+    icon: props.pricing.items.icon,
+    title: props.pricing.items.title,
+    description: props.pricing.items.description,
     cardItems: props.pricing.cardItems,
     onEvent: props.onEvent
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
       backgroundColor: "#ffffff",
-      padding: "50px 0 150px 0"
+      padding: "50px 0"
     }
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Container, {
+    lg: true
   }, /*#__PURE__*/_react.default.createElement(_index4.default, {
     sectionTitle: props.success.items.sectionTitle,
     title: props.success.items.title,
@@ -95,34 +100,40 @@ var VHPremiumTemplate = function VHPremiumTemplate(props) {
     to: props.success.items.to,
     iconLink: props.success.items.iconLink,
     onEvent: props.onEvent
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
       backgroundColor: "#ffffff",
-      height: "100vh",
       padding: "50px 0"
     }
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Container, {
+    lg: true
   }, /*#__PURE__*/_react.default.createElement(_index5.default, {
-    sectionTitle: "Premium Vanhackers hired",
-    btnLabel: "JOIN VANHACK PREMIUM",
+    sectionTitle: props.hired.items.sectionTitle,
+    btnLabel: props.hired.items.btnLabel,
     candidates: props.hired.candidates,
-    onEvent: props.onEvent
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    onEvent: props.onEvent,
+    data: "VHPremiumHiredSection"
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
       backgroundColor: "#f2f6f9",
-      height: "100vh",
       padding: "50px 0"
     }
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Container, {
+    lg: true
   }, /*#__PURE__*/_react.default.createElement(_index6.default, {
-    sectionTitle: "Frequently Asking Questions",
-    title: "Have questions about VanHack Premium?",
-    description: "Give us your email and we\u2019ll get in touch.",
-    imgSvg: "meeting",
+    sectionTitle: props.faq.items.sectionTitle,
+    title: props.faq.items.title,
+    description: props.faq.items.description,
+    imgSvg: props.faq.items.imgSvg,
     faqs: props.faq.faqs,
     onEvent: props.onEvent
-  })));
+  }))));
 };
 
 VHPremiumTemplate.defaultProps = {};
-VHPremiumTemplate.propTypes = {};
+VHPremiumTemplate.propTypes = {
+  onEvent: _propTypes.default.func,
+  data: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.object])
+};
 var _default = VHPremiumTemplate;
 exports.default = _default;

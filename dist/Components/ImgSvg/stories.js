@@ -10,6 +10,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _react2.storiesOf)('Source|Img Svg', module).add('VHImgSvg', function () {
   return /*#__PURE__*/_react.default.createElement(_.default, {
-    imgSvg: "webinar"
+    imgSvg: "meeting"
   });
 });

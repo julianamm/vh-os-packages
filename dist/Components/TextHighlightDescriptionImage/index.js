@@ -26,13 +26,14 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHTextHighlightDescriptionImage = function VHTextHighlightDescriptionImage(props) {
-  return /*#__PURE__*/_react.default.createElement(_index.Container, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
-    reverse: props.reverse
+  return /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+    reverse: props.reverse,
+    responsive: true
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
+    marginBottom5: true,
     style: {
       justifyContent: "center"
-    },
-    responsive: true
+    }
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsLeft: true,
     marginBottom: 8
@@ -54,7 +55,8 @@ var VHTextHighlightDescriptionImage = function VHTextHighlightDescriptionImage(p
     text: props.description
   }))), /*#__PURE__*/_react.default.createElement(_index.Row, {
     alignItemsCenter: true,
-    responsive: true
+    marginBottom5: true,
+    mobileImgsSM: true
   }, /*#__PURE__*/_react.default.createElement(_index3.default, {
     imgSvg: props.imgSvg
   }))));

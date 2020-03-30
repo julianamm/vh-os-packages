@@ -29,6 +29,8 @@ var _checkbox = _interopRequireDefault(require("../../Components/Input/checkbox"
 
 var _Multiple = _interopRequireDefault(require("../../Components/Input/Multiple"));
 
+var _IconText = _interopRequireDefault(require("../../Components/IconText/"));
+
 var _index3 = require("../../util/index");
 
 var S = _interopRequireWildcard(require("./styles.js"));
@@ -239,6 +241,24 @@ var VHModalExperience = function VHModalExperience(props) {
         cursor: true
       })));
     }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      row: true
+    }, currentItem.id && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      alignItemsLeft: true
+    }, /*#__PURE__*/_react.default.createElement(_IconText.default, {
+      cursor: true,
+      iconColor: "gray-60",
+      textColor: "gray-60",
+      text: 'Delete',
+      icon: "delete",
+      className: "vh-delete-education ".concat(props.className ? props.className : ''),
+      variant: "platform",
+      data: {
+        action: 'deleteExperience',
+        id: currentItem.id
+      },
+      onEvent: props.onEvent,
+      onClose: props.onClose
+    })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       alignItemsRight: true
     }, /*#__PURE__*/_react.default.createElement(_index2.default, {
       primary: true,
@@ -250,7 +270,7 @@ var VHModalExperience = function VHModalExperience(props) {
       onClose: props.onClose,
       closeModal: props.closeModalExperience,
       label: "Save"
-    })))
+    }))))
   });
 };
 
