@@ -31,6 +31,8 @@ const VHTextsImageLink = props => {
                                     smIcon={props.smIcon}
                                     mdIcon={props.mdIcon}
                                     lgIcon={props.lgImg}
+                                    data={props.data}
+                                    onEvent={props.onEvent}
                                 />
                             </Row>
                             <Row width={"50%"}></Row>
@@ -54,6 +56,8 @@ VHTextsImageLink.defaultProps = {
 }
 
 VHTextsImageLink.prototypes = {
+    onEvent: PropTypes.func,
+    data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     className: '',
     title: PropTypes.string.isRequired,
     highlight: PropTypes.string.isRequired,

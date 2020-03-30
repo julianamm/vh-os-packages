@@ -49,6 +49,7 @@ const VHCardPricing = props => {
           <Row alignItemsCenter marginTop={15} marginBottom={5} style={{ width: "50%", height: "40px"}}>
             <VHButton 
               onEvent={props.onEvent}
+              data={props.data}
               label={props.cta}
               lg
               outline={props.outlineBtn}
@@ -75,6 +76,8 @@ VHCardPricing.defaultProps = {
 };
 
 VHCardPricing.propTypes = {
+  onEvent: PropTypes.func,
+  data: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   show: PropTypes.bool,
   onEvent: PropTypes.func,
   label: PropTypes.string,

@@ -35,6 +35,8 @@ const VHPremiumPricingSection = props => {
                         round={item.round}
                         outlineBtn={item.outlineBtn}
                         secondaryBtn={item.secondaryBtn}
+                        onEvent={props.onEvent}
+                        data={"VHCardPrincing"}
                     />
                 </Row>
             ))}
