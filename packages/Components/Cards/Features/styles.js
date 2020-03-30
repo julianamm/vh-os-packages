@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Color from "../../../Colors";
 
 export const TextWrapper = styled.span`
-    width: 70%;
+    width: 65%;
     max-width: 300px;
     text-align: center;
     height: 100%;
