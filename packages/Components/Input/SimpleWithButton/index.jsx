@@ -8,7 +8,7 @@ import VHButton from '../../Button/index';
 const VHInputSimpleWithButton = props => {
   return (
     <Row row>
-        <Row width={"85%"} style={{marginRight: "4px"}}>
+        <Row width={"90%"} style={{marginRight: "4px"}}>
             <VHInput
                 disabled={props.disabled}
                 error={props.error}
@@ -20,14 +20,12 @@ const VHInputSimpleWithButton = props => {
                 data={props.data}
             />
         </Row>
-        <Row width={"15%"}>
-            <VHButton 
-                primary 
-                lg 
-                onEvent={props.onEvent} 
-                label={props.label} 
-            />
-        </Row>
+        <VHButton 
+            primary 
+            lg 
+            onEvent={props.onEvent} 
+            label={props.label} 
+        />
     </Row>
   )
 }

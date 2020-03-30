@@ -11,7 +11,7 @@ const VHPremiumSuccessCasesSection = props => {
   return (
     <React.Fragment>
         <Container>
-            <Row alignItemsCenter marginBottom={40}>
+            <Row alignItemsCenter marginBottom={20}>
                 <VHText
                     variant={"h2"}
                     color={"gray-100"}
@@ -20,7 +20,7 @@ const VHPremiumSuccessCasesSection = props => {
             </Row>
             <Row row responsive>
                 <Row alignItemsCenter>
-                    <Row marginBottom={30} >
+                    <Row marginBottom={30} mobileDisplayNone>
                         <VHTextHighlightDescriptionImage 
                             title={props.title}
                             highlight={props.highlight}

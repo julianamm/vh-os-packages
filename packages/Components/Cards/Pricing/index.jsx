@@ -24,7 +24,7 @@ const VHCardPricing = props => {
                 />
             </S.Wrapper>
           </Row>
-          <Row alignItemsCenter marginTop={15} marginBottom={5}>
+          <Row alignItemsCenter marginTop={30} marginBottom={10}>
             <VHText 
               variant={"h4"}
               color={"black-60"}
@@ -46,21 +46,21 @@ const VHCardPricing = props => {
             color={"black-60"}
             text={props.subscription}
           />
-          <Row alignItemsCenter marginTop={15} marginBottom={5} style={{ width: "50%", height: "40px"}}>
+          <Row alignItemsCenter marginTop={30} marginBottom={10} width={"60%"}>
             <VHButton 
               onEvent={props.onEvent}
               data={props.data}
               label={props.cta}
-              lg
+              full
               outline={props.outlineBtn}
               primary={props.primaryBtn}
               secondary={props.secondaryBtn}
-              full
+              
             />
           </Row>
-          <Row height={20} alignItemsCenter>
+          <Row height={30} alignItemsCenter style={{ textAlign: "center" }}>
             <VHText 
-                variant={"subtitle2"}
+                variant={"caption"}
                 color={"black-60"}
                 text={props.note}
             />

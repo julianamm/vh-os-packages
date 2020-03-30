@@ -8,7 +8,7 @@ import * as S from './styles';
 const VHTitleHighlightDescriptionButtonImage = props => {
     return (
         <Container>
-            <Row row>
+            <Row row responsive>
                 <Row width={"40%"} marginTop={150}>
                     <Row marginBottom5>
                         <VHText 
@@ -31,17 +31,17 @@ const VHTitleHighlightDescriptionButtonImage = props => {
                             text={props.description}
                         />     
                     </Row>
-                    <Row width={"50%"} marginTop={30}>
+                    <Row width={"50%"} marginTop={30} marginBottom={30}>
                         <VHButton 
                             secondary
                             onEvent={props.onEvent}
                             data={props.data} 
                             label={props.label}
-
+                            lg
                         />
                     </Row>
                 </Row>
-                <Row width={"60%"} height={500} marginTop={50}>
+                <Row width={"60%"} height={600} marginTop={50} mobileDisplayNone>
                     <S.ImgWrapper image={props.image}/>
                 </Row>
             </Row>

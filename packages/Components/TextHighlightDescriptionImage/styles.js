@@ -13,6 +13,12 @@ export const UnderlineText = styled.span`
 export const Wrapper = styled.div`
     display: flex;
     
+    ${({ responsive }) => responsive && `
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    `}
+
     ${({ reverse }) => reverse && `
         flex-direction: row-reverse;
   `}

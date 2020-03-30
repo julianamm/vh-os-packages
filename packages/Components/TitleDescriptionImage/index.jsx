@@ -4,7 +4,7 @@ import { Row } from '../../Grid/index';
 import VHText from "../Text/index";
 import VHImgSvg from "../ImgSvg";
 
-const VHTitleDescriptionImage = props => {
+const VHTitleDescriptionImage =  props => {
     return (
         <Row row alignItemsCenter responsive>
             <Row style={{ justifyContent: "center", marginRight: "30px"}}>

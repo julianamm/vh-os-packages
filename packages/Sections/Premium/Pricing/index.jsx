@@ -16,7 +16,7 @@ const VHPremiumPricingSection = props => {
                 text={props.sectionTitle}
             />
         </Row>
-        <Row row marginTop={50} marginBottom={10} style={{justifyContent: "center"}}>
+        <Row row marginTop={50} marginBottom={10} style={{justifyContent: "center"}} alignItemsCenter responsive>
             {props.cardItems.map(item => (
                 <Row width={"360px"} style={{padding: "10px"}}>
                     <VHCardPrincing 
@@ -48,7 +48,7 @@ const VHPremiumPricingSection = props => {
             />
         </Row>
         <Row alignItemsCenter>
-            <Row width={"60%"} style={{textAlign: "center"}}>
+            <Row width={"50%"} style={{textAlign: "center"}}>
                 <VHTitleDescription 
                     titleColor={"h4"}
                     descriptionColor={"gray-80"}

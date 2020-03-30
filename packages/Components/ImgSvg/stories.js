@@ -6,6 +6,6 @@ storiesOf('Source|Img Svg', module)
 
 .add('VHImgSvg', () => (
     <VHImgSvg 
-        imgSvg="webinar"
+        imgSvg="meeting"
     />
 ))

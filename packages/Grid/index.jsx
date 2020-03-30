@@ -96,6 +96,38 @@ export const Row = styled.div`
         }
     `}
 
+    ${({ mobileDisplayNone }) => mobileDisplayNone && `
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    `}
+
+    ${({ mobileImgsSM }) => mobileImgsSM && `
+        @media screen and (max-width: 768px) {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+    `}
+
+    ${({ mobileMarginSM }) => mobileMarginSM && `
+        @media screen and (max-width: 768px) {
+            margin: 15px 0;
+        }
+    `}
+
+    ${({ mobileMarginBottomSM }) => mobileMarginBottomSM && `
+        @media screen and (max-width: 768px) {
+            margin-bottom: 40px;
+        }
+    `}
+
+    ${({ mobileTxtCenter }) => mobileTxtCenter && `
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
+    `}
+
     ${({ autoWidth }) => autoWidth && `
        width: auto;
     `}
