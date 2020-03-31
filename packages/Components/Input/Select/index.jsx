@@ -26,7 +26,9 @@ if (props.preLoading) {
       ...base,
       border: 0,
       boxShadow: "none",
-      fontWeight: props.bold ? 'bold' : '500'
+      fontWeight: props.bold ? 'bold' : '500',
+      fontFamily: 'Roboto',
+      fontSize: '14px' 
     }),
     indicatorSeparator: (styles) => ({ display: 'none' }),
     clearIndicator: (styles) => ({ display: 'none' }),
@@ -35,8 +37,13 @@ if (props.preLoading) {
   const styled = {
     indicatorSeparator: (styles) => ({ display: 'none' }),
     clearIndicator: (styles) => ({ display: 'none' }),
-    valueContainer: (base) => ({ height: '40px', width: 'auto', display: 'flex', marginLeft: 8 }),
-    multiValue: (base) => ({ width: 'auto', height: 'auto', marginLeft: 8, display: 'flex', alignItems: 'center' }),
+    valueContainer: (base) => ({width: 'auto', display: 'flex', marginLeft: 8}),
+    multiValue: (base) => ({width: 'auto', height: 'auto', marginLeft: 8, display: 'flex', alignItems: 'center'}),
+    control: base => ({
+      ...base,
+      fontFamily: 'Roboto',
+      fontSize: '14px' 
+    }),
   };
   
   const DropdownIcon = () => {
@@ -56,7 +63,7 @@ if (props.preLoading) {
   };
   
   return (
-    <Row responsive style={{ position: 'relative', marginBottom: props.marginBottom ? props.marginBottom : '21px' }}>
+    <Row responsive style={{ position: 'relative', marginBottom: props.marginBottom ? props.marginBottom : '21px' }} className='VH-select'>
       {
         props.caption &&
         <Row style={{ marginBottom : '6px' }}>
