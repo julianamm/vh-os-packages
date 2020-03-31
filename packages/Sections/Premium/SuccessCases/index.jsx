@@ -20,7 +20,7 @@ const VHPremiumSuccessCasesSection = props => {
             </Row>
             <Row row responsive>
                 <Row alignItemsCenter>
-                    <Row marginBottom={30} mobileDisplayNone>
+                    <Row mobileDisplayNone>
                         <VHTextHighlightDescriptionImage 
                             title={props.title}
                             highlight={props.highlight}

@@ -104,7 +104,7 @@ function ConvertFiles(){
 
 const Obj = new ConvertFiles()
 // Obj.setDir(dirDurand)
-// Obj.setDir(dirFlags)
+Obj.setDir(dirFlags)
 // Obj.setDir(dirIcons)
 // Obj.setDir(dirBackground)
 
