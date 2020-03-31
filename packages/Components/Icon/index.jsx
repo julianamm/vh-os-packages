@@ -15,6 +15,11 @@ import Germany from '../../assets/svg/flags/flag_germany.svg/index.js';
 import Ireland from '../../assets/svg/flags/flag_ireland.svg/index.js';
 import Netherlands from '../../assets/svg/flags/flag_netherlands.svg/index.js';
 import UK from '../../assets/svg/flags/flag_uk.svg/index.js';
+import Brazil from '../../assets/svg/flags/flag_brazil.svg/index.js';
+import China from '../../assets/svg/flags/flag_china.svg/index.js';
+import India from '../../assets/svg/flags/flag_india.svg/index.js';
+import SouthAfrica from '../../assets/svg/flags/flag_south_africa.svg/index.js';
+import Russia from '../../assets/svg/flags/flag_russia.svg/index.js';
 import CameraIcon from '../../assets/svg/icons/icon_camera.svg/index.js';
 import Interview from '../../assets/svg/icons/icon_interview.svg/index.js';
 import Profile from '../../assets/svg/icons/icon_profile.svg/index.js';
@@ -113,6 +118,16 @@ const VHIcon = props => {
       return <Germany fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'netherlands':
       return <Netherlands fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'brazil':
+      return <Brazil fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'china':
+      return <China fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'india':
+      return <India fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'south-africa':
+      return <SouthAfrica fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'russia':
+      return <Russia fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'camera':
       return <CameraIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'interview':
