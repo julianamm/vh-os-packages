@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import VHPremiumIntroSection from ".";
+import VHPremiumFaqSection from ".";
 
 const items = {
     sectionTitle: "Frequently Asking Questions",
@@ -27,7 +27,7 @@ const faqs = [
 storiesOf("Sections|Premium/Faq", module)
     .add("Default", () => (
         <div style={{ backgroundColor: "#f2f6f9", height: "100vh", padding: "24px" }}>
-            <VHPremiumIntroSection
+            <VHPremiumFaqSection
                 sectionTitle={items.sectionTitle}
                 title={items.title}
                 description={items.description}

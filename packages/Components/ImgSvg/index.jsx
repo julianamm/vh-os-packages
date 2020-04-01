@@ -31,7 +31,7 @@ VHImgSvg.defaultProps = {
   className: '',
 }
 export const imgSvgPropTypes = {
-    imgSvg: PropTypes.string.isRequired,
+    imgSvg: PropTypes.string,
 }
 
 VHImgSvg.propTypes = imgSvgPropTypes
