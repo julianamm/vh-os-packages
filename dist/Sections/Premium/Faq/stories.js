@@ -12,8 +12,7 @@ var items = {
   sectionTitle: "Frequently Asking Questions",
   title: "Have questions about VanHack Premium?",
   description: "Give us your email and we’ll get in touch.",
-  imgSvg: "meeting",
-  text: "Thank you for signing up!"
+  imgSvg: "meeting"
 };
 var faqs = [{
   question: "Do I need Premium to get a Job through VH?",
@@ -26,18 +25,17 @@ var faqs = [{
   answer: "No. Premium is a value-added service for people who wish to improve their professional skills. It does not guarantee you a job."
 }];
 (0, _react2.storiesOf)("Sections|Premium/Faq", module).add("Default", function () {
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       backgroundColor: "#f2f6f9",
       height: "100vh",
       padding: "24px"
     }
-  }, _react.default.createElement(_.default, {
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
     sectionTitle: items.sectionTitle,
     title: items.title,
     description: items.description,
     imgSvg: items.imgSvg,
-    text: items.text,
     faqs: faqs,
     assigned: false
   }));
