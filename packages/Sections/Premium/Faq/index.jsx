@@ -37,7 +37,7 @@ const VHPremiumFaqSection = props => {
             </Row>
             <Row width={"50%"} alignItemsCenter>
                 {props.faqs.map(faq => (
-                    <Row width={"80%"} alignItemsCenter marginBottom={20} style={{ padding: "20px" }} mobileTxtCenter>
+                    <Row width={"80%"} alignItemsCenter marginBottom={8} style={{ padding: "20px" }} mobileTxtCenter>
                         <Row marginBottom={3}>
                             <VHText
                                 variant={"h4"}

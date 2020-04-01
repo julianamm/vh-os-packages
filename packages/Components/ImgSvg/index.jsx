@@ -5,7 +5,7 @@ import MeetingImg from '../../assets/svg/background/img_meeting.svg/index.js';
 import InterviewImg from '../../assets/svg/background/img_premium_interview.svg/index.js';
 import ProfileImg from '../../assets/svg/background/img_premium_profile.svg/index.js';
 import SlackImg from '../../assets/svg/background/img_premium_slack.svg/index.js';
-import WebinarsImg from '../../assets/svg/background/img_premium_webinars.svg/index.js';
+import WebinarsImg from '../../assets/svg/background/img_premium_webinar.svg/index.js';
 
 const VHImgSvg = props => {
 

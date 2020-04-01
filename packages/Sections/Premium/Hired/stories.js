@@ -20,28 +20,28 @@ const candidates = [
         position: "Backend Developer",
         country: "from Brazil",
         userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-        flag: "usa",
+        flag: "south-africa",
     },
     {
         name: "Mitchell Watson",
         position: "Backend Developer",
         country: "from Brazil",
         userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-        flag: "ireland",
+        flag: "india",
     },
     {
         name: "Mitchell Watson",
         position: "Backend Developer",
         country: "from Brazil",
         userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-        flag: "uk",
+        flag: "russia",
     },
     {
         name: "Mitchell Watson",
         position: "Backend Developer",
         country: "from Brazil",
         userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-        flag: "germany",
+        flag: "brazil",
     },
 ];
 
