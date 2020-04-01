@@ -25,6 +25,7 @@ const VHInputSimpleWithButton = props => {
             lg 
             onEvent={props.onEvent} 
             label={props.label} 
+            data={props.data}
         />
     </Row>
   )

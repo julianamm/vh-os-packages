@@ -54,13 +54,13 @@ var items = [{
 }];
 var currentItem = [items[4], items[5]];
 (0, _react2.storiesOf)("Components|Input/Select", module).add("default", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       width: '80%',
       marginLeft: '1%',
       padding: '9px'
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
     caption: "Annual salary expectation",
     captionColor: "gray-100",
     data: 'AnyObjectOrString',
@@ -76,13 +76,13 @@ var currentItem = [items[4], items[5]];
     }
   }));
 }).add("single", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       width: '80%',
       marginLeft: '1%',
       padding: '9px'
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
     caption: "Annual salary expectation",
     placeholder: "Annual salary expectation",
     data: 'AnyObjectOrString',
@@ -97,13 +97,13 @@ var currentItem = [items[4], items[5]];
     }
   }));
 }).add("single clear indicator", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       width: '80%',
       marginLeft: '1%',
       padding: '9px'
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
     removeIndicator: true,
     caption: "Annual salary expectation",
     data: 'AnyObjectOrString',
@@ -118,13 +118,13 @@ var currentItem = [items[4], items[5]];
     }
   }));
 }).add("border remover", function () {
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return _react.default.createElement("div", {
     style: {
       width: '80%',
       marginLeft: '1%',
       padding: '9px'
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
+  }, _react.default.createElement(_.default, {
     removeBorder: true,
     caption: "Annual salary expectation",
     data: 'AnyObjectOrString',

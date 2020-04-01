@@ -33,6 +33,7 @@ storiesOf("Sections|Premium/Faq", module)
                 description={items.description}
                 imgSvg={items.imgSvg}
                 faqs={faqs}
+                assigned={false}
             />
         </div>
     ));

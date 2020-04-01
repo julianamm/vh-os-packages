@@ -28,30 +28,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var VHLinkImage = function VHLinkImage(props) {
   var _React$createElement;
 
-  return /*#__PURE__*/_react.default.createElement(_index.Row, {
+  return _react.default.createElement(_index.Row, {
     row: true,
     width: 500
-  }, /*#__PURE__*/_react.default.createElement(S.A, {
+  }, _react.default.createElement(S.A, {
     reverse: props.reverse,
     cursor: props.cursor,
     xs: props.xsLabel,
     sm: props.smLabel,
     lg: props.lgLabel,
-    onClick: function onClick() {
-      props.onEvent({
-        type: "OnClick",
-        origin: "VHLinkImage",
-        props: {
-          data: props.data
-        }
-      });
-    },
     className: "vh-link-image-component ".concat(props.className ? props.className : ''),
     color: props.colorLabel,
     noUnderscore: props.noUnderscore,
     href: props.to,
+    target: "_blank",
     label: props.label
-  }, props.label, /*#__PURE__*/_react.default.createElement(S.IconWrapper, null, /*#__PURE__*/_react.default.createElement(_index2.default, (_React$createElement = {
+  }, props.label, _react.default.createElement(S.IconWrapper, null, _react.default.createElement(_index2.default, (_React$createElement = {
     icon: props.icon,
     xs: props.xsIcon,
     sm: props.smIcon,
@@ -78,7 +70,8 @@ VHLinkImage.propTypes = {
   label: _propTypes.default.string.isRequired,
   className: _propTypes.default.string,
   colorLabel: _propTypes.default.string,
-  to: _propTypes.default.string.isRequired,
+  to: _propTypes.default.string,
+  target: _propTypes.default.string,
   icon: _propTypes.default.string,
   xsIcon: _propTypes.default.bool,
   smIcon: _propTypes.default.bool,

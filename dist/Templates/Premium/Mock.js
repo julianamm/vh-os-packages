@@ -110,7 +110,7 @@ Mock.pricing = {
     noHoverChip: true,
     transparentChip: true,
     round: true,
-    period: "Semestre",
+    period: "Semester",
     price: "65",
     unit: "CAD$/month",
     subscription: "Renews every month",
@@ -156,13 +156,13 @@ Mock.hired = {
     position: "Backend Developer",
     country: "from Brazil",
     userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-    flag: "brazil"
+    flag: "canada"
   }, {
     name: "Mitchell Watson",
     position: "Backend Developer",
     country: "from Brazil",
     userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-    flag: "china"
+    flag: "brazil"
   }, {
     name: "Mitchell Watson",
     position: "Backend Developer",
@@ -188,17 +188,19 @@ Mock.faq = {
     sectionTitle: "Frequently Asked Questions",
     title: "Have questions about VanHack Premium?",
     description: "Give us your email and we’ll get in touch.",
-    imgSvg: "meeting"
+    imgSvg: "meeting",
+    text: "Thank you for signing up!",
+    assigned: false
   },
   faqs: [{
     question: "Do I need Premium to get a Job through VH?",
     answer: "No. Premium is a value-added service for people who wish to improve their professional skills. It does not guarantee you a job."
   }, {
-    question: "Are classes individual or group?",
-    answer: "No. Premium is a value-added service for people who wish to improve their professional skills. It does not guarantee you a job."
+    question: "Are classes individual or group? What are the classes' schedules and timezone?",
+    answer: "The interview practice is group classes. It runs twice a day from Monday to Thursday. From 9 am to 10:30 am and from 4 pm to 5:30 pm Pacific Time (PST). All classes are recorded and available on our VH Premium library."
   }, {
     question: "Does premium offer regular English classes and IELTS preparation?",
-    answer: "No. Premium is a value-added service for people who wish to improve their professional skills. It does not guarantee you a job."
+    answer: "No. Premium does not include either regular English classes or IELTS preparation. Classes are 100% focused on interview preparation. A great way to increase your confidence and interview performance as well as improve your vocabulary and overall English skills."
   }]
 };
 var _default = Mock;
