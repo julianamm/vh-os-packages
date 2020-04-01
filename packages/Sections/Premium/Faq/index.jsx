@@ -6,6 +6,7 @@ import VHTitleDescriptionImage from "../../../Components/TitleDescriptionImage/i
 import VHInputSimpleWithButton from  "../../../Components/Input/SimpleWithButton/index";
 
 const VHPremiumFaqSection = props => {
+    console.log(props.assigned)
   return (
     <React.Fragment>
         <Row alignItemsCenter marginBottom={20} style={{textAlign: "center"}}>
@@ -25,14 +26,26 @@ const VHPremiumFaqSection = props => {
                             imgSvg={"meeting"}
                         />
                     </Row>
-                    <Row marginBottom={12} style={{ backgroundColor: "#ffffff"}}>
-                        <VHInputSimpleWithButton
-                            placeholder={"E-mail"}
-                            label={"SEND"}
-                            onEvent={props.onEvent}
-                            data={"VHInputSimpleWithButton"}
-                        />
-                    </Row>
+                    {props.assigned &&  
+                        <Row marginBottom={12}>
+                            <VHText 
+                                variant={"h6"}
+                                color={"gray-90"}
+                                text={props.text}
+                            />
+                        </Row>
+                    }
+                    {!props.assigned &&
+                        
+                        <Row marginBottom={6} style={{ backgroundColor: "#ffffff"}}>
+                            <VHInputSimpleWithButton
+                                placeholder={"E-mail"}
+                                label={"SEND"}
+                                onEvent={props.onEvent}
+                                data={"VHInputSimpleWithButton"}
+                            />
+                        </Row>
+                    }
                 </Row>
             </Row>
             <Row width={"50%"} alignItemsCenter>

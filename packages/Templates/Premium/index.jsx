@@ -92,6 +92,8 @@ const VHPremiumTemplate = props => (
           title={props.faq.items.title}
           description={props.faq.items.description}
           imgSvg={props.faq.items.imgSvg}
+          text={props.faq.items.text}
+          assigned={props.assigned}
           faqs={props.faq.faqs}
           onEvent={props.onEvent}
         />
