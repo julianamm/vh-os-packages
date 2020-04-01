@@ -6,18 +6,23 @@ import Card from '../Cards/Base'
 import VHProgressBar from '../ProgressBar'
 import VHButton from '../Button'
 import VHText from '../Text'
+import VanhackLogo from '../../../assets/images/vanhack-logo-light.svg'
+import FirstStep from './FirstStep'
 
 
 const VHOnboarding = props => {
 
   console.log('props', props)
 
-  const [currentStep, setCurrentStep] = useState(props.currentStep)
+  //const [currentStep, setCurrentStep] = useState(props.currentStep)
+
+  let currentStep = 1
 
   return (
-    <Container justifyCenter fullHeight style={{backgroundColor:'blue'}} fullWidth>
+    <Container justifyCenter fullHeight style={{backgroundImage: 'linear-gradient(to bottom right, #56CCF2, #0675CE)'}} fullWidth>
+      <img style={{ marginTop: '50px', marginBottom: '50px' }} src={VanhackLogo} />
       <Row alignItemsCenter>
-        <Card noPadding width='50%' height='50vh'>
+        <Card noPadding width='50%' height='480px'>
             <Row>
               <VHProgressBar
                 steps={props.steps}
@@ -28,10 +33,11 @@ const VHOnboarding = props => {
               />
             </Row>
             <Row alignItemsCenter  style={{height: '100%'}}>
-              <Row style={{width: '90%', height: 'calc(100% - 10px)'}} >
+              <Row style={{width: '90%', height: 'calc(100% - 10px)', padding: '60px', paddingLeft: '60px', paddingRight: '60px'}} >
                 <Row style={{height: '100%', overflow:'scroll'}}>
                 {
-                  props.children
+                  currentStep === 1 &&
+                  <FirstStep />
                 }
                 </Row>
                 <Row row justifySpaceBetween alignItemsCenter style={{padding: '12px 0'}}>
