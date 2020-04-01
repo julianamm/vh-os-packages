@@ -26,15 +26,13 @@ var img_premium_profile = function img_premium_profile(props) {
     d: "M207.528 1.807c26.867 1.988 52.226 8.378 75.952 21.121 27.143 14.578 58.761 28.365 69.735 57.125 11.107 29.107-4.928 60.212-13.537 90.151-8.966 31.18-12.666 66.31-37.475 87.252-25.509 21.532-61.569 28.723-94.675 24.298-30.885-4.129-53.697-27.754-77.89-47.368-22.746-18.439-47.013-35.859-58.15-62.919-11.7-28.424-14.1-60.547-4.715-89.814 9.41-29.343 29.333-55.389 56.159-70.607 25.284-14.342 55.597-11.385 84.596-9.24z",
     clipRule: "evenodd",
     opacity: ".1"
-  }), /*#__PURE__*/React.createElement("g", {
-    filter: "url(#prefix__filter0_d)"
-  }, /*#__PURE__*/React.createElement("path", {
+  }), /*#__PURE__*/React.createElement("path", {
     fill: "#fff",
     d: "M118 24H307V264H118z"
   }), /*#__PURE__*/React.createElement("path", {
     stroke: "#F7F7F7",
     d: "M118.5 24.5H306.5V263.5H118.5z"
-  })), /*#__PURE__*/React.createElement("circle", {
+  }), /*#__PURE__*/React.createElement("circle", {
     cx: "212.5",
     cy: "88.5",
     r: "30.5",

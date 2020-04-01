@@ -20,8 +20,6 @@ var flag_india = function flag_india(props) {
     height: props.height || "38",
     fill: props.fill || "none",
     viewBox: props.viewBox || "0 0 50 38"
-  }, /*#__PURE__*/React.createElement("g", {
-    clipPath: "url(#clip0)"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M0 0H50V12.5H0V0Z",
     fill: "#FF9933"
@@ -46,7 +44,7 @@ var flag_india = function flag_india(props) {
   }), /*#__PURE__*/React.createElement("path", {
     d: "M25 23.125L25.15 20.5L25 19.25L24.85 20.5L25 23.125Z",
     fill: "#000088"
-  })), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
+  }), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
     id: "clip0"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M0 0H50V37.5H0V0Z",

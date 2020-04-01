@@ -20,8 +20,6 @@ var img_meeting = function img_meeting(props) {
     height: props.height || "150",
     fill: props.fill || "none",
     viewBox: props.viewBox || "0 0 178 150"
-  }, /*#__PURE__*/React.createElement("g", {
-    clipPath: "url(#prefix__clip0)"
   }, /*#__PURE__*/React.createElement("path", {
     fill: "#D5F2FB",
     d: "M120.831 15.257s-34.17-21.114-54.637-.816c-20.468 20.298-31.438 37.45-49.637 48.74-18.2 11.29-23.888 50.118 4.427 54.978 28.316 4.861 7.717-17.946 59.353-13.656 51.636 4.29 90.667-39.464 82.785-60.2-7.882-20.738-42.291-29.046-42.291-29.046zM13.665 139.57c9.07 6.072 19.104.728 24.303-7.8 2.49-4.091-.548-5.386-4.449-5.451-8.042-.131-15.118-2.366-22.98-3.027-5.224-.437-10.129 2.852-6.861 7.989 2.278 3.581 6.542 5.986 9.987 8.289z"
@@ -232,7 +230,7 @@ var img_meeting = function img_meeting(props) {
   }), /*#__PURE__*/React.createElement("path", {
     fill: "#757AD8",
     d: "M82.24 47.593c.117-.294.118-.622.002-.917-.117-.294-.342-.533-.629-.666-.287-.134-.614-.153-.914-.053-.3.1-.552.31-.701.59l-1.883-.88-.604 1.297 5.754 2.687.604-1.297-1.63-.76z"
-  })), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
+  }), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
     id: "prefix__clip0"
   }, /*#__PURE__*/React.createElement("path", {
     fill: "#fff",

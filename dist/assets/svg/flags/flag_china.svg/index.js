@@ -20,8 +20,6 @@ var flag_china = function flag_china(props) {
     height: props.height || "38",
     fill: props.fill || "none",
     viewBox: props.viewBox || "0 0 50 38"
-  }, /*#__PURE__*/React.createElement("g", {
-    clipPath: "url(#clip0)"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M0 0H50V37.5H0V0Z",
     fill: "#DE2910"
@@ -40,7 +38,7 @@ var flag_china = function flag_china(props) {
   }), /*#__PURE__*/React.createElement("path", {
     d: "M19.2179 18.6907L17.2863 15.7032L20.624 16.9342L17.1391 17.9872L19.4827 15.0597L19.2179 18.6907Z",
     fill: "#FFDE00"
-  })), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
+  }), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
     id: "clip0"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M0 0H50V37.5H0V0Z",

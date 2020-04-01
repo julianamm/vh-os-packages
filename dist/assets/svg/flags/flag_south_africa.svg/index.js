@@ -20,8 +20,6 @@ var flag_south_africa = function flag_south_africa(props) {
     height: props.height || "38",
     fill: props.fill || "none",
     viewBox: props.viewBox || "0 0 50 38"
-  }, /*#__PURE__*/React.createElement("g", {
-    clipPath: "url(#clip0)"
   }, /*#__PURE__*/React.createElement("path", {
     fillRule: "evenodd",
     clipRule: "evenodd",
@@ -52,7 +50,7 @@ var flag_south_africa = function flag_south_africa(props) {
     clipRule: "evenodd",
     d: "M6.95016 0H11.286L29.8598 12.5022H56.2411V14.9411H29.0176L6.95016 0.00732406V0ZM6.95016 37.5065H11.286L29.8598 25.0117H56.2411V22.5801H29.0176L6.95016 37.4992V37.5065Z",
     fill: "white"
-  })), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
+  }), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
     id: "clip0"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M0 0H50V37.5H0V0Z",
