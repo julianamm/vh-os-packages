@@ -59,7 +59,7 @@ var VHEducationSection = function VHEducationSection(props) {
       currentItem = _React$useState4[0],
       _setCurrentItem = _React$useState4[1];
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, openModal && !props.closeModal && /*#__PURE__*/_react.default.createElement(_ModalEducation.default, _defineProperty({
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, openModal && /*#__PURE__*/_react.default.createElement(_ModalEducation.default, _defineProperty({
     openModal: openModal,
     onClose: function onClose() {
       return setOpenModal(false);

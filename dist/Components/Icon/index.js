@@ -63,6 +63,8 @@ var _index26 = _interopRequireDefault(require("../../assets/svg/icons/icon_medal
 
 var _index27 = _interopRequireDefault(require("../../assets/svg/icons/icon_play.svg/index.js"));
 
+var _index28 = _interopRequireDefault(require("../../assets/svg/icons/experience.svg/index.js"));
+
 var _Colors = _interopRequireDefault(require("../../Colors"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -354,6 +356,14 @@ var VHIcon = function VHIcon(props) {
 
     case 'delete':
       return /*#__PURE__*/_react.default.createElement(_index.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'experience':
+      return /*#__PURE__*/_react.default.createElement(_index28.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
