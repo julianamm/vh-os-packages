@@ -36,16 +36,20 @@ const VHCardPricing = props => {
             color={"primary-dark"}
             text={props.price}
           />
-          <VHText 
-            variant={"subtitle3"}
-            color={"primary-dark"}
-            text={props.unit}
-          />
-          <VHText 
-            variant={"subtitle3"}
-            color={"black-60"}
-            text={props.subscription}
-          />
+          <Row alignItemsCenter height={20}>
+            <VHText 
+              variant={"subtitle3"}
+              color={"primary-dark"}
+              text={props.unit}
+            />
+          </Row>
+          <Row alignItemsCenter height={20}>
+            <VHText 
+              variant={"subtitle3"}
+              color={"black-60"}
+              text={props.subscription}
+            />
+          </Row>
           <Row alignItemsCenter marginTop={30} marginBottom={10} width={"60%"}>
             <VHButton 
               onEvent={props.onEvent}

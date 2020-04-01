@@ -36,37 +36,37 @@ var VHOnboarding = function VHOnboarding(props) {
   console.log('props', props); //const [currentStep, setCurrentStep] = useState(props.currentStep)
 
   var currentStep = 1;
-  return /*#__PURE__*/_react.default.createElement(_Grid.Container, {
+  return _react.default.createElement(_Grid.Container, {
     justifyCenter: true,
     fullHeight: true,
     style: {
       backgroundImage: 'linear-gradient(to bottom right, #56CCF2, #0675CE)'
     },
     fullWidth: true
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     style: {
       marginTop: '50px',
       marginBottom: '50px'
     },
     src: VanhackLogo
-  }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }), _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true
-  }, /*#__PURE__*/_react.default.createElement(_Base.default, {
+  }, _react.default.createElement(_Base.default, {
     noPadding: true,
     width: "50%",
     height: "480px"
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_ProgressBar.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_ProgressBar.default, {
     steps: props.steps,
     currentStep: currentStep,
     onEvent: function onEvent(e) {
       console.log(e);
     }
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  })), _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     style: {
       height: '100%'
     }
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     style: {
       width: '90%',
       height: 'calc(100% - 10px)',
@@ -74,19 +74,19 @@ var VHOnboarding = function VHOnboarding(props) {
       paddingLeft: '60px',
       paddingRight: '60px'
     }
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     style: {
       height: '100%',
       overflow: 'scroll'
     }
-  }, currentStep === 1 && /*#__PURE__*/_react.default.createElement(_FirstStep.default, null)), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, currentStep === 1 && _react.default.createElement(_FirstStep.default, null)), _react.default.createElement(_Grid.Row, {
     row: true,
     justifySpaceBetween: true,
     alignItemsCenter: true,
     style: {
       padding: '12px 0'
     }
-  }, /*#__PURE__*/_react.default.createElement("span", null, currentStep > 1 && /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }, _react.default.createElement("span", null, currentStep > 1 && _react.default.createElement(_Button.default, {
     className: "",
     outline: true,
     label: "Back",
@@ -107,11 +107,11 @@ var VHOnboarding = function VHOnboarding(props) {
     },
     primary: true,
     data: props
-  })), /*#__PURE__*/_react.default.createElement(_Text.default, {
+  })), _react.default.createElement(_Text.default, {
     text: "".concat(currentStep, " / ").concat(props.steps),
     variant: "platform1",
     color: "gray-60"
-  }), /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }), _react.default.createElement(_Button.default, {
     className: "",
     label: "Next",
     disabled: currentStep === props.steps + 1,
