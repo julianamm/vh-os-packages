@@ -40,9 +40,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject());
 
 var VHModal = function VHModal(props) {
-  return /*#__PURE__*/_react.default.createElement(S.ModalWrapper, {
+  return _react.default.createElement(S.ModalWrapper, {
     open: props.open
-  }, /*#__PURE__*/_react.default.createElement(S.ModalContainer, null, /*#__PURE__*/_react.default.createElement(S.Header, null, /*#__PURE__*/_react.default.createElement("div", null, props.header && props.header), !props.hideBtnClose && /*#__PURE__*/_react.default.createElement(S.Close, {
+  }, _react.default.createElement(S.ModalContainer, null, _react.default.createElement(S.Header, null, _react.default.createElement("div", null, props.header && props.header), !props.hideBtnClose && _react.default.createElement(S.Close, {
     onClick: function onClick() {
       if (props.onClose) {
         props.onClose();
@@ -53,12 +53,12 @@ var VHModal = function VHModal(props) {
         target: 'VHModal'
       });
     }
-  }, /*#__PURE__*/_react.default.createElement(_index.default, null))), /*#__PURE__*/_react.default.createElement(S.Content, null, props.content), props.confirmation && /*#__PURE__*/_react.default.createElement(S.ConfirmationSection, null, /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }, _react.default.createElement(_index.default, null))), _react.default.createElement(S.Content, null, props.content), props.confirmation && _react.default.createElement(S.ConfirmationSection, null, _react.default.createElement(_Button.default, {
     primary: true,
     outline: true,
     label: props.cancelTitle,
     onClick: props.onClose
-  }), /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }), _react.default.createElement(_Button.default, {
     disabled: props.disableAction,
     primary: true,
     label: props.confirmType,
