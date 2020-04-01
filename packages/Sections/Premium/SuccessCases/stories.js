@@ -2,13 +2,14 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import VHPremiumIntroSection from ".";
 
-import imgBubble from "../../../assets/svg/background/img_bubble.svg/index.js";
-
 const items = {
     sectionTitle: "Our Success Cases",
     title: "VANHACK PREMIUM CHANGE LIVES",
     highlight: "We've helped over 800 VanHackers get hired abroad in amazing companies in Canada and Europe.",
     imgBackgroundCards: "bubble",
+    source: "https://www.youtube.com/embed/ZepkPNPQMrA",
+    controls: true,
+    poster: require("../../../assets/svg/logo/vanhack_logo.svg/index.js"),
     cardLeft: 
         {
             title: "250+",
@@ -45,6 +46,11 @@ storiesOf("Sections|Premium/Success Cases", module)
                 label={items.label}
                 to={items.to}
                 iconLink={items.iconLink}
+                source={items.source}
+                controls={items.controls}
+                poster={items.poster}
+                width={items.width}
+                height={items.height}
             />
         </div>
     ));
