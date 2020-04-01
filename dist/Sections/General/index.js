@@ -109,6 +109,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     isLoading: props.controls.gender.loading,
     description: props.controls.gender.error && props.controls.gender.message,
     descriptionColor: "red-light",
+    placeholder: "Select an option",
     captionColor: props.controls.gender.loading ? "gray-40" : props.controls.gender.error ? "red" : 'gray-100'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true,
@@ -122,7 +123,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     onEvent: props.onEvent,
     title: "Phone number",
     titleColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red" : "gray-100",
-    titleVariant: "subtitle3"
+    titleVariant: "platform1"
   }), !props.controls.phone.preLoading && /*#__PURE__*/_react.default.createElement(_Simple.default, {
     data: "phone",
     onEvent: props.onEvent,

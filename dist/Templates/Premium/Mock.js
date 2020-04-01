@@ -29,10 +29,10 @@ Mock.intro = {
 };
 Mock.services = {
   items: {
-    sectionTitle: "How Does Premium Work"
+    sectionTitle: "How Premium Works"
   },
   interviewClass: {
-    title: "INTERVIEW CLASS",
+    title: "INTERVIEW CLASSES",
     highlight: "Learn how to ace an interview and improve your English skills at the same time",
     description: "Our teachers specialize in English for interviews. With 40+ hours of live classes every month, you’re bound to find a slot that works in your timezone. You will receive personalized interaction and feedback in every class making this a unique experience.",
     imgSvg: "interview",
@@ -43,7 +43,7 @@ Mock.services = {
   otherServices: [{
     title: "PROFILE REVIEW",
     highlight: "Have experts review your VanHack profile - improve all your profiles at once",
-    description: "All improvements directly translate to your resume and LinkedIn Profile. Impove all three at once! LinkedIn’s own data shows candidates with an improved profile are around 30% more likely to be hired.",
+    description: "All improvements directly translate to your resume and LinkedIn Profile. Improve all three at once! LinkedIn’s own data shows candidates with an improved profile are around 30% more likely to be hired.",
     imgSvg: "profile",
     reverseTop: true,
     avatar: require("../../assets/general/UserTestimonials/marco_texeira.jpg"),
@@ -54,7 +54,7 @@ Mock.services = {
   }, {
     title: "PREMIUM SLACK GROUP",
     highlight: "Exclusive Premium Slack Group. Connect with thousands of  motivated Premium Members",
-    description: "Get exciting information that’s not publicly available and access specific channels like #leap and #immigration where our specialists will answer your questions. Be motivated with the #I-got-a_job. And most of all, inspire each other in your common quest.",
+    description: "Get exciting information that’s not publicly available and access specific channels like #leap and #immigration where our specialists will answer your questions. Be motivated with #I-got-a_job. And most of all, inspire each other in your common quest.",
     imgSvg: "slack",
     reverseTop: false,
     avatar: require("../../assets/general/UserTestimonials/shara_shami.jpg"),
@@ -79,7 +79,7 @@ Mock.pricing = {
   items: {
     sectionTitle: "Pricing",
     icon: "medal",
-    title: "30 Days Money Back Guarantee",
+    title: "30-day Money Back Guarantee",
     description: "If you're not getting incredible value and feeling more prepared than ever to get a job in Canada or Europe in the first 30 days, just talk to us and we'll refund 100% of your purchase, no questions asked."
   },
   cardItems: [{
@@ -88,7 +88,7 @@ Mock.pricing = {
     period: "Month",
     price: "65",
     unit: "CAD$/month",
-    subscription: "Renew every month",
+    subscription: "Renews every month",
     cta: "Get Started",
     outlineBtn: true,
     note: ""
@@ -97,10 +97,10 @@ Mock.pricing = {
     save: "Save 15%",
     noHoverChip: true,
     transparentChip: true,
-    period: "Month",
+    period: "Quater",
     price: "65",
     unit: "CAD$/month",
-    subscription: "Renew every month",
+    subscription: "Renews every month",
     cta: "Get Started",
     outlineBtn: true,
     note: ""
@@ -110,10 +110,10 @@ Mock.pricing = {
     noHoverChip: true,
     transparentChip: true,
     round: true,
-    period: "Month",
+    period: "Semestre",
     price: "65",
     unit: "CAD$/month",
-    subscription: "Renew every month",
+    subscription: "Renews every month",
     cta: "Get Started",
     secondaryBtn: true,
     note: "The choice of 46% of premium members"
@@ -122,9 +122,14 @@ Mock.pricing = {
 Mock.success = {
   items: {
     sectionTitle: "Our Success Cases",
-    title: "VANHACK PREMIUM CHANGE LIVES",
+    title: "VANHACK PREMIUM CHANGES LIVES",
     highlight: "We've helped over 800 VanHackers get hired abroad in amazing companies in Canada and Europe.",
     imgBackgroundCards: "bubble",
+    source: "https://www.youtube.com/embed/ZepkPNPQMrA",
+    controls: true,
+    poster: require("../../assets/svg/logo/vanhack_logo.svg/index.js"),
+    width: '600px',
+    height: '470px',
     cardLeft: {
       title: "250+",
       description: "VanHack Premium Members have been hired internationally"
@@ -143,7 +148,7 @@ Mock.success = {
 };
 Mock.hired = {
   items: {
-    sectionTitle: "Premium Vanhackers hired",
+    sectionTitle: "Premium Vanhackers Hired",
     btnLabel: "JOIN VANHACK PREMIUM"
   },
   candidates: [{
@@ -151,25 +156,25 @@ Mock.hired = {
     position: "Backend Developer",
     country: "from Brazil",
     userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-    flag: "canada"
+    flag: "brazil"
   }, {
     name: "Mitchell Watson",
     position: "Backend Developer",
     country: "from Brazil",
     userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-    flag: "usa"
+    flag: "china"
   }, {
     name: "Mitchell Watson",
     position: "Backend Developer",
     country: "from Brazil",
     userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-    flag: "ireland"
+    flag: "india"
   }, {
     name: "Mitchell Watson",
     position: "Backend Developer",
     country: "from Brazil",
     userPhoto: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
-    flag: "uk"
+    flag: "south-africa"
   }, {
     name: "Mitchell Watson",
     position: "Backend Developer",
@@ -180,7 +185,7 @@ Mock.hired = {
 };
 Mock.faq = {
   items: {
-    sectionTitle: "Frequently Asking Questions",
+    sectionTitle: "Frequently Asked Questions",
     title: "Have questions about VanHack Premium?",
     description: "Give us your email and we’ll get in touch.",
     imgSvg: "meeting"

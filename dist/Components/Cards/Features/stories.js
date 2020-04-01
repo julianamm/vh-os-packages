@@ -26,6 +26,7 @@ var features = [{
 (0, _react2.storiesOf)("Components|Cards/Features", module).add("Default", function () {
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
+      backgroundColor: "#f2f8fc",
       padding: "24px"
     }
   }, /*#__PURE__*/_react.default.createElement(_index.Row, null, /*#__PURE__*/_react.default.createElement(_index2.default, {
