@@ -55,8 +55,8 @@ var items = [{
         message: 'Database error'
       },
       phone: {
-        preLoading: true,
-        loading: true,
+        preLoading: false,
+        loading: false,
         error: false,
         success: false,
         message: 'Database error'
