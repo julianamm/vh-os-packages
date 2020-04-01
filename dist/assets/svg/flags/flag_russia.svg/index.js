@@ -20,8 +20,6 @@ var flag_russia = function flag_russia(props) {
     height: props.height || "38",
     fill: props.fill || "none",
     viewBox: props.viewBox || "0 0 50 38"
-  }, /*#__PURE__*/React.createElement("g", {
-    clipPath: "url(#clip0)"
   }, /*#__PURE__*/React.createElement("path", {
     fillRule: "evenodd",
     clipRule: "evenodd",
@@ -37,7 +35,7 @@ var flag_russia = function flag_russia(props) {
     clipRule: "evenodd",
     d: "M0 25H50V37.5H0V25Z",
     fill: "#D52B1E"
-  })), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
+  }), /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
     id: "clip0"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M0 0H50V37.5H0V0Z",
