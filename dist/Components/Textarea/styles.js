@@ -14,7 +14,7 @@ var _Simple = _interopRequireDefault(require("../Input/Simple"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    height: 45px;\n    border-radius: 6px;\n    border: solid 1px ", ";\n    background-color: ", ";\n    padding: 15px;\n    margin-top: 5px;\n    outline: 0;\n    font-size: 14px;\n    font-weight: normal;\n    font-stretch: normal;\n    font-style: normal;\n    font-family: Roboto;\n    letter-spacing: normal;\n"]);
+  var data = _taggedTemplateLiteral(["\n    width: 100%;\n    min-height:45px;\n    border-radius: 6px;\n    border: solid 1px ", ";\n    background-color: ", ";\n    padding: 6px 9px;\n    margin-top: 5px;\n    outline: 0;\n    font-size: 14px;\n    font-weight: normal;\n    font-stretch: normal;\n    font-style: normal;\n    font-family: Roboto;\n    letter-spacing: normal;\n"]);
 
   _templateObject = function _templateObject() {
     return data;

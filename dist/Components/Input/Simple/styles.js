@@ -12,7 +12,7 @@ var _Colors = _interopRequireDefault(require("../../../Colors"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  border: ", ";\n  border-radius: 6px;\n  color: ", ";\n  font-size: 14px;\n  font-weight: normal;\n  font-stretch: normal;\n  font-style: normal;\n  line-height: 1.53;\n  letter-spacing: normal;\n  padding: 9px 24px;\n  width: 100%;\n  background: transparent;\n  outline: 0;\n  box-sizing: border-box;\n\n  ::placeholder {\n    font-size: 14px;\n    font-weight: normal;\n    font-stretch: normal;\n    font-style: normal;\n    line-height: 1.53;\n    letter-spacing: normal;\n    color: ", ";\n  }\n\n  ", "\n\n  ", "\n\n  ", "\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  border: ", ";\n  border-radius: 6px;\n  color: ", ";\n  font-size: 14px;\n  font-weight: normal;\n  font-stretch: normal;\n  font-style: normal;\n  line-height: 1.53;\n  letter-spacing: normal;\n  padding: 9px 12px;\n  width: 100%;\n  background: transparent;\n  outline: 0;\n  box-sizing: border-box;\n\n  ::placeholder {\n    font-size: 14px;\n    font-weight: normal;\n    font-stretch: normal;\n    font-style: normal;\n    line-height: 1.53;\n    letter-spacing: normal;\n    color: ", ";\n  }\n\n  ", "\n\n  ", "\n\n  ", "\n\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -53,7 +53,7 @@ exports.LoaderContainer = LoaderContainer;
 
 var Input = _styledComponents.default.input(_templateObject3(), function (props) {
   return props.noBorder ? 'none' : "1px solid ".concat(_Colors.default["gray-30"]);
-}, _Colors.default["gray-100"], _Colors.default["gray-50"], function (_ref) {
+}, _Colors.default["gray-90"], _Colors.default["gray-50"], function (_ref) {
   var disabled = _ref.disabled;
   return disabled && "\n    background-color: ".concat(_Colors.default["gray-10"], ";\n  ");
 }, function (_ref2) {

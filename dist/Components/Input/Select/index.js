@@ -68,7 +68,9 @@ var VHSelect = function VHSelect(props) {
       return _objectSpread({}, base, {
         border: 0,
         boxShadow: "none",
-        fontWeight: props.bold ? 'bold' : '500'
+        fontWeight: props.bold ? 'bold' : '500',
+        fontFamily: 'Roboto',
+        fontSize: '14px'
       });
     },
     indicatorSeparator: function indicatorSeparator(styles) {
@@ -95,7 +97,6 @@ var VHSelect = function VHSelect(props) {
     },
     valueContainer: function valueContainer(base) {
       return {
-        height: '40px',
         width: 'auto',
         display: 'flex',
         marginLeft: 8
@@ -109,6 +110,12 @@ var VHSelect = function VHSelect(props) {
         display: 'flex',
         alignItems: 'center'
       };
+    },
+    control: function control(base) {
+      return _objectSpread({}, base, {
+        fontFamily: 'Roboto',
+        fontSize: '14px'
+      });
     }
   };
 
@@ -128,10 +135,11 @@ var VHSelect = function VHSelect(props) {
     style: {
       position: 'relative',
       marginBottom: props.marginBottom ? props.marginBottom : '21px'
-    }
+    },
+    className: "VH-select"
   }, props.caption && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
-      marginBottom: '5px'
+      marginBottom: '6px'
     }
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     text: props.caption,
@@ -220,7 +228,7 @@ var VHSelect = function VHSelect(props) {
   })), props.description && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
       position: 'absolute',
-      top: '60px',
+      top: '64px',
       marginTop: '8px'
     }
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
