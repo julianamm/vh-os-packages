@@ -23,7 +23,7 @@ const features = [
 
 storiesOf("Components|Cards/Features", module)
     .add("Default", () => (
-        <div style={{ padding: "24px" }}>
+        <div style={{ backgroundColor: "#f2f8fc", padding: "24px" }}>
             <Row>
                 <VHCardFeatures
                     features={features}

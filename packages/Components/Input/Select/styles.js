@@ -2,18 +2,19 @@ import styled from "styled-components";
 import Color from "../../../Colors";
 
 export const Input = styled.input`
-  border: 1px solid #e0e0e0;
+  border: 1px solid ${Color["gray-30"]};
   border-radius: 6px;
-  color: #333333;
+  color: ${Color["gray-90"]};
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.53;
   letter-spacing: normal;
-  padding: 9px 24px;
+  padding: 9px 12px;
   width: 100%;
   background: transparent;
+  margin-bottom:15px;
 
   ::placeholder {
     font-size: 14px;
@@ -22,6 +23,6 @@ export const Input = styled.input`
     font-style: normal;
     line-height: 1.53;
     letter-spacing: normal;
-    color: #9f9f9f;
+    color: ${Color["gray-50"]};
   }
 `;

@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     }
     cursor: ${props => props.pointer && 'pointer'};
     display: ${props => props.contents && 'contents'};
+    margin-bottom:6px;
 `
 
 export const Display = styled.div`

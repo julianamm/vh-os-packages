@@ -11,7 +11,7 @@ export const Input = styled.input`
   font-style: normal;
   line-height: 1.53;
   letter-spacing: normal;
-  padding: 9px 24px;
+  padding: 9px 12px;
   width: 100%;
   background: transparent;
   outline: 0;

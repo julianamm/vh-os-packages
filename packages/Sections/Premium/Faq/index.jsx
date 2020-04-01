@@ -22,7 +22,7 @@ const VHPremiumFaqSection = props => {
                         <VHTitleDescriptionImage
                             title={props.title}
                             description={props.description}
-                            imgSvg={props.imgSvg}
+                            imgSvg={"meeting"}
                         />
                     </Row>
                     <Row marginBottom={12} style={{ backgroundColor: "#ffffff"}}>

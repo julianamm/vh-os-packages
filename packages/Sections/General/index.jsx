@@ -90,6 +90,7 @@ const VHGeneralSection = props => {
                   isLoading={props.controls.gender.loading}
                   description={props.controls.gender.error && props.controls.gender.message}
                   descriptionColor="red-light"
+                  placeholder="Select an option"
                   captionColor={
                     props.controls.gender.loading
                     ? "gray-40"
@@ -100,7 +101,7 @@ const VHGeneralSection = props => {
                 />
             </Row>
             <Row column paddingRight8>
-              <VHTitleDescription
+              <VHTitleDescription 
                 className={`vh-general-section-phone ${props.className ? props.className : ''}`}
                 descriptionColor={
                   props.controls.phone.loading
@@ -121,7 +122,7 @@ const VHGeneralSection = props => {
                   ? "red"
                   : "gray-100"
                 }
-                titleVariant="subtitle3"
+                titleVariant="platform1"
               />
               {
                 !props.controls.phone.preLoading && (

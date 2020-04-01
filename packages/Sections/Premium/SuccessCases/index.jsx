@@ -5,7 +5,9 @@ import VHText from "../../../Components/Text/index";
 import VHTextHighlightDescriptionImage from "../../../Components/TextHighlightDescriptionImage/index";
 import VHImgCardsOverlay from "../../../Components/ImgCardsOverlay/index";
 import VHImgVideoIconText from  "../../../Components/ImgVideoIconText/index";
+import VHMediaSource from  "../../../Components/MediaSource/index";
 import VHLinkImage from "../../../Hyperlinks/LinkImage/index";
+import * as S from './styles';
 
 const VHPremiumSuccessCasesSection = props => {
   return (
@@ -20,7 +22,7 @@ const VHPremiumSuccessCasesSection = props => {
             </Row>
             <Row row responsive>
                 <Row alignItemsCenter>
-                    <Row marginBottom={30} mobileDisplayNone>
+                    <Row mobileDisplayNone>
                         <VHTextHighlightDescriptionImage 
                             title={props.title}
                             highlight={props.highlight}
@@ -37,12 +39,17 @@ const VHPremiumSuccessCasesSection = props => {
                     </Row>
                 </Row>
                 <Row  alignItemsCenter>
-                    <Row marginBottom={8} marginTop={50}>
-                        <VHImgVideoIconText 
-                            image={props.imgVideo}
-                            icon={props.iconVideo}
-                            text={props.videoDescription}
-                        />
+                    <Row marginBottom={8} marginTop={50} alignItemsCenter>
+                        <S.Wrapper responsive className="test">
+                            <VHMediaSource 
+                                source={props.source}
+                                youtube
+                                controls={props.control}
+                                poster={props.poster}
+                                width={"100%"}
+                                height={"100%"}
+                            />
+                        </S.Wrapper>
                     </Row>
                     <Row>
                         <VHLinkImage                   
@@ -75,9 +82,13 @@ VHPremiumSuccessCasesSection.propTypes = {
     cardLeftDescription: PropTypes.string,
     cardRightTitle: PropTypes.string,
     cardRightDescription: PropTypes.string,
-    imgVideo: PropTypes.string,
-    iconVideo: PropTypes.string,
-    videoDescription: PropTypes.string,
+    controls: PropTypes.bool,
+    youtube: PropTypes.bool,
+    source: PropTypes.string,
+    poster: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string,
+
     label: PropTypes.string,
     to: PropTypes.string,
     iconLink: PropTypes.string,

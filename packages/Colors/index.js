@@ -20,6 +20,7 @@ const color = {
   "gray-80" : "#646464",
   "gray-90" : "#4f4f4f",
   "gray-100" : "#333333",
+  "primary" : "#0675ce",
   "primary-light" : "#2c9bf5",
   "primary-dark" : "#00569c",
   "primary-rgb-light" : "rgb(44, 155, 245, 0.2)",
