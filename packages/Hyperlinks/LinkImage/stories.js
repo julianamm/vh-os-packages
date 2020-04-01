@@ -15,7 +15,8 @@ storiesOf('Hyperlinks|Link Image', module)
   ))
   .add('sm', () => (
     <div style={{ padding: "24px" }}>
-      <VHLinkImage               to={"#"}
+      <VHLinkImage               
+              to={"#"}
               smLabel
               label="Link icon sm"
               icon= "canada"
@@ -27,7 +28,6 @@ storiesOf('Hyperlinks|Link Image', module)
     <div style={{ padding: "24px" }}>
       <VHLinkImage               
               to={"#"}
-              
               lgLabel
               label="Link icon lg"
               icon= "canada"

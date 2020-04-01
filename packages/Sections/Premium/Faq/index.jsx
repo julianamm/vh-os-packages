@@ -25,7 +25,7 @@ const VHPremiumFaqSection = props => {
                             imgSvg={"meeting"}
                         />
                     </Row>
-                    <Row marginBottom={12} style={{ backgroundColor: "#ffffff"}}>
+                    <Row marginBottom={6} style={{ backgroundColor: "#ffffff"}}>
                         <VHInputSimpleWithButton
                             placeholder={"E-mail"}
                             label={"SEND"}
@@ -33,7 +33,15 @@ const VHPremiumFaqSection = props => {
                             data={"VHInputSimpleWithButton"}
                         />
                     </Row>
+                    <Row marginBottom={12}>
+                        <VHText 
+                            variant={"h6"}
+                            color={"gray-90"}
+                            text={props.text}
+                        />
+                    </Row>
                 </Row>
+        
             </Row>
             <Row width={"50%"} alignItemsCenter>
                 {props.faqs.map(faq => (
@@ -68,6 +76,7 @@ VHPremiumFaqSection.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   imgSvg: PropTypes.string,
+  text: PropTypes.string,
   question: PropTypes.string,
   answer: PropTypes.string,
 }

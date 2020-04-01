@@ -7,6 +7,7 @@ const items = {
     title: "Have questions about VanHack Premium?",
     description: "Give us your email and we’ll get in touch.",
     imgSvg: "meeting",
+    text: "Thank you for signing up!",
 }
 
 const faqs = [
@@ -32,6 +33,7 @@ storiesOf("Sections|Premium/Faq", module)
                 title={items.title}
                 description={items.description}
                 imgSvg={items.imgSvg}
+                text={items.text}
                 faqs={faqs}
             />
         </div>
