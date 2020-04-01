@@ -214,6 +214,7 @@ Mock.faq = {
         description: "Give us your email and we’ll get in touch.",
         imgSvg: "meeting",
         text: "Thank you for signing up!",  
+        assigned: false,
     },
     faqs: [
         {

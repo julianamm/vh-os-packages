@@ -35,6 +35,7 @@ storiesOf("Sections|Premium/Faq", module)
                 imgSvg={items.imgSvg}
                 text={items.text}
                 faqs={faqs}
+                assigned={false}
             />
         </div>
     ));
