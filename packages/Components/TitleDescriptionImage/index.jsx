@@ -21,8 +21,8 @@ const VHTitleDescriptionImage =  props => {
                     text={props.description}
                 />
             </Row>
-            <Row alignItemsCenter>
-                <VHImgSvg imgSvg={props.imgSvg} />
+            <Row alignItemsCenter marginTop={12}>
+                <VHImgSvg imgSvg={"meeting"} />
             </Row>
         </Row>
     )

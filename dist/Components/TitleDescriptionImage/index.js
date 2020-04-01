@@ -39,9 +39,10 @@ var VHTitleDescriptionImage = function VHTitleDescriptionImage(props) {
     color: "black-70",
     text: props.description
   })), /*#__PURE__*/_react.default.createElement(_index.Row, {
-    alignItemsCenter: true
+    alignItemsCenter: true,
+    marginTop: 12
   }, /*#__PURE__*/_react.default.createElement(_ImgSvg.default, {
-    imgSvg: props.imgSvg
+    imgSvg: "meeting"
   })));
 };
 

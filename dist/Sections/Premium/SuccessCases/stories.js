@@ -6,8 +6,6 @@ var _react2 = require("@storybook/react");
 
 var _ = _interopRequireDefault(require("."));
 
-var _index = _interopRequireDefault(require("../../../assets/svg/background/img_bubble.svg/index.js"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var items = {
@@ -15,6 +13,9 @@ var items = {
   title: "VANHACK PREMIUM CHANGE LIVES",
   highlight: "We've helped over 800 VanHackers get hired abroad in amazing companies in Canada and Europe.",
   imgBackgroundCards: "bubble",
+  source: "https://www.youtube.com/embed/ZepkPNPQMrA",
+  controls: true,
+  poster: require("../../../assets/svg/logo/vanhack_logo.svg/index.js"),
   cardLeft: {
     title: "250+",
     description: "VanHack Premium Members have been hired internationally"
@@ -51,6 +52,11 @@ var items = {
     videoDescription: items.videoDescription,
     label: items.label,
     to: items.to,
-    iconLink: items.iconLink
+    iconLink: items.iconLink,
+    source: items.source,
+    controls: items.controls,
+    poster: items.poster,
+    width: items.width,
+    height: items.height
   }));
 });

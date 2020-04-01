@@ -139,6 +139,11 @@ Mock.success = {
         title: "VANHACK PREMIUM CHANGES LIVES",
         highlight: "We've helped over 800 VanHackers get hired abroad in amazing companies in Canada and Europe.",
         imgBackgroundCards: "bubble",
+        source: "https://www.youtube.com/embed/ZepkPNPQMrA",
+        controls: true,
+        poster: require("../../assets/svg/logo/vanhack_logo.svg/index.js"),
+        width: '600px',
+        height: '470px',
         cardLeft: 
             {
                 title: "250+",

@@ -48,7 +48,7 @@ var VHPremiumFaqSection = function VHPremiumFaqSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_index3.default, {
     title: props.title,
     description: props.description,
-    imgSvg: props.imgSvg
+    imgSvg: "meeting"
   })), /*#__PURE__*/_react.default.createElement(_index.Row, {
     marginBottom: 12,
     style: {

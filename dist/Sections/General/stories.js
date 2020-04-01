@@ -81,4 +81,289 @@ var items = [{
       console.log(e);
     }
   }));
+}).add("Initial", function () {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      backgroundColor: "#f2f2f2",
+      height: "100vh",
+      padding: "24px"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
+    controls: {
+      gender: {
+        loading: false,
+        preLoading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      citizenship: {
+        preLoading: false,
+        loading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      location: {
+        preLoading: false,
+        loading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      phone: {
+        preLoading: false,
+        loading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      }
+    },
+    options: {
+      gender: {
+        items: items,
+        currentItem: [items[1]]
+      },
+      currentLocation: {
+        items: items,
+        currentItem: [items[0]]
+      },
+      citizenship: {
+        items: items,
+        currentItem: [items[2]]
+      }
+    },
+    phone: "+1 778 834 7347",
+    onEvent: function onEvent(e) {
+      console.log(e);
+    }
+  }));
+}).add("Error", function () {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      backgroundColor: "#f2f2f2",
+      height: "100vh",
+      padding: "24px"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
+    controls: {
+      gender: {
+        loading: false,
+        preLoading: false,
+        error: true,
+        success: false,
+        message: 'Database error'
+      },
+      citizenship: {
+        preLoading: false,
+        loading: false,
+        error: true,
+        success: false,
+        message: 'Database error'
+      },
+      location: {
+        preLoading: false,
+        loading: false,
+        error: true,
+        success: false,
+        message: 'Database error'
+      },
+      phone: {
+        preLoading: false,
+        loading: false,
+        error: true,
+        success: false,
+        message: 'Database error'
+      }
+    },
+    options: {
+      gender: {
+        items: items,
+        currentItem: [items[1]]
+      },
+      currentLocation: {
+        items: items,
+        currentItem: [items[0]]
+      },
+      citizenship: {
+        items: items,
+        currentItem: [items[2]]
+      }
+    },
+    phone: "+1 778 834 7347",
+    onEvent: function onEvent(e) {
+      console.log(e);
+    }
+  }));
+}).add("Success", function () {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      backgroundColor: "#f2f2f2",
+      height: "100vh",
+      padding: "24px"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
+    controls: {
+      gender: {
+        loading: false,
+        preLoading: false,
+        error: false,
+        success: true,
+        message: 'Database error'
+      },
+      citizenship: {
+        preLoading: false,
+        loading: false,
+        error: false,
+        success: true,
+        message: 'Database error'
+      },
+      location: {
+        preLoading: false,
+        loading: false,
+        error: false,
+        success: true,
+        message: 'Database error'
+      },
+      phone: {
+        preLoading: false,
+        loading: false,
+        error: false,
+        success: true,
+        message: 'Database error'
+      }
+    },
+    options: {
+      gender: {
+        items: items,
+        currentItem: [items[1]]
+      },
+      currentLocation: {
+        items: items,
+        currentItem: [items[0]]
+      },
+      citizenship: {
+        items: items,
+        currentItem: [items[2]]
+      }
+    },
+    phone: "+1 778 834 7347",
+    onEvent: function onEvent(e) {
+      console.log(e);
+    }
+  }));
+}).add("Loading", function () {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      backgroundColor: "#f2f2f2",
+      height: "100vh",
+      padding: "24px"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
+    controls: {
+      gender: {
+        loading: true,
+        preLoading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      citizenship: {
+        loading: true,
+        preLoading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      location: {
+        loading: true,
+        preLoading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      phone: {
+        loading: true,
+        preLoading: false,
+        error: false,
+        success: false,
+        message: 'Database error'
+      }
+    },
+    options: {
+      gender: {
+        items: items,
+        currentItem: [items[1]]
+      },
+      currentLocation: {
+        items: items,
+        currentItem: [items[0]]
+      },
+      citizenship: {
+        items: items,
+        currentItem: [items[2]]
+      }
+    },
+    phone: "+1 778 834 7347",
+    onEvent: function onEvent(e) {
+      console.log(e);
+    }
+  }));
+}).add("Pre-loaging", function () {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      backgroundColor: "#f2f2f2",
+      height: "100vh",
+      padding: "24px"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
+    controls: {
+      gender: {
+        loading: false,
+        preLoading: true,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      citizenship: {
+        loading: false,
+        preLoading: true,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      location: {
+        loading: false,
+        preLoading: true,
+        error: false,
+        success: false,
+        message: 'Database error'
+      },
+      phone: {
+        loading: false,
+        preLoading: true,
+        error: false,
+        success: false,
+        message: 'Database error'
+      }
+    },
+    options: {
+      gender: {
+        items: items,
+        currentItem: [items[1]]
+      },
+      currentLocation: {
+        items: items,
+        currentItem: [items[0]]
+      },
+      citizenship: {
+        items: items,
+        currentItem: [items[2]]
+      }
+    },
+    phone: "+1 778 834 7347",
+    onEvent: function onEvent(e) {
+      console.log(e);
+    }
+  }));
 });

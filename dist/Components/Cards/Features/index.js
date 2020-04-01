@@ -28,9 +28,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHCardFeatures = function VHCardFeatures(props) {
-  return /*#__PURE__*/_react.default.createElement(_index.Container, {
-    alignItemsCenter: true
-  }, /*#__PURE__*/_react.default.createElement(_index4.default, {
+  return /*#__PURE__*/_react.default.createElement(_index4.default, {
     noHover: props.noHover
   }, /*#__PURE__*/_react.default.createElement(_index.Row, {
     row: true,
@@ -70,7 +68,7 @@ var VHCardFeatures = function VHCardFeatures(props) {
       })))) // </S.Item>
 
     );
-  }))));
+  })));
 };
 
 VHCardFeatures.defaultProps = {

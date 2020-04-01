@@ -64,7 +64,7 @@ VHImgSvg.defaultProps = {
   className: ''
 };
 var imgSvgPropTypes = {
-  imgSvg: _propTypes.default.string.isRequired
+  imgSvg: _propTypes.default.string
 };
 exports.imgSvgPropTypes = imgSvgPropTypes;
 VHImgSvg.propTypes = imgSvgPropTypes;

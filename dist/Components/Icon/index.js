@@ -39,19 +39,29 @@ var _index14 = _interopRequireDefault(require("../../assets/svg/flags/flag_nethe
 
 var _index15 = _interopRequireDefault(require("../../assets/svg/flags/flag_uk.svg/index.js"));
 
-var _index16 = _interopRequireDefault(require("../../assets/svg/icons/icon_camera.svg/index.js"));
+var _index16 = _interopRequireDefault(require("../../assets/svg/flags/flag_brazil.svg/index.js"));
 
-var _index17 = _interopRequireDefault(require("../../assets/svg/icons/icon_interview.svg/index.js"));
+var _index17 = _interopRequireDefault(require("../../assets/svg/flags/flag_china.svg/index.js"));
 
-var _index18 = _interopRequireDefault(require("../../assets/svg/icons/icon_profile.svg/index.js"));
+var _index18 = _interopRequireDefault(require("../../assets/svg/flags/flag_india.svg/index.js"));
 
-var _index19 = _interopRequireDefault(require("../../assets/svg/icons/icon_community.svg/index.js"));
+var _index19 = _interopRequireDefault(require("../../assets/svg/flags/flag_south_africa.svg/index.js"));
 
-var _index20 = _interopRequireDefault(require("../../assets/svg/icons/icon_arrow_right.svg/index.js"));
+var _index20 = _interopRequireDefault(require("../../assets/svg/flags/flag_russia.svg/index.js"));
 
-var _index21 = _interopRequireDefault(require("../../assets/svg/icons/icon_medal.svg/index.js"));
+var _index21 = _interopRequireDefault(require("../../assets/svg/icons/icon_camera.svg/index.js"));
 
-var _index22 = _interopRequireDefault(require("../../assets/svg/icons/icon_play.svg/index.js"));
+var _index22 = _interopRequireDefault(require("../../assets/svg/icons/icon_interview.svg/index.js"));
+
+var _index23 = _interopRequireDefault(require("../../assets/svg/icons/icon_profile.svg/index.js"));
+
+var _index24 = _interopRequireDefault(require("../../assets/svg/icons/icon_community.svg/index.js"));
+
+var _index25 = _interopRequireDefault(require("../../assets/svg/icons/icon_arrow_right.svg/index.js"));
+
+var _index26 = _interopRequireDefault(require("../../assets/svg/icons/icon_medal.svg/index.js"));
+
+var _index27 = _interopRequireDefault(require("../../assets/svg/icons/icon_play.svg/index.js"));
 
 var _Colors = _interopRequireDefault(require("../../Colors"));
 
@@ -246,7 +256,7 @@ var VHIcon = function VHIcon(props) {
         className: "vh-icon ".concat(props.className ? props.className : '')
       });
 
-    case 'camera':
+    case 'brazil':
       return /*#__PURE__*/_react.default.createElement(_index16.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
@@ -254,7 +264,7 @@ var VHIcon = function VHIcon(props) {
         className: "vh-icon ".concat(props.className ? props.className : '')
       });
 
-    case 'interview':
+    case 'china':
       return /*#__PURE__*/_react.default.createElement(_index17.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
@@ -262,15 +272,7 @@ var VHIcon = function VHIcon(props) {
         className: "vh-icon ".concat(props.className ? props.className : '')
       });
 
-    case 'community':
-      return /*#__PURE__*/_react.default.createElement(_index19.default, {
-        fill: defaultColor,
-        width: "".concat(size.w, "px"),
-        height: "".concat(size.h, "px"),
-        className: "vh-icon ".concat(props.className ? props.className : '')
-      });
-
-    case 'profile':
+    case 'india':
       return /*#__PURE__*/_react.default.createElement(_index18.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
@@ -278,7 +280,15 @@ var VHIcon = function VHIcon(props) {
         className: "vh-icon ".concat(props.className ? props.className : '')
       });
 
-    case 'arrow-right':
+    case 'south-africa':
+      return /*#__PURE__*/_react.default.createElement(_index19.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'russia':
       return /*#__PURE__*/_react.default.createElement(_index20.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
@@ -286,7 +296,7 @@ var VHIcon = function VHIcon(props) {
         className: "vh-icon ".concat(props.className ? props.className : '')
       });
 
-    case 'medal':
+    case 'camera':
       return /*#__PURE__*/_react.default.createElement(_index21.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
@@ -294,8 +304,48 @@ var VHIcon = function VHIcon(props) {
         className: "vh-icon ".concat(props.className ? props.className : '')
       });
 
-    case 'play':
+    case 'interview':
       return /*#__PURE__*/_react.default.createElement(_index22.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'community':
+      return /*#__PURE__*/_react.default.createElement(_index24.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'profile':
+      return /*#__PURE__*/_react.default.createElement(_index23.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'arrow-right':
+      return /*#__PURE__*/_react.default.createElement(_index25.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'medal':
+      return /*#__PURE__*/_react.default.createElement(_index26.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'play':
+      return /*#__PURE__*/_react.default.createElement(_index27.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),

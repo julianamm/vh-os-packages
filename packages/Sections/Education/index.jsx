@@ -16,7 +16,7 @@ const VHEducationSection = props => {
   const [currentItem, setCurrentItem] = React.useState({});
   return (
     <React.Fragment>
-      {openModal &&
+      {openModal && !props.closeModal &&
         <VHModalEducation openModal={openModal} onClose={() => setOpenModal(false)}
           closeModal={props.closeModal}
           modalEducation={props.modalEducation}
