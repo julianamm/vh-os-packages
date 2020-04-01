@@ -17,6 +17,7 @@ const VHButton = props => {
         white={props.white}
         secondary={props.secondary}
         danger={props.danger}
+        success={props.success}
         full={props.full}
         nowrap={props.nowrap}
         disabled={props.disabled}
@@ -47,6 +48,7 @@ const VHButton = props => {
         white={props.white}
         secondary={props.secondary}
         danger={props.danger}
+        success={props.success}
         full={props.full}
         nowrap={props.nowrap}
         disabled={props.disabled}

@@ -11,7 +11,6 @@ const color = {
   "black-100" : "#000000",
   "gray-10" : "#f7f7f7",
   "gray-20" : "#f2f2f2",
-  "gray-20" : "#ffffff",
   "gray-30" : "#e0e0e0",
   "gray-40" : "#bdbdbd",
   "gray-60" : "#828282",

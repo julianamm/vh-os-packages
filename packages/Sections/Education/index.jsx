@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Container, Row } from "../../Grid";
 import VHTitleDescription from "../../Components/TitleDescription";
 import VHModalEducation from "../../Components/ModalEducation"
-import VHButton from "../../Components/Button"
+import VHButton from "../../Components/Button-New"
 import VHCardBase from "../../Components/Cards/Base/"
 import VHText from "../../Components/Text/"
 import { CardSkeleton } from 'react-preload-skeleton'
@@ -12,7 +12,7 @@ import VHPreloader from '../../Components/Preloader';
 const VHEducationSection = props => {
   const [openModal, setOpenModal] = React.useState(false);
   const education = props.education ? props.education : [];
-  const items = props.degreeTypeList
+  const items = props.degreeTypeList;
   const [currentItem, setCurrentItem] = React.useState({});
   return (
     <React.Fragment>
@@ -26,7 +26,7 @@ const VHEducationSection = props => {
           onEvent={props.onEvent}
           currentItem={currentItem} />
       }
-      <Row marginBottom={5}>
+      <Row>
         <VHText
           className={`vh-education-section-title ${props.className ? props.className : ''}`}
           text={"Education"}
@@ -70,7 +70,7 @@ const VHEducationSection = props => {
                       )
                     })
                     }
-                    <Row width={'20%'} lg>
+                    <Row width={'20%'}>
                       <VHButton data={'openModal'} primary onEvent={props.onEvent} closeModal={props.closeModal} onOpen={() => { setCurrentItem({}); setOpenModal(true) }} label="Add Education" />
                     </Row>
                   </Row>

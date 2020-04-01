@@ -25,7 +25,7 @@ const items = [
 
 storiesOf("Sections|General", module)
     .add("Default", () => (
-        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+        <div style={{ backgroundColor: "#f7f7f7", height: "100vh", padding: "24px" }}>
             <VHGeneralSection
                 controls={{
                     gender: {
@@ -71,14 +71,14 @@ storiesOf("Sections|General", module)
                         currentItem: [items[2]]
                     },
                 }}
-                phone="+1 778 834 7347"
+                phone=""
                 onEvent={e => {
                     console.log(e)
                 }}
             />
         </div>
     )).add("Initial", () => (
-        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+        <div style={{ backgroundColor: "#f7f7f7", height: "100vh", padding: "24px" }}>
             <VHGeneralSection
                 controls={{
                     gender: {
@@ -124,14 +124,14 @@ storiesOf("Sections|General", module)
                         currentItem: [items[2]]
                     },
                 }}
-                phone="+1 778 834 7347"
+                phone=""
                 onEvent={e => {
                     console.log(e)
                 }}
             />
         </div>
     )).add("Error", () => (
-        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+        <div style={{ backgroundColor: "#f7f7f7", height: "100vh", padding: "24px" }}>
             <VHGeneralSection
                 controls={{
                     gender: {
@@ -177,14 +177,14 @@ storiesOf("Sections|General", module)
                         currentItem: [items[2]]
                     },
                 }}
-                phone="+1 778 834 7347"
+                phone=""
                 onEvent={e => {
                     console.log(e)
                 }}
             />
         </div>
     )).add("Success", () => (
-        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+        <div style={{ backgroundColor: "#f7f7f7", height: "100vh", padding: "24px" }}>
             <VHGeneralSection
                 controls={{
                     gender: {
@@ -230,14 +230,14 @@ storiesOf("Sections|General", module)
                         currentItem: [items[2]]
                     },
                 }}
-                phone="+1 778 834 7347"
+                phone=""
                 onEvent={e => {
                     console.log(e)
                 }}
             />
         </div>
     )).add("Loading", () => (
-        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+        <div style={{ backgroundColor: "#f7f7f7", height: "100vh", padding: "24px" }}>
             <VHGeneralSection
                 controls={{
                     gender: {
@@ -283,14 +283,14 @@ storiesOf("Sections|General", module)
                         currentItem: [items[2]]
                     },
                 }}
-                phone="+1 778 834 7347"
+                phone=""
                 onEvent={e => {
                     console.log(e)
                 }}
             />
         </div>
     )).add("Pre-loaging", () => (
-        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+        <div style={{ backgroundColor: "#f7f7f7", height: "100vh", padding: "24px" }}>
             <VHGeneralSection
                 controls={{
                     gender: {
@@ -336,7 +336,7 @@ storiesOf("Sections|General", module)
                         currentItem: [items[2]]
                     },
                 }}
-                phone="+1 778 834 7347"
+                phone=""
                 onEvent={e => {
                     console.log(e)
                 }}
