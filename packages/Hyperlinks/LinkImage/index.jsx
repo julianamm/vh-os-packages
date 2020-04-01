@@ -15,11 +15,19 @@ const VHLinkImage = props => {
           xs={props.xsLabel}
           sm={props.smLabel}
           lg={props.lgLabel}
+          onClick={() => {
+            props.onEvent({
+              type: "OnClick",
+              origin: "VHLinkImage",
+              props: {
+                data: props.data
+              }
+            })
+          }}
           className={`vh-link-image-component ${props.className ? props.className : ''}`}
           color={props.colorLabel}
           noUnderscore={props.noUnderscore}
           href={props.to}
-          target="_blank"
           label={props.label}
         > 
           {props.label}
@@ -59,8 +67,7 @@ VHLinkImage.propTypes = {
   label: PropTypes.string.isRequired,
   className: PropTypes.string,
   colorLabel: PropTypes.string,
-  to: PropTypes.string,
-  target: PropTypes.string,
+  to: PropTypes.string.isRequired,
   icon: PropTypes.string,
   xsIcon: PropTypes.bool,          
   smIcon: PropTypes.bool, 

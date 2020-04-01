@@ -47,7 +47,6 @@ const VHPremiumFaqSection = props => {
                         </Row>
                     }
                 </Row>
-        
             </Row>
             <Row width={"50%"} alignItemsCenter>
                 {props.faqs.map(faq => (
@@ -82,7 +81,6 @@ VHPremiumFaqSection.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   imgSvg: PropTypes.string,
-  text: PropTypes.string,
   question: PropTypes.string,
   answer: PropTypes.string,
 }
