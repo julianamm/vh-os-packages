@@ -19,7 +19,7 @@ const currentItem = [items[4], items[5]]
 
 storiesOf("Components|Input/Select", module)
   .add("default", () => (
-    <div style={{width: '80%', marginLeft:'1%', padding: '9px'}} className="Select">
+    <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
       <VHSelect
         caption="Annual salary expectation"
         captionColor="gray-100"
