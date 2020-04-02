@@ -4,7 +4,10 @@ import VHIconText from "../IconText/index";
 
 
 const VHIconTitleList = (props) => {
-    const items = JSON.parse(props.items)
+    let items = []
+    if(props.items){
+        items = props.items
+    }
     // if (!Array.isArray(props.items)) {
     //     return <VHIconText
     //     iconColor={props.color || "gray-30"}

@@ -14,7 +14,11 @@ var _index = _interopRequireDefault(require("../IconText/index"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHIconTitleList = function VHIconTitleList(props) {
-  var items = JSON.parse(props.items); // if (!Array.isArray(props.items)) {
+  var items = [];
+
+  if (props.items) {
+    items = props.items;
+  } // if (!Array.isArray(props.items)) {
   //     return <VHIconText
   //     iconColor={props.color || "gray-30"}
   //     textColor={props.color || "gray-90"}
@@ -26,6 +30,7 @@ var VHIconTitleList = function VHIconTitleList(props) {
   //     onEvent={props.onEvent}
   // />
   // }
+
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, items.map(function (text) {
     return /*#__PURE__*/_react.default.createElement(_index.default, {

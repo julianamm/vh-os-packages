@@ -8,36 +8,47 @@ import VHButton from '../Button'
 import VHText from '../Text'
 import VanhackLogo from '../../../assets/images/vanhack-logo-light.svg'
 import FirstStep from './FirstStep'
+import SecondStep from './SecondStep'
+import ThirdStep from './ThirdStep'
+import FourthStep from './FourthStep'
 
 
 const VHOnboarding = props => {
 
-  console.log('props', props)
+  const [currentStep, setCurrentStep] = useState(props.currentStep)
 
-  //const [currentStep, setCurrentStep] = useState(props.currentStep)
-
-  let currentStep = 1
+  //let currentStep = 1
 
   return (
     <Container justifyCenter fullHeight style={{backgroundImage: 'linear-gradient(to bottom right, #56CCF2, #0675CE)'}} fullWidth>
       <img style={{ marginTop: '50px', marginBottom: '50px' }} src={VanhackLogo} />
       <Row alignItemsCenter>
-        <Card noPadding width='50%' height='480px'>
+        <Card noPadding width='70%' height='480px'>
             <Row>
               <VHProgressBar
                 steps={props.steps}
                 currentStep={currentStep}
-                onEvent={e => {
-                  console.log(e)
-                }}
+                onEvent={props.onEvent}
               />
             </Row>
             <Row alignItemsCenter  style={{height: '100%'}}>
-              <Row style={{width: '90%', height: 'calc(100% - 10px)', padding: '60px', paddingLeft: '60px', paddingRight: '60px'}} >
+              <Row style={{width: '90%', height: 'calc(100% - 10px)', padding: '20px', paddingLeft: '60px', paddingRight: '60px'}} >
                 <Row style={{height: '100%', overflow:'scroll'}}>
                 {
                   currentStep === 1 &&
-                  <FirstStep />
+                  <FirstStep {...props} />
+                }
+                {
+                  currentStep === 2 &&
+                  <SecondStep {...props} />
+                }
+                {
+                  currentStep === 3 &&
+                  <ThirdStep {...props} />
+                }
+                {
+                  currentStep === 4 &&
+                  <FourthStep {...props} />
                 }
                 </Row>
                 <Row row justifySpaceBetween alignItemsCenter style={{padding: '12px 0'}}>
