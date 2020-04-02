@@ -58,10 +58,10 @@ var Input = _styledComponents.default.input(_templateObject3(), function (props)
   return disabled && "\n    background-color: ".concat(_Colors.default["gray-10"], ";\n  ");
 }, function (_ref2) {
   var error = _ref2.error;
-  return error && "\n    color: ".concat(_Colors.default["red-dark"], ";\n    border-color: ").concat(_Colors.default["red-dark"], ";\n  ");
+  return error && "\n    color: ".concat(_Colors.default["red"], ";\n    border-color: ").concat(_Colors.default["red"], ";\n  ");
 }, function (_ref3) {
   var loading = _ref3.loading;
-  return loading && "\n    color: ".concat(_Colors.default["blue-dark"], ";\n  ");
+  return loading && "\n    color: ".concat(_Colors.default["primary-dark"], ";\n  ");
 });
 
 exports.Input = Input;

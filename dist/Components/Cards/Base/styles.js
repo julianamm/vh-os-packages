@@ -51,7 +51,7 @@ var Bottom = _styledComponents.default.span(_templateObject2());
 
 exports.Bottom = Bottom;
 
-var Card = _styledComponents.default.div(_templateObject3(), _Colors.default["gray-20"], function (props) {
+var Card = _styledComponents.default.div(_templateObject3(), _Colors.default["white"], function (props) {
   return props.noBorder ? "0" : "6px";
 }, function (props) {
   return props.favorite ? "3px solid ".concat(_Colors.default["yellow-dark"]) : 'none';
