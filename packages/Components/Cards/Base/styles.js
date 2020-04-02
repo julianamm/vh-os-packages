@@ -18,7 +18,7 @@ export const Bottom = styled.span`
     height: 50%;
 `
 export const Card = styled.div`
-    background-color: ${Color["gray-20"]};
+    background-color: ${Color["white"]};
     border-radius: ${props => props.noBorder ? "0": "6px"};
     padding: 24px;
     position: relative;

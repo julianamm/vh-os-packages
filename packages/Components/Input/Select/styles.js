@@ -9,7 +9,7 @@ export const Input = styled.input`
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.53;
+  line-height: auto;
   letter-spacing: normal;
   padding: 9px 12px;
   width: 100%;
@@ -21,7 +21,7 @@ export const Input = styled.input`
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.53;
+    line-height: auto;
     letter-spacing: normal;
     color: ${Color["gray-50"]};
   }

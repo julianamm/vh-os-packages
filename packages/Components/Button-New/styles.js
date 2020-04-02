@@ -4,6 +4,7 @@ import Color from "../../Colors";
 const Button = styled.button`
   background-color: ${Color["primary"]};
   border: 1px solid ${Color["primary"]};
+  width: fit-content;
   color: ${Color["white"]};
   padding:12px;
   border-radius: 3px;
@@ -12,6 +13,7 @@ const Button = styled.button`
   line-height: auto;
   text-align: center;
   cursor: pointer;
+  
 
   :focus {
     outline-style: none;
@@ -247,12 +249,12 @@ export const OutlinedButton = styled.button`
   ${({ success }) =>
     success &&
     `
-    color: ${Color["white"]};
+    color: ${Color["green"]};
     border: 1px solid ${Color["green"]};
-    background-color: ${Color["green"]};
+    
     :hover {
-      background-color: ${Color["green-light"]};
-      border: 1px solid ${Color["green-light"]};
+      background-color: ${Color["green-dark"]};
+      border: 1px solid ${Color["green-dark"]};
     }
     :active {
       background-color: ${Color["green-dark"]};
@@ -263,9 +265,9 @@ export const OutlinedButton = styled.button`
   ${({ disabled }) =>
     disabled &&
     `
-    color: ${Color["black-40"]} !important;
-    background-color: ${Color["black-10"]} !important;
-    border: solid 1px ${Color["black-10"]} !important;
+    color: ${Color["black-40"]};
+    background-color: ${Color["black-10"]};
+    border: solid 1px ${Color["black-10"]};
     :hover {
       background-color: ${Color["black-10"]};
       border: 1px solid ${Color["black-10"]};
@@ -305,15 +307,13 @@ export const TextButton = styled.button`
   cursor: pointer;
 
   :hover {
-    background-color: ${Color["primary-light"]};
+    background-color: ${Color["gray-10"]};
     border: none;
-    color: ${Color["white-light"]};
   }
 
   :active {
-    background-color: ${Color["primary-dark"]};
+    background-color: ${Color["gray-20"]};
     border: none;
-    color: ${Color["white-light"]};
   }
 
   ${({ nowrap }) =>
@@ -353,74 +353,68 @@ export const TextButton = styled.button`
 
   ${({ primary }) =>
     primary &&
-    `
-    color: ${Color["gradient-primary"]};
-    
+    `  
+    color: ${Color["primary"]};
     :hover {
-      background-color: ${Color["primary-light"]};
-      
+      color: ${Color["primary-dark"]};
+      background-color: ${Color["gray-10"]};      
     }
     :active {
-      background-color: ${Color["primary-dark"]};
-      
+      color: ${Color["primary-dark"]};
+      background-color: ${Color["gray-30"]};
     }
   `}
 
   ${({ secondary }) =>
     secondary &&
     `
-    color: ${Color.secondary};
-   
+    color: ${Color["secondary"]};  
     :hover {
-      background-color: ${Color["secondary-light"]};
-      
+      color: ${Color["secondary"]};  
+      background-color: ${Color["gray-10"]};      
     }
     :active {
-      background-color: ${Color["secondary-dark"]};
-      
+      color: ${Color["secondary"]};  
+      background-color: ${Color["gray-30"]};
     }
   `}
 
   ${({ danger }) =>
     danger &&
     `
-    color: ${Color["red"]};
-   
+    color: ${Color["red"]};  
     :hover {
-      background-color: ${Color["red-dark"]};
-      
+      color: ${Color["red"]};  
+      background-color: ${Color["gray-10"]};      
     }
     :active {
-      background-color: ${Color["red-dark"]};
-      
+      color: ${Color["red"]};  
+      background-color: ${Color["gray-30"]};
     }
   `}
 
   ${({ success }) =>
     success &&
     `
-    color: ${Color["white"]};
-    
-    background-color: ${Color["green"]};
+    color: ${Color["green"]};  
     :hover {
-      background-color: ${Color["green-light"]};
-      
+      color: ${Color["green"]};  
+      background-color: ${Color["gray-20"]};      
     }
     :active {
-      background-color: ${Color["green-dark"]};
-      
+      color: ${Color["green"]};  
+      background-color: ${Color["gray-30"]};
     }
   `}
 
   ${({ disabled }) =>
     disabled &&
     `
-    color: ${Color["black-40"]} !important;
-    background-color: ${Color["black-10"]}
+    color: ${Color["black-40"]};
+    background-color: ${Color["black-10"]};
    
     :hover {
       background-color: ${Color["black-10"]};
-     
       color: ${Color["black-40"]};
       cursor: not-allowed;
     }
@@ -428,19 +422,14 @@ export const TextButton = styled.button`
 
   ${({ white }) =>
     white &&
-    `
-      background-color: transparent;
-     
-      color: ${Color["gray-20"]};
-      :hover {
-        background-color: ${Color["primary-light"]};
-       
-      }
-
-      :active {
-        background-color: ${Color["primary-dark"]};
-        
-      }
+    `  
+    color: ${Color["white"]};
+    :hover {
+      background-color: ${Color["gray-20"]};      
+    }
+    :active {
+      background-color: ${Color["gray-30"]};
+    }
     `}
 `;
 

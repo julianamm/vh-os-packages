@@ -22,7 +22,7 @@ storiesOf("Components|Input/Select", module)
     <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
       <VHSelect
         caption="Annual salary expectation"
-        captionColor="gray-100"
+        captionColor="gray-90"
         data={'AnyObjectOrString'}
         className={'AnyObjectOrString'}
         currentItem={currentItem}
@@ -41,6 +41,7 @@ storiesOf("Components|Input/Select", module)
     <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
       <VHSelect
         caption="Annual salary expectation"
+        captionColor="gray-90"
         placeholder="Annual salary expectation"
         data={'AnyObjectOrString'}
         className={'AnyObjectOrString'}
@@ -77,6 +78,7 @@ storiesOf("Components|Input/Select", module)
     <div style={{width: '80%', marginLeft:'1%', padding: '9px'}}>
       <VHSelect
         removeBorder
+        placeholder="Select an option"
         caption="Annual salary expectation"
         data={'AnyObjectOrString'}
         className={'AnyObjectOrString'}

@@ -11,12 +11,14 @@ export const ModalWrapper = styled.div`
   display: ${props => (props.open ? "block" : "none")};
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 666;
+  
 `;
 
 export const ModalContainer = styled.div`
-  margin: 9px auto;
+  border-radius:9px;
+  margin: 12px auto;
   max-width: 90%;
-  width: 1000%;
+  width: 100%;
   min-height: 10vh;
 
   ${({ width }) => width && `
@@ -27,7 +29,7 @@ export const ModalContainer = styled.div`
     height: ${height};
   `}
 
-  padding: 30px;
+  padding: 33px;
   background: rgb(255,255,255);
 `;
 

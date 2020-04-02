@@ -8,19 +8,19 @@ storiesOf('Components|Buttons/New/Text Buttom', module)
 
   .add('Default', () => (
     <React.Fragment>
-      <VHButton primary textButton onEvent={e => {
+      <VHButton textButton primary onEvent={e => {
         action('onEvent', e)
       }} label="VHButton" />
-      <VHButton secondary textButton onEvent={e => {
+      <VHButton textButton secondary  onEvent={e => {
         action('onEvent', e)
       }} label="VHButton" />
-      <VHButton danger textButton onEvent={e => {
+      <VHButton textButton danger  onEvent={e => {
         action('onEvent', e)
       }} label="VHButton" />
-      <VHButton success textButton onEvent={e => {
+      <VHButton textButton success onEvent={e => {
         action('onEvent', e)
       }} label="VHButton" />
-      <VHButton disabled textButton onEvent={e => {
+      <VHButton textButton  disabled onEvent={e => {
         action('onEvent', e)
       }} label="VHButton" />
     </React.Fragment>
