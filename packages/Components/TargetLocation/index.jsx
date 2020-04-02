@@ -32,147 +32,143 @@ const VHTargetLocation = props => {
         items[5].status])
 
     return (
-        <Row justifySpaceBetween row className={`vh-target-location ${props.className ? props.className : ''}`} row justifySpaceBetween>
-            <Row row responsive justifySpaceAround >
-            <S.Wrapper disabled={!canada} onClick={() => {
-                setCanada(!canada)
-                props.onEvent({
-                    type: "OnClick",
-                    origin: "VHTargetLocation",
-                    props: {
-                        data: { id: items[0].id, status: canada ? 0 : 1 },
-                        position: 0
-                    }
-                })
-            }}>
-                <Row marginBottom3 alignItemsCenter>
-                    <VHIcon icon={'canada'} title="city" lg />
-                </Row>
-                <Row alignItemsCenter>
-                    <VHText
-                        variant={"platform2"}
-                        color="black-100"
-                        text={'Canada'}
-                    />
-                </Row>
-            </S.Wrapper>
+        <Row className={`vh-target-location ${props.className ? props.className : ''}`}>
+            <Row row flexWrap justifySpaceStart>
+                <S.Wrapper disabled={!canada} onClick={() => {
+                    setCanada(!canada)
+                    props.onEvent({
+                        type: "OnClick",
+                        origin: "VHTargetLocation",
+                        props: {
+                            data: { id: items[0].id, status: canada ? 0 : 1 },
+                            position: 0
+                        }
+                    })
+                }}>
+                    <Row marginBottom3 alignItemsCenter>
+                        <VHIcon icon={'canada'} title="city" lg />
+                    </Row>
+                    <Row alignItemsCenter>
+                        <VHText
+                            variant={"platform2"}
+                            color="black-100"
+                            text={'Canada'}
+                        />
+                    </Row>
+                </S.Wrapper>
 
-            <S.Wrapper disabled={!germany} onClick={() => {
-                setGermany(!germany)
-                props.onEvent({
-                    type: "OnClick",
-                    origin: "VHTargetLocation",
-                    props: {
-                        data: { id: items[1].id, status: germany ? 0 : 1 },
-                        position: 1
-                    }
-                })
-            }}>
-                <Row marginBottom3 alignItemsCenter>
-                    <VHIcon icon={'germany'} title="city" lg />
-                </Row>
-                <Row alignItemsCenter>
-                    <VHText
-                        variant={"platform2"}
-                        color="black-100"
-                        text={'Germany'}
-                    />
-                </Row>
-            </S.Wrapper>
+                <S.Wrapper disabled={!germany} onClick={() => {
+                    setGermany(!germany)
+                    props.onEvent({
+                        type: "OnClick",
+                        origin: "VHTargetLocation",
+                        props: {
+                            data: { id: items[1].id, status: germany ? 0 : 1 },
+                            position: 1
+                        }
+                    })
+                }}>
+                    <Row marginBottom3 alignItemsCenter>
+                        <VHIcon icon={'germany'} title="city" lg />
+                    </Row>
+                    <Row alignItemsCenter>
+                        <VHText
+                            variant={"platform2"}
+                            color="black-100"
+                            text={'Germany'}
+                        />
+                    </Row>
+                </S.Wrapper>
+                <S.Wrapper disabled={!ireland} onClick={() => {
+                    setIreland(!ireland)
+                    props.onEvent({
+                        type: "OnClick",
+                        origin: "VHTargetLocation",
+                        props: {
+                            data: { id: items[2].id, status: ireland ? 0 : 1 },
+                            position: 2
+                        }
+                    })
+                }}>
+                    <Row marginBottom3 alignItemsCenter>
+                        <VHIcon icon={'ireland'} title="city" lg />
+                    </Row>
+                    <Row alignItemsCenter>
+                        <VHText
+                            variant={"platform2"}
+                            color="black-100"
+                            text={'Ireland'}
+                        />
+                    </Row>
+                </S.Wrapper>
+                <S.Wrapper disabled={!netherlands} onClick={() => {
+                    setNetherlands(!netherlands)
+                    props.onEvent({
+                        type: "OnClick",
+                        origin: "VHTargetLocation",
+                        props: {
+                            data: { id: items[3].id, status: netherlands ? 0 : 1 },
+                            position: 3
+                        }
+                    })
+                }}>
+                    <Row marginBottom3 alignItemsCenter>
+                        <VHIcon icon={'netherlands'} title="city" lg />
+                    </Row>
+                    <Row alignItemsCenter>
+                        <VHText
+                            variant={"platform2"}
+                            color="black-100"
+                            text={'Netherlands'}
+                        />
+                    </Row>
+                </S.Wrapper>
+                <S.Wrapper disabled={!uk} onClick={() => {
+                    setUk(!uk)
+                    props.onEvent({
+                        type: "OnClick",
+                        origin: "VHTargetLocation",
+                        props: {
+                            data: { id: items[4].id, status: uk ? 0 : 1 },
+                            position: 4
+                        }
+                    })
+                }}>
+                    <Row marginBottom3 alignItemsCenter>
+                        <VHIcon icon={'uk'} title="city" lg />
+                    </Row>
+                    <Row alignItemsCenter>
+                        <VHText
+                            variant={"platform2"}
+                            color="black-100"
+                            text={'U.K'}
+                        />
+                    </Row>
+                </S.Wrapper>
+                <S.Wrapper disabled={!usa} onClick={() => {
+                    setUsa(!usa)
+                    props.onEvent({
+                        type: "OnClick",
+                        origin: "VHTargetLocation",
+                        props: {
+                            data: { id: items[5].id, status: usa ? 0 : 1 },
+                            position: 5
+                        }
+                    })
+                }}>
+                    <Row marginBottom3 alignItemsCenter>
+                        <VHIcon icon={'usa'} title="city" lg />
+                    </Row>
+                    <Row alignItemsCenter>
+                        <VHText
+                            variant={"platform2"}
+                            color="black-100"
+                            text={'U.S.A'}
+                        />
+                    </Row>
+                </S.Wrapper>
             </Row>
-            <Row row responsive justifySpaceAround >
-            <S.Wrapper disabled={!ireland} onClick={() => {
-                setIreland(!ireland)
-                props.onEvent({
-                    type: "OnClick",
-                    origin: "VHTargetLocation",
-                    props: {
-                        data: { id: items[2].id, status: ireland ? 0 : 1 },
-                        position: 2
-                    }
-                })
-            }}>
-                <Row marginBottom3 alignItemsCenter>
-                    <VHIcon icon={'ireland'} title="city" lg />
-                </Row>
-                <Row alignItemsCenter>
-                    <VHText
-                        variant={"platform2"}
-                        color="black-100"
-                        text={'Ireland'}
-                    />
-                </Row>
-            </S.Wrapper>
-            <S.Wrapper disabled={!netherlands} onClick={() => {
-                setNetherlands(!netherlands)
-                props.onEvent({
-                    type: "OnClick",
-                    origin: "VHTargetLocation",
-                    props: {
-                        data: { id: items[3].id, status: netherlands ? 0 : 1 },
-                        position: 3
-                    }
-                })
-            }}>
-                <Row marginBottom3 alignItemsCenter>
-                    <VHIcon icon={'netherlands'} title="city" lg />
-                </Row>
-                <Row alignItemsCenter>
-                    <VHText
-                        variant={"platform2"}
-                        color="black-100"
-                        text={'Netherlands'}
-                    />
-                </Row>
-            </S.Wrapper>
-            </Row>
-            <Row row responsive justifySpaceAround >
-            <S.Wrapper disabled={!uk} onClick={() => {
-                setUk(!uk)
-                props.onEvent({
-                    type: "OnClick",
-                    origin: "VHTargetLocation",
-                    props: {
-                        data: { id: items[4].id, status: uk ? 0 : 1 },
-                        position: 4
-                    }
-                })
-            }}>
-                <Row marginBottom3 alignItemsCenter>
-                    <VHIcon icon={'uk'} title="city" lg />
-                </Row>
-                <Row alignItemsCenter>
-                    <VHText
-                        variant={"platform2"}
-                        color="black-100"
-                        text={'U.K'}
-                    />
-                </Row>
-            </S.Wrapper>
-
-            <S.Wrapper disabled={!usa} onClick={() => {
-                setUsa(!usa)
-                props.onEvent({
-                    type: "OnClick",
-                    origin: "VHTargetLocation",
-                    props: {
-                        data: { id: items[5].id, status: usa ? 0 : 1 },
-                        position: 5
-                    }
-                })
-            }}>
-                <Row marginBottom3 alignItemsCenter>
-                    <VHIcon icon={'usa'} title="city" lg />
-                </Row>
-                <Row alignItemsCenter>
-                    <VHText
-                        variant={"platform2"}
-                        color="black-100"
-                        text={'U.S.A'}
-                    />
-                </Row>
-            </S.Wrapper>
-            </Row>
+            
         </Row>
     )
 

@@ -90,6 +90,10 @@ export const Row = styled.div`
         align-items: center;
     `}
 
+    ${({ flexWrap}) => flexWrap && `
+        flex-wrap: wrap;
+    `}
+
     ${({ responsive }) => responsive && `
         @media only screen and (max-width: 768px) {
             flex-direction: column;

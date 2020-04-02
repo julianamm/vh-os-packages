@@ -45,13 +45,13 @@ const VHGeneralSection = props => {
                 onEvent={props.onEvent}
                 isLoading={props.controls.citizenship.loading}
                 description={props.controls.citizenship.error && props.controls.citizenship.message}
-                descriptionColor="gray-100"
+                descriptionColor="gray-90"
                 captionColor={
                   props.controls.citizenship.loading
                   ? "gray-40"
                   : props.controls.citizenship.error
                   ? "red"
-                  : 'gray-100'
+                  : 'gray-90'
                 }
               />
             </Row>
@@ -66,13 +66,13 @@ const VHGeneralSection = props => {
                   onEvent={props.onEvent}
                   isLoading={props.controls.location.loading}
                   description={props.controls.location.error && props.controls.location.message}
-                  descriptionColor="gray-100"
+                  descriptionColor="gray-90"
                   captionColor={
                     props.controls.location.loading
                     ? "gray-40"
                     : props.controls.location.error
                     ? "red"
-                    : 'gray-100'
+                    : 'gray-90'
                   }
                 />
             </Row>
@@ -96,7 +96,7 @@ const VHGeneralSection = props => {
                     ? "gray-40"
                     : props.controls.gender.error
                     ? "red"
-                    : 'gray-100'
+                    : 'gray-90'
                   }
                 />
             </Row>
@@ -120,7 +120,7 @@ const VHGeneralSection = props => {
                   ? "gray-40"
                   : props.controls.phone.error
                   ? "red"
-                  : "gray-100"
+                  : "gray-90"
                 }
                 titleVariant="platform1"
               />

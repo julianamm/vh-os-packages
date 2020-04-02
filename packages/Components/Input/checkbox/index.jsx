@@ -44,7 +44,7 @@ const VHInputCheckbox = props => {
 
 VHInputCheckbox.defaultProps = {
   title: "",
-  color: "gray-100",
+  color: "gray-90",
   variant: "platform1",
   onEvent: null,
   data: null,

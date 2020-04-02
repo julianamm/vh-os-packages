@@ -11,6 +11,8 @@ import VHTargetLocation from '../../Components/TargetLocation';
 
 import { RelocationSkeleton } from 'react-preload-skeleton'
 
+
+
 const VHRelocationSection = props => {
 
     const salaryRangeCadList = props.salaryRangeCadList
@@ -30,12 +32,13 @@ const VHRelocationSection = props => {
 
     return (
         <>
-            <Row marginBottom={5}>
+            <Row >
                 <VHText
                     className={`vh-general-section-title ${props.className ? props.className : ''}`}
                     text={"Relocation"}
                     color="black-50"
                     variant="h2"
+                   
                 />
             </Row>
             <Row >
@@ -50,17 +53,17 @@ const VHRelocationSection = props => {
                         ) : (
                             <>
                                 <Row column>
-                                    <Row marginBottom={5}>
+                                    <Row marginBottom={16}>
                                         <VHInputRadio
                                             data={'openForRemoteJobs'}
-                                            color="gray-100"
-                                            variant="subtitle3"
+                                            color="gray-90"
+                                            variant="platform1"
                                             onEvent={props.onEvent}
                                             text={'Are you open to remote jobs?'}
                                             checked={props.openForRemoteJobs}
                                         />
                                     </Row>
-                                    <Row marginBottom={5}>
+                                    <Row marginBottom={1}>
                                     <VHTitleDescription
                                                     className={`vh-general-section-companySize ${props.className ? props.className : ''}`}
                                                     descriptionColor={
@@ -79,15 +82,15 @@ const VHRelocationSection = props => {
                                                             ? "gray-40"
                                                             : props.controls.companySize.error
                                                                 ? "red"
-                                                                : "gray-100"
+                                                                : "gray-90"
                                                     }
-                                                    titleVariant="subtitle3"
+                                                    titleVariant="platform1"
                                                 />
                                     </Row>
-                                    <Row marginBottom={10} width={'600px'}>
+                                    <Row marginBottom={16} width={'600px'}>
                                         <VHTargetLocation onEvent={props.onEvent} items={targetLocation}/>
                                     </Row>
-                                    <Row row responsive>
+                                    <Row row responsive marginBottom={5}>
                                         <Row paddingRight8 responsive>
                                             <VHSelect
                                                 caption={'Annual salary expectation CAD'}
@@ -99,13 +102,13 @@ const VHRelocationSection = props => {
                                                 onEvent={props.onEvent}
                                                 isLoading={props.controls.salaryRangeCad.loading}
                                                 description={props.controls.salaryRangeCad.error && props.controls.salaryRangeCad.message}
-                                                descriptionColor="red-light"
+                                                descriptionColor="red"
                                                 captionColor={
                                                     props.controls.salaryRangeCad.loading
                                                         ? "gray-40"
                                                         : props.controls.salaryRangeCad.error
                                                             ? "red"
-                                                            : null
+                                                            : "gray-90"
                                                 }
                                             />
                                         </Row>
@@ -125,14 +128,14 @@ const VHRelocationSection = props => {
                                                         ? "gray-40"
                                                         : props.controls.salaryRangeEur.error
                                                             ? "red"
-                                                            : null
+                                                            : "gray-90"
                                                 }
                                             />
                                         </Row>
                                     </Row>
                                 </Row>
                                 <Row column>
-                                    <Row row responsive>
+                                    <Row row responsive  marginBottom={5}>
                                         <Row paddingRight8>
                                             <VHSelect
                                                 caption="Canadian Visa Status"
@@ -143,13 +146,13 @@ const VHRelocationSection = props => {
                                                 onEvent={props.onEvent}
                                                 isLoading={props.controls.visaStatusCanadian.loading}
                                                 description={props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message}
-                                                descriptionColor="red-light"
+                                                descriptionColor="red"
                                                 captionColor={
                                                     props.controls.visaStatusCanadian.loading
                                                         ? "gray-40"
                                                         : props.controls.visaStatusCanadian.error
                                                             ? "red"
-                                                            : null
+                                                            : "gray-90"
                                                 }
                                             />
                                         </Row>
@@ -163,13 +166,13 @@ const VHRelocationSection = props => {
                                                 onEvent={props.onEvent}
                                                 isLoading={props.controls.visaStatusEU.loading}
                                                 description={props.controls.visaStatusEU.error && props.controls.visaStatusEU.message}
-                                                descriptionColor="red-light"
+                                                descriptionColor="red"
                                                 captionColor={
                                                     props.controls.visaStatusEU.loading
                                                         ? "gray-40"
                                                         : props.controls.visaStatusEU.error
                                                             ? "red"
-                                                            : null
+                                                            : "gray-90"
                                                 }
                                             />
                                         </Row>
@@ -180,22 +183,22 @@ const VHRelocationSection = props => {
                                         <Row paddingRight8>
                                             <VHInputRadio
                                                 data={'passportValid'}
-                                                color="gray-100"
-                                                variant="subtitle3"
+                                                color="gray-90"
+                                                variant="platform1"
                                                 onEvent={props.onEvent}
                                                 text={'Do you have a valid passport?'}
                                                 checked={props.passportValid}
                                             />
                                         </Row>
                                         <Row column>
-                                            <Row marginBottom={5}>
+                                            <Row marginBottom={3} >
                                                 <VHTitleDescription
                                                     className={`vh-general-section-companySize ${props.className ? props.className : ''}`}
                                                     descriptionColor={
                                                         props.controls.companySize.loading
                                                             ? "gray-40"
                                                             : props.controls.companySize.error
-                                                                ? "red-light"
+                                                                ? "red"
                                                                 : "gray-90"
                                                     }
                                                     descriptionVariant="caption"
@@ -207,12 +210,12 @@ const VHRelocationSection = props => {
                                                             ? "gray-40"
                                                             : props.controls.companySize.error
                                                                 ? "red"
-                                                                : "gray-100"
+                                                                : "gray-90"
                                                     }
-                                                    titleVariant="subtitle3"
+                                                    titleVariant="platform1"
                                                 />
                                             </Row>
-                                            <Row row responsive>
+                                            <Row row responsive  marginBottom={5}>
                                                 <Row>
                                                     <VHInputCheckbox
                                                         checked={companySize[0].value}
@@ -222,7 +225,7 @@ const VHRelocationSection = props => {
                                                                 ? "gray-40"
                                                                 : props.controls.companySize.error
                                                                     ? "red"
-                                                                    : 'gray-100'
+                                                                    : 'gray-90'
                                                         }
                                                         data={{
                                                             id: 'companySize',
@@ -244,7 +247,7 @@ const VHRelocationSection = props => {
                                                             ? "gray-40"
                                                             : props.controls.companySize.error
                                                                 ? "red"
-                                                                : 'gray-100'
+                                                                : 'gray-90'
                                                     }
                                                     data={{
                                                         id: 'companySize',
@@ -265,7 +268,7 @@ const VHRelocationSection = props => {
                                                             ? "gray-40"
                                                             : props.controls.companySize.error
                                                                 ? "red"
-                                                                : 'gray-100'
+                                                                : 'gray-90'
                                                     }
                                                     data={{
                                                         id: 'companySize',
@@ -285,8 +288,8 @@ const VHRelocationSection = props => {
                                         <Row paddingRight8>
                                             <VHInputRadio
                                                 data={'activelyLookingForJob'}
-                                                color="gray-100"
-                                                variant="subtitle3"
+                                                color="gray-90"
+                                                variant="platform1"
                                                 onEvent={props.onEvent}
                                                 text={'Are you actively looking for a job?'}
                                                 checked={props.activelyLookingForJob}
@@ -308,7 +311,7 @@ const VHRelocationSection = props => {
                                                         ? "gray-40"
                                                         : props.controls.noticePeriod.error
                                                             ? "red"
-                                                            : null
+                                                            : "gray-90"
                                                 }
                                             />
                                         </Row>
