@@ -35,13 +35,13 @@ var VHLanguageList = function VHLanguageList(props) {
   });
   var list = props.list ? props.list : [];
   var secondList = props.secondList ? props.secondList : [];
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '30%',
     alignItemsCenter: true,
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
@@ -61,9 +61,9 @@ var VHLanguageList = function VHLanguageList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 0
-  }))), _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
     removeBorder: true,
@@ -77,13 +77,13 @@ var VHLanguageList = function VHLanguageList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 0
-  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '30%',
     alignItemsCenter: true,
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
@@ -103,9 +103,9 @@ var VHLanguageList = function VHLanguageList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 1
-  }))), _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
     removeBorder: true,
@@ -119,13 +119,13 @@ var VHLanguageList = function VHLanguageList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 1
-  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '30%',
     alignItemsCenter: true,
     row: true
-  }, _react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
@@ -142,9 +142,9 @@ var VHLanguageList = function VHLanguageList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 2
-  }))), _react.default.createElement(_Grid.Row, {
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, _react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.language.preLoading,
     isDisabled: other === undefined ? true : false,
     marginBottom: '0px',

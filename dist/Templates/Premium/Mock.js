@@ -88,10 +88,10 @@ Mock.pricing = {
     period: "Month",
     price: "65",
     unit: "CAD$/month",
-    subscription: "Renews every month",
+    subscription: "",
     cta: "Get Started",
     outlineBtn: true,
-    note: ""
+    note: "Renews every month"
   }, {
     show: true,
     save: "Save 15%",
