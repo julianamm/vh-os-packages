@@ -38,6 +38,7 @@ const VHGeneralSection = props => {
               <VHSelect
                 preLoading={props.controls.citizenship.preLoading || false}
                 caption="Citizenship"
+                placeholder="Select an option"
                 className={`vh-general-section-citizenship ${props.className ? props.className : ''}`}
                 currentItem={citizenship}
                 data="citizenship"
@@ -45,13 +46,13 @@ const VHGeneralSection = props => {
                 onEvent={props.onEvent}
                 isLoading={props.controls.citizenship.loading}
                 description={props.controls.citizenship.error && props.controls.citizenship.message}
-                descriptionColor="gray-100"
+                descriptionColor="red"
                 captionColor={
                   props.controls.citizenship.loading
                   ? "gray-40"
                   : props.controls.citizenship.error
                   ? "red"
-                  : 'gray-100'
+                  : 'gray-90'
                 }
               />
             </Row>
@@ -59,6 +60,7 @@ const VHGeneralSection = props => {
               <VHSelect
                   preLoading={props.controls.location.preLoading || false}
                   caption="Location"
+                  placeholder="Select an option"
                   className={`vh-general-section-location ${props.className ? props.className : ''}`}
                   currentItem={location}
                   data="location"
@@ -66,13 +68,13 @@ const VHGeneralSection = props => {
                   onEvent={props.onEvent}
                   isLoading={props.controls.location.loading}
                   description={props.controls.location.error && props.controls.location.message}
-                  descriptionColor="gray-100"
+                  descriptionColor="red"
                   captionColor={
                     props.controls.location.loading
                     ? "gray-40"
                     : props.controls.location.error
                     ? "red"
-                    : 'gray-100'
+                    : 'gray-90'
                   }
                 />
             </Row>
@@ -82,6 +84,7 @@ const VHGeneralSection = props => {
                 <VHSelect
                   preLoading={props.controls.gender.preLoading || false}
                   caption="Gender"
+                  placeholder="Select an option"
                   className={`vh-general-section-gender ${props.className ? props.className : ''}`}
                   currentItem={gender}
                   data="gender"
@@ -89,14 +92,14 @@ const VHGeneralSection = props => {
                   onEvent={props.onEvent}
                   isLoading={props.controls.gender.loading}
                   description={props.controls.gender.error && props.controls.gender.message}
-                  descriptionColor="red-light"
-                  placeholder="Select an option"
+                  descriptionColor="red"
+                  
                   captionColor={
                     props.controls.gender.loading
                     ? "gray-40"
                     : props.controls.gender.error
                     ? "red"
-                    : 'gray-100'
+                    : 'gray-90'
                   }
                 />
             </Row>
@@ -120,7 +123,7 @@ const VHGeneralSection = props => {
                   ? "gray-40"
                   : props.controls.phone.error
                   ? "red"
-                  : "gray-100"
+                  : "gray-90"
                 }
                 titleVariant="platform1"
               />

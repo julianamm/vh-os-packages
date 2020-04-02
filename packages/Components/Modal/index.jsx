@@ -20,7 +20,7 @@ const VHModal = props => {
             {props.header && props.header}
           </div>
             {!props.hideBtnClose && (
-              <S.Close
+              <S.Close style={{textAlign:'right'}}
                 onClick={() => {
                   if(props.onClose){
                     props.onClose()
