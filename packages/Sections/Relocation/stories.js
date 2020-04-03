@@ -68,7 +68,7 @@ const controls = {
 
 storiesOf("Sections|Relocation", module)
     .add("Default", () => (
-        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }} id={'Relocation'}>
             <VHRelocationSection
                 education={education}
                 items={items}
@@ -82,7 +82,7 @@ storiesOf("Sections|Relocation", module)
         </div>
     ))
     .add("preloading", () => (
-        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
+        <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }} id={'Relocation'}>
             <VHRelocationSection
                 education={education}
                 items={items}

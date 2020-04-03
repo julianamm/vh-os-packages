@@ -8,12 +8,16 @@ const links = [
         href: '#general',
     },
     {
-        name: 'Skills',
+        name: 'Professional Overview',
         href: '#skills',
     },
     {
         name: 'Relocation',
         href: '#relocation',
+    },
+    {
+        name: 'Social Profile',
+        href: '#socialProfile',
     },
     {
         name: 'Languages',
@@ -26,6 +30,10 @@ const links = [
     {
         name: 'Education',
         href: '#education',
+    },
+    {
+        name: 'Side Projects',
+        href: '#sideProjects',
     }
 ]
 

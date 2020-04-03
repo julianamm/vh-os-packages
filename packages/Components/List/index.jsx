@@ -15,14 +15,15 @@ const VHList = props => {
         <React.Fragment>
             < S.Wrapper >
                 <Row alignItemsCenter row responsive>
-                    <Row responsive width="27px">
-                        <VHText variant={'platform'} text="1st" color={'gray-90'} />
+                    <Row responsive width="27px" marginRight={1}>
+                        <VHText variant={'platform'} text="1st" color={'gray-90'}  />
                     </Row>
-                    <Row responsive>
+                    <Row responsive marginRight={2}>
                         <VHSelect
                             preLoading={props.controls.topSkill.preLoading}
                             placeholder='Select your top skill'
                             removeIndicator
+                            removeDropdownIcon
                             bold={true}
                             marginBottom={'0px'}
                             removeBorder
@@ -35,10 +36,11 @@ const VHList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={0}
+                            
                         />
                     </Row>
                 </Row>
-                <Row width={'20%'} responsive>
+                <Row width={'20%'} responsive >
                     <VHSelect
                         preLoading={props.controls.topSkill.preLoading}
                         placeholder='Select your top skill'
@@ -61,10 +63,10 @@ const VHList = props => {
             </ S.Wrapper>
             < S.Wrapper >
                 <Row responsive alignItemsCenter row >
-                    <Row responsive width="27px">
+                    <Row responsive width="27px" marginRight={1}>
                         <VHText variant={'platform'} text="2nd" color={'gray-90'} />
                     </Row>
-                    <Row responsive>
+                    <Row responsive marginRight={2}>
                         <VHSelect
                             preLoading={props.controls.topSkill.preLoading}
                             placeholder='Select your top skill'
@@ -107,10 +109,10 @@ const VHList = props => {
             </S.Wrapper>
             <S.Wrapper>
                 <Row alignItemsCenter row responsive>
-                    <Row responsive width="27px">
+                    <Row responsive width="27px" marginRight={1}>
                         <VHText variant={'platform'} text="3rd" color={'gray-90'} />
                     </Row>
-                    <Row responsive>
+                    <Row responsive marginRight={2}>
                         <VHSelect
                             preLoading={props.controls.topSkill.preLoading}
                             placeholder='Select your top skill'
