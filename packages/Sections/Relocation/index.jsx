@@ -33,7 +33,7 @@ const VHRelocationSection = props => {
     return (
         <>
             <Row >
-                <VHText
+                <VHText marginBottom={2}
                     className={`vh-general-section-title ${props.className ? props.className : ''}`}
                     text={"Relocation"}
                     color="black-50"
@@ -53,7 +53,7 @@ const VHRelocationSection = props => {
                         ) : (
                             <>
                                 <Row column>
-                                    <Row marginBottom={16}>
+                                    <Row marginBottom={16} id="remote-jobs">
                                         <VHInputRadio
                                             data={'openForRemoteJobs'}
                                             color="gray-90"
@@ -63,8 +63,9 @@ const VHRelocationSection = props => {
                                             checked={props.openForRemoteJobs}
                                         />
                                     </Row>
-                                    <Row marginBottom={1}>
+                                    <Row marginBottom={1} >
                                     <VHTitleDescription
+                                                    
                                                     className={`vh-general-section-companySize ${props.className ? props.className : ''}`}
                                                     descriptionColor={
                                                         props.controls.companySize.loading
@@ -87,11 +88,11 @@ const VHRelocationSection = props => {
                                                     titleVariant="platform1"
                                                 />
                                     </Row>
-                                    <Row marginBottom={16} width={'600px'}>
+                                    <Row marginBottom={16} width={'600px'} id="target-location">
                                         <VHTargetLocation onEvent={props.onEvent} items={targetLocation}/>
                                     </Row>
                                     <Row row responsive marginBottom={5}>
-                                        <Row paddingRight8 responsive>
+                                        <Row paddingRight8 responsive id="salary-cad">
                                             <VHSelect
                                                 caption={'Annual salary expectation CAD'}
                                                 leftText="$CAD"
@@ -112,7 +113,7 @@ const VHRelocationSection = props => {
                                                 }
                                             />
                                         </Row>
-                                        <Row>
+                                        <Row id="salary-eu">
                                             <VHSelect
                                                 caption={'Annual salary expectation EUR'}
                                                 className={`vh-general-section-salaryRangeEur ${props.className ? props.className : ''}`}
@@ -136,7 +137,7 @@ const VHRelocationSection = props => {
                                 </Row>
                                 <Row column>
                                     <Row row responsive  marginBottom={5}>
-                                        <Row paddingRight8>
+                                        <Row paddingRight8 id="visa-cad">
                                             <VHSelect
                                                 caption="Canadian Visa Status"
                                                 className={`vh-general-section-visaStatusCanadian ${props.className ? props.className : ''}`}
@@ -156,7 +157,7 @@ const VHRelocationSection = props => {
                                                 }
                                             />
                                         </Row>
-                                        <Row>
+                                        <Row id="visa-eu"> 
                                             <VHSelect
                                                 caption="EU Visa Status"
                                                 className={`vh-general-section-visaStatusEU ${props.className ? props.className : ''}`}
@@ -179,8 +180,8 @@ const VHRelocationSection = props => {
                                     </Row>
                                 </Row>
                                 <Row column marginBottom={5}>
-                                    <Row row marginBottom={5} responsive>
-                                        <Row paddingRight8>
+                                    <Row row marginBottom={5} responsive id="passaport-valid">
+                                        <Row paddingRight8 >
                                             <VHInputRadio
                                                 data={'passportValid'}
                                                 color="gray-90"
@@ -285,7 +286,7 @@ const VHRelocationSection = props => {
                                         </Row>
                                     </Row>
                                     <Row row responsive>
-                                        <Row paddingRight8>
+                                        <Row paddingRight8 id="looking-job">
                                             <VHInputRadio
                                                 data={'activelyLookingForJob'}
                                                 color="gray-90"
@@ -295,7 +296,7 @@ const VHRelocationSection = props => {
                                                 checked={props.activelyLookingForJob}
                                             />
                                         </Row>
-                                        <Row>
+                                        <Row id="notice-period" > 
                                         <VHSelect
                                                 caption="What is your notice period?"
                                                 className={`vh-general-section-notice-period ${props.className ? props.className : ''}`}

@@ -30,7 +30,7 @@ const VHUserCompanyExperienceSection = props => {
           positions={props.positions}
           closeModalExperience={props.closeModalExperience} />
       }
-      <Row marginBottom={5}>
+      <Row mmarginBottom={2}>
         <VHText
           className={`vh-skills-section-title ${props.className ? props.className : ''}`}
           text={`Experience ${props.yearsOfExperience || ''}`}

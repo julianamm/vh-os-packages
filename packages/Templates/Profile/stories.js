@@ -129,7 +129,7 @@ const User = {
 storiesOf("Templates|Profile", module)
 
   .add("default", () => (
-    <div style={{ backgroundColor: "#f2f2f2", height: "100%" }}>
+    <div style={{ backgroundColor: "#f2f2f2", height: "100%"}}>
       <VHProfileTemplate
       
         controls={controls}

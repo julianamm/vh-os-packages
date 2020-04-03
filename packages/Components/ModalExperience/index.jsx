@@ -6,7 +6,7 @@ import VHTitleDescription from "../TitleDescription";
 import VHSelect from "../../Components/Input/Select";
 import VHInput from "../../Components/Input/Simple";
 import VHText from "../../Components/Text/index";
-import VHButton from "../../Components/Button/index";
+import VHButton from "../../Components/Button-New/index";
 import VHInputCheckbox from "../../Components/Input/checkbox"
 import VHInputMultiple from "../../Components/Input/Multiple"
 import VHIconText from '../../Components/IconText/'
@@ -32,7 +32,7 @@ const VHModalExperience = props => {
                         description={''}
                         titleVariant="h3"
                         titleColor="black-50"
-                        descriptionColor="gray-100"
+                        descriptionColor="gray-90"
                         descriptionVariant="platform"
                         onEvent={props.onEvent} />
                 </Row>
@@ -40,76 +40,74 @@ const VHModalExperience = props => {
             content={
                 <Row column>
                     <Row row justifySpaceBetween>
-                        <div style={{ width: '40%' }}>
-                            <VHText color="gray-100" variant={'platform'} text="Company Name" />
-                            <VHInput placeholder="" onEvent={props.onEvent} value={item.companyName.value}
+                        <Row style={{ width: '50%' }} marginRight={2} id="company-name">
+                            <Row marginBottom={2}><VHText color="gray-90" variant={'platform'} text="Company Name" /></Row>
+                            <VHInput  placeholder="Ex: VanHack" onEvent={props.onEvent} value={item.companyName.value}
                                 data={{ id: "ModalExperience", field: "companyName" }} />
-                        </div>
-                        <div style={{ width: '40%' }}>
+                        </Row>
+                        <Row style={{ width: '50%' }}  marginLeft={2}  id="company-location">
                             <VHSelect
                                 caption="Location"
-                                captionColor={null
-                                }
+                                captionColor="gray-90"
                                 className={`vh-general-section-location ${props.className ? props.className : ''}`}
                                 currentItem={item.countryId.value ? props.countries.find(element => element.value === item.countryId.value) : {}}
                                 data={{ id: "ModalExperience", field: "countryId" }}
                                 onEvent={props.onEvent}
                                 items={props.countries}
-                                descriptionColor="red-light"
+                                descriptionColor="red"
+                                placeholder="Select an country"
                             />
                             {item.countryId.messageError && (
                                 <S.ErrorMessage>Field required</S.ErrorMessage>
                             )}
-                        </div>
+                        </Row>
                     </Row>
                     <Row row justifySpaceBetween>
-                        <div style={{ width: '40%' }}>
+                        <Row style={{ width: '50%' }} id="company-size-modal" marginRight={2}>
                             <VHSelect
                                 caption="Company Size"
-                                captionColor={null
-                                }
+                                captionColor="gray-90"
                                 className={`vh-general-section-company-size ${props.className ? props.className : ''}`}
                                 currentItem={item.companySize.value ? props.companyList.find(element => element.value === item.companySize.value) : {}}
                                 data={{ id: "ModalExperience", field: "companySize" }}
                                 onEvent={props.onEvent}
                                 items={props.companyList}
-                                descriptionColor="red-light"
+                                descriptionColor="red"
+                                placeholder="select an option"
                             />
                             {item.companySize.messageError && (
                                 <S.ErrorMessage>Field required</S.ErrorMessage>
                             )}
-                        </div>
-                        <div style={{ width: '40%' }}>
+                        </Row>
+                        <Row style={{ width: '50%' }} id="company-industry-modal" marginLeft={2}>
                             <VHSelect
                                 caption="Industry"
-                                captionColor={null
-                                }
+                                captionColor="gray-90"
                                 className={`vh-general-section-industry ${props.className ? props.className : ''}`}
                                 currentItem={{ value: item.industryId.value, label: item.industryId.value ? props.industryList[item.industryId.value].label : '' }}
                                 data={{ id: "ModalExperience", field: "industryId" }}
                                 onEvent={props.onEvent}
                                 items={props.industryList}
-                                descriptionColor="red-light"
+                                descriptionColor="red"
                             />
                             {item.industryId.messageError && (
                                 <S.ErrorMessage>Field required</S.ErrorMessage>
                             )}
-                        </div>
+                        </Row>
                     </Row>
                     {item.workExperiences.map((experience, index) => {
                         return (
                             <React.Fragment>
-                                <Row width={'40%'} marginBottom5>
+                                <Row width={'50%'} >
                                     <VHSelect
                                         caption="Role Title"
-                                        captionColor={null
-                                        }
+                                        captionColor="gray-90"
                                         className={`vh-general-section-position ${props.className ? props.className : ''}`}
                                         currentItem={{ value: experience.positionId.value, label: experience.positionId.value ? props.positions[experience.positionId.value].label : '' }}
                                         data={{ id: "ModalExperience", field: "positionId", index: index }}
                                         onEvent={props.onEvent}
                                         items={props.positions}
-                                        descriptionColor="red-light"
+                                        descriptionColor="red"
                                     />
                                     {experience.positionId.messageError && (
                                         <S.ErrorMessage>Field required</S.ErrorMessage>
@@ -119,7 +117,7 @@ const VHModalExperience = props => {
                                     <Row marginBottom5>
                                         <VHInputCheckbox
                                             title={'I am currently working in this role'}
-                                            color="gray-100"
+                                            color="gray-90"
                                             variant="platform1"
                                             data={{
                                                 modal: 'ModalExperience',
@@ -136,20 +134,20 @@ const VHModalExperience = props => {
                                     </Row>
                                 }
                                 <Row marginBottom5 row justifySpaceBetween>
-                                    <Row width={'40%'}>
-                                        <VHText color="gray-100" variant={'platform'} text="Start Date" />
+                                    <Row width={'50%'} marginRight={2}>
+                                        <VHText color="gray-90" variant={'platform'} text="Start Date" />
                                         <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={getFormatedDate(experience.startDate.value)} data={{ id: "ModalExperience", field: "startDate", index: index }} />
                                         {experience.startDate.messageError && (
                                             <S.ErrorMessage>Field required</S.ErrorMessage>
                                         )}
                                     </Row>
-                                    <Row width={'40%'}>
-                                        <VHText color="gray-100" variant={'platform'} text="End Date" />
+                                    <Row width={'50%'} marginLeft={2}>
+                                        <VHText color="gray-90" variant={'platform'} text="End Date" />
                                         <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={getFormatedDate(experience.endDate.value)} data={{ id: "ModalExperience", field: "endDate", index: index }} />
                                     </Row>
                                 </Row>
                                 <Row marginBottom5 paddingBottom borderBottom>
-                                    <VHText color="gray-100" variant={'platform'} text="Description" />
+                                    <VHText color="gray-90" variant={'platform'} text="Description" />
                                     <VHInputMultiple
                                         max={5}
                                         items={experience.description}

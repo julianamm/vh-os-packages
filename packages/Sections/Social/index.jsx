@@ -9,7 +9,7 @@ import { InputSkeleton } from 'react-preload-skeleton'
 const VHSocialSection = props => {
   return (
     <>
-      <Row>
+      <Row marginBottom={2}>
         <VHText
           className={`vh-skills-section-title ${props.className ? props.className : ''}`}
           text={"Social Profile"}
@@ -28,7 +28,7 @@ const VHSocialSection = props => {
               </Row>
             ) : (
               <>
-                <Row marginBottom5>
+                <Row marginBottom5 id="linkedin-href">
                   <VHInputIcon
                     className=""
                     disabled={props.controls.linkedin.loading}
@@ -41,7 +41,7 @@ const VHSocialSection = props => {
                     value={props.linkedin}
                   />
                 </Row>
-                <Row marginBottom5>
+                <Row marginBottom5 id="github-href">
                   <VHInputIcon
                     className=""
                     disabled={props.controls.git.loading}
@@ -54,7 +54,7 @@ const VHSocialSection = props => {
                     value={props.git}
                   />
                 </Row>
-                <Row marginBottom5>
+                <Row marginBottom5 id="website-href">
                   <VHInputIcon
                     className=""
                     disabled={props.controls.webSite.loading}
@@ -64,6 +64,19 @@ const VHSocialSection = props => {
                     value={props.webSite}
                     data={'webSite'}
                     icon="webSite"
+                    onEvent={props.onEvent}
+                  />
+                </Row>
+                <Row marginBottom5 id="resume-href">
+                  <VHInputIcon
+                    className=""
+                    disabled={props.controls.webSite.loading}
+                    error={props.controls.webSite.error}
+                    loading={props.controls.webSite.loading}
+                    placeholder="http://sitename.com/your-resume.pdf"
+                    value={props.webSite}
+                    data={'resume'}
+                    icon="profile"
                     onEvent={props.onEvent}
                   />
                 </Row>
