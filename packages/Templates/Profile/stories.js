@@ -109,11 +109,11 @@ storiesOf("Templates|Profile", module)
 
   .add("default", () => (
     <div style={{ backgroundColor: "#f2f2f2", height: "100%" }}>
-      {/* <VHProfileTemplate
+      <VHProfileTemplate
         experience={experiences}
         languages={languages}
         controls={controls}
-      /> */}
+      /> 
       
     </div>
   ))

@@ -41,7 +41,7 @@ const VHModalEducation = props => {
             }
             content={
                 <Row column>
-                    <div style={{ width: '40%' }}>
+                    <div style={{ width: '50%' }}>
                         <VHSelect
                             caption="Degree Type"
                             captionColor="gray-90"
@@ -71,14 +71,14 @@ const VHModalEducation = props => {
                         )}
                     </Row>
                     <Row marginBottom5 row justifySpaceBetween>
-                        <Row width={'40%'}>
+                        <Row width={'50%'} marginRight={4}>
                             <VHText color="gray-90" variant={'platform'} text="Start Date" />
                             <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={startYear} data={{ id: "ModalEducation", field: "startYear" }} />
                             {props.modalEducation.startYear.messageError && (
                                 <S.ErrorMessage>Field required</S.ErrorMessage>
                             )}
                         </Row>
-                        <Row width={'40%'}>
+                        <Row width={'50%'}>
                             <VHText color="gray-90" variant={'platform'} text="End Date" />
                             <VHInput placeholder="" type={'date'} onEvent={props.onEvent} value={endYear} data={{ id: "ModalEducation", field: "endYear" }} />
                         </Row>

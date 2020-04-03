@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   ${({ loading }) => !loading && `
     border-radius: 6px;
     border: solid 1px ${Color["gray-30"]};
-    background-color: ${Color["gray-20"]};
+    background-color: ${Color["white"]};
     padding-left: 0.563rem;
     display: grid;
     grid-template-columns: 9px 100%;

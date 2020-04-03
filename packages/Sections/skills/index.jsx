@@ -31,9 +31,10 @@ const VHSkillsSection = props => {
     })
   }
 
+
   return (
     <>
-      <Row marginBottom={5}>
+      <Row>
         <VHText
           className={`vh-skills-section-title ${props.className ? props.className : ''}`}
           text={"Professional Overview"}
@@ -46,7 +47,7 @@ const VHSkillsSection = props => {
           className={`vh-skills-section-card ${props.className ? props.className : ''}`}
         >
           <Row row justifySpaceBetween responsive>
-            <Row width={'60%'}>
+            <Row width={'60%'} marginRight={3}>
               <VHSelect
                 preLoading={props.preLoading}
                 caption="I am..."
@@ -55,7 +56,7 @@ const VHSkillsSection = props => {
                     ? "gray-40"
                     : props.controls.positionSkill.error
                       ? "red"
-                      : 'gray-100'
+                      : 'gray-90'
                 }
                 className={`vh-skills-section-positionSkill ${props.className ? props.className : ''}`}
                 currentItem={position}
@@ -64,10 +65,10 @@ const VHSkillsSection = props => {
                 items={positions}
                 isLoading={props.controls.positionSkill.loading}
                 description={props.controls.positionSkill.error && props.controls.positionSkill.message}
-                descriptionColor="red-light"
+                descriptionColor="red"
               />
             </Row>
-            <Row width={'30%'}>
+            <Row width={'40%'}>
               <VHSelect
                 preLoading={props.preLoading}
                 caption="With..."
@@ -76,7 +77,7 @@ const VHSkillsSection = props => {
                     ? "gray-40"
                     : props.controls.yearsOfExperience.error
                       ? "red"
-                      : 'gray-100'
+                      : 'gray-90'
                 }
                 className={`vh-skills-section-yearsOfExperience ${props.className ? props.className : ''}`}
                 currentItem={yearsOfExperience}
@@ -85,33 +86,10 @@ const VHSkillsSection = props => {
                 items={yearsOfExperienceList}
                 isLoading={props.controls.yearsOfExperience.loading}
                 description={props.controls.yearsOfExperience.error && props.controls.yearsOfExperience.message}
-                descriptionColor="red-light"
+                descriptionColor="red"
+                placeholder="select an opition"
               />
             </Row>
-          </Row>
-          <Row marginBottom3 responsive>
-            <VHInputCheckbox
-              checked={props.openForDifferentRole}
-              className=""
-              color={
-                props.controls.openForDifferentRole.loading
-                  ? "gray-40"
-                  : props.controls.openForDifferentRole.error
-                    ? "red"
-                    : 'gray-100'
-              }
-              data={{
-                checked: props.openForDifferentRole,
-                id: 'openForDifferentRole',
-                label: 'yes',
-                value: '123'
-              }}
-              disabled={props.controls.openForDifferentRole.loading}
-              onEvent={props.onEvent}
-              title="I am open to working in a different role"
-              value="123"
-              variant="platform1"
-            />
           </Row>
           <Row marginBottom3 responsive>
             <VHInputCheckbox
@@ -122,7 +100,7 @@ const VHSkillsSection = props => {
                   ? "gray-40"
                   : props.controls.leadershipExperience.error
                     ? "red"
-                    : 'gray-100'
+                    : 'gray-90'
               }
               data={{
                 checked: props.leadershipExperience,
@@ -137,6 +115,32 @@ const VHSkillsSection = props => {
               variant="platform1"
             />
           </Row>
+          <Row marginBottom={5} responsive>
+            <VHInputCheckbox
+              checked={props.openForDifferentRole}
+              className=""
+              color={
+                props.controls.openForDifferentRole.loading
+                  ? "gray-40"
+                  : props.controls.openForDifferentRole.error
+                    ? "red"
+                    : 'gray-90'
+              }
+              data={{
+                checked: props.openForDifferentRole,
+                id: 'openForDifferentRole',
+                label: 'yes',
+                value: '123'
+              }}
+              disabled={props.controls.openForDifferentRole.loading}
+              onEvent={props.onEvent}
+              title="I am open to working in a different role"
+              value="123"
+              variant="platform1"
+              
+            />
+          </Row>
+          
           <Row>
             <VHSelect
               preLoading={props.preLoading}
@@ -147,7 +151,7 @@ const VHSkillsSection = props => {
                   ? "gray-40"
                   : props.controls.workAs.error
                     ? "red"
-                    : null
+                    : "gray-90"
               }
               className={`vh-skills-section-workAs ${props.className ? props.className : ''}`}
               currentItem={workAs}
@@ -156,24 +160,15 @@ const VHSkillsSection = props => {
               items={workAsList}
               isLoading={props.controls.workAs.loading}
               description={props.controls.workAs.error && props.controls.workAs.message}
-              descriptionColor="red-light"
+              descriptionColor="red"
             />
           </Row>
-          <Row column marginBottom={10}>
+          <Row column marginTop={15}>
             <VHTitleDescription
               contents={true}
               className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
-              descriptionColor={
-                props.controls.topSkill.loading
-                  ? "gray-40"
-                  : props.controls.topSkill.error
-                    ? "red-light"
-                    : "gray-90"
-              }
-              inline
               onEvent={props.onEvent}
               title="Rank your top 3 skills"
-              description="1st = Highest proficiency level; 3rd = Lowest proficiency level"
               titleColor={
                 props.controls.topSkill.loading
                   ? "gray-40"
@@ -181,10 +176,18 @@ const VHSkillsSection = props => {
                     ? "red"
                     : "gray-100"
               }
-              titleVariant="subtitle3"
+              titleVariant="subtitle1"
+              description="1st = Highest proficiency level; 3rd = Lowest proficiency level"
+              descriptionColor={
+                props.controls.topSkill.loading
+                  ? "gray-40"
+                  : props.controls.topSkill.error
+                    ? "red"
+                    : "gray-50"
+              }
             />
           </Row>
-          <Row marginBottom={15}>
+          <Row marginTop={8} marginBottom={16}>
             <VHList
               controls={props.controls}
               onEvent={props.onEvent}
@@ -193,21 +196,12 @@ const VHSkillsSection = props => {
               items={props.topSkill}
               data="vanhack" />
           </Row>
-          <Row column marginBottom={5}>
+          <Row column marginBottom={5} >
             <VHTitleDescription
               contents={true}
               className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
-              descriptionColor={
-                props.controls.secondarySkill.loading
-                  ? "gray-40"
-                  : props.controls.secondarySkill.error
-                    ? "red-light"
-                    : "gray-90"
-              }
-              inline
               onEvent={props.onEvent}
               title="Add up to 5 secondary skills"
-              description=""
               titleColor={
                 props.controls.secondarySkill.loading
                   ? "gray-40"
@@ -215,7 +209,7 @@ const VHSkillsSection = props => {
                     ? "red"
                     : "gray-100"
               }
-              titleVariant="subtitle3"
+              titleVariant="subtitle1"
             />
           </Row>
           <Row>
