@@ -58,7 +58,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  margin: 9px auto;\n  max-width: 90%;\n  width: 1000%;\n  min-height: 10vh;\n\n  ", "\n\n  ", "\n\n  padding: 30px;\n  background: rgb(255,255,255);\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-radius:9px;\n  margin: 12px auto;\n  max-width: 90%;\n  width: 100%;\n  min-height: 10vh;\n\n  ", "\n\n  ", "\n\n  padding: 33px;\n  background: rgb(255,255,255);\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -68,7 +68,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  overflow-y: scroll;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: ", ";\n  background-color: rgba(0, 0, 0, 0.75);\n  z-index: 666;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  overflow-y: scroll;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: ", ";\n  background-color: rgba(0, 0, 0, 0.75);\n  z-index: 666;\n  \n"]);
 
   _templateObject = function _templateObject() {
     return data;

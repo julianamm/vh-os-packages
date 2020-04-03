@@ -8,133 +8,243 @@ var _ = _interopRequireDefault(require("."));
 
 var _Mock = _interopRequireDefault(require("./Mock"));
 
+var _stories = _interopRequireDefault(require("../../Sections/Education/stories"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var controls = {
+  id: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  firstName: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  lastName: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  email: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  resume: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  image: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
   citizenship: {
-    loading: false,
     preLoading: false,
-    error: false,
-    success: false
-  },
-  linkedin: {
     loading: false,
-    preLoading: false,
     error: false,
-    success: false
-  },
-  git: {
-    loading: false,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  webSite: {
-    loading: false,
-    preLoading: false,
-    error: false,
-    success: false
+    success: true
   },
   location: {
-    loading: false,
     preLoading: false,
+    loading: false,
     error: false,
-    success: false
+    success: true
   },
   gender: {
-    loading: false,
     preLoading: false,
+    loading: false,
     error: false,
-    success: false
+    success: true
   },
   phone: {
-    loading: false,
     preLoading: false,
+    loading: false,
     error: false,
-    success: false
+    success: true
+  },
+  onboarding: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
   },
   positionSkill: {
-    loading: false,
     preLoading: false,
+    loading: false,
     error: false,
-    success: false
+    success: true
   },
-  openForDifferentRole: {
-    loading: false,
+  positionName: {
     preLoading: false,
+    loading: false,
     error: false,
-    success: false
+    success: true
   },
   yearsOfExperience: {
-    loading: false,
     preLoading: false,
+    loading: false,
     error: false,
-    success: false
+    success: true
+  },
+  openForDifferentRole: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
   },
   workAs: {
-    loading: false,
     preLoading: false,
+    loading: false,
     error: false,
-    success: false
+    success: true
+  },
+  userPositions: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
   },
   topSkill: {
-    loading: false,
     preLoading: false,
+    loading: false,
     error: false,
-    success: false
-  },
-  salaryRangeEur: {
-    loading: false,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  salaryRangeCad: {
-    loading: false,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  visaStatusEU: {
-    loading: false,
-    preLoading: false,
-    success: false,
-    error: false
-  },
-  visaStatusCanadian: {
-    loading: false,
-    preLoading: false,
-    success: false,
-    error: false
-  },
-  companySize: {
-    loading: false,
-    preLoading: false,
-    success: false,
-    error: false
+    success: true
   },
   secondarySkill: {
-    loading: false,
     preLoading: false,
-    success: false,
-    error: false
+    loading: false,
+    error: false,
+    success: true
+  },
+  openForRemoteJobs: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  targetLocation: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  salaryExpectationCad: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  salaryExpectationEur: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  salaryRangeCad: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  salaryRangeEur: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  visaStatusCanadian: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  visaStatusEU: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  passportExpirationDate: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  passportValid: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  leadershipExperience: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  companySize: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  activelyLookingForJob: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
   },
   noticePeriod: {
-    loading: false,
     preLoading: false,
-    success: false,
-    error: false
+    loading: false,
+    error: false,
+    success: true
+  },
+  linkedin: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  git: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  webSite: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
+  },
+  degreeType: {
+    preLoading: false,
+    loading: false,
+    error: false,
+    success: true
   },
   experienceSection: {
     loading: false,
     preLoading: false,
-    success: false,
+    success: true,
     error: false
   },
   educationSection: {
     loading: false,
     preLoading: false,
-    success: false,
+    success: true,
     error: false
   },
   language: {
@@ -621,11 +731,7 @@ var languages = [{
       backgroundColor: "#f2f2f2",
       height: "100%"
     }
-  }, /*#__PURE__*/_react.default.createElement(_.default, {
-    experience: experiences,
-    languages: languages,
-    controls: controlsPreloading
-  }));
+  });
 }).add("loading", function () {
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {

@@ -48,6 +48,8 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var VHSelect = function VHSelect(props) {
+  var _style;
+
   var animatedComponents = (0, _animated.default)();
 
   if (props.preLoading) {
@@ -63,14 +65,16 @@ var VHSelect = function VHSelect(props) {
     handleChange(props.currentItem);
   }, [props.currentItem]);
 
-  var style = {
+  var style = (_style = {
     control: function control(base) {
       return _objectSpread({}, base, {
         border: 0,
         boxShadow: "none",
-        fontWeight: props.bold ? 'bold' : '500',
+        fontWeight: props.bold ? 'bold' : 'normal',
         fontFamily: 'Roboto',
-        fontSize: '14px'
+        fontSize: '14px',
+        padding: '0',
+        borderRadius: '6px'
       });
     },
     indicatorSeparator: function indicatorSeparator(styles) {
@@ -82,8 +86,36 @@ var VHSelect = function VHSelect(props) {
       return {
         display: 'none'
       };
+    },
+    singleValue: function singleValue(styles) {
+      return {
+        color: '#4f4f4f'
+      };
+    },
+    valueContainer: function valueContainer(styles) {
+      return {
+        width: 'auto',
+        display: 'flex',
+        paddingLeft: '0'
+      };
     }
-  };
+  }, _defineProperty(_style, "singleValue", function singleValue(styles) {
+    return {
+      paddingTop: '0'
+    };
+  }), _defineProperty(_style, "dropdownIndicator", function dropdownIndicator(styles) {
+    return {
+      display: 'none'
+    };
+  }), _defineProperty(_style, "option", function option(provided, state) {
+    return _objectSpread({}, provided, {
+      color: state.isFocused ? '#646464' : '#646464'.isSelected ? '#fff' : '#646464',
+      backgroundColor: state.isFocused ? '#F2F2F2' : '#fff'.isSelected ? '#2C9BF5' : '#fff',
+      padding: '6px 12px',
+      fontFamily: 'Roboto',
+      fontSize: '14px'
+    });
+  }), _style);
   var styled = {
     indicatorSeparator: function indicatorSeparator(styles) {
       return {
@@ -113,6 +145,18 @@ var VHSelect = function VHSelect(props) {
     },
     control: function control(base) {
       return _objectSpread({}, base, {
+        fontFamily: 'Roboto',
+        fontSize: '14px',
+        border: '1px solid #e0e0e0',
+        padding: '1px 0',
+        borderRadius: '6px'
+      });
+    },
+    option: function option(provided, state) {
+      return _objectSpread({}, provided, {
+        color: state.isFocused ? '#646464' : '#646464'.isSelected ? '#fff' : '#646464',
+        backgroundColor: state.isFocused ? '#F2F2F2' : '#fff'.isSelected ? '#2C9BF5' : '#fff',
+        padding: '6px 12px',
         fontFamily: 'Roboto',
         fontSize: '14px'
       });

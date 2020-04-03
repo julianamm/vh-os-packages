@@ -62,7 +62,7 @@ var currentItem = [items[4], items[5]];
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
     caption: "Annual salary expectation",
-    captionColor: "gray-100",
+    captionColor: "gray-90",
     data: 'AnyObjectOrString',
     className: 'AnyObjectOrString',
     currentItem: currentItem,
@@ -84,6 +84,7 @@ var currentItem = [items[4], items[5]];
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
     caption: "Annual salary expectation",
+    captionColor: "gray-90",
     placeholder: "Annual salary expectation",
     data: 'AnyObjectOrString',
     className: 'AnyObjectOrString',
@@ -126,6 +127,7 @@ var currentItem = [items[4], items[5]];
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
     removeBorder: true,
+    placeholder: "Select an option",
     caption: "Annual salary expectation",
     data: 'AnyObjectOrString',
     className: 'AnyObjectOrString',

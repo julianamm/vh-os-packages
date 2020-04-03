@@ -48,9 +48,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
     value: false
   }];
   var targetLocation = props.targetLocation ? props.targetLocation.items : [];
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-general-section-title ".concat(props.className ? props.className : ''),
     text: "Relocation",
     color: "black-50",
@@ -60,16 +58,16 @@ var VHRelocationSection = function VHRelocationSection(props) {
   }, props.preLoading ? /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.RelocationSkeleton, null)) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
+    marginBottom: 16
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'openForRemoteJobs',
-    color: "gray-100",
-    variant: "subtitle3",
+    color: "gray-90",
+    variant: "platform1",
     onEvent: props.onEvent,
     text: 'Are you open to remote jobs?',
     checked: props.openForRemoteJobs
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
+    marginBottom: 1
   }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-companySize ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red-light" : "gray-90",
@@ -77,17 +75,18 @@ var VHRelocationSection = function VHRelocationSection(props) {
     inline: true,
     onEvent: props.onEvent,
     title: "Where would you like to work?",
-    titleColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : "gray-100",
-    titleVariant: "subtitle3"
+    titleColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : "gray-90",
+    titleVariant: "platform1"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10,
+    marginBottom: 16,
     width: '600px'
   }, /*#__PURE__*/_react.default.createElement(_TargetLocation.default, {
     onEvent: props.onEvent,
     items: targetLocation
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    responsive: true
+    responsive: true,
+    marginBottom: 5
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true,
     responsive: true
@@ -101,8 +100,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
     onEvent: props.onEvent,
     isLoading: props.controls.salaryRangeCad.loading,
     description: props.controls.salaryRangeCad.error && props.controls.salaryRangeCad.message,
-    descriptionColor: "red-light",
-    captionColor: props.controls.salaryRangeCad.loading ? "gray-40" : props.controls.salaryRangeCad.error ? "red" : null
+    descriptionColor: "red",
+    captionColor: props.controls.salaryRangeCad.loading ? "gray-40" : props.controls.salaryRangeCad.error ? "red" : "gray-90"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: 'Annual salary expectation EUR',
     className: "vh-general-section-salaryRangeEur ".concat(props.className ? props.className : ''),
@@ -113,12 +112,13 @@ var VHRelocationSection = function VHRelocationSection(props) {
     isLoading: props.controls.salaryRangeEur.loading,
     description: props.controls.salaryRangeEur.error && props.controls.salaryRangeEur.message,
     descriptionColor: "red-light",
-    captionColor: props.controls.salaryRangeEur.loading ? "gray-40" : props.controls.salaryRangeEur.error ? "red" : null
+    captionColor: props.controls.salaryRangeEur.loading ? "gray-40" : props.controls.salaryRangeEur.error ? "red" : "gray-90"
   })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    responsive: true
+    responsive: true,
+    marginBottom: 5
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
@@ -130,8 +130,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
     onEvent: props.onEvent,
     isLoading: props.controls.visaStatusCanadian.loading,
     description: props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message,
-    descriptionColor: "red-light",
-    captionColor: props.controls.visaStatusCanadian.loading ? "gray-40" : props.controls.visaStatusCanadian.error ? "red" : null
+    descriptionColor: "red",
+    captionColor: props.controls.visaStatusCanadian.loading ? "gray-40" : props.controls.visaStatusCanadian.error ? "red" : "gray-90"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: "EU Visa Status",
     className: "vh-general-section-visaStatusEU ".concat(props.className ? props.className : ''),
@@ -141,8 +141,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
     onEvent: props.onEvent,
     isLoading: props.controls.visaStatusEU.loading,
     description: props.controls.visaStatusEU.error && props.controls.visaStatusEU.message,
-    descriptionColor: "red-light",
-    captionColor: props.controls.visaStatusEU.loading ? "gray-40" : props.controls.visaStatusEU.error ? "red" : null
+    descriptionColor: "red",
+    captionColor: props.controls.visaStatusEU.loading ? "gray-40" : props.controls.visaStatusEU.error ? "red" : "gray-90"
   })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true,
     marginBottom: 5
@@ -154,31 +154,32 @@ var VHRelocationSection = function VHRelocationSection(props) {
     paddingRight8: true
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'passportValid',
-    color: "gray-100",
-    variant: "subtitle3",
+    color: "gray-90",
+    variant: "platform1",
     onEvent: props.onEvent,
     text: 'Do you have a valid passport?',
     checked: props.passportValid
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
+    marginBottom: 3
   }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-companySize ".concat(props.className ? props.className : ''),
-    descriptionColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red-light" : "gray-90",
+    descriptionColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : "gray-90",
     descriptionVariant: "caption",
     inline: true,
     onEvent: props.onEvent,
     title: "What size company do you prefer?",
-    titleColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : "gray-100",
-    titleVariant: "subtitle3"
+    titleColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : "gray-90",
+    titleVariant: "platform1"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    responsive: true
+    responsive: true,
+    marginBottom: 5
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
     checked: companySize[0].value,
     className: "",
-    color: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : 'gray-100',
+    color: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : 'gray-90',
     data: {
       id: 'companySize',
       label: 'yes',
@@ -192,7 +193,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
   })), /*#__PURE__*/_react.default.createElement(_checkbox.default, {
     checked: companySize[1].value,
     className: "",
-    color: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : 'gray-100',
+    color: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : 'gray-90',
     data: {
       id: 'companySize',
       label: 'yes',
@@ -206,7 +207,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
   }), /*#__PURE__*/_react.default.createElement(_checkbox.default, {
     checked: companySize[2].value,
     className: "",
-    color: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : 'gray-100',
+    color: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : 'gray-90',
     data: {
       id: 'companySize',
       label: 'yes',
@@ -224,8 +225,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
     paddingRight8: true
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'activelyLookingForJob',
-    color: "gray-100",
-    variant: "subtitle3",
+    color: "gray-90",
+    variant: "platform1",
     onEvent: props.onEvent,
     text: 'Are you actively looking for a job?',
     checked: props.activelyLookingForJob
@@ -239,7 +240,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
     isLoading: props.controls.noticePeriod.loading,
     description: props.controls.noticePeriod.error && props.controls.noticePeriod.message,
     descriptionColor: "red-light",
-    captionColor: props.controls.noticePeriod.loading ? "gray-40" : props.controls.noticePeriod.error ? "red" : null
+    captionColor: props.controls.noticePeriod.loading ? "gray-40" : props.controls.noticePeriod.error ? "red" : "gray-90"
   }))))))));
 };
 

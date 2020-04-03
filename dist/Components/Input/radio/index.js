@@ -96,7 +96,7 @@ var VHInputRadio = function VHInputRadio(props) {
 
 VHInputRadio.defaultProps = {
   title: "",
-  color: "gray-100",
+  color: "gray-90",
   variant: "platform1",
   onEvent: null,
   data: null,

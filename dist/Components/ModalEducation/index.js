@@ -23,7 +23,7 @@ var _Simple = _interopRequireDefault(require("../../Components/Input/Simple"));
 
 var _index = _interopRequireDefault(require("../../Components/Text/index"));
 
-var _index2 = _interopRequireDefault(require("../../Components/Button/index"));
+var _index2 = _interopRequireDefault(require("../../Components/Button-New/index"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
@@ -93,7 +93,7 @@ var VHModalEducation = function VHModalEducation(props) {
       description: '',
       titleVariant: "h3",
       titleColor: "black-50",
-      descriptionColor: "gray-100",
+      descriptionColor: "gray-90",
       descriptionVariant: "platform",
       onEvent: props.onEvent
     })),
@@ -101,20 +101,21 @@ var VHModalEducation = function VHModalEducation(props) {
       column: true
     }, /*#__PURE__*/_react.default.createElement("div", {
       style: {
-        width: '40%'
+        width: '50%'
       }
     }, /*#__PURE__*/_react.default.createElement(_Select.default, {
       caption: "Degree Type",
-      captionColor: null,
+      captionColor: "gray-90",
       className: "vh-general-section-degree ".concat(props.className ? props.className : ''),
       currentItem: degreeType,
       data: "degree",
       onEvent: props.onEvent,
-      items: props.items
+      items: props.items,
+      color: "gray-90"
     }), props.modalEducation.degreeType.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       marginBottom5: true
     }, /*#__PURE__*/_react.default.createElement(_index.default, {
-      color: "gray-100",
+      color: "gray-90",
       variant: 'platform',
       text: "Degree Title"
     }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
@@ -128,9 +129,9 @@ var VHModalEducation = function VHModalEducation(props) {
     }), props.modalEducation.degreeTitle.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       marginBottom5: true
     }, /*#__PURE__*/_react.default.createElement(_index.default, {
-      color: "gray-100",
+      color: "gray-90",
       variant: 'platform',
-      text: "School Name"
+      text: "Institution"
     }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
       placeholder: "",
       onEvent: props.onEvent,
@@ -144,11 +145,12 @@ var VHModalEducation = function VHModalEducation(props) {
       row: true,
       justifySpaceBetween: true
     }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-      width: '40%'
+      width: '50%',
+      marginRight: 4
     }, /*#__PURE__*/_react.default.createElement(_index.default, {
-      color: "gray-100",
+      color: "gray-90",
       variant: 'platform',
-      text: "Start Year"
+      text: "Start Date"
     }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
       placeholder: "",
       type: 'date',
@@ -159,11 +161,11 @@ var VHModalEducation = function VHModalEducation(props) {
         field: "startYear"
       }
     }), props.modalEducation.startYear.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-      width: '40%'
+      width: '50%'
     }, /*#__PURE__*/_react.default.createElement(_index.default, {
-      color: "gray-100",
+      color: "gray-90",
       variant: 'platform',
-      text: "End Year"
+      text: "End Date"
     }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
       placeholder: "",
       type: 'date',

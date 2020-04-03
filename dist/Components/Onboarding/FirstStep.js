@@ -19,13 +19,20 @@ var _Text = _interopRequireDefault(require("../Text"));
 
 var _Select = _interopRequireDefault(require("../Input/Select"));
 
+var _radio = _interopRequireDefault(require("../Input/radio"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var FirstStep = function FirstStep(props) {
-  var steps = new Array(props.steps).fill('');
+  var positions = props.positions;
+  var position = props.positionSkill != undefined ? [positions[props.positionSkill]] : {};
+  var yearsOfExperienceList = props.yearsOfExperienceList;
+  var yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    column: true
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    alignItemsCenter: true
+    marginBottom5: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '10%'
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
@@ -38,8 +45,9 @@ var FirstStep = function FirstStep(props) {
     variant: "h4",
     color: "gray-90",
     text: 'Professional details'
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '60%'
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    width: '60%',
+    marginBottom5: true
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.preLoading,
     caption: "Which role best applies to your experience?",
@@ -53,7 +61,8 @@ var FirstStep = function FirstStep(props) {
     description: props.controls.positionSkill.error && props.controls.positionSkill.message,
     descriptionColor: "red-light"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '30%'
+    width: '60%',
+    marginBottom5: true
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.preLoading,
     caption: "How many years have you worked as a tech professional?",
@@ -68,7 +77,7 @@ var FirstStep = function FirstStep(props) {
     descriptionColor: "red-light"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
-  }, /*#__PURE__*/_react.default.createElement(VHInputRadio, {
+  }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'activelyLookingForJob',
     color: "gray-100",
     variant: "subtitle3",

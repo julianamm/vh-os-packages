@@ -40,17 +40,20 @@ var VHList = function VHList(props) {
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     responsive: true,
-    width: "27px"
+    width: "27px",
+    marginRight: 1
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: 'platform',
     text: "1st",
     color: 'gray-90'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    responsive: true
+    responsive: true,
+    marginRight: 2
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
     placeholder: "Select your top skill",
     removeIndicator: true,
+    removeDropdownIcon: true,
     bold: true,
     marginBottom: '0px',
     removeBorder: true,
@@ -91,13 +94,15 @@ var VHList = function VHList(props) {
     row: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     responsive: true,
-    width: "27px"
+    width: "27px",
+    marginRight: 1
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: 'platform',
     text: "2nd",
     color: 'gray-90'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    responsive: true
+    responsive: true,
+    marginRight: 2
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
     placeholder: "Select your top skill",
@@ -142,13 +147,15 @@ var VHList = function VHList(props) {
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     responsive: true,
-    width: "27px"
+    width: "27px",
+    marginRight: 1
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: 'platform',
     text: "3rd",
     color: 'gray-90'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    responsive: true
+    responsive: true,
+    marginRight: 2
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
     placeholder: "Select your top skill",

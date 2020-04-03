@@ -10,7 +10,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    width: 100%;\n    padding: 0;\n    margin: 0;\n    flex-direction: column;\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    width: 100%;\n    padding: 0;\n    margin: 0;\n    flex-direction: column;\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n\n    ", "\n    ", "\n    ", "\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n    ", "\n\n    ", "\n\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n    ", "\n\n   \n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -87,67 +87,88 @@ var Row = _styledComponents.default.div(_templateObject2(), function (_ref10) {
   var alignItemsCenter = _ref17.alignItemsCenter;
   return alignItemsCenter && "\n        align-items: center;\n    ";
 }, function (_ref18) {
-  var responsive = _ref18.responsive;
-  return responsive && "\n        @media only screen and (max-width: 768px) {\n            flex-direction: column;\n        }\n    ";
+  var flexWrap = _ref18.flexWrap;
+  return flexWrap && "\n        flex-wrap: wrap;\n    ";
 }, function (_ref19) {
-  var mobileDisplayNone = _ref19.mobileDisplayNone;
-  return mobileDisplayNone && "\n        @media screen and (max-width: 768px) {\n            display: none;\n        }\n    ";
+  var responsive = _ref19.responsive;
+  return responsive && "\n        @media only screen and (max-width: 768px) {\n            flex-direction: column;\n        }\n    ";
 }, function (_ref20) {
-  var mobileImgsSM = _ref20.mobileImgsSM;
-  return mobileImgsSM && "\n        @media screen and (max-width: 768px) {\n            width: 200px;\n            height: 200px;\n            margin: 0 auto;\n        }\n    ";
+  var mobileDisplayNone = _ref20.mobileDisplayNone;
+  return mobileDisplayNone && "\n        @media screen and (max-width: 768px) {\n            display: none;\n        }\n    ";
 }, function (_ref21) {
-  var mobileMarginSM = _ref21.mobileMarginSM;
-  return mobileMarginSM && "\n        @media screen and (max-width: 768px) {\n            margin: 15px 0;\n        }\n    ";
+  var mobileImgsSM = _ref21.mobileImgsSM;
+  return mobileImgsSM && "\n        @media screen and (max-width: 768px) {\n            width: 200px;\n            height: 200px;\n            margin: 0 auto;\n        }\n    ";
 }, function (_ref22) {
-  var mobileMarginBottomSM = _ref22.mobileMarginBottomSM;
-  return mobileMarginBottomSM && "\n        @media screen and (max-width: 768px) {\n            margin-bottom: 40px;\n        }\n    ";
+  var mobileMarginSM = _ref22.mobileMarginSM;
+  return mobileMarginSM && "\n        @media screen and (max-width: 768px) {\n            margin: 15px 0;\n        }\n    ";
 }, function (_ref23) {
-  var mobileTxtCenter = _ref23.mobileTxtCenter;
-  return mobileTxtCenter && "\n        @media screen and (max-width: 768px) {\n            text-align: center;\n        }\n    ";
+  var mobileMarginBottomSM = _ref23.mobileMarginBottomSM;
+  return mobileMarginBottomSM && "\n        @media screen and (max-width: 768px) {\n            margin-bottom: 40px;\n        }\n    ";
 }, function (_ref24) {
-  var autoWidth = _ref24.autoWidth;
-  return autoWidth && "\n       width: auto;\n    ";
+  var mobileTxtCenter = _ref24.mobileTxtCenter;
+  return mobileTxtCenter && "\n        @media screen and (max-width: 768px) {\n            text-align: center;\n        }\n    ";
 }, function (_ref25) {
-  var paddingRight8 = _ref25.paddingRight8;
-  return paddingRight8 && "\n       padding-right: 24px;\n    ";
+  var autoWidth = _ref25.autoWidth;
+  return autoWidth && "\n       width: auto;\n    ";
 }, function (_ref26) {
-  var paddingRight2 = _ref26.paddingRight2;
-  return paddingRight2 && "\n       padding-right: 6px;\n    ";
+  var paddingRight8 = _ref26.paddingRight8;
+  return paddingRight8 && "\n       padding-right: 24px;\n    ";
 }, function (_ref27) {
-  var margin = _ref27.margin;
-  return margin && "\n       margin: 3px 0;\n    ";
+  var paddingRight2 = _ref27.paddingRight2;
+  return paddingRight2 && "\n       padding-right: 6px;\n    ";
 }, function (_ref28) {
-  var marginBottom3 = _ref28.marginBottom3;
-  return marginBottom3 && "\n       margin-bottom: 9px;\n    ";
+  var paddingTop = _ref28.paddingTop;
+  return paddingTop && "\n        paddingTop: ".concat(paddingTop * 3, "px;\n    ");
 }, function (_ref29) {
-  var marginBottom4 = _ref29.marginBottom4;
-  return marginBottom4 && "\n       margin-bottom: 12px;\n    ";
+  var paddingRight = _ref29.paddingRight;
+  return paddingRight && "\n        paddingRight: ".concat(paddingRight * 3, "px;\n    ");
 }, function (_ref30) {
-  var marginBottom5 = _ref30.marginBottom5;
-  return marginBottom5 && "\n       margin-bottom: 15px;\n    ";
+  var paddingBottom = _ref30.paddingBottom;
+  return paddingBottom && "\n        paddingBottom: ".concat(paddingBottom * 3, "px;\n    ");
 }, function (_ref31) {
-  var marginBottom = _ref31.marginBottom;
-  return marginBottom && "\n       margin-bottom: ".concat(marginBottom * 3, "px;\n    ");
+  var paddingLeft = _ref31.paddingLeft;
+  return paddingLeft && "\n        padding-left: ".concat(paddingLeft * 3, "px;\n    ");
 }, function (_ref32) {
-  var marginTop = _ref32.marginTop;
-  return marginTop && "\n       margin-top: ".concat(marginTop, "px;\n    ");
+  var margin = _ref32.margin;
+  return margin && "\n       margin: 3px 0;\n    ";
 }, function (_ref33) {
-  var height = _ref33.height;
-  return height && "\n       height: ".concat(height, "px;\n    ");
+  var marginBottom3 = _ref33.marginBottom3;
+  return marginBottom3 && "\n       margin-bottom: 9px;\n    ";
 }, function (_ref34) {
-  var overflowY = _ref34.overflowY;
-  return overflowY && "\n       overflow-y: ".concat(overflowY, ";\n    ");
+  var marginBottom4 = _ref34.marginBottom4;
+  return marginBottom4 && "\n       margin-bottom: 12px;\n    ";
 }, function (_ref35) {
-  var width = _ref35.width;
-  return width && "\n        @media only screen and (min-width: 768px) {\n            width: ".concat(width, ";\n        }\n        @media only screen and (max-width: 768px) {\n            width: 100%;\n        }\n    ");
+  var marginBottom5 = _ref35.marginBottom5;
+  return marginBottom5 && "\n       margin-bottom: 15px;\n    ";
 }, function (_ref36) {
-  var fixed = _ref36.fixed;
-  return fixed && "\n       position: fixed;\n    ";
+  var marginBottom = _ref36.marginBottom;
+  return marginBottom && "\n       margin-bottom: ".concat(marginBottom * 3, "px;\n    ");
 }, function (_ref37) {
-  var borderBottom = _ref37.borderBottom;
-  return borderBottom && "\n       border-bottom: 1px solid #bdbdbd;\n    ";
+  var marginLeft = _ref37.marginLeft;
+  return marginLeft && "\n       margin-Left: ".concat(marginLeft * 3, "px;\n    ");
 }, function (_ref38) {
-  var paddingBottom = _ref38.paddingBottom;
+  var marginRight = _ref38.marginRight;
+  return marginRight && "\n       margin-Right: ".concat(marginRight * 3, "px;\n    ");
+}, function (_ref39) {
+  var marginTop = _ref39.marginTop;
+  return marginTop && "\n       margin-top: ".concat(marginTop, "px;\n    ");
+}, function (_ref40) {
+  var height = _ref40.height;
+  return height && "\n       height: ".concat(height, "px;\n    ");
+}, function (_ref41) {
+  var overflowY = _ref41.overflowY;
+  return overflowY && "\n       overflow-y: ".concat(overflowY, ";\n    ");
+}, function (_ref42) {
+  var width = _ref42.width;
+  return width && "\n        @media only screen and (min-width: 768px) {\n            width: ".concat(width, ";\n        }\n        @media only screen and (max-width: 768px) {\n            width: 100%;\n        }\n    ");
+}, function (_ref43) {
+  var fixed = _ref43.fixed;
+  return fixed && "\n       position: fixed;\n    ";
+}, function (_ref44) {
+  var borderBottom = _ref44.borderBottom;
+  return borderBottom && "\n       border-bottom: 1px solid #bdbdbd;\n    ";
+}, function (_ref45) {
+  var paddingBottom = _ref45.paddingBottom;
   return paddingBottom && "\n       padding-bottom: 50px;\n    ";
 });
 

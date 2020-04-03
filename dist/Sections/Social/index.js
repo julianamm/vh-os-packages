@@ -22,9 +22,7 @@ var _reactPreloadSkeleton = require("react-preload-skeleton");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHSocialSection = function VHSocialSection(props) {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
     text: "Social Profile",
     color: "black-50",
@@ -36,7 +34,7 @@ var VHSocialSection = function VHSocialSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.InputSkeleton, {
     lines: 3
   })) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom4: true
+    marginBottom5: true
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     className: "",
     disabled: props.controls.linkedin.loading,
@@ -48,7 +46,7 @@ var VHSocialSection = function VHSocialSection(props) {
     placeholder: "http://linkedin.com/",
     value: props.linkedin
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom4: true
+    marginBottom5: true
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     className: "",
     disabled: props.controls.git.loading,
@@ -60,7 +58,7 @@ var VHSocialSection = function VHSocialSection(props) {
     placeholder: "http://github.com/",
     value: props.git
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom4: true
+    marginBottom5: true
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     className: "",
     disabled: props.controls.webSite.loading,

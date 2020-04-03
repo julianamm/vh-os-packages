@@ -12,7 +12,7 @@ var _Colors = _interopRequireDefault(require("../../Colors"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  background-color: transparent;\n  border: none;\n  color: ", ";\n  padding:12px;\n  border-radius: 3px;\n  font-family: Roboto;\n  font-size: 14px;\n  line-height: auto;\n  text-align: center;\n  cursor: pointer;\n\n  :hover {\n    background-color: ", ";\n    border: none;\n    color: ", ";\n  }\n\n  :active {\n    background-color: ", ";\n    border: none;\n    color: ", ";\n  }\n\n  ", "\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: transparent;\n  border: none;\n  color: ", ";\n  padding:12px;\n  border-radius: 3px;\n  font-family: Roboto;\n  font-size: 14px;\n  line-height: auto;\n  text-align: center;\n  cursor: pointer;\n\n  :hover {\n    background-color: ", ";\n    border: none;\n  }\n\n  :active {\n    background-color: ", ";\n    border: none;\n  }\n\n  ", "\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -32,7 +32,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border: 1px solid ", ";\n  color: ", ";\n  padding:12px;\n  border-radius: 3px;\n  font-family: Roboto;\n  font-size: 14px;\n  line-height: auto;\n  text-align: center;\n  cursor: pointer;\n\n  :focus {\n    outline-style: none;\n  }\n\n  :hover {\n    background-color: ", ";\n  }\n\n  :active {\n    background-color: ", ";\n  }\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n  \n  ", "\n\n  ", "\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border: 1px solid ", ";\n  width: fit-content;\n  color: ", ";\n  padding:12px;\n  border-radius: 3px;\n  font-family: Roboto;\n  font-size: 14px;\n  line-height: auto;\n  text-align: center;\n  cursor: pointer;\n  \n\n  :focus {\n    outline-style: none;\n  }\n\n  :hover {\n    background-color: ", ";\n  }\n\n  :active {\n    background-color: ", ";\n  }\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n\n  ", "\n  \n  ", "\n\n  ", "\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -101,10 +101,10 @@ var OutlinedButton = _styledComponents.default.button(_templateObject2(), _Color
   return danger && "\n    color: ".concat(_Colors.default["red"], ";\n    border: 1px solid ").concat(_Colors.default["red"], ";\n    :hover {\n      background-color: ").concat(_Colors.default["red-dark"], ";\n      border: 1px solid ").concat(_Colors.default["red-dark"], ";\n    }\n    :active {\n      background-color: ").concat(_Colors.default["red-dark"], ";\n      border: 1px solid ").concat(_Colors.default["red-dark"], ";\n    }\n  ");
 }, function (_ref19) {
   var success = _ref19.success;
-  return success && "\n    color: ".concat(_Colors.default["white"], ";\n    border: 1px solid ").concat(_Colors.default["green"], ";\n    background-color: ").concat(_Colors.default["green"], ";\n    :hover {\n      background-color: ").concat(_Colors.default["green-light"], ";\n      border: 1px solid ").concat(_Colors.default["green-light"], ";\n    }\n    :active {\n      background-color: ").concat(_Colors.default["green-dark"], ";\n      border: 1px solid ").concat(_Colors.default["green-dark"], ";\n    }\n  ");
+  return success && "\n    color: ".concat(_Colors.default["green"], ";\n    border: 1px solid ").concat(_Colors.default["green"], ";\n    \n    :hover {\n      background-color: ").concat(_Colors.default["green-dark"], ";\n      border: 1px solid ").concat(_Colors.default["green-dark"], ";\n    }\n    :active {\n      background-color: ").concat(_Colors.default["green-dark"], ";\n      border: 1px solid ").concat(_Colors.default["green-dark"], ";\n    }\n  ");
 }, function (_ref20) {
   var disabled = _ref20.disabled;
-  return disabled && "\n    color: ".concat(_Colors.default["black-40"], " !important;\n    background-color: ").concat(_Colors.default["black-10"], " !important;\n    border: solid 1px ").concat(_Colors.default["black-10"], " !important;\n    :hover {\n      background-color: ").concat(_Colors.default["black-10"], ";\n      border: 1px solid ").concat(_Colors.default["black-10"], ";\n      color: ").concat(_Colors.default["black-40"], ";\n      cursor: not-allowed;\n    }\n  ");
+  return disabled && "\n    color: ".concat(_Colors.default["black-40"], ";\n    background-color: ").concat(_Colors.default["black-10"], ";\n    border: solid 1px ").concat(_Colors.default["black-10"], ";\n    :hover {\n      background-color: ").concat(_Colors.default["black-10"], ";\n      border: 1px solid ").concat(_Colors.default["black-10"], ";\n      color: ").concat(_Colors.default["black-40"], ";\n      cursor: not-allowed;\n    }\n  ");
 }, function (_ref21) {
   var white = _ref21.white;
   return white && "\n      background-color: transparent;\n      border: 1px solid ".concat(_Colors.default["gray-20"], ";\n      color: ").concat(_Colors.default["gray-20"], ";\n      :hover {\n        background-color: ").concat(_Colors.default["primary-light"], ";\n        border: 1px solid ").concat(_Colors.default["primary-light"], ";\n      }\n\n      :active {\n        background-color: ").concat(_Colors.default["primary-dark"], ";\n        border: 1px solid ").concat(_Colors.default["primary-dark"], ";\n      }\n    ");
@@ -112,7 +112,7 @@ var OutlinedButton = _styledComponents.default.button(_templateObject2(), _Color
 
 exports.OutlinedButton = OutlinedButton;
 
-var TextButton = _styledComponents.default.button(_templateObject3(), _Colors.default["primary"], _Colors.default["primary-light"], _Colors.default["white-light"], _Colors.default["primary-dark"], _Colors.default["white-light"], function (_ref22) {
+var TextButton = _styledComponents.default.button(_templateObject3(), _Colors.default["primary"], _Colors.default["gray-10"], _Colors.default["gray-20"], function (_ref22) {
   var nowrap = _ref22.nowrap;
   return nowrap && "\n    white-space:nowrap;\n  ";
 }, function (_ref23) {
@@ -129,22 +129,22 @@ var TextButton = _styledComponents.default.button(_templateObject3(), _Colors.de
   return full && "\n    width: 100%;\n  ";
 }, function (_ref27) {
   var primary = _ref27.primary;
-  return primary && "\n    color: ".concat(_Colors.default["gradient-primary"], ";\n    \n    :hover {\n      background-color: ").concat(_Colors.default["primary-light"], ";\n      \n    }\n    :active {\n      background-color: ").concat(_Colors.default["primary-dark"], ";\n      \n    }\n  ");
+  return primary && "  \n    color: ".concat(_Colors.default["primary"], ";\n    :hover {\n      color: ").concat(_Colors.default["primary-dark"], ";\n      background-color: ").concat(_Colors.default["gray-10"], ";      \n    }\n    :active {\n      color: ").concat(_Colors.default["primary-dark"], ";\n      background-color: ").concat(_Colors.default["gray-30"], ";\n    }\n  ");
 }, function (_ref28) {
   var secondary = _ref28.secondary;
-  return secondary && "\n    color: ".concat(_Colors.default.secondary, ";\n   \n    :hover {\n      background-color: ").concat(_Colors.default["secondary-light"], ";\n      \n    }\n    :active {\n      background-color: ").concat(_Colors.default["secondary-dark"], ";\n      \n    }\n  ");
+  return secondary && "\n    color: ".concat(_Colors.default["secondary"], ";  \n    :hover {\n      color: ").concat(_Colors.default["secondary"], ";  \n      background-color: ").concat(_Colors.default["gray-10"], ";      \n    }\n    :active {\n      color: ").concat(_Colors.default["secondary"], ";  \n      background-color: ").concat(_Colors.default["gray-30"], ";\n    }\n  ");
 }, function (_ref29) {
   var danger = _ref29.danger;
-  return danger && "\n    color: ".concat(_Colors.default["red"], ";\n   \n    :hover {\n      background-color: ").concat(_Colors.default["red-dark"], ";\n      \n    }\n    :active {\n      background-color: ").concat(_Colors.default["red-dark"], ";\n      \n    }\n  ");
+  return danger && "\n    color: ".concat(_Colors.default["red"], ";  \n    :hover {\n      color: ").concat(_Colors.default["red"], ";  \n      background-color: ").concat(_Colors.default["gray-10"], ";      \n    }\n    :active {\n      color: ").concat(_Colors.default["red"], ";  \n      background-color: ").concat(_Colors.default["gray-30"], ";\n    }\n  ");
 }, function (_ref30) {
   var success = _ref30.success;
-  return success && "\n    color: ".concat(_Colors.default["white"], ";\n    \n    background-color: ").concat(_Colors.default["green"], ";\n    :hover {\n      background-color: ").concat(_Colors.default["green-light"], ";\n      \n    }\n    :active {\n      background-color: ").concat(_Colors.default["green-dark"], ";\n      \n    }\n  ");
+  return success && "\n    color: ".concat(_Colors.default["green"], ";  \n    :hover {\n      color: ").concat(_Colors.default["green"], ";  \n      background-color: ").concat(_Colors.default["gray-20"], ";      \n    }\n    :active {\n      color: ").concat(_Colors.default["green"], ";  \n      background-color: ").concat(_Colors.default["gray-30"], ";\n    }\n  ");
 }, function (_ref31) {
   var disabled = _ref31.disabled;
-  return disabled && "\n    color: ".concat(_Colors.default["black-40"], " !important;\n    background-color: ").concat(_Colors.default["black-10"], "\n   \n    :hover {\n      background-color: ").concat(_Colors.default["black-10"], ";\n     \n      color: ").concat(_Colors.default["black-40"], ";\n      cursor: not-allowed;\n    }\n  ");
+  return disabled && "\n    color: ".concat(_Colors.default["black-40"], ";\n    background-color: ").concat(_Colors.default["black-10"], ";\n   \n    :hover {\n      background-color: ").concat(_Colors.default["black-10"], ";\n      color: ").concat(_Colors.default["black-40"], ";\n      cursor: not-allowed;\n    }\n  ");
 }, function (_ref32) {
   var white = _ref32.white;
-  return white && "\n      background-color: transparent;\n     \n      color: ".concat(_Colors.default["gray-20"], ";\n      :hover {\n        background-color: ").concat(_Colors.default["primary-light"], ";\n       \n      }\n\n      :active {\n        background-color: ").concat(_Colors.default["primary-dark"], ";\n        \n      }\n    ");
+  return white && "  \n    color: ".concat(_Colors.default["white"], ";\n    :hover {\n      background-color: ").concat(_Colors.default["gray-20"], ";      \n    }\n    :active {\n      background-color: ").concat(_Colors.default["gray-30"], ";\n    }\n    ");
 });
 
 exports.TextButton = TextButton;

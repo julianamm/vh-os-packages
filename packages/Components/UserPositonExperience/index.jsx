@@ -21,6 +21,7 @@ const VHUserPositonExperience = props => {
                 </Row>
                 <Row marginBottom={3}>
                     <VHIconTitleList
+                        profile
                         onEvent={props.onEvent}
                         items={props.description}
                         color="gray-90"

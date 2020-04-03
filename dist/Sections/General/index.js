@@ -70,6 +70,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.citizenship.preLoading || false,
     caption: "Citizenship",
+    placeholder: "Select an option",
     className: "vh-general-section-citizenship ".concat(props.className ? props.className : ''),
     currentItem: citizenship,
     data: "citizenship",
@@ -77,13 +78,14 @@ var VHGeneralSection = function VHGeneralSection(props) {
     onEvent: props.onEvent,
     isLoading: props.controls.citizenship.loading,
     description: props.controls.citizenship.error && props.controls.citizenship.message,
-    descriptionColor: "gray-100",
-    captionColor: props.controls.citizenship.loading ? "gray-40" : props.controls.citizenship.error ? "red" : 'gray-100'
+    descriptionColor: "gray-90",
+    captionColor: props.controls.citizenship.loading ? "gray-40" : props.controls.citizenship.error ? "red" : 'gray-90'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.location.preLoading || false,
     caption: "Location",
+    placeholder: "Select an option",
     className: "vh-general-section-location ".concat(props.className ? props.className : ''),
     currentItem: location,
     data: "location",
@@ -91,8 +93,8 @@ var VHGeneralSection = function VHGeneralSection(props) {
     onEvent: props.onEvent,
     isLoading: props.controls.location.loading,
     description: props.controls.location.error && props.controls.location.message,
-    descriptionColor: "gray-100",
-    captionColor: props.controls.location.loading ? "gray-40" : props.controls.location.error ? "red" : 'gray-100'
+    descriptionColor: "gray-90",
+    captionColor: props.controls.location.loading ? "gray-40" : props.controls.location.error ? "red" : 'gray-90'
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     responsive: true
@@ -101,6 +103,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.gender.preLoading || false,
     caption: "Gender",
+    placeholder: "Select an option",
     className: "vh-general-section-gender ".concat(props.className ? props.className : ''),
     currentItem: gender,
     data: "gender",
@@ -108,9 +111,8 @@ var VHGeneralSection = function VHGeneralSection(props) {
     onEvent: props.onEvent,
     isLoading: props.controls.gender.loading,
     description: props.controls.gender.error && props.controls.gender.message,
-    descriptionColor: "red-light",
-    placeholder: "Select an option",
-    captionColor: props.controls.gender.loading ? "gray-40" : props.controls.gender.error ? "red" : 'gray-100'
+    descriptionColor: "red",
+    captionColor: props.controls.gender.loading ? "gray-40" : props.controls.gender.error ? "red" : 'gray-90'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true,
     paddingRight8: true
@@ -122,7 +124,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     inline: true,
     onEvent: props.onEvent,
     title: "Phone number",
-    titleColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red" : "gray-100",
+    titleColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red" : "gray-90",
     titleVariant: "platform1"
   }), !props.controls.phone.preLoading && /*#__PURE__*/_react.default.createElement(_Simple.default, {
     data: "phone",

@@ -6,23 +6,30 @@ import Colors from '../../Colors'
 import VHIcon from '../Icon'
 import VHText from '../Text'
 import VHSelect from '../Input/Select'
+import VHInputRadio from '../Input/radio'
 
 const FirstStep = props => {
-    const steps = new Array(props.steps).fill('');
-    return (
-        <Row row alignItemsCenter >
-            <Row width={'10%'}>
-                <VHIcon icon={'experience'} title="city" md />
-            </Row>
-            <Row width={'70%'}>
-                <VHText
-                    variant={"h4"}
-                    color="gray-90"
-                    text={'Professional details'}
-                />
-            </Row>
+    const positions = props.positions
+    const position = props.positionSkill != undefined ? [positions[props.positionSkill]] : {};
 
-            <Row width={'60%'}>
+    const yearsOfExperienceList = props.yearsOfExperienceList
+    const yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
+
+    return (
+        <Row column >
+            <Row row marginBottom5>
+                <Row width={'10%'}>
+                    <VHIcon icon={'experience'} title="city" md />
+                </Row>
+                <Row width={'70%'}>
+                    <VHText
+                        variant={"h4"}
+                        color="gray-90"
+                        text={'Professional details'}
+                    />
+                </Row>
+            </Row>
+            <Row width={'60%'} marginBottom5>
                 <VHSelect
                     preLoading={props.preLoading}
                     caption="Which role best applies to your experience?"
@@ -44,7 +51,7 @@ const FirstStep = props => {
                 />
             </Row>
 
-            <Row width={'30%'}>
+            <Row width={'60%'} marginBottom5>
                 <VHSelect
                     preLoading={props.preLoading}
                     caption="How many years have you worked as a tech professional?"

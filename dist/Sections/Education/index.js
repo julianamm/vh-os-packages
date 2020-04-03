@@ -15,7 +15,7 @@ var _TitleDescription = _interopRequireDefault(require("../../Components/TitleDe
 
 var _ModalEducation = _interopRequireDefault(require("../../Components/ModalEducation"));
 
-var _Button = _interopRequireDefault(require("../../Components/Button"));
+var _ButtonNew = _interopRequireDefault(require("../../Components/Button-New"));
 
 var _Base = _interopRequireDefault(require("../../Components/Cards/Base/"));
 
@@ -70,9 +70,7 @@ var VHEducationSection = function VHEducationSection(props) {
     items: items,
     controls: props.controls,
     onEvent: props.onEvent
-  }, "currentItem", currentItem)), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, "currentItem", currentItem)), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-education-section-title ".concat(props.className ? props.className : ''),
     text: "Education",
     color: "black-50",
@@ -113,9 +111,8 @@ var VHEducationSection = function VHEducationSection(props) {
       onEvent: props.onEvent
     }));
   }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '20%',
-    lg: true
-  }, /*#__PURE__*/_react.default.createElement(_Button.default, {
+    width: '20%'
+  }, /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
     data: 'openModal',
     primary: true,
     onEvent: props.onEvent,

@@ -43,6 +43,9 @@ var VHModal = function VHModal(props) {
   return /*#__PURE__*/_react.default.createElement(S.ModalWrapper, {
     open: props.open
   }, /*#__PURE__*/_react.default.createElement(S.ModalContainer, null, /*#__PURE__*/_react.default.createElement(S.Header, null, /*#__PURE__*/_react.default.createElement("div", null, props.header && props.header), !props.hideBtnClose && /*#__PURE__*/_react.default.createElement(S.Close, {
+    style: {
+      textAlign: 'right'
+    },
     onClick: function onClick() {
       if (props.onClose) {
         props.onClose();

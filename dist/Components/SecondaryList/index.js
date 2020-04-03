@@ -37,7 +37,9 @@ var VHSecondaryList = function VHSecondaryList(props) {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginRight: 2
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
@@ -73,7 +75,8 @@ var VHSecondaryList = function VHSecondaryList(props) {
     order: 0
   }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
-    row: true
+    row: true,
+    marginRight: 2
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
@@ -110,7 +113,8 @@ var VHSecondaryList = function VHSecondaryList(props) {
     order: 1
   }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
-    row: true
+    row: true,
+    marginRight: 2
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
