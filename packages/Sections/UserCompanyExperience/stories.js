@@ -221,12 +221,30 @@ const controls = {
     educationSection: {loading: false, preLoading: false, success: true, error: false},
     language: {loading: false, preLoading: false, success: false, error: false},
     }
+
+    const modalExperience = {
+        id: { value: null, messageError: false },
+        companyName: { value: undefined, messageError: false },
+        countryId: { value: undefined, messageError: false },
+        companySize: { value: undefined, messageError: false },
+        industryId: { value: undefined, messageError: false },
+        workExperiences: [
+            {
+                positionId: { value: undefined, messageError: false },
+                startDate: { value: undefined, messageError: false },
+                endDate: { value: undefined, messageError: false },
+                description: { value: undefined, messageError: false },
+                isCurrentRole: { value: undefined, messageError: false }
+            }
+        ]
+    }
     
 storiesOf("Sections|User Company Experience", module)
     .add("Default", () => (
         <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
             <VHUserCompanyExperienceSection
                 yearsOfExperience={"- 6yrs 3 mos"}
+                modalExperience={modalExperience}
                 experience={experience}
                 controls={controls}
                 onEvent={e => console.log(e)}
@@ -237,6 +255,7 @@ storiesOf("Sections|User Company Experience", module)
         <div style={{ backgroundColor: "#f2f2f2", height: "100vh", padding: "24px" }}>
             <VHUserCompanyExperienceSection
                 yearsOfExperience={"- 6yrs 3 mos"}
+                modalExperience={modalExperience}
                 experience={experience}
                 controls={controls}
                 onEvent={e => console.log(e)}
