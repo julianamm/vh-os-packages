@@ -44,21 +44,6 @@ const controls = {
   language: {loading: false, preLoading: false, success: false, error: false},
   }
 
-const topSkills = [
-  {
-    label: 'React',
-    value: 'c'
-  },
-  {
-    label: 'Java',
-    value: 'b'
-  },
-  {
-    label: 'Python',
-    value: 'o'
-  },
-]
-
 
 const items = [
   {
@@ -83,16 +68,8 @@ const apiResponse = {
     current: items
   },
   mainSkills: [
-    {
-      current: items[1],
-      order: 0,
-      yearOfExperience: items[1]
-    },
-    {
-      current: items[2],
-      order: 1,
-      yearOfExperience: items[1]
-    }
+    {current: items[1], order: 0, yearOfExperience: items[1] },
+    {current: items[2], order: 1, yearOfExperience: items[1] }
   ],
   openedPosition: true
 }
