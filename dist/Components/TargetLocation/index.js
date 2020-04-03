@@ -25,8 +25,6 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -40,8 +38,6 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var VHTargetLocation = function VHTargetLocation(props) {
-  var _React$createElement;
-
   var items = Object.keys(props.items).length > 0 ? props.items : [{
     status: false
   }, {
@@ -90,14 +86,12 @@ var VHTargetLocation = function VHTargetLocation(props) {
     setCanada(items[0].status), setGermany(items[1].status), setIreland(items[2].status), setNetherlands(items[3].status), setUk(items[4].status), setUsa(items[5].status);
   }, [items[0].status, items[1].status, items[2].status, items[3].status, items[4].status, items[5].status]);
 
-  return /*#__PURE__*/_react.default.createElement(_Grid.Row, (_React$createElement = {
-    justifySpaceBetween: true,
-    row: true,
+  return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     className: "vh-target-location ".concat(props.className ? props.className : '')
-  }, _defineProperty(_React$createElement, "row", true), _defineProperty(_React$createElement, "justifySpaceBetween", true), _React$createElement), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    responsive: true,
-    justifySpaceAround: true
+    flexWrap: true,
+    justifySpaceStart: true
   }, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     disabled: !canada,
     onClick: function onClick() {
@@ -156,11 +150,7 @@ var VHTargetLocation = function VHTargetLocation(props) {
     variant: "platform2",
     color: "black-100",
     text: 'Germany'
-  })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    row: true,
-    responsive: true,
-    justifySpaceAround: true
-  }, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     disabled: !ireland,
     onClick: function onClick() {
       setIreland(!ireland);
@@ -218,11 +208,7 @@ var VHTargetLocation = function VHTargetLocation(props) {
     variant: "platform2",
     color: "black-100",
     text: 'Netherlands'
-  })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    row: true,
-    responsive: true,
-    justifySpaceAround: true
-  }, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     disabled: !uk,
     onClick: function onClick() {
       setUk(!uk);

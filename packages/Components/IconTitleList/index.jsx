@@ -8,18 +8,18 @@ const VHIconTitleList = (props) => {
     if(props.items){
         items = props.items
     }
-    // if (!Array.isArray(props.items)) {
-    //     return <VHIconText
-    //     iconColor={props.color || "gray-30"}
-    //     textColor={props.color || "gray-90"}
-    //     text={props.items}
-    //     icon="bullet"
-    //     className={`vh-icon-title-list ${props.className ? props.className : ''}`}
-    //     variant="platform"
-    //     data={props.data}
-    //     onEvent={props.onEvent}
-    // />
-    // }
+    if (!Array.isArray(props.items)) {
+        return <VHIconText
+        iconColor={props.color || "gray-30"}
+        textColor={props.color || "gray-90"}
+        text={props.items}
+        icon="bullet"
+        className={`vh-icon-title-list ${props.className ? props.className : ''}`}
+        variant="platform"
+        data={props.data}
+        onEvent={props.onEvent}
+    />
+    }
     return (
         <>
         {

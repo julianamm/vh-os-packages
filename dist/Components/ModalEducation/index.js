@@ -101,7 +101,7 @@ var VHModalEducation = function VHModalEducation(props) {
       column: true
     }, /*#__PURE__*/_react.default.createElement("div", {
       style: {
-        width: '40%'
+        width: '50%'
       }
     }, /*#__PURE__*/_react.default.createElement(_Select.default, {
       caption: "Degree Type",
@@ -145,7 +145,8 @@ var VHModalEducation = function VHModalEducation(props) {
       row: true,
       justifySpaceBetween: true
     }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-      width: '40%'
+      width: '50%',
+      marginRight: 4
     }, /*#__PURE__*/_react.default.createElement(_index.default, {
       color: "gray-90",
       variant: 'platform',
@@ -160,7 +161,7 @@ var VHModalEducation = function VHModalEducation(props) {
         field: "startYear"
       }
     }), props.modalEducation.startYear.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-      width: '40%'
+      width: '50%'
     }, /*#__PURE__*/_react.default.createElement(_index.default, {
       color: "gray-90",
       variant: 'platform',

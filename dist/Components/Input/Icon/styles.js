@@ -25,7 +25,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var Wrapper = _styledComponents.default.div(_templateObject(), function (_ref) {
   var loading = _ref.loading;
-  return !loading && "\n    border-radius: 6px;\n    border: solid 1px ".concat(_Colors.default["gray-30"], ";\n    background-color: ").concat(_Colors.default["gray-20"], ";\n    padding-left: 0.563rem;\n    display: grid;\n    grid-template-columns: 9px 100%;\n    align-items: center;\n  ");
+  return !loading && "\n    border-radius: 6px;\n    border: solid 1px ".concat(_Colors.default["gray-30"], ";\n    background-color: ").concat(_Colors.default["white"], ";\n    padding-left: 0.563rem;\n    display: grid;\n    grid-template-columns: 9px 100%;\n    align-items: center;\n  ");
 }, function (_ref2) {
   var error = _ref2.error;
   return error && "\n    border-radius: 6px;\n    border: solid 1px ".concat(_Colors.default["red-dark"], ";\n    background-color: ").concat(_Colors.default["gray-20"], ";\n    padding-left: 0.563rem;\n    display: grid;\n    grid-template-columns: 9px 100%;\n    align-items: center;\n  ");

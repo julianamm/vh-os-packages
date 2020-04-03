@@ -78,7 +78,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     onEvent: props.onEvent,
     isLoading: props.controls.citizenship.loading,
     description: props.controls.citizenship.error && props.controls.citizenship.message,
-    descriptionColor: "red",
+    descriptionColor: "gray-90",
     captionColor: props.controls.citizenship.loading ? "gray-40" : props.controls.citizenship.error ? "red" : 'gray-90'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
@@ -93,7 +93,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     onEvent: props.onEvent,
     isLoading: props.controls.location.loading,
     description: props.controls.location.error && props.controls.location.message,
-    descriptionColor: "red",
+    descriptionColor: "gray-90",
     captionColor: props.controls.location.loading ? "gray-40" : props.controls.location.error ? "red" : 'gray-90'
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,

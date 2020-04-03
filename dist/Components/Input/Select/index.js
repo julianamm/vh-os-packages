@@ -103,6 +103,10 @@ var VHSelect = function VHSelect(props) {
     return {
       paddingTop: '0'
     };
+  }), _defineProperty(_style, "dropdownIndicator", function dropdownIndicator(styles) {
+    return {
+      display: 'none'
+    };
   }), _defineProperty(_style, "option", function option(provided, state) {
     return _objectSpread({}, provided, {
       color: state.isFocused ? '#646464' : '#646464'.isSelected ? '#fff' : '#646464',

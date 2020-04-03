@@ -280,7 +280,8 @@ var controls = {
       backgroundColor: "#f2f2f2",
       height: "100vh",
       padding: "24px"
-    }
+    },
+    id: 'Relocation'
   }, /*#__PURE__*/_react.default.createElement(_.default, {
     education: education,
     items: items,
@@ -297,7 +298,8 @@ var controls = {
       backgroundColor: "#f2f2f2",
       height: "100vh",
       padding: "24px"
-    }
+    },
+    id: 'Relocation'
   }, /*#__PURE__*/_react.default.createElement(_.default, {
     education: education,
     items: items,

@@ -41,6 +41,7 @@ var VHUserPositonExperience = function VHUserPositonExperience(props) {
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 3
   }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+    profile: true,
     onEvent: props.onEvent,
     items: props.description,
     color: "gray-90",
