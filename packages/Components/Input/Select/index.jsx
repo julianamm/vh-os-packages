@@ -26,12 +26,27 @@ if (props.preLoading) {
       ...base,
       border: 0,
       boxShadow: "none",
-      fontWeight: props.bold ? 'bold' : '500',
+      fontWeight: props.bold ? 'bold' : 'normal',
       fontFamily: 'Roboto',
-      fontSize: '14px' 
+      fontSize: '14px',
+      padding: '0',
+      borderRadius: '6px',
+      
     }),
     indicatorSeparator: (styles) => ({ display: 'none' }),
     clearIndicator: (styles) => ({ display: 'none' }),
+    singleValue: (styles) => ({ color:'#4f4f4f'}),
+    valueContainer: (styles) => ({ width: 'auto', display: 'flex', paddingLeft:'0'}),
+    singleValue: (styles) => ({ paddingTop:'0'}),
+    dropdownIndicator:(styles) => ({ display: 'none' }),
+    option: (provided, state) => ({
+      ...provided,
+      color: state.isFocused ? '#646464' : '#646464' .isSelected ? '#fff': '#646464',
+      backgroundColor: state.isFocused ? '#F2F2F2' : '#fff' .isSelected ? '#2C9BF5': '#fff',
+      padding: '6px 12px',
+      fontFamily: 'Roboto',
+      fontSize: '14px',
+    }),
   };
 
   const styled = {
@@ -42,9 +57,23 @@ if (props.preLoading) {
     control: base => ({
       ...base,
       fontFamily: 'Roboto',
-      fontSize: '14px' 
+      fontSize: '14px',
+      border:'1px solid #e0e0e0',
+      padding: '1px 0',
+      borderRadius: '6px',
+      
+      
+    }),
+    option: (provided, state ) => ({
+      ...provided,
+      color: state.isFocused ? '#646464' : '#646464' .isSelected ? '#fff': '#646464',
+      backgroundColor: state.isFocused ? '#F2F2F2' : '#fff' .isSelected ? '#2C9BF5': '#fff',
+      padding: '6px 12px',
+      fontFamily: 'Roboto',
+      fontSize: '14px',
     }),
   };
+  
   
   const DropdownIcon = () => {
     return <IconDropdown />
@@ -76,6 +105,7 @@ if (props.preLoading) {
       }
       <Row>
         <Select
+         
           styles={props.removeBorder ? style : styled}
           closeMenuOnSelect={!props.isMulti}
           className={props.className}

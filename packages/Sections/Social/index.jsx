@@ -9,7 +9,7 @@ import { InputSkeleton } from 'react-preload-skeleton'
 const VHSocialSection = props => {
   return (
     <>
-      <Row marginBottom={5}>
+      <Row>
         <VHText
           className={`vh-skills-section-title ${props.className ? props.className : ''}`}
           text={"Social Profile"}
@@ -28,7 +28,7 @@ const VHSocialSection = props => {
               </Row>
             ) : (
               <>
-                <Row marginBottom4>
+                <Row marginBottom5>
                   <VHInputIcon
                     className=""
                     disabled={props.controls.linkedin.loading}
@@ -41,7 +41,7 @@ const VHSocialSection = props => {
                     value={props.linkedin}
                   />
                 </Row>
-                <Row marginBottom4>
+                <Row marginBottom5>
                   <VHInputIcon
                     className=""
                     disabled={props.controls.git.loading}
@@ -54,7 +54,7 @@ const VHSocialSection = props => {
                     value={props.git}
                   />
                 </Row>
-                <Row marginBottom4>
+                <Row marginBottom5>
                   <VHInputIcon
                     className=""
                     disabled={props.controls.webSite.loading}

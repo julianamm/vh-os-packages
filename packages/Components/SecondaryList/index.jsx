@@ -15,12 +15,13 @@ const VHSecondaryList = props => {
         <React.Fragment>
             < S.Wrapper >
                 <Row  alignItemsCenter row >
-                    <Row>
+                    <Row marginRight={2}>
                         <VHSelect
                         removeIndicator
                             preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
+                            
                             caption=""
                             data={'secondarySkillExperience'}
                             className={'secondarySkillExperience'}
@@ -54,7 +55,7 @@ const VHSecondaryList = props => {
                 </Row>
             </ S.Wrapper>
             < S.Wrapper >
-                <Row  alignItemsCenter row >
+                <Row  alignItemsCenter row marginRight={2}>
                     <Row>
                         <VHSelect
                         removeIndicator
@@ -94,7 +95,7 @@ const VHSecondaryList = props => {
                 </Row>
             </S.Wrapper>
             <S.Wrapper>
-                <Row  alignItemsCenter row >
+                <Row  alignItemsCenter row marginRight={2}>
                     <Row>
                         <VHSelect
                         removeIndicator
