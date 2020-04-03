@@ -139,6 +139,19 @@ export const Row = styled.div`
        padding-right: 6px;
     `}
 
+    ${({ paddingTop }) => paddingTop && `
+        paddingTop: ${paddingTop * 3}px;
+    `}
+    ${({ paddingRight }) => paddingRight && `
+        paddingRight: ${paddingRight * 3}px;
+    `  }
+    ${({ paddingBottom }) => paddingBottom && `
+        paddingBottom: ${paddingBottom * 3}px;
+    `}
+    ${({ paddingLeft }) => paddingLeft && `
+        padding-left: ${paddingLeft * 3}px;
+    `}
+
     ${({ margin }) => margin && `
        margin: 3px 0;
     `}
@@ -158,6 +171,14 @@ export const Row = styled.div`
     ${({ marginBottom }) => marginBottom && `
        margin-bottom: ${marginBottom * 3}px;
     `}
+    ${({ marginLeft }) => marginLeft && `
+       margin-Left: ${marginLeft * 3}px;
+    `}
+
+    ${({ marginRight }) => marginRight && `
+       margin-Right: ${marginRight * 3}px;
+    `}
+
 
     ${({ marginTop}) => marginTop && `
        margin-top: ${marginTop}px;
@@ -191,5 +212,7 @@ export const Row = styled.div`
     ${({ paddingBottom }) => paddingBottom && `
        padding-bottom: 50px;
     `}
-`
+
+   
+`   
 

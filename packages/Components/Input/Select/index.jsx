@@ -38,6 +38,7 @@ if (props.preLoading) {
     singleValue: (styles) => ({ color:'#4f4f4f'}),
     valueContainer: (styles) => ({ width: 'auto', display: 'flex', paddingLeft:'0'}),
     singleValue: (styles) => ({ paddingTop:'0'}),
+    dropdownIndicator:(styles) => ({ display: 'none' }),
     option: (provided, state) => ({
       ...provided,
       color: state.isFocused ? '#646464' : '#646464' .isSelected ? '#fff': '#646464',
@@ -104,6 +105,7 @@ if (props.preLoading) {
       }
       <Row>
         <Select
+         
           styles={props.removeBorder ? style : styled}
           closeMenuOnSelect={!props.isMulti}
           className={props.className}
