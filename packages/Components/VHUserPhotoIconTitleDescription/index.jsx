@@ -34,12 +34,12 @@ const VHUserAvatar = props => {
         <Row alignItemsCenter marginTop={10}>
             <VHText
                 variant={"h4"}
-                color={"gray-100"}
+                color={"gray-90"}
                 text={props.name}
             />
             <VHText
                 variant={"subtitle3"}
-                color={"gray-100"}
+                color={"gray-90"}
                 text={props.email}
             />
         </Row>
