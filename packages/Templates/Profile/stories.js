@@ -47,7 +47,134 @@ const controls = {
   language: {loading: false, preLoading: false, success: false, error: false},
   }
 
-const experiences = {"firstExperienceDate":"2019-08-01T00:00:00","experiences":[{"workExperiences":[{"companyName":"new companynew company","countryId":661882,"country":"Åland","companySize":1,"companySizeStr":"Startup","industry":null,"industryId":3,"positionId":7,"position":"UI/UX Designer","isCurrentRole":null,"startDate":"2020-03-12T00:00:00","endDate":"2020-03-27T00:00:00","description":"new description","skills":[],"id":146671},{"companyName":"new companynew company","countryId":661882,"country":"Åland","companySize":1,"companySizeStr":"Startup","industry":null,"industryId":3,"positionId":1,"position":"Backend Engineer","isCurrentRole":null,"startDate":"2020-03-12T00:00:00","endDate":"2020-03-27T00:00:00","description":"new description","skills":[],"id":146672},{"companyName":"new companynew company","countryId":661882,"country":"Åland","companySize":1,"companySizeStr":"Startup","industry":null,"industryId":3,"positionId":3,"position":"Full Stack Engineer","isCurrentRole":null,"startDate":"2020-03-05T00:00:00","endDate":"2020-03-02T00:00:00","description":"dsfdsdfsfd","skills":[],"id":146669},{"companyName":"new companynew company","countryId":661882,"country":"Åland","companySize":1,"companySizeStr":"Startup","industry":null,"industryId":3,"positionId":3,"position":"Full Stack Engineer","isCurrentRole":null,"startDate":"2020-03-05T00:00:00","endDate":"2020-03-02T00:00:00","description":"dsfdsdfsfd","skills":[],"id":146670},{"companyName":"new companynew company","countryId":661882,"country":"Åland","companySize":1,"companySizeStr":"Startup","industry":null,"industryId":3,"positionId":1,"position":"Backend Engineer","isCurrentRole":null,"startDate":"2020-03-05T00:00:00","endDate":"2020-03-02T00:00:00","description":"dsfdsdfsfd","skills":[],"id":146673},{"companyName":"new companynew company","countryId":661882,"country":"Åland","companySize":1,"companySizeStr":"Startup","industry":null,"industryId":3,"positionId":1,"position":"Backend Engineer","isCurrentRole":null,"startDate":"2020-03-05T00:00:00","endDate":"2020-03-02T00:00:00","description":"dsfdsdfsfd","skills":[],"id":146674}],"companyName":"new companynew company","countryId":661882,"country":"Åland","companySize":1,"companySizeStr":"Startup","industry":null,"industryId":3,"id":146671},{"workExperiences":[{"companyName":"dassas","countryId":661882,"country":"Åland","companySize":2,"companySizeStr":"Mid Size","industry":null,"industryId":3,"positionId":3,"position":"Full Stack Engineer","isCurrentRole":null,"startDate":"2020-03-04T00:00:00","endDate":null,"description":"[{\"value\":\"teste 1\",\"loading\":true},{\"value\":\"teste 2\",\"loading\":true},{\"value\":\"\"}]","skills":[],"id":146676}],"companyName":"dassas","countryId":661882,"country":"Åland","companySize":2,"companySizeStr":"Mid Size","industry":null,"industryId":3,"id":146676},{"workExperiences":[{"companyName":"FInal company","countryId":3469034,"country":"Brazil","companySize":2,"companySizeStr":"Mid Size","industry":null,"industryId":12,"positionId":7,"position":"UI/UX Designer","isCurrentRole":null,"startDate":"2020-03-02T00:00:00","endDate":null,"description":"just a description","skills":[],"id":146675}],"companyName":"FInal company","countryId":3469034,"country":"Brazil","companySize":2,"companySizeStr":"Mid Size","industry":null,"industryId":12,"id":146675},{"workExperiences":[{"companyName":"sdasasdas","countryId":3469034,"country":"Brazil","companySize":2,"companySizeStr":"Mid Size","industry":null,"industryId":3,"positionId":3,"position":"Full Stack Engineer","isCurrentRole":null,"startDate":"2019-08-01T00:00:00","endDate":"2019-01-01T00:00:00","description":"[{\"value\":\"teste 1\",\"loading\":true},{\"value\":\"\"}]","skills":[],"id":119938}],"companyName":"sdasasdas","countryId":3469034,"country":"Brazil","companySize":2,"companySizeStr":"Mid Size","industry":null,"industryId":3,"id":119938}]}
+
+const experiences = {
+  "experiences": [
+      {
+          "workExperiences": [
+              {
+                  "companyName": "Drift Way Sidecorp",
+                  "countryId": 661882,
+                  "country": "Colombia",
+                  "companySize": 1,
+                  "companySizeStr": "Startup",
+                  "industry": "Computer Software",
+                  "industryId": 3,
+                  "positionId": 7,
+                  "position": "DevOps Engineer",
+                  "isCurrentRole": null,
+                  "startDate": "2020-03-12T00:00:00",
+                  "endDate": "2020-03-27T00:00:00",
+                  "description": "Development of an internal platform supporting students, staff and program applicants built with Ruby on Rails and GraphQL on the backend, React, Apollo, Relay (legacy) on the frontend.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.",
+                  "skills": [],
+                  "id": 146671
+              },
+              {
+                  "companyName": "Drift Way Sidecorp",
+                  "countryId": 661882,
+                  "country": "Colombia",
+                  "companySize": 1,
+                  "companySizeStr": "Startup",
+                  "industry": "Computer Software",
+                  "industryId": 3,
+                  "positionId": 1,
+                  "position": "Backend Engineer",
+                  "isCurrentRole": null,
+                  "startDate": "2020-03-12T00:00:00",
+                  "endDate": "2020-03-27T00:00:00",
+                  "description": " Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.",
+                  "skills": [],
+                  "id": 146672
+              },
+              {
+                  "companyName": "Drift Way Sidecorp",
+                  "countryId": 661882,
+                  "country": "Colombia",
+                  "companySize": 1,
+                  "companySizeStr": "Startup",
+                  "industry": "Computer Software",
+                  "industryId": 3,
+                  "positionId": 3,
+                  "position": "Full Stack Engineer",
+                  "isCurrentRole": null,
+                  "startDate": "2020-03-05T00:00:00",
+                  "endDate": "2020-03-02T00:00:00",
+                  "description": "Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment. Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.",
+                  "skills": [],
+                  "id": 146669
+              },
+
+          ],
+          "companyName": "Drift Way Sidecorp",
+          "countryId": 661882,
+          "country": "Colombia",
+          "companySize": 1,
+          "companySizeStr": "Startup",
+          "industry": "Computer Software",
+          "industryId": 3,
+          "id": 146671
+      },
+      {
+          "workExperiences": [
+              {
+                  "companyName": "Mircrosoft",
+                  "countryId": 3469034,
+                  "country": "Brazil",
+                  "companySize": 2,
+                  "companySizeStr": "Mid Size",
+                  "industry": "Computer Development",
+                  "industryId": 12,
+                  "positionId": 7,
+                  "position": "Full Stack Engineer",
+                  "isCurrentRole": null,
+                  "startDate": "2020-03-02T00:00:00",
+                  "endDate": null,
+                  "description": " Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.",
+                  "skills": [],
+                  "id": 146675
+              }
+          ],
+          "companyName": "Mircrosoft",
+          "countryId": 3469034,
+          "country": "Brazil",
+          "companySize": 3,
+          "companySizeStr": "Corporate",
+          "industry": "Computer Development",
+          "industryId": 12,
+          "id": 146675
+      },
+      {
+          "workExperiences": [
+              {
+                  "companyName": "Wave communication",
+                  "countryId": 3469034,
+                  "country": "Brazil",
+                  "companySize": 2,
+                  "companySizeStr": "Mid Size",
+                  "industry": "Computer Development",
+                  "industryId": 12,
+                  "positionId": 7,
+                  "position": "Full Stack Engineer",
+                  "isCurrentRole": null,
+                  "startDate": "2020-03-02T00:00:00",
+                  "endDate": null,
+                  "description": " Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.",
+                  "skills": [],
+                  "id": 119938
+              }
+          ],
+          "companyName": "Wave communication",
+          "countryId": 3469034,
+          "country": "Brazil",
+          "companySize": 2,
+          "companySizeStr": "Mid Size",
+          "industry": "Computer Development",
+          "industryId": 12,
+          "id": 119938
+      }
+  ]
+}
+
 const modalExperience = {
   id: { value: null, messageError: false },
   companyName: { value: undefined, messageError: false },

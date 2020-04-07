@@ -6,7 +6,7 @@ import VHUserCompanyExperience from ".";
 const company = {
     title: 'Google',
     rightTitle: '2006 / 2007',
-    description: "Education - Startup - Belo Horizonte - Brazil"
+    description: "Education - Startup - Brazil"
 }
 
 const ArrayOfSkills = [

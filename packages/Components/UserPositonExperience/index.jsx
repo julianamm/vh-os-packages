@@ -8,7 +8,7 @@ import * as S from './styles';
 
 const VHUserPositonExperience = props => {
     return (
-        <Row>
+        <Row row style={{boxSizing:"border-box", paddingRight:"33px"}} >
             <S.Wrapper hideTimeline={props.hideTimeline}>
                 <Row marginBottom={3}>
                     <VHBlackTitleDescription
@@ -19,12 +19,13 @@ const VHUserPositonExperience = props => {
                         className={`vh-user-position-experience ${props.className ? props.className : ''}`}
                     />
                 </Row>
-                <Row marginBottom={3}>
+                <Row marginBottom={3} >
                     <VHIconTitleList
                         profile
                         onEvent={props.onEvent}
                         items={props.description}
-                        color="gray-90"
+                        iconColor="gray-30"
+                        textColor="gray-90"
                         className={`vh-user-position-experience-title-list ${props.className ? props.className : ''}`}
 
                     />

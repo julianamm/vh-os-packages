@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Row } from "../../Grid";
 import VHCardBase from "../../Components/Cards/Base";
 import VHText from "../../Components/Text";
-import VHButton from "../../Components/Button";
+import VHButton from "../../Components/Button-New";
 import VHUserCompanyPositionExperience from "../../Components/UserCompanyPositonExperience";
 import VHModalExperience from '../../Components/ModalExperience'
 import { PostDescriptionSkeleton } from 'react-preload-skeleton'
@@ -55,7 +55,7 @@ const VHUserCompanyExperienceSection = props => {
 
                         experience.map(userPosition => {
                           return (
-                            <Row marginBottom={10}>
+                            <Row marginBottom={10} paddingRight={10}>
                               <VHUserCompanyPositionExperience
                                 item={userPosition}
                                 companyList={props.companyList}
@@ -69,7 +69,7 @@ const VHUserCompanyExperienceSection = props => {
                         })
                       }
                       <Row row>
-                        <Row paddingRight8 autoWidth>
+                        <Row row marginRight={4} autoWidth>
                           <VHButton
                             nowrap
                             primary
