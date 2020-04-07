@@ -26,7 +26,7 @@ var ThirdStep = function ThirdStep(props) {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    marginBottom5: true
+    marginBottom: 10
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '10%'
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {

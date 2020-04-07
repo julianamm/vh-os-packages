@@ -254,274 +254,6 @@ var controls = {
     error: false
   }
 };
-var controlsPreloading = {
-  citizenship: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  linkedin: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  git: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  webSite: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  location: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  gender: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  phone: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  positionSkill: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  openForDifferentRole: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  yearsOfExperience: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  workAs: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  topSkill: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  salaryRangeEur: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  salaryRangeCad: {
-    loading: false,
-    preLoading: true,
-    error: false,
-    success: false
-  },
-  visaStatusEU: {
-    loading: false,
-    preLoading: true,
-    success: false,
-    error: false
-  },
-  visaStatusCanadian: {
-    loading: false,
-    preLoading: true,
-    success: false,
-    error: false
-  },
-  companySize: {
-    loading: false,
-    preLoading: true,
-    success: false,
-    error: false
-  },
-  secondarySkill: {
-    loading: false,
-    preLoading: true,
-    success: false,
-    error: false
-  },
-  noticePeriod: {
-    loading: false,
-    preLoading: true,
-    success: false,
-    error: false
-  },
-  experienceSection: {
-    loading: false,
-    preLoading: true,
-    success: false,
-    error: false
-  },
-  educationSection: {
-    loading: false,
-    preLoading: true,
-    success: false,
-    error: false
-  },
-  language: {
-    loading: false,
-    preLoading: true,
-    success: false,
-    error: false
-  }
-};
-var controlsLoading = {
-  citizenship: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  linkedin: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  git: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  webSite: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  location: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  gender: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  phone: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  positionSkill: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  openForDifferentRole: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  yearsOfExperience: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  workAs: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  topSkill: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  salaryRangeEur: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  salaryRangeCad: {
-    loading: true,
-    preLoading: false,
-    error: false,
-    success: false
-  },
-  visaStatusEU: {
-    loading: true,
-    preLoading: false,
-    success: false,
-    error: false
-  },
-  visaStatusCanadian: {
-    loading: true,
-    preLoading: false,
-    success: false,
-    error: false
-  },
-  companySize: {
-    loading: true,
-    preLoading: false,
-    success: false,
-    error: false
-  },
-  secondarySkill: {
-    loading: true,
-    preLoading: false,
-    success: false,
-    error: false
-  },
-  noticePeriod: {
-    loading: true,
-    preLoading: false,
-    success: false,
-    error: false
-  },
-  experienceSection: {
-    loading: true,
-    preLoading: false,
-    success: false,
-    error: false
-  },
-  educationSection: {
-    loading: true,
-    preLoading: false,
-    success: false,
-    error: false
-  },
-  language: {
-    loading: true,
-    preLoading: false,
-    success: false,
-    error: false
-  }
-};
 var experiences = {
   "firstExperienceDate": "2019-08-01T00:00:00",
   "experiences": [{
@@ -710,10 +442,134 @@ var experiences = {
     "id": 119938
   }]
 };
+var modalExperience = {
+  id: {
+    value: null,
+    messageError: false
+  },
+  companyName: {
+    value: undefined,
+    messageError: false
+  },
+  countryId: {
+    value: undefined,
+    messageError: false
+  },
+  companySize: {
+    value: undefined,
+    messageError: false
+  },
+  industryId: {
+    value: undefined,
+    messageError: false
+  },
+  workExperiences: [{
+    positionId: {
+      value: undefined,
+      messageError: false
+    },
+    startDate: {
+      value: undefined,
+      messageError: false
+    },
+    endDate: {
+      value: undefined,
+      messageError: false
+    },
+    description: {
+      value: undefined,
+      messageError: false
+    },
+    isCurrentRole: {
+      value: undefined,
+      messageError: false
+    }
+  }]
+};
 var languages = [{
   value: 0,
   label: 'English'
+}]; // Education
+
+var items = [{
+  value: 0,
+  label: 'No degree'
+}, {
+  value: 1,
+  label: 'College (two-year degree)'
+}, {
+  value: 2,
+  label: 'Bachelor’s'
+}, {
+  value: 3,
+  label: 'Master’s'
+}, {
+  value: 4,
+  label: 'PhD'
 }];
+var modalEducation = {
+  id: {
+    value: null,
+    messageError: false
+  },
+  degreeType: {
+    value: 1,
+    messageError: false
+  },
+  degreeTitle: {
+    value: "new degree",
+    messageError: false
+  },
+  schoolName: {
+    value: "new school",
+    messageError: false
+  },
+  startYear: {
+    value: "2020-04-09",
+    messageError: false
+  },
+  endYear: {
+    value: undefined,
+    messageError: false
+  }
+}; //End education
+//Skills
+
+var apiResponse = {
+  position: {
+    current: items[0],
+    yearOfExperience: items[2]
+  },
+  workAs: {
+    current: items
+  },
+  mainSkills: [{
+    current: items[1],
+    order: 0,
+    yearOfExperience: items[1]
+  }, {
+    current: items[2],
+    order: 1,
+    yearOfExperience: items[1]
+  }],
+  openedPosition: true
+}; //end Skills
+//avatar
+
+var baseDomain = 'https://api.vanhack.dev';
+var accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjY1MiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJkdXJhbmRAdmFuaGFjay5jb20iLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6ImVlMGI0YzIwLTc1NDQtNDU1YS1hMzM1LWI0NmM4YWNiNzE3OCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkVtcGxveWVyIiwiaHR0cDovL3d3dy5hc3BuZXRib2lsZXJwbGF0ZS5jb20vaWRlbnRpdHkvY2xhaW1zL3RlbmFudElkIjoiMSIsInN1YiI6IjY1MiIsImp0aSI6IjdmODE3NDdjLTRkODktNGQyNy1iODBhLWIxODY4N2IxNDgxOSIsImlhdCI6MTU4NTA2ODg1MSwidG9rZW5fdmFsaWRpdHlfa2V5IjoiM2UxNzEwNjMtZjM5OC00OGVjLWEzYzItYTdjMjlmNzNhNjViIiwidXNlcl9pZGVudGlmaWVyIjoiNjUyQDEiLCJuYmYiOjE1ODUwNjg4NTEsImV4cCI6MTU4NTE1NTI1MSwiaXNzIjoiVmFuSGFjayIsImF1ZCI6IlZhbkhhY2sifQ.hhK8pcRDF4YLTrh7VD6UQ4dJjwy5X0cKPNipyvSueMI";
+var accessTokenPRD = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjY1MiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJkdXJhbmRAdmFuaGFjay5jb20iLCJBc3BOZXQuSWRlbnRpdHkuU2VjdXJpdHlTdGFtcCI6ImVlMGI0YzIwLTc1NDQtNDU1YS1hMzM1LWI0NmM4YWNiNzE3OCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6WyJBZG1pbiIsIkVuZ2xpc2hUZXN0Q29uc3VsdGFudCJdLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwic3ViIjoiNjUyIiwianRpIjoiODQ4MDUzYTMtYjg4NS00MGQwLTkxNmEtNDY1MzZiYmQ1Y2JiIiwiaWF0IjoxNTg1MDEzNDQ0LCJ0b2tlbl92YWxpZGl0eV9rZXkiOiIxYjZlYjY2Ni0xZmJmLTQxMDAtYjc2Mi03YjhkZDlhY2U2ZGIiLCJ1c2VyX2lkZW50aWZpZXIiOiI2NTJAMSIsIm5iZiI6MTU4NTAxMzQ0NCwiZXhwIjoxNTg1MDk5ODQ0LCJpc3MiOiJWYW5IYWNrIiwiYXVkIjoiVmFuSGFjayJ9.mqpXE0dlK8BWW9d9SS6IJectxvbLqyLMq-6zn58Xnnc";
+var candidates = {
+  avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
+  name: "Jeff Patterson",
+  email: "jeffpatterson@gmail.com"
+};
+var User = {
+  avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg",
+  name: "Jeff Patterson",
+  email: "jeffpatterson@gmail.com"
+}; //end Avatar
+
 (0, _react2.storiesOf)("Templates|Profile", module).add("default", function () {
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
@@ -721,9 +577,18 @@ var languages = [{
       height: "100%"
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
+    controls: controls,
+    User: User,
     experience: experiences,
+    modalExperience: modalExperience,
     languages: languages,
-    controls: controls
+    item: items,
+    modalEducation: modalEducation,
+    apiResponse: apiResponse,
+    baseDomain: baseDomain,
+    accessToken: accessToken,
+    accessTokenPRD: accessTokenPRD,
+    candidates: candidates
   }));
 }).add("preLoading", function () {
   return /*#__PURE__*/_react.default.createElement("div", {

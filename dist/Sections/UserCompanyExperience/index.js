@@ -57,6 +57,17 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
       currentItem = _React$useState6[0],
       _setCurrentItem = _React$useState6[1];
 
+  function calcDate(date) {
+    var today = new Date();
+    var past = new Date(date);
+    var diff = Math.floor(today.getTime() - past.getTime());
+    var day = 1000 * 60 * 60 * 24;
+    var days = Math.floor(diff / day);
+    var months = Math.floor(days / 31);
+    var years = Math.floor(months / 12);
+    return "".concat(years, " years, ").concat(months, " months");
+  }
+
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, openModal && /*#__PURE__*/_react.default.createElement(_ModalExperience.default, {
     openModal: openModal,
     onClose: function onClose() {
@@ -76,7 +87,7 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     marginBottom: 5
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
-    text: "Experience ".concat(props.yearsOfExperience || ''),
+    text: "Experience ".concat(experience.length > 0 ? calcDate(props.experience.firstExperienceDate) : ''),
     color: "black-50",
     variant: "h2"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Base.default, {

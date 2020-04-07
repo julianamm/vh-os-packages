@@ -411,6 +411,50 @@ var controls = {
     error: false
   }
 };
+var modalExperience = {
+  id: {
+    value: null,
+    messageError: false
+  },
+  companyName: {
+    value: undefined,
+    messageError: false
+  },
+  countryId: {
+    value: undefined,
+    messageError: false
+  },
+  companySize: {
+    value: undefined,
+    messageError: false
+  },
+  industryId: {
+    value: undefined,
+    messageError: false
+  },
+  workExperiences: [{
+    positionId: {
+      value: undefined,
+      messageError: false
+    },
+    startDate: {
+      value: undefined,
+      messageError: false
+    },
+    endDate: {
+      value: undefined,
+      messageError: false
+    },
+    description: {
+      value: undefined,
+      messageError: false
+    },
+    isCurrentRole: {
+      value: undefined,
+      messageError: false
+    }
+  }]
+};
 (0, _react2.storiesOf)("Sections|User Company Experience", module).add("Default", function () {
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
@@ -420,6 +464,7 @@ var controls = {
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
     yearsOfExperience: "- 6yrs 3 mos",
+    modalExperience: modalExperience,
     experience: experience,
     controls: controls,
     onEvent: function onEvent(e) {
@@ -435,6 +480,7 @@ var controls = {
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
     yearsOfExperience: "- 6yrs 3 mos",
+    modalExperience: modalExperience,
     experience: experience,
     controls: controls,
     onEvent: function onEvent(e) {

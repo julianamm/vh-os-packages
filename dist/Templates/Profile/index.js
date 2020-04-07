@@ -31,6 +31,10 @@ var _LanguageSection = _interopRequireDefault(require("../../Sections/LanguageSe
 
 var _VHUserPhotoIconTitleDescription = _interopRequireDefault(require("../../Components/VHUserPhotoIconTitleDescription"));
 
+var _File = _interopRequireDefault(require("../../Components/Input/File/"));
+
+var _SideProjects = _interopRequireDefault(require("../../Sections/SideProjects"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -48,9 +52,7 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
     avatar: props.User.image,
     name: props.User.name,
     email: props.User.email,
-    onEvent: function onEvent(e) {
-      props.onEvent;
-    }
+    onEvent: props.onEvent
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 10
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -112,7 +114,18 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
       preLoading: props.controls.experienceSection.preLoading,
       onEvent: props.onEvent
     }))
-  }))));
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom: 10
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    id: "sideProject"
+  }, /*#__PURE__*/_react.default.createElement(_index.default, {
+    content: /*#__PURE__*/_react.default.createElement(_SideProjects.default, _extends({}, props, {
+      preLoading: props.controls.sideProjectsSection.preLoading,
+      onEvent: props.onEvent
+    }))
+  }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_File.default, {
+    onEvent: props.onEvent
+  })));
 };
 
 VHProfileTemplate.defaultProps = {};

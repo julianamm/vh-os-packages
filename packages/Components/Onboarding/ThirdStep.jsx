@@ -11,7 +11,7 @@ const ThirdStep = props => {
 
     return (
         <Row column >
-            <Row row marginBottom5>
+            <Row row marginBottom={10}>
                 <Row width={'10%'}>
                     <VHIcon icon={'skills'} title="city" md />
                 </Row>
