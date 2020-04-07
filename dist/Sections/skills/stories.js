@@ -250,16 +250,6 @@ var controls = {
     error: false
   }
 };
-var topSkills = [{
-  label: 'React',
-  value: 'c'
-}, {
-  label: 'Java',
-  value: 'b'
-}, {
-  label: 'Python',
-  value: 'o'
-}];
 var items = [{
   label: 'Item 1',
   value: 'c'

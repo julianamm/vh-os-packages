@@ -17,7 +17,7 @@ const FirstStep = props => {
 
     return (
         <Row column >
-            <Row row marginBottom5>
+            <Row row marginBottom={10}>
                 <Row width={'10%'}>
                     <VHIcon icon={'experience'} title="city" md />
                 </Row>
@@ -29,7 +29,7 @@ const FirstStep = props => {
                     />
                 </Row>
             </Row>
-            <Row width={'60%'} marginBottom5>
+            <Row width={'80%'} marginBottom5>
                 <VHSelect
                     preLoading={props.preLoading}
                     caption="Which role best applies to your experience?"

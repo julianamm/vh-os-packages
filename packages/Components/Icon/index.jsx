@@ -30,6 +30,8 @@ import PlayIcon from '../../assets/svg/icons/icon_play.svg/index.js';
 import ExperienceIcon from '../../assets/svg/icons/experience.svg/index.js';
 import SkillsIcon from '../../assets/svg/icons/skills.svg/index.js';
 import RelocationIcon from '../../assets/svg/icons/relocation.svg/index.js';
+import UserIcon from '../../assets/svg/icons/icon_user-circle.svg/index.js';
+import LanguageIcon from '../../assets/svg/icons/language.svg/index.js';
 
 import Color from "../../Colors";
 
@@ -153,6 +155,10 @@ const VHIcon = props => {
       return <SkillsIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'relocation':
       return <RelocationIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'user':
+      return <UserIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'language':
+      return <LanguageIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     default:
       return <span />
   }

@@ -69,6 +69,10 @@ var _index29 = _interopRequireDefault(require("../../assets/svg/icons/skills.svg
 
 var _index30 = _interopRequireDefault(require("../../assets/svg/icons/relocation.svg/index.js"));
 
+var _index31 = _interopRequireDefault(require("../../assets/svg/icons/icon_user-circle.svg/index.js"));
+
+var _index32 = _interopRequireDefault(require("../../assets/svg/icons/language.svg/index.js"));
+
 var _Colors = _interopRequireDefault(require("../../Colors"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -384,6 +388,22 @@ var VHIcon = function VHIcon(props) {
 
     case 'relocation':
       return /*#__PURE__*/_react.default.createElement(_index30.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'user':
+      return /*#__PURE__*/_react.default.createElement(_index31.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'language':
+      return /*#__PURE__*/_react.default.createElement(_index32.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),

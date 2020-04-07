@@ -19,7 +19,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-12T00:00:00",
                     "endDate": "2020-03-27T00:00:00",
-                    "description": "Development of an internal platform supporting students, staff and program applicants built with Ruby on Rails and GraphQL on the backend, React, Apollo, Relay (legacy) on the frontend.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146671
                 },
@@ -36,7 +36,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-12T00:00:00",
                     "endDate": "2020-03-27T00:00:00",
-                    "description": " Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146672
                 },
@@ -53,7 +53,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-05T00:00:00",
                     "endDate": "2020-03-02T00:00:00",
-                    "description": "Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment. Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146669
                 },
@@ -83,7 +83,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-02T00:00:00",
                     "endDate": null,
-                    "description": " Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146675
                 }
@@ -112,7 +112,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-02T00:00:00",
                     "endDate": null,
-                    "description": " Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.Building and maintaining multiple internal tools and scripts that automated prospection, applications, and enrollment.",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 119938
                 }

@@ -15,6 +15,21 @@ const VHUserCompanyExperienceSection = props => {
   const experience = props.experience.experiences ? props.experience.experiences : [];
   const [currentItem, setCurrentItem] = React.useState({});
 
+  function calcDate(date) {
+
+    let today = new Date()
+    let past = new Date(date) 
+
+    var diff = Math.floor(today.getTime() - past.getTime());
+    var day = 1000 * 60 * 60 * 24;
+
+    var days = Math.floor(diff / day);
+    var months = Math.floor(days / 31);
+    var years = Math.floor(months / 12);
+
+    return `${years} years, ${months} months`  
+  }
+
   return (
     <>
       {openModal &&
@@ -33,7 +48,7 @@ const VHUserCompanyExperienceSection = props => {
       <Row mmarginBottom={2}>
         <VHText
           className={`vh-skills-section-title ${props.className ? props.className : ''}`}
-          text={`Experience ${props.yearsOfExperience || ''}`}
+          text={`Experience ${experience.length > 0 ? calcDate(props.experience.firstExperienceDate) : ''}`}
           color="black-50"
           variant="h2"
         />

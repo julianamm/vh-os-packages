@@ -10,6 +10,8 @@ import VHUserCompanyExperienceSection from '../../Sections/UserCompanyExperience
 import VHPageSection from '../PageSection/index'
 import VHLanguageSection from '../../Sections/LanguageSection'
 import VHProfileAvatar from '../../Components/VHUserPhotoIconTitleDescription'
+import VHInputFile from '../../Components/Input/File/'
+import VHSideProjectsSection from '../../Sections/SideProjects'
 
 const VHProfileTemplate = props => (
   <Container md style={{maxWidth: "732px"}}>
@@ -18,7 +20,7 @@ const VHProfileTemplate = props => (
         avatar= {props.User.image}
         name= {props.User.name}
         email= {props.User.email}
-        onEvent={(e)=>{props.onEvent}}
+        onEvent={props.onEvent}
       />
     </Row>
     <Row marginBottom={16}>
@@ -93,7 +95,20 @@ const VHProfileTemplate = props => (
         } />
       </div>
     </Row>
-    
+    <Row marginBottom={10}>
+      <div id={"sideProject"}>
+        <VHPageSection content={
+          <VHSideProjectsSection
+            {...props}
+            preLoading={props.controls.sideProjectsSection.preLoading}
+            onEvent={props.onEvent}
+          />
+        } />
+      </div>
+    </Row>
+    <div>
+      <VHInputFile onEvent={props.onEvent}></VHInputFile>
+      </div>
     {/*<Row marginBottom={10}>
       <VHUserCompanyExperienceSection
         {...props.userCompanyExperience}

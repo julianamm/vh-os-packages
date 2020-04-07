@@ -55,7 +55,7 @@ var VHUserCompanyExperience = function VHUserCompanyExperience(props) {
     setCurrentItem: props.setCurrentItem,
     item: props.item,
     title: props.item.companyName,
-    description: "".concat(props.item.workExperiences[0].position, " - ").concat(props.item.companySizeStr, " - ").concat(props.item.country),
+    description: "".concat(props.item.workExperiences[0].industry, " - ").concat(props.item.companySizeStr, " - ").concat(props.item.country),
     rightTitle: props.rightTitle,
     className: "vh-user-company-position-experience ".concat(props.className ? props.className : '')
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, props.item.workExperiences.map(function (userPosition) {

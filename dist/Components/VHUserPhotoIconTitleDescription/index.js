@@ -51,11 +51,11 @@ var VHUserAvatar = function VHUserAvatar(props) {
     marginTop: 10
   }, /*#__PURE__*/_react.default.createElement(_index4.default, {
     variant: "h4",
-    color: "gray-100",
+    color: "gray-90",
     text: props.name
   }), /*#__PURE__*/_react.default.createElement(_index4.default, {
     variant: "subtitle3",
-    color: "gray-100",
+    color: "gray-90",
     text: props.email
   })));
 };
