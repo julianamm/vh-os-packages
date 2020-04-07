@@ -21,6 +21,8 @@ var _Button = _interopRequireDefault(require("../Button"));
 
 var _Text = _interopRequireDefault(require("../Text"));
 
+var _Preloader = _interopRequireDefault(require("../Preloader"));
+
 var _FirstStep = _interopRequireDefault(require("./FirstStep"));
 
 var _SecondStep = _interopRequireDefault(require("./SecondStep"));
@@ -29,11 +31,21 @@ var _ThirdStep = _interopRequireDefault(require("./ThirdStep"));
 
 var _FourthStep = _interopRequireDefault(require("./FourthStep"));
 
+var _FifthStep = _interopRequireDefault(require("./FifthStep"));
+
+var _SixStep = _interopRequireDefault(require("./SixStep"));
+
+var _StartStep = _interopRequireDefault(require("./StartStep"));
+
+var _FinishStep = _interopRequireDefault(require("./FinishStep"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -54,10 +66,21 @@ var VHOnboarding = function VHOnboarding(props) {
   var _useState = (0, _react.useState)(props.currentStep),
       _useState2 = _slicedToArray(_useState, 2),
       currentStep = _useState2[0],
-      setCurrentStep = _useState2[1]; //let currentStep = 1
+      _setCurrentStep = _useState2[1];
 
+  var _useState3 = (0, _react.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      displayNone = _useState4[0],
+      setDisplayNone = _useState4[1];
+
+  _react.default.useEffect(function () {
+    _setCurrentStep(props.currentStep);
+  }, [props.currentStep]);
 
   return /*#__PURE__*/_react.default.createElement(_Grid.Container, {
+    displayNone: displayNone,
+    currentStep: currentStep,
+    animation: true,
     justifyCenter: true,
     fullHeight: true,
     style: {
@@ -66,7 +89,6 @@ var VHOnboarding = function VHOnboarding(props) {
     fullWidth: true
   }, /*#__PURE__*/_react.default.createElement("img", {
     style: {
-      marginTop: '50px',
       marginBottom: '50px'
     },
     src: VanhackLogo
@@ -75,8 +97,11 @@ var VHOnboarding = function VHOnboarding(props) {
   }, /*#__PURE__*/_react.default.createElement(_Base.default, {
     noPadding: true,
     width: "70%",
-    height: "480px"
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_ProgressBar.default, {
+    height: "580px"
+  }, props.controls.language.loading ? /*#__PURE__*/_react.default.createElement(_Preloader.default, {
+    type: "fullPage",
+    size: "md"
+  }) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, currentStep > 0 && /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_ProgressBar.default, {
     steps: props.steps,
     currentStep: currentStep,
     onEvent: props.onEvent
@@ -98,7 +123,12 @@ var VHOnboarding = function VHOnboarding(props) {
       height: '100%',
       overflow: 'scroll'
     }
-  }, currentStep === 1 && /*#__PURE__*/_react.default.createElement(_FirstStep.default, props), currentStep === 2 && /*#__PURE__*/_react.default.createElement(_SecondStep.default, props), currentStep === 3 && /*#__PURE__*/_react.default.createElement(_ThirdStep.default, props), currentStep === 4 && /*#__PURE__*/_react.default.createElement(_FourthStep.default, props)), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, currentStep === 0 && /*#__PURE__*/_react.default.createElement(_StartStep.default, _extends({}, props, {
+    onEvent: props.onEvent,
+    setCurrentStep: function setCurrentStep() {
+      return _setCurrentStep(1);
+    }
+  })), currentStep === 1 && /*#__PURE__*/_react.default.createElement(_FirstStep.default, props), currentStep === 2 && /*#__PURE__*/_react.default.createElement(_SecondStep.default, props), currentStep === 3 && /*#__PURE__*/_react.default.createElement(_ThirdStep.default, props), currentStep === 4 && /*#__PURE__*/_react.default.createElement(_FourthStep.default, props), currentStep === 5 && /*#__PURE__*/_react.default.createElement(_FifthStep.default, props), currentStep === 6 && /*#__PURE__*/_react.default.createElement(_SixStep.default, props), currentStep > 6 && /*#__PURE__*/_react.default.createElement(_FinishStep.default, props)), currentStep > 0 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     justifySpaceBetween: true,
     alignItemsCenter: true,
@@ -122,7 +152,8 @@ var VHOnboarding = function VHOnboarding(props) {
           }
         }
       });
-      setCurrentStep(currentStep - 1);
+
+      _setCurrentStep(currentStep - 1);
     },
     primary: true,
     data: props
@@ -132,7 +163,7 @@ var VHOnboarding = function VHOnboarding(props) {
     color: "gray-60"
   }), /*#__PURE__*/_react.default.createElement(_Button.default, {
     className: "",
-    label: "Next",
+    label: currentStep < 6 ? "Next" : "Finish",
     disabled: currentStep === props.steps + 1,
     onEvent: function onEvent(e) {
       props.onEvent({
@@ -146,11 +177,16 @@ var VHOnboarding = function VHOnboarding(props) {
           }
         }
       });
-      setCurrentStep(currentStep + 1);
+
+      _setCurrentStep(currentStep + 1);
+
+      if (currentStep >= 6) {
+        setDisplayNone(true);
+      }
     },
     primary: true,
     data: props
-  })))))));
+  }))))))));
 };
 
 VHOnboarding.defaultProps = {

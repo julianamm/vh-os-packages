@@ -32,7 +32,7 @@ var FirstStep = function FirstStep(props) {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    marginBottom5: true
+    marginBottom: 10
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '10%'
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
@@ -46,7 +46,7 @@ var FirstStep = function FirstStep(props) {
     color: "gray-90",
     text: 'Professional details'
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '60%',
+    width: '80%',
     marginBottom5: true
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.preLoading,

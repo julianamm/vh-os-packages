@@ -49,6 +49,26 @@ export const Container = styled.div`
     ${({ fixed }) => fixed && `
         position: fixed;
     `}
+
+    ${({ animation }) => animation && `
+        @keyframes expand{
+            0%{height:0vh}
+            100%{height:100vh}
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        -webkit-animation: fadein 3s;
+    `}
+    
+    
 `
 
 export const Row = styled.div`

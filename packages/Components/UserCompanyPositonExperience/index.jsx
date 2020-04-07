@@ -21,7 +21,7 @@ const VHUserCompanyExperience = props => {
           setCurrentItem={props.setCurrentItem}
           item={props.item}
           title={props.item.companyName}
-          description={`${props.item.workExperiences[0].position} - ${props.item.companySizeStr} - ${props.item.country}`}
+          description={`${props.item.workExperiences[0].industry} - ${props.item.companySizeStr} - ${props.item.country}`}
           rightTitle={props.rightTitle}
           className={`vh-user-company-position-experience ${props.className ? props.className : ''}`}
         />

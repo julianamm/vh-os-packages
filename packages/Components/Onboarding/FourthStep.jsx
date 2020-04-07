@@ -18,7 +18,7 @@ const FourthStep = props => {
 
     return (
         <Row column >
-            <Row row marginBottom5>
+            <Row row marginBottom={10}>
                 <Row width={'10%'}>
                     <VHIcon icon={'relocation'} title="city" md />
                 </Row>
