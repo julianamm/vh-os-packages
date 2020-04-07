@@ -34,7 +34,7 @@ const VHSkillsSection = props => {
 
   return (
     <>
-      <Row>
+      <Row marginBottom={2}>
         <VHText
           className={`vh-skills-section-title ${props.className ? props.className : ''}`}
           text={"Professional Overview"}
@@ -47,7 +47,7 @@ const VHSkillsSection = props => {
           className={`vh-skills-section-card ${props.className ? props.className : ''}`}
         >
           <Row row justifySpaceBetween responsive>
-            <Row width={'60%'} marginRight={3}>
+            <Row width={'60%'} marginRight={3} id="main-role">
               <VHSelect
                 preLoading={props.preLoading}
                 caption="I am..."
@@ -68,7 +68,7 @@ const VHSkillsSection = props => {
                 descriptionColor="red"
               />
             </Row>
-            <Row width={'40%'}>
+            <Row width={'40%'} id="total-year-experience-role">
               <VHSelect
                 preLoading={props.preLoading}
                 caption="With..."
@@ -91,7 +91,7 @@ const VHSkillsSection = props => {
               />
             </Row>
           </Row>
-          <Row marginBottom3 responsive>
+          <Row marginBottom3 responsive id="leadership">
             <VHInputCheckbox
               checked={props.leadershipExperience}
               className=""
@@ -115,7 +115,7 @@ const VHSkillsSection = props => {
               variant="platform1"
             />
           </Row>
-          <Row marginBottom={5} responsive>
+          <Row marginBottom={5} responsive id="open-different-role">
             <VHInputCheckbox
               checked={props.openForDifferentRole}
               className=""
@@ -141,7 +141,7 @@ const VHSkillsSection = props => {
             />
           </Row>
           
-          <Row>
+          <Row id="would-work-as">
             <VHSelect
               preLoading={props.preLoading}
               caption="I would like to work as..."
@@ -187,7 +187,7 @@ const VHSkillsSection = props => {
               }
             />
           </Row>
-          <Row marginTop={8} marginBottom={16}>
+          <Row marginTop={8} marginBottom={16} id="top-skills-group">
             <VHList
               controls={props.controls}
               onEvent={props.onEvent}
@@ -212,7 +212,7 @@ const VHSkillsSection = props => {
               titleVariant="subtitle1"
             />
           </Row>
-          <Row>
+          <Row id="secondary-skills-group">
             <VHSecondaryList
               controls={props.controls}
               onEvent={props.onEvent}

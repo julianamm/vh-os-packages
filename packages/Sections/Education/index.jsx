@@ -26,8 +26,8 @@ const VHEducationSection = props => {
           onEvent={props.onEvent}
           currentItem={currentItem} />
       }
-      <Row>
-        <VHText
+      <Row marginBottom={2}>
+        <VHText 
           className={`vh-education-section-title ${props.className ? props.className : ''}`}
           text={"Education"}
           color="black-50"

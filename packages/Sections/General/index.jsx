@@ -21,7 +21,7 @@ const VHGeneralSection = props => {
   return (
     
     <>
-      <Row marginBottom={5}>
+      <Row marginBottom={2}>
         <VHText
           className={`vh-general-section-title ${props.className ? props.className : ''}`}
           text={"General"}
@@ -34,7 +34,7 @@ const VHGeneralSection = props => {
           className={`vh-general-section-card ${props.className ? props.className : ''}`}
         >
           <Row row responsive marginBottom={5}>
-            <Row paddingRight8>
+            <Row marginRight={3} id="citezenship">
               <VHSelect
                 preLoading={props.controls.citizenship.preLoading || false}
                 caption="Citizenship"
@@ -56,7 +56,7 @@ const VHGeneralSection = props => {
                 }
               />
             </Row>
-            <Row paddingRight8>
+            <Row id="location" >
               <VHSelect
                   preLoading={props.controls.location.preLoading || false}
                   caption="Location"
@@ -80,7 +80,7 @@ const VHGeneralSection = props => {
             </Row>
           </Row>
           <Row row responsive>
-            <Row paddingRight8>
+            <Row marginRight={3} id="gender">
                 <VHSelect
                   preLoading={props.controls.gender.preLoading || false}
                   caption="Gender"
@@ -103,30 +103,31 @@ const VHGeneralSection = props => {
                   }
                 />
             </Row>
-            <Row column paddingRight8>
-              <VHTitleDescription 
-                className={`vh-general-section-phone ${props.className ? props.className : ''}`}
-                descriptionColor={
-                  props.controls.phone.loading
-                  ? "gray-40"
-                  : props.controls.phone.error
-                  ? "red-light"
-                  : "gray-90"
-                }
-                preLoading={props.controls.phone.preLoading || false}
-                descriptionVariant="caption"
-                inline
-                onEvent={props.onEvent}
-                title="Phone number"
-                titleColor={
-                  props.controls.phone.loading
-                  ? "gray-40"
-                  : props.controls.phone.error
-                  ? "red"
-                  : "gray-90"
-                }
-                titleVariant="platform1"
-              />
+            <Row row marginleft={3} >
+              <Row column id="phone">
+                <VHTitleDescription 
+                  className={`vh-general-section-phone ${props.className ? props.className : ''}`}
+                  descriptionColor={
+                    props.controls.phone.loading
+                    ? "gray-40"
+                    : props.controls.phone.error
+                    ? "red-light"
+                    : "gray-90"
+                  }
+                  preLoading={props.controls.phone.preLoading || false}
+                  descriptionVariant="caption"
+                  inline
+                  onEvent={props.onEvent}
+                  title="Phone number (optional)"
+                  titleColor={
+                    props.controls.phone.loading
+                    ? "gray-40"
+                    : props.controls.phone.error
+                    ? "red"
+                    : "gray-90"
+                  }
+                  titleVariant="platform1"
+                />
               {
                 !props.controls.phone.preLoading && (
                   <VHInput
@@ -140,6 +141,7 @@ const VHGeneralSection = props => {
                   />
                 )
               }
+            </Row>
             </Row>
           </Row>
         </VHCardBase>

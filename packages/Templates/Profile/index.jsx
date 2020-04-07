@@ -14,8 +14,8 @@ import VHInputFile from '../../Components/Input/File/'
 import VHSideProjectsSection from '../../Sections/SideProjects'
 
 const VHProfileTemplate = props => (
-  <Container md>
-    <Row marginBottom={10}>
+  <Container md style={{maxWidth: "732px"}}>
+    <Row marginBottom={16}>
       <VHProfileAvatar
         avatar= {props.User.image}
         name= {props.User.name}
@@ -23,7 +23,7 @@ const VHProfileTemplate = props => (
         onEvent={props.onEvent}
       />
     </Row>
-    <Row marginBottom={10}>
+    <Row marginBottom={16}>
       <div id={"general"}>
         <VHPageSection content={
           <VHGeneralSection
@@ -33,7 +33,7 @@ const VHProfileTemplate = props => (
         } />
       </div>
     </Row>
-    <Row marginBottom={10}>
+    <Row marginBottom={16}>
       <div id={"skills"}>
         <VHPageSection content={
           <VHSkillsSection
@@ -44,7 +44,7 @@ const VHProfileTemplate = props => (
         } />
       </div>
     </Row>
-    <Row marginBottom={10}>
+    <Row marginBottom={16}>
       <div id={"relocation"}>
         <VHPageSection content={
           <VHRelocationSection
@@ -55,14 +55,14 @@ const VHProfileTemplate = props => (
         } />
       </div>
     </Row>
-    <Row marginBottom={10}>
+    <Row marginBottom={16}>
       <VHSocialSection
         preLoading={props.controls.linkedin.preLoading}
         {...props}
         onEvent={props.onEvent}
       />
     </Row>
-    <Row marginBottom={10}>
+    <Row marginBottom={16}>
       <div id={"language"}>
         <VHPageSection content={
           <VHLanguageSection
@@ -73,23 +73,23 @@ const VHProfileTemplate = props => (
         } />
       </div>
     </Row>
-    <Row marginBottom={10}>
-      <div id={"education"}>
-        <VHPageSection content={
-          <VHEducationSection
-            {...props}
-            preLoading={props.controls.educationSection.preLoading}
-            onEvent={props.onEvent}
-          />
-        } />
-      </div>
-    </Row>
-    <Row marginBottom={10}>
+    <Row marginBottom={16}>
       <div id={"experience"}>
         <VHPageSection content={
           <VHUserCompanyExperienceSection
             {...props}
             preLoading={props.controls.experienceSection.preLoading}
+            onEvent={props.onEvent}
+          />
+        } />
+      </div>
+    </Row>
+    <Row marginBottom={16}>
+      <div id={"education"}>
+        <VHPageSection content={
+          <VHEducationSection
+            {...props}
+            preLoading={props.controls.educationSection.preLoading}
             onEvent={props.onEvent}
           />
         } />
