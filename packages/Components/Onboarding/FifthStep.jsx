@@ -18,12 +18,12 @@ const FifthStep = props => {
     const gender = props.gender != undefined ? [genders[props.gender]] : {};
 
     return (
-        <Row column >
-            <Row row marginBottom={10}>
-                <Row width={'10%'}>
-                    <VHIcon icon={'user'} title="city" md />
+        <Row column marginLeft={1} marginRight={1}>
+            <Row row marginBottom={10} alignItemsCenter >
+                <Row autoWidth marginRight={5}>
+                    <VHIcon icon={'user'} title="city" md color="gray-50"/>
                 </Row>
-                <Row width={'70%'}>
+                <Row>
                     <VHText
                         variant={"h4"}
                         color="gray-90"
@@ -32,8 +32,8 @@ const FifthStep = props => {
                 </Row>
             </Row>
             <Row column>
-                <Row row>
-                    <Row paddingRight8>
+                <Row row responsive marginBottom={5}>
+                    <Row marginRight={3} id="citezenship">
                         <VHSelect
                             preLoading={props.controls.citizenship.preLoading || false}
                             caption="Citizenship"
@@ -55,7 +55,7 @@ const FifthStep = props => {
                             }
                         />
                     </Row>
-                    <Row paddingRight8>
+                    <Row  id="location" >
                         <VHSelect
                             preLoading={props.controls.location.preLoading || false}
                             caption="Location"
@@ -78,8 +78,8 @@ const FifthStep = props => {
                         />
                     </Row>
                 </Row>
-                <Row row>
-                    <Row paddingRight8>
+                <Row row responsive>
+                    <Row marginRight={3} id="gender">
                         <VHSelect
                             preLoading={props.controls.gender.preLoading || false}
                             caption="Gender"
@@ -102,30 +102,32 @@ const FifthStep = props => {
                             }
                         />
                     </Row>
-                    <Row column paddingRight8>
-                        <VHTitleDescription
-                            className={`vh-general-section-phone ${props.className ? props.className : ''}`}
-                            descriptionColor={
-                                props.controls.phone.loading
-                                    ? "gray-40"
-                                    : props.controls.phone.error
-                                        ? "red-light"
-                                        : "gray-90"
-                            }
-                            preLoading={props.controls.phone.preLoading || false}
-                            descriptionVariant="caption"
-                            inline
-                            onEvent={props.onEvent}
-                            title="Phone number"
-                            titleColor={
-                                props.controls.phone.loading
-                                    ? "gray-40"
-                                    : props.controls.phone.error
-                                        ? "red"
-                                        : "gray-90"
-                            }
-                            titleVariant="platform1"
-                        />
+                    <Row row marginleft={3} >
+                        <Row column id="phone">
+                            <VHTitleDescription
+                                className={`vh-general-section-phone ${props.className ? props.className : ''}`}
+                                descriptionColor={
+                                    props.controls.phone.loading
+                                        ? "gray-40"
+                                        : props.controls.phone.error
+                                            ? "red-light"
+                                            : "gray-90"
+                                }
+                                preLoading={props.controls.phone.preLoading || false}
+                                descriptionVariant="caption"
+                                inline
+                                onEvent={props.onEvent}
+                                title="Phone number"
+                                titleColor={
+                                    props.controls.phone.loading
+                                        ? "gray-40"
+                                        : props.controls.phone.error
+                                            ? "red"
+                                            : "gray-90"
+                                }
+                                titleVariant="platform1"
+                            />
+                        
                         {
                             !props.controls.phone.preLoading && (
                                 <VHInput
@@ -139,9 +141,10 @@ const FifthStep = props => {
                                 />
                             )
                         }
+                        </Row>
                     </Row>
                 </Row>
-                <Row marginBottom5>
+                <Row marginBottom5 marginTop={15}>
                         <VHInputIcon
                             className=""
                             disabled={props.controls.linkedin.loading}

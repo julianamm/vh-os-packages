@@ -17,7 +17,7 @@ const VHSecondaryList = props => {
                 <Row  alignItemsCenter row >
                     <Row marginRight={2}>
                         <VHSelect
-                        removeIndicator
+                            removeIndicator
                             preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
@@ -36,8 +36,8 @@ const VHSecondaryList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
-                    removeIndicator
-                    preLoading={props.controls.secondarySkill.preLoading}
+                        removeIndicator
+                        preLoading={props.controls.secondarySkill.preLoading}
                         isDisabled={!items[0] ? true : false}
                         marginBottom={'0px'}
                         removeBorder
@@ -51,6 +51,7 @@ const VHSecondaryList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={0}
+                        placeholder="Proficiency"
                     />
                 </Row>
             </ S.Wrapper>
@@ -58,8 +59,8 @@ const VHSecondaryList = props => {
                 <Row  alignItemsCenter row marginRight={2}>
                     <Row>
                         <VHSelect
-                        removeIndicator
-                        preLoading={props.controls.secondarySkill.preLoading}
+                            removeIndicator
+                            preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
                             caption=""
@@ -76,8 +77,8 @@ const VHSecondaryList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
-                    removeIndicator
-                    preLoading={props.controls.secondarySkill.preLoading}
+                        removeIndicator
+                        preLoading={props.controls.secondarySkill.preLoading}
                         isDisabled={!items[1] ? true : false}
                         marginBottom={'0px'}
                         removeBorder
@@ -91,6 +92,7 @@ const VHSecondaryList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={1}
+                        placeholder="Proficiency"
                     />
                 </Row>
             </S.Wrapper>
@@ -98,8 +100,8 @@ const VHSecondaryList = props => {
                 <Row  alignItemsCenter row marginRight={2}>
                     <Row>
                         <VHSelect
-                        removeIndicator
-                        preLoading={props.controls.secondarySkill.preLoading}
+                            removeIndicator
+                            preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
                             caption=""
@@ -116,8 +118,8 @@ const VHSecondaryList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
-                    removeIndicator
-                    preLoading={props.controls.secondarySkill.preLoading}
+                        removeIndicator
+                        preLoading={props.controls.secondarySkill.preLoading}
                         isDisabled={!items[2] ? true : false}
                         marginBottom={'0px'}
                         removeBorder
@@ -131,6 +133,7 @@ const VHSecondaryList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={2}
+                        placeholder="Proficiency"
                     />
                 </Row>
             </S.Wrapper>
@@ -138,8 +141,8 @@ const VHSecondaryList = props => {
                 <Row  alignItemsCenter row >
                     <Row>
                         <VHSelect
-                        removeIndicator
-                        preLoading={props.controls.secondarySkill.preLoading}
+                            removeIndicator
+                            preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
                             caption=""
@@ -156,8 +159,8 @@ const VHSecondaryList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
-                    removeIndicator
-                    preLoading={props.controls.secondarySkill.preLoading}
+                        removeIndicator
+                        preLoading={props.controls.secondarySkill.preLoading}
                         isDisabled={!items[3] ? true : false}
                         marginBottom={'0px'}
                         removeBorder
@@ -171,6 +174,7 @@ const VHSecondaryList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={3}
+                        placeholder="Proficiency"
                     />
                 </Row>
             </S.Wrapper>
@@ -178,8 +182,8 @@ const VHSecondaryList = props => {
                 <Row  alignItemsCenter row >
                     <Row>
                         <VHSelect
-                        removeIndicator
-                        preLoading={props.controls.secondarySkill.preLoading}
+                            removeIndicator
+                            preLoading={props.controls.secondarySkill.preLoading}
                             marginBottom={'0px'}
                             removeBorder
                             caption=""
@@ -196,8 +200,8 @@ const VHSecondaryList = props => {
                 </Row>
                 <Row width={'20%'}>
                     <VHSelect
-                    removeIndicator
-                    preLoading={props.controls.secondarySkill.preLoading}
+                        removeIndicator
+                        preLoading={props.controls.secondarySkill.preLoading}
                         isDisabled={!items[4] ? true : false}
                         marginBottom={'0px'}
                         removeBorder

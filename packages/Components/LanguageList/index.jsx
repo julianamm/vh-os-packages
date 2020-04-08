@@ -16,8 +16,8 @@ const VHLanguageList = props => {
     return (
         <React.Fragment>
             < S.Wrapper >
-                <Row width={'30%'} alignItemsCenter row >
-                    <Row width={'70%'}>
+                <Row alignItemsCenter row marginRight={2} marginLeft={2}>
+                    <Row >
                         <VHSelect
                             removeIndicator
                             preLoading={props.controls.language.preLoading}
@@ -54,8 +54,8 @@ const VHLanguageList = props => {
                 </Row>
             </ S.Wrapper>
             < S.Wrapper >
-                <Row width={'30%'} alignItemsCenter row >
-                    <Row width={'70%'}>
+                <Row alignItemsCenter row marginRight={2} marginLeft={2}>
+                    <Row>
                         <VHSelect
                             removeIndicator
                             preLoading={props.controls.language.preLoading}
@@ -92,8 +92,8 @@ const VHLanguageList = props => {
                 </Row>
             </S.Wrapper>
             <S.Wrapper>
-                <Row width={'30%'} alignItemsCenter row >
-                    <Row width={'70%'}>
+                <Row alignItemsCenter row marginRight={2} marginLeft={2}>
+                    <Row>
                         <VHSelect
                             removeIndicator
                             preLoading={props.controls.language.preLoading}

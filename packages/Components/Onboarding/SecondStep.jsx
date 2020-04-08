@@ -10,12 +10,12 @@ import VHList from '../List'
 const SecondStep = props => {
 
     return (
-        <Row column >
-            <Row row marginBottom={10}>
-                <Row width={'10%'}>
-                    <VHIcon icon={'skills'} title="city" md />
+        <Row column marginLeft={1} marginRight={1}>
+            <Row row marginBottom={10} alignItemsCenter >
+                <Row autoWidth marginRight={5}>
+                    <VHIcon icon={'skills'} title="city" md color="gray-50" />
                 </Row>
-                <Row width={'70%'}>
+                <Row >
                     <VHText
                         variant={"h4"}
                         color="gray-90"
@@ -25,28 +25,27 @@ const SecondStep = props => {
             </Row>
             <Row column>
                 <Row column marginBottom5>
-                    <VHTitleDescription
-                        contents={true}
-                        className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
-                        descriptionColor={
-                            props.controls.topSkill.loading
-                                ? "gray-40"
-                                : props.controls.topSkill.error
-                                    ? "red-light"
-                                    : "gray-90"
-                        }
-                        inline
-                        onEvent={props.onEvent}
-                        title="Rank your top 3 skills"
-                        description="1st = Highest proficiency level; 3rd = Lowest proficiency level"
-                        titleColor={
-                            props.controls.topSkill.loading
-                                ? "gray-40"
-                                : props.controls.topSkill.error
-                                    ? "red"
-                                    : "gray-100"
-                        }
-                        titleVariant="subtitle3"
+                <VHTitleDescription
+                    contents={true}
+                    className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
+                    onEvent={props.onEvent}
+                    title="Rank your top 3 skills"
+                    titleColor={
+                        props.controls.topSkill.loading
+                        ? "gray-40"
+                        : props.controls.topSkill.error
+                            ? "red"
+                            : "gray-100"
+                    }
+                    titleVariant="subtitle1"
+                    description="1st = Highest proficiency level; 3rd = Lowest proficiency level"
+                    descriptionColor={
+                        props.controls.topSkill.loading
+                        ? "gray-40"
+                        : props.controls.topSkill.error
+                            ? "red"
+                            : "gray-50"
+                    }
                     />
                 </Row>
                 <Row marginBottom5>

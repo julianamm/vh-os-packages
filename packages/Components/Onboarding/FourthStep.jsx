@@ -17,25 +17,25 @@ const FourthStep = props => {
     const visaStatusEU = props.visaStatusEU != undefined ? visaStatusEUList[props.visaStatusEU] : []
 
     return (
-        <Row column >
-            <Row row marginBottom={10}>
-                <Row width={'10%'}>
-                    <VHIcon icon={'relocation'} title="city" md />
+        <Row column marginLeft={1} marginRight={1}>
+            <Row row marginBottom={10} alignItemsCenter >
+                <Row autoWidth marginRight={5}>
+                    <VHIcon icon={'relocation'} title="city" md color="gray-50"/>
                 </Row>
                 <Row width={'70%'}>
                     <VHText
                         variant={"h4"}
                         color="gray-90"
-                        text={'Secondary Skills'}
+                        text={'Relocation'}
                     />
                 </Row>
             </Row>
             <Row column>
-                <Row marginBottom={5}>
+                <Row marginBottom={10}>
                     <VHInputRadio
                         data={'openForRemoteJobs'}
-                        color="gray-100"
-                        variant="subtitle3"
+                        color="gray-90"
+                        variant="platform1"
                         onEvent={props.onEvent}
                         text={'Are you open to remote jobs?'}
                         checked={props.openForRemoteJobs}
@@ -47,7 +47,7 @@ const FourthStep = props => {
                 <Row row responsive>
                     <Row paddingRight8>
                         <VHSelect
-                            caption="Canadian Visa Status"
+                           caption="Canadian Visa Status"
                             className={`vh-general-section-visaStatusCanadian ${props.className ? props.className : ''}`}
                             currentItem={visaStatusCanadian}
                             data="visaStatusCanadian"
@@ -55,13 +55,13 @@ const FourthStep = props => {
                             onEvent={props.onEvent}
                             isLoading={props.controls.visaStatusCanadian.loading}
                             description={props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message}
-                            descriptionColor="red-light"
+                            descriptionColor="red"
                             captionColor={
                                 props.controls.visaStatusCanadian.loading
                                     ? "gray-40"
                                     : props.controls.visaStatusCanadian.error
                                         ? "red"
-                                        : null
+                                        : "gray-90"
                             }
                         />
                     </Row>
@@ -75,13 +75,13 @@ const FourthStep = props => {
                             onEvent={props.onEvent}
                             isLoading={props.controls.visaStatusEU.loading}
                             description={props.controls.visaStatusEU.error && props.controls.visaStatusEU.message}
-                            descriptionColor="red-light"
+                            descriptionColor="red"
                             captionColor={
                                 props.controls.visaStatusEU.loading
                                     ? "gray-40"
                                     : props.controls.visaStatusEU.error
                                         ? "red"
-                                        : null
+                                        : "gray-90"
                             }
                         />
                     </Row>
