@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Container, Row } from '../../Grid'
 import Card from '../Cards/Base'
 import VHProgressBar from '../ProgressBar'
-import VHButton from '../Button'
+import VHButton from '../Button-New'
 import VHText from '../Text'
 import VHPreloader from '../Preloader'
 import VanhackLogo from '../../../assets/images/vanhack-logo-light.svg'
@@ -32,7 +32,7 @@ const VHOnboarding = props => {
     <Container displayNone={displayNone} currentStep={currentStep} animation justifyCenter fullHeight style={{ backgroundImage: 'linear-gradient(to bottom right, #56CCF2, #0675CE)' }} fullWidth>
       <img style={{ marginBottom: '50px' }} src={VanhackLogo} />
       <Row alignItemsCenter>
-        <Card noPadding width='70%' height='580px'>
+        <Card noPadding width='730px' height='580px'>
           {props.controls.language.loading ?
             <VHPreloader type="fullPage" size="md" />
             :
@@ -48,7 +48,7 @@ const VHOnboarding = props => {
                 </Row>
               }
               <Row alignItemsCenter style={{ height: '100%' }}>
-                <Row style={{ width: '90%', height: 'calc(100% - 10px)', padding: '20px', paddingLeft: '60px', paddingRight: '60px' }} >
+                <Row style={{ width: '100%', height: 'calc(100% - 10px)', boxSizing: 'border-box', padding: '33px'}} >
                   <Row style={{ height: '100%', overflow: 'scroll' }}>
                     {
                       currentStep === 0 &&
@@ -91,7 +91,7 @@ const VHOnboarding = props => {
                           currentStep > 1 && (
                             <VHButton
                               className=""
-                              outline
+                              textButton
                               label="Back"
                               disabled={currentStep === 1}
                               onEvent={e => {
