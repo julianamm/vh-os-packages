@@ -36,28 +36,34 @@ var FifthStep = function FifthStep(props) {
   var genders = props.genders;
   var gender = props.gender != undefined ? [genders[props.gender]] : {};
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    column: true
+    column: true,
+    marginLeft: 1,
+    marginRight: 1
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    marginBottom: 10
+    marginBottom: 10,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '10%'
+    autoWidth: true,
+    marginRight: 5
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     icon: 'user',
     title: "city",
-    md: true
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    md: true,
+    color: "gray-50"
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: "h4",
     color: "gray-90",
     text: 'Personal Info'
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    row: true
+    row: true,
+    responsive: true,
+    marginBottom: 5
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    paddingRight8: true
+    marginRight: 3,
+    id: "citezenship"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.citizenship.preLoading || false,
     caption: "Citizenship",
@@ -72,7 +78,7 @@ var FifthStep = function FifthStep(props) {
     descriptionColor: "gray-90",
     captionColor: props.controls.citizenship.loading ? "gray-40" : props.controls.citizenship.error ? "red" : 'gray-90'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    paddingRight8: true
+    id: "location"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.location.preLoading || false,
     caption: "Location",
@@ -87,9 +93,11 @@ var FifthStep = function FifthStep(props) {
     descriptionColor: "gray-90",
     captionColor: props.controls.location.loading ? "gray-40" : props.controls.location.error ? "red" : 'gray-90'
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    row: true
+    row: true,
+    responsive: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    paddingRight8: true
+    marginRight: 3,
+    id: "gender"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.gender.preLoading || false,
     caption: "Gender",
@@ -104,8 +112,11 @@ var FifthStep = function FifthStep(props) {
     descriptionColor: "red",
     captionColor: props.controls.gender.loading ? "gray-40" : props.controls.gender.error ? "red" : 'gray-90'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    marginleft: 3
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true,
-    paddingRight8: true
+    id: "phone"
   }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-phone ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red-light" : "gray-90",
@@ -124,8 +135,9 @@ var FifthStep = function FifthStep(props) {
     loading: props.controls.phone.loading,
     placeholder: "+1 778 000 0000",
     value: props.phone
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom5: true
+  })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom5: true,
+    marginTop: 15
   }, /*#__PURE__*/_react.default.createElement(_Icon2.default, {
     className: "",
     disabled: props.controls.linkedin.loading,

@@ -25,6 +25,8 @@ var _reactPreloadSkeleton = require("react-preload-skeleton");
 
 var _Preloader = _interopRequireDefault(require("../../Components/Preloader"));
 
+var _Select = _interopRequireDefault(require("../../Components/Input/Select/"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -59,6 +61,9 @@ var VHEducationSection = function VHEducationSection(props) {
       currentItem = _React$useState4[0],
       _setCurrentItem = _React$useState4[1];
 
+  var degreeType = props.degreeType != undefined ? items.find(function (element) {
+    return element.value === props.degreeType;
+  }) : {};
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, openModal && /*#__PURE__*/_react.default.createElement(_ModalEducation.default, _defineProperty({
     openModal: openModal,
     onClose: function onClose() {
@@ -85,7 +90,26 @@ var VHEducationSection = function VHEducationSection(props) {
     button: true
   })) : /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
-  }, education.map(function (item) {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    variant: 'subtitle1',
+    text: 'Formal Education',
+    color: 'black-100',
+    onEvent: props.onEvent
+  }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    paddingTop: '5',
+    paddingRight8: true,
+    id: "education-level",
+    width: '50%'
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    caption: "What's your education level?",
+    captionColor: "gray-90",
+    className: "vh-general-section-degree ".concat(props.className ? props.className : ''),
+    currentItem: degreeType,
+    data: "degreeType",
+    onEvent: props.onEvent,
+    items: items,
+    color: "gray-90"
+  })))), education.map(function (item) {
     return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       marginBottom5: true
     }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {

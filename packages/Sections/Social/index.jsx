@@ -70,11 +70,11 @@ const VHSocialSection = props => {
                 <Row marginBottom5 id="resume-href">
                   <VHInputIcon
                     className=""
-                    disabled={props.controls.webSite.loading}
-                    error={props.controls.webSite.error}
-                    loading={props.controls.webSite.loading}
+                    disabled={props.controls.resume.loading}
+                    error={props.controls.resume.error}
+                    loading={props.controls.resume.loading}
                     placeholder="http://sitename.com/your-resume.pdf"
-                    value={props.webSite}
+                    value={props.resume}
                     data={'resume'}
                     icon="profile"
                     onEvent={props.onEvent}

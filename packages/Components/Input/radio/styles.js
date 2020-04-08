@@ -17,6 +17,13 @@ export const Input = styled.input`
   padding-right: 10px;
 `;
 
+export const Container = styled.div`
+    display: flex;
+    margin-top: -10px;
+    width: 150px;
+`;
+
+
 export const Label = styled.label`
   margin-right: 20px;
   color: ${Color["gray-100"]};

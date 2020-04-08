@@ -36,12 +36,11 @@ var VHLanguageList = function VHLanguageList(props) {
   var list = props.list ? props.list : [];
   var secondList = props.secondList ? props.secondList : [];
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '30%',
     alignItemsCenter: true,
-    row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    row: true,
+    marginRight: 2,
+    marginLeft: 2
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
@@ -78,12 +77,11 @@ var VHLanguageList = function VHLanguageList(props) {
     onEvent: props.onEvent,
     order: 0
   }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '30%',
     alignItemsCenter: true,
-    row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    row: true,
+    marginRight: 2,
+    marginLeft: 2
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',
@@ -120,12 +118,11 @@ var VHLanguageList = function VHLanguageList(props) {
     onEvent: props.onEvent,
     order: 1
   }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '30%',
     alignItemsCenter: true,
-    row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    row: true,
+    marginRight: 2,
+    marginLeft: 2
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.language.preLoading,
     marginBottom: '0px',

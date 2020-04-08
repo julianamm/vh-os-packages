@@ -17,7 +17,7 @@ var _Base = _interopRequireDefault(require("../Cards/Base"));
 
 var _ProgressBar = _interopRequireDefault(require("../ProgressBar"));
 
-var _Button = _interopRequireDefault(require("../Button"));
+var _ButtonNew = _interopRequireDefault(require("../Button-New"));
 
 var _Text = _interopRequireDefault(require("../Text"));
 
@@ -96,7 +96,7 @@ var VHOnboarding = function VHOnboarding(props) {
     alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_Base.default, {
     noPadding: true,
-    width: "70%",
+    width: "730px",
     height: "580px"
   }, props.controls.language.loading ? /*#__PURE__*/_react.default.createElement(_Preloader.default, {
     type: "fullPage",
@@ -112,11 +112,10 @@ var VHOnboarding = function VHOnboarding(props) {
     }
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
-      width: '90%',
+      width: '100%',
       height: 'calc(100% - 10px)',
-      padding: '20px',
-      paddingLeft: '60px',
-      paddingRight: '60px'
+      boxSizing: 'border-box',
+      padding: '33px'
     }
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     style: {
@@ -135,9 +134,9 @@ var VHOnboarding = function VHOnboarding(props) {
     style: {
       padding: '12px 0'
     }
-  }, /*#__PURE__*/_react.default.createElement("span", null, currentStep > 1 && /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }, /*#__PURE__*/_react.default.createElement("span", null, currentStep > 1 && /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
     className: "",
-    outline: true,
+    textButton: true,
     label: "Back",
     disabled: currentStep === 1,
     onEvent: function onEvent(e) {
@@ -161,7 +160,7 @@ var VHOnboarding = function VHOnboarding(props) {
     text: "".concat(currentStep, " / ").concat(props.steps),
     variant: "platform1",
     color: "gray-60"
-  }), /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }), /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
     className: "",
     label: currentStep < 6 ? "Next" : "Finish",
     disabled: currentStep === props.steps + 1,

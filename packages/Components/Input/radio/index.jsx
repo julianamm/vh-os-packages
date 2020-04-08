@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import * as S from "./styles"
 import VHText from '../../Text'
+import VHInput from '../../Input/Simple'
 import { Row } from '../../../Grid'
+import { getFormatedDate } from '../../../util'
 
 const VHInputRadio = props => {
     const [checked, setChecked] = useState(props.checked)
@@ -11,7 +13,7 @@ const VHInputRadio = props => {
         setChecked(props.checked);
     }, [props.checked])
 
-    
+
     return (
         <Row column alignItemsLeft className={`vh-radio ${props.className ? props.className : ''}`} >
             <Row marginBottom5>
@@ -56,6 +58,11 @@ const VHInputRadio = props => {
                     }}
                 />
                 <S.Label for={props.text}>{'No'}</S.Label>
+                {props.input && checked &&
+                    <S.Container>
+                        <VHInput data={'passportExpirationDate'} type='date' value={getFormatedDate(props.value)} onEvent={props.onEvent} />
+                    </S.Container>
+                }
             </S.Wrapper>
         </Row>
     )
