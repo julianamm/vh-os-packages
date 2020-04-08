@@ -7,7 +7,8 @@ import VHButton from "../../Components/Button-New"
 import VHCardBase from "../../Components/Cards/Base/"
 import VHText from "../../Components/Text/"
 import { CardSkeleton } from 'react-preload-skeleton'
-import VHPreloader from '../../Components/Preloader';
+import VHPreloader from '../../Components/Preloader'
+import VHSelect from '../../Components/Input/Select/'
 
 const VHEducationSection = props => {
   const [openModal, setOpenModal] = React.useState(false);

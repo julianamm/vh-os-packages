@@ -25,6 +25,8 @@ var _reactPreloadSkeleton = require("react-preload-skeleton");
 
 var _Preloader = _interopRequireDefault(require("../../Components/Preloader"));
 
+var _Select = _interopRequireDefault(require("../../Components/Input/Select/"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -93,7 +95,7 @@ var VHEducationSection = function VHEducationSection(props) {
   }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true,
     id: "education-level"
-  }, /*#__PURE__*/_react.default.createElement(VHSelect, {
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: "What is your educational level?",
     className: "vh-education-section-educationLevel ".concat(props.className ? props.className : ''),
     currentItem: {},
