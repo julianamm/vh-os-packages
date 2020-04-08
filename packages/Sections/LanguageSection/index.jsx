@@ -33,7 +33,7 @@ const VHLanguageSection = props => {
 
   return (
     <>
-      <Row marginBottom={5}>
+      <Row marginBottom={2}>
         <VHText
           className={`vh-skills-section-title ${props.className ? props.className : ''}`}
           text={"Languages"}

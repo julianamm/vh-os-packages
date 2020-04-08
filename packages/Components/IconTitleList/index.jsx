@@ -38,6 +38,7 @@ const VHIconTitleList = (props) => {
                         variant="platform"
                         data={props.data}
                         onEvent={props.onEvent}
+                        profile={true}
                     />
                 ))
             }

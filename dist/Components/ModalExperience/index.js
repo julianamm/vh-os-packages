@@ -23,7 +23,7 @@ var _Simple = _interopRequireDefault(require("../../Components/Input/Simple"));
 
 var _index = _interopRequireDefault(require("../../Components/Text/index"));
 
-var _index2 = _interopRequireDefault(require("../../Components/Button/index"));
+var _index2 = _interopRequireDefault(require("../../Components/Button-New/index"));
 
 var _checkbox = _interopRequireDefault(require("../../Components/Input/checkbox"));
 
@@ -57,7 +57,7 @@ var VHModalExperience = function VHModalExperience(props) {
       description: '',
       titleVariant: "h3",
       titleColor: "black-50",
-      descriptionColor: "gray-100",
+      descriptionColor: "gray-90",
       descriptionVariant: "platform",
       onEvent: props.onEvent
     })),
@@ -66,29 +66,35 @@ var VHModalExperience = function VHModalExperience(props) {
     }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       row: true,
       justifySpaceBetween: true
-    }, /*#__PURE__*/_react.default.createElement("div", {
+    }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       style: {
-        width: '40%'
-      }
+        width: '50%'
+      },
+      marginRight: 2,
+      id: "company-name"
+    }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      marginBottom: 2
     }, /*#__PURE__*/_react.default.createElement(_index.default, {
-      color: "gray-100",
+      color: "gray-90",
       variant: 'platform',
       text: "Company Name"
-    }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
-      placeholder: "",
+    })), /*#__PURE__*/_react.default.createElement(_Simple.default, {
+      placeholder: "Ex: VanHack",
       onEvent: props.onEvent,
       value: item.companyName.value,
       data: {
         id: "ModalExperience",
         field: "companyName"
       }
-    })), /*#__PURE__*/_react.default.createElement("div", {
+    })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       style: {
-        width: '40%'
-      }
+        width: '50%'
+      },
+      marginLeft: 2,
+      id: "company-location"
     }, /*#__PURE__*/_react.default.createElement(_Select.default, {
       caption: "Location",
-      captionColor: null,
+      captionColor: "gray-90",
       className: "vh-general-section-location ".concat(props.className ? props.className : ''),
       currentItem: item.countryId.value ? props.countries.find(function (element) {
         return element.value === item.countryId.value;
@@ -99,17 +105,20 @@ var VHModalExperience = function VHModalExperience(props) {
       },
       onEvent: props.onEvent,
       items: props.countries,
-      descriptionColor: "red-light"
+      descriptionColor: "red",
+      placeholder: "Select an country"
     }), item.countryId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required"))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       row: true,
       justifySpaceBetween: true
-    }, /*#__PURE__*/_react.default.createElement("div", {
+    }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       style: {
-        width: '40%'
-      }
+        width: '50%'
+      },
+      id: "company-size-modal",
+      marginRight: 2
     }, /*#__PURE__*/_react.default.createElement(_Select.default, {
       caption: "Company Size",
-      captionColor: null,
+      captionColor: "gray-90",
       className: "vh-general-section-company-size ".concat(props.className ? props.className : ''),
       currentItem: item.companySize.value ? props.companyList.find(function (element) {
         return element.value === item.companySize.value;
@@ -120,14 +129,17 @@ var VHModalExperience = function VHModalExperience(props) {
       },
       onEvent: props.onEvent,
       items: props.companyList,
-      descriptionColor: "red-light"
-    }), item.companySize.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), /*#__PURE__*/_react.default.createElement("div", {
+      descriptionColor: "red",
+      placeholder: "select an option"
+    }), item.companySize.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       style: {
-        width: '40%'
-      }
+        width: '50%'
+      },
+      id: "company-industry-modal",
+      marginLeft: 2
     }, /*#__PURE__*/_react.default.createElement(_Select.default, {
       caption: "Industry",
-      captionColor: null,
+      captionColor: "gray-90",
       className: "vh-general-section-industry ".concat(props.className ? props.className : ''),
       currentItem: {
         value: item.industryId.value,
@@ -139,14 +151,13 @@ var VHModalExperience = function VHModalExperience(props) {
       },
       onEvent: props.onEvent,
       items: props.industryList,
-      descriptionColor: "red-light"
+      descriptionColor: "red"
     }), item.industryId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required"))), item.workExperiences.map(function (experience, index) {
       return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-        width: '40%',
-        marginBottom5: true
+        width: '50%'
       }, /*#__PURE__*/_react.default.createElement(_Select.default, {
         caption: "Role Title",
-        captionColor: null,
+        captionColor: "gray-90",
         className: "vh-general-section-position ".concat(props.className ? props.className : ''),
         currentItem: {
           value: experience.positionId.value,
@@ -159,12 +170,12 @@ var VHModalExperience = function VHModalExperience(props) {
         },
         onEvent: props.onEvent,
         items: props.positions,
-        descriptionColor: "red-light"
+        descriptionColor: "red"
       }), experience.positionId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), index === 0 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
         marginBottom5: true
       }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
         title: 'I am currently working in this role',
-        color: "gray-100",
+        color: "gray-90",
         variant: "platform1",
         data: {
           modal: 'ModalExperience',
@@ -182,9 +193,10 @@ var VHModalExperience = function VHModalExperience(props) {
         row: true,
         justifySpaceBetween: true
       }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-        width: '40%'
+        width: '50%',
+        marginRight: 2
       }, /*#__PURE__*/_react.default.createElement(_index.default, {
-        color: "gray-100",
+        color: "gray-90",
         variant: 'platform',
         text: "Start Date"
       }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
@@ -198,9 +210,10 @@ var VHModalExperience = function VHModalExperience(props) {
           index: index
         }
       }), experience.startDate.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-        width: '40%'
+        width: '50%',
+        marginLeft: 2
       }, /*#__PURE__*/_react.default.createElement(_index.default, {
-        color: "gray-100",
+        color: "gray-90",
         variant: 'platform',
         text: "End Date"
       }), /*#__PURE__*/_react.default.createElement(_Simple.default, {
@@ -218,7 +231,7 @@ var VHModalExperience = function VHModalExperience(props) {
         paddingBottom: true,
         borderBottom: true
       }, /*#__PURE__*/_react.default.createElement(_index.default, {
-        color: "gray-100",
+        color: "gray-90",
         variant: 'platform',
         text: "Description"
       }), /*#__PURE__*/_react.default.createElement(_Multiple.default, {

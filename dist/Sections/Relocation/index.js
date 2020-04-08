@@ -49,6 +49,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
   }];
   var targetLocation = props.targetLocation ? props.targetLocation.items : [];
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    marginBottom: 2,
     className: "vh-general-section-title ".concat(props.className ? props.className : ''),
     text: "Relocation",
     color: "black-50",
@@ -58,7 +59,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
   }, props.preLoading ? /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.RelocationSkeleton, null)) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 16
+    marginBottom: 16,
+    id: "remote-jobs"
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'openForRemoteJobs',
     color: "gray-90",
@@ -79,7 +81,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
     titleVariant: "platform1"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 16,
-    width: '600px'
+    width: '600px',
+    id: "target-location"
   }, /*#__PURE__*/_react.default.createElement(_TargetLocation.default, {
     onEvent: props.onEvent,
     items: targetLocation
@@ -89,7 +92,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
     marginBottom: 5
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true,
-    responsive: true
+    responsive: true,
+    id: "salary-cad"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: 'Annual salary expectation CAD',
     leftText: "$CAD",
@@ -102,7 +106,9 @@ var VHRelocationSection = function VHRelocationSection(props) {
     description: props.controls.salaryRangeCad.error && props.controls.salaryRangeCad.message,
     descriptionColor: "red",
     captionColor: props.controls.salaryRangeCad.loading ? "gray-40" : props.controls.salaryRangeCad.error ? "red" : "gray-90"
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    id: "salary-eu"
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: 'Annual salary expectation EUR',
     className: "vh-general-section-salaryRangeEur ".concat(props.className ? props.className : ''),
     currentItem: salaryRangeEur,
@@ -120,7 +126,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
     responsive: true,
     marginBottom: 5
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    paddingRight8: true
+    paddingRight8: true,
+    id: "visa-cad"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: "Canadian Visa Status",
     className: "vh-general-section-visaStatusCanadian ".concat(props.className ? props.className : ''),
@@ -132,7 +139,9 @@ var VHRelocationSection = function VHRelocationSection(props) {
     description: props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message,
     descriptionColor: "red",
     captionColor: props.controls.visaStatusCanadian.loading ? "gray-40" : props.controls.visaStatusCanadian.error ? "red" : "gray-90"
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    id: "visa-eu"
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: "EU Visa Status",
     className: "vh-general-section-visaStatusEU ".concat(props.className ? props.className : ''),
     currentItem: visaStatusEU,
@@ -149,7 +158,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     marginBottom: 5,
-    responsive: true
+    responsive: true,
+    id: "passaport-valid"
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
@@ -222,7 +232,8 @@ var VHRelocationSection = function VHRelocationSection(props) {
     row: true,
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    paddingRight8: true
+    paddingRight8: true,
+    id: "looking-job"
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'activelyLookingForJob',
     color: "gray-90",
@@ -230,7 +241,9 @@ var VHRelocationSection = function VHRelocationSection(props) {
     onEvent: props.onEvent,
     text: 'Are you actively looking for a job?',
     checked: props.activelyLookingForJob
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    id: "notice-period"
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: "What is your notice period?",
     className: "vh-general-section-notice-period ".concat(props.className ? props.className : ''),
     currentItem: noticePeriod,

@@ -52,7 +52,7 @@ var VHLanguageSection = function VHLanguageSection(props) {
   }
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
+    marginBottom: 2
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
     text: "Languages",

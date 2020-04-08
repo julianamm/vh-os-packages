@@ -55,10 +55,12 @@ var VHUserCompanyExperience = function VHUserCompanyExperience(props) {
     setCurrentItem: props.setCurrentItem,
     item: props.item,
     title: props.item.companyName,
-    description: "".concat(props.item.workExperiences[0].industry, " - ").concat(props.item.companySizeStr, " - ").concat(props.item.country),
+    description: "".concat(props.item.industry, " - ").concat(props.item.companySizeStr, " - ").concat(props.item.country),
     rightTitle: props.rightTitle,
     className: "vh-user-company-position-experience ".concat(props.className ? props.className : '')
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, props.item.workExperiences.map(function (userPosition) {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    paddingRight: 5
+  }, props.item.workExperiences.map(function (userPosition) {
     return /*#__PURE__*/_react.default.createElement(_UserPositonExperience.default, _extends({
       className: "vh-user-company-position-experience ".concat(props.className ? props.className : '')
     }, userPosition));

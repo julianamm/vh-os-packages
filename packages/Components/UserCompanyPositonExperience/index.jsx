@@ -21,12 +21,12 @@ const VHUserCompanyExperience = props => {
           setCurrentItem={props.setCurrentItem}
           item={props.item}
           title={props.item.companyName}
-          description={`${props.item.workExperiences[0].industry} - ${props.item.companySizeStr} - ${props.item.country}`}
+          description={`${props.item.industry} - ${props.item.companySizeStr} - ${props.item.country}`}
           rightTitle={props.rightTitle}
           className={`vh-user-company-position-experience ${props.className ? props.className : ''}`}
         />
       </Row>
-      <Row>
+      <Row paddingRight={5}>
         {
           props.item.workExperiences.map(userPosition => (
             <VHUserPositonExperience

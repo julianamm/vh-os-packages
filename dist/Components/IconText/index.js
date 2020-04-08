@@ -25,6 +25,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHIconText = function VHIconText(props) {
   return /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+    profile: props.profile,
     cursor: props.cursor,
     inline: props.inline,
     className: "".concat(props.className ? props.className : ""),

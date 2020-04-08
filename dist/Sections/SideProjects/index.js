@@ -54,7 +54,6 @@ var VHSideProjectsSection = function VHSideProjectsSection(props) {
       currentItem = _React$useState4[0],
       _setCurrentItem = _React$useState4[1];
 
-  console.log(props);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, openModal && /*#__PURE__*/_react.default.createElement(_ModalSideProjects.default, _defineProperty({
     openModal: openModal,
     onClose: function onClose() {

@@ -28,7 +28,13 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHUserPositonExperience = function VHUserPositonExperience(props) {
-  return /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+  return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    style: {
+      boxSizing: "border-box",
+      paddingRight: "33px"
+    }
+  }, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
     hideTimeline: props.hideTimeline
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 3
@@ -44,7 +50,8 @@ var VHUserPositonExperience = function VHUserPositonExperience(props) {
     profile: true,
     onEvent: props.onEvent,
     items: props.description,
-    color: "gray-90",
+    iconColor: "gray-30",
+    textColor: "gray-90",
     className: "vh-user-position-experience-title-list ".concat(props.className ? props.className : '')
   }))));
 };

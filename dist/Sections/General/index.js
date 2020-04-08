@@ -53,7 +53,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
       setPreloaderPhone = _React$useState2[1];
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
+    marginBottom: 2
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-general-section-title ".concat(props.className ? props.className : ''),
     text: "General",
@@ -66,7 +66,8 @@ var VHGeneralSection = function VHGeneralSection(props) {
     responsive: true,
     marginBottom: 5
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    paddingRight8: true
+    marginRight: 3,
+    id: "citezenship"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.citizenship.preLoading || false,
     caption: "Citizenship",
@@ -81,7 +82,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     descriptionColor: "gray-90",
     captionColor: props.controls.citizenship.loading ? "gray-40" : props.controls.citizenship.error ? "red" : 'gray-90'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    paddingRight8: true
+    id: "location"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.location.preLoading || false,
     caption: "Location",
@@ -99,7 +100,8 @@ var VHGeneralSection = function VHGeneralSection(props) {
     row: true,
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    paddingRight8: true
+    marginRight: 3,
+    id: "gender"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.gender.preLoading || false,
     caption: "Gender",
@@ -114,8 +116,11 @@ var VHGeneralSection = function VHGeneralSection(props) {
     descriptionColor: "red",
     captionColor: props.controls.gender.loading ? "gray-40" : props.controls.gender.error ? "red" : 'gray-90'
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    marginleft: 3
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true,
-    paddingRight8: true
+    id: "phone"
   }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     className: "vh-general-section-phone ".concat(props.className ? props.className : ''),
     descriptionColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red-light" : "gray-90",
@@ -123,7 +128,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     descriptionVariant: "caption",
     inline: true,
     onEvent: props.onEvent,
-    title: "Phone number",
+    title: "Phone number (optional)",
     titleColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red" : "gray-90",
     titleVariant: "platform1"
   }), !props.controls.phone.preLoading && /*#__PURE__*/_react.default.createElement(_Simple.default, {
@@ -134,7 +139,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     loading: props.controls.phone.loading,
     placeholder: "+1 778 000 0000",
     value: props.phone
-  }))))));
+  })))))));
 };
 
 VHGeneralSection.propTypes = {

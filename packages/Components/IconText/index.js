@@ -8,6 +8,7 @@ const VHIconText = props => {
 
   return (
     <S.Wrapper
+      profile={props.profile}
       cursor={props.cursor}
       inline={props.inline}
       className={`${props.className ? props.className : ""}`}

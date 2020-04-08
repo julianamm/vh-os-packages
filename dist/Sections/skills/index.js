@@ -51,7 +51,9 @@ var VHSkillsSection = function VHSkillsSection(props) {
     });
   }
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom: 2
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
     text: "Professional Overview",
     color: "black-50",
@@ -64,7 +66,8 @@ var VHSkillsSection = function VHSkillsSection(props) {
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '60%',
-    marginRight: 3
+    marginRight: 3,
+    id: "main-role"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.preLoading,
     caption: "I am...",
@@ -78,7 +81,8 @@ var VHSkillsSection = function VHSkillsSection(props) {
     description: props.controls.positionSkill.error && props.controls.positionSkill.message,
     descriptionColor: "red"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '40%'
+    width: '40%',
+    id: "total-year-experience-role"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.preLoading,
     caption: "With...",
@@ -94,7 +98,8 @@ var VHSkillsSection = function VHSkillsSection(props) {
     placeholder: "select an opition"
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom3: true,
-    responsive: true
+    responsive: true,
+    id: "leadership"
   }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
     checked: props.leadershipExperience,
     className: "",
@@ -112,7 +117,8 @@ var VHSkillsSection = function VHSkillsSection(props) {
     variant: "platform1"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5,
-    responsive: true
+    responsive: true,
+    id: "open-different-role"
   }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
     checked: props.openForDifferentRole,
     className: "",
@@ -128,7 +134,9 @@ var VHSkillsSection = function VHSkillsSection(props) {
     title: "I am open to working in a different role",
     value: "123",
     variant: "platform1"
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    id: "would-work-as"
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.preLoading,
     caption: "I would like to work as...",
     isMulti: true,
@@ -155,7 +163,8 @@ var VHSkillsSection = function VHSkillsSection(props) {
     descriptionColor: props.controls.topSkill.loading ? "gray-40" : props.controls.topSkill.error ? "red" : "gray-50"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginTop: 8,
-    marginBottom: 16
+    marginBottom: 16,
+    id: "top-skills-group"
   }, /*#__PURE__*/_react.default.createElement(_List.default, {
     controls: props.controls,
     onEvent: props.onEvent,
@@ -173,7 +182,9 @@ var VHSkillsSection = function VHSkillsSection(props) {
     title: "Add up to 5 secondary skills",
     titleColor: props.controls.secondarySkill.loading ? "gray-40" : props.controls.secondarySkill.error ? "red" : "gray-100",
     titleVariant: "subtitle1"
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_SecondaryList.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    id: "secondary-skills-group"
+  }, /*#__PURE__*/_react.default.createElement(_SecondaryList.default, {
     controls: props.controls,
     onEvent: props.onEvent,
     secondList: props.yearsOfExperienceList,

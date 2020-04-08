@@ -70,7 +70,9 @@ var VHEducationSection = function VHEducationSection(props) {
     items: items,
     controls: props.controls,
     onEvent: props.onEvent
-  }, "currentItem", currentItem)), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, "currentItem", currentItem)), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom: 2
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-education-section-title ".concat(props.className ? props.className : ''),
     text: "Education",
     color: "black-50",
