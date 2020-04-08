@@ -186,7 +186,7 @@ var VHModalSideProjects = function VHModalSideProjects(props) {
       className: "vh-delete-education ".concat(props.className ? props.className : ''),
       variant: "platform",
       data: {
-        action: 'deleteEducation',
+        action: 'deleteSideProjects',
         id: item.id
       },
       onEvent: props.onEvent,
@@ -196,7 +196,10 @@ var VHModalSideProjects = function VHModalSideProjects(props) {
     }, /*#__PURE__*/_react.default.createElement(_index2.default, {
       primary: true,
       onEvent: props.onEvent,
-      data: 'saveSideProjects',
+      data: {
+        action: 'saveSideProjects',
+        id: item.id
+      },
       onClose: props.onClose,
       closeModal: props.closeModal,
       label: "Save"

@@ -110,6 +110,8 @@ var VHButton = function VHButton(props) {
     nowrap: props.nowrap,
     type: "button",
     onClick: function onClick() {
+      console.log('closeModal', closeModal);
+
       if (props.setNewExperience) {
         props.setNewExperience();
       }

@@ -33,17 +33,17 @@ var VHSkillsSection = function VHSkillsSection(props) {
   var yearsOfExperienceList = props.yearsOfExperienceList;
   var yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
   var workAsList = props.positions;
-  var workAs = [];
+  var userPositions = [];
 
-  if (props.workAs) {
-    props.workAs.map(function (item) {
+  if (props.userPositions) {
+    props.userPositions.map(function (item) {
       if (item.id) {
-        workAs.push({
+        userPositions.push({
           value: item.id,
           label: item.name
         });
       } else {
-        workAs.push({
+        userPositions.push({
           value: item,
           label: positions[item].label
         });
@@ -132,14 +132,14 @@ var VHSkillsSection = function VHSkillsSection(props) {
     preLoading: props.preLoading,
     caption: "I would like to work as...",
     isMulti: true,
-    captionColor: props.controls.workAs.loading ? "gray-40" : props.controls.workAs.error ? "red" : "gray-90",
-    className: "vh-skills-section-workAs ".concat(props.className ? props.className : ''),
-    currentItem: workAs,
-    data: "workAs",
+    captionColor: props.controls.userPositions.loading ? "gray-40" : props.controls.userPositions.error ? "red" : "gray-90",
+    className: "vh-skills-section-userPositions ".concat(props.className ? props.className : ''),
+    currentItem: userPositions,
+    data: "userPositions",
     onEvent: props.onEvent,
     items: workAsList,
-    isLoading: props.controls.workAs.loading,
-    description: props.controls.workAs.error && props.controls.workAs.message,
+    isLoading: props.controls.userPositions.loading,
+    description: props.controls.userPositions.error && props.controls.userPositions.message,
     descriptionColor: "red"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true,

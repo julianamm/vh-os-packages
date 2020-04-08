@@ -19,7 +19,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-12T00:00:00",
                     "endDate": "2020-03-27T00:00:00",
-                    "description": "new description",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146671
                 },
@@ -36,7 +36,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-12T00:00:00",
                     "endDate": "2020-03-27T00:00:00",
-                    "description": "new description",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146672
                 },
@@ -53,7 +53,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-05T00:00:00",
                     "endDate": "2020-03-02T00:00:00",
-                    "description": "dsfdsdfsfd",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146669
                 },
@@ -70,7 +70,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-05T00:00:00",
                     "endDate": "2020-03-02T00:00:00",
-                    "description": "dsfdsdfsfd",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146670
                 },
@@ -87,7 +87,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-05T00:00:00",
                     "endDate": "2020-03-02T00:00:00",
-                    "description": "dsfdsdfsfd",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146673
                 },
@@ -104,7 +104,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-05T00:00:00",
                     "endDate": "2020-03-02T00:00:00",
-                    "description": "dsfdsdfsfd",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146674
                 }
@@ -133,7 +133,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2020-03-02T00:00:00",
                     "endDate": null,
-                    "description": "just a description",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 146675
                 }
@@ -162,7 +162,7 @@ const experience = {
                     "isCurrentRole": null,
                     "startDate": "2019-08-01T00:00:00",
                     "endDate": "2019-01-01T00:00:00",
-                    "description": "adsasa",
+                    "description": `[{"Id":0,"Value":"new role","Skills":[]}]`,
                     "skills": [],
                     "id": 119938
                 }

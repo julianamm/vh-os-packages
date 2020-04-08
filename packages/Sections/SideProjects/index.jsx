@@ -12,16 +12,14 @@ import VHPreloader from '../../Components/Preloader';
 const VHSideProjectsSection = props => {
   const [openModal, setOpenModal] = React.useState(false);
   const sideProjects = props.sideProjects ? props.sideProjects : [];
-  const items = props.degreeTypeList;
   const [currentItem, setCurrentItem] = React.useState({});
   return (
     <React.Fragment>
       {openModal &&
         <VHModaSideProjects openModal={openModal} onClose={() => setOpenModal(false)}
-          closeModal={props.closeModal}
+          closeModal={props.closeModalSideProjects}
           modalSideProjects={props.modalSideProjects}
           currentItem={props.currentItem}
-          items={items}
           controls={props.controls}
           onEvent={props.onEvent}
           currentItem={currentItem} />
@@ -55,24 +53,24 @@ const VHSideProjectsSection = props => {
                           <VHTitleDescription
                             hover
                             pointer
-                            title={item.degreeTitle}
+                            title={item.title}
                             titleColor="primary-light"
-                            description={item.schoolName}
-                            titleVariant="h4"
-                            descriptionVariant="bodyweb"
+                            description={item.description}
+                            titleVariant="subtitle1"
+                            descriptionVariant="platform"
                             onEvent={props.onEvent}
-                            data={{ label: 'openModalSideProjects', ...item }}
+                            data={{ label: 'openModalSideProjects', item: item }}
                             onOpen={() => setOpenModal(true)}
                             setCurrentItem={() => setCurrentItem(item)}
                           />
-                          <VHText cursor hover variant={'platform'} text='' onEvent={props.onEvent} />
-                          <VHText variant={'caption'} text={`${new Date(item.startDate).getFullYear()} - ${item.endDate ? new Date(item.endDate).getFullYear() : 'Present'}`} color={'gray-90'} onEvent={props.onEvent} />
+                          <VHText cursor hover variant={'platform'} text={item.projectUrl ? item.projectUrl : ''} onEvent={props.onEvent} color={'primary-light'} />
+                          <VHText variant={'caption'} text={`${new Date(item.completedAt).getFullYear()} - ${item.endDate ? new Date(item.endDate).getFullYear() : 'Present'}`} color={'gray-90'} onEvent={props.onEvent} />
                         </Row>
                       )
                     })
                     }
                     <Row width={'20%'}>
-                      <VHButton data={'openModal'} primary onEvent={props.onEvent} closeModal={props.closeModal} onOpen={() => { setCurrentItem({}); setOpenModal(true) }} label="Add Side Projects" />
+                      <VHButton data={'openModal'} primary onEvent={props.onEvent} closeModal={props.closeModalSideProjects} onOpen={() => { setCurrentItem({}); setOpenModal(true) }} label="Add Side Projects" />
                     </Row>
                   </Row>
                 )

@@ -19,14 +19,14 @@ const VHSkillsSection = props => {
 
   const workAsList = props.positions
 
-  let workAs = []
+  let userPositions = []
 
-  if (props.workAs) {
-    props.workAs.map(item => {
+  if (props.userPositions) {
+    props.userPositions.map(item => {
       if (item.id) {
-        workAs.push({ value: item.id, label: item.name })
+        userPositions.push({ value: item.id, label: item.name })
       } else {
-        workAs.push({ value: item, label: positions[item].label })
+        userPositions.push({ value: item, label: positions[item].label })
       }
     })
   }
@@ -147,19 +147,19 @@ const VHSkillsSection = props => {
               caption="I would like to work as..."
               isMulti
               captionColor={
-                props.controls.workAs.loading
+                props.controls.userPositions.loading
                   ? "gray-40"
-                  : props.controls.workAs.error
+                  : props.controls.userPositions.error
                     ? "red"
                     : "gray-90"
               }
-              className={`vh-skills-section-workAs ${props.className ? props.className : ''}`}
-              currentItem={workAs}
-              data="workAs"
+              className={`vh-skills-section-userPositions ${props.className ? props.className : ''}`}
+              currentItem={userPositions}
+              data="userPositions"
               onEvent={props.onEvent}
               items={workAsList}
-              isLoading={props.controls.workAs.loading}
-              description={props.controls.workAs.error && props.controls.workAs.message}
+              isLoading={props.controls.userPositions.loading}
+              description={props.controls.userPositions.error && props.controls.userPositions.message}
               descriptionColor="red"
             />
           </Row>

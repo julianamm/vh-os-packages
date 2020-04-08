@@ -25,17 +25,17 @@ var SixStep = function SixStep(props) {
   var yearsOfExperienceList = props.yearsOfExperienceList;
   var yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
   var workAsList = props.positions;
-  var workAs = [];
+  var userPositions = [];
 
-  if (props.workAs) {
-    props.workAs.map(function (item) {
+  if (props.userPositions) {
+    props.userPositions.map(function (item) {
       if (item.id) {
-        workAs.push({
+        userPositions.push({
           value: item.id,
           label: item.name
         });
       } else {
-        workAs.push({
+        userPositions.push({
           value: item,
           label: positions[item].label
         });
