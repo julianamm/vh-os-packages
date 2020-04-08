@@ -27,10 +27,6 @@ var _Preloader = _interopRequireDefault(require("../../Components/Preloader"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -52,7 +48,6 @@ var VHSideProjectsSection = function VHSideProjectsSection(props) {
       setOpenModal = _React$useState2[1];
 
   var sideProjects = props.sideProjects ? props.sideProjects : [];
-  var items = props.degreeTypeList;
 
   var _React$useState3 = _react.default.useState({}),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
@@ -64,10 +59,9 @@ var VHSideProjectsSection = function VHSideProjectsSection(props) {
     onClose: function onClose() {
       return setOpenModal(false);
     },
-    closeModal: props.closeModal,
+    closeModal: props.closeModalSideProjects,
     modalSideProjects: props.modalSideProjects,
     currentItem: props.currentItem,
-    items: items,
     controls: props.controls,
     onEvent: props.onEvent
   }, "currentItem", currentItem)), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
@@ -89,15 +83,16 @@ var VHSideProjectsSection = function VHSideProjectsSection(props) {
     }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
       hover: true,
       pointer: true,
-      title: item.degreeTitle,
+      title: item.title,
       titleColor: "primary-light",
-      description: item.schoolName,
-      titleVariant: "h4",
-      descriptionVariant: "bodyweb",
+      description: item.description,
+      titleVariant: "subtitle1",
+      descriptionVariant: "platform",
       onEvent: props.onEvent,
-      data: _objectSpread({
-        label: 'openModalSideProjects'
-      }, item),
+      data: {
+        label: 'openModalSideProjects',
+        item: item
+      },
       onOpen: function onOpen() {
         return setOpenModal(true);
       },
@@ -108,11 +103,12 @@ var VHSideProjectsSection = function VHSideProjectsSection(props) {
       cursor: true,
       hover: true,
       variant: 'platform',
-      text: "",
-      onEvent: props.onEvent
+      text: item.projectUrl ? item.projectUrl : '',
+      onEvent: props.onEvent,
+      color: 'primary-light'
     }), /*#__PURE__*/_react.default.createElement(_Text.default, {
       variant: 'caption',
-      text: "".concat(new Date(item.startDate).getFullYear(), " - ").concat(item.endDate ? new Date(item.endDate).getFullYear() : 'Present'),
+      text: "".concat(new Date(item.completedAt).getFullYear(), " - ").concat(item.endDate ? new Date(item.endDate).getFullYear() : 'Present'),
       color: 'gray-90',
       onEvent: props.onEvent
     }));
@@ -122,7 +118,7 @@ var VHSideProjectsSection = function VHSideProjectsSection(props) {
     data: 'openModal',
     primary: true,
     onEvent: props.onEvent,
-    closeModal: props.closeModal,
+    closeModal: props.closeModalSideProjects,
     onOpen: function onOpen() {
       _setCurrentItem({});
 

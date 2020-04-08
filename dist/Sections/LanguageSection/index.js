@@ -33,17 +33,17 @@ var VHLanguageSection = function VHLanguageSection(props) {
   var yearsOfExperienceList = props.yearsOfExperienceList;
   var yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
   var workAsList = props.positions;
-  var workAs = [];
+  var userPositions = [];
 
-  if (props.workAs) {
-    props.workAs.map(function (item) {
+  if (props.userPositions) {
+    props.userPositions.map(function (item) {
       if (item.id) {
-        workAs.push({
+        userPositions.push({
           value: item.id,
           label: item.name
         });
       } else {
-        workAs.push({
+        userPositions.push({
           value: item,
           label: positions[item].label
         });
@@ -52,7 +52,7 @@ var VHLanguageSection = function VHLanguageSection(props) {
   }
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
+    marginBottom: 2
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
     text: "Languages",

@@ -83,14 +83,14 @@ const VHModalSideProjects = props => {
                                     icon="delete"
                                     className={`vh-delete-education ${props.className ? props.className : ''}`}
                                     variant="platform"
-                                    data={{ action: 'deleteEducation', id: item.id }}
+                                    data={{ action: 'deleteSideProjects', id: item.id }}
                                     onEvent={props.onEvent}
                                     onClose={props.onClose}
                                 />
                             </Row>
                         }
                         <Row alignItemsRight>
-                            <VHButton primary onEvent={props.onEvent} data={'saveSideProjects'} onClose={props.onClose} closeModal={props.closeModal} label="Save" />
+                            <VHButton primary onEvent={props.onEvent} data={{action: 'saveSideProjects', id: item.id}} onClose={props.onClose} closeModal={props.closeModal} label="Save" />
                         </Row>
                     </Row>
                 </Row>

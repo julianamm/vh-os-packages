@@ -57,7 +57,6 @@ const experience = {
                     "skills": [],
                     "id": 146669
                 },
-
             ],
             "companyName": "Drift Way Sidecorp",
             "countryId": 661882,

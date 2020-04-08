@@ -46,7 +46,8 @@ var VHIconTitleList = function VHIconTitleList(props) {
       className: "vh-icon-title-list ".concat(props.className ? props.className : ''),
       variant: "platform",
       data: props.data,
-      onEvent: props.onEvent
+      onEvent: props.onEvent,
+      profile: true
     });
   }));
 };

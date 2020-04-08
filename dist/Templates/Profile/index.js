@@ -45,16 +45,19 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 var VHProfileTemplate = function VHProfileTemplate(props) {
   return /*#__PURE__*/_react.default.createElement(_Grid.Container, {
-    md: true
+    md: true,
+    style: {
+      maxWidth: "732px"
+    }
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10
+    marginBottom: 16
   }, /*#__PURE__*/_react.default.createElement(_VHUserPhotoIconTitleDescription.default, {
     avatar: props.User.image,
     name: props.User.name,
     email: props.User.email,
     onEvent: props.onEvent
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10
+    marginBottom: 16
   }, /*#__PURE__*/_react.default.createElement("div", {
     id: "general"
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
@@ -62,7 +65,7 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
       onEvent: props.onEvent
     }))
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10
+    marginBottom: 16
   }, /*#__PURE__*/_react.default.createElement("div", {
     id: "skills"
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
@@ -72,7 +75,7 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
       onEvent: props.onEvent
     }))
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10
+    marginBottom: 16
   }, /*#__PURE__*/_react.default.createElement("div", {
     id: "relocation"
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
@@ -82,13 +85,13 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
       onEvent: props.onEvent
     }))
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10
+    marginBottom: 16
   }, /*#__PURE__*/_react.default.createElement(_Social.default, _extends({
     preLoading: props.controls.linkedin.preLoading
   }, props, {
     onEvent: props.onEvent
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10
+    marginBottom: 16
   }, /*#__PURE__*/_react.default.createElement("div", {
     id: "language"
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
@@ -97,21 +100,21 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
       onEvent: props.onEvent
     }))
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    id: "education"
-  }, /*#__PURE__*/_react.default.createElement(_index.default, {
-    content: /*#__PURE__*/_react.default.createElement(_Education.default, _extends({}, props, {
-      preLoading: props.controls.educationSection.preLoading,
-      onEvent: props.onEvent
-    }))
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10
+    marginBottom: 16
   }, /*#__PURE__*/_react.default.createElement("div", {
     id: "experience"
   }, /*#__PURE__*/_react.default.createElement(_index.default, {
     content: /*#__PURE__*/_react.default.createElement(_UserCompanyExperience.default, _extends({}, props, {
       preLoading: props.controls.experienceSection.preLoading,
+      onEvent: props.onEvent
+    }))
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom: 16
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    id: "education"
+  }, /*#__PURE__*/_react.default.createElement(_index.default, {
+    content: /*#__PURE__*/_react.default.createElement(_Education.default, _extends({}, props, {
+      preLoading: props.controls.educationSection.preLoading,
       onEvent: props.onEvent
     }))
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {

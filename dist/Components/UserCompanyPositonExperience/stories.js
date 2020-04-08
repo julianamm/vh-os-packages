@@ -15,7 +15,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 var company = {
   title: 'Google',
   rightTitle: '2006 / 2007',
-  description: "Education - Startup - Belo Horizonte - Brazil"
+  description: "Education - Startup - Brazil"
 };
 var ArrayOfSkills = [{
   label: "JavaScript"

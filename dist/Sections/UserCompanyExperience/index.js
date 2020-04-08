@@ -15,7 +15,7 @@ var _Base = _interopRequireDefault(require("../../Components/Cards/Base"));
 
 var _Text = _interopRequireDefault(require("../../Components/Text"));
 
-var _Button = _interopRequireDefault(require("../../Components/Button"));
+var _ButtonNew = _interopRequireDefault(require("../../Components/Button-New"));
 
 var _UserCompanyPositonExperience = _interopRequireDefault(require("../../Components/UserCompanyPositonExperience"));
 
@@ -84,7 +84,7 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     positions: props.positions,
     closeModalExperience: props.closeModalExperience
   }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
+    mmarginBottom: 2
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
     text: "Experience ".concat(experience.length > 0 ? calcDate(props.experience.firstExperienceDate) : ''),
@@ -96,7 +96,8 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     type: "circle"
   }) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, props.preLoading ? /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.PostDescriptionSkeleton, null) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, experience.map(function (userPosition) {
     return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-      marginBottom: 10
+      marginBottom: 10,
+      paddingRight: 10
     }, /*#__PURE__*/_react.default.createElement(_UserCompanyPositonExperience.default, {
       item: userPosition,
       companyList: props.companyList,
@@ -112,9 +113,10 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
   }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    paddingRight8: true,
+    row: true,
+    marginRight: 4,
     autoWidth: true
-  }, /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }, /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
     nowrap: true,
     primary: true,
     onEvent: props.onEvent,
@@ -131,7 +133,7 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     }
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Button.default, {
+  }, /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
     outline: true,
     primary: true,
     onEvent: props.onEvent,

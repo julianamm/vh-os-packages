@@ -22,7 +22,9 @@ var _reactPreloadSkeleton = require("react-preload-skeleton");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHSocialSection = function VHSocialSection(props) {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom: 2
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
     text: "Social Profile",
     color: "black-50",
@@ -34,7 +36,8 @@ var VHSocialSection = function VHSocialSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.InputSkeleton, {
     lines: 3
   })) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom5: true
+    marginBottom5: true,
+    id: "linkedin-href"
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     className: "",
     disabled: props.controls.linkedin.loading,
@@ -46,7 +49,8 @@ var VHSocialSection = function VHSocialSection(props) {
     placeholder: "http://linkedin.com/",
     value: props.linkedin
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom5: true
+    marginBottom5: true,
+    id: "github-href"
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     className: "",
     disabled: props.controls.git.loading,
@@ -58,7 +62,8 @@ var VHSocialSection = function VHSocialSection(props) {
     placeholder: "http://github.com/",
     value: props.git
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom5: true
+    marginBottom5: true,
+    id: "website-href"
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     className: "",
     disabled: props.controls.webSite.loading,
@@ -68,6 +73,19 @@ var VHSocialSection = function VHSocialSection(props) {
     value: props.webSite,
     data: 'webSite',
     icon: "webSite",
+    onEvent: props.onEvent
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom5: true,
+    id: "resume-href"
+  }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
+    className: "",
+    disabled: props.controls.webSite.loading,
+    error: props.controls.webSite.error,
+    loading: props.controls.webSite.loading,
+    placeholder: "http://sitename.com/your-resume.pdf",
+    value: props.webSite,
+    data: 'resume',
+    icon: "profile",
     onEvent: props.onEvent
   }))))));
 };

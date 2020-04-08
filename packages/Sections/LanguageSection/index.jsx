@@ -19,14 +19,14 @@ const VHLanguageSection = props => {
 
   const workAsList = props.positions
 
-  let workAs = []
+  let userPositions = []
 
-  if(props.workAs){
-    props.workAs.map(item=>{
+  if(props.userPositions){
+    props.userPositions.map(item=>{
       if(item.id){
-      workAs.push({value: item.id, label: item.name})
+        userPositions.push({value: item.id, label: item.name})
       }else{
-        workAs.push({value: item, label: positions[item].label})
+        userPositions.push({value: item, label: positions[item].label})
       }
     })
   }
