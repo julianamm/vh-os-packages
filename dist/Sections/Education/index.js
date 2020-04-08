@@ -90,7 +90,21 @@ var VHEducationSection = function VHEducationSection(props) {
     text: 'Formal Education',
     color: 'black-100',
     onEvent: props.onEvent
-  }))), education.map(function (item) {
+  }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    paddingRight8: true,
+    id: "education-level"
+  }, /*#__PURE__*/_react.default.createElement(VHSelect, {
+    caption: "What is your educational level?",
+    className: "vh-education-section-educationLevel ".concat(props.className ? props.className : ''),
+    currentItem: {},
+    data: "educationLevel",
+    items: items,
+    onEvent: props.onEvent,
+    isLoading: props.controls.visaStatusCanadian.loading,
+    description: props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message,
+    descriptionColor: "red",
+    captionColor: props.controls.visaStatusCanadian.loading ? "gray-40" : props.controls.visaStatusCanadian.error ? "red" : "gray-90"
+  })))), education.map(function (item) {
     return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       marginBottom5: true
     }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {

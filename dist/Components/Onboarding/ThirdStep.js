@@ -23,16 +23,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var ThirdStep = function ThirdStep(props) {
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    column: true
+    column: true,
+    marginLeft: 1,
+    marginRight: 1
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    marginBottom: 10
+    marginBottom: 10,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '10%'
+    autoWidth: true,
+    marginRight: 5
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     icon: 'skills',
     title: "city",
-    md: true
+    md: true,
+    color: "gray-50"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
@@ -48,13 +53,10 @@ var ThirdStep = function ThirdStep(props) {
   }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     contents: true,
     className: "vh-general-section-topSkill-description ".concat(props.className ? props.className : ''),
-    descriptionColor: props.controls.secondarySkill.loading ? "gray-40" : props.controls.secondarySkill.error ? "red-light" : "gray-90",
-    inline: true,
     onEvent: props.onEvent,
     title: "Add up to 5 secondary skills",
-    description: "",
     titleColor: props.controls.secondarySkill.loading ? "gray-40" : props.controls.secondarySkill.error ? "red" : "gray-100",
-    titleVariant: "subtitle3"
+    titleVariant: "subtitle1"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_SecondaryList.default, {
     controls: props.controls,
     onEvent: props.onEvent,

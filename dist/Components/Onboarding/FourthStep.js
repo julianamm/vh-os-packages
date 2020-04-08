@@ -30,30 +30,35 @@ var FourthStep = function FourthStep(props) {
   var visaStatusCanadian = props.visaStatusCanadian != undefined ? visaStatusCanadianList[props.visaStatusCanadian] : [];
   var visaStatusEU = props.visaStatusEU != undefined ? visaStatusEUList[props.visaStatusEU] : [];
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    column: true
+    column: true,
+    marginLeft: 1,
+    marginRight: 1
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    marginBottom: 10
+    marginBottom: 10,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '10%'
+    autoWidth: true,
+    marginRight: 5
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     icon: 'relocation',
     title: "city",
-    md: true
+    md: true,
+    color: "gray-50"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '70%'
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: "h4",
     color: "gray-90",
-    text: 'Secondary Skills'
+    text: 'Relocation'
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 5
+    marginBottom: 10
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'openForRemoteJobs',
-    color: "gray-100",
-    variant: "subtitle3",
+    color: "gray-90",
+    variant: "platform1",
     onEvent: props.onEvent,
     text: 'Are you open to remote jobs?',
     checked: props.openForRemoteJobs
@@ -77,8 +82,8 @@ var FourthStep = function FourthStep(props) {
     onEvent: props.onEvent,
     isLoading: props.controls.visaStatusCanadian.loading,
     description: props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message,
-    descriptionColor: "red-light",
-    captionColor: props.controls.visaStatusCanadian.loading ? "gray-40" : props.controls.visaStatusCanadian.error ? "red" : null
+    descriptionColor: "red",
+    captionColor: props.controls.visaStatusCanadian.loading ? "gray-40" : props.controls.visaStatusCanadian.error ? "red" : "gray-90"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
     caption: "EU Visa Status",
     className: "vh-general-section-visaStatusEU ".concat(props.className ? props.className : ''),
@@ -88,8 +93,8 @@ var FourthStep = function FourthStep(props) {
     onEvent: props.onEvent,
     isLoading: props.controls.visaStatusEU.loading,
     description: props.controls.visaStatusEU.error && props.controls.visaStatusEU.message,
-    descriptionColor: "red-light",
-    captionColor: props.controls.visaStatusEU.loading ? "gray-40" : props.controls.visaStatusEU.error ? "red" : null
+    descriptionColor: "red",
+    captionColor: props.controls.visaStatusEU.loading ? "gray-40" : props.controls.visaStatusEU.error ? "red" : "gray-90"
   })))));
 };
 

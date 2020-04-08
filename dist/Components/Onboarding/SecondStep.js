@@ -23,19 +23,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var SecondStep = function SecondStep(props) {
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    column: true
+    column: true,
+    marginLeft: 1,
+    marginRight: 1
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    marginBottom: 10
+    marginBottom: 10,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '10%'
+    autoWidth: true,
+    marginRight: 5
   }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
     icon: 'skills',
     title: "city",
-    md: true
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    md: true,
+    color: "gray-50"
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: "h4",
     color: "gray-90",
     text: 'Top Skills'
@@ -47,13 +50,12 @@ var SecondStep = function SecondStep(props) {
   }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
     contents: true,
     className: "vh-general-section-topSkill-description ".concat(props.className ? props.className : ''),
-    descriptionColor: props.controls.topSkill.loading ? "gray-40" : props.controls.topSkill.error ? "red-light" : "gray-90",
-    inline: true,
     onEvent: props.onEvent,
     title: "Rank your top 3 skills",
-    description: "1st = Highest proficiency level; 3rd = Lowest proficiency level",
     titleColor: props.controls.topSkill.loading ? "gray-40" : props.controls.topSkill.error ? "red" : "gray-100",
-    titleVariant: "subtitle3"
+    titleVariant: "subtitle1",
+    description: "1st = Highest proficiency level; 3rd = Lowest proficiency level",
+    descriptionColor: props.controls.topSkill.loading ? "gray-40" : props.controls.topSkill.error ? "red" : "gray-50"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom5: true
   }, /*#__PURE__*/_react.default.createElement(_List.default, {

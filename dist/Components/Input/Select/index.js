@@ -101,7 +101,7 @@ var VHSelect = function VHSelect(props) {
     }
   }, _defineProperty(_style, "singleValue", function singleValue(styles) {
     return {
-      paddingTop: '0'
+      padding: '6px 0'
     };
   }), _defineProperty(_style, "dropdownIndicator", function dropdownIndicator(styles) {
     return {
