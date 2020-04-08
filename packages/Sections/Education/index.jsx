@@ -15,6 +15,8 @@ const VHEducationSection = props => {
   const education = props.education ? props.education : [];
   const items = props.degreeTypeList;
   const [currentItem, setCurrentItem] = React.useState({});
+  const degreeType = props.degreeType != undefined ? items.find(element => element.value === props.degreeType) : {};
+
   return (
     <React.Fragment>
       {openModal &&
@@ -53,24 +55,16 @@ const VHEducationSection = props => {
                     <Row>
                       <Row>
                         <VHText variant={'subtitle1'} text={'Formal Education'} color={'black-100'} onEvent={props.onEvent} />
-                        <Row paddingRight8 id="education-level">
+                        <Row paddingTop={'5'} paddingRight8 id="education-level" width={'50%'}>
                           <VHSelect
-                            caption="What is your educational level?"
-                            className={`vh-education-section-educationLevel ${props.className ? props.className : ''}`}
-                            currentItem={{}}
-                            data="educationLevel"
-                            items={items}
+                            caption="What's your education level?"
+                            captionColor="gray-90"
+                            className={`vh-general-section-degree ${props.className ? props.className : ''}`}
+                            currentItem={degreeType}
+                            data="degreeType"
                             onEvent={props.onEvent}
-                            isLoading={props.controls.visaStatusCanadian.loading}
-                            description={props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message}
-                            descriptionColor="red"
-                            captionColor={
-                              props.controls.visaStatusCanadian.loading
-                                ? "gray-40"
-                                : props.controls.visaStatusCanadian.error
-                                  ? "red"
-                                  : "gray-90"
-                            }
+                            items={items}
+                            color="gray-90"
                           />
                         </Row>
                       </Row>

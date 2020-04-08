@@ -152,13 +152,12 @@ const VHSelect = props => {
                 })
                 break
               case actionMeta.action === "select-option":
-                if (newValue.length <= 3) {
                   let finalValueChange = []
                   if (newValue.value === 'zero') {
                     newValue.value = 0
                   }
                   handleChange(newValue);
-                  if (props.isMulti) {
+                  if (props.isMulti && newValue.length <= 3) {
                     newValue.map(item => {
                       finalValueChange.push(parseInt(item.value === 'zero' ? 0 : item.value))
                     })
@@ -173,7 +172,6 @@ const VHSelect = props => {
                       order: props.order
                     }
                   })
-                }
                 break
             }
           }}

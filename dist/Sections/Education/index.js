@@ -61,6 +61,9 @@ var VHEducationSection = function VHEducationSection(props) {
       currentItem = _React$useState4[0],
       _setCurrentItem = _React$useState4[1];
 
+  var degreeType = props.degreeType != undefined ? items.find(function (element) {
+    return element.value === props.degreeType;
+  }) : {};
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, openModal && /*#__PURE__*/_react.default.createElement(_ModalEducation.default, _defineProperty({
     openModal: openModal,
     onClose: function onClose() {
@@ -93,19 +96,19 @@ var VHEducationSection = function VHEducationSection(props) {
     color: 'black-100',
     onEvent: props.onEvent
   }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    paddingTop: '5',
     paddingRight8: true,
-    id: "education-level"
+    id: "education-level",
+    width: '50%'
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
-    caption: "What is your educational level?",
-    className: "vh-education-section-educationLevel ".concat(props.className ? props.className : ''),
-    currentItem: {},
-    data: "educationLevel",
-    items: items,
+    caption: "What's your education level?",
+    captionColor: "gray-90",
+    className: "vh-general-section-degree ".concat(props.className ? props.className : ''),
+    currentItem: degreeType,
+    data: "degreeType",
     onEvent: props.onEvent,
-    isLoading: props.controls.visaStatusCanadian.loading,
-    description: props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message,
-    descriptionColor: "red",
-    captionColor: props.controls.visaStatusCanadian.loading ? "gray-40" : props.controls.visaStatusCanadian.error ? "red" : "gray-90"
+    items: items,
+    color: "gray-90"
   })))), education.map(function (item) {
     return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       marginBottom5: true

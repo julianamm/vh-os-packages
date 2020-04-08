@@ -52,7 +52,7 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 16
   }, /*#__PURE__*/_react.default.createElement(_VHUserPhotoIconTitleDescription.default, {
-    avatar: props.image,
+    avatar: props.image ? props.image : '',
     name: props.User.name,
     email: props.User.email,
     onEvent: props.onEvent

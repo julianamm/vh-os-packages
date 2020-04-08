@@ -17,7 +17,7 @@ const VHProfileTemplate = props => (
   <Container md style={{maxWidth: "732px"}}>
     <Row marginBottom={16}>
       <VHProfileAvatar
-        avatar= {props.image}
+        avatar= {props.image ? props.image : ''}
         name= {props.User.name}
         email= {props.User.email}
         onEvent={props.onEvent}
@@ -55,7 +55,7 @@ const VHProfileTemplate = props => (
         } />
       </div>
     </Row>
-    <Row marginBottom={16}>
+     <Row marginBottom={16}>
       <VHSocialSection
         preLoading={props.controls.linkedin.preLoading}
         {...props}
@@ -106,15 +106,6 @@ const VHProfileTemplate = props => (
         } />
       </div>
     </Row>
-    {/* <div>
-      <VHInputFile onEvent={props.onEvent}></VHInputFile>
-      </div> */}
-    {/*<Row marginBottom={10}>
-      <VHUserCompanyExperienceSection
-        {...props.userCompanyExperience}
-        onEvent={props.onEvent}
-      />
-    </Row> */}
   </Container>
 )
 
