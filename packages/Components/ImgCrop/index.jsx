@@ -176,7 +176,7 @@ const GlobalStyle = createGlobalStyle`
 `
 import { Container, Row } from '../../Grid'
 import VHAvatar from '../Avatar'
-import VHButton from '../Button'
+import VHButton from '../Button-New'
 
 class VHImgCrop extends PureComponent {
   state = {
@@ -298,21 +298,21 @@ class VHImgCrop extends PureComponent {
         {
           showCropper && (
               <VHButton
-              className=""
-              label="Send"
-              onEvent={ e => {
-                this.setState({cropped: false, src: null, showCropper: false, croppedImageUrlSent: croppedImageUrl})
-              fetch(croppedImageUrl)
-              .then(res => res.blob())
-              .then(res => {
-                this.props.onEvent({
-                  data: this.props.data,
-                  src: res,
-                  fileName,
-                  type: 'onCropped',
-                  target: 'VHImgCrop'
+                  className=""
+                  label="Send"
+                  onEvent={ e => {
+                    this.setState({cropped: false, src: null, showCropper: false, croppedImageUrlSent: croppedImageUrl})
+                  fetch(croppedImageUrl)
+                  .then(res => res.blob())
+                  .then(res => {
+                    this.props.onEvent({
+                      data: this.props.data,
+                      src: res,
+                      fileName,
+                      type: 'onCropped',
+                      target: 'VHImgCrop'
+                    })
                 })
-              })
               }}
               primary
             />

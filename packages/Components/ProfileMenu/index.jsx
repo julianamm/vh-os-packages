@@ -7,7 +7,7 @@ export default class VHProfileMenu extends Component {
     render() {
         return (
             <Container fullWidth>
-                <Row column fixed width={'310px'}>
+                <Row column fixed >
                     {
                         this.props.links.map((link, index) => {
                             return (
