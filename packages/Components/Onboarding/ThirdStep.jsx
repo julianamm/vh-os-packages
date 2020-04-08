@@ -10,10 +10,10 @@ import VHSecondaryList from '../SecondaryList'
 const ThirdStep = props => {
 
     return (
-        <Row column >
-            <Row row marginBottom={10}>
-                <Row width={'10%'}>
-                    <VHIcon icon={'skills'} title="city" md />
+        <Row column marginLeft={1} marginRight={1}>
+            <Row row marginBottom={10} alignItemsCenter >
+                <Row autoWidth marginRight={5}>
+                    <VHIcon icon={'skills'} title="city" md color="gray-50"/>
                 </Row>
                 <Row width={'70%'}>
                     <VHText
@@ -26,27 +26,18 @@ const ThirdStep = props => {
             <Row column height={'200px'}> 
                 <Row column marginBottom={2}>
                     <VHTitleDescription
-                        contents={true}
-                        className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
-                        descriptionColor={
-                            props.controls.secondarySkill.loading
-                                ? "gray-40"
-                                : props.controls.secondarySkill.error
-                                    ? "red-light"
-                                    : "gray-90"
-                        }
-                        inline
-                        onEvent={props.onEvent}
-                        title="Add up to 5 secondary skills"
-                        description=""
-                        titleColor={
-                            props.controls.secondarySkill.loading
-                                ? "gray-40"
-                                : props.controls.secondarySkill.error
-                                    ? "red"
-                                    : "gray-100"
-                        }
-                        titleVariant="subtitle3"
+                         contents={true}
+                         className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
+                         onEvent={props.onEvent}
+                         title="Add up to 5 secondary skills"
+                         titleColor={
+                           props.controls.secondarySkill.loading
+                             ? "gray-40"
+                             : props.controls.secondarySkill.error
+                               ? "red"
+                               : "gray-100"
+                         }
+                         titleVariant="subtitle1"
                     />
                 </Row>
                 <Row>

@@ -37,7 +37,7 @@ if (props.preLoading) {
     clearIndicator: (styles) => ({ display: 'none' }),
     singleValue: (styles) => ({ color:'#4f4f4f'}),
     valueContainer: (styles) => ({ width: 'auto', display: 'flex', paddingLeft:'0'}),
-    singleValue: (styles) => ({ paddingTop:'0'}),
+    singleValue: (styles) => ({ padding:'6px 0'}),
     dropdownIndicator:(styles) => ({ display: 'none' }),
     option: (provided, state) => ({
       ...provided,
