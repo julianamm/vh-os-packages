@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Label = exports.Input = exports.Wrapper = void 0;
+exports.Label = exports.Container = exports.Input = exports.Wrapper = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -11,8 +11,18 @@ var _Colors = _interopRequireDefault(require("../../../Colors"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject3() {
+function _templateObject4() {
   var data = _taggedTemplateLiteral(["\n  margin-right: 20px;\n  color: ", ";\n  font-family: Roboto;\n  font-size: 14px;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    margin-top: -10px;\n    width: 150px;\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -51,6 +61,10 @@ var Input = _styledComponents.default.input(_templateObject2(), _Colors.default[
 
 exports.Input = Input;
 
-var Label = _styledComponents.default.label(_templateObject3(), _Colors.default["gray-100"]);
+var Container = _styledComponents.default.div(_templateObject3());
+
+exports.Container = Container;
+
+var Label = _styledComponents.default.label(_templateObject4(), _Colors.default["gray-100"]);
 
 exports.Label = Label;

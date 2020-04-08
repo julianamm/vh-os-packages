@@ -27,7 +27,7 @@ const VHEducationSection = props => {
           currentItem={currentItem} />
       }
       <Row marginBottom={2}>
-        <VHText 
+        <VHText
           className={`vh-education-section-title ${props.className ? props.className : ''}`}
           text={"Education"}
           color="black-50"
@@ -49,6 +49,31 @@ const VHEducationSection = props => {
                 </>
               ) : (
                   <Row column>
+                    <Row>
+                      <Row>
+                        <VHText variant={'subtitle1'} text={'Formal Education'} color={'black-100'} onEvent={props.onEvent} />
+                        <Row paddingRight8 id="education-level">
+                          <VHSelect
+                            caption="What is your educational level?"
+                            className={`vh-education-section-educationLevel ${props.className ? props.className : ''}`}
+                            currentItem={{}}
+                            data="educationLevel"
+                            items={items}
+                            onEvent={props.onEvent}
+                            isLoading={props.controls.visaStatusCanadian.loading}
+                            description={props.controls.visaStatusCanadian.error && props.controls.visaStatusCanadian.message}
+                            descriptionColor="red"
+                            captionColor={
+                              props.controls.visaStatusCanadian.loading
+                                ? "gray-40"
+                                : props.controls.visaStatusCanadian.error
+                                  ? "red"
+                                  : "gray-90"
+                            }
+                          />
+                        </Row>
+                      </Row>
+                    </Row>
                     {education.map(item => {
                       return (
                         <Row marginBottom5>

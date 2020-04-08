@@ -85,7 +85,12 @@ var VHEducationSection = function VHEducationSection(props) {
     button: true
   })) : /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
-  }, education.map(function (item) {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    variant: 'subtitle1',
+    text: 'Formal Education',
+    color: 'black-100',
+    onEvent: props.onEvent
+  }))), education.map(function (item) {
     return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       marginBottom5: true
     }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
