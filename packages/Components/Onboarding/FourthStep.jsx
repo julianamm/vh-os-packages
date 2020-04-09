@@ -7,6 +7,7 @@ import VHText from '../Text'
 import VHSelect from '../Input/Select'
 import VHInputRadio from '../Input/radio'
 import VHTargetLocation from '../TargetLocation/'
+import VHTitleDescription from "../../Components/TitleDescription";
 
 const FourthStep = props => {
 
@@ -17,7 +18,7 @@ const FourthStep = props => {
     const visaStatusEU = props.visaStatusEU != undefined ? visaStatusEUList[props.visaStatusEU] : []
 
     return (
-        <Row column marginLeft={1} marginRight={1}>
+        <Row column>
             <Row row marginBottom={10} alignItemsCenter >
                 <Row autoWidth marginRight={5}>
                     <VHIcon icon={'relocation'} title="city" md color="gray-50"/>
@@ -31,7 +32,7 @@ const FourthStep = props => {
                 </Row>
             </Row>
             <Row column>
-                <Row marginBottom={10}>
+                <Row marginBottom={10} style={{padding:'1px'}}>
                     <VHInputRadio
                         data={'openForRemoteJobs'}
                         color="gray-90"
@@ -39,6 +40,31 @@ const FourthStep = props => {
                         onEvent={props.onEvent}
                         text={'Are you open to remote jobs?'}
                         checked={props.openForRemoteJobs}
+                    />
+                </Row>
+                <Row marginBottom={1} >
+                    <VHTitleDescription
+
+                        className={`vh-general-section-companySize ${props.className ? props.className : ''}`}
+                        descriptionColor={
+                            props.controls.companySize.loading
+                                ? "gray-40"
+                                : props.controls.companySize.error
+                                    ? "red-light"
+                                    : "gray-90"
+                        }
+                        descriptionVariant="caption"
+                        inline
+                        onEvent={props.onEvent}
+                        title="Where would you like to work?"
+                        titleColor={
+                            props.controls.companySize.loading
+                                ? "gray-40"
+                                : props.controls.companySize.error
+                                    ? "red"
+                                    : "gray-90"
+                        }
+                        titleVariant="platform1"
                     />
                 </Row>
                 <Row marginBottom={5} width={'100%'}>

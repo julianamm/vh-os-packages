@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     border-bottom: 1px solid ${Color['gray-30']};
     display: flex;
     align-items: center;
+    box-sizing:border-box;
     justify-content: space-between;
     :hover {
         background-color: ${Color["gray-10"]};

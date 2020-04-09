@@ -50,7 +50,7 @@ const VHSkillsSection = props => {
             <Row width={'60%'} marginRight={3} id="main-role">
               <VHSelect
                 preLoading={props.preLoading}
-                caption="I am..."
+                caption="I am a/an..."
                 captionColor={
                   props.controls.positionSkill.loading
                     ? "gray-40"

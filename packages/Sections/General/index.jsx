@@ -59,7 +59,7 @@ const VHGeneralSection = props => {
             <Row id="location" >
               <VHSelect
                   preLoading={props.controls.location.preLoading || false}
-                  caption="Location"
+                  caption="Current Location"
                   placeholder="Select an option"
                   className={`vh-general-section-location ${props.className ? props.className : ''}`}
                   currentItem={location}

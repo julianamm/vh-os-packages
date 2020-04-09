@@ -16,7 +16,7 @@ const FirstStep = props => {
     const yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
 
     return (
-        <Row column marginLeft={1} marginRight={1}>
+        <Row column>
             <Row row marginBottom={10} alignItemsCenter >
                 <Row autoWidth marginRight={5}>
                     <VHIcon 
@@ -30,7 +30,7 @@ const FirstStep = props => {
                     <VHText
                         variant={"h4"}
                         color="gray-90"
-                        text={'Professional details'}
+                        text={'Professional Overview'}
                     />
                 </Row>
             </Row>
@@ -78,7 +78,7 @@ const FirstStep = props => {
                     
                 />
             </Row>
-            <Row paddingRight8>
+            <Row style={{padding:'1px'}}>
                 <VHInputRadio
                     data={'activelyLookingForJob'}
                     color="gray-90"

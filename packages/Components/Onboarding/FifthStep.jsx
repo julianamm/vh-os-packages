@@ -18,7 +18,7 @@ const FifthStep = props => {
     const gender = props.gender != undefined ? [genders[props.gender]] : {};
 
     return (
-        <Row column marginLeft={1} marginRight={1}>
+        <Row column>
             <Row row marginBottom={10} alignItemsCenter >
                 <Row autoWidth marginRight={5}>
                     <VHIcon icon={'user'} title="city" md color="gray-50"/>

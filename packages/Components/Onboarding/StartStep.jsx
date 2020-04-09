@@ -14,7 +14,7 @@ const StartStep = props => {
         <div style={{ paddingLeft: '55px', paddingRight: '55px', marginBottom: '50px' }}>
             <p style={{ textAlign: 'center', lineHeight: '28px', fontFamily: 'Roboto', fontSize: '16px', color: '#4f4f4f' }}>Everything on VanHack begins with the profile – it’s the <b>first step</b> of your job search journey, and we have made it even simpler for you to fill it out.</p>
             <p style={{ textAlign: 'center', lineHeight: '28px', fontFamily: 'Roboto', fontSize: '16px', color: '#4f4f4f' }}>Click on "<b style={{ color: '#0675ce', fontWeight: 'normal' }}>start</b>" to boost your profile’s visibility and get closer to a job offer from an international company.</p>
-            <p style={{ textAlign: 'center', lineHeight: '28px', fontFamily: 'Roboto', fontSize: '16px', color: '#4f4f4f' }}>Crafting a successful profile has never been easier.</p>
+            <p style={{ textAlign: 'center', lineHeight: '28px', fontFamily: 'Roboto', fontSize: '16px', color: '#4f4f4f' }}>Crafting a successful profile has never been easier. Let's start!</p>
         </div>
         <div style={{ marginBottom: '50px' }}>
             <button
