@@ -49,7 +49,7 @@ const VHOnboarding = props => {
               }
               <Row alignItemsCenter style={{ height: '100%' }}>
                 <Row style={{ width: '100%', height: 'calc(100% - 10px)', boxSizing: 'border-box', padding: '33px'}} >
-                  <Row style={{ height: '100%', overflow: 'scroll' }}>
+                  <Row style={{ height: '100%', overflow: 'auto', boxSizing: 'border-box', padding: '0 3px' }}>
                     {
                       currentStep === 0 &&
                       <StartStep {...props} onEvent={props.onEvent} setCurrentStep={() => setCurrentStep(1)} />

@@ -78,7 +78,7 @@ const FirstStep = props => {
                     
                 />
             </Row>
-            <Row style={{padding:'1px'}}>
+            <Row>
                 <VHInputRadio
                     data={'activelyLookingForJob'}
                     color="gray-90"
