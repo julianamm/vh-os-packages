@@ -52,7 +52,7 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 16
   }, /*#__PURE__*/_react.default.createElement(_VHUserPhotoIconTitleDescription.default, {
-    avatar: props.User.image,
+    avatar: props.image ? props.image : '',
     name: props.User.name,
     email: props.User.email,
     onEvent: props.onEvent
@@ -126,9 +126,7 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
       preLoading: props.controls.sideProjectsSection.preLoading,
       onEvent: props.onEvent
     }))
-  }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_File.default, {
-    onEvent: props.onEvent
-  })));
+  }))));
 };
 
 VHProfileTemplate.defaultProps = {};

@@ -2,16 +2,14 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Row, Container } from '../../Grid';
 import VHText from '../Text/index';
-import VHCardBase from '../Cards/Base/index';
 import VHButton from '../Button/index';
+import VHTimer from '../Timer/index';
 import * as S from './styles';
 
-
 const VHPromoBar = props => {
-
     return (
         <Row className={`vh-promo-bar ${props.className ? props.className : ''}`}>
-            <S.Wrapper color={"red"}>
+            <S.Wrapper color={props.backgroundColor ? props.backgroundColor : 'gray-30'}>
                 <Container md>
                     <Row row style={{ marginTop: "6px" }}>
                         <Row row alignItemsCenter mobileDisplayNone>
@@ -36,72 +34,9 @@ const VHPromoBar = props => {
                             </span>
                         </Row>
                         <Row row justifyBottom>
-                            <Row row alignItemsCenter>
-                                <Row marginRight={1} marginLeft={2}>
-                                    <VHCardBase noHover>
-                                        <Row alignItemsCenter height={1} style={{ justifyContent: "center",  }}>
-                                            <VHText 
-                                                variant={"h4"}
-                                                color={"black-90"}
-                                                text={props.numDays}
-                                            />
-                                            <VHText 
-                                                variant={"caption"}
-                                                color={"gray-40"}
-                                                text={props.days}
-                                            />
-                                        </Row>
-                                    </VHCardBase>
-                                </Row>
-                                <Row marginRight={1}>
-                                    <VHCardBase noHover>
-                                        <Row alignItemsCenter height={1} style={{ justifyContent: "center",  }}>
-                                            <VHText 
-                                                variant={"h4"}
-                                                color={"black-90"}
-                                                text={props.numHours}
-                                            />
-                                            <VHText 
-                                                variant={"caption"}
-                                                color={"gray-40"}
-                                                text={props.hours}
-                                            />
-                                        </Row>
-                                    </VHCardBase>
-                                </Row>
-                                <Row marginRight={1}>
-                                    <VHCardBase noHover>
-                                        <Row alignItemsCenter height={1} style={{ justifyContent: "center",  }}>
-                                            <VHText 
-                                                variant={"h4"}
-                                                color={"black-90"}
-                                                text={props.numMin}
-                                            />
-                                            <VHText 
-                                                variant={"caption"}
-                                                color={"gray-40"}
-                                                text={props.min}
-                                            />
-                                        </Row>
-                                    </VHCardBase>
-                                </Row>
-                                <Row marginRight={3}>
-                                    <VHCardBase noHover>
-                                        <Row alignItemsCenter height={1} style={{ justifyContent: "center",  }}>
-                                            <VHText 
-                                                variant={"h4"}
-                                                color={"black-90"}
-                                                text={props.numSec}
-                                            />
-                                            <VHText 
-                                                variant={"caption"}
-                                                color={"gray-40"}
-                                                text={props.sec}
-                                            />
-                                        </Row>
-                                    </VHCardBase>
-                                </Row>
-                            </Row>
+                            <VHTimer
+                                endDate={ props.endDate }
+                            />
                             <Row row alignItemsCenter marginRight={1}>
                                 <Row width={"100px"}>
                                     <VHButton 
@@ -110,6 +45,7 @@ const VHPromoBar = props => {
                                         lg
                                         onEvent={props.onEvent}
                                         data={"VHPromoBar"}
+                                        black
                                     />
                                 </Row>
                             </Row>

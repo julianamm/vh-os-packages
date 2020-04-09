@@ -47,7 +47,21 @@ var VHRelocationSection = function VHRelocationSection(props) {
   }, {
     value: false
   }];
+  var firstChoice = props.firstChoice ? props.firstChoice : {};
   var targetLocation = props.targetLocation ? props.targetLocation.items : [];
+  var preferedCountries = [];
+
+  if (targetLocation != undefined && targetLocation.length > 0) {
+    targetLocation.map(function (country) {
+      if (country.status) {
+        preferedCountries.push({
+          value: country.id,
+          label: country.name
+        });
+      }
+    });
+  }
+
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
     marginBottom: 2,
     className: "vh-general-section-title ".concat(props.className ? props.className : ''),
@@ -80,12 +94,27 @@ var VHRelocationSection = function VHRelocationSection(props) {
     titleColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : "gray-90",
     titleVariant: "platform1"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 16,
+    marginBottom: 8,
     width: '600px',
     id: "target-location"
   }, /*#__PURE__*/_react.default.createElement(_TargetLocation.default, {
     onEvent: props.onEvent,
     items: targetLocation
+  })), preferedCountries.length > 0 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    width: '50%',
+    responsive: true,
+    id: "preferred-country"
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    caption: 'Which country is your first choice?',
+    className: "vh-general-section-firstChoice ".concat(props.className ? props.className : ''),
+    currentItem: firstChoice,
+    data: "firstChoice",
+    items: preferedCountries,
+    onEvent: props.onEvent,
+    isLoading: props.controls.firstChoice.loading,
+    description: props.controls.firstChoice.error && props.controls.firstChoice.message,
+    descriptionColor: "red",
+    captionColor: props.controls.firstChoice.loading ? "gray-40" : props.controls.firstChoice.error ? "red" : "gray-90"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     responsive: true,
@@ -163,12 +192,14 @@ var VHRelocationSection = function VHRelocationSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     paddingRight8: true
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
+    input: true,
     data: 'passportValid',
     color: "gray-90",
     variant: "platform1",
     onEvent: props.onEvent,
     text: 'Do you have a valid passport?',
-    checked: props.passportValid
+    checked: props.passportValid,
+    value: props.passportExpirationDate
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {

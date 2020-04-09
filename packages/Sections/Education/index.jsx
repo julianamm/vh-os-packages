@@ -7,13 +7,16 @@ import VHButton from "../../Components/Button-New"
 import VHCardBase from "../../Components/Cards/Base/"
 import VHText from "../../Components/Text/"
 import { CardSkeleton } from 'react-preload-skeleton'
-import VHPreloader from '../../Components/Preloader';
+import VHPreloader from '../../Components/Preloader'
+import VHSelect from '../../Components/Input/Select/'
 
 const VHEducationSection = props => {
   const [openModal, setOpenModal] = React.useState(false);
   const education = props.education ? props.education : [];
   const items = props.degreeTypeList;
   const [currentItem, setCurrentItem] = React.useState({});
+  const degreeType = props.degreeType != undefined ? items.find(element => element.value === props.degreeType) : {};
+
   return (
     <React.Fragment>
       {openModal &&
@@ -27,7 +30,7 @@ const VHEducationSection = props => {
           currentItem={currentItem} />
       }
       <Row marginBottom={2}>
-        <VHText 
+        <VHText
           className={`vh-education-section-title ${props.className ? props.className : ''}`}
           text={"Education"}
           color="black-50"
@@ -49,6 +52,23 @@ const VHEducationSection = props => {
                 </>
               ) : (
                   <Row column>
+                    <Row>
+                      <Row>
+                        <VHText variant={'subtitle1'} text={'Formal Education'} color={'black-100'} onEvent={props.onEvent} />
+                        <Row paddingTop={'5'} paddingRight8 id="education-level" width={'50%'}>
+                          <VHSelect
+                            caption="What's your education level?"
+                            captionColor="gray-90"
+                            className={`vh-general-section-degree ${props.className ? props.className : ''}`}
+                            currentItem={degreeType}
+                            data="degreeType"
+                            onEvent={props.onEvent}
+                            items={items}
+                            color="gray-90"
+                          />
+                        </Row>
+                      </Row>
+                    </Row>
                     {education.map(item => {
                       return (
                         <Row marginBottom5>

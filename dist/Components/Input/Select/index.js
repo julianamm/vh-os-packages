@@ -101,7 +101,7 @@ var VHSelect = function VHSelect(props) {
     }
   }, _defineProperty(_style, "singleValue", function singleValue(styles) {
     return {
-      paddingTop: '0'
+      padding: '6px 0'
     };
   }), _defineProperty(_style, "dropdownIndicator", function dropdownIndicator(styles) {
     return {
@@ -250,7 +250,7 @@ var VHSelect = function VHSelect(props) {
 
           handleChange(newValue);
 
-          if (props.isMulti) {
+          if (props.isMulti && newValue.length <= 3) {
             newValue.map(function (item) {
               finalValueChange.push(parseInt(item.value === 'zero' ? 0 : item.value));
             });

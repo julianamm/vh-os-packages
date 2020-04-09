@@ -37,8 +37,8 @@ var StartStep = function StartStep(props) {
     }
   }, "6 Steps to a Successful Profile")), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      paddingLeft: '100px',
-      paddingRight: '100px',
+      paddingLeft: '55px',
+      paddingRight: '55px',
       marginBottom: '50px'
     }
   }, /*#__PURE__*/_react.default.createElement("p", {

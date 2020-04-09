@@ -15,7 +15,11 @@ var S = _interopRequireWildcard(require("./styles"));
 
 var _Text = _interopRequireDefault(require("../../Text"));
 
+var _Simple = _interopRequireDefault(require("../../Input/Simple"));
+
 var _Grid = require("../../../Grid");
+
+var _util = require("../../../util");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -91,7 +95,12 @@ var VHInputRadio = function VHInputRadio(props) {
     }
   }), /*#__PURE__*/_react.default.createElement(S.Label, {
     for: props.text
-  }, 'No')));
+  }, 'No'), props.input && checked && /*#__PURE__*/_react.default.createElement(S.Container, null, /*#__PURE__*/_react.default.createElement(_Simple.default, {
+    data: 'passportExpirationDate',
+    type: "date",
+    value: (0, _util.getFormatedDate)(props.value),
+    onEvent: props.onEvent
+  }))));
 };
 
 VHInputRadio.defaultProps = {
