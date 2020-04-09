@@ -53,7 +53,7 @@ storiesOf('Components|Onboarding', module)
         controls={controls}
 
         steps={6}
-        currentStep={5}
+        currentStep={1}
         onEvent={e => {
             console.log(e)
         }}
