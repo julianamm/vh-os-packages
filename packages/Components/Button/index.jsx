@@ -17,6 +17,7 @@ const VHButton = props => {
         white={props.white}
         secondary={props.secondary}
         danger={props.danger}
+        black={props.black}
         full={props.full}
         nowrap={props.nowrap}
         disabled={props.disabled}
@@ -46,6 +47,7 @@ const VHButton = props => {
       primary={props.primary}
       secondary={props.secondary}
       danger={props.danger}
+      black={props.black}
       full={props.full}
       disabled={props.disabled}
       className={`vh-button-component ${props.className ? props.className : ''}`}
@@ -92,6 +94,7 @@ VHButton.propTypes = {
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
   danger: PropTypes.bool,
+  black: PropTypes.bool,
   nowrap: PropTypes.bool,
   disabled: PropTypes.bool,
   onEvent: PropTypes.func.isRequired,
