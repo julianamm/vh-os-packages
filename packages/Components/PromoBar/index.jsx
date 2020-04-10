@@ -37,7 +37,7 @@ const VHPromoBar = props => {
                             <VHTimer
                                 endDate={ props.endDate }
                             />
-                            <Row row alignItemsCenter marginRight={1}>
+                            <Row row alignItemsCenter marginRight={1} marginLeft={3}>
                                 <Row width={"100px"}>
                                     <VHButton 
                                         label={props.label}
