@@ -10,6 +10,11 @@ storiesOf('Hyperlinks|Links', module)
       <VHLink to={"#"} xs label="VH link" />
     </div>
   ))
+  .add('xs with onClick', () => (
+    <div style={{ padding: "24px" }}>
+      <VHLink onEvent={ e => { console.log(e) }} xs label="VH link with OnClick" />
+    </div>
+  ))
   .add('sm', () => (
     <div style={{ padding: "24px" }}>
       <VHLink to={"#"} sm label="VH link" />
