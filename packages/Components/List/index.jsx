@@ -43,7 +43,7 @@ const VHList = props => {
                 <Row width={'20%'} responsive >
                     <VHSelect
                         preLoading={props.controls.topSkill.preLoading}
-                        placeholder='Select your top skill'
+                        placeholder='Experience'
                         removeIndicator
                         isDisabled={!items[0] ? true : false}
                         marginBottom={'0px'}
@@ -89,7 +89,7 @@ const VHList = props => {
                 <Row width={'20%'} responsive>
                     <VHSelect
                         preLoading={props.controls.topSkill.preLoading}
-                        placeholder='Select your top skill'
+                        placeholder='Experience'
                         removeIndicator
                         isDisabled={!items[1] ? true : false}
                         marginBottom={'0px'}
@@ -135,7 +135,7 @@ const VHList = props => {
                 <Row width={'20%'} responsive>
                     <VHSelect
                         preLoading={props.controls.topSkill.preLoading}
-                        placeholder='Select your top skill'
+                        placeholder='Experience'
                         removeIndicator
                         isDisabled={!items[2] ? true : false}
                         marginBottom={'0px'}

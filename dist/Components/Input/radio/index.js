@@ -98,6 +98,7 @@ var VHInputRadio = function VHInputRadio(props) {
   }, 'No'), props.input && checked && /*#__PURE__*/_react.default.createElement(S.Container, null, /*#__PURE__*/_react.default.createElement(_Simple.default, {
     data: 'passportExpirationDate',
     type: "date",
+    placeholder: 'Expiration: mm/yy',
     value: (0, _util.getFormatedDate)(props.value),
     onEvent: props.onEvent
   }))));

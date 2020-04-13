@@ -75,7 +75,8 @@ var VHLanguageList = function VHLanguageList(props) {
     descriptionColor: "primary",
     leftText: "",
     onEvent: props.onEvent,
-    order: 0
+    order: 0,
+    placeholder: 'Proficiency'
   }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true,
@@ -116,7 +117,8 @@ var VHLanguageList = function VHLanguageList(props) {
     descriptionColor: "primary",
     leftText: "",
     onEvent: props.onEvent,
-    order: 1
+    order: 1,
+    placeholder: 'Proficiency'
   }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true,
@@ -155,7 +157,8 @@ var VHLanguageList = function VHLanguageList(props) {
     descriptionColor: "primary",
     leftText: "",
     onEvent: props.onEvent,
-    order: 2
+    order: 2,
+    placeholder: 'Proficiency'
   }))));
 };
 

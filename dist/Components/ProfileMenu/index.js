@@ -61,8 +61,7 @@ var VHProfileMenu = /*#__PURE__*/function (_Component) {
         fullWidth: true
       }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
         column: true,
-        fixed: true,
-        width: '310px'
+        fixed: true
       }, this.props.links.map(function (link, index) {
         return /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Img.default, {
           source: link.img,

@@ -35,7 +35,9 @@ var VHInputMultiple = function VHInputMultiple(props) {
   var it = [];
 
   try {
-    it = JSON.parse(props.items.value);
+    if (props.items !== null) {
+      it = JSON.parse(props.items.value);
+    }
   } catch (error) {}
 
   var _useState = (0, _react.useState)(it),
@@ -83,6 +85,25 @@ var VHInputMultiple = function VHInputMultiple(props) {
                   data: props.data
                 },
                 event: "onKeyUpAction",
+                origin: "VHInputMultiple"
+              });
+            }
+
+            break;
+
+          case e.event === "onBlur":
+            if (e.data.value !== '') {
+              items[index] = {
+                value: e.data.value,
+                loading: ''
+              };
+              setItems(items);
+              props.onEvent({
+                data: {
+                  value: JSON.stringify(items.concat(newItems)),
+                  data: props.data
+                },
+                event: "onBlur",
                 origin: "VHInputMultiple"
               });
             }

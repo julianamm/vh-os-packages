@@ -60,7 +60,7 @@ const VHInputRadio = props => {
                 <S.Label for={props.text}>{'No'}</S.Label>
                 {props.input && checked &&
                     <S.Container>
-                        <VHInput data={'passportExpirationDate'} type='date' value={getFormatedDate(props.value)} onEvent={props.onEvent} />
+                        <VHInput data={'passportExpirationDate'} type='date' placeholder={'Expiration: mm/yy'} value={getFormatedDate(props.value)} onEvent={props.onEvent} />
                     </S.Container>
                 }
             </S.Wrapper>

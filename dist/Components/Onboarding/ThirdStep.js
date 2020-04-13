@@ -23,9 +23,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var ThirdStep = function ThirdStep(props) {
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    column: true,
-    marginLeft: 1,
-    marginRight: 1
+    column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     marginBottom: 10,

@@ -50,6 +50,7 @@ const VHLanguageList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={0}
+                        placeholder={'Proficiency'}
                     />
                 </Row>
             </ S.Wrapper>
@@ -88,6 +89,7 @@ const VHLanguageList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={1}
+                        placeholder={'Proficiency'}
                     />
                 </Row>
             </S.Wrapper>
@@ -127,6 +129,7 @@ const VHLanguageList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={2}
+                        placeholder={'Proficiency'}
                     />
                 </Row>
             </S.Wrapper>

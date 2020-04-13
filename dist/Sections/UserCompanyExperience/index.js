@@ -58,14 +58,17 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
       _setCurrentItem = _React$useState6[1];
 
   function calcDate(date) {
-    var today = new Date();
-    var past = new Date(date);
-    var diff = Math.floor(today.getTime() - past.getTime());
-    var day = 1000 * 60 * 60 * 24;
-    var days = Math.floor(diff / day);
-    var months = Math.floor(days / 31);
-    var years = Math.floor(months / 12);
-    return "".concat(years, " years, ").concat(months, " months");
+    var df = new Date(date);
+    var dt = new Date();
+    var allYears = dt.getFullYear() - df.getFullYear();
+    var partialMonths = dt.getMonth() - df.getMonth();
+
+    if (partialMonths < 0) {
+      allYears--;
+      partialMonths = partialMonths + 12;
+    }
+
+    return "".concat(allYears, " years, ").concat(partialMonths, " months");
   }
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, openModal && /*#__PURE__*/_react.default.createElement(_ModalExperience.default, {

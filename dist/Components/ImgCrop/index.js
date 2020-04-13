@@ -17,7 +17,7 @@ var _Grid = require("../../Grid");
 
 var _Avatar = _interopRequireDefault(require("../Avatar"));
 
-var _Button = _interopRequireDefault(require("../Button"));
+var _ButtonNew = _interopRequireDefault(require("../Button-New"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -234,7 +234,7 @@ var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
           });
         }
       }), /*#__PURE__*/_react.default.createElement(_Modal.default, {
-        content: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, showCropper && /*#__PURE__*/_react.default.createElement(_Button.default, {
+        content: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, showCropper && /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
           className: "",
           label: "Send",
           onEvent: function onEvent(e) {

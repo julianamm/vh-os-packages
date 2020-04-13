@@ -17,17 +17,16 @@ const VHUserCompanyExperienceSection = props => {
 
   function calcDate(date) {
 
-    let today = new Date()
-    let past = new Date(date) 
+    var df = new Date(date);
+    var dt = new Date();
+    var allYears = dt.getFullYear() - df.getFullYear();
+    var partialMonths = dt.getMonth() - df.getMonth();
+    if (partialMonths < 0) {
+      allYears--;
+      partialMonths = partialMonths + 12;
+    }
 
-    var diff = Math.floor(today.getTime() - past.getTime());
-    var day = 1000 * 60 * 60 * 24;
-
-    var days = Math.floor(diff / day);
-    var months = Math.floor(days / 31);
-    var years = Math.floor(months / 12);
-
-    return `${years} years, ${months} months`  
+    return `${allYears} years, ${partialMonths} months`
   }
 
   return (

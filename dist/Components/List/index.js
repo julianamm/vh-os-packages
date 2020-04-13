@@ -73,7 +73,7 @@ var VHList = function VHList(props) {
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
-    placeholder: "Select your top skill",
+    placeholder: "Experience",
     removeIndicator: true,
     isDisabled: !items[0] ? true : false,
     marginBottom: '0px',
@@ -126,7 +126,7 @@ var VHList = function VHList(props) {
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
-    placeholder: "Select your top skill",
+    placeholder: "Experience",
     removeIndicator: true,
     isDisabled: !items[1] ? true : false,
     marginBottom: '0px',
@@ -179,7 +179,7 @@ var VHList = function VHList(props) {
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
-    placeholder: "Select your top skill",
+    placeholder: "Experience",
     removeIndicator: true,
     isDisabled: !items[2] ? true : false,
     marginBottom: '0px',

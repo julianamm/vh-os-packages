@@ -4,6 +4,7 @@ import VHIconText from "../IconText/index";
 
 
 const VHIconTitleList = (props) => {
+    if(props.items !== null){
     let items = []
     if (props.items) {
         items = props.items
@@ -44,6 +45,11 @@ const VHIconTitleList = (props) => {
             }
         </>
     )
+        }else{
+            return(
+                <div />
+            )
+        }
 }
 
 VHIconTitleList.propTypes = {

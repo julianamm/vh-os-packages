@@ -5,7 +5,9 @@ import VHInputIcon from '../Icon'
 const VHInputMultiple = props => {
   let it = []
   try {
+    if(props.items !== null){
     it = JSON.parse(props.items.value)
+    }
   } catch (error) {
 
   }
@@ -44,6 +46,24 @@ const VHInputMultiple = props => {
                           data: props.data
                         },
                         event: "onKeyUpAction",
+                        origin: "VHInputMultiple"
+                      })
+                    }
+                    break
+                    case e.event === "onBlur":
+                    if (e.data.value !== '') {
+                      items[index] = {
+                        value: e.data.value,
+                        loading: ''
+                      }
+                      setItems(items)
+
+                      props.onEvent({
+                        data: {
+                          value: JSON.stringify(items.concat(newItems)),
+                          data: props.data,
+                        },
+                        event: "onBlur",
                         origin: "VHInputMultiple"
                       })
                     }

@@ -12,10 +12,10 @@ import VHTitleDescription from "../../Components/TitleDescription";
 
 const VHSkillsSection = props => {
   const positions = props.positions
-  const position = props.positionSkill != undefined ? [positions[props.positionSkill]] : {};
+  const position = props.positionSkill != undefined ? positions[props.positionSkill] : {};
 
   const yearsOfExperienceList = props.yearsOfExperienceList
-  const yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
+  const yearsOfExperience = props.yearsOfExperience != undefined ? yearsOfExperienceList[props.yearsOfExperience] : {};
 
   const workAsList = props.positions
 
@@ -95,20 +95,13 @@ const VHSkillsSection = props => {
             <VHInputCheckbox
               checked={props.leadershipExperience}
               className=""
-              color={
-                props.controls.leadershipExperience.loading
-                  ? "gray-40"
-                  : props.controls.leadershipExperience.error
-                    ? "red"
-                    : 'gray-90'
-              }
+              color={'gray-90'}
               data={{
                 checked: props.leadershipExperience,
                 id: 'leadershipExperience',
                 label: 'yes',
                 value: '123'
               }}
-              disabled={props.controls.leadershipExperience.loading}
               onEvent={props.onEvent}
               title="I have leadership experience"
               value="123"
@@ -119,50 +112,44 @@ const VHSkillsSection = props => {
             <VHInputCheckbox
               checked={props.openForDifferentRole}
               className=""
-              color={
-                props.controls.openForDifferentRole.loading
-                  ? "gray-40"
-                  : props.controls.openForDifferentRole.error
-                    ? "red"
-                    : 'gray-90'
-              }
+              color={'gray-90'}
               data={{
                 checked: props.openForDifferentRole,
                 id: 'openForDifferentRole',
                 label: 'yes',
                 value: '123'
               }}
-              disabled={props.controls.openForDifferentRole.loading}
               onEvent={props.onEvent}
               title="I am open to working in a different role"
               value="123"
               variant="platform1"
-              
+
             />
           </Row>
-          
-          <Row id="would-work-as">
-            <VHSelect
-              preLoading={props.preLoading}
-              caption="I would like to work as..."
-              isMulti
-              captionColor={
-                props.controls.userPositions.loading
-                  ? "gray-40"
-                  : props.controls.userPositions.error
-                    ? "red"
-                    : "gray-90"
-              }
-              className={`vh-skills-section-userPositions ${props.className ? props.className : ''}`}
-              currentItem={userPositions}
-              data="userPositions"
-              onEvent={props.onEvent}
-              items={workAsList}
-              isLoading={props.controls.userPositions.loading}
-              description={props.controls.userPositions.error && props.controls.userPositions.message}
-              descriptionColor="red"
-            />
-          </Row>
+          {props.openForDifferentRole &&
+            <Row id="would-work-as">
+              <VHSelect
+                preLoading={props.preLoading}
+                caption="I would like to work as..."
+                isMulti
+                captionColor={
+                  props.controls.userPositions.loading
+                    ? "gray-40"
+                    : props.controls.userPositions.error
+                      ? "red"
+                      : "gray-90"
+                }
+                className={`vh-skills-section-userPositions ${props.className ? props.className : ''}`}
+                currentItem={userPositions}
+                data="userPositions"
+                onEvent={props.onEvent}
+                items={workAsList}
+                isLoading={props.controls.userPositions.loading}
+                description={props.controls.userPositions.error && props.controls.userPositions.message}
+                descriptionColor="red"
+              />
+            </Row>
+          }
           <Row column marginTop={15}>
             <VHTitleDescription
               contents={true}

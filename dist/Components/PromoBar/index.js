@@ -15,9 +15,9 @@ var _Grid = require("../../Grid");
 
 var _index = _interopRequireDefault(require("../Text/index"));
 
-var _index2 = _interopRequireDefault(require("../Cards/Base/index"));
+var _index2 = _interopRequireDefault(require("../Button/index"));
 
-var _index3 = _interopRequireDefault(require("../Button/index"));
+var _index3 = _interopRequireDefault(require("../Timer/index"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
@@ -31,7 +31,7 @@ var VHPromoBar = function VHPromoBar(props) {
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     className: "vh-promo-bar ".concat(props.className ? props.className : '')
   }, /*#__PURE__*/_react.default.createElement(S.Wrapper, {
-    color: "red"
+    color: props.backgroundColor ? props.backgroundColor : 'gray-30'
   }, /*#__PURE__*/_react.default.createElement(_Grid.Container, {
     md: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
@@ -66,94 +66,22 @@ var VHPromoBar = function VHPromoBar(props) {
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     justifyBottom: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+    endDate: props.endDate
+  }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
-    alignItemsCenter: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    alignItemsCenter: true,
     marginRight: 1,
-    marginLeft: 2
-  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
-    noHover: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    alignItemsCenter: true,
-    height: 1,
-    style: {
-      justifyContent: "center"
-    }
-  }, /*#__PURE__*/_react.default.createElement(_index.default, {
-    variant: "h4",
-    color: "black-90",
-    text: props.numDays
-  }), /*#__PURE__*/_react.default.createElement(_index.default, {
-    variant: "caption",
-    color: "gray-40",
-    text: props.days
-  })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginRight: 1
-  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
-    noHover: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    alignItemsCenter: true,
-    height: 1,
-    style: {
-      justifyContent: "center"
-    }
-  }, /*#__PURE__*/_react.default.createElement(_index.default, {
-    variant: "h4",
-    color: "black-90",
-    text: props.numHours
-  }), /*#__PURE__*/_react.default.createElement(_index.default, {
-    variant: "caption",
-    color: "gray-40",
-    text: props.hours
-  })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginRight: 1
-  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
-    noHover: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    alignItemsCenter: true,
-    height: 1,
-    style: {
-      justifyContent: "center"
-    }
-  }, /*#__PURE__*/_react.default.createElement(_index.default, {
-    variant: "h4",
-    color: "black-90",
-    text: props.numMin
-  }), /*#__PURE__*/_react.default.createElement(_index.default, {
-    variant: "caption",
-    color: "gray-40",
-    text: props.min
-  })))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginRight: 3
-  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
-    noHover: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    alignItemsCenter: true,
-    height: 1,
-    style: {
-      justifyContent: "center"
-    }
-  }, /*#__PURE__*/_react.default.createElement(_index.default, {
-    variant: "h4",
-    color: "black-90",
-    text: props.numSec
-  }), /*#__PURE__*/_react.default.createElement(_index.default, {
-    variant: "caption",
-    color: "gray-40",
-    text: props.sec
-  }))))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    row: true,
-    alignItemsCenter: true,
-    marginRight: 1
+    marginLeft: 3
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: "100px"
-  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index2.default, {
     label: props.label,
     full: true,
     lg: true,
     onEvent: props.onEvent,
-    data: "VHPromoBar"
+    data: "VHPromoBar",
+    black: true
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     alignItemsCenter: true,
