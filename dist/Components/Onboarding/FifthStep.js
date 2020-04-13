@@ -36,9 +36,7 @@ var FifthStep = function FifthStep(props) {
   var genders = props.genders;
   var gender = props.gender != undefined ? [genders[props.gender]] : {};
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    column: true,
-    marginLeft: 1,
-    marginRight: 1
+    column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     marginBottom: 10,

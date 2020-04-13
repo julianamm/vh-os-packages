@@ -82,10 +82,10 @@ var VHSocialSection = function VHSocialSection(props) {
     disabled: props.controls.resume.loading,
     error: props.controls.resume.error,
     loading: props.controls.resume.loading,
-    placeholder: "http://sitename.com/your-resume.pdf",
+    placeholder: "https://drive.google.com/your-resume",
     value: props.resume,
     data: 'resume',
-    icon: "profile",
+    icon: "user",
     onEvent: props.onEvent
   }))))));
 };

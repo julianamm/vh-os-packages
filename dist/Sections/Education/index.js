@@ -115,7 +115,7 @@ var VHEducationSection = function VHEducationSection(props) {
   })) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true,
     marginBottom5: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: 'subtitle1',
     text: 'Formal Education',
     color: 'black-100',
@@ -126,7 +126,7 @@ var VHEducationSection = function VHEducationSection(props) {
     id: "education-level",
     width: '50%'
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
-    caption: "What's your education level?",
+    caption: "What is your educational level?",
     captionColor: "gray-90",
     className: "vh-general-section-degree ".concat(props.className ? props.className : ''),
     currentItem: degreeType,
@@ -134,7 +134,7 @@ var VHEducationSection = function VHEducationSection(props) {
     onEvent: props.onEvent,
     items: items,
     color: "gray-90"
-  })))), education.map(function (item) {
+  }))), education.map(function (item) {
     return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
       marginBottom5: true
     }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {

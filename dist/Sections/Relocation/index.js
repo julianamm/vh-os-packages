@@ -167,7 +167,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
     paddingRight8: true,
     id: "visa-cad"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
-    caption: "Canadian Visa Status",
+    caption: "Canadian visa status",
     className: "vh-general-section-visaStatusCanadian ".concat(props.className ? props.className : ''),
     currentItem: visaStatusCanadian,
     data: "visaStatusCanadian",
@@ -180,7 +180,7 @@ var VHRelocationSection = function VHRelocationSection(props) {
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     id: "visa-eu"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
-    caption: "EU Visa Status",
+    caption: "EU visa status",
     className: "vh-general-section-visaStatusEU ".concat(props.className ? props.className : ''),
     currentItem: visaStatusEU,
     data: "visaStatusEU",

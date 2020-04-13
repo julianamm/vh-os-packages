@@ -29,9 +29,7 @@ var FirstStep = function FirstStep(props) {
   var yearsOfExperienceList = props.yearsOfExperienceList;
   var yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    column: true,
-    marginLeft: 1,
-    marginRight: 1
+    column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     marginBottom: 10,
@@ -47,7 +45,7 @@ var FirstStep = function FirstStep(props) {
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: "h4",
     color: "gray-90",
-    text: 'Professional details'
+    text: 'Professional Overview'
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom5: true
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
@@ -78,7 +76,9 @@ var FirstStep = function FirstStep(props) {
     description: props.controls.yearsOfExperience.error && props.controls.yearsOfExperience.message,
     descriptionColor: "red"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    paddingRight8: true
+    style: {
+      padding: '1px'
+    }
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'activelyLookingForJob',
     color: "gray-90",

@@ -21,6 +21,8 @@ var _radio = _interopRequireDefault(require("../Input/radio"));
 
 var _TargetLocation = _interopRequireDefault(require("../TargetLocation/"));
 
+var _TitleDescription = _interopRequireDefault(require("../../Components/TitleDescription"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var FourthStep = function FourthStep(props) {
@@ -30,9 +32,7 @@ var FourthStep = function FourthStep(props) {
   var visaStatusCanadian = props.visaStatusCanadian != undefined ? visaStatusCanadianList[props.visaStatusCanadian] : [];
   var visaStatusEU = props.visaStatusEU != undefined ? visaStatusEUList[props.visaStatusEU] : [];
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    column: true,
-    marginLeft: 1,
-    marginRight: 1
+    column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     marginBottom: 10,
@@ -54,7 +54,10 @@ var FourthStep = function FourthStep(props) {
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10
+    marginBottom: 10,
+    style: {
+      padding: '1px'
+    }
   }, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'openForRemoteJobs',
     color: "gray-90",
@@ -62,6 +65,17 @@ var FourthStep = function FourthStep(props) {
     onEvent: props.onEvent,
     text: 'Are you open to remote jobs?',
     checked: props.openForRemoteJobs
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom: 1
+  }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
+    className: "vh-general-section-companySize ".concat(props.className ? props.className : ''),
+    descriptionColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red-light" : "gray-90",
+    descriptionVariant: "caption",
+    inline: true,
+    onEvent: props.onEvent,
+    title: "Where would you like to work?",
+    titleColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : "gray-90",
+    titleVariant: "platform1"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5,
     width: '100%'

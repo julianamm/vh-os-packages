@@ -70,7 +70,7 @@ var VHSkillsSection = function VHSkillsSection(props) {
     id: "main-role"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.preLoading,
-    caption: "I am...",
+    caption: "I am a/an...",
     captionColor: props.controls.positionSkill.loading ? "gray-40" : props.controls.positionSkill.error ? "red" : 'gray-90',
     className: "vh-skills-section-positionSkill ".concat(props.className ? props.className : ''),
     currentItem: position,

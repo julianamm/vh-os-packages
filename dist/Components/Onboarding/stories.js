@@ -260,7 +260,7 @@ var controls = {
   return /*#__PURE__*/_react.default.createElement(_.default, {
     controls: controls,
     steps: 6,
-    currentStep: 5,
+    currentStep: 1,
     onEvent: function onEvent(e) {
       console.log(e);
     }

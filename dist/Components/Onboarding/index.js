@@ -97,7 +97,8 @@ var VHOnboarding = function VHOnboarding(props) {
   }, /*#__PURE__*/_react.default.createElement(_Base.default, {
     noPadding: true,
     width: "730px",
-    height: "580px"
+    height: "580px",
+    id: "onboarding"
   }, props.controls.language.loading ? /*#__PURE__*/_react.default.createElement(_Preloader.default, {
     type: "fullPage",
     size: "md"
