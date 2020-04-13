@@ -31,6 +31,7 @@ const VHSecondaryList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={0}
+                            placeholder='Add secondary skill'
                         />
                     </Row>
                 </Row>
@@ -51,7 +52,7 @@ const VHSecondaryList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={0}
-                        placeholder="Proficiency"
+                        placeholder="Experience"
                     />
                 </Row>
             </ S.Wrapper>
@@ -72,6 +73,7 @@ const VHSecondaryList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={1}
+                            placeholder='Add secondary skill'
                         />
                     </Row>
                 </Row>
@@ -92,7 +94,7 @@ const VHSecondaryList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={1}
-                        placeholder="Proficiency"
+                        placeholder="Experience"
                     />
                 </Row>
             </S.Wrapper>
@@ -113,6 +115,7 @@ const VHSecondaryList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={2}
+                            placeholder='Add secondary skill'
                         />
                     </Row>
                 </Row>
@@ -133,7 +136,7 @@ const VHSecondaryList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={2}
-                        placeholder="Proficiency"
+                        placeholder="Experience"
                     />
                 </Row>
             </S.Wrapper>
@@ -154,6 +157,7 @@ const VHSecondaryList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={3}
+                            placeholder='Add secondary skill'
                         />
                     </Row>
                 </Row>
@@ -174,7 +178,7 @@ const VHSecondaryList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={3}
-                        placeholder="Proficiency"
+                        placeholder="Experience"
                     />
                 </Row>
             </S.Wrapper>
@@ -195,6 +199,7 @@ const VHSecondaryList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={4}
+                            placeholder='Add secondary skill'
                         />
                     </Row>
                 </Row>
@@ -215,6 +220,7 @@ const VHSecondaryList = props => {
                         leftText=""
                         onEvent={props.onEvent}
                         order={4}
+                        placeholder="Experience"
                     />
                 </Row>
             </S.Wrapper>

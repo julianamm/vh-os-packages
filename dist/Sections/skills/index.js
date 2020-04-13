@@ -29,9 +29,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHSkillsSection = function VHSkillsSection(props) {
   var positions = props.positions;
-  var position = props.positionSkill != undefined ? [positions[props.positionSkill]] : {};
+  var position = props.positionSkill != undefined ? positions[props.positionSkill] : {};
   var yearsOfExperienceList = props.yearsOfExperienceList;
-  var yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
+  var yearsOfExperience = props.yearsOfExperience != undefined ? yearsOfExperienceList[props.yearsOfExperience] : {};
   var workAsList = props.positions;
   var userPositions = [];
 
@@ -103,14 +103,13 @@ var VHSkillsSection = function VHSkillsSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
     checked: props.leadershipExperience,
     className: "",
-    color: props.controls.leadershipExperience.loading ? "gray-40" : props.controls.leadershipExperience.error ? "red" : 'gray-90',
+    color: 'gray-90',
     data: {
       checked: props.leadershipExperience,
       id: 'leadershipExperience',
       label: 'yes',
       value: '123'
     },
-    disabled: props.controls.leadershipExperience.loading,
     onEvent: props.onEvent,
     title: "I have leadership experience",
     value: "123",
@@ -122,19 +121,18 @@ var VHSkillsSection = function VHSkillsSection(props) {
   }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
     checked: props.openForDifferentRole,
     className: "",
-    color: props.controls.openForDifferentRole.loading ? "gray-40" : props.controls.openForDifferentRole.error ? "red" : 'gray-90',
+    color: 'gray-90',
     data: {
       checked: props.openForDifferentRole,
       id: 'openForDifferentRole',
       label: 'yes',
       value: '123'
     },
-    disabled: props.controls.openForDifferentRole.loading,
     onEvent: props.onEvent,
     title: "I am open to working in a different role",
     value: "123",
     variant: "platform1"
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  })), props.openForDifferentRole && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     id: "would-work-as"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.preLoading,

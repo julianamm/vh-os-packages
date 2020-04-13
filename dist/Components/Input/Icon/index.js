@@ -43,7 +43,8 @@ var VHInputIcon = function VHInputIcon(props) {
     data: props.data,
     value: props.value,
     onEvent: props.onEvent,
-    noBorder: !props.loading
+    noBorder: !props.loading,
+    maxLength: 100
   }));
 };
 

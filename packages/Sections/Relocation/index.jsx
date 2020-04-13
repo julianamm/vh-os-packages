@@ -20,10 +20,12 @@ const VHRelocationSection = props => {
     const visaStatusCanadianList = props.visaStatusCanadianList
     const visaStatusEUList = props.visaStatusEUList
     const noticePeriodList = props.noticePeriodList
+    const remoteJobList = props.remoteJobList
 
+    const openForRemoteJobs = props.openForRemoteJobs != undefined ? remoteJobList[props.openForRemoteJobs] : []
     const salaryRangeCad = props.salaryRangeCad != undefined ? salaryRangeCadList[props.salaryRangeCad] : []
     const salaryRangeEur = props.salaryRangeEur != undefined ? salaryRangeEurList[parseInt(props.salaryRangeEur)] : []
-    const visaStatusCanadian = props.visaStatusCanadian != undefined ? visaStatusCanadianList[props.visaStatusCanadian] : []
+    const visaStatusCanadian = props.visaStatusCanadian != undefined ? visaStatusCanadianList.find(element => element.value === props.visaStatusCanadian) : []
     const visaStatusEU = props.visaStatusEU != undefined ? visaStatusEUList[props.visaStatusEU] : []
     const noticePeriod = props.noticePeriod != undefined ? noticePeriodList[props.noticePeriod] : []
     const companySize = props.companySize ? props.companySize : [{ value: false }, { value: false }, { value: false }]
@@ -64,65 +66,79 @@ const VHRelocationSection = props => {
                         ) : (
                                 <>
                                     <Row column>
-                                        <Row marginBottom={16} id="remote-jobs">
-                                            <VHInputRadio
-                                                data={'openForRemoteJobs'}
-                                                color="gray-90"
-                                                variant="platform1"
+                                        <Row marginBottom={10} width={'50%'} id="remote-jobs">
+                                            <VHSelect
+                                                caption={'Are you open to remote jobs?'}
+                                                className={`vh-relocation-section-openForRemoteJobs ${props.className ? props.className : ''}`}
+                                                currentItem={openForRemoteJobs}
+                                                data="openForRemoteJobs"
+                                                items={remoteJobList}
                                                 onEvent={props.onEvent}
-                                                text={'Are you open to remote jobs?'}
-                                                checked={props.openForRemoteJobs}
-                                            />
-                                        </Row>
-                                        <Row marginBottom={1} >
-                                            <VHTitleDescription
-
-                                                className={`vh-general-section-companySize ${props.className ? props.className : ''}`}
-                                                descriptionColor={
-                                                    props.controls.companySize.loading
+                                                isLoading={props.controls.openForRemoteJobs.loading}
+                                                description={props.controls.openForRemoteJobs.error && props.controls.openForRemoteJobs.message}
+                                                descriptionColor="red"
+                                                captionColor={
+                                                    props.controls.openForRemoteJobs.loading
                                                         ? "gray-40"
-                                                        : props.controls.companySize.error
-                                                            ? "red-light"
-                                                            : "gray-90"
-                                                }
-                                                descriptionVariant="caption"
-                                                inline
-                                                onEvent={props.onEvent}
-                                                title="Where would you like to work?"
-                                                titleColor={
-                                                    props.controls.companySize.loading
-                                                        ? "gray-40"
-                                                        : props.controls.companySize.error
+                                                        : props.controls.openForRemoteJobs.error
                                                             ? "red"
                                                             : "gray-90"
                                                 }
-                                                titleVariant="platform1"
                                             />
                                         </Row>
-                                        <Row marginBottom={8} width={'600px'} id="target-location">
-                                            <VHTargetLocation onEvent={props.onEvent} items={targetLocation} />
-                                        </Row>
-                                        {preferedCountries.length > 0 &&
-                                            <Row width={'50%'} responsive id="preferred-country">
-                                                <VHSelect
-                                                    caption={'Which country is your first choice?'}
-                                                    className={`vh-general-section-firstChoice ${props.className ? props.className : ''}`}
-                                                    currentItem={firstChoice}
-                                                    data="firstChoice"
-                                                    items={preferedCountries}
-                                                    onEvent={props.onEvent}
-                                                    isLoading={props.controls.firstChoice.loading}
-                                                    description={props.controls.firstChoice.error && props.controls.firstChoice.message}
-                                                    descriptionColor="red"
-                                                    captionColor={
-                                                        props.controls.firstChoice.loading
-                                                            ? "gray-40"
-                                                            : props.controls.firstChoice.error
-                                                                ? "red"
-                                                                : "gray-90"
-                                                    }
-                                                />
-                                            </Row>
+                                        {props.openForRemoteJobs < 2 &&
+                                            <React.Fragment>
+                                                <Row marginBottom={1} >
+                                                    <VHTitleDescription
+
+                                                        className={`vh-general-section-companySize ${props.className ? props.className : ''}`}
+                                                        descriptionColor={
+                                                            props.controls.companySize.loading
+                                                                ? "gray-40"
+                                                                : props.controls.companySize.error
+                                                                    ? "red-light"
+                                                                    : "gray-90"
+                                                        }
+                                                        descriptionVariant="caption"
+                                                        inline
+                                                        onEvent={props.onEvent}
+                                                        title="Where would you like to work?"
+                                                        titleColor={
+                                                            props.controls.companySize.loading
+                                                                ? "gray-40"
+                                                                : props.controls.companySize.error
+                                                                    ? "red"
+                                                                    : "gray-90"
+                                                        }
+                                                        titleVariant="platform1"
+                                                    />
+                                                </Row>
+                                                <Row marginBottom={8} width={'600px'} id="target-location">
+                                                    <VHTargetLocation onEvent={props.onEvent} items={targetLocation} />
+                                                </Row>
+                                                {preferedCountries.length > 0 &&
+                                                    <Row width={'50%'} responsive id="preferred-country">
+                                                        <VHSelect
+                                                            caption={'Which country is your first choice?'}
+                                                            className={`vh-general-section-firstChoice ${props.className ? props.className : ''}`}
+                                                            currentItem={firstChoice}
+                                                            data="firstChoice"
+                                                            items={preferedCountries}
+                                                            onEvent={props.onEvent}
+                                                            isLoading={props.controls.firstChoice.loading}
+                                                            description={props.controls.firstChoice.error && props.controls.firstChoice.message}
+                                                            descriptionColor="red"
+                                                            captionColor={
+                                                                props.controls.firstChoice.loading
+                                                                    ? "gray-40"
+                                                                    : props.controls.firstChoice.error
+                                                                        ? "red"
+                                                                        : "gray-90"
+                                                            }
+                                                        />
+                                                    </Row>
+                                                }
+                                            </React.Fragment>
                                         }
                                         <Row row responsive marginBottom={5}>
                                             <Row paddingRight8 responsive id="salary-cad">

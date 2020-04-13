@@ -54,7 +54,8 @@ var VHSecondaryList = function VHSecondaryList(props) {
     description: "",
     descriptionColor: "primary",
     onEvent: props.onEvent,
-    order: 0
+    order: 0,
+    placeholder: "Add secondary skill"
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
@@ -73,7 +74,7 @@ var VHSecondaryList = function VHSecondaryList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 0,
-    placeholder: "Proficiency"
+    placeholder: "Experience"
   }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true,
@@ -93,7 +94,8 @@ var VHSecondaryList = function VHSecondaryList(props) {
     description: "",
     descriptionColor: "primary",
     onEvent: props.onEvent,
-    order: 1
+    order: 1,
+    placeholder: "Add secondary skill"
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
@@ -112,7 +114,7 @@ var VHSecondaryList = function VHSecondaryList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 1,
-    placeholder: "Proficiency"
+    placeholder: "Experience"
   }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true,
@@ -132,7 +134,8 @@ var VHSecondaryList = function VHSecondaryList(props) {
     description: "",
     descriptionColor: "primary",
     onEvent: props.onEvent,
-    order: 2
+    order: 2,
+    placeholder: "Add secondary skill"
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
@@ -151,7 +154,7 @@ var VHSecondaryList = function VHSecondaryList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 2,
-    placeholder: "Proficiency"
+    placeholder: "Experience"
   }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
@@ -170,7 +173,8 @@ var VHSecondaryList = function VHSecondaryList(props) {
     description: "",
     descriptionColor: "primary",
     onEvent: props.onEvent,
-    order: 3
+    order: 3,
+    placeholder: "Add secondary skill"
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
@@ -189,7 +193,7 @@ var VHSecondaryList = function VHSecondaryList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 3,
-    placeholder: "Proficiency"
+    placeholder: "Experience"
   }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
@@ -208,7 +212,8 @@ var VHSecondaryList = function VHSecondaryList(props) {
     description: "",
     descriptionColor: "primary",
     onEvent: props.onEvent,
-    order: 4
+    order: 4,
+    placeholder: "Add secondary skill"
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     width: '20%'
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
@@ -226,7 +231,8 @@ var VHSecondaryList = function VHSecondaryList(props) {
     descriptionColor: "primary",
     leftText: "",
     onEvent: props.onEvent,
-    order: 4
+    order: 4,
+    placeholder: "Experience"
   }))));
 };
 

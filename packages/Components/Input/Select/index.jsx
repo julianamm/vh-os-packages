@@ -16,10 +16,19 @@ const VHSelect = props => {
     return <TitleDescriptionSkeleton />
   }
 
-  const [value, handleChange] = React.useState(props.currentItem);
+  let newValue = undefined
+
+  if (props.currentItem && Object.keys(props.currentItem).length !== 0 && props.currentItem.constructor === Object) {
+    newValue = props.currentItem
+  }
+  else if (Array.isArray(props.currentItem) && props.currentItem.length > 0) {
+    newValue = props.currentItem
+  }
+
+  const [value, handleChange] = React.useState(newValue);
   React.useEffect(() => {
-    handleChange(props.currentItem);
-  }, [props.currentItem])
+    handleChange(newValue);
+  }, [newValue])
 
   const style = {
     control: base => ({
@@ -35,10 +44,10 @@ const VHSelect = props => {
     }),
     indicatorSeparator: (styles) => ({ display: 'none' }),
     clearIndicator: (styles) => ({ display: 'none' }),
-    singleValue: (styles) => ({ color:'#4f4f4f'}),
-    valueContainer: (styles) => ({ width: 'auto', display: 'flex', paddingLeft:'0'}),
-    singleValue: (styles) => ({ padding:'6px 0'}),
-    dropdownIndicator:(styles) => ({ display: 'none' }),
+    singleValue: (styles) => ({ color: '#4f4f4f' }),
+    valueContainer: (styles) => ({ width: 'auto', display: 'flex', paddingLeft: '0' }),
+    singleValue: (styles) => ({ padding: '6px 0' }),
+    dropdownIndicator: (styles) => ({ display: 'none' }),
     option: (provided, state) => ({
       ...provided,
       color: state.isFocused ? '#646464' : '#646464'.isSelected ? '#fff' : '#646464',
@@ -109,7 +118,7 @@ const VHSelect = props => {
           styles={props.removeBorder ? style : styled}
           closeMenuOnSelect={!props.isMulti}
           className={props.className}
-          placeholder={props.placeholder}
+          placeholder={props.placeholder ? props.placeholder : 'Select an option'}
           isLoading={props.isLoading}
           isDisabled={props.isLoading || props.isDisabled}
           // components={animatedComponents}
@@ -122,7 +131,7 @@ const VHSelect = props => {
             switch (true) {
               case actionMeta.action === "remove-value":
                 let finalValue = []
-                if (newValue.value === 'zero') {
+                if (newValue !== null && newValue.value === 'zero') {
                   newValue.value = 0
                 }
                 handleChange(newValue);
@@ -152,26 +161,26 @@ const VHSelect = props => {
                 })
                 break
               case actionMeta.action === "select-option":
-                  let finalValueChange = []
-                  if (newValue.value === 'zero') {
-                    newValue.value = 0
-                  }
-                  handleChange(newValue);
-                  if (props.isMulti && newValue.length <= 3) {
-                    newValue.map(item => {
-                      finalValueChange.push(parseInt(item.value === 'zero' ? 0 : item.value))
-                    })
-                  }
-                  props.onEvent({
-                    type: "OnChange",
-                    origin: "VHSelect",
-                    props: {
-                      data: props.data,
-                      item: props.isMulti ? finalValueChange : newValue,
-                      action: 'add',
-                      order: props.order
-                    }
+                let finalValueChange = []
+                if (newValue.value === 'zero') {
+                  newValue.value = 0
+                }
+                handleChange(newValue);
+                if (props.isMulti && newValue.length <= 3) {
+                  newValue.map(item => {
+                    finalValueChange.push(parseInt(item.value === 'zero' ? 0 : item.value))
                   })
+                }
+                props.onEvent({
+                  type: "OnChange",
+                  origin: "VHSelect",
+                  props: {
+                    data: props.data,
+                    item: props.isMulti ? finalValueChange : newValue,
+                    action: 'add',
+                    order: props.order
+                  }
+                })
                 break
             }
           }}

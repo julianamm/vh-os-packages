@@ -15,7 +15,7 @@ const VHGeneralSection = props => {
   const locations = props.locations
   const location = props.location != undefined ? citizenships.find(element => element.value === props.location) : {};
   const genders = props.genders
-  const gender = props.gender != undefined ? [genders[props.gender]] : {};
+  const gender = props.gender != undefined ? genders[props.gender] : {};
   const [preloaderPhone, setPreloaderPhone] = React.useState(true);
 
   return (
@@ -59,7 +59,7 @@ const VHGeneralSection = props => {
             <Row id="location" >
               <VHSelect
                   preLoading={props.controls.location.preLoading || false}
-                  caption="Location"
+                  caption="Current location"
                   placeholder="Select an option"
                   className={`vh-general-section-location ${props.className ? props.className : ''}`}
                   currentItem={location}
@@ -118,7 +118,7 @@ const VHGeneralSection = props => {
                   descriptionVariant="caption"
                   inline
                   onEvent={props.onEvent}
-                  title="Phone number (optional)"
+                  title="Phone number"
                   titleColor={
                     props.controls.phone.loading
                     ? "gray-40"

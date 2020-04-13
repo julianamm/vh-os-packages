@@ -45,7 +45,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     return element.value === props.location;
   }) : {};
   var genders = props.genders;
-  var gender = props.gender != undefined ? [genders[props.gender]] : {};
+  var gender = props.gender != undefined ? genders[props.gender] : {};
 
   var _React$useState = _react.default.useState(true),
       _React$useState2 = _slicedToArray(_React$useState, 2),
@@ -85,7 +85,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     id: "location"
   }, /*#__PURE__*/_react.default.createElement(_Select.default, {
     preLoading: props.controls.location.preLoading || false,
-    caption: "Location",
+    caption: "Current location",
     placeholder: "Select an option",
     className: "vh-general-section-location ".concat(props.className ? props.className : ''),
     currentItem: location,
@@ -128,7 +128,7 @@ var VHGeneralSection = function VHGeneralSection(props) {
     descriptionVariant: "caption",
     inline: true,
     onEvent: props.onEvent,
-    title: "Phone number (optional)",
+    title: "Phone number",
     titleColor: props.controls.phone.loading ? "gray-40" : props.controls.phone.error ? "red" : "gray-90",
     titleVariant: "platform1"
   }), !props.controls.phone.preLoading && /*#__PURE__*/_react.default.createElement(_Simple.default, {

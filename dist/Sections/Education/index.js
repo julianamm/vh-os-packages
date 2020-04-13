@@ -27,6 +27,8 @@ var _Preloader = _interopRequireDefault(require("../../Components/Preloader"));
 
 var _Select = _interopRequireDefault(require("../../Components/Input/Select/"));
 
+var _ModalLicenses = _interopRequireDefault(require("../../Components/ModalLicenses"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -53,13 +55,24 @@ var VHEducationSection = function VHEducationSection(props) {
       openModal = _React$useState2[0],
       setOpenModal = _React$useState2[1];
 
+  var _React$useState3 = _react.default.useState(false),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      openModalLicenses = _React$useState4[0],
+      setOpenModalLicenses = _React$useState4[1];
+
   var education = props.education ? props.education : [];
+  var licenses = props.licenses ? props.licenses : [];
   var items = props.degreeTypeList;
 
-  var _React$useState3 = _react.default.useState({}),
-      _React$useState4 = _slicedToArray(_React$useState3, 2),
-      currentItem = _React$useState4[0],
-      _setCurrentItem = _React$useState4[1];
+  var _React$useState5 = _react.default.useState({}),
+      _React$useState6 = _slicedToArray(_React$useState5, 2),
+      currentItem = _React$useState6[0],
+      _setCurrentItem = _React$useState6[1];
+
+  var _React$useState7 = _react.default.useState({}),
+      _React$useState8 = _slicedToArray(_React$useState7, 2),
+      currentItemLicense = _React$useState8[0],
+      setCurrentItemLicense = _React$useState8[1];
 
   var degreeType = props.degreeType != undefined ? items.find(function (element) {
     return element.value === props.degreeType;
@@ -75,7 +88,18 @@ var VHEducationSection = function VHEducationSection(props) {
     items: items,
     controls: props.controls,
     onEvent: props.onEvent
-  }, "currentItem", currentItem)), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, "currentItem", currentItem)), openModalLicenses && /*#__PURE__*/_react.default.createElement(_ModalLicenses.default, {
+    openModal: openModalLicenses,
+    onClose: function onClose() {
+      return setOpenModalLicenses(false);
+    },
+    closeModal: props.closeModalLicenses,
+    modalLicenses: props.modalLicenses,
+    items: items,
+    controls: props.controls,
+    onEvent: props.onEvent,
+    currentItem: currentItemLicense
+  }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 2
   }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     className: "vh-education-section-title ".concat(props.className ? props.className : ''),
@@ -88,8 +112,9 @@ var VHEducationSection = function VHEducationSection(props) {
     type: "circle"
   }) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, props.preLoading ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.CardSkeleton, null), /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.CardSkeleton, {
     button: true
-  })) : /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    column: true
+  })) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    column: true,
+    marginBottom5: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: 'subtitle1',
     text: 'Formal Education',
@@ -149,7 +174,54 @@ var VHEducationSection = function VHEducationSection(props) {
       setOpenModal(true);
     },
     label: "Add Education"
-  }))))));
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    column: true,
+    marginBottom5: true
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    variant: 'subtitle1',
+    text: 'Licenses and Certifications',
+    color: 'black-100',
+    onEvent: props.onEvent
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, licenses.map(function (item) {
+    return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      marginBottom5: true
+    }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
+      hover: true,
+      pointer: true,
+      title: item.degreeTitle,
+      titleColor: "primary-light",
+      description: item.schoolName,
+      titleVariant: "h4",
+      descriptionVariant: "bodyweb",
+      onEvent: props.onEvent,
+      data: _objectSpread({
+        label: 'openModalEducation'
+      }, item),
+      onOpen: function onOpen() {
+        return setOpenModal(true);
+      },
+      setCurrentItem: function setCurrentItem() {
+        return _setCurrentItem(item);
+      }
+    }), /*#__PURE__*/_react.default.createElement(_Text.default, {
+      variant: 'caption',
+      text: "".concat(new Date(item.startDate).getFullYear(), " - ").concat(item.endDate ? new Date(item.endDate).getFullYear() : 'Present'),
+      color: 'gray-90',
+      onEvent: props.onEvent
+    }));
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    width: '20%'
+  }, /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
+    data: 'openModalLicenses',
+    primary: true,
+    onEvent: props.onEvent,
+    closeModal: props.closeModalLicenses,
+    onOpen: function onOpen() {
+      setCurrentItemLicense({});
+      setOpenModalLicenses(true);
+    },
+    label: "Add Certifications"
+  })))))));
 };
 
 VHEducationSection.propTypes = {
