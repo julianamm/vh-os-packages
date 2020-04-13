@@ -32,7 +32,7 @@ const VHOnboarding = props => {
     <Container displayNone={displayNone} currentStep={currentStep} animation justifyCenter fullHeight style={{ backgroundImage: 'linear-gradient(to bottom right, #56CCF2, #0675CE)' }} fullWidth>
       <img style={{ marginBottom: '50px' }} src={VanhackLogo} />
       <Row alignItemsCenter>
-        <Card noPadding width='730px' height='580px'>
+        <Card noPadding  width='730px' height='580px' id="onboarding">
           {props.controls.language.loading ?
             <VHPreloader type="fullPage" size="md" />
             :

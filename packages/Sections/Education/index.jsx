@@ -67,20 +67,18 @@ const VHEducationSection = props => {
                   <React.Fragment>
                     <Row column marginBottom5>
                       <Row>
-                        <Row>
-                          <VHText variant={'subtitle1'} text={'Formal Education'} color={'black-100'} onEvent={props.onEvent} />
-                          <Row paddingTop={'5'} paddingRight8 id="education-level" width={'50%'}>
-                            <VHSelect
-                              caption="What's your education level?"
-                              captionColor="gray-90"
-                              className={`vh-general-section-degree ${props.className ? props.className : ''}`}
-                              currentItem={degreeType}
-                              data="degreeType"
-                              onEvent={props.onEvent}
-                              items={items}
-                              color="gray-90"
-                            />
-                          </Row>
+                        <VHText variant={'subtitle1'} text={'Formal Education'} color={'black-100'} onEvent={props.onEvent} />
+                        <Row paddingTop={'5'} paddingRight8 id="education-level" width={'50%'}>
+                          <VHSelect
+                            caption="What is your educational level?"
+                            captionColor="gray-90"
+                            className={`vh-general-section-degree ${props.className ? props.className : ''}`}
+                            currentItem={degreeType}
+                            data="degreeType"
+                            onEvent={props.onEvent}
+                            items={items}
+                            color="gray-90"
+                          />
                         </Row>
                       </Row>
                       {education.map(item => {

@@ -188,7 +188,7 @@ const VHRelocationSection = props => {
                                         <Row row responsive marginBottom={5}>
                                             <Row paddingRight8 id="visa-cad">
                                                 <VHSelect
-                                                    caption="Canadian Visa Status"
+                                                    caption="Canadian visa status"
                                                     className={`vh-general-section-visaStatusCanadian ${props.className ? props.className : ''}`}
                                                     currentItem={visaStatusCanadian}
                                                     data="visaStatusCanadian"
@@ -208,7 +208,7 @@ const VHRelocationSection = props => {
                                             </Row>
                                             <Row id="visa-eu">
                                                 <VHSelect
-                                                    caption="EU Visa Status"
+                                                    caption="EU visa status"
                                                     className={`vh-general-section-visaStatusEU ${props.className ? props.className : ''}`}
                                                     currentItem={visaStatusEU}
                                                     data="visaStatusEU"

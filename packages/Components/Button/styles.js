@@ -122,6 +122,21 @@ const Button = styled.button`
     }
   `}
 
+  ${({ black }) =>
+  black &&
+  `
+  background-color: ${Color["black-100"]};
+  border: 1px solid ${Color["black-100"]};
+  :hover {
+    background-color: ${Color["black-80"]};
+    border: 1px solid ${Color["black-80"]};
+  }
+  :active {
+    background-color: ${Color["black-90"]};
+    border: 1px solid ${Color["black-90"]};
+  }
+`}
+
 `;
 
 export const OutlinedButton = styled.button`
@@ -235,6 +250,22 @@ export const OutlinedButton = styled.button`
         border: 1px solid ${Color["primary-dark"]};
       }
     `}
+
+    ${({ black }) =>
+    black &&
+    `
+    color: ${Color["black-100"]};
+    border: 1px solid ${Color["black-100"]};
+    :hover {
+      background-color: ${Color["black-80"]};
+      border: 1px solid ${Color["black-80"]};
+    }
+    :active {
+      background-color: ${Color["black-90"]};
+      border: 1px solid ${Color["black-90"]};
+    }
+  `}
+
 `;
 
 export default Button;
