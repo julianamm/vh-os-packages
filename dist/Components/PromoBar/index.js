@@ -17,7 +17,9 @@ var _index = _interopRequireDefault(require("../Text/index"));
 
 var _index2 = _interopRequireDefault(require("../Button/index"));
 
-var _index3 = _interopRequireDefault(require("../Timer/index"));
+var _index3 = _interopRequireDefault(require("../../Hyperlinks/Links/index"));
+
+var _index4 = _interopRequireDefault(require("../Timer/index"));
 
 var S = _interopRequireWildcard(require("./styles"));
 
@@ -66,7 +68,7 @@ var VHPromoBar = function VHPromoBar(props) {
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     justifyBottom: true
-  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+  }, /*#__PURE__*/_react.default.createElement(_index4.default, {
     endDate: props.endDate
   }), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
@@ -90,11 +92,13 @@ var VHPromoBar = function VHPromoBar(props) {
       cursor: "pointer"
     },
     mobileDisplayNone: true
-  }, /*#__PURE__*/_react.default.createElement(_index.default, {
-    variant: "subtitle3",
-    color: "gray-10",
-    text: "Dismiss",
-    onClick: props.onClick
+  }, /*#__PURE__*/_react.default.createElement(_index3.default, {
+    white: true,
+    xl: true,
+    noUnderscore: true,
+    label: "Dismiss",
+    onEvent: props.onEvent,
+    data: "DismissPromoBar"
   })))))));
 };
 

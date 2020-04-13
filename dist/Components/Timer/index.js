@@ -50,87 +50,52 @@ var VHTimer = function VHTimer(props) {
       days = _React$useState8[0],
       setDays = _React$useState8[1];
 
-  var _React$useState9 = _react.default.useState(0),
-      _React$useState10 = _slicedToArray(_React$useState9, 2),
-      months = _React$useState10[0],
-      setMonths = _React$useState10[1];
-
-  var _React$useState11 = _react.default.useState(0),
-      _React$useState12 = _slicedToArray(_React$useState11, 2),
-      currentDate = _React$useState12[0],
-      setCurrent = _React$useState12[1];
-
-  var start = function start(endDate) {
+  var start = function start(endDate, countdownFunction) {
     requestAnimationFrame(function () {
       var now = new Date();
-      var currentDate = new Date(now.getTime() + now.getTimezoneOffset() * 60000);
+      var currentDate = new Date(now.getTime() + now.getTimezoneOffset() * 60000); // Find the distance between now and the count down date
 
-      if (currentDate >= endDate) {
+      var distance = endDate - currentDate; // Time calculations for days, hours, minutes and seconds
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+      var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+      var seconds = Math.floor(distance % (1000 * 60) / 1000); // If the count down is finished, write some text
+
+      if (distance < 0) {
         setSeconds(0);
         setMinutes(0);
         setHours(0);
         setDays(0);
-        setMonths(0);
-        props.onEndTime();
+
+        if (props.onEndTime) {
+          props.onEndTime();
+        }
+
+        clearInterval(countdownFunction);
       } else {
-        setCurrent(currentDate);
-        var diffSeconds = Math.abs(currentDate.getSeconds() - 60);
-
-        if (diffSeconds === 60) {
-          diffSeconds = 0;
-        }
-
-        var diffMinutes = endDate.getMinutes() - (currentDate.getMinutes() - 60);
-
-        if (currentDate.getMinutes() < endDate.getMinutes()) {
-          diffMinutes = parseInt(endDate.getMinutes()) - currentDate.getMinutes();
-        } // let diffHours = endDate.getHours() - currentDate.getHours()
-
-
-        if (diffMinutes > 0) {
-          diffMinutes -= 1;
-        }
-
-        if (diffMinutes >= 60) {
-          diffMinutes = 0;
-        }
-
-        var ONE_DAY = 1000 * 60 * 60;
-        var date_ini_ms = currentDate.getTime();
-        var date_fim_ms = endDate.getTime();
-        var diferenca = date_fim_ms - date_ini_ms;
-        var diffHours = Math.abs(Math.round(diferenca / ONE_DAY));
-        var diffDays = endDate.getDate() - currentDate.getDate(); // diffHours = parseInt(diffHours) + (parseInt(diffDays) * 24)
-
-        var diffMonths = endDate.getMonth() - currentDate.getMonth();
-
-        if (diffHours > 0) {
-          diffHours -= 1;
-        }
-
         if (props.debugger) {
           console.log({
-            "Seconds": diffSeconds,
-            "Minutes": diffMinutes,
-            "Hours": diffHours,
-            "Days": diffDays,
-            "Months": diffMonths
+            "Seconds": seconds,
+            "Minutes": minutes,
+            "Hours": hours,
+            "Days": days
           });
         }
 
-        setSeconds(diffSeconds);
-        setMinutes(diffMinutes);
-        setHours(diffHours);
-        setDays(diffDays);
-        setMonths(diffMonths);
-        start(endDate);
+        setSeconds(seconds);
+        setMinutes(minutes);
+        setHours(hours);
+        setDays(days);
       }
     });
   };
 
   _react.default.useEffect(function () {
     console.log(props.endDate);
-    start(new Date(props.endDate));
+    var countdownFunction = setInterval(function () {
+      start(new Date(props.endDate), countdownFunction);
+    }, 1000);
   }, []);
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_styles.TimerContainer, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
