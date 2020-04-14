@@ -154,15 +154,17 @@ var VHModalExperience = function VHModalExperience(props) {
       descriptionColor: "red"
     }), item.industryId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required"))), item.workExperiences.map(function (experience, index) {
       return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-        width: '50%'
+        row: true
+      }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+        width: '50%',
+        marginRight: 2
       }, /*#__PURE__*/_react.default.createElement(_Select.default, {
         caption: "Role Title",
         captionColor: "gray-90",
         className: "vh-general-section-position ".concat(props.className ? props.className : ''),
-        currentItem: {
-          value: experience.positionId.value,
-          label: experience.positionId.value ? props.positions[experience.positionId.value].label : ''
-        },
+        currentItem: experience.positionId.value !== undefined ? props.positions.find(function (element) {
+          return element.value === experience.positionId.value;
+        }) : {},
         data: {
           id: "ModalExperience",
           field: "positionId",
@@ -171,7 +173,27 @@ var VHModalExperience = function VHModalExperience(props) {
         onEvent: props.onEvent,
         items: props.positions,
         descriptionColor: "red"
-      }), experience.positionId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), index === 0 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+      }), experience.positionId.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required")), experience.positionId && experience.positionId.value === 37 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+        style: {
+          width: '50%'
+        },
+        id: "other-role"
+      }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+        marginBottom: 2
+      }, /*#__PURE__*/_react.default.createElement(_index.default, {
+        color: "gray-90",
+        variant: 'platform',
+        text: "Other Role"
+      })), /*#__PURE__*/_react.default.createElement(_Simple.default, {
+        placeholder: "Ex: Developer",
+        onEvent: props.onEvent,
+        value: experience.otherPosition.value,
+        data: {
+          id: "ModalExperience",
+          field: "otherPosition",
+          index: index
+        }
+      }), experience.otherPosition.messageError && /*#__PURE__*/_react.default.createElement(S.ErrorMessage, null, "Field required"))), index === 0 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
         marginBottom5: true
       }, /*#__PURE__*/_react.default.createElement(_checkbox.default, {
         title: 'I am currently working in this role',

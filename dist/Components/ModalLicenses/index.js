@@ -144,10 +144,10 @@ var VHModalLicenses = function VHModalLicenses(props) {
       textColor: "gray-60",
       text: 'Delete',
       icon: "delete",
-      className: "vh-delete-education ".concat(props.className ? props.className : ''),
+      className: "vh-delete-license ".concat(props.className ? props.className : ''),
       variant: "platform",
       data: {
-        action: 'deleteSideProjects',
+        action: 'deleteLicense',
         id: item.id
       },
       onEvent: props.onEvent,

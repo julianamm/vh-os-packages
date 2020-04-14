@@ -26,6 +26,8 @@ var data = {
       padding: '9px'
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
+    input: true,
+    maxLength: "4",
     color: "gray-100",
     variant: "platform",
     onEvent: function onEvent(event) {

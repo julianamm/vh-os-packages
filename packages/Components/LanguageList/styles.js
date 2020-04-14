@@ -12,3 +12,8 @@ export const Wrapper = styled.div`
       background-color: ${Color["gray-20"]};
     }
 `;
+
+export const Close = styled.span`
+  cursor: pointer;
+  color: #000000;
+`;

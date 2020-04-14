@@ -45,6 +45,11 @@ var VHInputRadio = function VHInputRadio(props) {
       checked = _useState2[0],
       setChecked = _useState2[1];
 
+  var _useState3 = (0, _react.useState)(props.value),
+      _useState4 = _slicedToArray(_useState3, 2),
+      value = _useState4[0],
+      setValue = _useState4[1];
+
   _react.default.useEffect(function () {
     setChecked(props.checked);
   }, [props.checked]);
@@ -96,10 +101,12 @@ var VHInputRadio = function VHInputRadio(props) {
   }), /*#__PURE__*/_react.default.createElement(S.Label, {
     for: props.text
   }, 'No'), props.input && checked && /*#__PURE__*/_react.default.createElement(S.Container, null, /*#__PURE__*/_react.default.createElement(_Simple.default, {
+    maxLength: '4',
+    type: "text",
     data: 'passportExpirationDate',
-    type: "date",
+    pattern: "([0-9]{2}[/]?){2}",
     placeholder: 'Expiration: mm/yy',
-    value: (0, _util.getFormatedDate)(props.value),
+    value: value,
     onEvent: props.onEvent
   }))));
 };

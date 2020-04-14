@@ -43,10 +43,20 @@ var VHInput = function VHInput(props) {
       value = _React$useState2[0],
       handleChange = _React$useState2[1];
 
-  var _React$useState3 = _react.default.useState(false),
+  var _React$useState3 = _react.default.useState(props.maxLength),
       _React$useState4 = _slicedToArray(_React$useState3, 2),
-      inputValid = _React$useState4[0],
-      setInputInvalid = _React$useState4[1];
+      maxLength = _React$useState4[0],
+      setMaxLength = _React$useState4[1];
+
+  var _React$useState5 = _react.default.useState(props.pattern),
+      _React$useState6 = _slicedToArray(_React$useState5, 2),
+      pattern = _React$useState6[0],
+      setPattern = _React$useState6[1];
+
+  var _React$useState7 = _react.default.useState(false),
+      _React$useState8 = _slicedToArray(_React$useState7, 2),
+      inputValid = _React$useState8[0],
+      setInputInvalid = _React$useState8[1];
 
   _react.default.useEffect(function () {
     handleChange(props.value);
@@ -54,8 +64,10 @@ var VHInput = function VHInput(props) {
 
   return /*#__PURE__*/_react.default.createElement(S.Container, null, /*#__PURE__*/_react.default.createElement(S.Input, {
     id: props.id,
+    maxLength: maxLength,
     type: props.type,
     placeholder: props.placeholder,
+    pattern: pattern,
     className: "vh-input ".concat(props.className ? props.className : ''),
     disabled: props.disabled || props.loading,
     error: props.error,

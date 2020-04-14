@@ -28,7 +28,7 @@ var VHList = function VHList(props) {
 
   if (items.length > 0) {
     items.sort(function (a, b) {
-      return a.order > b.order ? 1 : -1;
+      return a.id < b.id ? 1 : -1;
     });
   }
 
@@ -81,7 +81,9 @@ var VHList = function VHList(props) {
     caption: "",
     data: 'topSkillYears',
     className: 'topSkillYears',
-    currentItem: items[0] ? [secondList[items[0].yearsOfExperience]] : {},
+    currentItem: items[0] ? secondList.find(function (element) {
+      return element.value === items[0].yearsOfExperience;
+    }) : {},
     items: secondList,
     description: "",
     descriptionColor: "primary",
@@ -134,7 +136,9 @@ var VHList = function VHList(props) {
     caption: "",
     data: 'topSkillYears',
     className: 'topSkillYears',
-    currentItem: items[1] ? [secondList[items[1].yearsOfExperience]] : {},
+    currentItem: items[1] ? secondList.find(function (element) {
+      return element.value === items[1].yearsOfExperience;
+    }) : {},
     items: secondList,
     description: "",
     descriptionColor: "primary",
@@ -187,7 +191,9 @@ var VHList = function VHList(props) {
     caption: "",
     data: 'topSkillYears',
     className: 'topSkillYears',
-    currentItem: items[2] ? [secondList[items[2].yearsOfExperience]] : {},
+    currentItem: items[2] ? secondList.find(function (element) {
+      return element.value === items[2].yearsOfExperience;
+    }) : {},
     items: secondList,
     description: "",
     descriptionColor: "primary",
