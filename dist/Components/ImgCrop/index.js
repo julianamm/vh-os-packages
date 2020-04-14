@@ -37,19 +37,15 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -67,12 +63,14 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject());
 
-var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
+var VHImgCrop =
+/*#__PURE__*/
+function (_PureComponent) {
   _inherits(VHImgCrop, _PureComponent);
 
-  var _super = _createSuper(VHImgCrop);
-
   function VHImgCrop() {
+    var _getPrototypeOf2;
+
     var _this;
 
     _classCallCheck(this, VHImgCrop);
@@ -81,7 +79,7 @@ var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = _super.call.apply(_super, [this].concat(args));
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(VHImgCrop)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _defineProperty(_assertThisInitialized(_this), "state", {
       src: null,
@@ -141,7 +139,9 @@ var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
   _createClass(VHImgCrop, [{
     key: "makeClientCrop",
     value: function () {
-      var _makeClientCrop = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(crop) {
+      var _makeClientCrop = _asyncToGenerator(
+      /*#__PURE__*/
+      regeneratorRuntime.mark(function _callee(crop) {
         var croppedImageUrl;
         return regeneratorRuntime.wrap(function _callee$(_context) {
           while (1) {
@@ -216,9 +216,9 @@ var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
           fileName = _this$state.fileName,
           src = _this$state.src; // console.log('reactImageCropCss', reactImageCropCss)
 
-      return /*#__PURE__*/_react.default.createElement("div", {
+      return _react.default.createElement("div", {
         className: "imgCrop"
-      }, /*#__PURE__*/_react.default.createElement(GlobalStyle, null), /*#__PURE__*/_react.default.createElement(_Avatar.default, {
+      }, _react.default.createElement(GlobalStyle, null), _react.default.createElement(_Avatar.default, {
         content: "",
         image: croppedImageUrlSent || this.props.source,
         showCursor: true,
@@ -233,8 +233,8 @@ var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
             _this3.state.inputFile.current.click();
           });
         }
-      }), /*#__PURE__*/_react.default.createElement(_Modal.default, {
-        content: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, showCropper && /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
+      }), _react.default.createElement(_Modal.default, {
+        content: _react.default.createElement(_react.default.Fragment, null, showCropper && _react.default.createElement(_ButtonNew.default, {
           className: "",
           label: "Send",
           onEvent: function onEvent(e) {
@@ -258,16 +258,16 @@ var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
             });
           },
           primary: true
-        }), /*#__PURE__*/_react.default.createElement("div", {
+        }), _react.default.createElement("div", {
           style: {
             display: 'none'
           }
-        }, /*#__PURE__*/_react.default.createElement("input", {
+        }, _react.default.createElement("input", {
           ref: this.state.inputFile,
           type: "file",
           accept: this.props.acceptTypes || 'image/*',
           onChange: this.onSelectFile
-        })), src && !cropped && /*#__PURE__*/_react.default.createElement(_reactImageCrop.default, {
+        })), src && !cropped && _react.default.createElement(_reactImageCrop.default, {
           src: src,
           crop: crop,
           ruleOfThirds: true,
@@ -277,7 +277,7 @@ var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
         })),
         onEvent: function noRefCheck() {},
         open: showCropper
-      }), croppedImageUrl && cropped && /*#__PURE__*/_react.default.createElement("img", {
+      }), croppedImageUrl && cropped && _react.default.createElement("img", {
         alt: "Crop",
         style: {
           maxWidth: '100%'

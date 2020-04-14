@@ -34,12 +34,12 @@ var VHSecondaryList = function VHSecondaryList(props) {
 
   var list = props.list ? props.list : [];
   var secondList = props.secondList ? props.secondList : [];
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     marginRight: 2
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
@@ -56,9 +56,9 @@ var VHSecondaryList = function VHSecondaryList(props) {
     onEvent: props.onEvent,
     order: 0,
     placeholder: "Add secondary skill"
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     isDisabled: !items[0] ? true : false,
@@ -75,11 +75,11 @@ var VHSecondaryList = function VHSecondaryList(props) {
     onEvent: props.onEvent,
     order: 0,
     placeholder: "Experience"
-  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true,
     marginRight: 2
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
@@ -96,9 +96,9 @@ var VHSecondaryList = function VHSecondaryList(props) {
     onEvent: props.onEvent,
     order: 1,
     placeholder: "Add secondary skill"
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     isDisabled: !items[1] ? true : false,
@@ -115,11 +115,11 @@ var VHSecondaryList = function VHSecondaryList(props) {
     onEvent: props.onEvent,
     order: 1,
     placeholder: "Experience"
-  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true,
     marginRight: 2
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
@@ -136,9 +136,9 @@ var VHSecondaryList = function VHSecondaryList(props) {
     onEvent: props.onEvent,
     order: 2,
     placeholder: "Add secondary skill"
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     isDisabled: !items[2] ? true : false,
@@ -155,10 +155,10 @@ var VHSecondaryList = function VHSecondaryList(props) {
     onEvent: props.onEvent,
     order: 2,
     placeholder: "Experience"
-  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
@@ -175,9 +175,9 @@ var VHSecondaryList = function VHSecondaryList(props) {
     onEvent: props.onEvent,
     order: 3,
     placeholder: "Add secondary skill"
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     isDisabled: !items[3] ? true : false,
@@ -194,10 +194,10 @@ var VHSecondaryList = function VHSecondaryList(props) {
     onEvent: props.onEvent,
     order: 3,
     placeholder: "Experience"
-  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     marginBottom: '0px',
@@ -214,9 +214,9 @@ var VHSecondaryList = function VHSecondaryList(props) {
     onEvent: props.onEvent,
     order: 4,
     placeholder: "Add secondary skill"
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%'
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     removeIndicator: true,
     preLoading: props.controls.secondarySkill.preLoading,
     isDisabled: !items[4] ? true : false,

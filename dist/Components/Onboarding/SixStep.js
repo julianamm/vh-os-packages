@@ -43,26 +43,26 @@ var SixStep = function SixStep(props) {
     });
   }
 
-  return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  return _react.default.createElement(_Grid.Row, {
     column: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     row: true,
     marginBottom: 10
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     width: '10%'
-  }, /*#__PURE__*/_react.default.createElement(_Icon.default, {
+  }, _react.default.createElement(_Icon.default, {
     icon: 'language',
     title: "city",
     md: true
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  })), _react.default.createElement(_Grid.Row, {
     width: '70%'
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, _react.default.createElement(_Text.default, {
     variant: "h4",
     color: "gray-90",
     text: 'Languages'
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     column: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_LanguageList.default, {
+  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_LanguageList.default, {
     controls: props.controls,
     onEvent: props.onEvent,
     secondList: props.proficiencyList,

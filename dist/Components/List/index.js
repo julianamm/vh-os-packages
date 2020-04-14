@@ -34,22 +34,22 @@ var VHList = function VHList(props) {
 
   var list = props.list ? props.list : [];
   var secondList = props.secondList ? props.secondList : [];
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true,
     responsive: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     responsive: true,
     width: "27px",
     marginRight: 1
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, _react.default.createElement(_Text.default, {
     variant: 'platform',
     text: "1st",
     color: 'gray-90'
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  })), _react.default.createElement(_Grid.Row, {
     responsive: true,
     marginRight: 2
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
     placeholder: "Select your top skill",
     removeIndicator: true,
@@ -68,10 +68,10 @@ var VHList = function VHList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 0
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%',
     responsive: true
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
     placeholder: "Experience",
     removeIndicator: true,
@@ -88,22 +88,22 @@ var VHList = function VHList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 0
-  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     responsive: true,
     alignItemsCenter: true,
     row: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     responsive: true,
     width: "27px",
     marginRight: 1
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, _react.default.createElement(_Text.default, {
     variant: 'platform',
     text: "2nd",
     color: 'gray-90'
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  })), _react.default.createElement(_Grid.Row, {
     responsive: true,
     marginRight: 2
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
     placeholder: "Select your top skill",
     removeIndicator: true,
@@ -121,10 +121,10 @@ var VHList = function VHList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 1
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%',
     responsive: true
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
     placeholder: "Experience",
     removeIndicator: true,
@@ -141,22 +141,22 @@ var VHList = function VHList(props) {
     leftText: "",
     onEvent: props.onEvent,
     order: 1
-  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(S.Wrapper, null, _react.default.createElement(_Grid.Row, {
     alignItemsCenter: true,
     row: true,
     responsive: true
-  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }, _react.default.createElement(_Grid.Row, {
     responsive: true,
     width: "27px",
     marginRight: 1
-  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+  }, _react.default.createElement(_Text.default, {
     variant: 'platform',
     text: "3rd",
     color: 'gray-90'
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  })), _react.default.createElement(_Grid.Row, {
     responsive: true,
     marginRight: 2
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
     placeholder: "Select your top skill",
     removeIndicator: true,
@@ -174,10 +174,10 @@ var VHList = function VHList(props) {
     descriptionColor: "primary",
     onEvent: props.onEvent,
     order: 2
-  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  }))), _react.default.createElement(_Grid.Row, {
     width: '20%',
     responsive: true
-  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+  }, _react.default.createElement(_Select.default, {
     preLoading: props.controls.topSkill.preLoading,
     placeholder: "Experience",
     removeIndicator: true,
