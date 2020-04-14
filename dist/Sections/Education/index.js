@@ -173,7 +173,9 @@ var VHEducationSection = function VHEducationSection(props) {
   }))), _react.default.createElement(_Grid.Row, {
     column: true,
     marginBottom5: true
-  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_Text.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom5: true
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
     variant: 'subtitle1',
     text: 'Licenses and Certifications',
     color: 'black-100',
@@ -184,30 +186,30 @@ var VHEducationSection = function VHEducationSection(props) {
     }, _react.default.createElement(_TitleDescription.default, {
       hover: true,
       pointer: true,
-      title: item.degreeTitle,
+      title: item.title,
       titleColor: "primary-light",
-      description: item.schoolName,
+      description: item.institution,
       titleVariant: "h4",
       descriptionVariant: "bodyweb",
       onEvent: props.onEvent,
       data: _objectSpread({
-        label: 'openModalEducation'
+        label: 'openModalLicenses'
       }, item),
       onOpen: function onOpen() {
-        return setOpenModal(true);
+        return setOpenModalLicenses(true);
       },
       setCurrentItem: function setCurrentItem() {
-        return _setCurrentItem(item);
+        return setCurrentItemLicense(item);
       }
     }), _react.default.createElement(_Text.default, {
       variant: 'caption',
-      text: "".concat(new Date(item.startDate).getFullYear(), " - ").concat(item.endDate ? new Date(item.endDate).getFullYear() : 'Present'),
+      text: "".concat(new Date(item.yearOfComplete).getFullYear()),
       color: 'gray-90',
       onEvent: props.onEvent
     }));
-  })), _react.default.createElement(_Grid.Row, {
-    width: '20%'
-  }, _react.default.createElement(_ButtonNew.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    width: '30%'
+  }, /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
     data: 'openModalLicenses',
     primary: true,
     onEvent: props.onEvent,

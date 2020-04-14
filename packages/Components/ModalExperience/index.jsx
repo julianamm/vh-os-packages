@@ -42,10 +42,10 @@ const VHModalExperience = props => {
                     <Row row justifySpaceBetween>
                         <Row style={{ width: '50%' }} marginRight={2} id="company-name">
                             <Row marginBottom={2}><VHText color="gray-90" variant={'platform'} text="Company Name" /></Row>
-                            <VHInput  placeholder="Ex: VanHack" onEvent={props.onEvent} value={item.companyName.value}
+                            <VHInput placeholder="Ex: VanHack" onEvent={props.onEvent} value={item.companyName.value}
                                 data={{ id: "ModalExperience", field: "companyName" }} />
                         </Row>
-                        <Row style={{ width: '50%' }}  marginLeft={2}  id="company-location">
+                        <Row style={{ width: '50%' }} marginLeft={2} id="company-location">
                             <VHSelect
                                 caption="Location"
                                 captionColor="gray-90"
@@ -98,20 +98,32 @@ const VHModalExperience = props => {
                     {item.workExperiences.map((experience, index) => {
                         return (
                             <React.Fragment>
-                                <Row width={'50%'} >
-                                    <VHSelect
-                                        caption="Role Title"
-                                        captionColor="gray-90"
-                                        className={`vh-general-section-position ${props.className ? props.className : ''}`}
-                                        currentItem={{ value: experience.positionId.value, label: experience.positionId.value ? props.positions[experience.positionId.value].label : '' }}
-                                        data={{ id: "ModalExperience", field: "positionId", index: index }}
-                                        onEvent={props.onEvent}
-                                        items={props.positions}
-                                        descriptionColor="red"
-                                    />
-                                    {experience.positionId.messageError && (
-                                        <S.ErrorMessage>Field required</S.ErrorMessage>
-                                    )}
+                                <Row row>
+                                    <Row width={'50%'} marginRight={2}>
+                                        <VHSelect
+                                            caption="Role Title"
+                                            captionColor="gray-90"
+                                            className={`vh-general-section-position ${props.className ? props.className : ''}`}
+                                            currentItem={experience.positionId.value !== undefined ? props.positions.find(element => element.value === experience.positionId.value) : {}}
+                                            data={{ id: "ModalExperience", field: "positionId", index: index }}
+                                            onEvent={props.onEvent}
+                                            items={props.positions}
+                                            descriptionColor="red"
+                                        />
+                                        {experience.positionId.messageError && (
+                                            <S.ErrorMessage>Field required</S.ErrorMessage>
+                                        )}
+                                    </Row>
+                                    {experience.positionId && experience.positionId.value === 37 &&
+                                        <Row style={{ width: '50%' }} id="other-role">
+                                            <Row marginBottom={2}><VHText color="gray-90" variant={'platform'} text="Other Role" /></Row>
+                                            <VHInput placeholder="Ex: Developer" onEvent={props.onEvent} value={experience.otherPosition.value}
+                                                data={{ id: "ModalExperience", field: "otherPosition", index: index }} />
+                                            {experience.otherPosition.messageError && (
+                                                <S.ErrorMessage>Field required</S.ErrorMessage>
+                                            )}
+                                        </Row>
+                                    }
                                 </Row>
                                 {index === 0 &&
                                     <Row marginBottom5>

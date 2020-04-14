@@ -14,24 +14,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   return _react.default.createElement(_.Container, null, _react.default.createElement(_.Row, null, _react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  })), _react.default.createElement(_.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_.Row, {
     spaceAround: true
   }, _react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
   })));
@@ -41,49 +41,49 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   }, _react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  })), _react.default.createElement(_.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_.Row, {
     row: true,
     justifySpaceAround: true
   }, _react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  })), _react.default.createElement(_.Row, {
+  })), /*#__PURE__*/_react.default.createElement(_.Row, {
     row: true,
     justifySpaceBetween: true
   }, _react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
-  }), _react.default.createElement(_Body.default, {
+  }), /*#__PURE__*/_react.default.createElement(_Body.default, {
     lg: true,
     label: "body - There is something about parenthood that gives us a sense of history and a deeply rooted desire to send on into the next generation the great things we have discovered about life. Your fascination with the universe and how to explore it as we so often do in the field of astronomy can be highly academic and dry as maybe it was if you took a course in astronomy."
   })));

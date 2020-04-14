@@ -62,7 +62,8 @@ var VHLanguageSection = function VHLanguageSection(props) {
     className: "vh-skills-section-card ".concat(props.className ? props.className : '')
   }, _react.default.createElement(_Grid.Row, {
     row: true
-  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_LanguageList.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_LanguageList.default, {
+    languages: props.languages,
     controls: props.controls,
     onEvent: props.onEvent,
     secondList: props.proficiencyList,

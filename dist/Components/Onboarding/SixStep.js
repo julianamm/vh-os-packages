@@ -62,7 +62,8 @@ var SixStep = function SixStep(props) {
     text: 'Languages'
   }))), _react.default.createElement(_Grid.Row, {
     column: true
-  }, _react.default.createElement(_Grid.Row, null, _react.default.createElement(_LanguageList.default, {
+  }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_LanguageList.default, {
+    languages: props.languages,
     controls: props.controls,
     onEvent: props.onEvent,
     secondList: props.proficiencyList,

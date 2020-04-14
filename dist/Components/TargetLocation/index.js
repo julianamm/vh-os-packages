@@ -75,11 +75,11 @@ var VHTargetLocation = function VHTargetLocation(props) {
 
   var _useState11 = (0, _react.useState)(items[5].status),
       _useState12 = _slicedToArray(_useState11, 2),
-      usa = _useState12[0],
-      setUsa = _useState12[1];
+      spain = _useState12[0],
+      setSpain = _useState12[1];
 
   _react.default.useEffect(function () {
-    setCanada(items[0].status), setGermany(items[1].status), setIreland(items[2].status), setNetherlands(items[3].status), setUk(items[4].status), setUsa(items[5].status);
+    setCanada(items[0].status), setGermany(items[1].status), setIreland(items[2].status), setNetherlands(items[3].status), setUk(items[4].status), setSpain(items[5].status);
   }, [items[0].status, items[1].status, items[2].status, items[3].status, items[4].status, items[5].status]);
 
   return _react.default.createElement(_Grid.Row, {
@@ -233,17 +233,17 @@ var VHTargetLocation = function VHTargetLocation(props) {
     variant: "platform2",
     color: "black-100",
     text: 'U.K'
-  }))), _react.default.createElement(S.Wrapper, {
-    disabled: !usa,
+  }))), /*#__PURE__*/_react.default.createElement(S.Wrapper, {
+    disabled: !spain,
     onClick: function onClick() {
-      setUsa(!usa);
+      setSpain(!spain);
       props.onEvent({
         type: "OnClick",
         origin: "VHTargetLocation",
         props: {
           data: {
             id: items[5].id,
-            status: usa ? 0 : 1
+            status: spain ? 0 : 1
           },
           position: 5
         }
@@ -252,8 +252,8 @@ var VHTargetLocation = function VHTargetLocation(props) {
   }, _react.default.createElement(_Grid.Row, {
     marginBottom3: true,
     alignItemsCenter: true
-  }, _react.default.createElement(_index.default, {
-    icon: 'usa',
+  }, /*#__PURE__*/_react.default.createElement(_index.default, {
+    icon: 'spain',
     title: "city",
     lg: true
   })), _react.default.createElement(_Grid.Row, {
@@ -261,7 +261,7 @@ var VHTargetLocation = function VHTargetLocation(props) {
   }, _react.default.createElement(_index2.default, {
     variant: "platform2",
     color: "black-100",
-    text: 'U.S.A'
+    text: 'Spain'
   })))));
 };
 

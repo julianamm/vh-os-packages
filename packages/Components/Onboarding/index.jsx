@@ -28,11 +28,54 @@ const VHOnboarding = props => {
     setCurrentStep(props.currentStep);
   }, [props.currentStep])
 
+  let disabled = false
+
+  if (currentStep === 1) {
+    if (props.positionSkill === null || props.positionSkill === undefined || props.positionSkill === '') {
+      disabled = true
+    }
+  } else if (currentStep === 2) {
+    if (props.topSkill.length < 3) {
+      disabled = true
+    } else {
+      props.topSkill.map(skill => {
+        if (skill.yearsOfExperience === '') {
+          disabled = true
+        }
+      })
+    }
+  } else if (currentStep === 3) {
+    if (props.secondarySkill.length < 5) {
+      disabled = true
+    } else {
+      props.secondarySkill.map(skill => {
+        if (skill.yearsOfExperience === '') {
+          disabled = true
+        }
+      })
+    }
+  } else if (currentStep === 4) {
+    if (props.openForRemoteJobs === null || props.visaStatusCanadian === null || props.visaStatusEU === null) {
+      disabled = true
+    }
+  } else if (currentStep === 5) {
+    if (props.citizenship === null || props.location === null || props.gender === null || props.phone === null || props.phone === '' || props.linkedin === null || props.linkedin === '') {
+      disabled = true
+    }
+  } else if (currentStep === 6) {
+    props.languages.map(language => {
+      if (language.code === undefined || language.code === null || language.code === '' ||
+        language.level === undefined || language.level === null || language.level === '') {
+        disabled = true
+      }
+    })
+  }
+
   return (
     <Container displayNone={displayNone} currentStep={currentStep} animation justifyCenter fullHeight style={{ backgroundImage: 'linear-gradient(to bottom right, #56CCF2, #0675CE)' }} fullWidth>
       <img style={{ marginBottom: '50px' }} src={VanhackLogo} />
       <Row alignItemsCenter>
-        <Card noPadding  width='730px' height='580px' id="onboarding">
+        <Card noPadding width='730px' height='580px' id="onboarding">
           {props.controls.language.loading ?
             <VHPreloader type="fullPage" size="md" />
             :
@@ -48,7 +91,7 @@ const VHOnboarding = props => {
                 </Row>
               }
               <Row alignItemsCenter style={{ height: '100%' }}>
-                <Row style={{ width: '100%', height: 'calc(100% - 10px)', boxSizing: 'border-box', padding: '33px'}} >
+                <Row style={{ width: '100%', height: 'calc(100% - 10px)', boxSizing: 'border-box', padding: '33px' }} >
                   <Row style={{ height: '100%', overflow: 'auto', boxSizing: 'border-box', padding: '0 3px' }}>
                     {
                       currentStep === 0 &&
@@ -93,7 +136,6 @@ const VHOnboarding = props => {
                               className=""
                               textButton
                               label="Back"
-                              disabled={currentStep === 1}
                               onEvent={e => {
                                 props.onEvent({
                                   type: "OnChangeStep",
@@ -121,8 +163,8 @@ const VHOnboarding = props => {
                       />
                       <VHButton
                         className=""
-                        label={currentStep < 6  ? "Next" : "Finish"}
-                        disabled={currentStep === (props.steps + 1)}
+                        label={currentStep < 6 ? "Next" : "Finish"}
+                        disabled={disabled}
                         onEvent={e => {
                           props.onEvent({
                             type: "OnChangeStep",
@@ -137,7 +179,7 @@ const VHOnboarding = props => {
                           })
                           setCurrentStep(currentStep + 1)
 
-                          if(currentStep >= 6){
+                          if (currentStep >= 6) {
                             setDisplayNone(true)
                           }
                         }}

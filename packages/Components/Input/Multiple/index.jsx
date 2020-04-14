@@ -5,8 +5,8 @@ import VHInputIcon from '../Icon'
 const VHInputMultiple = props => {
   let it = []
   try {
-    if(props.items !== null){
-    it = JSON.parse(props.items.value)
+    if (props.items !== null) {
+      it = JSON.parse(props.items.value)
     }
   } catch (error) {
 
@@ -15,6 +15,7 @@ const VHInputMultiple = props => {
   const [newItems, setNewItems] = useState([{ value: '' }])
 
   const [render, reRender] = useState(1)
+
   return (
     <>
       {
@@ -31,32 +32,33 @@ const VHInputMultiple = props => {
               placeholder={props.placeholder}
               onEvent={e => {
                 switch (true) {
-                  case e.event === "onKeyUpAction":
-                    if (e.data.value !== '') {
-                      items[index] = {
-                        value: e.data.value,
-                        loading: e.data.data.id === item.id
-                      }
-                      setItems(items)
-                      reRender(render + 1)
+                  // case e.event === "onKeyUpAction":
+                  //   if (e.data.value !== '') {
+                  //     items[index] = {
+                  //       value: e.data.value,
+                  //       loading: e.data.data.id === item.id
+                  //     }
+                  //     setItems(items)
+                  //     reRender(render + 1)
 
-                      props.onEvent({
-                        data: {
-                          value: JSON.stringify(items.concat(newItems)),
-                          data: props.data
-                        },
-                        event: "onKeyUpAction",
-                        origin: "VHInputMultiple"
-                      })
-                    }
-                    break
-                    case e.event === "onBlur":
+                  //     props.onEvent({
+                  //       data: {
+                  //         value: JSON.stringify(items.concat(newItems)),
+                  //         data: props.data
+                  //       },
+                  //       event: "onKeyUpAction",
+                  //       origin: "VHInputMultiple"
+                  //     })
+                  //   }
+                  //   break
+                  case e.event === "onBlur":
                     if (e.data.value !== '') {
                       items[index] = {
                         value: e.data.value,
                         loading: ''
                       }
                       setItems(items)
+                      reRender(render + 1)
 
                       props.onEvent({
                         data: {
@@ -108,7 +110,25 @@ const VHInputMultiple = props => {
                       })
 
                     }
+                    break
+                  case e.event === "onBlur":
+                    if (e.data.value !== '') {
+                      newItems[index] = {
+                        value: e.data.value,
+                        loading: ''
+                      }
+                      setNewItems(newItems)
+                      reRender(render + 1)
 
+                      props.onEvent({
+                        data: {
+                          value: JSON.stringify(items.concat(newItems)),
+                          data: props.data,
+                        },
+                        event: "onBlur",
+                        origin: "VHInputMultiple"
+                      })
+                    }
                     break
                 }
               }}

@@ -38,22 +38,139 @@ var VHButton = function VHButton(props) {
   }, [props.closeModal]);
 
   if (props.outline) {
-    return _react.default.createElement(_styles.OutlinedButton, {
+    if (props.disabled) {
+      return /*#__PURE__*/_react.default.createElement(_styles.OutlinedButton, {
+        id: props.id,
+        primary: props.primary,
+        white: props.white,
+        secondary: props.secondary,
+        danger: props.danger,
+        success: props.success,
+        full: props.full,
+        nowrap: props.nowrap,
+        disabled: true,
+        className: "vh-button-component ".concat(props.className ? props.className : ''),
+        xs: props.xs,
+        sm: props.sm,
+        lg: props.lg,
+        type: "button",
+        onClick: function onClick() {
+          props.onEvent({
+            type: "OnClick",
+            origin: "VHButton",
+            props: {
+              data: props.data
+            }
+          });
+        }
+      }, props.label);
+    } else {
+      return /*#__PURE__*/_react.default.createElement(_styles.OutlinedButton, {
+        id: props.id,
+        primary: props.primary,
+        white: props.white,
+        secondary: props.secondary,
+        danger: props.danger,
+        success: props.success,
+        full: props.full,
+        nowrap: props.nowrap,
+        className: "vh-button-component ".concat(props.className ? props.className : ''),
+        xs: props.xs,
+        sm: props.sm,
+        lg: props.lg,
+        type: "button",
+        onClick: function onClick() {
+          props.onEvent({
+            type: "OnClick",
+            origin: "VHButton",
+            props: {
+              data: props.data
+            }
+          });
+        }
+      }, props.label);
+    }
+  } else if (props.textButton) {
+    if (props.disabled) {
+      return /*#__PURE__*/_react.default.createElement(_styles.TextButton, {
+        id: props.id,
+        primary: props.primary,
+        disabled: true,
+        white: props.white,
+        secondary: props.secondary,
+        danger: props.danger,
+        success: props.success,
+        full: props.full,
+        nowrap: props.nowrap,
+        className: "vh-button-component ".concat(props.className ? props.className : ''),
+        xs: props.xs,
+        sm: props.sm,
+        lg: props.lg,
+        type: "button",
+        onClick: function onClick() {
+          props.onEvent({
+            type: "OnClick",
+            origin: "VHButton",
+            props: {
+              data: props.data
+            }
+          });
+        }
+      }, props.label);
+    } else {
+      return /*#__PURE__*/_react.default.createElement(_styles.TextButton, {
+        id: props.id,
+        primary: props.primary,
+        white: props.white,
+        secondary: props.secondary,
+        danger: props.danger,
+        success: props.success,
+        full: props.full,
+        nowrap: props.nowrap,
+        className: "vh-button-component ".concat(props.className ? props.className : ''),
+        xs: props.xs,
+        sm: props.sm,
+        lg: props.lg,
+        type: "button",
+        onClick: function onClick() {
+          props.onEvent({
+            type: "OnClick",
+            origin: "VHButton",
+            props: {
+              data: props.data
+            }
+          });
+        }
+      }, props.label);
+    }
+  }
+
+  if (props.disabled) {
+    return /*#__PURE__*/_react.default.createElement(_styles.default, {
       id: props.id,
       primary: props.primary,
-      white: props.white,
       secondary: props.secondary,
       danger: props.danger,
       success: props.success,
       full: props.full,
-      nowrap: props.nowrap,
-      disabled: props.disabled,
+      disabled: true,
       className: "vh-button-component ".concat(props.className ? props.className : ''),
       xs: props.xs,
       sm: props.sm,
       lg: props.lg,
+      nowrap: props.nowrap,
       type: "button",
       onClick: function onClick() {
+        if (props.setNewExperience) {
+          props.setNewExperience();
+        }
+
+        if (props.onOpen) {
+          props.onOpen();
+        } else if (closeModal) {
+          props.onClose();
+        }
+
         props.onEvent({
           type: "OnClick",
           origin: "VHButton",
@@ -63,23 +180,31 @@ var VHButton = function VHButton(props) {
         });
       }
     }, props.label);
-  } else if (props.textButton) {
-    return _react.default.createElement(_styles.TextButton, {
+  } else {
+    return /*#__PURE__*/_react.default.createElement(_styles.default, {
       id: props.id,
       primary: props.primary,
-      white: props.white,
       secondary: props.secondary,
       danger: props.danger,
       success: props.success,
       full: props.full,
-      nowrap: props.nowrap,
-      disabled: props.disabled,
       className: "vh-button-component ".concat(props.className ? props.className : ''),
       xs: props.xs,
       sm: props.sm,
       lg: props.lg,
+      nowrap: props.nowrap,
       type: "button",
       onClick: function onClick() {
+        if (props.setNewExperience) {
+          props.setNewExperience();
+        }
+
+        if (props.onOpen) {
+          props.onOpen();
+        } else if (closeModal) {
+          props.onClose();
+        }
+
         props.onEvent({
           type: "OnClick",
           origin: "VHButton",
@@ -90,41 +215,6 @@ var VHButton = function VHButton(props) {
       }
     }, props.label);
   }
-
-  return _react.default.createElement(_styles.default, {
-    id: props.id,
-    primary: props.primary,
-    secondary: props.secondary,
-    danger: props.danger,
-    success: props.success,
-    full: props.full,
-    disabled: props.disabled,
-    className: "vh-button-component ".concat(props.className ? props.className : ''),
-    xs: props.xs,
-    sm: props.sm,
-    lg: props.lg,
-    nowrap: props.nowrap,
-    type: "button",
-    onClick: function onClick() {
-      if (props.setNewExperience) {
-        props.setNewExperience();
-      }
-
-      if (props.onOpen) {
-        props.onOpen();
-      } else if (closeModal) {
-        props.onClose();
-      }
-
-      props.onEvent({
-        type: "OnClick",
-        origin: "VHButton",
-        props: {
-          data: props.data
-        }
-      });
-    }
-  }, props.label);
 };
 
 VHButton.defaultProps = {

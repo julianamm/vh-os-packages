@@ -15,6 +15,12 @@ const VHUserCompanyExperienceSection = props => {
   const experience = props.experience.experiences ? props.experience.experiences : [];
   const [currentItem, setCurrentItem] = React.useState({});
 
+  // const [profileReviewInProgress, setProfileReviewInProgress] = React.useState(profileReviewInProgress || props.reviewInProgress);
+
+  // React.useEffect(() => {
+  //   setProfileReviewInProgress(profileReviewInProgress || props.reviewInProgress);
+  // }, [profileReviewInProgress || props.reviewInProgress])
+
   function calcDate(date) {
 
     var df = new Date(date);
@@ -95,15 +101,44 @@ const VHUserCompanyExperienceSection = props => {
                             setNewExperience={() => { setNewExperience(true) }}
                           />
                         </Row>
-                        <Row row>
-                          <VHButton
-                            outline
-                            primary
-                            onEvent={props.onEvent}
-                            data={"RequestProfileReview"}
-                            label="Request Profile Review"
-                          />
-                        </Row>
+                        {props.experience.canRequestReview && !props.reviewInProgress &&
+                          <Row row alignItemsCenter>
+                            <VHButton
+                              outline
+                              primary
+                              onEvent={props.onEvent}
+                              data={"RequestProfileReview"}
+                              label="Request Profile Review"
+                            />
+                          </Row>
+                        }
+                        {!props.experience.canRequestReview && props.experience.canRequestReviewInDays > 0 &&
+                          <Row row alignItemsCenter>
+                            <VHText
+                              variant={"platform2"}
+                              color="gray-80"
+                              text={`You can request another rpofile review in ${props.canRequestReviewInDays} days`}
+                            />
+                          </Row>
+                        }
+                        {props.reviewInProgress &&
+                          <Row row alignItemsCenter>
+                            <VHText
+                              variant={"platform2"}
+                              color="gray-80"
+                              text={`Your profile is under review`}
+                            />
+                          </Row>
+                        }
+                        {props.experience.profileReviewInProgress &&
+                          <Row row alignItemsCenter>
+                            <VHText
+                              variant={"platform2"}
+                              color="gray-80"
+                              text={`Your profile is under review`}
+                            />
+                          </Row>
+                        }
                       </Row>
                     </>
                   )

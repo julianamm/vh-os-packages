@@ -7,6 +7,8 @@ import VHIcon from '../../Icon'
 
 const VHInputIcon = props => {
 
+  const [value, handleChange] = React.useState(props.value);
+
   return (
     <S.Wrapper
       className={`vh-icon-input ${props.className ? props.className : ''}`}
@@ -31,10 +33,10 @@ const VHInputIcon = props => {
         loading={props.loading}
         placeholder={props.placeholder}
         data={props.data}
-        value={props.value}
+        value={value}
         onEvent={props.onEvent}
         noBorder={!props.loading}
-        maxLength={100} />
+        maxLength={'100'} />
     </S.Wrapper>
   )
 }

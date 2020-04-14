@@ -29,49 +29,51 @@ var _index9 = _interopRequireDefault(require("../../assets/svg/icons/icon_globe.
 
 var _index10 = _interopRequireDefault(require("../../assets/svg/flags/flag_usa.svg/index.js"));
 
-var _index11 = _interopRequireDefault(require("../../assets/svg/flags/flag_canada.svg/index.js"));
+var _index11 = _interopRequireDefault(require("../../assets/svg/flags/spain.svg/index.js"));
 
-var _index12 = _interopRequireDefault(require("../../assets/svg/flags/flag_germany.svg/index.js"));
+var _index12 = _interopRequireDefault(require("../../assets/svg/flags/flag_canada.svg/index.js"));
 
-var _index13 = _interopRequireDefault(require("../../assets/svg/flags/flag_ireland.svg/index.js"));
+var _index13 = _interopRequireDefault(require("../../assets/svg/flags/flag_germany.svg/index.js"));
 
-var _index14 = _interopRequireDefault(require("../../assets/svg/flags/flag_netherlands.svg/index.js"));
+var _index14 = _interopRequireDefault(require("../../assets/svg/flags/flag_ireland.svg/index.js"));
 
-var _index15 = _interopRequireDefault(require("../../assets/svg/flags/flag_uk.svg/index.js"));
+var _index15 = _interopRequireDefault(require("../../assets/svg/flags/flag_netherlands.svg/index.js"));
 
-var _index16 = _interopRequireDefault(require("../../assets/svg/flags/flag_brazil.svg/index.js"));
+var _index16 = _interopRequireDefault(require("../../assets/svg/flags/flag_uk.svg/index.js"));
 
-var _index17 = _interopRequireDefault(require("../../assets/svg/flags/flag_china.svg/index.js"));
+var _index17 = _interopRequireDefault(require("../../assets/svg/flags/flag_brazil.svg/index.js"));
 
-var _index18 = _interopRequireDefault(require("../../assets/svg/flags/flag_india.svg/index.js"));
+var _index18 = _interopRequireDefault(require("../../assets/svg/flags/flag_china.svg/index.js"));
 
-var _index19 = _interopRequireDefault(require("../../assets/svg/flags/flag_south_africa.svg/index.js"));
+var _index19 = _interopRequireDefault(require("../../assets/svg/flags/flag_india.svg/index.js"));
 
-var _index20 = _interopRequireDefault(require("../../assets/svg/flags/flag_russia.svg/index.js"));
+var _index20 = _interopRequireDefault(require("../../assets/svg/flags/flag_south_africa.svg/index.js"));
 
-var _index21 = _interopRequireDefault(require("../../assets/svg/icons/icon_camera.svg/index.js"));
+var _index21 = _interopRequireDefault(require("../../assets/svg/flags/flag_russia.svg/index.js"));
 
-var _index22 = _interopRequireDefault(require("../../assets/svg/icons/icon_interview.svg/index.js"));
+var _index22 = _interopRequireDefault(require("../../assets/svg/icons/icon_camera.svg/index.js"));
 
-var _index23 = _interopRequireDefault(require("../../assets/svg/icons/icon_profile.svg/index.js"));
+var _index23 = _interopRequireDefault(require("../../assets/svg/icons/icon_interview.svg/index.js"));
 
-var _index24 = _interopRequireDefault(require("../../assets/svg/icons/icon_community.svg/index.js"));
+var _index24 = _interopRequireDefault(require("../../assets/svg/icons/icon_profile.svg/index.js"));
 
-var _index25 = _interopRequireDefault(require("../../assets/svg/icons/icon_arrow_right.svg/index.js"));
+var _index25 = _interopRequireDefault(require("../../assets/svg/icons/icon_community.svg/index.js"));
 
-var _index26 = _interopRequireDefault(require("../../assets/svg/icons/icon_medal.svg/index.js"));
+var _index26 = _interopRequireDefault(require("../../assets/svg/icons/icon_arrow_right.svg/index.js"));
 
-var _index27 = _interopRequireDefault(require("../../assets/svg/icons/icon_play.svg/index.js"));
+var _index27 = _interopRequireDefault(require("../../assets/svg/icons/icon_medal.svg/index.js"));
 
-var _index28 = _interopRequireDefault(require("../../assets/svg/icons/experience.svg/index.js"));
+var _index28 = _interopRequireDefault(require("../../assets/svg/icons/icon_play.svg/index.js"));
 
-var _index29 = _interopRequireDefault(require("../../assets/svg/icons/skills.svg/index.js"));
+var _index29 = _interopRequireDefault(require("../../assets/svg/icons/experience.svg/index.js"));
 
-var _index30 = _interopRequireDefault(require("../../assets/svg/icons/relocation.svg/index.js"));
+var _index30 = _interopRequireDefault(require("../../assets/svg/icons/skills.svg/index.js"));
 
-var _index31 = _interopRequireDefault(require("../../assets/svg/icons/icon_user-circle.svg/index.js"));
+var _index31 = _interopRequireDefault(require("../../assets/svg/icons/relocation.svg/index.js"));
 
-var _index32 = _interopRequireDefault(require("../../assets/svg/icons/language.svg/index.js"));
+var _index32 = _interopRequireDefault(require("../../assets/svg/icons/icon_user-circle.svg/index.js"));
+
+var _index33 = _interopRequireDefault(require("../../assets/svg/icons/language.svg/index.js"));
 
 var _Colors = _interopRequireDefault(require("../../Colors"));
 
@@ -227,7 +229,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'canada':
-      return _react.default.createElement(_index11.default, {
+      return /*#__PURE__*/_react.default.createElement(_index12.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -235,7 +237,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'ireland':
-      return _react.default.createElement(_index13.default, {
+      return /*#__PURE__*/_react.default.createElement(_index14.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -243,7 +245,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'uk':
-      return _react.default.createElement(_index15.default, {
+      return /*#__PURE__*/_react.default.createElement(_index16.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -251,7 +253,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'germany':
-      return _react.default.createElement(_index12.default, {
+      return /*#__PURE__*/_react.default.createElement(_index13.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -259,7 +261,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'netherlands':
-      return _react.default.createElement(_index14.default, {
+      return /*#__PURE__*/_react.default.createElement(_index15.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -267,7 +269,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'brazil':
-      return _react.default.createElement(_index16.default, {
+      return /*#__PURE__*/_react.default.createElement(_index17.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -275,7 +277,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'china':
-      return _react.default.createElement(_index17.default, {
+      return /*#__PURE__*/_react.default.createElement(_index18.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -283,7 +285,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'india':
-      return _react.default.createElement(_index18.default, {
+      return /*#__PURE__*/_react.default.createElement(_index19.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -291,7 +293,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'south-africa':
-      return _react.default.createElement(_index19.default, {
+      return /*#__PURE__*/_react.default.createElement(_index20.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -299,7 +301,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'russia':
-      return _react.default.createElement(_index20.default, {
+      return /*#__PURE__*/_react.default.createElement(_index21.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -307,7 +309,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'camera':
-      return _react.default.createElement(_index21.default, {
+      return /*#__PURE__*/_react.default.createElement(_index22.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -315,7 +317,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'interview':
-      return _react.default.createElement(_index22.default, {
+      return /*#__PURE__*/_react.default.createElement(_index23.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -323,7 +325,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'community':
-      return _react.default.createElement(_index24.default, {
+      return /*#__PURE__*/_react.default.createElement(_index25.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -331,7 +333,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'profile':
-      return _react.default.createElement(_index23.default, {
+      return /*#__PURE__*/_react.default.createElement(_index24.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -339,7 +341,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'arrow-right':
-      return _react.default.createElement(_index25.default, {
+      return /*#__PURE__*/_react.default.createElement(_index26.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -347,7 +349,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'medal':
-      return _react.default.createElement(_index26.default, {
+      return /*#__PURE__*/_react.default.createElement(_index27.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -355,7 +357,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'play':
-      return _react.default.createElement(_index27.default, {
+      return /*#__PURE__*/_react.default.createElement(_index28.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -371,7 +373,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'experience':
-      return _react.default.createElement(_index28.default, {
+      return /*#__PURE__*/_react.default.createElement(_index29.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -379,7 +381,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'skills':
-      return _react.default.createElement(_index29.default, {
+      return /*#__PURE__*/_react.default.createElement(_index30.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -387,7 +389,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'relocation':
-      return _react.default.createElement(_index30.default, {
+      return /*#__PURE__*/_react.default.createElement(_index31.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -395,7 +397,7 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'user':
-      return _react.default.createElement(_index31.default, {
+      return /*#__PURE__*/_react.default.createElement(_index32.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),
@@ -403,7 +405,15 @@ var VHIcon = function VHIcon(props) {
       });
 
     case 'language':
-      return _react.default.createElement(_index32.default, {
+      return /*#__PURE__*/_react.default.createElement(_index33.default, {
+        fill: defaultColor,
+        width: "".concat(size.w, "px"),
+        height: "".concat(size.h, "px"),
+        className: "vh-icon ".concat(props.className ? props.className : '')
+      });
+
+    case 'spain':
+      return /*#__PURE__*/_react.default.createElement(_index11.default, {
         fill: defaultColor,
         width: "".concat(size.w, "px"),
         height: "".concat(size.h, "px"),

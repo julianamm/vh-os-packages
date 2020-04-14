@@ -29,7 +29,7 @@ const ThirdStep = props => {
                          contents={true}
                          className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
                          onEvent={props.onEvent}
-                         title="Add up to 5 secondary skills"
+                         title="Add 5 secondary skills"
                          titleColor={
                            props.controls.secondarySkill.loading
                              ? "gray-40"

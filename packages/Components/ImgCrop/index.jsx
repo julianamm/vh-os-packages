@@ -177,6 +177,7 @@ const GlobalStyle = createGlobalStyle`
 import { Container, Row } from '../../Grid'
 import VHAvatar from '../Avatar'
 import VHButton from '../Button-New'
+import VHText from '../Text'
 
 class VHImgCrop extends PureComponent {
   state = {
@@ -197,7 +198,7 @@ class VHImgCrop extends PureComponent {
     if (e.target.files && e.target.files.length > 0) {
       const reader = new FileReader();
       reader.addEventListener('load', () =>
-        this.setState({ src: reader.result})
+        this.setState({ src: reader.result })
       );
       reader.readAsDataURL(e.target.files[0]);
 
@@ -207,7 +208,7 @@ class VHImgCrop extends PureComponent {
 
   // If you setState the crop in here you should return false.
   onImageLoaded = image => {
-    this.setState({showCropper: true, cropped: false}, () => {
+    this.setState({ showCropper: true, cropped: false }, () => {
       this.imageRef = image;
     })
   };
@@ -282,64 +283,74 @@ class VHImgCrop extends PureComponent {
         <GlobalStyle />
         <VHAvatar
           content=""
-          image={ croppedImageUrlSent || this.props.source}
+          image={croppedImageUrlSent || this.props.source}
           showCursor
           uploading={this.props.uploading}
           size="xl"
-          onEvent={ e => {
-            this.setState({cropped: false, src: null, showCropper: false}, () => {
+          onEvent={e => {
+            this.setState({ cropped: false, src: null, showCropper: false }, () => {
               this.state.inputFile.current.click();
             })
           }}
         />
         <VHModal
-        content={<>
+          marginTop={'50px'}
+          onClose={() => { this.setState({ showCropper: false }) }}
+          content={<Row className='newModal' justifyCenter column responsive alignItemsCenter>
 
-        {
-          showCropper && (
-              <VHButton
-                  className=""
-                  label="Send"
-                  onEvent={ e => {
-                    this.setState({cropped: false, src: null, showCropper: false, croppedImageUrlSent: croppedImageUrl})
-                  fetch(croppedImageUrl)
-                  .then(res => res.blob())
-                  .then(res => {
-                    this.props.onEvent({
-                      data: this.props.data,
-                      src: res,
-                      fileName,
-                      type: 'onCropped',
-                      target: 'VHImgCrop'
-                    })
-                })
-              }}
-              primary
-            />
-          )
-        }
-        <div style={{display: 'none'}}>
-          <input ref={this.state.inputFile}  type="file" accept={this.props.acceptTypes || 'image/*'} onChange={this.onSelectFile} />
-        </div>
-        {src && !cropped && (
-          <ReactCrop
-            src={src}
-            crop={crop}
-            ruleOfThirds
-            onImageLoaded={this.onImageLoaded}
-            onComplete={this.onCropComplete}
-            onChange={this.onCropChange}
-          />
-        )}
-        </>}
-        onEvent={function noRefCheck() {}}
-        open={showCropper}
-      />
+            {
+              showCropper && (
+                <Row justifyCenter column responsive alignItemsCenter>
+                <Row responsive marginBottom={'10'}>
+                <VHText variant={"h3"} color={"gray-90"} text={'Crop your photo !'}/>
+                  </Row>
+                <Row responsive marginBottom={'10'}>
+                  <VHButton
+                    className=""
+                    label="Send"
+                    onEvent={e => {
+                      this.setState({ cropped: false, src: null, showCropper: false, croppedImageUrlSent: croppedImageUrl })
+                      fetch(croppedImageUrl)
+                        .then(res => res.blob())
+                        .then(res => {
+                          this.props.onEvent({
+                            data: this.props.data,
+                            src: res,
+                            fileName,
+                            type: 'onCropped',
+                            target: 'VHImgCrop'
+                          })
+                        })
+                    }}
+                    primary
+                  />
+                </Row>
+                </Row>
+              )
+            }
+            <div style={{ display: 'none' }}>
+              <input ref={this.state.inputFile} type="file" accept={this.props.acceptTypes || 'image/*'} onChange={this.onSelectFile} />
+            </div>
+            {src && !cropped && (
+              <ReactCrop
+                src={src}
+                crop={crop}
+                ruleOfThirds
+                onImageLoaded={this.onImageLoaded}
+                onComplete={this.onCropComplete}
+                onChange={this.onCropChange}
+              />
+            )}
+          </Row>}
+          onEvent={function noRefCheck() { }}
+          open={showCropper}
+        />
 
         {croppedImageUrl && cropped && (
           <img alt="Crop" style={{ maxWidth: '100%' }} src={croppedImageUrl} />
         )}
       </div>
+
     );
   }
 }

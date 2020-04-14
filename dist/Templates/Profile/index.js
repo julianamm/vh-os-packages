@@ -53,7 +53,7 @@ var VHProfileTemplate = function VHProfileTemplate(props) {
     marginBottom: 16
   }, _react.default.createElement(_VHUserPhotoIconTitleDescription.default, {
     avatar: props.image ? props.image : '',
-    name: props.User.name,
+    name: "".concat(props.firstName, " ").concat(props.lastName),
     email: props.User.email,
     onEvent: props.onEvent
   })), _react.default.createElement(_Grid.Row, {

@@ -72,9 +72,9 @@ const VHModalLicenses = props => {
                                     textColor="gray-60"
                                     text={'Delete'}
                                     icon="delete"
-                                    className={`vh-delete-education ${props.className ? props.className : ''}`}
+                                    className={`vh-delete-license ${props.className ? props.className : ''}`}
                                     variant="platform"
-                                    data={{ action: 'deleteSideProjects', id: item.id }}
+                                    data={{ action: 'deleteLicense', id: item.id }}
                                     onEvent={props.onEvent}
                                     onClose={props.onClose}
                                 />

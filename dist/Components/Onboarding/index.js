@@ -73,7 +73,49 @@ var VHOnboarding = function VHOnboarding(props) {
     _setCurrentStep(props.currentStep);
   }, [props.currentStep]);
 
-  return _react.default.createElement(_Grid.Container, {
+  var disabled = false;
+
+  if (currentStep === 1) {
+    if (props.positionSkill === null || props.positionSkill === undefined || props.positionSkill === '') {
+      disabled = true;
+    }
+  } else if (currentStep === 2) {
+    if (props.topSkill.length < 3) {
+      disabled = true;
+    } else {
+      props.topSkill.map(function (skill) {
+        if (skill.yearsOfExperience === '') {
+          disabled = true;
+        }
+      });
+    }
+  } else if (currentStep === 3) {
+    if (props.secondarySkill.length < 5) {
+      disabled = true;
+    } else {
+      props.secondarySkill.map(function (skill) {
+        if (skill.yearsOfExperience === '') {
+          disabled = true;
+        }
+      });
+    }
+  } else if (currentStep === 4) {
+    if (props.openForRemoteJobs === null || props.visaStatusCanadian === null || props.visaStatusEU === null) {
+      disabled = true;
+    }
+  } else if (currentStep === 5) {
+    if (props.citizenship === null || props.location === null || props.gender === null || props.phone === null || props.phone === '' || props.linkedin === null || props.linkedin === '') {
+      disabled = true;
+    }
+  } else if (currentStep === 6) {
+    props.languages.map(function (language) {
+      if (language.code === undefined || language.code === null || language.code === '' || language.level === undefined || language.level === null || language.level === '') {
+        disabled = true;
+      }
+    });
+  }
+
+  return /*#__PURE__*/_react.default.createElement(_Grid.Container, {
     displayNone: displayNone,
     currentStep: currentStep,
     animation: true,
@@ -137,7 +179,6 @@ var VHOnboarding = function VHOnboarding(props) {
     className: "",
     textButton: true,
     label: "Back",
-    disabled: currentStep === 1,
     onEvent: function onEvent(e) {
       props.onEvent({
         type: "OnChangeStep",
@@ -162,7 +203,7 @@ var VHOnboarding = function VHOnboarding(props) {
   }), _react.default.createElement(_ButtonNew.default, {
     className: "",
     label: currentStep < 6 ? "Next" : "Finish",
-    disabled: currentStep === props.steps + 1,
+    disabled: disabled,
     onEvent: function onEvent(e) {
       props.onEvent({
         type: "OnChangeStep",
