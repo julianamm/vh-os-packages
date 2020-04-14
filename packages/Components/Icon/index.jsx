@@ -10,6 +10,7 @@ import GitHubIcon from '../../assets/svg/icons/icon_github.svg/index.js'
 import LinkedInIcon from '../../assets/svg/icons/icon_linkedin_login.svg/index.js'
 import WebSiteIcon from '../../assets/svg/icons/icon_globe.svg/index.js'
 import USA from '../../assets/svg/flags/flag_usa.svg/index.js';
+import Spain from '../../assets/svg/flags/spain.svg/index.js';
 import Canada from '../../assets/svg/flags/flag_canada.svg/index.js';
 import Germany from '../../assets/svg/flags/flag_germany.svg/index.js';
 import Ireland from '../../assets/svg/flags/flag_ireland.svg/index.js';
@@ -159,6 +160,8 @@ const VHIcon = props => {
       return <UserIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     case 'language':
       return <LanguageIcon fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
+    case 'spain':
+      return <Spain fill={defaultColor} width={`${size.w}px`} height={`${size.h}px`} className={`vh-icon ${props.className ? props.className : ''}`} />
     default:
       return <span />
   }

@@ -21,6 +21,8 @@ storiesOf("Components|Input/Radio", module)
   .add("default", () => (
     <div style={{ width: '80%', marginLeft: '1%', padding: '9px' }}>
       <VHInputRadio
+      input
+      maxLength="4"
         color="gray-100"
         variant="platform"
         onEvent={(event) => console.log(event)}

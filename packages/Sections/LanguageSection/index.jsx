@@ -21,12 +21,12 @@ const VHLanguageSection = props => {
 
   let userPositions = []
 
-  if(props.userPositions){
-    props.userPositions.map(item=>{
-      if(item.id){
-        userPositions.push({value: item.id, label: item.name})
-      }else{
-        userPositions.push({value: item, label: positions[item].label})
+  if (props.userPositions) {
+    props.userPositions.map(item => {
+      if (item.id) {
+        userPositions.push({ value: item.id, label: item.name })
+      } else {
+        userPositions.push({ value: item, label: positions[item].label })
       }
     })
   }
@@ -46,16 +46,17 @@ const VHLanguageSection = props => {
           className={`vh-skills-section-card ${props.className ? props.className : ''}`}
         >
           <Row row >
-          <Row>
-            <VHLanguageList
-              controls={props.controls}
-              onEvent={props.onEvent}
-              secondList={props.proficiencyList}
-              list={props.languageList}
-              items={props.languages}
-              data="vanhack" />
-          </Row> 
-          </Row> 
+            <Row>
+              <VHLanguageList
+                languages={props.languages}
+                controls={props.controls}
+                onEvent={props.onEvent}
+                secondList={props.proficiencyList}
+                list={props.languageList}
+                items={props.languages}
+                data="vanhack" />
+            </Row>
+          </Row>
         </VHCardBase>
       </Row>
     </>

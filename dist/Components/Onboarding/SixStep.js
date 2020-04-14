@@ -63,6 +63,7 @@ var SixStep = function SixStep(props) {
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_LanguageList.default, {
+    languages: props.languages,
     controls: props.controls,
     onEvent: props.onEvent,
     secondList: props.proficiencyList,

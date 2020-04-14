@@ -5,6 +5,8 @@ import Loader from '../../Preloader';
 
 const VHInput = props => {
   const [value, handleChange] = React.useState(props.value);
+  const [maxLength, setMaxLength] = React.useState(props.maxLength);
+  const [pattern, setPattern] = React.useState(props.pattern);
   const [inputValid, setInputInvalid] = React.useState(false);
 
   React.useEffect(() => {
@@ -15,8 +17,10 @@ const VHInput = props => {
     <S.Container>
       <S.Input
         id={props.id}
+        maxLength={maxLength}
         type={props.type}
         placeholder={props.placeholder}
+        pattern={pattern}
         className={`vh-input ${props.className ? props.className : ''}`}
         disabled={props.disabled || props.loading}
         error={props.error}

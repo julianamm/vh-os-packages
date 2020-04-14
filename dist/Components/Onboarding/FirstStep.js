@@ -75,11 +75,7 @@ var FirstStep = function FirstStep(props) {
     isLoading: props.controls.yearsOfExperience.loading,
     description: props.controls.yearsOfExperience.error && props.controls.yearsOfExperience.message,
     descriptionColor: "red"
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    style: {
-      padding: '1px'
-    }
-  }, /*#__PURE__*/_react.default.createElement(_radio.default, {
+  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, null, /*#__PURE__*/_react.default.createElement(_radio.default, {
     data: 'activelyLookingForJob',
     color: "gray-90",
     variant: "platform1",

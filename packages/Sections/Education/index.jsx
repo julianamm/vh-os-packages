@@ -107,7 +107,7 @@ const VHEducationSection = props => {
                       </Row>
                     </Row>
                     <Row column marginBottom5>
-                      <Row>
+                      <Row marginBottom5>
                         <VHText variant={'subtitle1'} text={'Licenses and Certifications'} color={'black-100'} onEvent={props.onEvent} />
                       </Row>
                       <Row>
@@ -117,23 +117,23 @@ const VHEducationSection = props => {
                               <VHTitleDescription
                                 hover
                                 pointer
-                                title={item.degreeTitle}
+                                title={item.title}
                                 titleColor="primary-light"
-                                description={item.schoolName}
+                                description={item.institution}
                                 titleVariant="h4"
                                 descriptionVariant="bodyweb"
                                 onEvent={props.onEvent}
-                                data={{ label: 'openModalEducation', ...item }}
-                                onOpen={() => setOpenModal(true)}
-                                setCurrentItem={() => setCurrentItem(item)}
+                                data={{ label: 'openModalLicenses', ...item }}
+                                onOpen={() => setOpenModalLicenses(true)}
+                                setCurrentItem={() => setCurrentItemLicense(item)}
                               />
-                              <VHText variant={'caption'} text={`${new Date(item.startDate).getFullYear()} - ${item.endDate ? new Date(item.endDate).getFullYear() : 'Present'}`} color={'gray-90'} onEvent={props.onEvent} />
+                              <VHText variant={'caption'} text={`${new Date(item.yearOfComplete).getFullYear()}`} color={'gray-90'} onEvent={props.onEvent} />
                             </Row>
                           )
                         })
                         }
                       </Row>
-                      <Row width={'20%'}>
+                      <Row width={'30%'}>
                         <VHButton data={'openModalLicenses'} primary onEvent={props.onEvent} closeModal={props.closeModalLicenses} onOpen={() => { setCurrentItemLicense({}); setOpenModalLicenses(true) }} label="Add Certifications" />
                       </Row>
                     </Row>

@@ -19,6 +19,8 @@ var _Avatar = _interopRequireDefault(require("../Avatar"));
 
 var _ButtonNew = _interopRequireDefault(require("../Button-New"));
 
+var _Text = _interopRequireDefault(require("../Text"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -234,7 +236,34 @@ var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
           });
         }
       }), /*#__PURE__*/_react.default.createElement(_Modal.default, {
-        content: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, showCropper && /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
+        marginTop: '50px',
+        onClose: function onClose() {
+          _this3.setState({
+            showCropper: false
+          });
+        },
+        content: /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+          className: "newModal",
+          justifyCenter: true,
+          column: true,
+          responsive: true,
+          alignItemsCenter: true
+        }, showCropper && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+          justifyCenter: true,
+          column: true,
+          responsive: true,
+          alignItemsCenter: true
+        }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+          responsive: true,
+          marginBottom: '10'
+        }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+          variant: "h3",
+          color: "gray-90",
+          text: 'Crop your photo !'
+        })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+          responsive: true,
+          marginBottom: '10'
+        }, /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
           className: "",
           label: "Send",
           onEvent: function onEvent(e) {
@@ -258,7 +287,7 @@ var VHImgCrop = /*#__PURE__*/function (_PureComponent) {
             });
           },
           primary: true
-        }), /*#__PURE__*/_react.default.createElement("div", {
+        }))), /*#__PURE__*/_react.default.createElement("div", {
           style: {
             display: 'none'
           }

@@ -7,7 +7,7 @@ import { Container, Row } from '../../Grid';
 const VHSecondaryList = props => {
     let items = props.items ? props.items : [];
     if (items.length > 0) {
-        items.sort((a, b) => (a.order > b.order) ? 1 : -1)
+        items.sort((a, b) => (a.id < b.id) ? 1 : -1)
     }
     const list = props.list ? props.list : [];
     const secondList = props.secondList ? props.secondList : []
@@ -45,7 +45,7 @@ const VHSecondaryList = props => {
                         caption=""
                         data={'secondarySkillYears'}
                         className={'secondarySkillYears'}
-                        currentItem={items[0] ? [secondList[items[0].yearsOfExperience]] : {}}
+                        currentItem={items[0] ? secondList.find(element => element.value === items[0].yearsOfExperience) : {}}
                         items={secondList}
                         description=""
                         descriptionColor="primary"
@@ -87,7 +87,7 @@ const VHSecondaryList = props => {
                         caption=""
                         data={'secondarySkillYears'}
                         className={'secondarySkillYears'}
-                        currentItem={items[1] ? [secondList[items[1].yearsOfExperience]] : {}}
+                        currentItem={items[1] ? secondList.find(element => element.value === items[1].yearsOfExperience) : {}}
                         items={secondList}
                         description=""
                         descriptionColor="primary"
@@ -129,7 +129,7 @@ const VHSecondaryList = props => {
                         caption=""
                         data={'secondarySkillYears'}
                         className={'secondarySkillYears'}
-                        currentItem={items[2] ? [secondList[items[2].yearsOfExperience]] : {}}
+                        currentItem={items[2] ? secondList.find(element => element.value === items[2].yearsOfExperience) : {}}
                         items={secondList}
                         description=""
                         descriptionColor="primary"
@@ -171,7 +171,7 @@ const VHSecondaryList = props => {
                         caption=""
                         data={'secondarySkillYears'}
                         className={'secondarySkillYears'}
-                        currentItem={items[3] ? [secondList[items[3].yearsOfExperience]] : {}}
+                        currentItem={items[3] ? secondList.find(element => element.value === items[3].yearsOfExperience) : {}}
                         items={secondList}
                         description=""
                         descriptionColor="primary"
@@ -213,7 +213,7 @@ const VHSecondaryList = props => {
                         caption=""
                         data={'secondarySkillYears'}
                         className={'secondarySkillYears'}
-                        currentItem={items[4] ? [secondList[items[4].yearsOfExperience]] : {}}
+                        currentItem={items[4] ? secondList.find(element => element.value === items[4].yearsOfExperience) : {}}
                         items={secondList}
                         description=""
                         descriptionColor="primary"

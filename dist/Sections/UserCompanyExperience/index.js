@@ -55,7 +55,11 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
   var _React$useState5 = _react.default.useState({}),
       _React$useState6 = _slicedToArray(_React$useState5, 2),
       currentItem = _React$useState6[0],
-      _setCurrentItem = _React$useState6[1];
+      _setCurrentItem = _React$useState6[1]; // const [profileReviewInProgress, setProfileReviewInProgress] = React.useState(profileReviewInProgress || props.reviewInProgress);
+  // React.useEffect(() => {
+  //   setProfileReviewInProgress(profileReviewInProgress || props.reviewInProgress);
+  // }, [profileReviewInProgress || props.reviewInProgress])
+
 
   function calcDate(date) {
     var df = new Date(date);
@@ -134,14 +138,36 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     setNewExperience: function setNewExperience() {
       _setNewExperience(true);
     }
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    row: true
+  })), props.experience.canRequestReview && !props.reviewInProgress && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
     outline: true,
     primary: true,
     onEvent: props.onEvent,
     data: "RequestProfileReview",
     label: "Request Profile Review"
+  })), !props.experience.canRequestReview && props.experience.canRequestReviewInDays > 0 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    variant: "platform2",
+    color: "gray-80",
+    text: "You can request another rpofile review in ".concat(props.canRequestReviewInDays, " days")
+  })), props.reviewInProgress && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    variant: "platform2",
+    color: "gray-80",
+    text: "Your profile is under review"
+  })), props.experience.profileReviewInProgress && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    variant: "platform2",
+    color: "gray-80",
+    text: "Your profile is under review"
   }))))))));
 };
 

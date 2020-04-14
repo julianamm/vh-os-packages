@@ -14,7 +14,7 @@ const VHTargetLocation = props => {
     const [ireland, setIreland] = useState(items[2].status);
     const [netherlands, setNetherlands] = useState(items[3].status);
     const [uk, setUk] = useState(items[4].status);
-    const [usa, setUsa] = useState(items[5].status);
+    const [spain, setSpain] = useState(items[5].status);
 
     React.useEffect(() => {
         setCanada(items[0].status),
@@ -22,7 +22,7 @@ const VHTargetLocation = props => {
             setIreland(items[2].status),
             setNetherlands(items[3].status),
             setUk(items[4].status),
-            setUsa(items[5].status)
+            setSpain(items[5].status)
     },
         [items[0].status,
         items[1].status,
@@ -145,25 +145,25 @@ const VHTargetLocation = props => {
                         />
                     </Row>
                 </S.Wrapper>
-                <S.Wrapper disabled={!usa} onClick={() => {
-                    setUsa(!usa)
+                <S.Wrapper disabled={!spain} onClick={() => {
+                    setSpain(!spain)
                     props.onEvent({
                         type: "OnClick",
                         origin: "VHTargetLocation",
                         props: {
-                            data: { id: items[5].id, status: usa ? 0 : 1 },
+                            data: { id: items[5].id, status: spain ? 0 : 1 },
                             position: 5
                         }
                     })
                 }}>
                     <Row marginBottom3 alignItemsCenter>
-                        <VHIcon icon={'usa'} title="city" lg />
+                        <VHIcon icon={'spain'} title="city" lg />
                     </Row>
                     <Row alignItemsCenter>
                         <VHText
                             variant={"platform2"}
                             color="black-100"
-                            text={'U.S.A'}
+                            text={'Spain'}
                         />
                     </Row>
                 </S.Wrapper>

@@ -1,138 +1,133 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as S from './styles';
 import VHText from '../Text'
 import VHSelect from '../Input/Select'
 import { Container, Row } from '../../Grid';
+import VHIcon from '../Icon';
+
 
 const VHLanguageList = props => {
-
-    const english = props.items.find(element => element.code === 'en')
-    const french = props.items.find(element => element.code === 'fr')
-    const other = props.items.find(element => element.code != 'en' && element.code != 'fr')
-
-    const list = props.list ? props.list : [];
+    const [languages, setLanguages] = useState(props.languages)
     const secondList = props.secondList ? props.secondList : []
-    
+    const [render, reRender] = useState(1)
+
+    React.useEffect(() => {
+        setLanguages(props.languages);
+    }, [props.languages])
+
+
     return (
         <React.Fragment>
-            < S.Wrapper >
-                <Row alignItemsCenter row marginRight={2} marginLeft={2}>
-                    <Row >
+            {languages.length === 0 ?
+                < S.Wrapper >
+                    <Row alignItemsCenter row marginRight={2} marginLeft={2}>
+                        <Row >
+                            <VHSelect
+                                removeIndicator
+                                preLoading={true}
+                                marginBottom={'0px'}
+                                removeBorder
+                                caption=""
+                                data={'language'}
+                                className={'language'}
+                                currentItem={{}}
+                                items={[]}
+                                description=""
+                                descriptionColor="primary"
+                                onEvent={props.onEvent}
+                                order={0}
+                                placeholder={'Select Language'}
+                            />
+                        </Row>
+                    </Row>
+                    <Row width={'20%'}>
                         <VHSelect
-                            removeIndicator
-                            preLoading={props.controls.language.preLoading}
+                            preLoading={true}
                             marginBottom={'0px'}
                             removeBorder
                             caption=""
-                            data={'defaultLanguage'}
-                            className={'language'}
-                            currentItem={{ value: 'en', label: 'English' }}
-                            items={[{ value: 'en', label: 'English' }]}
+                            data={'proficiency'}
+                            className={'proficiency'}
+                            currentItem={{}}
+                            items={[]}
                             description=""
                             descriptionColor="primary"
+                            leftText=""
                             onEvent={props.onEvent}
                             order={0}
+                            placeholder={'Proficiency'}
                         />
                     </Row>
-                </Row>
-                <Row width={'20%'}>
-                    <VHSelect
-                        preLoading={props.controls.language.preLoading}
-                        marginBottom={'0px'}
-                        removeBorder
-                        caption=""
-                        data={'proficiency'}
-                        className={'proficiency'}
-                        currentItem={english != undefined ? secondList[english.level] : {}}
-                        items={secondList}
-                        description=""
-                        descriptionColor="primary"
-                        leftText=""
-                        onEvent={props.onEvent}
-                        order={0}
-                        placeholder={'Proficiency'}
-                    />
-                </Row>
-            </ S.Wrapper>
-            < S.Wrapper >
-                <Row alignItemsCenter row marginRight={2} marginLeft={2}>
-                    <Row>
-                        <VHSelect
-                            removeIndicator
-                            preLoading={props.controls.language.preLoading}
-                            marginBottom={'0px'}
-                            removeBorder
-                            caption=""
-                            data={'defaultLanguage'}
-                            className={'language'}
-                            currentItem={{ value: 'fr', label: 'French' }}
-                            items={[{ value: 'fr', label: 'French' }]}
-                            description=""
-                            descriptionColor="primary"
-                            onEvent={props.onEvent}
-                            order={1}
-                        />
-                    </Row>
-                </Row>
-                <Row width={'20%'}>
-                    <VHSelect
-                        preLoading={props.controls.language.preLoading}
-                        marginBottom={'0px'}
-                        removeBorder
-                        caption=""
-                        data={'proficiency'}
-                        className={'proficiency'}
-                        currentItem={french != undefined ? secondList[french.level] : {}}
-                        items={secondList}
-                        description=""
-                        descriptionColor="primary"
-                        leftText=""
-                        onEvent={props.onEvent}
-                        order={1}
-                        placeholder={'Proficiency'}
-                    />
-                </Row>
-            </S.Wrapper>
-            <S.Wrapper>
-                <Row alignItemsCenter row marginRight={2} marginLeft={2}>
-                    <Row>
-                        <VHSelect
-                            removeIndicator
-                            preLoading={props.controls.language.preLoading}
-                            marginBottom={'0px'}
-                            removeBorder
-                            caption=""
-                            data={'language'}
-                            className={'language'}
-                            currentItem={other != undefined ? { value: other.code, label: other.name } : {}}
-                            items={props.list}
-                            description=""
-                            descriptionColor="primary"
-                            onEvent={props.onEvent}
-                            order={2}
-                        />
-                    </Row>
-                </Row>
-                <Row width={'20%'}>
-                    <VHSelect
-                        preLoading={props.controls.language.preLoading}
-                        isDisabled={other === undefined ? true : false}
-                        marginBottom={'0px'}
-                        removeBorder
-                        caption=""
-                        data={'proficiency'}
-                        className={'proficiency'}
-                        currentItem={other != undefined ? secondList[other.level] : {}}
-                        items={secondList}
-                        description=""
-                        descriptionColor="primary"
-                        leftText=""
-                        onEvent={props.onEvent}
-                        order={2}
-                        placeholder={'Proficiency'}
-                    />
-                </Row>
-            </S.Wrapper>
+                </ S.Wrapper>
+                :
+                <React.Fragment>
+                    {languages.map((language, index) =>
+                        < S.Wrapper >
+                            <Row alignItemsCenter row marginRight={2} marginLeft={2}>
+                                <Row >
+                                    <VHSelect
+                                        removeIndicator
+                                        preLoading={props.controls.language.preLoading}
+                                        marginBottom={'0px'}
+                                        removeBorder
+                                        caption=""
+                                        data={language.code === 'en' || language.code === 'fr' ? 'defaultLanguage' : 'language'}
+                                        className={'language'}
+                                        currentItem={language.code !== undefined ? { value: language.code, label: language.name } : {}}
+                                        items={language.code === 'en' ? [{ value: 'en', label: 'English' }] : language.code === 'fr' ? [{ value: 'fr', label: 'French' }] : props.list}
+                                        description=""
+                                        descriptionColor="primary"
+                                        onEvent={props.onEvent}
+                                        order={index}
+                                        placeholder={'Select Language'}
+                                    />
+                                </Row>
+                            </Row>
+                            <Row width={'20%'}>
+                                <VHSelect
+                                    preLoading={props.controls.language.preLoading}
+                                    marginBottom={'0px'}
+                                    removeBorder
+                                    caption=""
+                                    data={'proficiency'}
+                                    className={'proficiency'}
+                                    currentItem={language.level != undefined ? secondList[language.level] : {}}
+                                    items={secondList}
+                                    description=""
+                                    descriptionColor="primary"
+                                    leftText=""
+                                    onEvent={props.onEvent}
+                                    order={index}
+                                    placeholder={'Proficiency'}
+                                />
+                            </Row>
+                            {language.id && language.code && language.code !== 'en' && language.code !== 'fr' &&
+                                <Row width={'10%'}>
+                                    <S.Close
+                                        onClick={() => {
+                                            props.onEvent({
+                                                event: 'deleteLanguage',
+                                                code: language.code
+                                            })
+                                        }}>
+                                        <VHIcon icon={'delete'} alt="Close icon" />
+                                    </S.Close>
+                                </Row>
+                            }
+                        </ S.Wrapper>
+                    )}
+                    <S.Wrapper>
+                        <Row alignItemsCenter row marginRight={2} marginLeft={2}>
+                            <VHText color="gradient-primary" onEvent={(e) => {
+                                let newLanguages = languages
+                                newLanguages.push({ level: undefined, name: undefined, code: undefined })
+                                setLanguages(newLanguages)
+                                reRender(render + 1)
+                            }} data={'addLanguage'} variant={'platform'} text="+ Add language" cursor />
+                        </Row>
+                    </S.Wrapper>
+                </React.Fragment>
+            }
         </React.Fragment>
     )
 }
