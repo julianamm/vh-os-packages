@@ -8,7 +8,8 @@ var _ = _interopRequireDefault(require("."));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var date = new Date();
+var dateNow = new Date();
+dateNow.setHours(dateNow.getHours() + 80);
 (0, _react2.storiesOf)("Components|Timer", module).add("VHTimer", function () {
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
@@ -17,9 +18,6 @@ var date = new Date();
       padding: "24px"
     }
   }, /*#__PURE__*/_react.default.createElement(_.default, {
-    endDate: date.setDate(date.getDate() + 2),
-    onEndTime: function onEndTime(event) {
-      return console.log(event);
-    }
+    endDate: new Date(dateNow.getTime() + dateNow.getTimezoneOffset() * 60000)
   }));
 });

@@ -20,9 +20,14 @@ var VHLink = function VHLink(props) {
     sm: props.sm,
     lg: props.lg,
     reverse: props.reverse,
-    onClick: function onClick(e) {
-      e.preventDefault();
-      props.onClick();
+    onClick: function onClick() {
+      props.onEvent({
+        type: "OnClick",
+        origin: "VHLink",
+        props: {
+          data: props.data
+        }
+      });
     },
     className: "vh-link-component ".concat(props.className ? props.className : ''),
     href: props.to,
@@ -47,7 +52,7 @@ VHLink.propTypes = {
   label: _propTypes.default.string.isRequired,
   className: _propTypes.default.string,
   color: _propTypes.default.string,
-  to: _propTypes.default.string.isRequired
+  to: _propTypes.default.string
 };
 var _default = VHLink;
 exports.default = _default;

@@ -10,9 +10,14 @@ const VHLink = props => {
       sm={props.sm}
       lg={props.lg}
       reverse={props.reverse}
-      onClick={e => {
-        e.preventDefault()
-        props.onClick()
+      onClick={() => {
+        props.onEvent({
+          type: "OnClick",
+          origin: "VHLink",
+          props: {
+            data: props.data
+          }
+        })
       }}
       className={`vh-link-component ${props.className ? props.className : ''}`}
       href={props.to}
@@ -42,7 +47,7 @@ VHLink.propTypes = {
   label: PropTypes.string.isRequired,
   className: PropTypes.string,
   color: PropTypes.string,
-  to: PropTypes.string.isRequired,
+  to: PropTypes.string
 }
 
 
