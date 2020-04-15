@@ -55,17 +55,24 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
   var _React$useState5 = _react.default.useState({}),
       _React$useState6 = _slicedToArray(_React$useState5, 2),
       currentItem = _React$useState6[0],
-      _setCurrentItem = _React$useState6[1];
+      _setCurrentItem = _React$useState6[1]; // const [profileReviewInProgress, setProfileReviewInProgress] = React.useState(profileReviewInProgress || props.reviewInProgress);
+  // React.useEffect(() => {
+  //   setProfileReviewInProgress(profileReviewInProgress || props.reviewInProgress);
+  // }, [profileReviewInProgress || props.reviewInProgress])
+
 
   function calcDate(date) {
-    var today = new Date();
-    var past = new Date(date);
-    var diff = Math.floor(today.getTime() - past.getTime());
-    var day = 1000 * 60 * 60 * 24;
-    var days = Math.floor(diff / day);
-    var months = Math.floor(days / 31);
-    var years = Math.floor(months / 12);
-    return "".concat(years, " years, ").concat(months, " months");
+    var df = new Date(date);
+    var dt = new Date();
+    var allYears = dt.getFullYear() - df.getFullYear();
+    var partialMonths = dt.getMonth() - df.getMonth();
+
+    if (partialMonths < 0) {
+      allYears--;
+      partialMonths = partialMonths + 12;
+    }
+
+    return "".concat(allYears, " years, ").concat(partialMonths, " months");
   }
 
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, openModal && /*#__PURE__*/_react.default.createElement(_ModalExperience.default, {
@@ -131,14 +138,36 @@ var VHUserCompanyExperienceSection = function VHUserCompanyExperienceSection(pro
     setNewExperience: function setNewExperience() {
       _setNewExperience(true);
     }
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    row: true
+  })), props.experience.canRequestReview && !props.reviewInProgress && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    alignItemsCenter: true
   }, /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
     outline: true,
     primary: true,
     onEvent: props.onEvent,
     data: "RequestProfileReview",
     label: "Request Profile Review"
+  })), !props.experience.canRequestReview && props.experience.canRequestReviewInDays > 0 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    variant: "platform2",
+    color: "gray-80",
+    text: "You can request another rpofile review in ".concat(props.canRequestReviewInDays, " days")
+  })), props.reviewInProgress && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    variant: "platform2",
+    color: "gray-80",
+    text: "Your profile is under review"
+  })), props.experience.profileReviewInProgress && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    row: true,
+    alignItemsCenter: true
+  }, /*#__PURE__*/_react.default.createElement(_Text.default, {
+    variant: "platform2",
+    color: "gray-80",
+    text: "Your profile is under review"
   }))))))));
 };
 

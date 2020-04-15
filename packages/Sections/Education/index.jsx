@@ -9,12 +9,16 @@ import VHText from "../../Components/Text/"
 import { CardSkeleton } from 'react-preload-skeleton'
 import VHPreloader from '../../Components/Preloader'
 import VHSelect from '../../Components/Input/Select/'
+import VHModalLicenses from '../../Components/ModalLicenses';
 
 const VHEducationSection = props => {
   const [openModal, setOpenModal] = React.useState(false);
+  const [openModalLicenses, setOpenModalLicenses] = React.useState(false);
   const education = props.education ? props.education : [];
+  const licenses = props.licenses ? props.licenses : [];
   const items = props.degreeTypeList;
   const [currentItem, setCurrentItem] = React.useState({});
+  const [currentItemLicense, setCurrentItemLicense] = React.useState({});
   const degreeType = props.degreeType != undefined ? items.find(element => element.value === props.degreeType) : {};
 
   return (
@@ -28,6 +32,15 @@ const VHEducationSection = props => {
           controls={props.controls}
           onEvent={props.onEvent}
           currentItem={currentItem} />
+      }
+      {openModalLicenses &&
+        <VHModalLicenses openModal={openModalLicenses} onClose={() => setOpenModalLicenses(false)}
+          closeModal={props.closeModalLicenses}
+          modalLicenses={props.modalLicenses}
+          items={items}
+          controls={props.controls}
+          onEvent={props.onEvent}
+          currentItem={currentItemLicense} />
       }
       <Row marginBottom={2}>
         <VHText
@@ -51,8 +64,8 @@ const VHEducationSection = props => {
                   <CardSkeleton button />
                 </>
               ) : (
-                  <Row column>
-                    <Row>
+                  <React.Fragment>
+                    <Row column marginBottom5>
                       <Row>
                         <VHText variant={'subtitle1'} text={'Formal Education'} color={'black-100'} onEvent={props.onEvent} />
                         <Row paddingTop={'5'} paddingRight8 id="education-level" width={'50%'}>
@@ -68,32 +81,63 @@ const VHEducationSection = props => {
                           />
                         </Row>
                       </Row>
+                      {education.map(item => {
+                        return (
+                          <Row marginBottom5>
+                            <VHTitleDescription
+                              hover
+                              pointer
+                              title={item.degreeTitle}
+                              titleColor="primary-light"
+                              description={item.schoolName}
+                              titleVariant="h4"
+                              descriptionVariant="bodyweb"
+                              onEvent={props.onEvent}
+                              data={{ label: 'openModalEducation', ...item }}
+                              onOpen={() => setOpenModal(true)}
+                              setCurrentItem={() => setCurrentItem(item)}
+                            />
+                            <VHText variant={'caption'} text={`${new Date(item.startDate).getFullYear()} - ${item.endDate ? new Date(item.endDate).getFullYear() : 'Present'}`} color={'gray-90'} onEvent={props.onEvent} />
+                          </Row>
+                        )
+                      })
+                      }
+                      <Row width={'20%'}>
+                        <VHButton data={'openModal'} primary onEvent={props.onEvent} closeModal={props.closeModal} onOpen={() => { setCurrentItem({}); setOpenModal(true) }} label="Add Education" />
+                      </Row>
                     </Row>
-                    {education.map(item => {
-                      return (
-                        <Row marginBottom5>
-                          <VHTitleDescription
-                            hover
-                            pointer
-                            title={item.degreeTitle}
-                            titleColor="primary-light"
-                            description={item.schoolName}
-                            titleVariant="h4"
-                            descriptionVariant="bodyweb"
-                            onEvent={props.onEvent}
-                            data={{ label: 'openModalEducation', ...item }}
-                            onOpen={() => setOpenModal(true)}
-                            setCurrentItem={() => setCurrentItem(item)}
-                          />
-                          <VHText variant={'caption'} text={`${new Date(item.startDate).getFullYear()} - ${item.endDate ? new Date(item.endDate).getFullYear() : 'Present'}`} color={'gray-90'} onEvent={props.onEvent} />
-                        </Row>
-                      )
-                    })
-                    }
-                    <Row width={'20%'}>
-                      <VHButton data={'openModal'} primary onEvent={props.onEvent} closeModal={props.closeModal} onOpen={() => { setCurrentItem({}); setOpenModal(true) }} label="Add Education" />
+                    <Row column marginBottom5>
+                      <Row marginBottom5>
+                        <VHText variant={'subtitle1'} text={'Licenses and Certifications'} color={'black-100'} onEvent={props.onEvent} />
+                      </Row>
+                      <Row>
+                        {licenses.map(item => {
+                          return (
+                            <Row marginBottom5>
+                              <VHTitleDescription
+                                hover
+                                pointer
+                                title={item.title}
+                                titleColor="primary-light"
+                                description={item.institution}
+                                titleVariant="h4"
+                                descriptionVariant="bodyweb"
+                                onEvent={props.onEvent}
+                                data={{ label: 'openModalLicenses', ...item }}
+                                onOpen={() => setOpenModalLicenses(true)}
+                                setCurrentItem={() => setCurrentItemLicense(item)}
+                              />
+                              <VHText variant={'caption'} text={`${new Date(item.yearOfComplete).getFullYear()}`} color={'gray-90'} onEvent={props.onEvent} />
+                            </Row>
+                          )
+                        })
+                        }
+                      </Row>
+                      <Row width={'30%'}>
+                        <VHButton data={'openModalLicenses'} primary onEvent={props.onEvent} closeModal={props.closeModalLicenses} onOpen={() => { setCurrentItemLicense({}); setOpenModalLicenses(true) }} label="Add Certifications" />
+                      </Row>
                     </Row>
-                  </Row>
+                  </React.Fragment>
                 )
             }
           </React.Fragment>

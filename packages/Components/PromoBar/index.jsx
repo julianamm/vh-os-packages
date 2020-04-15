@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Row, Container } from '../../Grid';
 import VHText from '../Text/index';
 import VHButton from '../Button/index';
+import VHLink from '../../Hyperlinks/Links/index';
 import VHTimer from '../Timer/index';
 import * as S from './styles';
 
@@ -37,7 +38,7 @@ const VHPromoBar = props => {
                             <VHTimer
                                 endDate={ props.endDate }
                             />
-                            <Row row alignItemsCenter marginRight={1}>
+                            <Row row alignItemsCenter marginRight={1} marginLeft={3}>
                                 <Row width={"100px"}>
                                     <VHButton 
                                         label={props.label}
@@ -50,11 +51,13 @@ const VHPromoBar = props => {
                                 </Row>
                             </Row>
                             <Row row alignItemsCenter justifyBottom style={{  cursor: "pointer"}} mobileDisplayNone>
-                                <VHText 
-                                    variant={"subtitle3"}
-                                    color={"gray-10"}
-                                    text={"Dismiss"}
-                                    onClick={props.onClick}
+                                <VHLink 
+                                    white
+                                    xl
+                                    noUnderscore
+                                    label={"Dismiss"}
+                                    onEvent={props.onEvent}
+                                    data='DismissPromoBar'
                                 />
                             </Row>
                         </Row>
@@ -63,8 +66,8 @@ const VHPromoBar = props => {
             </S.Wrapper>
         </Row>
     )
-
 }
+
 VHPromoBar.defaultProps = {
     onEvent: null,
     className: "",

@@ -56,14 +56,22 @@ var VHSelect = function VHSelect(props) {
     return /*#__PURE__*/_react.default.createElement(_reactPreloadSkeleton.TitleDescriptionSkeleton, null);
   }
 
-  var _React$useState = _react.default.useState(props.currentItem),
+  var newValue = undefined;
+
+  if (props.currentItem && Object.keys(props.currentItem).length !== 0 && props.currentItem.constructor === Object) {
+    newValue = props.currentItem;
+  } else if (Array.isArray(props.currentItem) && props.currentItem.length > 0) {
+    newValue = props.currentItem;
+  }
+
+  var _React$useState = _react.default.useState(newValue),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       value = _React$useState2[0],
       handleChange = _React$useState2[1];
 
   _react.default.useEffect(function () {
-    handleChange(props.currentItem);
-  }, [props.currentItem]);
+    handleChange(newValue);
+  }, [newValue]);
 
   var style = (_style = {
     control: function control(base) {
@@ -193,7 +201,7 @@ var VHSelect = function VHSelect(props) {
     styles: props.removeBorder ? style : styled,
     closeMenuOnSelect: !props.isMulti,
     className: props.className,
-    placeholder: props.placeholder,
+    placeholder: props.placeholder ? props.placeholder : 'Select an option',
     isLoading: props.isLoading,
     isDisabled: props.isLoading || props.isDisabled // components={animatedComponents}
     ,
@@ -209,7 +217,7 @@ var VHSelect = function VHSelect(props) {
         case actionMeta.action === "remove-value":
           var finalValue = [];
 
-          if (newValue.value === 'zero') {
+          if (newValue !== null && newValue.value === 'zero') {
             newValue.value = 0;
           }
 

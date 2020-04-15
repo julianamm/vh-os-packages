@@ -15,19 +15,24 @@ const VHUserCompanyExperienceSection = props => {
   const experience = props.experience.experiences ? props.experience.experiences : [];
   const [currentItem, setCurrentItem] = React.useState({});
 
+  // const [profileReviewInProgress, setProfileReviewInProgress] = React.useState(profileReviewInProgress || props.reviewInProgress);
+
+  // React.useEffect(() => {
+  //   setProfileReviewInProgress(profileReviewInProgress || props.reviewInProgress);
+  // }, [profileReviewInProgress || props.reviewInProgress])
+
   function calcDate(date) {
 
-    let today = new Date()
-    let past = new Date(date) 
+    var df = new Date(date);
+    var dt = new Date();
+    var allYears = dt.getFullYear() - df.getFullYear();
+    var partialMonths = dt.getMonth() - df.getMonth();
+    if (partialMonths < 0) {
+      allYears--;
+      partialMonths = partialMonths + 12;
+    }
 
-    var diff = Math.floor(today.getTime() - past.getTime());
-    var day = 1000 * 60 * 60 * 24;
-
-    var days = Math.floor(diff / day);
-    var months = Math.floor(days / 31);
-    var years = Math.floor(months / 12);
-
-    return `${years} years, ${months} months`  
+    return `${allYears} years, ${partialMonths} months`
   }
 
   return (
@@ -96,15 +101,44 @@ const VHUserCompanyExperienceSection = props => {
                             setNewExperience={() => { setNewExperience(true) }}
                           />
                         </Row>
-                        <Row row>
-                          <VHButton
-                            outline
-                            primary
-                            onEvent={props.onEvent}
-                            data={"RequestProfileReview"}
-                            label="Request Profile Review"
-                          />
-                        </Row>
+                        {props.experience.canRequestReview && !props.reviewInProgress &&
+                          <Row row alignItemsCenter>
+                            <VHButton
+                              outline
+                              primary
+                              onEvent={props.onEvent}
+                              data={"RequestProfileReview"}
+                              label="Request Profile Review"
+                            />
+                          </Row>
+                        }
+                        {!props.experience.canRequestReview && props.experience.canRequestReviewInDays > 0 &&
+                          <Row row alignItemsCenter>
+                            <VHText
+                              variant={"platform2"}
+                              color="gray-80"
+                              text={`You can request another rpofile review in ${props.canRequestReviewInDays} days`}
+                            />
+                          </Row>
+                        }
+                        {props.reviewInProgress &&
+                          <Row row alignItemsCenter>
+                            <VHText
+                              variant={"platform2"}
+                              color="gray-80"
+                              text={`Your profile is under review`}
+                            />
+                          </Row>
+                        }
+                        {props.experience.profileReviewInProgress &&
+                          <Row row alignItemsCenter>
+                            <VHText
+                              variant={"platform2"}
+                              color="gray-80"
+                              text={`Your profile is under review`}
+                            />
+                          </Row>
+                        }
                       </Row>
                     </>
                   )

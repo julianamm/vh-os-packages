@@ -7,7 +7,7 @@ import { Container, Row } from '../../Grid';
 const VHSecondaryList = props => {
     let items = props.items ? props.items : [];
     if (items.length > 0) {
-        items.sort((a, b) => (a.order > b.order) ? 1 : -1)
+        items.sort((a, b) => (a.id < b.id) ? 1 : -1)
     }
     const list = props.list ? props.list : [];
     const secondList = props.secondList ? props.secondList : []
@@ -31,6 +31,7 @@ const VHSecondaryList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={0}
+                            placeholder='Add secondary skill'
                         />
                     </Row>
                 </Row>
@@ -44,14 +45,14 @@ const VHSecondaryList = props => {
                         caption=""
                         data={'secondarySkillYears'}
                         className={'secondarySkillYears'}
-                        currentItem={items[0] ? [secondList[items[0].yearsOfExperience]] : {}}
+                        currentItem={items[0] ? secondList.find(element => element.value === items[0].yearsOfExperience) : {}}
                         items={secondList}
                         description=""
                         descriptionColor="primary"
                         leftText=""
                         onEvent={props.onEvent}
                         order={0}
-                        placeholder="Proficiency"
+                        placeholder="Experience"
                     />
                 </Row>
             </ S.Wrapper>
@@ -72,6 +73,7 @@ const VHSecondaryList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={1}
+                            placeholder='Add secondary skill'
                         />
                     </Row>
                 </Row>
@@ -85,14 +87,14 @@ const VHSecondaryList = props => {
                         caption=""
                         data={'secondarySkillYears'}
                         className={'secondarySkillYears'}
-                        currentItem={items[1] ? [secondList[items[1].yearsOfExperience]] : {}}
+                        currentItem={items[1] ? secondList.find(element => element.value === items[1].yearsOfExperience) : {}}
                         items={secondList}
                         description=""
                         descriptionColor="primary"
                         leftText=""
                         onEvent={props.onEvent}
                         order={1}
-                        placeholder="Proficiency"
+                        placeholder="Experience"
                     />
                 </Row>
             </S.Wrapper>
@@ -113,6 +115,7 @@ const VHSecondaryList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={2}
+                            placeholder='Add secondary skill'
                         />
                     </Row>
                 </Row>
@@ -126,14 +129,14 @@ const VHSecondaryList = props => {
                         caption=""
                         data={'secondarySkillYears'}
                         className={'secondarySkillYears'}
-                        currentItem={items[2] ? [secondList[items[2].yearsOfExperience]] : {}}
+                        currentItem={items[2] ? secondList.find(element => element.value === items[2].yearsOfExperience) : {}}
                         items={secondList}
                         description=""
                         descriptionColor="primary"
                         leftText=""
                         onEvent={props.onEvent}
                         order={2}
-                        placeholder="Proficiency"
+                        placeholder="Experience"
                     />
                 </Row>
             </S.Wrapper>
@@ -154,6 +157,7 @@ const VHSecondaryList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={3}
+                            placeholder='Add secondary skill'
                         />
                     </Row>
                 </Row>
@@ -167,14 +171,14 @@ const VHSecondaryList = props => {
                         caption=""
                         data={'secondarySkillYears'}
                         className={'secondarySkillYears'}
-                        currentItem={items[3] ? [secondList[items[3].yearsOfExperience]] : {}}
+                        currentItem={items[3] ? secondList.find(element => element.value === items[3].yearsOfExperience) : {}}
                         items={secondList}
                         description=""
                         descriptionColor="primary"
                         leftText=""
                         onEvent={props.onEvent}
                         order={3}
-                        placeholder="Proficiency"
+                        placeholder="Experience"
                     />
                 </Row>
             </S.Wrapper>
@@ -195,6 +199,7 @@ const VHSecondaryList = props => {
                             descriptionColor="primary"
                             onEvent={props.onEvent}
                             order={4}
+                            placeholder='Add secondary skill'
                         />
                     </Row>
                 </Row>
@@ -208,13 +213,14 @@ const VHSecondaryList = props => {
                         caption=""
                         data={'secondarySkillYears'}
                         className={'secondarySkillYears'}
-                        currentItem={items[4] ? [secondList[items[4].yearsOfExperience]] : {}}
+                        currentItem={items[4] ? secondList.find(element => element.value === items[4].yearsOfExperience) : {}}
                         items={secondList}
                         description=""
                         descriptionColor="primary"
                         leftText=""
                         onEvent={props.onEvent}
                         order={4}
+                        placeholder="Experience"
                     />
                 </Row>
             </S.Wrapper>

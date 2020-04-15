@@ -21,6 +21,8 @@ var _radio = _interopRequireDefault(require("../Input/radio"));
 
 var _TargetLocation = _interopRequireDefault(require("../TargetLocation/"));
 
+var _TitleDescription = _interopRequireDefault(require("../../Components/TitleDescription"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var FourthStep = function FourthStep(props) {
@@ -29,10 +31,24 @@ var FourthStep = function FourthStep(props) {
   var targetLocation = props.targetLocation ? props.targetLocation.items : [];
   var visaStatusCanadian = props.visaStatusCanadian != undefined ? visaStatusCanadianList[props.visaStatusCanadian] : [];
   var visaStatusEU = props.visaStatusEU != undefined ? visaStatusEUList[props.visaStatusEU] : [];
+  var firstChoice = props.firstChoice ? props.firstChoice : {};
+  var remoteJobList = props.remoteJobList;
+  var openForRemoteJobs = props.openForRemoteJobs != undefined ? remoteJobList[props.openForRemoteJobs] : [];
+  var preferedCountries = [];
+
+  if (targetLocation != undefined && targetLocation.length > 0) {
+    targetLocation.map(function (country) {
+      if (country.status) {
+        preferedCountries.push({
+          value: country.id,
+          label: country.name
+        });
+      }
+    });
+  }
+
   return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    column: true,
-    marginLeft: 1,
-    marginRight: 1
+    column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     marginBottom: 10,
@@ -54,21 +70,55 @@ var FourthStep = function FourthStep(props) {
   }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     column: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
-    marginBottom: 10
-  }, /*#__PURE__*/_react.default.createElement(_radio.default, {
-    data: 'openForRemoteJobs',
-    color: "gray-90",
-    variant: "platform1",
+    marginBottom: 10,
+    style: {
+      padding: '1px'
+    },
+    width: '50%'
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    caption: 'Are you open to remote jobs?',
+    className: "vh-relocation-section-openForRemoteJobs ".concat(props.className ? props.className : ''),
+    currentItem: openForRemoteJobs,
+    data: "openForRemoteJobs",
+    items: remoteJobList,
     onEvent: props.onEvent,
-    text: 'Are you open to remote jobs?',
-    checked: props.openForRemoteJobs
+    isLoading: props.controls.openForRemoteJobs.loading,
+    description: props.controls.openForRemoteJobs.error && props.controls.openForRemoteJobs.message,
+    descriptionColor: "red",
+    captionColor: props.controls.openForRemoteJobs.loading ? "gray-40" : props.controls.openForRemoteJobs.error ? "red" : "gray-90"
+  })), props.openForRemoteJobs !== null && props.openForRemoteJobs < 2 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    marginBottom: 1
+  }, /*#__PURE__*/_react.default.createElement(_TitleDescription.default, {
+    className: "vh-general-section-companySize ".concat(props.className ? props.className : ''),
+    descriptionColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red-light" : "gray-90",
+    descriptionVariant: "caption",
+    inline: true,
+    onEvent: props.onEvent,
+    title: "Where would you like to work?",
+    titleColor: props.controls.companySize.loading ? "gray-40" : props.controls.companySize.error ? "red" : "gray-90",
+    titleVariant: "platform1"
   })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 5,
     width: '100%'
   }, /*#__PURE__*/_react.default.createElement(_TargetLocation.default, {
     onEvent: props.onEvent,
     items: targetLocation
-  })), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+  })), preferedCountries.length > 0 && /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+    width: '50%',
+    responsive: true,
+    id: "preferred-country"
+  }, /*#__PURE__*/_react.default.createElement(_Select.default, {
+    caption: 'Which country is your first choice?',
+    className: "vh-general-section-firstChoice ".concat(props.className ? props.className : ''),
+    currentItem: firstChoice,
+    data: "firstChoice",
+    items: preferedCountries,
+    onEvent: props.onEvent,
+    isLoading: props.controls.firstChoice.loading,
+    description: props.controls.firstChoice.error && props.controls.firstChoice.message,
+    descriptionColor: "red",
+    captionColor: props.controls.firstChoice.loading ? "gray-40" : props.controls.firstChoice.error ? "red" : "gray-90"
+  }))), /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     row: true,
     responsive: true
   }, /*#__PURE__*/_react.default.createElement(_Grid.Row, {

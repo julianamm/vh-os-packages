@@ -11,6 +11,7 @@ export const ModalWrapper = styled.div`
   display: ${props => (props.open ? "block" : "none")};
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 666;
+  margin-top: ${props => props.marginTop ? props.marginTop : ''}
   
 `;
 

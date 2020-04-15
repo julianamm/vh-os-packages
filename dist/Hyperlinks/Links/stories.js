@@ -20,6 +20,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     xs: true,
     label: "VH link"
   }));
+}).add('xs with onClick', function () {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      padding: "24px"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_.default, {
+    onEvent: function onEvent(e) {
+      console.log(e);
+    },
+    xs: true,
+    label: "VH link with OnClick"
+  }));
 }).add('sm', function () {
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {

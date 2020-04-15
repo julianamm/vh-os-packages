@@ -68,7 +68,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  overflow-y: scroll;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: ", ";\n  background-color: rgba(0, 0, 0, 0.75);\n  z-index: 666;\n  \n"]);
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  overflow-y: scroll;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: ", ";\n  background-color: rgba(0, 0, 0, 0.75);\n  z-index: 666;\n  margin-top: ", "\n  \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -81,6 +81,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var ModalWrapper = _styledComponents.default.div(_templateObject(), function (props) {
   return props.open ? "block" : "none";
+}, function (props) {
+  return props.marginTop ? props.marginTop : '';
 });
 
 exports.ModalWrapper = ModalWrapper;

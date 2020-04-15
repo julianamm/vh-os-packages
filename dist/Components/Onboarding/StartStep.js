@@ -70,7 +70,7 @@ var StartStep = function StartStep(props) {
       fontSize: '16px',
       color: '#4f4f4f'
     }
-  }, "Crafting a successful profile has never been easier.")), /*#__PURE__*/_react.default.createElement("div", {
+  }, "Crafting a successful profile has never been easier. Let's start!")), /*#__PURE__*/_react.default.createElement("div", {
     style: {
       marginBottom: '50px'
     }

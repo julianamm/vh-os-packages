@@ -45,6 +45,7 @@ const SixStep = props => {
             <Row column>
                 <Row>
                     <VHLanguageList
+                        languages={props.languages}
                         controls={props.controls}
                         onEvent={props.onEvent}
                         secondList={props.proficiencyList}

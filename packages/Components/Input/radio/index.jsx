@@ -9,6 +9,8 @@ import { getFormatedDate } from '../../../util'
 const VHInputRadio = props => {
     const [checked, setChecked] = useState(props.checked)
 
+    const [value, setValue] = useState(props.value)
+
     React.useEffect(() => {
         setChecked(props.checked);
     }, [props.checked])
@@ -60,7 +62,7 @@ const VHInputRadio = props => {
                 <S.Label for={props.text}>{'No'}</S.Label>
                 {props.input && checked &&
                     <S.Container>
-                        <VHInput data={'passportExpirationDate'} type='date' value={getFormatedDate(props.value)} onEvent={props.onEvent} />
+                        <VHInput maxLength={'4'} type="text" data={'passportExpirationDate'} pattern="([0-9]{2}[/]?){2}" placeholder={'Expiration: mm/yy'} value={value} onEvent={props.onEvent} />
                     </S.Container>
                 }
             </S.Wrapper>
