@@ -15,7 +15,7 @@ const VHLanguageSection = props => {
   const position = props.positionSkill != undefined ? [positions[props.positionSkill]] : {};
 
   const yearsOfExperienceList = props.yearsOfExperienceList
-  const yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
+  const yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience - 1]] : {};
 
   const workAsList = props.positions
 

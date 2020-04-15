@@ -29,9 +29,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHSkillsSection = function VHSkillsSection(props) {
   var positions = props.positions;
-  var position = props.positionSkill != undefined ? positions[props.positionSkill] : {};
+  var position = props.positionSkill != undefined ? positions[props.positionSkill - 1] : {};
   var yearsOfExperienceList = props.yearsOfExperienceList;
-  var yearsOfExperience = props.yearsOfExperience != undefined ? yearsOfExperienceList[props.yearsOfExperience] : {};
+  var yearsOfExperience = props.yearsOfExperience != undefined ? yearsOfExperienceList[props.yearsOfExperience - 1] : {};
   var workAsList = props.positions;
   var userPositions = [];
 
