@@ -38,7 +38,7 @@ const VHSelect = props => {
       fontWeight: props.bold ? 'bold' : 'normal',
       fontFamily: 'Roboto',
       fontSize: '14px',
-      padding: '0',
+      padding: '0 6px',
       borderRadius: '6px',
 
     }),

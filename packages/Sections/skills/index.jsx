@@ -150,7 +150,7 @@ const VHSkillsSection = props => {
               />
             </Row>
           }
-          <Row column marginTop={15}>
+          <Row column marginTop={48}>
             <VHTitleDescription
               contents={true}
               className={`vh-general-section-topSkill-description ${props.className ? props.className : ''}`}
@@ -161,7 +161,7 @@ const VHSkillsSection = props => {
                   ? "gray-40"
                   : props.controls.topSkill.error
                     ? "red"
-                    : "gray-100"
+                    : "gray-90"
               }
               titleVariant="subtitle1"
               description="1st = Highest proficiency level; 3rd = Lowest proficiency level"
@@ -194,7 +194,7 @@ const VHSkillsSection = props => {
                   ? "gray-40"
                   : props.controls.secondarySkill.error
                     ? "red"
-                    : "gray-100"
+                    : "gray-90"
               }
               titleVariant="subtitle1"
             />
