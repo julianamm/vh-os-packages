@@ -29,9 +29,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var VHSkillsSection = function VHSkillsSection(props) {
   var positions = props.positions;
-  var position = props.positionSkill != undefined ? positions[props.positionSkill] : {};
+  var position = props.positionSkill != undefined ? positions.find(function (element) {
+    return element.value === props.positionSkill;
+  }) : {};
   var yearsOfExperienceList = props.yearsOfExperienceList;
-  var yearsOfExperience = props.yearsOfExperience != undefined ? yearsOfExperienceList[props.yearsOfExperience] : {};
+  var yearsOfExperience = props.yearsOfExperience != undefined ? yearsOfExperienceList.find(function (element) {
+    return element.value === props.yearsOfExperience;
+  }) : {};
   var workAsList = props.positions;
   var userPositions = [];
 
@@ -45,7 +49,9 @@ var VHSkillsSection = function VHSkillsSection(props) {
       } else {
         userPositions.push({
           value: item,
-          label: positions[item].label
+          label: item.label ? item.label : positions.find(function (element) {
+            return element.value === item;
+          }).label
         });
       }
     });

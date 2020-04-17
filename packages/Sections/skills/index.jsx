@@ -12,10 +12,10 @@ import VHTitleDescription from "../../Components/TitleDescription";
 
 const VHSkillsSection = props => {
   const positions = props.positions
-  const position = props.positionSkill != undefined ? positions[props.positionSkill] : {};
+  const position = props.positionSkill != undefined ? positions.find(element => element.value === props.positionSkill) : {};
 
   const yearsOfExperienceList = props.yearsOfExperienceList
-  const yearsOfExperience = props.yearsOfExperience != undefined ? yearsOfExperienceList[props.yearsOfExperience] : {};
+  const yearsOfExperience = props.yearsOfExperience != undefined ? yearsOfExperienceList.find(element => element.value === props.yearsOfExperience) : {};
 
   const workAsList = props.positions
 
@@ -26,7 +26,7 @@ const VHSkillsSection = props => {
       if (item.id) {
         userPositions.push({ value: item.id, label: item.name })
       } else {
-        userPositions.push({ value: item, label: positions[item].label })
+        userPositions.push({ value: item, label: item.label ? item.label : positions.find(element => element.value === item).label  })
       }
     })
   }
