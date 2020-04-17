@@ -117,6 +117,8 @@ var VHOnboarding = function VHOnboarding(props) {
         disabled = true;
       }
     });
+  } else if (currentStep >= 7) {
+    disabled = true;
   }
 
   return /*#__PURE__*/_react.default.createElement(_Grid.Container, {
@@ -204,7 +206,7 @@ var VHOnboarding = function VHOnboarding(props) {
     text: "".concat(currentStep, " / ").concat(props.steps),
     variant: "platform1",
     color: "gray-60"
-  }), /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
+  }), currentStep < 7 && /*#__PURE__*/_react.default.createElement(_ButtonNew.default, {
     className: "",
     label: currentStep < 6 ? "Next" : "Finish",
     disabled: disabled,

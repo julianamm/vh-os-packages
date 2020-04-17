@@ -11,26 +11,6 @@ import VHTitleDescription from "../../Components/TitleDescription";
 
 
 const VHLanguageSection = props => {
-  const positions = props.positions
-  const position = props.positionSkill != undefined ? [positions[props.positionSkill]] : {};
-
-  const yearsOfExperienceList = props.yearsOfExperienceList
-  const yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience - 1]] : {};
-
-  const workAsList = props.positions
-
-  let userPositions = []
-
-  if (props.userPositions) {
-    props.userPositions.map(item => {
-      if (item.id) {
-        userPositions.push({ value: item.id, label: item.name })
-      } else {
-        userPositions.push({ value: item, label: positions[item].label })
-      }
-    })
-  }
-
   return (
     <>
       <Row marginBottom={2}>
