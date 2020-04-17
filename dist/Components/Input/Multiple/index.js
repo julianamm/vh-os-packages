@@ -33,10 +33,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var VHInputMultiple = function VHInputMultiple(props) {
   var it = [];
+  console.log(props.items);
 
   try {
     if (props.items !== null) {
-      it = JSON.parse(props.items.value);
+      if (props.items.value !== null) {
+        it = JSON.parse(props.items.value);
+      } else {
+        it = JSON.parse("[{ value: '' }]");
+      }
     }
   } catch (error) {}
 
