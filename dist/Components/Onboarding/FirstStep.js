@@ -25,10 +25,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var FirstStep = function FirstStep(props) {
   var positions = props.positions;
-  var position = props.positionSkill != undefined ? [positions[props.positionSkill]] : {};
+  var position = props.positionSkill != undefined ? positions.find(function (element) {
+    return element.value === props.positionSkill;
+  }) : {};
   var yearsOfExperienceList = props.yearsOfExperienceList;
+<<<<<<< HEAD
   var yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
   return _react.default.createElement(_Grid.Row, {
+=======
+  var yearsOfExperience = props.yearsOfExperience != undefined ? yearsOfExperienceList.find(function (element) {
+    return element.value === props.yearsOfExperience;
+  }) : {};
+  return /*#__PURE__*/_react.default.createElement(_Grid.Row, {
+>>>>>>> 5cb29a2a7ba2b8c09db150bf7cceada996996cab
     column: true
   }, _react.default.createElement(_Grid.Row, {
     row: true,

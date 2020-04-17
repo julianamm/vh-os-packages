@@ -218,9 +218,13 @@ var VHSelect = function VHSelect(props) {
           }
 
           handleChange(newValue);
-          newValue.map(function (item) {
-            finalValue.push(parseInt(item.value === 'zero' ? 0 : item.value));
-          });
+
+          if (newValue != undefined && newValue != null) {
+            newValue.map(function (item) {
+              finalValue.push(parseInt(item.value === 'zero' ? 0 : item.value));
+            });
+          }
+
           props.onEvent({
             type: "OnChange",
             origin: "VHSelect",
@@ -246,30 +250,45 @@ var VHSelect = function VHSelect(props) {
           break;
 
         case actionMeta.action === "select-option":
-          var finalValueChange = [];
-
-          if (newValue.value === 'zero') {
-            newValue.value = 0;
-          }
-
-          handleChange(newValue);
-
           if (props.isMulti && newValue.length <= 3) {
+            var finalValueChange = [];
+
+            if (newValue.value === 'zero') {
+              newValue.value = 0;
+            }
+
+            handleChange(newValue);
             newValue.map(function (item) {
               finalValueChange.push(parseInt(item.value === 'zero' ? 0 : item.value));
             });
+            props.onEvent({
+              type: "OnChange",
+              origin: "VHSelect",
+              props: {
+                data: props.data,
+                item: finalValueChange,
+                action: 'add',
+                order: props.order
+              }
+            });
+          } else if (!props.isMulti) {
+            if (newValue.value === 'zero') {
+              newValue.value = 0;
+            }
+
+            handleChange(newValue);
+            props.onEvent({
+              type: "OnChange",
+              origin: "VHSelect",
+              props: {
+                data: props.data,
+                item: newValue,
+                action: 'add',
+                order: props.order
+              }
+            });
           }
 
-          props.onEvent({
-            type: "OnChange",
-            origin: "VHSelect",
-            props: {
-              data: props.data,
-              item: props.isMulti ? finalValueChange : newValue,
-              action: 'add',
-              order: props.order
-            }
-          });
           break;
       }
     }

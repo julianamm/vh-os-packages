@@ -31,7 +31,7 @@ const StartStep = props => {
                     })
                     props.setCurrentStep(1)
                   }}>
-                <p style={{ fontFamily: 'Roboto', fontSize: '16px', color: '#fff', cursor: 'pointer' }}>Let's start!</p>
+                <p style={{ fontFamily: 'Roboto', fontSize: '16px', color: '#fff', cursor: 'pointer' }}>Start!</p>
             </button>
         </div>
     </div>

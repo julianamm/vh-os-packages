@@ -4,9 +4,14 @@ import VHInputIcon from '../Icon'
 
 const VHInputMultiple = props => {
   let it = []
+  console.log(props.items)
   try {
     if (props.items !== null) {
-      it = JSON.parse(props.items.value)
+      if (props.items.value !== null) {
+        it = JSON.parse(props.items.value)
+      } else {
+        it = JSON.parse("[{ value: '' }]")
+      }
     }
   } catch (error) {
 

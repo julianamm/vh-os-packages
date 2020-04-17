@@ -28,30 +28,7 @@ var _TitleDescription = _interopRequireDefault(require("../../Components/TitleDe
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var VHLanguageSection = function VHLanguageSection(props) {
-  var positions = props.positions;
-  var position = props.positionSkill != undefined ? [positions[props.positionSkill]] : {};
-  var yearsOfExperienceList = props.yearsOfExperienceList;
-  var yearsOfExperience = props.yearsOfExperience != undefined ? [yearsOfExperienceList[props.yearsOfExperience]] : {};
-  var workAsList = props.positions;
-  var userPositions = [];
-
-  if (props.userPositions) {
-    props.userPositions.map(function (item) {
-      if (item.id) {
-        userPositions.push({
-          value: item.id,
-          label: item.name
-        });
-      } else {
-        userPositions.push({
-          value: item,
-          label: positions[item].label
-        });
-      }
-    });
-  }
-
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Grid.Row, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Grid.Row, {
     marginBottom: 2
   }, _react.default.createElement(_Text.default, {
     className: "vh-skills-section-title ".concat(props.className ? props.className : ''),
