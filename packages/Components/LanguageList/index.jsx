@@ -117,7 +117,7 @@ const VHLanguageList = props => {
                         </ S.Wrapper>
                     )}
                     <S.Wrapper>
-                        <Row alignItemsCenter row marginRight={2} marginLeft={2}>
+                        <Row row paddingTop={2} paddingBottom={2} marginRight={2} marginLeft={2} >
                             <VHText color="gradient-primary" onEvent={(e) => {
                                 let newLanguages = languages
                                 newLanguages.push({ level: undefined, name: undefined, code: undefined })

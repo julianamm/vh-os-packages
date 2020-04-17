@@ -24,7 +24,7 @@ const VHList = props => {
                             placeholder='Select your top skill'
                             removeIndicator
                             removeDropdownIcon
-                            bold={true}
+                            bold={false}
                             marginBottom={'0px'}
                             removeBorder
                             caption=""
@@ -71,7 +71,7 @@ const VHList = props => {
                             preLoading={props.controls.topSkill.preLoading}
                             placeholder='Select your top skill'
                             removeIndicator
-                            bold={true}
+                            bold={false}
                             marginBottom={'0px'}
                             removeBorder
                             caption=""
@@ -117,7 +117,7 @@ const VHList = props => {
                             preLoading={props.controls.topSkill.preLoading}
                             placeholder='Select your top skill'
                             removeIndicator
-                            bold={true}
+                            bold={false}
                             marginBottom={'0px'}
                             removeBorder
                             caption=""
